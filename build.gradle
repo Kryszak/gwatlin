@@ -4,7 +4,7 @@ buildscript {
         spock_version = '1.0-groovy-2.4'
         groovy_version = '2.4.5'
         pitest_version = '1.4.5'
-        coveralls_version = '2.8.4'
+        coveralls_version = '2.8.3'
     }
     repositories {
         mavenCentral()
