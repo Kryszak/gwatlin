@@ -18,5 +18,5 @@ cache:
 script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
 
 after_success:
-  - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+  - gradle jacocoTestReport
   - bash <(curl -s https://codecov.io/bash)
