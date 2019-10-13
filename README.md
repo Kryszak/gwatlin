@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Kryszak/gwatlin.svg?branch=master)](https://travis-ci.org/Kryszak/gwatlin)
-[![Coverage Status](https://coveralls.io/repos/github/Kryszak/gwatlin/badge.svg?branch=master)](https://coveralls.io/github/Kryszak/gwatlin?branch=master)
+[![codecov](https://codecov.io/gh/Kryszak/gwatlin/branch/master/graph/badge.svg)](https://codecov.io/gh/Kryszak/gwatlin)
 # Guild Wars 2 API client
 
 ## About
