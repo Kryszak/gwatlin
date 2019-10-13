@@ -4,12 +4,9 @@ matrix:
   include:
     - os: linux
       sudo: required
-      jdk: oraclejdk8
-    - os: linux
-      sudo: required
       jdk: openjdk11
 
-script: ./gradlew build --info --stacktrace --console=plain --max-workers=1 --no-daemon --build-cache -Dkotlin.colors.enabled=false
+script: gradle build --info --stacktrace --console=plain --max-workers=1 --no-daemon --build-cache -Dkotlin.colors.enabled=false
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
