@@ -1,0 +1,1 @@
+# Guild Wars 2 API client
