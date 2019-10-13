@@ -1,28 +1,33 @@
 buildscript {
-    ext.kotlin_version = '1.3.50'
-    ext.spock_version = '1.0-groovy-2.4'
-    ext.groovy_version = '2.4.5'
-    ext.coveralls_version = '2.8.4'
+    ext {
+        kotlin_version = '1.3.50'
+        spock_version = '1.0-groovy-2.4'
+        groovy_version = '2.4.5'
+        pitest_version = '1.4.5'
+        coveralls_version = '2.8.4'
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "info.solidsoft.gradle.pitest:gradle-pitest-plugin:$pitest_version"
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:$coveralls_version"
     }
 }
 
-plugins {
-    id "info.solidsoft.pitest" version '1.1.11'
-    id 'com.github.kt3k.coveralls' version '2.8.4'
-}
+project.group = 'com.kryszak'
+
+apply plugin: 'kotlin'
+apply plugin: "groovy"
+apply plugin: 'info.solidsoft.pitest'
+apply plugin: 'com.github.kt3k.coveralls'
 
 pitest {
     timestampedReports = false
     outputFormats = ['XML']
+    targetClasses = ["${project.group}.*"]  //by default "${project.group}.*
 }
-
-apply plugin: 'kotlin'
-apply plugin: "groovy"
 
 repositories {
     mavenCentral()
