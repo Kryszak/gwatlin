@@ -18,4 +18,4 @@ cache:
 script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
 
 after_success:
-  - ./gradlew pitest coveralls
+  - bash <(curl -s https://codecov.io/bash)
