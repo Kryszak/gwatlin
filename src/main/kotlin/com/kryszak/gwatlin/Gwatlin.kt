@@ -1,4 +1,4 @@
-package com.kryszak
+package com.kryszak.gwatlin
 
 class Gwatlin {
     fun hello(): String {

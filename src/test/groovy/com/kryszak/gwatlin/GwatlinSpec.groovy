@@ -1,4 +1,4 @@
-package com.kryszak
+package com.kryszak.gwatlin
 
 import spock.lang.Specification
 import spock.lang.Subject
