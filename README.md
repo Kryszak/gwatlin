@@ -14,16 +14,16 @@ At this moment this project is in development phase.
 ### Present
 
 ### To be done 
-  - Achievements
-  - Account
-  - Daily Rewards
-  - Game Mechanics
-  - Guild 
-  - Home Instance
-  - Items
-  - Map Information
-  - Miscellaneous
-  - Story
-  - Structured PvP
-  - Trading post
-  - World vs. World
+-  Achievements
+-  Account
+-  Daily Rewards
+-  Game Mechanics
+-  Guild 
+-  Home Instance
+-  Items
+-  Map Information
+-  Miscellaneous
+-  Story
+-  Structured PvP
+-  Trading post
+-  World vs. World
