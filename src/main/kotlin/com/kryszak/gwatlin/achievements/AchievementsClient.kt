@@ -25,10 +25,12 @@ internal class AchievementsClient : BaseHttpClient() {
 
     private val categoryEndpoint: String = "$baseEndpoint/categories"
 
+    private val logMessage = "Requested url: %s"
+
     fun getAchievementIdsList(): List<Int> {
         val (_, _, result) = "$baseUrl/$baseEndpoint"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Int>>()
 
         return processResult(result)
@@ -38,7 +40,7 @@ internal class AchievementsClient : BaseHttpClient() {
         val params = ids.joinToString(",")
         val (_, _, result) = "$baseUrl/$baseEndpoint?ids=$params"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Achievement>>()
 
         return processResult(result)
@@ -47,7 +49,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getDailyAchievements(): DailyAchievementList {
         val (_, _, result) = "$baseUrl/$dailyEndpoint"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<DailyAchievementList>()
 
         return processResult(result)
@@ -56,7 +58,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getTomorrowDailyAchievements(): DailyAchievementList {
         val (_, _, result) = "$baseUrl/$dailyTomorrowEndpoint"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<DailyAchievementList>()
 
         return processResult(result)
@@ -65,7 +67,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementGroupIds(): List<String> {
         val (_, _, result) = "$baseUrl/$groupEndpoint"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<String>>()
 
         return processResult(result)
@@ -74,7 +76,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementGroup(id: String): AchievementGroup {
         val (_, _, result) = "$baseUrl/$groupEndpoint/$id"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<AchievementGroup>()
 
         return processResult(result)
@@ -83,7 +85,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementCategories(): List<Int> {
         val (_, _, result) = "$baseUrl/$categoryEndpoint"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Int>>()
 
         return processResult(result)
@@ -92,7 +94,7 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementCategory(id: Int): AchievementCategory {
         val (_, _, result) = "$baseUrl/$categoryEndpoint/$id"
                 .httpGet()
-                .also { log.info("Requested url: ${it.url}") }
+                .also { log.info(logMessage.format(it.url)) }
                 .responseObject<AchievementCategory>()
 
         return processResult(result)

@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.model.achievement
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data model for achievement object
+ */
 data class Achievement(val id: String,
                        val name: String,
                        val description: String,
