@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Gwatlin
-**G**uild **W**ars 2 **A**PI client written in Kot**lin**
+**G**uild **W**ars 2 **A**PI client written in Ko**tlin**
 
 ## About
 This repository contains code for Guild Wars 2 API client based on [documentation](https://wiki.guildwars2.com/wiki/API:Main).
