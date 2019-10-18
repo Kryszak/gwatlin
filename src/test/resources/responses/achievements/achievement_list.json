@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1840,
+    "name": "Daily Completionist",
+    "description": "",
+    "requirement": "Complete any  PvE, WvW, or PvP Daily Achievements.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Pvp",
+      "CategoryDisplay",
+      "Daily"
+    ],
+    "tiers": [
+      {
+        "count": 3,
+        "points": 10
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 70047,
+        "count": 1
+      },
+      {
+        "type": "Coins",
+        "count": 20000
+      }
+    ]
+  },
+  {
+    "id": 910,
+    "name": "Tequatl the Sunless",
+    "description": "",
+    "requirement": "Complete  Tequatl achievements.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "CategoryDisplay",
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 10,
+        "points": 50
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Mastery",
+        "region": "Tyria",
+        "id": 247
+      },
+      {
+        "type": "Title",
+        "id": 175
+      }
+    ]
+  },
+  {
+    "id": 2258,
+    "name": "Mistward Legguards",
+    "description": "",
+    "requirement": "Collect all  items and skins to forge your Mistward Legguards.",
+    "locked_text": "Complete the Invocation revenant specialization to unlock the Mistward Legguards collection.",
+    "type": "ItemSet",
+    "flags": [
+      "IgnoreNearlyComplete",
+      "Pvp",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Skin",
+        "id": 208
+      },
+      {
+        "type": "Skin",
+        "id": 197
+      },
+      {
+        "type": "Skin",
+        "id": 211
+      },
+      {
+        "type": "Skin",
+        "id": 132
+      },
+      {
+        "type": "Item",
+        "id": 70502
+      },
+      {
+        "type": "Item",
+        "id": 70944
+      },
+      {
+        "type": "Item",
+        "id": 74774
+      }
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      },
+      {
+        "count": 3,
+        "points": 1
+      },
+      {
+        "count": 7,
+        "points": 1
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 70598,
+        "count": 1
+      }
+    ]
+  }
+]

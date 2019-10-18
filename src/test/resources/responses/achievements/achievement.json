@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1840,
+    "name": "Daily Completionist",
+    "description": "",
+    "requirement": "Complete any  PvE, WvW, or PvP Daily Achievements.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Pvp",
+      "CategoryDisplay",
+      "Daily"
+    ],
+    "tiers": [
+      {
+        "count": 3,
+        "points": 10
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 70047,
+        "count": 1
+      },
+      {
+        "type": "Coins",
+        "count": 20000
+      }
+    ]
+  }
+]

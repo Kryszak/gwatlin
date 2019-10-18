@@ -15,9 +15,9 @@ At this moment this project is in development phase.
 
 ## Features
 ### Present
+-   Achievements
 
 ### To be done 
--   Achievements
 -   Account
 -   Daily Rewards
 -   Game Mechanics

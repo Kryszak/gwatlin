@@ -1,0 +1,371 @@
+{
+  "pve": [
+    {
+      "id": 3880,
+      "level": {
+        "min": 80,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1979,
+      "level": {
+        "min": 80,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1968,
+      "level": {
+        "min": 1,
+        "max": 79
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1931,
+      "level": {
+        "min": 11,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1944,
+      "level": {
+        "min": 70,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1953,
+      "level": {
+        "min": 11,
+        "max": 69
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1898,
+      "level": {
+        "min": 31,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    }
+  ],
+  "pvp": [
+    {
+      "id": 1856,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1857,
+      "level": {
+        "min": 11,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 3449,
+      "level": {
+        "min": 11,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 3450,
+      "level": {
+        "min": 31,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    }
+  ],
+  "wvw": [
+    {
+      "id": 1846,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 437,
+      "level": {
+        "min": 11,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1845,
+      "level": {
+        "min": 11,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1843,
+      "level": {
+        "min": 31,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    }
+  ],
+  "fractals": [
+    {
+      "id": 2473,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2309,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 3219,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 4028,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 4006,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 4030,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 3973,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2929,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2889,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2950,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2947,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2979,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2985,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2934,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2966,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    }
+  ],
+  "special": []
+}
