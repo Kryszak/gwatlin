@@ -10,7 +10,7 @@ class AchievementsClientSpec extends WiremockConfig {
 
     def "Should get list of achievement ids"() {
         given: "Expected achievement id list"
-        def achievementIds = parseResponseFile("/responses/achievements/achievement_ids.json")
+        def achievementIds = parseResponse("/responses/achievements/achievement_ids.json")
 
         and: "External api is stubbed"
         stubAchievementIdsResponse()

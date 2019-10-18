@@ -18,15 +18,15 @@ class WiremockConfig extends Specification {
     def stubAchievementIdsResponse() {
         stubFor(
                 get(urlEqualTo("/achievements"))
-                        .willReturn(okJson(parseResponseFileContent("/responses/achievements/achievement_ids.json")))
+                        .willReturn(okJson(parseResponseText("/responses/achievements/achievement_ids.json")))
         )
     }
 
-    protected Object parseResponseFile(String file) {
+    protected Object parseResponse(String file) {
         new JsonSlurper().parse(this.getClass().getResource(file))
     }
 
-    private String parseResponseFileContent(String file) {
+    private String parseResponseText(String file) {
         this.getClass().getResource(file).text
     }
 }
