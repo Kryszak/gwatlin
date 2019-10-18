@@ -4,7 +4,7 @@ import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.kryszak.gwatlin.http.BaseHttpClient
 
-class AchievementsClient : BaseHttpClient() {
+internal class AchievementsClient : BaseHttpClient() {
 
     private val baseEndpoint: String = "achievements"
 

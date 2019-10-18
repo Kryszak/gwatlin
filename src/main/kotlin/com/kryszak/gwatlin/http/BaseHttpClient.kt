@@ -3,7 +3,7 @@ package com.kryszak.gwatlin.http
 import com.github.kittinunf.result.Result
 import com.kryszak.gwatlin.http.config.HttpConfig
 
-open class BaseHttpClient {
+internal open class BaseHttpClient {
 
     protected val baseUrl: String
 

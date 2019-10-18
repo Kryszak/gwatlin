@@ -2,7 +2,7 @@ package com.kryszak.gwatlin.http.config
 
 import java.util.*
 
-class HttpConfig {
+internal class HttpConfig {
 
     private val configFileName = "config.properties"
 
