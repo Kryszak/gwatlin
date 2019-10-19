@@ -8,6 +8,7 @@ import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
 
 /**
  * Client for public endpoints not requiring authentication with ApiKey
+ * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
  */
 class GwatlinPublicClient {
 

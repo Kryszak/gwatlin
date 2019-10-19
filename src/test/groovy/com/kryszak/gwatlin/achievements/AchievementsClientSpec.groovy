@@ -2,7 +2,7 @@ package com.kryszak.gwatlin.achievements
 
 import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.model.achievement.Achievement
-import com.kryszak.gwatlin.api.model.achievement.ApiRequestException
+import com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException
 import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
 import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
 import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup

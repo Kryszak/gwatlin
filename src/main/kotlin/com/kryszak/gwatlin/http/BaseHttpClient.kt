@@ -1,8 +1,10 @@
 package com.kryszak.gwatlin.http
 
 import com.github.kittinunf.result.Result
-import com.kryszak.gwatlin.api.model.achievement.ApiRequestException
+import com.google.gson.Gson
+import com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException
 import com.kryszak.gwatlin.http.config.HttpConfig
+import com.kryszak.gwatlin.http.exception.ErrorResponse
 import java.util.logging.Logger
 
 internal open class BaseHttpClient {
@@ -13,21 +15,24 @@ internal open class BaseHttpClient {
 
     protected val baseUrl: String
 
+    private val gson = Gson()
+
     private val httpConfig: HttpConfig = HttpConfig()
 
     init {
         baseUrl = httpConfig.baseUrl
     }
 
-    protected fun <T : Any> processResult(result: Result<T, Exception>): T {
+    protected fun <T : Any, E: Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
         when (result) {
             is Result.Success -> {
                 return result.get()
             }
             is Result.Failure -> {
-                val message = result.getException().message
-                log.severe(message)
-                throw ApiRequestException(message)
+                val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
+                log.severe(result.getException().message)
+                log.severe("Error: $error")
+                throw ApiRequestException(error.toString())
             }
         }
     }

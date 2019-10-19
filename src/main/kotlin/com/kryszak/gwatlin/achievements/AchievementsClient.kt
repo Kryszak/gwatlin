@@ -2,11 +2,13 @@ package com.kryszak.gwatlin.achievements
 
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
+import com.kryszak.gwatlin.achievements.exception.RetrieveError
 import com.kryszak.gwatlin.api.model.achievement.Achievement
 import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
 import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
 import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
 import com.kryszak.gwatlin.http.BaseHttpClient
+import com.kryszak.gwatlin.http.exception.ErrorResponse
 import java.util.logging.Logger
 
 internal class AchievementsClient : BaseHttpClient() {
@@ -28,75 +30,75 @@ internal class AchievementsClient : BaseHttpClient() {
     private val logMessage = "Requested url: %s"
 
     fun getAchievementIdsList(): List<Int> {
-        val (_, _, result) = "$baseUrl/$baseEndpoint"
+        val (_, response, result) = "$baseUrl/$baseEndpoint"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Int>>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getAchievementByIds(ids: List<Int>): List<Achievement> {
         val params = ids.joinToString(",")
-        val (_, _, result) = "$baseUrl/$baseEndpoint?ids=$params"
+        val (_, response, result) = "$baseUrl/$baseEndpoint?ids=$params"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Achievement>>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getDailyAchievements(): DailyAchievementList {
-        val (_, _, result) = "$baseUrl/$dailyEndpoint"
+        val (_, response, result) = "$baseUrl/$dailyEndpoint"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<DailyAchievementList>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getTomorrowDailyAchievements(): DailyAchievementList {
-        val (_, _, result) = "$baseUrl/$dailyTomorrowEndpoint"
+        val (_, response, result) = "$baseUrl/$dailyTomorrowEndpoint"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<DailyAchievementList>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getAchievementGroupIds(): List<String> {
-        val (_, _, result) = "$baseUrl/$groupEndpoint"
+        val (_, response, result) = "$baseUrl/$groupEndpoint"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<String>>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getAchievementGroup(id: String): AchievementGroup {
-        val (_, _, result) = "$baseUrl/$groupEndpoint/$id"
+        val (_, response, result) = "$baseUrl/$groupEndpoint/$id"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<AchievementGroup>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getAchievementCategories(): List<Int> {
-        val (_, _, result) = "$baseUrl/$categoryEndpoint"
+        val (_, response, result) = "$baseUrl/$categoryEndpoint"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<Int>>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
     fun getAchievementCategory(id: Int): AchievementCategory {
-        val (_, _, result) = "$baseUrl/$categoryEndpoint/$id"
+        val (_, response, result) = "$baseUrl/$categoryEndpoint/$id"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<AchievementCategory>()
 
-        return processResult(result)
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 }
