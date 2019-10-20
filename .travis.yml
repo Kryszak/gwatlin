@@ -6,6 +6,9 @@ matrix:
       sudo: required
       jdk: openjdk11
 
+git:
+  quiet: true
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -15,8 +18,13 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
+stages:
+  - "Build"
+  - "Code coverage"
 
-after_success:
-  - gradle jacocoTestReport
-  - bash <(curl -s https://codecov.io/bash)
+jobs:
+  include:
+    - stage: "Build"
+      script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
+    - stage: "Code coverage"
+      script: gradle jacocoTestReport && bash <(curl -s https://codecov.io/bash)
