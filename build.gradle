@@ -16,7 +16,7 @@ buildscript {
 }
 
 project.group = 'com.kryszak'
-project.version = '0.0.1'
+project.version = '0.0.2'
 
 apply plugin: 'kotlin'
 apply plugin: "groovy"
@@ -51,4 +51,8 @@ dependencies {
     testCompile "org.spockframework:spock-core:$spock_version"
     testCompile "org.codehaus.groovy:groovy-all:$groovy_version"
     testCompile "com.github.tomakehurst:wiremock-jre8:$wiremock_version"
+}
+
+jar.doLast { task ->
+    ant.checksum file: task.archivePath
 }
