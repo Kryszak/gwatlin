@@ -1,8 +1,8 @@
-package com.kryszak.gwatlin.achievements
+package com.kryszak.gwatlin.clients.achievements
 
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
-import com.kryszak.gwatlin.achievements.exception.RetrieveError
+import com.kryszak.gwatlin.clients.exception.RetrieveError
 import com.kryszak.gwatlin.api.model.achievement.Achievement
 import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
 import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
@@ -26,8 +26,6 @@ internal class AchievementsClient : BaseHttpClient() {
     private val groupEndpoint: String = "$baseEndpoint/groups"
 
     private val categoryEndpoint: String = "$baseEndpoint/categories"
-
-    private val logMessage = "Requested url: %s"
 
     fun getAchievementIdsList(): List<Int> {
         val (_, response, result) = "$baseUrl/$baseEndpoint"

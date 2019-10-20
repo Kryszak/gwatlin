@@ -13,6 +13,8 @@ internal open class BaseHttpClient {
         val log: Logger = Logger.getLogger(BaseHttpClient::class.java.simpleName)
     }
 
+    protected val logMessage = "Requested url: %s"
+
     protected val baseUrl: String
 
     private val gson = Gson()

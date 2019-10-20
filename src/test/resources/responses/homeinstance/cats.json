@@ -1,0 +1,14 @@
+[
+  {
+    "hint": "chicken",
+    "id": 1
+  },
+  {
+    "hint": "grilled_chicken",
+    "id": 2
+  },
+  {
+    "hint": "spicy_flank",
+    "id": 3
+  }
+]

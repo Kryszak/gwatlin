@@ -1,10 +1,13 @@
 package com.kryszak.gwatlin.api
 
-import com.kryszak.gwatlin.achievements.AchievementsClient
+import com.kryszak.gwatlin.clients.achievements.AchievementsClient
 import com.kryszak.gwatlin.api.model.achievement.Achievement
 import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
 import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
 import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
+import com.kryszak.gwatlin.api.model.homeinstance.Cat
+import com.kryszak.gwatlin.api.model.homeinstance.Node
+import com.kryszak.gwatlin.clients.homeinstance.HomeInstanceClient
 
 /**
  * Client for public endpoints not requiring authentication with ApiKey
@@ -13,6 +16,8 @@ import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
 class GwatlinPublicClient {
 
     private val achievementsClient: AchievementsClient = AchievementsClient()
+
+    private val homeInstanceClient: HomeInstanceClient = HomeInstanceClient()
 
     /**
      * Retrieves list of all existing achievement ids
@@ -84,5 +89,50 @@ class GwatlinPublicClient {
      */
     fun getAchievementCategory(id: Int): AchievementCategory {
         return achievementsClient.getAchievementCategory(id)
+    }
+
+    /**
+     * Retrieves list of all cat ids
+     * @return list of cat ids
+     */
+    fun getCatIds(): List<Int> {
+        return homeInstanceClient.getCatIds()
+    }
+
+    /**
+     * Retrieves specific cat
+     * @param id of cat
+     * @return Cat
+     * @see com.kryszak.gwatlin.api.model.homeinstance.Cat
+     */
+    fun getCat(id: Int): Cat {
+        return homeInstanceClient.getCat(id)
+    }
+
+    /**
+     * Retrieves list of cats
+     * @param ids of cats
+     * @return List of cats
+     * @see com.kryszak.gwatlin.api.model.homeinstance.Cat
+     */
+    fun getCats(ids: List<Int>): List<Cat> {
+        return homeInstanceClient.getCats(ids)
+    }
+
+    /**
+     * Retrieves list of all available home node instances
+     * @return List of nodes
+     */
+    fun getNodeIds(): List<String> {
+        return homeInstanceClient.getNodesIds()
+    }
+
+    /**
+     * Retrieves specific home node instance
+     * @return Node
+     * @see com.kryszak.gwatlin.api.model.homeinstance.Node
+     */
+    fun getNode(id: String): Node {
+        return homeInstanceClient.getNode(id)
     }
 }
