@@ -20,11 +20,12 @@ cache:
 
 stages:
   - "Build"
-  - "Code coverage"
 
 jobs:
   include:
     - stage: "Build"
       script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
-    - stage: "Code coverage"
-      script: gradle jacocoTestReport && bash <(curl -s https://codecov.io/bash)
+
+after_success:
+  - gradle jacocoTestReport
+  - bash <(curl -s https://codecov.io/bash)
