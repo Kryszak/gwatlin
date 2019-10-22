@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.achievement
+package com.kryszak.gwatlin.api.achievement.model
 
 /**
  * Data model for achievement tier object

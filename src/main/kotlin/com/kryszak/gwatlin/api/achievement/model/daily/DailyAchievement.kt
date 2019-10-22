@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.achievement.daily
+package com.kryszak.gwatlin.api.achievement.model.daily
 
 import com.google.gson.annotations.SerializedName
 

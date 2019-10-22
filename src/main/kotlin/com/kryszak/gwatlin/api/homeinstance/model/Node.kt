@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.homeinstance
+package com.kryszak.gwatlin.api.homeinstance.model
 
 /**
  * Data model for node object

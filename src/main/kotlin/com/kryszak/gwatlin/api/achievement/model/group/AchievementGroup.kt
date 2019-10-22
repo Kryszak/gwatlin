@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.achievement.group
+package com.kryszak.gwatlin.api.achievement.model.group
 
 /**
  * Data model for achievement group object

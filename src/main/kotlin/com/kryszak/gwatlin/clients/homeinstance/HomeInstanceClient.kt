@@ -2,8 +2,8 @@ package com.kryszak.gwatlin.clients.homeinstance
 
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
-import com.kryszak.gwatlin.api.model.homeinstance.Cat
-import com.kryszak.gwatlin.api.model.homeinstance.Node
+import com.kryszak.gwatlin.api.homeinstance.model.Cat
+import com.kryszak.gwatlin.api.homeinstance.model.Node
 import com.kryszak.gwatlin.clients.exception.RetrieveError
 import com.kryszak.gwatlin.http.BaseHttpClient
 import com.kryszak.gwatlin.http.exception.ErrorResponse

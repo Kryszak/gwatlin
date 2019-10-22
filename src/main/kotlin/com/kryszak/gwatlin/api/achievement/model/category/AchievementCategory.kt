@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.achievement.category
+package com.kryszak.gwatlin.api.achievement.model.category
 
 /**
  * Data model for achievement category object

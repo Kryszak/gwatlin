@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.model.achievement
+package com.kryszak.gwatlin.api.achievement.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

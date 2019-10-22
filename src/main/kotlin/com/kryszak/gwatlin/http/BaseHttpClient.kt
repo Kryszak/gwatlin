@@ -2,7 +2,7 @@ package com.kryszak.gwatlin.http
 
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
-import com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException
+import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import java.util.logging.Logger

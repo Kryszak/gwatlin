@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.clients.homeinstance
 
 import com.google.common.reflect.TypeToken
-import com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException
-import com.kryszak.gwatlin.api.model.homeinstance.Cat
-import com.kryszak.gwatlin.api.model.homeinstance.Node
+import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.homeinstance.model.Cat
+import com.kryszak.gwatlin.api.homeinstance.model.Node
 import spock.lang.Subject
 
 class HomeInstanceClientSpec extends HomeInstanceStubs {

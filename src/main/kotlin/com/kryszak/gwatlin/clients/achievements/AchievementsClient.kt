@@ -3,10 +3,10 @@ package com.kryszak.gwatlin.clients.achievements
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.kryszak.gwatlin.clients.exception.RetrieveError
-import com.kryszak.gwatlin.api.model.achievement.Achievement
-import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
-import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
-import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
+import com.kryszak.gwatlin.api.achievement.model.Achievement
+import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
+import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
+import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import com.kryszak.gwatlin.http.BaseHttpClient
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import java.util.logging.Logger

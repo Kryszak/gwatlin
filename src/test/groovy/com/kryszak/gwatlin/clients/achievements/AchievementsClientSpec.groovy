@@ -1,11 +1,11 @@
 package com.kryszak.gwatlin.clients.achievements
 
 import com.google.common.reflect.TypeToken
-import com.kryszak.gwatlin.api.model.achievement.Achievement
-import com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
-import com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
-import com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException
-import com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
+import com.kryszak.gwatlin.api.achievement.model.Achievement
+import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
+import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
+import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import spock.lang.Subject
 
 class AchievementsClientSpec extends AchievementStubs {
@@ -87,8 +87,8 @@ class AchievementsClientSpec extends AchievementStubs {
 
     def "Should get list of tomorrow daily achievements"() {
         given: "Expected tomorrow daily achievements"
-        def tomorrowDailyAchievements   \
-                  = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
+        def tomorrowDailyAchievements    \
+                   = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
 
         and: "External api is stubbed"
         stubDailyTomorrowAchievementListResponse()
