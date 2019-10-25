@@ -5,18 +5,14 @@ import com.kryszak.gwatlin.api.achievement.model.Achievement
 import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
 import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
-import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.api.homeinstance.model.Node
-import com.kryszak.gwatlin.clients.homeinstance.HomeInstanceClient
 
 /**
  * Client for achievements endpoints
  * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
  */
-class GwatlinAchievementsClient {
+class GWAchievementsClient {
 
     private val achievementsClient: AchievementsClient = AchievementsClient()
-
 
     /**
      * Retrieves list of all existing achievement ids

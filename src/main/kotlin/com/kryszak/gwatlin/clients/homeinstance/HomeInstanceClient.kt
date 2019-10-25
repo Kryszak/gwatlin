@@ -3,7 +3,6 @@ package com.kryszak.gwatlin.clients.homeinstance
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.api.homeinstance.model.Node
 import com.kryszak.gwatlin.clients.exception.RetrieveError
 import com.kryszak.gwatlin.http.BaseHttpClient
 import com.kryszak.gwatlin.http.exception.ErrorResponse
@@ -54,15 +53,6 @@ internal class HomeInstanceClient : BaseHttpClient() {
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<List<String>>()
-
-        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
-    }
-
-    fun getNode(id: String): Node {
-        val (_, response, result) = "$baseUrl/$nodesEndpoint/$id"
-                .httpGet()
-                .also { log.info(logMessage.format(it.url)) }
-                .responseObject<Node>()
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }

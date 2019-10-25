@@ -1,14 +1,13 @@
 package com.kryszak.gwatlin.api.homeinstance
 
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.api.homeinstance.model.Node
 import com.kryszak.gwatlin.clients.homeinstance.HomeInstanceClient
 
 /**
  * Client for home instance endpoints
  * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
  */
-class GwatlinHomeInstanceClient {
+class GWHomeInstanceClient {
 
     private val homeInstanceClient: HomeInstanceClient = HomeInstanceClient()
 
@@ -46,14 +45,5 @@ class GwatlinHomeInstanceClient {
      */
     fun getNodeIds(): List<String> {
         return homeInstanceClient.getNodesIds()
-    }
-
-    /**
-     * Retrieves specific home node instance
-     * @return Node
-     * @see com.kryszak.gwatlin.api.model.homeinstance.Node
-     */
-    fun getNode(id: String): Node {
-        return homeInstanceClient.getNode(id)
     }
 }

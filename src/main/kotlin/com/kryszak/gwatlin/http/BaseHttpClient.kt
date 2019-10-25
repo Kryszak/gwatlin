@@ -25,11 +25,9 @@ internal open class BaseHttpClient {
         baseUrl = httpConfig.baseUrl
     }
 
-    protected fun <T : Any, E: Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
+    protected fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
         when (result) {
-            is Result.Success -> {
-                return result.get()
-            }
+            is Result.Success -> return result.get()
             is Result.Failure -> {
                 val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
                 log.severe(result.getException().message)

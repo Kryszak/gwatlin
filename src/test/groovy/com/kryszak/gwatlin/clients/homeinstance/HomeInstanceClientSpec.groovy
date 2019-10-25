@@ -3,7 +3,6 @@ package com.kryszak.gwatlin.clients.homeinstance
 import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.api.homeinstance.model.Node
 import spock.lang.Subject
 
 class HomeInstanceClientSpec extends HomeInstanceStubs {
@@ -79,38 +78,6 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
 
         then: "Retrieved list matches expected"
         nodeIdsList == nodeIds
-    }
-
-    def "Should get node"() {
-        given: "Node id"
-        def id = "basic_lumber_nodes"
-
-        and: "External api is stubbed"
-        stubNodeResponse()
-
-        when: "Node is requested"
-        def node = homeInstanceClient.getNode(id)
-
-        then: "Retrieved node matches expected"
-        node == parseNode()
-    }
-
-    def "Should throw exception on non existing node"() {
-        given: "Non existing node id"
-        def id = "i_do_not_exist"
-
-        and: "External api is stubbed"
-        stubNodeErrorResponse()
-
-        when: "Node is requested"
-        homeInstanceClient.getNode(id)
-
-        then: "Exception is thrown"
-        thrown(ApiRequestException)
-    }
-
-    private Node parseNode() {
-        gson.fromJson(parseResponseText("/responses/homeinstance/node.json"), Node)
     }
 
     private Cat parseCat() {
