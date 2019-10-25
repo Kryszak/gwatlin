@@ -1,5 +1,8 @@
 package com.kryszak.gwatlin.api.gamemechanics.model
 
+/**
+ * Data model for Mastery object
+ */
 data class Mastery(
         val id: Int,
         val name: String,
