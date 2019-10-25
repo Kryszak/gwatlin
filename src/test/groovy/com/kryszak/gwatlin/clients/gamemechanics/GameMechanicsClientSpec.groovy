@@ -70,11 +70,22 @@ class GameMechanicsClientSpec extends GameMechanicsStubs {
         def masteries = gameMechanicsClient.getMasteries(ids, "en")
 
         then: "Retrieved masteries match expected"
-        masteries == parseMasteries()
+        masteries == parseMasteries("masteries.json")
     }
 
-    private List<Mastery> parseMasteries() {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/masteries.json"),
+    def "Should get all masteries"() {
+        given: "External api is stubbed"
+        stubAllMasteriesResponse()
+
+        when: "Retrieving all masteries"
+        def masteries = gameMechanicsClient.getAllMasteries("en")
+
+        then: "Retrieved list matches expected"
+        masteries == parseMasteries("masteries_all.json")
+    }
+
+    private List<Mastery> parseMasteries(String file) {
+        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"),
                 new TypeToken<List<Mastery>>() {}.getType())
     }
 

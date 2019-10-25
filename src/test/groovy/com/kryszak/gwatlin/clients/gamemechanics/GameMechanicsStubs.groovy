@@ -41,4 +41,11 @@ class GameMechanicsStubs extends WiremockConfig {
                         .willReturn(okJson(parseResponseText("/responses/gamemechanics/masteries.json")))
         )
     }
+
+    def stubAllMasteriesResponse() {
+        stubFor(
+                get(urlEqualTo("/masteries?ids=all&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/masteries_all.json")))
+        )
+    }
 }

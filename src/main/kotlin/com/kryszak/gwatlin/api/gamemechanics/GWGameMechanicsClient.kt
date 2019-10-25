@@ -33,8 +33,18 @@ class GWGameMechanicsClient {
      * Retrieves list of masteries
      * @param ids list of mastery ids
      * @param language of returned text (default=en)
+     * @see com.kryszak.gwatlin.api.gamemechanics.model.Mastery
      */
     fun getMasteries(ids: List<Int>, language: String = "en"): List<Mastery> {
         return gameMechanicsClient.getMasteries(ids, language)
+    }
+
+    /**
+     * Retrieves all masteries
+     * @param language of returned text (default=en)
+     * @see com.kryszak.gwatlin.api.gamemechanics.model.Mastery
+     */
+    fun getAllMasteries(language: String = "en"): List<Mastery> {
+        return gameMechanicsClient.getAllMasteries(language)
     }
 }

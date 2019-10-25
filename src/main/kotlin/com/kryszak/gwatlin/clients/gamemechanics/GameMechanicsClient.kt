@@ -43,4 +43,13 @@ internal class GameMechanicsClient : BaseHttpClient() {
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
+
+    fun getAllMasteries(language: String): List<Mastery> {
+        val (_, response, result) = "$baseUrl/$masteriesEndpoint?ids=all&lang=$language"
+                .httpGet()
+                .also { log.info(logMessage.format(it.url)) }
+                .responseObject<List<Mastery>>()
+
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
+    }
 }

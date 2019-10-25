@@ -1,0 +1,772 @@
+[
+  {
+    "id": 1,
+    "name": "Exalted Lore",
+    "requirement": "Journey to Auric Basin to unlock the Exalted Lore Mastery track.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Exalted Markings",
+        "description": "Gain the knowledge to read Exalted markings. You can now decipher their words and gain access to secrets of their civilization.",
+        "instruction": "You can now interact with Exalted artifacts found in Auric Basin and the greater Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Exalted Acceptance",
+        "description": "Gain the trust of the strange and mysterious Exalted, giving you access to their services in the Forgotten City.",
+        "instruction": "You can now trade with the Exalted and their representatives. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/39DBD70271A074DCD6B1EAE1D639BD4D36765EC4/1228651.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Exalted Assistance",
+        "description": "Learn to use Exalted Recall devices found in the Maguuma Jungle to summon an Exalted warrior to fight for a short while.",
+        "instruction": "You can interact with Exalted recall devices, summoning a helpful Exalted ally or enhancing the power of an already summoned ally.",
+        "icon": "https://render.guildwars2.com/file/B9B7E50E29F554570E63945249002FC6B64C7FFB/1228652.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Exalted Purification",
+        "description": "Become honored among the Exalted by challenging their champion each day, and unlock their finest treasures within the Forgotten City.",
+        "instruction": "You can now fight the Tarnished Traitor found below the Forgotten City. Defeating the Tarnished Traitor will give you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/EE132C76A52AC66D0211CED63E74F64B7F4AFB34/1228655.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Exalted Gathering",
+        "description": "Learn from the Exalted how to gather rare materials around the Maguuma Jungle. Learn to mine up Auric Slivers from ore nodes in Auric Basin.",
+        "instruction": "When mining ore while in Auric Basin, you will gain Auric Slivers in addition to normal materials. You also have a chance to mine special items from ore nodes all around the Heart of Maguuma.",
+        "icon": "https://render.guildwars2.com/file/324312530AA1A427AB0951D0BFBC92C4B69774D6/1228653.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Itzel Lore",
+    "requirement": "Train Basic Gliding in the Gliding Mastery track to unlock the Itzel Lore Mastery track.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/F2ED9E6B330AA015B8AD06FF222715284E1BC622/1228723.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Bouncing Mushrooms",
+        "description": "Learn how to land precisely and use the bouncing mushrooms found around the Heart of Maguuma to get to places previously impossible to reach.",
+        "instruction": "Bouncing mushrooms can be found all over the Heart of Maguuma. Jump on top of bouncing mushrooms to spring into the air.",
+        "icon": "https://render.guildwars2.com/file/C1D5574EF6B9B4CC7AB7EC3600993698D39BF975/1228645.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Itzel Language",
+        "description": "Learn the difficult dialect of the Itzel, endearing yourself to the local Itzel and gaining access to vendors with exclusive wares.",
+        "instruction": "You can now trade with the Itzel. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/68B5A54FEC5F3C7763C5BDD12C0296942ABB0BB2/1228660.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Blazing Speed Mushrooms",
+        "description": "With stomach training, learn to ingest the speed-increasing mushrooms found scattered in the Heart of Maguuma. Run at blazing speeds with the help of nature!",
+        "instruction": "Blazing-speed mushrooms can be found all over the Heart of Maguuma. Simply move near or through a blazing-speed mushroom to get a speed boost.",
+        "icon": "https://render.guildwars2.com/file/C2609360DCF254E70C023517E27375AB0FA32236/1228644.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Itzel Poison Lore",
+        "description": "Learn about Itzel poisons, and gain the ability to pass through poisonous Mordrem vines and withstand poison hazes that exist in Maguuma.",
+        "instruction": "You can now enter poison haze areas and pass through poisonous Mordrem vines without taking damage.",
+        "icon": "https://render.guildwars2.com/file/4D2F77BE539B0F065B97C8B007E8D7324DA40D3C/1228662.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Itzel Leadership",
+        "description": "Carefully study the Itzel fighting style and then challenge their enemy's champion to claim a valuable daily prize.",
+        "instruction": "You can now fight Mayatl the Fierce by speaking to the Itzel bladedancer outside the Jaka Itzel village. Defeating this champion gives you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/0735EF06110A01EF69C2710EA1390A45EBE57232/1228661.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Adrenal Mushrooms",
+        "description": "Learning to eat these mushrooms tweaks your adrenal glands, giving you a surge of adrenaline and instantly refreshing your skills.",
+        "instruction": "Adrenal mushrooms can be found rarely in the Heart of Maguuma. Simply move near or pass through adrenal mushrooms to have all your skills instantly refreshed.",
+        "icon": "https://render.guildwars2.com/file/EB50DAD5409C937CD17A0A216A7B3E04E0C25307/1228643.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nuhoch Lore",
+    "requirement": "Journey to Tangled Depths to unlock the Nuhoch Lore Mastery track.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/05AABD5EF4CF91375CE2420575C4B8CE5A084F05/1228724.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Nuhoch Hunting",
+        "description": "Learn to take special trophies from foes in Maguuma and to harvest Sawgill mushrooms, unlocking rare collections and items.",
+        "instruction": "You will now have a chance to loot special items off of any creature killed in the Heart of Maguuma. You can also harvest sawgill mushrooms, which can be found all over the Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/F9EB68F169FB63A5D552471F2692AA73771D06F0/1228664.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Nuhoch Wallows",
+        "description": "Master the use of Nuhoch Wallows, learning to traverse these hidden passages to gain access to locations both far and hidden.",
+        "instruction": "You can now interact with Nuhoch wallows. Doing so will instantly transport you between wallow entrances and exits in the Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/9B51B95FD0BD6FB80F900101977FFD66224605B1/1228668.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Nuhoch Language",
+        "description": "Learn the Nuhoch's traditional language, and gain the ability to trade and converse with the more wary members of the group.",
+        "instruction": "You can now trade with the Nuhoch. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/7C9EB6B44A1F9D690D4D9A9856A01805395BD9A1/1228665.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Nuhoch Stealth Detection",
+        "description": "Learn to spot enemies that practice stealth techniques, rendering them visible to your trained eye.",
+        "instruction": "You can now see creatures that are normally invisible in the Maguuma Jungle. Creatures that are hidden will appear to you as highlighted and can now be easily found or avoided.",
+        "icon": "https://render.guildwars2.com/file/1606273520E5106D475C90447904E256E8FE6B98/1228667.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Nuhoch Proving",
+        "description": "Challenge the Nuhoch champion in combat to earn the Nuhoch's respect and unlock a powerful cache of rewards.",
+        "instruction": "You can now fight Potoni the Massive in Teku Nuhoch. Defeating Potoni the Massive gives you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/EA0D13224CC35B3F591DBD9812E9EA620C0FFE2F/1228666.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Nuhoch Alchemy",
+        "description": "Train with the Nuhoch to learn to remove the chak's powerful acid. Without this ability, chak acid can obliterate foes.",
+        "instruction": "Evading will now instantly remove all stacks of chak goop affecting you. You are also immune to the slowing effects of goop.",
+        "icon": "https://render.guildwars2.com/file/BED24BC7330F366E367FE0C9EA6975739B590A44/1228663.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pact Commander",
+    "requirement": "",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/65DE3662C705233AC1073EF297B15AADD7A8A644/1228718.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Pact Mentor",
+        "description": "Learn to be a mentor to the heroes of Tyria, gaining a special Mentoring Badge, chat title, and swiftness for you and your party in all cities.",
+        "instruction": "You can now use the Mentoring Badge accessible in the Party menu and the Mentor chat title activated through the mentor slash command. Your party now has a permanent  5% swiftness bonus in cities.",
+        "icon": "https://render.guildwars2.com/file/D32A52F4E1EB3EC57D035531A31BE217E63DC0F8/1228648.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Productive Downtime",
+        "description": "Learn to be more efficient and gain bonus experience when crafting.",
+        "instruction": "You now gain a bonus 10% experience from all crafting that grants experience. You also have a 10% higher chance of critical bonus crafting experience.",
+        "icon": "https://render.guildwars2.com/file/0BCD77C3BF1BFD54162C992EDBF04209B653B865/1228649.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Supply Line Management",
+        "description": "Gain access to a network of regional merchants across Tyria with a limited supply of rare goods for trade, and increase your party's swiftness bonus in cities to 15%.",
+        "instruction": "You can now trade with the Pact Supply Network Agents who travel across Central Tyria. You can purchase one item from each agent each day in exchange for karma. Your party now has a permanent 15% swiftness bonus while in cities.",
+        "icon": "https://render.guildwars2.com/file/4E43E92F349620FA060ABF9A3BC052657F7EC35A/1228650.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Noblesse Oblige",
+        "description": "Learn to revive your allies faster and with less penalties.",
+        "instruction": "You can now revive allied players faster and remove durability and downed penalties on a successful revive. The speed of your revive is increased more when the level of the character being revived is lower than your own.",
+        "icon": "https://render.guildwars2.com/file/EC25C613ED2A35DB4256F0DF4A5F19389765D8E6/1228647.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      },
+      {
+        "name": "Advanced Logistics",
+        "description": "Learn to automatically pick up loot from fallen foes and gain a greater swiftness bonus for your party in cities.",
+        "instruction": "You now have the option to have loot from creatures you defeat be deposited automatically into your inventory. This ability can be turned off in the Options menu. Your party now has a permanent 33% swiftness bonus in cities.",
+        "icon": "https://render.guildwars2.com/file/A41824167F010C0667B3F697DE03E132BD01ED01/1228646.png",
+        "point_cost": 8,
+        "exp_cost": 4127500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Fractal Attunement",
+    "requirement": "",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/5A19BB62274C6297773A1A21A94BAB9AB2A0711D/1228721.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Follows Advice",
+        "description": "With Dessa's authorization, gain access to additional daily achievements and special vendors with unique items inside the Mistlock Observatory.",
+        "instruction": "You have unlocked additional daily achievements for fractal scales 21–49. You can also now access vendors with special items inside the Mistlock Observatory.",
+        "icon": "https://render.guildwars2.com/file/D763657543F51E1FB608D0CBBBF350C1F1CD14C9/1228657.png",
+        "point_cost": 1,
+        "exp_cost": 635000
+      },
+      {
+        "name": "Agony Channeler",
+        "description": "Prolonged exposure to agony will result in improved rewards inside fractal dungeons. You'll also gain access to Mystic Forge recipes for adding extra agony infusion slots to ascended rings. Mist potions will give bonus attributes.",
+        "instruction": "You now receive bonus rewards from fractal dungeon boss chests. Vendors now sell ingredients for attuning rings in the Mystic Forge, which provide additional agony resistance slots on your ascended and infused rings. Mist potions will also convert a percentage of your agony resistance to specific attributes, depending on the potion used.",
+        "icon": "https://render.guildwars2.com/file/11B70969E876E8DD00484B42553C3CEF947CE863/1228656.png",
+        "point_cost": 2,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Recursive Resourcing",
+        "description": "Greater attunement with the fractals will grant bonus rewards from Chests of the Mists as well as Unlocked Fractal Encryptions. Fractal potion conversion also improves.",
+        "instruction": "You now gain bonus rewards from Chests of the Mists and Fractal Encryptions. Mist potion conversion has improved.",
+        "icon": "https://render.guildwars2.com/file/9D7273DC6F6211A636A74ED9F6CE3F932A23514C/1228659.png",
+        "point_cost": 3,
+        "exp_cost": 2222500
+      },
+      {
+        "name": "Mistlock Singularities",
+        "description": "Research how to activate the lifesaving Mistlock Singularities within the Fractals of the Mists. Fractal potion conversion improves.",
+        "instruction": "You can now activate Mistlock Singularities inside Fractals of the Mists to gain instant skill recharge, additional agony resistance, and a shield that can prevent death inside fractal dungeons. Fractal potion conversion has improved.",
+        "icon": "https://render.guildwars2.com/file/65ACE09437747DD1B84A5B9559DD75269A0EEB24/1228658.png",
+        "point_cost": 5,
+        "exp_cost": 3175000
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Legendary Crafting",
+    "requirement": "",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/2E91B0BD09CF08991E079CFB1727412AB12427F4/1228719.png",
+    "region": "Tyria",
+    "levels": [
+      {
+        "name": "Revered Antiquarian",
+        "description": "Learn to start the process of creating a legendary weapon by unlocking access to the first tier of precursor weapon collections.",
+        "instruction": "You can now speak to Grandmaster Craftsman Hobbs in Lion's Arch to begin the first-tier precursor weapon collection for any legendary weapon.",
+        "icon": "https://render.guildwars2.com/file/EB666596D8CA19CBAD0B034FB3DB3F7E0B9D1C0F/1228671.png",
+        "point_cost": 1,
+        "exp_cost": 1270000
+      },
+      {
+        "name": "Magister of Legends",
+        "description": "Learn about components necessary for the creation of second-tier precursor weapons.",
+        "instruction": "You can now purchase components necessary for the creation of second-tier precursor weapons from Grandmaster Craftsman Hobbs in Lion's Arch.",
+        "icon": "https://render.guildwars2.com/file/0C5A24F4086C4FFFD105A0C9EAC480F8B95AC7B5/1228670.png",
+        "point_cost": 3,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Historian of the Armaments",
+        "description": "Learn about components needed to create the third and final tier of precursor weapons.",
+        "instruction": "You can now purchase components necessary for the creation of third-tier precursor weapons from Grandmaster Craftsman Hobbs in Lion's Arch.",
+        "icon": "https://render.guildwars2.com/file/4521EF3192316745EC58C4A8FEBA2FB2CE4AE577/1228669.png",
+        "point_cost": 6,
+        "exp_cost": 3810000
+      },
+      {
+        "name": "Scholar of Secrets",
+        "description": "Learn about legendary weapon collections used to craft Heart of Thorns legendary weapons.",
+        "instruction": "You can now purchase components necessary for the creation of Heart of Thorns legendary weapons from Grandmaster Craftsman Hobbs in Lion's Arch.",
+        "icon": "https://render.guildwars2.com/file/E4A5BBD50AF41EC2EF94C1483740AFEFB609199F/1228672.png",
+        "point_cost": 9,
+        "exp_cost": 5080000
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Gliding",
+    "requirement": "Journey to the Heart of Maguuma and complete the story step \"Torn from the Sky\" to unlock access to the Gliding Mastery track.",
+    "order": 0,
+    "background": "https://render.guildwars2.com/file/68A54A21C030C5BA742603D3BF0305F344746F95/1228722.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Glider Basics",
+        "description": "Gain access to a glider so that you can glide across the highest points of the Heart of Maguuma as well as Central Tyrian open-world maps.",
+        "instruction": "To glide, jump from a high place, and then press the jump key again while falling.",
+        "icon": "https://render.guildwars2.com/file/A13A40AC0D4F0507780039C24B19D6E9C0D2FE1F/962098.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Updraft Use",
+        "description": "Improved design to your glider handles and wing slits lets you confidently fly into updrafts, allowing you to gain altitude and travel to previously unreachable locations.",
+        "instruction": "Updrafts are pillars of swirling wind found around the Maguuma Jungle. To use updrafts, simply glide into them and receive an elevation boost.",
+        "icon": "https://render.guildwars2.com/file/27C9EDD3F2516E486299ABF50929E759F5BCC4E8/962097.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Lean Techniques",
+        "description": "Learn the gliding technique of leaning forward to increase your gliding speed and leaning back to brake midair at the cost of endurance. Your improved technique also increases your total endurance pool when gliding.",
+        "instruction": "To lean in, press forward while gliding and get a speed boost. To lean back, press back while gliding to brake.",
+        "icon": "https://render.guildwars2.com/file/4D1CAE2F963C7C205BB06C0572040AD33B5BEBD8/962096.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Stealth Gliding",
+        "description": "Learn to glide silently and undetected through the air for short periods by dodging while gliding.",
+        "instruction": "To activate stealth, perform a dodge by double-tapping in any direction while gliding.",
+        "icon": "https://render.guildwars2.com/file/610A10527F20E26DBF5402FD4131F1EDAAE6D960/962095.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Advanced Gliding",
+        "description": "Learn to glide with such efficiency that you no longer use endurance to stay up in the air, only to perform lean techniques.",
+        "instruction": "You can now glide indefinitely without using endurance. Leaning still drains endurance.",
+        "icon": "https://render.guildwars2.com/file/FFD8BC49B85A794B729ABBE8DB1102F7D328D86A/962093.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Ley Line Gliding",
+        "description": "Learn to enter ley-line energy flows while gliding to be moved along with the flow, gaining access to otherwise inaccessible places.",
+        "instruction": "Ley lines are flows of magical energy that can be seen around the Maguuma Jungle. To use ley lines, simply glide into them and allow the energy flow to move you along.",
+        "icon": "https://render.guildwars2.com/file/A003F17064F5300F0C0705E8DB76D4B3EF51CFD3/962094.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Raids",
+    "requirement": "Enter the Forsaken Thicket in Verdant Brink and defeat a boss to unlock.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/64A43D09C00EBC0EF307A7C004EF05A8459F0907/1451827.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Rift Forger",
+        "description": "Learn precise control of the magic released into rifts by powerful enemies, allowing you to repair your armor by manipulating ley energy.",
+        "instruction": "Repair your armor using ley rifts in places where you've defeated a powerful enemy.",
+        "icon": "https://render.guildwars2.com/file/FB2D7C981E2E09725139220DCC90E308170AB7FE/1302710.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Explosive Launch",
+        "description": "The dwarves may have invented black powder, but you can perfect its use. Learn to safely launch to great heights with an explosive blast, without singeing your socks.",
+        "instruction": "You now take no damage when you or an ally launches you off of an explosive launch platform.",
+        "icon": "https://render.guildwars2.com/file/2D4C0BF20D2A1C0B041DC3D5357C0D67225E7479/1302709.png",
+        "point_cost": 1,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Forsaken Thicket Waters",
+        "description": "The waters in Forsaken Thicket are known to have cleansing properties that can cure various afflictions. Those who possess this Mastery can wash away their ailments and afflictions when the opportunity presents itself.",
+        "instruction": "You can now bathe in the healing Forsaken Thicket waters and cleanse your afflictions.",
+        "icon": "https://render.guildwars2.com/file/6120204BB9070AD428112705E3C9145EB33203BD/1377784.png",
+        "point_cost": 3,
+        "exp_cost": 1524000
+      },
+      {
+        "name": "Forsaken Magic",
+        "description": "Learn to harness the powerful energy permeating the Forsaken Thicket and gain advantages in battle.",
+        "instruction": "You now understand the magic of the Forsaken Thicket.",
+        "icon": "https://render.guildwars2.com/file/61D637CA3D6F5D355CDC3FAD3CB1DB0DDE34DE67/1451810.png",
+        "point_cost": 3,
+        "exp_cost": 3048000
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Ancient Magics",
+    "requirement": "Travel to Bloodstone Fen or Ember Bay to unlock.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/929FEABC05B4C9CAA978E0680908E4735CC2C5BC/1477050.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Counter Magic",
+        "description": "Based on ancient asuran research done by the supergenius Zinn, Taimi has devised a way to counter certain powerful magic abilities. Learn this Mastery to gain access to the Counter Magic special action skill that allows you to turn your enemy's attacks back on themselves.",
+        "instruction": "Use the Counter Magic special action skill to cancel certain powerful, magical abilities used by enemies.",
+        "icon": "https://render.guildwars2.com/file/097B5405639D54EFFD29C600B312ACBDBFDD250D/1477049.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Thermal Propulsion",
+        "description": "When the dwarves took on Primordus, they learned much about traveling through Tyria's heated core. Learn this Mastery to travel long distances as the dwarves did.",
+        "instruction": "Employ thermal propulsion to travel long distances.",
+        "icon": "https://render.guildwars2.com/file/14AB963FFAA679D6ADC625E6E538DA47CBF1EF34/1494369.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Koda's Flame",
+        "description": "Grants the ability to wield kodan fire magic based on a flame spirit that has been tamed since ancient times. Learning this Mastery will unlock the first skill while carrying Koda's Flame. Visit kodan flamebearers to learn additional skills.",
+        "instruction": "Pick up a Koda's Flame torch from the braziers spread throughout Bitterfrost Frontier and Tyria.",
+        "icon": "https://render.guildwars2.com/file/B809083AAF97000B38A309EB57DB9EED2A9BBB5A/1601946.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Spectral Aid",
+        "description": "Ancient magics still linger in the world of Tyria, and those especially attuned to them can sometimes call on them in times of great need. Learn this mastery to unlock an extra skill for use while downed.",
+        "instruction": "When you are downed, consider using your new skill to fend off remaining foes.",
+        "icon": "https://render.guildwars2.com/file/FCFA76723249B00D35FDED21DFD2CC409F4F26D3/1635191.png",
+        "point_cost": 3,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Oakheart's Reach",
+        "description": "Ancient druids had the power to manipulate nature. Learn this Mastery to gather Oakheart's essence, which allows you to grapple to new heights using magical vines.",
+        "instruction": "Find one of Oakheart's essences to gain the ability to launch yourself to targeted points. This skill can also be used while gliding.",
+        "icon": "https://render.guildwars2.com/file/0BD302C32B7A66659536C9F4F5C4087A1B13E878/1677329.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Siren of Orr",
+        "description": "Ancient chords of long-forgotten lamentations still echo in Orr. Those who have learned to listen for them are able to use dirges of power, making manifest abilities once lost to the pages of history.",
+        "instruction": "Whenever a Chancel of Echoes appears during combat, interact with it to acquire a random dirge. Perform these dirges to help allies and hinder foes.",
+        "icon": "https://render.guildwars2.com/file/24360325D7E12F6E5FE5CD4A23055FF8704B4123/1730817.png",
+        "point_cost": 7,
+        "exp_cost": 508000
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Raptor Mount",
+    "requirement": "Complete the Seeker's Village task region in Oasis to unlock the Raptor Mastery Track.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/23050D7A5B71477A0201FB1EAFC84A0645E7B772/1770237.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Ravenous Strike",
+        "description": "Understand the true ravenous nature of the raptor, greatly increasing the damage of Tail Spin.",
+        "instruction": "Tail Spin now deals greatly increased damage to foes.",
+        "icon": "https://render.guildwars2.com/file/37ECAA1A2B9A60FC63C59C99A6D0E7F418FA3839/1770184.png",
+        "point_cost": 1,
+        "exp_cost": 291846
+      },
+      {
+        "name": "Round up",
+        "description": "Learn to round up foes when using Tail Spin, pulling them in to your location.",
+        "instruction": "Tail Spin now pulls in foes to your location, grouping them up for combat.",
+        "icon": "https://render.guildwars2.com/file/DD07AF0FEECE67AD112E45EB4E6366454216B966/1770197.png",
+        "point_cost": 2,
+        "exp_cost": 261366
+      },
+      {
+        "name": "Canyon Jumping",
+        "description": "Learn to leap much farther with the raptor's movement ability, allowing you to traverse even more rough terrain.",
+        "instruction": "The leap movement ability will now travel much farther distances.",
+        "icon": "https://render.guildwars2.com/file/AF269F5D52B2B13A3CF76B800590C64940DA542D/1770198.png",
+        "point_cost": 3,
+        "exp_cost": 368808
+      },
+      {
+        "name": "Ravenous Discipline",
+        "description": "Master the raptor mount and learn to share the bonus from Ravenous Strike to all mount engage skills.",
+        "instruction": "All mounts now receive the bonus from Ravenous Strike, increasing their engage skill damage.",
+        "icon": "https://render.guildwars2.com/file/DAB770DEE1E0BCA673CF2D1DD2F69CAD0CD4469C/1770199.png",
+        "point_cost": 4,
+        "exp_cost": 1697354
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Skimmer Mount",
+    "requirement": "Complete the Skimmer Ranch task region in Elon Riverlands to unlock the Skimmer Mastery Track.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/9E3C519270CEECA95E107DA27B980C7A1AC6AAF9/1770240.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Nimble Recovery",
+        "description": "Learn to nimbly recover after being knocked off the skimmer and after engaging foes by using Barrel Roll. The skimmer will now grant you protection and swiftness when you're recovering.",
+        "instruction": "You'll now be granted swiftness and protection after getting knocked off your mount, or after engaging foes with Barrel Roll. (Cooldown: 10s)",
+        "icon": "https://render.guildwars2.com/file/A53BD8727C2461B0947917A5CCA50F4CB891DD12/1770193.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Rejuvenating Revival",
+        "description": "Learn to enhance the rejuvenating properties of Barrel Roll to also heal downed allies.",
+        "instruction": "You can now heal downed allies when you pass through them with Barrel Roll.",
+        "icon": "https://render.guildwars2.com/file/2FEB071CB9E932046495B44BD32A0B3F027EA201/1770194.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Ride the Wind",
+        "description": "Learn to ride the wind and increase the height of the hover movement ability to conquer new challenges.",
+        "instruction": "The hover movement ability now hovers at a much greater height.",
+        "icon": "https://render.guildwars2.com/file/227FDDF0DB0B4104CCF143D04851130A1063B6A9/1770195.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Nimble Benevolence",
+        "description": "Master the skimmer and learn to share the bonus from Nimble Recovery with all mounts.",
+        "instruction": "All mounts now receive the bonus from Nimble Recovery. Getting knocked off your mount or engaging foes will grant swiftness and protection. (Cooldown: 10s)",
+        "icon": "https://render.guildwars2.com/file/AF5F616037EB6AA8DEDD944BF241460EC43847DF/1770196.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Griffon Mount",
+    "requirement": "Complete the Griffon Training adventure in the Domain of Vabbi to unlock the Griffon Mastery Track.",
+    "order": 6,
+    "background": "https://render.guildwars2.com/file/C1F1C2410F0203BB43EEFD01FE9FC3FB1F785FE6/1824252.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Soaring Rescue",
+        "description": "Learn to mount the griffon midair to save yourself while falling.",
+        "instruction": "You can now mount the griffon midair. While in the air, use the mount hotkey to hop onto the griffon.",
+        "icon": "https://render.guildwars2.com/file/3A0E5BAAB3FEFDE7B465703C63B0EC61C22094AE/1824227.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Aerial Prowess",
+        "description": "Learn to gain aerial prowess with your griffon. Use Swoop to dive rapidly and engage foes below you. Use this momentum to pull up from a dive to fly forward at great speeds, or even directly upward.",
+        "instruction": "Use Swoop to dive toward the ground and engage foes below you, or enter the diving state by using movement ability 1. When you gain substantial diving speed, use movement ability 2 or the backward-movement key binds to carry your momentum upward.",
+        "icon": "https://render.guildwars2.com/file/CECD576710393748E9B500ECE1387E33BFF1CE1D/1824228.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Aerial Finesse",
+        "description": "Master the griffon by learning to use its Wing Flap ability, which allows you to gain a burst of speed while diving or climbing into the sky.",
+        "instruction": "Wing Flap can now be used while diving and pulling up to gain a burst of speed in your movement direction.",
+        "icon": "https://render.guildwars2.com/file/66591AC7EF0236283C2FB557945C264C3748E57B/1824229.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Springer Mount",
+    "requirement": "Complete the Highjump Ranch task region in Desert Highlands to unlock the Springer Mastery Track.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/D46208E42E1B53790D485D05473F2A081145806B/1770239.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Fortified Descent",
+        "description": "Learn to fortify your landing when falling from great heights, greatly increasing your tolerance for taking fall damage on the springer.",
+        "instruction": "The springer will now have a greater tolerance to taking fall damage, allowing you to safely fall from higher locations.",
+        "icon": "https://render.guildwars2.com/file/E7536A4F22F60F640FCAC3C4B7B84AD909573245/1770189.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Forceful Impact",
+        "description": "Learn to create a more forceful impact when using Cannonball, knocking down foes.",
+        "instruction": "Cannonball will now knock down foes, leaving them disabled as you engage them.",
+        "icon": "https://render.guildwars2.com/file/D57F504CD5F3B19D7A25381433160047F512FA9B/1770190.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "High Vault",
+        "description": "Learn to jump up much higher with the springer's movement ability, allowing you to reach new and previously unexplorable areas.",
+        "instruction": "The springer's charged jump movement ability will now be able to jump much higher distances.",
+        "icon": "https://render.guildwars2.com/file/50EFB2B1309230BCDC4E1FFCF44223BF1E1FE077/1770191.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Masterful Descent",
+        "description": "Master the springer mount and learn to share the bonus from Fortified Descent to all other mounts.",
+        "instruction": "All mounts now receive the bonus from Fortified Descent, giving them a greater tolerance to taking fall damage.",
+        "icon": "https://render.guildwars2.com/file/2BE13847756FBBFC06906DF1D7BD68FB961EDE26/1770192.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Jackal Mount",
+    "requirement": "Complete the Sand Jackal Run task region in the Desolation to unlock the Jackal Mastery Track.",
+    "order": 4,
+    "background": "https://render.guildwars2.com/file/0343626BF40452A6466C71EBA1539A0204354C01/1770238.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Enhanced Evasion",
+        "description": "Learn to evade attacks while using the jackal's movement ability, and use it at opportune times to avoid large attacks.",
+        "instruction": "The jackal's movement ability now lets you evade all incoming attacks. Press jump or mount ability 1 to activate the ability.",
+        "icon": "https://render.guildwars2.com/file/AF0023D07150070DE849074FB02FC844B3265769/1770185.png",
+        "point_cost": 2,
+        "exp_cost": 381000
+      },
+      {
+        "name": "Bolster Allies",
+        "description": "Learn to use the jackal's sand to bolster allies when using Pounce, granting nearby allies a strong barrier.",
+        "instruction": "Pounce will now grant nearby allies a strong barrier.",
+        "icon": "https://render.guildwars2.com/file/47F942D39FF16CCBFEF656CDEF0BC038621E6DD5/1770186.png",
+        "point_cost": 3,
+        "exp_cost": 457200
+      },
+      {
+        "name": "Shifting Sands",
+        "description": "Learn to shift through the sand portals found throughout the desert to reach new and hidden locations.",
+        "instruction": "You may now use sand portals to phase to new locations while riding the jackal.",
+        "icon": "https://render.guildwars2.com/file/45EF9D3F40C16D47E679ACE1FF213ED46D33A0D7/1770187.png",
+        "point_cost": 4,
+        "exp_cost": 558800
+      },
+      {
+        "name": "Adroit Evasion",
+        "description": "Master the jackal and learn to share the bonus from Enhanced Evasion with all mounts through their movement abilities.",
+        "instruction": "All mounts now receive the Enhanced Evasion bonus, allowing their movement abilities to evade hostile attacks.",
+        "icon": "https://render.guildwars2.com/file/1FC128CD155E1405F932F7C7DEFC726AB55A3B06/1770188.png",
+        "point_cost": 5,
+        "exp_cost": 1222375
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Crystal Champion",
+    "requirement": "Travel to the Domain of Istan to unlock.",
+    "order": 8,
+    "background": "https://render.guildwars2.com/file/020C6454737408ED437D9D7E6D096872F5D66B73/1896046.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Volatile Magic Resonance",
+        "description": "Master your bond with Aurene so that you can safely collect Volatile Magic.",
+        "instruction": "Aurene has gifted you the ability to harvest Volatile Magic, which would otherwise be hazardous to touch.",
+        "icon": "https://render.guildwars2.com/file/FB3B072FAF616538166C5802BCB701313BB8A47B/1896038.png",
+        "point_cost": 2,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Bond of Life",
+        "description": "Master your bond with Aurene so that she can let you share your health with your mount.",
+        "instruction": "Aurene has granted you the ability to temporarily share your health pool with your active mount.",
+        "icon": "https://render.guildwars2.com/file/B36BD2E2A82367F40C280B47787C164A9BF2D9D1/1948147.png",
+        "point_cost": 3,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Bond of Vigor",
+        "description": "Master your bond with Aurene so that she can let you rejuvenate your mount's endurance.",
+        "instruction": "Aurene has granted you the ability to rejuvenate the endurance of your active mount.",
+        "icon": "https://render.guildwars2.com/file/A02FB23C6FDD08E00FBFAD55BFB912904F04B572/2039796.png",
+        "point_cost": 4,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Bond of Faith",
+        "description": "Master your bond with Aurene so that she can lend you magical wings, allowing you to launch from your mounts.",
+        "instruction": "Your bond with Aurene has granted you the ability to launch off of mounts.",
+        "icon": "https://render.guildwars2.com/file/1566A00060ECB0D93DFBADB22542CF6B0C0ED540/2084754.png",
+        "point_cost": 5,
+        "exp_cost": 1016000
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Roller Beetle Mount",
+    "requirement": "Complete the roller beetle mount collection to unlock the roller beetle Mastery track.",
+    "order": 5,
+    "background": "https://render.guildwars2.com/file/BF3A0B31191F79CB1B900F0138EF0EBC069BE1CA/1999773.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Wrecking Ball",
+        "description": "Learn to launch foes a short distance by rolling over them with the roller beetle's engage skill, Roll Out.",
+        "instruction": "Roll Out damages foes as you roll over them and launches them a short distance.",
+        "icon": "https://render.guildwars2.com/file/FBEE0C6134DC00ED70CE92DD3A9A4FD2304C7CC9/1999766.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Barrier Smash",
+        "description": "Smash your way into secret areas and destroy volatile crystals with your roller beetle. Recover endurance when your beetle hits walls.",
+        "instruction": "Use your roller beetle's boost ability or Roll Out skill to smash through marked blockades and destroy volatile crystals. Recover endurance when your beetle collides with walls at high speed.",
+        "icon": "https://render.guildwars2.com/file/32A13C006364EB2EB421D395D634923CF72C416B/1999767.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Big Air",
+        "description": "Learn to perform stylish airborne tricks after boosting to regain endurance.",
+        "instruction": "Press and hold the jump button after boosting and catching air to perform stylish tricks. Tricks remain active and replenish endurance while the jump button is held. An endurance penalty will be administered for improper landings.",
+        "icon": "https://render.guildwars2.com/file/72966734E0F4E6EBC37C39272A0CF74B5E9DB992/1999768.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Skyscale Mount",
+    "requirement": "Complete the skyscale mount collections to unlock the skyscale Mastery track.",
+    "order": 7,
+    "background": "https://render.guildwars2.com/file/F25BD14B42D20C985C1E0E0A012C23BA9204542C/2141729.png",
+    "region": "Desert",
+    "levels": [
+      {
+        "name": "Air Rescue",
+        "description": "Learn to mount the skyscale in midair to save yourself while falling.",
+        "instruction": "You can now mount your skyscale in midair. While aloft, use the mount hotkey to hop onto the skyscale.",
+        "icon": "https://render.guildwars2.com/file/ED7865C74DFBA540E9AADB3A9BF57D4948ED9603/2141722.png",
+        "point_cost": 3,
+        "exp_cost": 571500
+      },
+      {
+        "name": "Rift Repair",
+        "description": "Learn to use your skyscale's magic resources to close rifts. This will draw out the magic trapped within and reveal new flight paths.",
+        "instruction": "Hovering next to rifts will close them and reveal flight paths for your skyscale. Follow them to claim the treasure at the end. But don't miss a node along the way! Your final reward is largest if you touch every node.",
+        "icon": "https://render.guildwars2.com/file/DAF8441D5F16045919EB5E0FB1DD0D05C8B5409A/2141723.png",
+        "point_cost": 4,
+        "exp_cost": 609600
+      },
+      {
+        "name": "Wall Launch",
+        "description": "Learn to launch off walls with your skyscale, providing a moment of respite and the ability to fly to greater heights.",
+        "instruction": "While clinging to a wall with your skyscale, hold the jump key to charge your flight meter, and release it to launch into the air. This requires at least one bar of endurance.",
+        "icon": "https://render.guildwars2.com/file/343EAADBB2060248C6791A0C085269A17B43E9EF/2141724.png",
+        "point_cost": 5,
+        "exp_cost": 698500
+      }
+    ]
+  }
+]
