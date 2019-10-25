@@ -16,7 +16,7 @@ buildscript {
 }
 
 project.group = 'com.kryszak'
-project.version = '0.0.2'
+project.version = '0.0.3'
 
 apply plugin: 'kotlin'
 apply plugin: "groovy"
