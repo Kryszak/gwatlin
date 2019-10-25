@@ -1,0 +1,50 @@
+{
+  "id": 1,
+  "name": "Ethnologie des Exaltés",
+  "requirement": "Rendez-vous dans le Bassin aurique pour déverrouiller le parcours de maîtrise Ethnologie des Exaltés.",
+  "order": 2,
+  "background": "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png",
+  "region": "Maguuma",
+  "levels": [
+    {
+      "name": "Marques exaltées",
+      "description": "Apprendre à lire les marques exaltées. Vous pouvez à présent déchiffrer leurs mots et avoir accès aux secrets de leur civilisation.",
+      "instruction": "Vous pouvez désormais interagir avec les artefacts exaltés trouvés dans le Bassin aurique et la Jungle de Maguuma.",
+      "icon": "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png",
+      "point_cost": 1,
+      "exp_cost": 508000
+    },
+    {
+      "name": "Acceptation exaltée",
+      "description": "Gagner la confiance des Exaltés étranges et mystérieux vous donne accès à leurs services dans la Cité des Oubliés.",
+      "instruction": "Vous pouvez désormais réaliser des échanges avec les Exaltés. Les marchands de maîtrises sont indiqués par une icône particulière sur la carte de la Jungle de Maguuma.",
+      "icon": "https://render.guildwars2.com/file/39DBD70271A074DCD6B1EAE1D639BD4D36765EC4/1228651.png",
+      "point_cost": 2,
+      "exp_cost": 1016000
+    },
+    {
+      "name": "Assistance exaltée",
+      "description": "Apprenez à utiliser les appareils de rappel des Exaltés dispersés dans la Jungle de Maguuma qui invoquent temporairement un guerrier exalté.",
+      "instruction": "Vous pouvez désormais interagir avec les appareils de rappel des Exaltés pour invoquer temporairement un Exalté allié ou augmenter la puissance d'un allié déjà invoqué.",
+      "icon": "https://render.guildwars2.com/file/B9B7E50E29F554570E63945249002FC6B64C7FFB/1228652.png",
+      "point_cost": 3,
+      "exp_cost": 1778000
+    },
+    {
+      "name": "Purification exaltée",
+      "description": "Soyez honoré par les Exaltés en défiant leur champion quotidiennement, et déverrouillez les trésors les plus précieux de la Cité des Oubliés.",
+      "instruction": "Vous pouvez désormais battre le traître terni sous la Cité des Oubliés pour recevoir un coffre de récompense une fois par jour.",
+      "icon": "https://render.guildwars2.com/file/EE132C76A52AC66D0211CED63E74F64B7F4AFB34/1228655.png",
+      "point_cost": 5,
+      "exp_cost": 2540000
+    },
+    {
+      "name": "Récolte exaltée",
+      "description": "Apprenez à récupérer les matériaux rares de la Jungle de Maguuma grâce aux Exaltés. Découvrez comment extraire les esquilles auriques des zones de minerai du Bassin aurique.",
+      "instruction": "En récoltant du minerai dans le Bassin aurique, vous obtiendrez des esquilles auriques en plus des matériaux ordinaires. Vous avez également plus de chances de récolter des objets spéciaux sur les zones de minerai du Cœur de Maguuma.",
+      "icon": "https://render.guildwars2.com/file/324312530AA1A427AB0951D0BFBC92C4B69774D6/1228653.png",
+      "point_cost": 8,
+      "exp_cost": 3302000
+    }
+  ]
+}
