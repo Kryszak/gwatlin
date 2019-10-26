@@ -17,11 +17,11 @@ At this moment this project is in development phase.
 ## Features
 ### Present
 -   Achievements
+-   Daily Rewards
 -   Home Instance
 
 ### To be done 
 -   Account
--   Daily Rewards
 -   Game Mechanics
 -   Guild 
 -   Items
