@@ -30,7 +30,7 @@ class GameMechanicsStubs extends WiremockConfig {
     def stubMasteryErrorResponse() {
         stubFor(
                 get(urlEqualTo("/masteries/40?lang=en"))
-                        .willReturn(badRequest()
+                        .willReturn(notFound()
                                 .withBody(parseResponseText("/responses/gamemechanics/mastery_error.json")))
         )
     }
@@ -46,6 +46,34 @@ class GameMechanicsStubs extends WiremockConfig {
         stubFor(
                 get(urlEqualTo("/masteries?ids=all&lang=en"))
                         .willReturn(okJson(parseResponseText("/responses/gamemechanics/masteries_all.json")))
+        )
+    }
+
+    def stubMountSkinIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/skins"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_skin_ids.json")))
+        )
+    }
+
+    def stubMountSkinsResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/skins?ids=1,2&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_skins.json")))
+        )
+    }
+
+    def stubMountSkinErrorResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/skins?ids=1000&lang=en"))
+                .willReturn(notFound().withBody(parseResponseText(("/responses/gamemechanics/mount_skins_error.json"))))
+        )
+    }
+
+    def stubAllMountSkinsResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/skins?ids=all&lang=en"))
+                .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_skins_all.json")))
         )
     }
 }

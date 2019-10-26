@@ -2,14 +2,14 @@ package com.kryszak.gwatlin.clients.gamemechanics
 
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
-import com.kryszak.gwatlin.api.gamemechanics.model.Mastery
+import com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
 import spock.lang.Subject
 import spock.lang.Unroll
 
-class GameMechanicsClientSpec extends GameMechanicsStubs {
+class MasteriesClientSpec extends GameMechanicsStubs {
 
     @Subject
-    def gameMechanicsClient = new GameMechanicsClient()
+    def gameMechanicsClient = new MasteriesClient()
 
     def "Should get masteries ids"() {
         given: "Expected list of masteries ids"

@@ -1,0 +1,4014 @@
+[
+  {
+    "id": 1,
+    "name": "Raptor",
+    "icon": "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png",
+    "dye_slots": [
+      {
+        "color_id": 19,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 2,
+    "name": "Skimmer",
+    "icon": "https://render.guildwars2.com/file/BD357CB6A25EEFA961B974B6E980DFB0A396A5A4/1766901.png",
+    "dye_slots": [
+      {
+        "color_id": 590,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 3,
+    "name": "Springer",
+    "icon": "https://render.guildwars2.com/file/EAD3540691D702A52E617140055725DF41BBBA49/1766899.png",
+    "dye_slots": [
+      {
+        "color_id": 466,
+        "material": "cloth"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 4,
+    "name": "Griffon",
+    "icon": "https://render.guildwars2.com/file/0307F624D93C09236934C3CEE63063CD1C96ACAB/1822130.png",
+    "dye_slots": [
+      {
+        "color_id": 705,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 6,
+    "name": "Jackal",
+    "icon": "https://render.guildwars2.com/file/01D6BF672FDBC1A22D11CF1090BCAE7A05372B65/1766897.png",
+    "dye_slots": [
+      {
+        "color_id": 652,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 12,
+    "name": "Starscale",
+    "icon": "https://render.guildwars2.com/file/C53B210067B44EEA29B8ACCBA595A64B2BE6D3AD/2015438.png",
+    "dye_slots": [
+      {
+        "color_id": 671,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1454,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1378,
+        "material": "cloth"
+      },
+      {
+        "color_id": 603,
+        "material": "metal"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 13,
+    "name": "Spooky Raptor",
+    "icon": "https://render.guildwars2.com/file/0B746EAF311AB1E83D593D48113D6C929A22075E/1862547.png",
+    "dye_slots": [
+      {
+        "color_id": 348,
+        "material": "leather"
+      },
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 1541,
+        "material": "leather"
+      },
+      {
+        "color_id": 15,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 14,
+    "name": "Spooky Jackal",
+    "icon": "https://render.guildwars2.com/file/2347359EEAC2722F95397010994734F0CE1EAD7F/1862571.png",
+    "dye_slots": [
+      {
+        "color_id": 348,
+        "material": "leather"
+      },
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 1541,
+        "material": "leather"
+      },
+      {
+        "color_id": 15,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 15,
+    "name": "Spooky Springer",
+    "icon": "https://render.guildwars2.com/file/BC77FE903BA70F76D10BEFA2545CAB30539990E1/1862506.png",
+    "dye_slots": [
+      {
+        "color_id": 348,
+        "material": "cloth"
+      },
+      {
+        "color_id": 69,
+        "material": "metal"
+      },
+      {
+        "color_id": 1541,
+        "material": "fur"
+      },
+      {
+        "color_id": 15,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 16,
+    "name": "Spooky Griffon",
+    "icon": "https://render.guildwars2.com/file/97EBA47F7A6FCBF1BC62CA617E39F5F62102C148/1862455.png",
+    "dye_slots": [
+      {
+        "color_id": 348,
+        "material": "fur"
+      },
+      {
+        "color_id": 69,
+        "material": "fur"
+      },
+      {
+        "color_id": 1541,
+        "material": "fur"
+      },
+      {
+        "color_id": 15,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 17,
+    "name": "Resplendent Avialan",
+    "icon": "https://render.guildwars2.com/file/A1A20D90B4F5281C73A4E0486409272F3CFE3764/1895213.png",
+    "dye_slots": [
+      {
+        "color_id": 680,
+        "material": "cloth"
+      },
+      {
+        "color_id": 7,
+        "material": "cloth"
+      },
+      {
+        "color_id": 137,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1377,
+        "material": "metal"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 19,
+    "name": "Spooky Skimmer",
+    "icon": "https://render.guildwars2.com/file/46CF0EA9B7A13B0C2A0F410D28D51CB4F6C398DA/1862569.png",
+    "dye_slots": [
+      {
+        "color_id": 348,
+        "material": "leather"
+      },
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 1541,
+        "material": "leather"
+      },
+      {
+        "color_id": 15,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 20,
+    "name": "Windy Spot",
+    "icon": "https://render.guildwars2.com/file/22B848FF8055534E1EC397086D2F46647547E29F/1876490.png",
+    "dye_slots": [
+      {
+        "color_id": 78,
+        "material": "cloth"
+      },
+      {
+        "color_id": 672,
+        "material": "cloth"
+      },
+      {
+        "color_id": 449,
+        "material": "cloth"
+      },
+      {
+        "color_id": 698,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 21,
+    "name": "Coastal Spiketail",
+    "icon": "https://render.guildwars2.com/file/0167AC167C41CB9755AE12954C2FA30C1C0535A1/1876530.png",
+    "dye_slots": [
+      {
+        "color_id": 700,
+        "material": "leather"
+      },
+      {
+        "color_id": 88,
+        "material": "leather"
+      },
+      {
+        "color_id": 642,
+        "material": "leather"
+      },
+      {
+        "color_id": 19,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 22,
+    "name": "Polished Stone",
+    "icon": "https://render.guildwars2.com/file/684AF0124E52E43F60F7AB5E9CB41F72E5517B30/1876747.png",
+    "dye_slots": [
+      {
+        "color_id": 381,
+        "material": "metal"
+      },
+      {
+        "color_id": 642,
+        "material": "leather"
+      },
+      {
+        "color_id": 86,
+        "material": "leather"
+      },
+      {
+        "color_id": 625,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 23,
+    "name": "Fire Pinion",
+    "icon": "https://render.guildwars2.com/file/07CCC8F3B515B791D0C825056D3764D600937EBC/1876423.png",
+    "dye_slots": [
+      {
+        "color_id": 1349,
+        "material": "fur"
+      },
+      {
+        "color_id": 5,
+        "material": "fur"
+      },
+      {
+        "color_id": 1150,
+        "material": "fur"
+      },
+      {
+        "color_id": 1541,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 24,
+    "name": "Storm Ridge",
+    "icon": "https://render.guildwars2.com/file/3BACC346F07E2330A2AAFA9B2A3180E5AF602909/1876532.png",
+    "dye_slots": [
+      {
+        "color_id": 77,
+        "material": "leather"
+      },
+      {
+        "color_id": 26,
+        "material": "cloth"
+      },
+      {
+        "color_id": 345,
+        "material": "fur"
+      },
+      {
+        "color_id": 590,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 25,
+    "name": "Spotted Sylph",
+    "icon": "https://render.guildwars2.com/file/E541AA169923BFED4A937451FAAA79019EDCC5C1/1876415.png",
+    "dye_slots": [
+      {
+        "color_id": 1357,
+        "material": "cloth"
+      },
+      {
+        "color_id": 380,
+        "material": "cloth"
+      },
+      {
+        "color_id": 704,
+        "material": "cloth"
+      },
+      {
+        "color_id": 650,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 26,
+    "name": "Oceanic Ray",
+    "icon": "https://render.guildwars2.com/file/FCBCC500961BC20FEEE7724699E71F76DCC2F49C/1876605.png",
+    "dye_slots": [
+      {
+        "color_id": 588,
+        "material": "leather"
+      },
+      {
+        "color_id": 622,
+        "material": "leather"
+      },
+      {
+        "color_id": 1381,
+        "material": "leather"
+      },
+      {
+        "color_id": 442,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 27,
+    "name": "Starbound",
+    "icon": "https://render.guildwars2.com/file/5728F1507E6243E4FA160FB9F81F696F68707E38/1876457.png",
+    "dye_slots": [
+      {
+        "color_id": 364,
+        "material": "fur"
+      },
+      {
+        "color_id": 1454,
+        "material": "fur"
+      },
+      {
+        "color_id": 1305,
+        "material": "fur"
+      },
+      {
+        "color_id": 603,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 28,
+    "name": "Banded Mystic",
+    "icon": "https://render.guildwars2.com/file/0DC7E21CA968C6E2AD21BD222B00CF4E9A182E45/1876757.png",
+    "dye_slots": [
+      {
+        "color_id": 436,
+        "material": "metal"
+      },
+      {
+        "color_id": 625,
+        "material": "leather"
+      },
+      {
+        "color_id": 600,
+        "material": "leather"
+      },
+      {
+        "color_id": 698,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 29,
+    "name": "Savannah Monitor",
+    "icon": "https://render.guildwars2.com/file/D24AF3632E1C036ED242B072B679CCD7F7BACC38/1876529.png",
+    "dye_slots": [
+      {
+        "color_id": 61,
+        "material": "leather"
+      },
+      {
+        "color_id": 715,
+        "material": "leather"
+      },
+      {
+        "color_id": 621,
+        "material": "leather"
+      },
+      {
+        "color_id": 112,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 30,
+    "name": "Pyroclast",
+    "icon": "https://render.guildwars2.com/file/F465580E09BFFBBFDD7E40FADEE737E4D30E27E0/1876823.png",
+    "dye_slots": [
+      {
+        "color_id": 84,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      },
+      {
+        "color_id": 642,
+        "material": "leather"
+      },
+      {
+        "color_id": 1149,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 31,
+    "name": "Arctic Jerboa",
+    "icon": "https://render.guildwars2.com/file/7665039BCA57C84EC87A3561256277F610422E65/1876524.png",
+    "dye_slots": [
+      {
+        "color_id": 583,
+        "material": "fur"
+      },
+      {
+        "color_id": 587,
+        "material": "fur"
+      },
+      {
+        "color_id": 29,
+        "material": "fur"
+      },
+      {
+        "color_id": 590,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 32,
+    "name": "Canyon Spiketail",
+    "icon": "https://render.guildwars2.com/file/6F1E304AB430CCBA7780624CA864C22876C2EAC6/1876587.png",
+    "dye_slots": [
+      {
+        "color_id": 371,
+        "material": "leather"
+      },
+      {
+        "color_id": 1149,
+        "material": "leather"
+      },
+      {
+        "color_id": 344,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 33,
+    "name": "Twin Sands",
+    "icon": "https://render.guildwars2.com/file/B90EB4EAEFCB40F91D104B4275ABD57DB05AE756/1876761.png",
+    "dye_slots": [
+      {
+        "color_id": 628,
+        "material": "metal"
+      },
+      {
+        "color_id": 64,
+        "material": "leather"
+      },
+      {
+        "color_id": 81,
+        "material": "leather"
+      },
+      {
+        "color_id": 625,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 34,
+    "name": "Highlands Harrier",
+    "icon": "https://render.guildwars2.com/file/A0DF66E70BCA1B33D9BDF7966A785DDEFE742D48/1876414.png",
+    "dye_slots": [
+      {
+        "color_id": 1153,
+        "material": "cloth"
+      },
+      {
+        "color_id": 714,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1456,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1354,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 35,
+    "name": "Striped Tri-horn",
+    "icon": "https://render.guildwars2.com/file/A9D1B90D34990DDD4CD62254025907DA6829162A/1876586.png",
+    "dye_slots": [
+      {
+        "color_id": 338,
+        "material": "leather"
+      },
+      {
+        "color_id": 442,
+        "material": "leather"
+      },
+      {
+        "color_id": 591,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 36,
+    "name": "Bright Ringfin",
+    "icon": "https://render.guildwars2.com/file/0AEC0DBF1961BAC853A8F6F5BBF4615178797D45/1876590.png",
+    "dye_slots": [
+      {
+        "color_id": 80,
+        "material": "leather"
+      },
+      {
+        "color_id": 668,
+        "material": "leather"
+      },
+      {
+        "color_id": 1158,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 37,
+    "name": "Oasis Skate",
+    "icon": "https://render.guildwars2.com/file/4911622D0F70BD290FB627FAF9734D247FDD37D5/1876589.png",
+    "dye_slots": [
+      {
+        "color_id": 143,
+        "material": "leather"
+      },
+      {
+        "color_id": 650,
+        "material": "leather"
+      },
+      {
+        "color_id": 112,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 38,
+    "name": "Elonian Jackalope",
+    "icon": "https://render.guildwars2.com/file/401D2021512F0A5C0ECE43E0FA74CC02F50DB43F/1876526.png",
+    "dye_slots": [
+      {
+        "color_id": 1236,
+        "material": "cloth"
+      },
+      {
+        "color_id": 481,
+        "material": "cloth"
+      },
+      {
+        "color_id": 84,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1150,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 39,
+    "name": "Crowned Ancient",
+    "icon": "https://render.guildwars2.com/file/B05B5C544049E0075DECD775BA46C93C17C51016/1876769.png",
+    "dye_slots": [
+      {
+        "color_id": 631,
+        "material": "metal"
+      },
+      {
+        "color_id": 138,
+        "material": "leather"
+      },
+      {
+        "color_id": 1267,
+        "material": "leather"
+      },
+      {
+        "color_id": 694,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 40,
+    "name": "Clouded Corvus",
+    "icon": "https://render.guildwars2.com/file/3C549F484878A7C9F2A705716AD7399F0FED3D5A/1876487.png",
+    "dye_slots": [
+      {
+        "color_id": 1233,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1549,
+        "material": "cloth"
+      },
+      {
+        "color_id": 87,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1357,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 41,
+    "name": "Primal Hare",
+    "icon": "https://render.guildwars2.com/file/770E07724C67F7F11C1E1ACF097A5234DD58BAB5/1876523.png",
+    "dye_slots": [
+      {
+        "color_id": 1357,
+        "material": "cloth"
+      },
+      {
+        "color_id": 68,
+        "material": "metal"
+      },
+      {
+        "color_id": 69,
+        "material": "fur"
+      },
+      {
+        "color_id": 112,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 42,
+    "name": "Tawny Hare",
+    "icon": "https://render.guildwars2.com/file/D097950813235F583EDD0BAE03F90C0DB8A66DF5/1876489.png",
+    "dye_slots": [
+      {
+        "color_id": 453,
+        "material": "fur"
+      },
+      {
+        "color_id": 611,
+        "material": "fur"
+      },
+      {
+        "color_id": 21,
+        "material": "fur"
+      },
+      {
+        "color_id": 28,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 43,
+    "name": "Desert Lop",
+    "icon": "https://render.guildwars2.com/file/E8075D18EE08D33269623ABFD8B1C0D6DC46046D/1876525.png",
+    "dye_slots": [
+      {
+        "color_id": 113,
+        "material": "cloth"
+      },
+      {
+        "color_id": 366,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1152,
+        "material": "cloth"
+      },
+      {
+        "color_id": 134,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 44,
+    "name": "River Moth Wing",
+    "icon": "https://render.guildwars2.com/file/221CD8DFE4B87694760AB701E549F1F357AD2913/1876606.png",
+    "dye_slots": [
+      {
+        "color_id": 78,
+        "material": "leather"
+      },
+      {
+        "color_id": 594,
+        "material": "leather"
+      },
+      {
+        "color_id": 9,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 45,
+    "name": "Spined Longtail",
+    "icon": "https://render.guildwars2.com/file/140803DFCE05AE01FABC6B6710794AE7C5582334/1876607.png",
+    "dye_slots": [
+      {
+        "color_id": 25,
+        "material": "leather"
+      },
+      {
+        "color_id": 590,
+        "material": "leather"
+      },
+      {
+        "color_id": 623,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 46,
+    "name": "Reforged Warhound",
+    "icon": "https://render.guildwars2.com/file/CCD2DF5105BE2625E7C377CE5742120AB64B7347/1876746.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 597,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      },
+      {
+        "color_id": 1149,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 47,
+    "name": "Dajkah Lantern",
+    "icon": "https://render.guildwars2.com/file/455A65350780289AEBE0DF60256D92E392FD332C/1876594.png",
+    "dye_slots": [
+      {
+        "color_id": 1350,
+        "material": "leather"
+      },
+      {
+        "color_id": 1275,
+        "material": "leather"
+      },
+      {
+        "color_id": 117,
+        "material": "leather"
+      },
+      {
+        "color_id": 700,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 48,
+    "name": "Flamelander",
+    "icon": "https://render.guildwars2.com/file/2C0BFBE176E6DE4AF460971E4A7AD17C934F6F68/1876531.png",
+    "dye_slots": [
+      {
+        "color_id": 583,
+        "material": "leather"
+      },
+      {
+        "color_id": 483,
+        "material": "leather"
+      },
+      {
+        "color_id": 375,
+        "material": "leather"
+      },
+      {
+        "color_id": 616,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 49,
+    "name": "Stardust",
+    "icon": "https://render.guildwars2.com/file/C009453D9442C1E9A1A71DC6411FB54C703FAD2E/1876868.png",
+    "dye_slots": [
+      {
+        "color_id": 27,
+        "material": "metal"
+      },
+      {
+        "color_id": 1159,
+        "material": "metal"
+      },
+      {
+        "color_id": 664,
+        "material": "metal"
+      },
+      {
+        "color_id": 678,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 50,
+    "name": "Badlands Stalker",
+    "icon": "https://render.guildwars2.com/file/5366FF60CD9B75E33D03720FDA352D1EAF68A413/1876486.png",
+    "dye_slots": [
+      {
+        "color_id": 1149,
+        "material": "cloth"
+      },
+      {
+        "color_id": 596,
+        "material": "cloth"
+      },
+      {
+        "color_id": 141,
+        "material": "cloth"
+      },
+      {
+        "color_id": 482,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 52,
+    "name": "Cozy Wintersday Skimmer",
+    "icon": "https://render.guildwars2.com/file/A9267E4C3496CACC44D1D13CDDE5527D6FF50161/1915364.png",
+    "dye_slots": [
+      {
+        "color_id": 640,
+        "material": "leather"
+      },
+      {
+        "color_id": 1363,
+        "material": "cloth"
+      },
+      {
+        "color_id": 708,
+        "material": "cloth"
+      },
+      {
+        "color_id": 708,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 53,
+    "name": "Cozy Wintersday Griffon",
+    "icon": "https://render.guildwars2.com/file/52D3B5B25E48B620155F69036106A6FA29795694/1915285.png",
+    "dye_slots": [
+      {
+        "color_id": 640,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1363,
+        "material": "fur"
+      },
+      {
+        "color_id": 708,
+        "material": "cloth"
+      },
+      {
+        "color_id": 708,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 56,
+    "name": "Cozy Wintersday Jackal",
+    "icon": "https://render.guildwars2.com/file/F6B09307FA912B3268F7F8A60BA5030997E9137B/1915381.png",
+    "dye_slots": [
+      {
+        "color_id": 640,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1363,
+        "material": "fur"
+      },
+      {
+        "color_id": 708,
+        "material": "fur"
+      },
+      {
+        "color_id": 708,
+        "material": "fur"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 57,
+    "name": "Umbral Demon",
+    "icon": "https://render.guildwars2.com/file/24AF2A30ACDD21E21DA07901085FE059D90A3D32/1915348.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "leather"
+      },
+      {
+        "color_id": 593,
+        "material": "leather"
+      },
+      {
+        "color_id": 20,
+        "material": "leather"
+      },
+      {
+        "color_id": 29,
+        "material": "fur"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 58,
+    "name": "Cozy Wintersday Raptor",
+    "icon": "https://render.guildwars2.com/file/C30B5AC702377B4CCFC23971061BF73B0F4CE4CA/1915324.png",
+    "dye_slots": [
+      {
+        "color_id": 640,
+        "material": "leather"
+      },
+      {
+        "color_id": 1363,
+        "material": "cloth"
+      },
+      {
+        "color_id": 708,
+        "material": "cloth"
+      },
+      {
+        "color_id": 708,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 60,
+    "name": "Cozy Wintersday Springer",
+    "icon": "https://render.guildwars2.com/file/73B203D0FC760900069937702F9D97032BC13E55/1915305.png",
+    "dye_slots": [
+      {
+        "color_id": 640,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1363,
+        "material": "fur"
+      },
+      {
+        "color_id": 708,
+        "material": "fur"
+      },
+      {
+        "color_id": 708,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 61,
+    "name": "Summit Wildhorn",
+    "icon": "https://render.guildwars2.com/file/3350445D950409C6B302A54DBDE52694445B9E31/1925546.png",
+    "dye_slots": [
+      {
+        "color_id": 362,
+        "material": "fur"
+      },
+      {
+        "color_id": 447,
+        "material": "fur"
+      },
+      {
+        "color_id": 473,
+        "material": "fur"
+      },
+      {
+        "color_id": 64,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 62,
+    "name": "Grand Lion",
+    "icon": "https://render.guildwars2.com/file/B075BBFE024814D3A928F3DE1B9E5CD74C44BC0F/1933059.png",
+    "dye_slots": [
+      {
+        "color_id": 64,
+        "material": "fur"
+      },
+      {
+        "color_id": 77,
+        "material": "fur"
+      },
+      {
+        "color_id": 67,
+        "material": "fur"
+      },
+      {
+        "color_id": 315,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 66,
+    "name": "Branded Springer",
+    "icon": "https://render.guildwars2.com/file/430B03960C33ECC39B0248F4A10DCE06407FCC45/1947483.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "cloth"
+      },
+      {
+        "color_id": 99,
+        "material": "fur"
+      },
+      {
+        "color_id": 143,
+        "material": "fur"
+      },
+      {
+        "color_id": 116,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 68,
+    "name": "Branded Jackal",
+    "icon": "https://render.guildwars2.com/file/BC300C9056151F0D286D7F4270991314E19BBDA1/1947579.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "cloth"
+      },
+      {
+        "color_id": 99,
+        "material": "fur"
+      },
+      {
+        "color_id": 143,
+        "material": "fur"
+      },
+      {
+        "color_id": 116,
+        "material": "fur"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 70,
+    "name": "Branded Skimmer",
+    "icon": "https://render.guildwars2.com/file/FDE007E67A61F7DC0EB820B35AD802279ABDE1C0/1947540.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "leather"
+      },
+      {
+        "color_id": 99,
+        "material": "cloth"
+      },
+      {
+        "color_id": 143,
+        "material": "cloth"
+      },
+      {
+        "color_id": 116,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 75,
+    "name": "Branded Griffon",
+    "icon": "https://render.guildwars2.com/file/4701BADF2254D8004A533FCFB30907FEB8F2261F/1947433.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "cloth"
+      },
+      {
+        "color_id": 99,
+        "material": "fur"
+      },
+      {
+        "color_id": 143,
+        "material": "cloth"
+      },
+      {
+        "color_id": 116,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 76,
+    "name": "Branded Raptor",
+    "icon": "https://render.guildwars2.com/file/1DC8BA14087FDFCB09E41657F6D658247FAD08AB/1947536.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "leather"
+      },
+      {
+        "color_id": 99,
+        "material": "leather"
+      },
+      {
+        "color_id": 143,
+        "material": "leather"
+      },
+      {
+        "color_id": 116,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 77,
+    "name": "Istani Bald",
+    "icon": "https://render.guildwars2.com/file/DD5000E3C845F40302C6F3A2E6E3BCBA4DAD9D74/1964191.png",
+    "dye_slots": [
+      {
+        "color_id": 482,
+        "material": "cloth"
+      },
+      {
+        "color_id": 467,
+        "material": "cloth"
+      },
+      {
+        "color_id": 453,
+        "material": "cloth"
+      },
+      {
+        "color_id": 443,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 78,
+    "name": "Issnur Long Hair",
+    "icon": "https://render.guildwars2.com/file/063C680C4DAEF245BFD16178C2AA0C1BC194474D/1964337.png",
+    "dye_slots": [
+      {
+        "color_id": 436,
+        "material": "cloth"
+      },
+      {
+        "color_id": 591,
+        "material": "cloth"
+      },
+      {
+        "color_id": 16,
+        "material": "cloth"
+      },
+      {
+        "color_id": 134,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 79,
+    "name": "Sargol Thunderer",
+    "icon": "https://render.guildwars2.com/file/14B9D2A105B279FA0D5244B677D12F659DB9020D/1964331.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "fur"
+      },
+      {
+        "color_id": 143,
+        "material": "fur"
+      },
+      {
+        "color_id": 1159,
+        "material": "fur"
+      },
+      {
+        "color_id": 28,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 80,
+    "name": "Sky Bandit",
+    "icon": "https://render.guildwars2.com/file/175BBDA3625DC72425B19960B26CE278380FBEAC/1964237.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "cloth"
+      },
+      {
+        "color_id": 611,
+        "material": "cloth"
+      },
+      {
+        "color_id": 466,
+        "material": "cloth"
+      },
+      {
+        "color_id": 18,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 81,
+    "name": "Striped Jarin",
+    "icon": "https://render.guildwars2.com/file/E0FCA8352B23D8DEBE1F2EE75AC63ADDA5D2EA6D/1964343.png",
+    "dye_slots": [
+      {
+        "color_id": 1376,
+        "material": "leather"
+      },
+      {
+        "color_id": 443,
+        "material": "leather"
+      },
+      {
+        "color_id": 473,
+        "material": "leather"
+      },
+      {
+        "color_id": 1550,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 82,
+    "name": "Primeval",
+    "icon": "https://render.guildwars2.com/file/A6EA0D1E4F45525596F751A6E1D5754964C9C553/1964290.png",
+    "dye_slots": [
+      {
+        "color_id": 89,
+        "material": "fur"
+      },
+      {
+        "color_id": 614,
+        "material": "fur"
+      },
+      {
+        "color_id": 587,
+        "material": "fur"
+      },
+      {
+        "color_id": 714,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 83,
+    "name": "Oceanic Broadtail",
+    "icon": "https://render.guildwars2.com/file/794550495A5E0C3E3C5AC207085F599A4F806F91/1964460.png",
+    "dye_slots": [
+      {
+        "color_id": 483,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 443,
+        "material": "leather"
+      },
+      {
+        "color_id": 621,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 84,
+    "name": "Primus Beta",
+    "icon": "https://render.guildwars2.com/file/0DF87B1C5FDC912B7C29DF3D1C51E5A54A517DE8/1964389.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 88,
+        "material": "leather"
+      },
+      {
+        "color_id": 76,
+        "material": "leather"
+      },
+      {
+        "color_id": 625,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 85,
+    "name": "Stardrift",
+    "icon": "https://render.guildwars2.com/file/7D1109D014DAD3C91824FCFBFB06C72217D9B598/1964440.png",
+    "dye_slots": [
+      {
+        "color_id": 644,
+        "material": "leather"
+      },
+      {
+        "color_id": 1457,
+        "material": "leather"
+      },
+      {
+        "color_id": 1305,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 86,
+    "name": "Lahtenda Bog Hunter",
+    "icon": "https://render.guildwars2.com/file/02C3704F2BC1956201C578F6043D68E743C22D00/1964387.png",
+    "dye_slots": [
+      {
+        "color_id": 77,
+        "material": "leather"
+      },
+      {
+        "color_id": 350,
+        "material": "leather"
+      },
+      {
+        "color_id": 1538,
+        "material": "leather"
+      },
+      {
+        "color_id": 1151,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 87,
+    "name": "Primeval",
+    "icon": "https://render.guildwars2.com/file/FC42BA6F4133144E93360191EF113EFB14C426DE/1964487.png",
+    "dye_slots": [
+      {
+        "color_id": 89,
+        "material": "metal"
+      },
+      {
+        "color_id": 614,
+        "material": "leather"
+      },
+      {
+        "color_id": 587,
+        "material": "leather"
+      },
+      {
+        "color_id": 714,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 88,
+    "name": "Dzalana Ice Scale",
+    "icon": "https://render.guildwars2.com/file/C0987CB24391C62E6EB90172605C91F844B00715/1964381.png",
+    "dye_slots": [
+      {
+        "color_id": 458,
+        "material": "leather"
+      },
+      {
+        "color_id": 1380,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1381,
+        "material": "fur"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 89,
+    "name": "Iceflow",
+    "icon": "https://render.guildwars2.com/file/5C28DD217C179D2A4B33FC9309F7FD0E1DB2DCC7/1964488.png",
+    "dye_slots": [
+      {
+        "color_id": 7,
+        "material": "metal"
+      },
+      {
+        "color_id": 585,
+        "material": "metal"
+      },
+      {
+        "color_id": 443,
+        "material": "metal"
+      },
+      {
+        "color_id": 712,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 90,
+    "name": "Ceylon Cut",
+    "icon": "https://render.guildwars2.com/file/01CB941FA8935603C29841903BDA9D16A1297B12/1964523.png",
+    "dye_slots": [
+      {
+        "color_id": 481,
+        "material": "metal"
+      },
+      {
+        "color_id": 138,
+        "material": "leather"
+      },
+      {
+        "color_id": 585,
+        "material": "leather"
+      },
+      {
+        "color_id": 1149,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 91,
+    "name": "Exalted Sky Sentry",
+    "icon": "https://render.guildwars2.com/file/5BAD46FD0333CB100305EBC7241A23614C6468C6/1964226.png",
+    "dye_slots": [
+      {
+        "color_id": 714,
+        "material": "fur"
+      },
+      {
+        "color_id": 93,
+        "material": "fur"
+      },
+      {
+        "color_id": 1338,
+        "material": "fur"
+      },
+      {
+        "color_id": 665,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 92,
+    "name": "Exo-Suit Springer",
+    "icon": "https://render.guildwars2.com/file/7903AC141E08090AEB45A4A1C2265EDE0E74135D/1977955.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "cloth"
+      },
+      {
+        "color_id": 72,
+        "material": "fur"
+      },
+      {
+        "color_id": 1369,
+        "material": "fur"
+      },
+      {
+        "color_id": 1301,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 93,
+    "name": "Exo-Suit Jackal",
+    "icon": "https://render.guildwars2.com/file/0B25A37ECA97E99B2180C2E294245B01CFE69AC9/1977983.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "cloth"
+      },
+      {
+        "color_id": 72,
+        "material": "fur"
+      },
+      {
+        "color_id": 1369,
+        "material": "fur"
+      },
+      {
+        "color_id": 1154,
+        "material": "fur"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 94,
+    "name": "Exo-Suit Raptor",
+    "icon": "https://render.guildwars2.com/file/554674E7C57D0BAE3CAC7D6FF9050C0E64936B55/1977967.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "leather"
+      },
+      {
+        "color_id": 1369,
+        "material": "leather"
+      },
+      {
+        "color_id": 1151,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 95,
+    "name": "Exo-Suit Griffon",
+    "icon": "https://render.guildwars2.com/file/4963A5A20437FF4CCA24F30EAB3B69E0089EEA36/1977921.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "cloth"
+      },
+      {
+        "color_id": 72,
+        "material": "fur"
+      },
+      {
+        "color_id": 1369,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1304,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 96,
+    "name": "Exo-Suit Skimmer",
+    "icon": "https://render.guildwars2.com/file/C10911E36B4AB753992DBA46BF0567F60A69E053/1977976.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1369,
+        "material": "cloth"
+      },
+      {
+        "color_id": 625,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 97,
+    "name": "Shrine Guardian",
+    "icon": "https://render.guildwars2.com/file/022EF667450E28E01E02DCBAF115E853EE02A3C1/1983607.png",
+    "dye_slots": [
+      {
+        "color_id": 443,
+        "material": "fur"
+      },
+      {
+        "color_id": 123,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1158,
+        "material": "cloth"
+      },
+      {
+        "color_id": 698,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 98,
+    "name": "Awakened Springer",
+    "icon": "https://render.guildwars2.com/file/C023CB0E5CE56DE5ED002D1D72F4D451ED13A97B/1991601.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "fur"
+      },
+      {
+        "color_id": 1365,
+        "material": "metal"
+      },
+      {
+        "color_id": 22,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1378,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 99,
+    "name": "Awakened Raptor",
+    "icon": "https://render.guildwars2.com/file/DE08BEF4D7B571C8751AC3084E260A1AB9D34DFF/1991634.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "leather"
+      },
+      {
+        "color_id": 1365,
+        "material": "leather"
+      },
+      {
+        "color_id": 22,
+        "material": "leather"
+      },
+      {
+        "color_id": 1378,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 100,
+    "name": "Awakened Griffon",
+    "icon": "https://render.guildwars2.com/file/5ED4EEB5ACE15B57EFE6371CB325063F74344B52/1991539.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1365,
+        "material": "fur"
+      },
+      {
+        "color_id": 22,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1378,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 101,
+    "name": "Awakened Skimmer",
+    "icon": "https://render.guildwars2.com/file/18AB62A009D0A2F0284AACD729AEB0EFBB0990BA/1991682.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "leather"
+      },
+      {
+        "color_id": 1365,
+        "material": "cloth"
+      },
+      {
+        "color_id": 22,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1378,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 102,
+    "name": "Awakened Jackal",
+    "icon": "https://render.guildwars2.com/file/451D68B13D0CA0081CA84960450B183BE749205A/1991739.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1365,
+        "material": "fur"
+      },
+      {
+        "color_id": 22,
+        "material": "fur"
+      },
+      {
+        "color_id": 1378,
+        "material": "fur"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 103,
+    "name": "Roller Beetle",
+    "icon": "https://render.guildwars2.com/file/9E4E086CC9EE03D0F196A1FAE30AFF9123A8A0A6/1998894.png",
+    "dye_slots": [
+      {
+        "color_id": 700,
+        "material": "leather"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 104,
+    "name": "Tremor Armadillo",
+    "icon": "https://render.guildwars2.com/file/18C6FAB4E52563F43E1F440A949E59FCC80400C6/2010222.png",
+    "dye_slots": [
+      {
+        "color_id": 383,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      },
+      {
+        "color_id": 91,
+        "material": "leather"
+      },
+      {
+        "color_id": 700,
+        "material": "leather"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 105,
+    "name": "Funerary Scarab",
+    "icon": "https://render.guildwars2.com/file/2A6E0A11F9B97D6600B3C87DDE01280404C63195/2015201.png",
+    "dye_slots": [
+      {
+        "color_id": 1584,
+        "material": "metal"
+      },
+      {
+        "color_id": 69,
+        "material": "metal"
+      },
+      {
+        "color_id": 436,
+        "material": "metal"
+      },
+      {
+        "color_id": 83,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 106,
+    "name": "Kourna Jackrabbit",
+    "icon": "https://render.guildwars2.com/file/390AF5BA0DAAEDABDA51D24137937395EEC5F137/2015390.png",
+    "dye_slots": [
+      {
+        "color_id": 67,
+        "material": "fur"
+      },
+      {
+        "color_id": 596,
+        "material": "fur"
+      },
+      {
+        "color_id": 451,
+        "material": "leather"
+      },
+      {
+        "color_id": 1246,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 107,
+    "name": "Mirror Masked",
+    "icon": "https://render.guildwars2.com/file/F60846AC360C596A9EC1047A4CB0C0B20E554996/2015554.png",
+    "dye_slots": [
+      {
+        "color_id": 1249,
+        "material": "metal"
+      },
+      {
+        "color_id": 454,
+        "material": "metal"
+      },
+      {
+        "color_id": 667,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 108,
+    "name": "Primeval",
+    "icon": "https://render.guildwars2.com/file/D5E4E45B73D637AECDB5D373F901C853D872CA9D/2015243.png",
+    "dye_slots": [
+      {
+        "color_id": 89,
+        "material": "leather"
+      },
+      {
+        "color_id": 614,
+        "material": "leather"
+      },
+      {
+        "color_id": 587,
+        "material": "leather"
+      },
+      {
+        "color_id": 714,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 109,
+    "name": "Storm Chaser",
+    "icon": "https://render.guildwars2.com/file/7207BEB2502E0A0EC79AC1BB32C2FA5FB00E2451/2015342.png",
+    "dye_slots": [
+      {
+        "color_id": 372,
+        "material": "fur"
+      },
+      {
+        "color_id": 143,
+        "material": "fur"
+      },
+      {
+        "color_id": 583,
+        "material": "fur"
+      },
+      {
+        "color_id": 28,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 110,
+    "name": "Tufted Night Eye",
+    "icon": "https://render.guildwars2.com/file/1B63C407CFC4474FD32347802FB5FA187E1F0112/2015303.png",
+    "dye_slots": [
+      {
+        "color_id": 1378,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1579,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1357,
+        "material": "cloth"
+      },
+      {
+        "color_id": 623,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 111,
+    "name": "Ntouka Snakescale",
+    "icon": "https://render.guildwars2.com/file/C408AA2AFBDBB1F8CC090DFEFDF5CDAD2E047924/2015401.png",
+    "dye_slots": [
+      {
+        "color_id": 705,
+        "material": "leather"
+      },
+      {
+        "color_id": 1579,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      },
+      {
+        "color_id": 1303,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 112,
+    "name": "Arid Hammerhead",
+    "icon": "https://render.guildwars2.com/file/E5EE6E1359AE4A040C09C20CDBF59E09547F6E2C/2015518.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 451,
+        "material": "leather"
+      },
+      {
+        "color_id": 21,
+        "material": "leather"
+      },
+      {
+        "color_id": 449,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 113,
+    "name": "Iceberg",
+    "icon": "https://render.guildwars2.com/file/09002BDC4D0F3E6D3A585807F278393A41F3E236/2015508.png",
+    "dye_slots": [
+      {
+        "color_id": 1582,
+        "material": "leather"
+      },
+      {
+        "color_id": 676,
+        "material": "leather"
+      },
+      {
+        "color_id": 23,
+        "material": "leather"
+      },
+      {
+        "color_id": 664,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 114,
+    "name": "Colossal Ladybird",
+    "icon": "https://render.guildwars2.com/file/30B9740DE7DE01D636F778C3C13611569F4023DD/2015188.png",
+    "dye_slots": [
+      {
+        "color_id": 123,
+        "material": "metal"
+      },
+      {
+        "color_id": 483,
+        "material": "metal"
+      },
+      {
+        "color_id": 69,
+        "material": "metal"
+      },
+      {
+        "color_id": 442,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 115,
+    "name": "Northern Feather Wing",
+    "icon": "https://render.guildwars2.com/file/BFEBBDCBA11EF84E98E7A8770B6BB4C276D3E1E8/2015347.png",
+    "dye_slots": [
+      {
+        "color_id": 705,
+        "material": "fur"
+      },
+      {
+        "color_id": 596,
+        "material": "fur"
+      },
+      {
+        "color_id": 85,
+        "material": "fur"
+      },
+      {
+        "color_id": 1154,
+        "material": "metal"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 116,
+    "name": "Trailblazer",
+    "icon": "https://render.guildwars2.com/file/CCD7231EEB1CFFB8D8631D570DACF82B641539E7/2015295.png",
+    "dye_slots": [
+      {
+        "color_id": 2,
+        "material": "metal"
+      },
+      {
+        "color_id": 673,
+        "material": "metal"
+      },
+      {
+        "color_id": 597,
+        "material": "metal"
+      },
+      {
+        "color_id": 1149,
+        "material": "leather"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 117,
+    "name": "Dune Mastiff",
+    "icon": "https://render.guildwars2.com/file/9A2CA8D64D9DAD63B2AC59EE650B756CD5DDEF11/2015556.png",
+    "dye_slots": [
+      {
+        "color_id": 616,
+        "material": "metal"
+      },
+      {
+        "color_id": 315,
+        "material": "leather"
+      },
+      {
+        "color_id": 15,
+        "material": "leather"
+      },
+      {
+        "color_id": 375,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 118,
+    "name": "Painted Mesa",
+    "icon": "https://render.guildwars2.com/file/FC7EFC10CCF7390F71226B954257A6CC010740F9/2015366.png",
+    "dye_slots": [
+      {
+        "color_id": 479,
+        "material": "fur"
+      },
+      {
+        "color_id": 94,
+        "material": "fur"
+      },
+      {
+        "color_id": 66,
+        "material": "fur"
+      },
+      {
+        "color_id": 339,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 126,
+    "name": "Dreadnought",
+    "icon": "https://render.guildwars2.com/file/EC2297F72AB9532CB0236B10036DEB07A8F50134/2038883.png",
+    "dye_slots": [
+      {
+        "color_id": 2,
+        "material": "metal"
+      },
+      {
+        "color_id": 18,
+        "material": "cloth"
+      },
+      {
+        "color_id": 436,
+        "material": "cloth"
+      },
+      {
+        "color_id": 476,
+        "material": "metal"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 129,
+    "name": "Nightfang",
+    "icon": "https://render.guildwars2.com/file/C333ED54B458457019E970AE29F87546CF27B7E3/2056455.png",
+    "dye_slots": [
+      {
+        "color_id": 75,
+        "material": "fur"
+      },
+      {
+        "color_id": 67,
+        "material": "fur"
+      },
+      {
+        "color_id": 476,
+        "material": "fur"
+      },
+      {
+        "color_id": 1621,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 130,
+    "name": "Mad Realm Skimmer",
+    "icon": "https://render.guildwars2.com/file/3606744C0E7E0EEB460EF521E22EC1F3D9AB43F8/2056598.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "leather"
+      },
+      {
+        "color_id": 1357,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1382,
+        "material": "cloth"
+      },
+      {
+        "color_id": 381,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 131,
+    "name": "Mad Realm Jackal",
+    "icon": "https://render.guildwars2.com/file/9235120B08EC042B09B1E8DC2C30C31E661E3D97/2056610.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1357,
+        "material": "fur"
+      },
+      {
+        "color_id": 1382,
+        "material": "fur"
+      },
+      {
+        "color_id": 381,
+        "material": "fur"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 132,
+    "name": "Mad Realm Griffon",
+    "icon": "https://render.guildwars2.com/file/7D9AD1BEF8B0B1484E16807BDA23F8777F68EC32/2056456.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1357,
+        "material": "fur"
+      },
+      {
+        "color_id": 1382,
+        "material": "cloth"
+      },
+      {
+        "color_id": 381,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 133,
+    "name": "Mad Realm Raptor",
+    "icon": "https://render.guildwars2.com/file/9DEB1C7FC11E7FC8D0090C22F2D3A17BE291745C/2056525.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "leather"
+      },
+      {
+        "color_id": 1357,
+        "material": "leather"
+      },
+      {
+        "color_id": 1382,
+        "material": "leather"
+      },
+      {
+        "color_id": 381,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 134,
+    "name": "Mad Realm Springer",
+    "icon": "https://render.guildwars2.com/file/A4C0E5DFBD737170435A64FE93807D46EDC20C4D/2056501.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "fur"
+      },
+      {
+        "color_id": 1357,
+        "material": "leather"
+      },
+      {
+        "color_id": 1382,
+        "material": "cloth"
+      },
+      {
+        "color_id": 381,
+        "material": "leather"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 136,
+    "name": "Auric Salamander",
+    "icon": "https://render.guildwars2.com/file/7D524ACFC6C7360516C4C89A0DD73E0D00F20CE4/2069724.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 585,
+        "material": "leather"
+      },
+      {
+        "color_id": 451,
+        "material": "leather"
+      },
+      {
+        "color_id": 84,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 137,
+    "name": "Banded Wave Fin",
+    "icon": "https://render.guildwars2.com/file/A938CC01723D7F3917306C072AF46FF367FA4EB3/2069748.png",
+    "dye_slots": [
+      {
+        "color_id": 356,
+        "material": "leather"
+      },
+      {
+        "color_id": 6,
+        "material": "leather"
+      },
+      {
+        "color_id": 86,
+        "material": "leather"
+      },
+      {
+        "color_id": 628,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 138,
+    "name": "Luminous Prowler",
+    "icon": "https://render.guildwars2.com/file/102EBC9F55B7B66948467D2CB70247945BFB27E2/2069721.png",
+    "dye_slots": [
+      {
+        "color_id": 61,
+        "material": "cloth"
+      },
+      {
+        "color_id": 80,
+        "material": "cloth"
+      },
+      {
+        "color_id": 638,
+        "material": "cloth"
+      },
+      {
+        "color_id": 709,
+        "material": "cloth"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 139,
+    "name": "Krytan Lop",
+    "icon": "https://render.guildwars2.com/file/0F5203507649B7D2355A5410FB7041B361C70557/2069677.png",
+    "dye_slots": [
+      {
+        "color_id": 601,
+        "material": "fur"
+      },
+      {
+        "color_id": 380,
+        "material": "fur"
+      },
+      {
+        "color_id": 1584,
+        "material": "leather"
+      },
+      {
+        "color_id": 45,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 140,
+    "name": "Timberland Badged",
+    "icon": "https://render.guildwars2.com/file/5201CE4A37976C5329E5FE42DA2274A9BA185DB8/2069644.png",
+    "dye_slots": [
+      {
+        "color_id": 112,
+        "material": "fur"
+      },
+      {
+        "color_id": 85,
+        "material": "fur"
+      },
+      {
+        "color_id": 665,
+        "material": "fur"
+      },
+      {
+        "color_id": 355,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 141,
+    "name": "Snow Stalker",
+    "icon": "https://render.guildwars2.com/file/026B0E197AE2EE472B2872AEE6EB26B4B0E3FA1C/2069608.png",
+    "dye_slots": [
+      {
+        "color_id": 446,
+        "material": "fur"
+      },
+      {
+        "color_id": 6,
+        "material": "fur"
+      },
+      {
+        "color_id": 473,
+        "material": "fur"
+      },
+      {
+        "color_id": 1238,
+        "material": "metal"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 142,
+    "name": "Southsun Torpedo",
+    "icon": "https://render.guildwars2.com/file/B8ABB120E0A51E97F618F7CF609B7D673A55D2C6/2069805.png",
+    "dye_slots": [
+      {
+        "color_id": 483,
+        "material": "leather"
+      },
+      {
+        "color_id": 143,
+        "material": "leather"
+      },
+      {
+        "color_id": 614,
+        "material": "leather"
+      },
+      {
+        "color_id": 588,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 143,
+    "name": "Exalted Ley Hunter",
+    "icon": "https://render.guildwars2.com/file/BAFD460E0F5753B68078CE55B10DE3E772326B25/2069818.png",
+    "dye_slots": [
+      {
+        "color_id": 714,
+        "material": "metal"
+      },
+      {
+        "color_id": 93,
+        "material": "metal"
+      },
+      {
+        "color_id": 1338,
+        "material": "metal"
+      },
+      {
+        "color_id": 665,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 144,
+    "name": "Jagged Kournan",
+    "icon": "https://render.guildwars2.com/file/372C5BD60273FBEC1A93E4B2F8EC0F6DBD730763/2069536.png",
+    "dye_slots": [
+      {
+        "color_id": 19,
+        "material": "metal"
+      },
+      {
+        "color_id": 709,
+        "material": "metal"
+      },
+      {
+        "color_id": 48,
+        "material": "metal"
+      },
+      {
+        "color_id": 442,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 145,
+    "name": "Alloyed Construct",
+    "icon": "https://render.guildwars2.com/file/67BA20BF7F162EC0F906B4679F59D796EE9308AB/2069391.png",
+    "dye_slots": [
+      {
+        "color_id": 1368,
+        "material": "metal"
+      },
+      {
+        "color_id": 1489,
+        "material": "metal"
+      },
+      {
+        "color_id": 1489,
+        "material": "metal"
+      },
+      {
+        "color_id": 1599,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 146,
+    "name": "Sand Souled",
+    "icon": "https://render.guildwars2.com/file/600ADD14FA304C3FC37C99D3DB1D91169EDA651E/2069556.png",
+    "dye_slots": [
+      {
+        "color_id": 23,
+        "material": "leather"
+      },
+      {
+        "color_id": 336,
+        "material": "leather"
+      },
+      {
+        "color_id": 476,
+        "material": "metal"
+      },
+      {
+        "color_id": 622,
+        "material": "metal"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 147,
+    "name": "Striped Bahdzan",
+    "icon": "https://render.guildwars2.com/file/3749A3B5544E9EDE2BDDDF7A5D31E19A50B3170C/2069388.png",
+    "dye_slots": [
+      {
+        "color_id": 382,
+        "material": "leather"
+      },
+      {
+        "color_id": 1354,
+        "material": "leather"
+      },
+      {
+        "color_id": 584,
+        "material": "leather"
+      },
+      {
+        "color_id": 110,
+        "material": "leather"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 148,
+    "name": "Starfall",
+    "icon": "https://render.guildwars2.com/file/A823001832784C0D9A21A3EAEAF471049A26EB7F/2069671.png",
+    "dye_slots": [
+      {
+        "color_id": 118,
+        "material": "fur"
+      },
+      {
+        "color_id": 1457,
+        "material": "fur"
+      },
+      {
+        "color_id": 1305,
+        "material": "fur"
+      },
+      {
+        "color_id": 142,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 149,
+    "name": "Liminal Moorhound",
+    "icon": "https://render.guildwars2.com/file/72CBAF440A16A6E54C3197BDAC770FD58077D6C6/2069843.png",
+    "dye_slots": [
+      {
+        "color_id": 20,
+        "material": "leather"
+      },
+      {
+        "color_id": 627,
+        "material": "leather"
+      },
+      {
+        "color_id": 15,
+        "material": "metal"
+      },
+      {
+        "color_id": 1305,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 150,
+    "name": "Shiverpeaks Pileated",
+    "icon": "https://render.guildwars2.com/file/A1050263D17533CC5CA7CE05DA7FA9A91C630B52/2069551.png",
+    "dye_slots": [
+      {
+        "color_id": 1308,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1350,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1619,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1303,
+        "material": "cloth"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 152,
+    "name": "Sun Temple Gecko",
+    "icon": "https://render.guildwars2.com/file/967A29CB2E1BAAF77945AEBA4E0E4EE4B3FD6851/2075812.png",
+    "dye_slots": [
+      {
+        "color_id": 379,
+        "material": "fur"
+      },
+      {
+        "color_id": 100,
+        "material": "fur"
+      },
+      {
+        "color_id": 133,
+        "material": "fur"
+      },
+      {
+        "color_id": 700,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 153,
+    "name": "Shiverpeaks Jackal",
+    "icon": "https://render.guildwars2.com/file/BA59BA592FDF807C19D0107CBE650A7E5A125223/2083711.png",
+    "dye_slots": [
+      {
+        "color_id": 5,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 457,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 154,
+    "name": "Shiverpeaks Skimmer",
+    "icon": "https://render.guildwars2.com/file/C2F87E50A37E425E97E20AE5F70C3E0309690CF9/2083708.png",
+    "dye_slots": [
+      {
+        "color_id": 5,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 457,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "metal"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 155,
+    "name": "Shiverpeaks Griffon",
+    "icon": "https://render.guildwars2.com/file/C9F9985A58C790266EB7764303DA93803EE4BFB1/2083618.png",
+    "dye_slots": [
+      {
+        "color_id": 5,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 457,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "metal"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 157,
+    "name": "Shiverpeaks Springer",
+    "icon": "https://render.guildwars2.com/file/3BBC9460D058C7C4DEAE037C537A0BC5BB14609A/2083665.png",
+    "dye_slots": [
+      {
+        "color_id": 5,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 457,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 158,
+    "name": "Shiverpeaks Raptor",
+    "icon": "https://render.guildwars2.com/file/ACDF26100E4067187E9BFBE861D42D420678EFB8/2083673.png",
+    "dye_slots": [
+      {
+        "color_id": 5,
+        "material": "leather"
+      },
+      {
+        "color_id": 28,
+        "material": "leather"
+      },
+      {
+        "color_id": 457,
+        "material": "leather"
+      },
+      {
+        "color_id": 72,
+        "material": "metal"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 161,
+    "name": "Warclaw",
+    "icon": "https://render.guildwars2.com/file/3E1C0A4FB27ED0CCAB304A13AAF16AA24F37D606/2109664.png",
+    "dye_slots": [
+      {
+        "color_id": 123,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 162,
+    "name": "Assault Warclaw",
+    "icon": "https://render.guildwars2.com/file/547FA19F26185161FF532F13C8ACEED711B7B5BB/2110060.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "metal"
+      },
+      {
+        "color_id": 5,
+        "material": "metal"
+      },
+      {
+        "color_id": 674,
+        "material": "cloth"
+      },
+      {
+        "color_id": 23,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 163,
+    "name": "Outrider Warclaw",
+    "icon": "https://render.guildwars2.com/file/03D4BB64FD0FC857D045D053E14624B19CCCB098/2110071.png",
+    "dye_slots": [
+      {
+        "color_id": 332,
+        "material": "cloth"
+      },
+      {
+        "color_id": 103,
+        "material": "cloth"
+      },
+      {
+        "color_id": 475,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1358,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 164,
+    "name": "Branded Warclaw",
+    "icon": "https://render.guildwars2.com/file/BFFFD4805F0B16082013B402DBF65ABFB5E438BE/2109996.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "metal"
+      },
+      {
+        "color_id": 99,
+        "material": "metal"
+      },
+      {
+        "color_id": 143,
+        "material": "cloth"
+      },
+      {
+        "color_id": 116,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 165,
+    "name": "Vanguard Warclaw",
+    "icon": "https://render.guildwars2.com/file/4CE10BAE99BA773842DD5A9A5C95CC640AB9951D/2110070.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "metal"
+      },
+      {
+        "color_id": 25,
+        "material": "metal"
+      },
+      {
+        "color_id": 380,
+        "material": "cloth"
+      },
+      {
+        "color_id": 17,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 166,
+    "name": "Embermane Warclaw",
+    "icon": "https://render.guildwars2.com/file/CCFE08DC20A4A56402A35A09ED0A0FF3FAA0E967/2109995.png",
+    "dye_slots": [
+      {
+        "color_id": 1582,
+        "material": "cloth"
+      },
+      {
+        "color_id": 68,
+        "material": "cloth"
+      },
+      {
+        "color_id": 26,
+        "material": "metal"
+      },
+      {
+        "color_id": 586,
+        "material": "metal"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 168,
+    "name": "Magnificent Hummingbird",
+    "icon": "https://render.guildwars2.com/file/000C15C808969853039ACE5AA508C9B803E0782D/2124223.png",
+    "dye_slots": [
+      {
+        "color_id": 55,
+        "material": "leather"
+      },
+      {
+        "color_id": 80,
+        "material": "leather"
+      },
+      {
+        "color_id": 39,
+        "material": "leather"
+      },
+      {
+        "color_id": 698,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 169,
+    "name": "Alloyed Irontail",
+    "icon": "https://render.guildwars2.com/file/38D2C4B0E4310EDAE461AA0A0DA993CCD756BD74/2127434.png",
+    "dye_slots": [
+      {
+        "color_id": 358,
+        "material": "metal"
+      },
+      {
+        "color_id": 442,
+        "material": "metal"
+      },
+      {
+        "color_id": 1582,
+        "material": "metal"
+      },
+      {
+        "color_id": 1618,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 170,
+    "name": "Starshell",
+    "icon": "https://render.guildwars2.com/file/C8EC7EF15649B0E3E702F5CA970148294AEA7E22/2127441.png",
+    "dye_slots": [
+      {
+        "color_id": 118,
+        "material": "metal"
+      },
+      {
+        "color_id": 1457,
+        "material": "metal"
+      },
+      {
+        "color_id": 1305,
+        "material": "metal"
+      },
+      {
+        "color_id": 142,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 171,
+    "name": "Sand Souled",
+    "icon": "https://render.guildwars2.com/file/201F03636EA2E0393463034EDDE5BCB9D47EB8F0/2127436.png",
+    "dye_slots": [
+      {
+        "color_id": 480,
+        "material": "leather"
+      },
+      {
+        "color_id": 462,
+        "material": "leather"
+      },
+      {
+        "color_id": 1367,
+        "material": "leather"
+      },
+      {
+        "color_id": 1575,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 172,
+    "name": "Ntouka Snakeshell",
+    "icon": "https://render.guildwars2.com/file/54726D1BBB174F0B3257E93CFD084EA8E5A8A83D/2127442.png",
+    "dye_slots": [
+      {
+        "color_id": 367,
+        "material": "metal"
+      },
+      {
+        "color_id": 646,
+        "material": "metal"
+      },
+      {
+        "color_id": 88,
+        "material": "metal"
+      },
+      {
+        "color_id": 470,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 173,
+    "name": "Exalted Gate Guardian",
+    "icon": "https://render.guildwars2.com/file/CA90BCEA31432D590176D95E9B43BC5B53414CB8/2127438.png",
+    "dye_slots": [
+      {
+        "color_id": 714,
+        "material": "leather"
+      },
+      {
+        "color_id": 93,
+        "material": "leather"
+      },
+      {
+        "color_id": 1338,
+        "material": "leather"
+      },
+      {
+        "color_id": 665,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 174,
+    "name": "Spotted Orchid",
+    "icon": "https://render.guildwars2.com/file/314B3E42767212184F664ED5E83CA31806EDE913/2127437.png",
+    "dye_slots": [
+      {
+        "color_id": 673,
+        "material": "leather"
+      },
+      {
+        "color_id": 1495,
+        "material": "leather"
+      },
+      {
+        "color_id": 668,
+        "material": "leather"
+      },
+      {
+        "color_id": 699,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 175,
+    "name": "Primordial Raptor",
+    "icon": "https://render.guildwars2.com/file/7A9EE5FCF2B6681B0E9D9E109CC73A0C03087874/2127440.png",
+    "dye_slots": [
+      {
+        "color_id": 1054,
+        "material": "leather"
+      },
+      {
+        "color_id": 54,
+        "material": "leather"
+      },
+      {
+        "color_id": 611,
+        "material": "leather"
+      },
+      {
+        "color_id": 1155,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 176,
+    "name": "Alloyed Quicksilver",
+    "icon": "https://render.guildwars2.com/file/D7AF465173096AE0AADDFA3E990D7AFFA95F0FCC/2127432.png",
+    "dye_slots": [
+      {
+        "color_id": 1368,
+        "material": "metal"
+      },
+      {
+        "color_id": 1489,
+        "material": "metal"
+      },
+      {
+        "color_id": 474,
+        "material": "metal"
+      },
+      {
+        "color_id": 612,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 177,
+    "name": "Kournan Bright-Tail",
+    "icon": "https://render.guildwars2.com/file/16010CB4D84062F0124AE71DB57BEC3F31F56239/2127429.png",
+    "dye_slots": [
+      {
+        "color_id": 377,
+        "material": "fur"
+      },
+      {
+        "color_id": 1154,
+        "material": "fur"
+      },
+      {
+        "color_id": 1579,
+        "material": "fur"
+      },
+      {
+        "color_id": 85,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 178,
+    "name": "Brisban Brushtail",
+    "icon": "https://render.guildwars2.com/file/0EDA3B5FFF50520807C56B45C29931CCB1EFB832/2127433.png",
+    "dye_slots": [
+      {
+        "color_id": 69,
+        "material": "leather"
+      },
+      {
+        "color_id": 477,
+        "material": "leather"
+      },
+      {
+        "color_id": 480,
+        "material": "leather"
+      },
+      {
+        "color_id": 339,
+        "material": "leather"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 179,
+    "name": "Masked Runner",
+    "icon": "https://render.guildwars2.com/file/16076E08202CA6DC69FA2307C11A3C362F545476/2127439.png",
+    "dye_slots": [
+      {
+        "color_id": 82,
+        "material": "leather"
+      },
+      {
+        "color_id": 614,
+        "material": "leather"
+      },
+      {
+        "color_id": 446,
+        "material": "leather"
+      },
+      {
+        "color_id": 443,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 180,
+    "name": "Primeval",
+    "icon": "https://render.guildwars2.com/file/67697CFA702022D17F60A2555D24B43C45A70C45/2127430.png",
+    "dye_slots": [
+      {
+        "color_id": 89,
+        "material": "leather"
+      },
+      {
+        "color_id": 614,
+        "material": "leather"
+      },
+      {
+        "color_id": 587,
+        "material": "leather"
+      },
+      {
+        "color_id": 714,
+        "material": "leather"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 181,
+    "name": "Arctic Icewing",
+    "icon": "https://render.guildwars2.com/file/19D42BB5B15293690FA799CA22A74526C5A864F5/2127428.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "fur"
+      },
+      {
+        "color_id": 458,
+        "material": "fur"
+      },
+      {
+        "color_id": 1380,
+        "material": "fur"
+      },
+      {
+        "color_id": 28,
+        "material": "fur"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 182,
+    "name": "Savannah Stripetail",
+    "icon": "https://render.guildwars2.com/file/25793B73440264FB7CD204F53B3A5F394630CDE9/2127435.png",
+    "dye_slots": [
+      {
+        "color_id": 66,
+        "material": "fur"
+      },
+      {
+        "color_id": 21,
+        "material": "fur"
+      },
+      {
+        "color_id": 1584,
+        "material": "fur"
+      },
+      {
+        "color_id": 1495,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 183,
+    "name": "Vabbian Lightpaw",
+    "icon": "https://render.guildwars2.com/file/FC990BA53AFAE0A916C822D2ED40E6C5B6910C72/2127431.png",
+    "dye_slots": [
+      {
+        "color_id": 590,
+        "material": "leather"
+      },
+      {
+        "color_id": 1379,
+        "material": "leather"
+      },
+      {
+        "color_id": 467,
+        "material": "leather"
+      },
+      {
+        "color_id": 595,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 186,
+    "name": "Skyscale",
+    "icon": "https://render.guildwars2.com/file/461C02AE745D07C69EC2FBC1AE10E140D8E3E96B/2140530.png",
+    "dye_slots": [
+      {
+        "color_id": 385,
+        "material": "metal"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 191,
+    "name": "Shimmerwing",
+    "icon": "https://render.guildwars2.com/file/589290137DE9D8620E06A9EBCBC36B31E554E312/2156027.png",
+    "dye_slots": [
+      {
+        "color_id": 9,
+        "material": "metal"
+      },
+      {
+        "color_id": 614,
+        "material": "metal"
+      },
+      {
+        "color_id": 666,
+        "material": "metal"
+      },
+      {
+        "color_id": 143,
+        "material": "metal"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 193,
+    "name": "Axejaw Skyscale",
+    "icon": "https://render.guildwars2.com/file/F1254255BD356FD00853420F0A632A096155690A/2163409.png",
+    "dye_slots": [
+      {
+        "color_id": 686,
+        "material": "leather"
+      },
+      {
+        "color_id": 44,
+        "material": "leather"
+      },
+      {
+        "color_id": 600,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 194,
+    "name": "Caldera Skyscale",
+    "icon": "https://render.guildwars2.com/file/63919895AC2142A5C266065B67040153BB54707E/2163318.png",
+    "dye_slots": [
+      {
+        "color_id": 1381,
+        "material": "fur"
+      },
+      {
+        "color_id": 655,
+        "material": "leather"
+      },
+      {
+        "color_id": 1595,
+        "material": "metal"
+      },
+      {
+        "color_id": 11,
+        "material": "cloth"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 195,
+    "name": "Branded Skyscale",
+    "icon": "https://render.guildwars2.com/file/CDC2286809EFE2D315CF4E3735C4A32AF9F3A506/2163304.png",
+    "dye_slots": [
+      {
+        "color_id": 473,
+        "material": "fur"
+      },
+      {
+        "color_id": 99,
+        "material": "leather"
+      },
+      {
+        "color_id": 143,
+        "material": "metal"
+      },
+      {
+        "color_id": 116,
+        "material": "cloth"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 196,
+    "name": "Bioluminescent Skyscale",
+    "icon": "https://render.guildwars2.com/file/4977E8800537016541F16109B56427C635FB3604/2163339.png",
+    "dye_slots": [
+      {
+        "color_id": 483,
+        "material": "leather"
+      },
+      {
+        "color_id": 1377,
+        "material": "leather"
+      },
+      {
+        "color_id": 1337,
+        "material": "leather"
+      },
+      {
+        "color_id": 1378,
+        "material": "leather"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 198,
+    "name": "Flare-Marked Skyscale",
+    "icon": "https://render.guildwars2.com/file/9C1B21140211400DA12AB92CFC58BB07EA65D116/2163338.png",
+    "dye_slots": [
+      {
+        "color_id": 1489,
+        "material": "leather"
+      },
+      {
+        "color_id": 442,
+        "material": "leather"
+      },
+      {
+        "color_id": 22,
+        "material": "leather"
+      },
+      {
+        "color_id": 1305,
+        "material": "leather"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 200,
+    "name": "Gallant Lightbearer",
+    "icon": "https://render.guildwars2.com/file/FAD82C2F2DA12CF716EDFDF6C114470F7EE00BC8/2179770.png",
+    "dye_slots": [
+      {
+        "color_id": 477,
+        "material": "fur"
+      },
+      {
+        "color_id": 2,
+        "material": "metal"
+      },
+      {
+        "color_id": 677,
+        "material": "cloth"
+      },
+      {
+        "color_id": 44,
+        "material": "metal"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 202,
+    "name": "Broad-Horn Bull",
+    "icon": "https://render.guildwars2.com/file/E71976197800DECBD70997FD27B07C085BE5450B/2191099.png",
+    "dye_slots": [
+      {
+        "color_id": 377,
+        "material": "leather"
+      },
+      {
+        "color_id": 482,
+        "material": "leather"
+      },
+      {
+        "color_id": 62,
+        "material": "leather"
+      },
+      {
+        "color_id": 85,
+        "material": "leather"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 203,
+    "name": "Fulgurite Ridgeback",
+    "icon": "https://render.guildwars2.com/file/DAD69507EB4DCA30C7A8050693C008550DBA599A/2191103.png",
+    "dye_slots": [
+      {
+        "color_id": 39,
+        "material": "leather"
+      },
+      {
+        "color_id": 458,
+        "material": "metal"
+      },
+      {
+        "color_id": 464,
+        "material": "leather"
+      },
+      {
+        "color_id": 590,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 204,
+    "name": "Savage Gladiator",
+    "icon": "https://render.guildwars2.com/file/990501A42071A0B5176E47E4A8E724102FDDCCFE/2191097.png",
+    "dye_slots": [
+      {
+        "color_id": 332,
+        "material": "metal"
+      },
+      {
+        "color_id": 480,
+        "material": "metal"
+      },
+      {
+        "color_id": 1366,
+        "material": "cloth"
+      },
+      {
+        "color_id": 123,
+        "material": "cloth"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 205,
+    "name": "Lithosol",
+    "icon": "https://render.guildwars2.com/file/1A00323B7F721EBA0B6FDFD85A9C9D9FF6C0D3CA/2191108.png",
+    "dye_slots": [
+      {
+        "color_id": 91,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1584,
+        "material": "cloth"
+      },
+      {
+        "color_id": 74,
+        "material": "cloth"
+      },
+      {
+        "color_id": 1155,
+        "material": "cloth"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 206,
+    "name": "Glademire",
+    "icon": "https://render.guildwars2.com/file/9204FA176FD724B8E4AD3FC20856903FE63F7DDF/2191098.png",
+    "dye_slots": [
+      {
+        "color_id": 57,
+        "material": "leather"
+      },
+      {
+        "color_id": 621,
+        "material": "leather"
+      },
+      {
+        "color_id": 105,
+        "material": "leather"
+      },
+      {
+        "color_id": 1348,
+        "material": "leather"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 207,
+    "name": "Starclaw",
+    "icon": "https://render.guildwars2.com/file/3C96BD4DE40DB83F49C6FE03F704F1BCBDD3D728/2191096.png",
+    "dye_slots": [
+      {
+        "color_id": 50,
+        "material": "metal"
+      },
+      {
+        "color_id": 1458,
+        "material": "metal"
+      },
+      {
+        "color_id": 1305,
+        "material": "metal"
+      },
+      {
+        "color_id": 691,
+        "material": "metal"
+      }
+    ],
+    "mount": "warclaw"
+  },
+  {
+    "id": 208,
+    "name": "Maguuma Jackrabbit",
+    "icon": "https://render.guildwars2.com/file/BA973BF10F41464892B74CAE3E16B8F6C1010963/2191105.png",
+    "dye_slots": [
+      {
+        "color_id": 332,
+        "material": "fur"
+      },
+      {
+        "color_id": 85,
+        "material": "fur"
+      },
+      {
+        "color_id": 1584,
+        "material": "fur"
+      },
+      {
+        "color_id": 670,
+        "material": "fur"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 209,
+    "name": "Arctic Razor",
+    "icon": "https://render.guildwars2.com/file/0CDB12062623E02DAA27E0F04B01D2BC992C63A9/2191110.png",
+    "dye_slots": [
+      {
+        "color_id": 483,
+        "material": "metal"
+      },
+      {
+        "color_id": 664,
+        "material": "metal"
+      },
+      {
+        "color_id": 8,
+        "material": "metal"
+      },
+      {
+        "color_id": 713,
+        "material": "metal"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 210,
+    "name": "Crowned Skyfisher",
+    "icon": "https://render.guildwars2.com/file/0AAA639ADA3532FEC00BFEF2A5FB0EC0CE641AC7/2191101.png",
+    "dye_slots": [
+      {
+        "color_id": 77,
+        "material": "fur"
+      },
+      {
+        "color_id": 1538,
+        "material": "fur"
+      },
+      {
+        "color_id": 113,
+        "material": "fur"
+      },
+      {
+        "color_id": 1579,
+        "material": "metal"
+      }
+    ],
+    "mount": "griffon"
+  },
+  {
+    "id": 211,
+    "name": "Incarnate Flame",
+    "icon": "https://render.guildwars2.com/file/349AD625C0ACFCFD740D1C7F7CD802ECE8E3C96A/2191100.png",
+    "dye_slots": [
+      {
+        "color_id": 2,
+        "material": "fur"
+      },
+      {
+        "color_id": 122,
+        "material": "leather"
+      },
+      {
+        "color_id": 1541,
+        "material": "metal"
+      },
+      {
+        "color_id": 1538,
+        "material": "cloth"
+      }
+    ],
+    "mount": "skyscale"
+  },
+  {
+    "id": 213,
+    "name": "Sun Stalker",
+    "icon": "https://render.guildwars2.com/file/5A01A30D0C1453EFD42C6230FF0E037625440967/2191102.png",
+    "dye_slots": [
+      {
+        "color_id": 2,
+        "material": "leather"
+      },
+      {
+        "color_id": 52,
+        "material": "leather"
+      },
+      {
+        "color_id": 23,
+        "material": "metal"
+      },
+      {
+        "color_id": 1538,
+        "material": "metal"
+      }
+    ],
+    "mount": "jackal"
+  },
+  {
+    "id": 215,
+    "name": "Cascade Heeler",
+    "icon": "https://render.guildwars2.com/file/964AE8D09B74C4F1C1A826E7B1C0A507EFD60F47/2191104.png",
+    "dye_slots": [
+      {
+        "color_id": 442,
+        "material": "fur"
+      },
+      {
+        "color_id": 1350,
+        "material": "fur"
+      },
+      {
+        "color_id": 380,
+        "material": "leather"
+      },
+      {
+        "color_id": 1537,
+        "material": "metal"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 216,
+    "name": "Deep Desert Scarab",
+    "icon": "https://render.guildwars2.com/file/2CACF39C007BC23A3F614D01C7239AFB7A350714/2191109.png",
+    "dye_slots": [
+      {
+        "color_id": 1378,
+        "material": "leather"
+      },
+      {
+        "color_id": 1381,
+        "material": "leather"
+      },
+      {
+        "color_id": 1597,
+        "material": "leather"
+      },
+      {
+        "color_id": 1378,
+        "material": "leather"
+      }
+    ],
+    "mount": "roller_beetle"
+  },
+  {
+    "id": 217,
+    "name": "Luminous Ray",
+    "icon": "https://render.guildwars2.com/file/D4D5DA651402F105D7B6CCBA76CCBE242F196DE6/2191106.png",
+    "dye_slots": [
+      {
+        "color_id": 60,
+        "material": "leather"
+      },
+      {
+        "color_id": 80,
+        "material": "leather"
+      },
+      {
+        "color_id": 617,
+        "material": "leather"
+      },
+      {
+        "color_id": 709,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 218,
+    "name": "Vital Geode",
+    "icon": "https://render.guildwars2.com/file/D43C096AACC0F7CD5BF67AB1BE3E5BFA69107299/2191107.png",
+    "dye_slots": [
+      {
+        "color_id": 615,
+        "material": "leather"
+      },
+      {
+        "color_id": 139,
+        "material": "leather"
+      },
+      {
+        "color_id": 616,
+        "material": "leather"
+      },
+      {
+        "color_id": 626,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 220,
+    "name": "Primal Spirit",
+    "icon": "https://render.guildwars2.com/file/260E152215E2A4CE454F53EAFF07ACABA9DD514E/2199306.png",
+    "dye_slots": [
+      {
+        "color_id": 53,
+        "material": "fur"
+      },
+      {
+        "color_id": 67,
+        "material": "cloth"
+      },
+      {
+        "color_id": 67,
+        "material": "cloth"
+      },
+      {
+        "color_id": 134,
+        "material": "leather"
+      }
+    ],
+    "mount": "jackal"
+  }
+]

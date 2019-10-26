@@ -14,7 +14,9 @@ class WiremockConfig extends Specification {
 
     @Shared
     @ClassRule
-    WireMockRule wireMockRule = new WireMockRule(options().port(8089).notifier(new ConsoleNotifier(true)))
+    WireMockRule wireMockRule = new WireMockRule(options()
+            .port(8089)
+            .notifier(new ConsoleNotifier(true)))
 
     def gson = new Gson()
 

@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.gamemechanics.model
+package com.kryszak.gwatlin.api.gamemechanics.model.mastery
 
 /**
  * Data model for Mastery object
