@@ -66,14 +66,42 @@ class GameMechanicsStubs extends WiremockConfig {
     def stubMountSkinErrorResponse() {
         stubFor(
                 get(urlEqualTo("/mounts/skins?ids=1000&lang=en"))
-                .willReturn(notFound().withBody(parseResponseText(("/responses/gamemechanics/mount_skins_error.json"))))
+                        .willReturn(notFound().withBody(parseResponseText(("/responses/gamemechanics/mount_skins_error.json"))))
         )
     }
 
     def stubAllMountSkinsResponse() {
         stubFor(
                 get(urlEqualTo("/mounts/skins?ids=all&lang=en"))
-                .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_skins_all.json")))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_skins_all.json")))
+        )
+    }
+
+    def stubMountTypesIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/types"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_types_ids.json")))
+        )
+    }
+
+    def stubMountTypesResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/types?ids=griffon,jackal&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_types.json")))
+        )
+    }
+
+    def stubAllMountTypeResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/types?ids=all&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/mount_types_all.json")))
+        )
+    }
+
+    def stubMountTypeErrorResponse() {
+        stubFor(
+                get(urlEqualTo("/mounts/types?ids=i_do_not_exist&lang=en"))
+                        .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/mount_type_error.json")))
         )
     }
 }

@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.gamemechanics.model.mount
+package com.kryszak.gwatlin.api.gamemechanics.model.mount.skin
 
 import com.google.gson.annotations.SerializedName
 
