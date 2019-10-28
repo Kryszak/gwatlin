@@ -42,8 +42,9 @@ internal open class BaseHttpClient {
         when (result) {
             is Result.Success -> return result.get()
             is Result.Failure -> {
+                log.error("Request failed!", result.getException())
                 val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
-                log.error("Error: $error", result.getException())
+                log.error("Error: $error")
                 throw ApiRequestException(error.toString())
             }
         }

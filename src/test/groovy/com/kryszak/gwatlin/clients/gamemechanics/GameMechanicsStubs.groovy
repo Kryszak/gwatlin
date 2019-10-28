@@ -2,11 +2,7 @@ package com.kryszak.gwatlin.clients.gamemechanics
 
 import com.kryszak.gwatlin.config.WiremockConfig
 
-import static com.github.tomakehurst.wiremock.client.WireMock.get
-import static com.github.tomakehurst.wiremock.client.WireMock.notFound
-import static com.github.tomakehurst.wiremock.client.WireMock.okJson
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo
+import static com.github.tomakehurst.wiremock.client.WireMock.*
 
 class GameMechanicsStubs extends WiremockConfig {
 
@@ -182,7 +178,28 @@ class GameMechanicsStubs extends WiremockConfig {
     def stubProfessionErrorResponse() {
         stubFor(
                 get(urlEqualTo("/professions?ids=asdf&lang=en"))
-                .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/professions_error.json")))
+                        .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/professions_error.json")))
+        )
+    }
+
+    def stubRaceIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/races"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/race_ids.json")))
+        )
+    }
+
+    def stubRaceResponse() {
+        stubFor(
+                get(urlEqualTo("/races/Asura"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/race.json")))
+        )
+    }
+
+    def stubRaceErrorResponse() {
+        stubFor(
+                get(urlEqualTo("/races/nobody"))
+                        .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/race_error.json")))
         )
     }
 }
