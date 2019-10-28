@@ -10,7 +10,7 @@ data class Achievement(
         val name: String,
         val description: String,
         val requirement: String,
-        @SerializedName(value = "locked_text") val lockedText: String,
+        @SerializedName("locked_text") val lockedText: String,
         val type: String,
         val flags: List<String>,
         val tiers: List<AchievementTier>,

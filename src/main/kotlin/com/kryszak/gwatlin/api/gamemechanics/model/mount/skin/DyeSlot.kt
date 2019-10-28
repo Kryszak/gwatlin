@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
  * Data model for mount skin's dye slot object
  */
 data class DyeSlot(
-        @SerializedName(value = "color_id") val colorId: Int,
+        @SerializedName("color_id") val colorId: Int,
         val material: String
 )
 

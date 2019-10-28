@@ -8,5 +8,5 @@ import com.google.gson.annotations.SerializedName
 data class DailyAchievement(
         val id: Int,
         val level: DailyAchievementLevel,
-        @SerializedName(value = "required_access") val requiredAccess: List<String>
+        @SerializedName("required_access") val requiredAccess: List<String>
 )

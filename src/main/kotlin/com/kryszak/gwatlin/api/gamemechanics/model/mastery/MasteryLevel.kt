@@ -10,7 +10,7 @@ data class MasteryLevel(
         val description: String,
         val instruction: String,
         val icon: String,
-        @SerializedName(value = "point_cost") val pointCost: Int,
-        @SerializedName(value = "exp_cost") val expCost: Int
+        @SerializedName("point_cost") val pointCost: Int,
+        @SerializedName("exp_cost") val expCost: Int
 )
 

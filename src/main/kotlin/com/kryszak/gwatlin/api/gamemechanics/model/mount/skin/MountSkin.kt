@@ -10,5 +10,5 @@ data class MountSkin(
         val name: String,
         val icon: String,
         val mount: String,
-        @SerializedName(value = "dye_slots") val dyeSlots: List<DyeSlot>
+        @SerializedName("dye_slots") val dyeSlots: List<DyeSlot>
 )

@@ -9,5 +9,5 @@ data class Outfit(
         val id: Int,
         val name: String,
         val icon: String,
-        @SerializedName(value = "unlock_items") val unlockItems: List<Int>
+        @SerializedName("unlock_items") val unlockItems: List<Int>
 )

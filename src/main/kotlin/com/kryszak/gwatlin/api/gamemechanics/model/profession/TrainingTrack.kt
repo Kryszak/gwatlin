@@ -8,6 +8,6 @@ import com.google.gson.annotations.SerializedName
 data class TrainingTrack(
         val cost: Int,
         val type: TrainingTrackType,
-        @SerializedName(value = "skill_id") val skillId: Int?,
-        @SerializedName(value = "trait_it") val traitId: Int?
+        @SerializedName("skill_id") val skillId: Int?,
+        @SerializedName("trait_it") val traitId: Int?
 )

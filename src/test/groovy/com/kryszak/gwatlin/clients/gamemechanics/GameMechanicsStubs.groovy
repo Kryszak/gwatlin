@@ -202,4 +202,25 @@ class GameMechanicsStubs extends WiremockConfig {
                         .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/race_error.json")))
         )
     }
+
+    def stubSpecializationIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/specializations"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/specialization_ids.json")))
+        )
+    }
+
+    def stubSpecializationResponse() {
+        stubFor(
+                get(urlEqualTo("/specializations/1?lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/specialization.json")))
+        )
+    }
+
+    def stubSpecializationErrorResponse() {
+        stubFor(
+                get(urlEqualTo("/specializations/100?lang=en"))
+                        .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/specialization_error.json")))
+        )
+    }
 }
