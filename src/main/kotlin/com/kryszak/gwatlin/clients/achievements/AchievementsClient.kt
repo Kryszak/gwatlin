@@ -19,35 +19,35 @@ internal class AchievementsClient : BaseHttpClient() {
     private val categoryEndpoint: String = "$baseEndpoint/categories"
 
     fun getAchievementIdsList(): List<Int> {
-        return getRequest("$baseUrl/$baseEndpoint")
+        return getRequest(baseEndpoint)
     }
 
     fun getAchievementByIds(ids: List<Int>): List<Achievement> {
         val params = ids.joinToString(",")
-        return getRequest("$baseUrl/$baseEndpoint?ids=$params")
+        return getRequest("$baseEndpoint?ids=$params")
     }
 
     fun getDailyAchievements(): DailyAchievementList {
-        return getRequest("$baseUrl/$dailyEndpoint")
+        return getRequest(dailyEndpoint)
     }
 
     fun getTomorrowDailyAchievements(): DailyAchievementList {
-        return getRequest("$baseUrl/$dailyTomorrowEndpoint")
+        return getRequest(dailyTomorrowEndpoint)
     }
 
     fun getAchievementGroupIds(): List<String> {
-        return getRequest("$baseUrl/$groupEndpoint")
+        return getRequest(groupEndpoint)
     }
 
     fun getAchievementGroup(id: String): AchievementGroup {
-        return getRequest("$baseUrl/$groupEndpoint/$id")
+        return getRequest("$groupEndpoint/$id")
     }
 
     fun getAchievementCategories(): List<Int> {
-        return getRequest("$baseUrl/$categoryEndpoint")
+        return getRequest(categoryEndpoint)
     }
 
     fun getAchievementCategory(id: Int): AchievementCategory {
-        return getRequest("$baseUrl/$categoryEndpoint/$id")
+        return getRequest("$categoryEndpoint/$id")
     }
 }

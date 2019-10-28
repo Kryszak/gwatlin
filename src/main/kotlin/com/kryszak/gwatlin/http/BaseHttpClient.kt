@@ -19,7 +19,7 @@ internal open class BaseHttpClient {
 
     protected val logMessage = "Requested url: %s"
 
-    protected val baseUrl: String
+    private val baseUrl: String
 
     private val gson = Gson()
 
@@ -30,7 +30,7 @@ internal open class BaseHttpClient {
     }
 
     protected inline fun <reified T : Any> getRequest(uri: String): T {
-        val (_, response, result) = uri
+        val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<T>()

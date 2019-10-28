@@ -1,0 +1,730 @@
+[
+  {
+    "id": 1,
+    "name": "Cook's Outfit",
+    "icon": "https://render.guildwars2.com/file/1509D1B76FCECC111E28D2F50EBEAD5DA102995A/340522.png",
+    "unlock_items": [
+      64756
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mad King's Outfit",
+    "icon": "https://render.guildwars2.com/file/041DC1695CF0DD1A4438D45ACB036C510E1AFFB4/499488.png",
+    "unlock_items": [
+      65196
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pirate Captain's Outfit",
+    "icon": "https://render.guildwars2.com/file/983CE77CC0D921A1EE100D4ECFFE3F01FC61CC6B/66637.png",
+    "unlock_items": [
+      64754
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Witch's Outfit",
+    "icon": "https://render.guildwars2.com/file/F90DEF6BD1FA9EE60DC93BA31B0D367EBA60EC7A/499499.png",
+    "unlock_items": [
+      65201
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Executioner's Outfit",
+    "icon": "https://render.guildwars2.com/file/606BC169F95F7FF8470DD2CE6D30016AD5B646EA/648164.png",
+    "unlock_items": [
+      65194
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Bloody Prince's Outfit",
+    "icon": "https://render.guildwars2.com/file/0297679A65D858DFC61B9C02ECC4964FDEC7AA1A/648158.png",
+    "unlock_items": [
+      65195
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Fancy Winter Outfit",
+    "icon": "https://render.guildwars2.com/file/5F4776E9357CDC37600A4250021856115EF40C3E/526123.png",
+    "unlock_items": [
+      65198
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Shadow Assassin Outfit",
+    "icon": "https://render.guildwars2.com/file/AD557E606AC130E9757D75CB6176657440157730/831492.png",
+    "unlock_items": [
+      66658
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Ancestral Outfit",
+    "icon": "https://render.guildwars2.com/file/36535368EFEEC50275134828D1CB60B90F300AC2/797934.png",
+    "unlock_items": [
+      66279
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Ceremonial Plated Outfit",
+    "icon": "https://render.guildwars2.com/file/B8457ABE0772BDA3975A3A541C7E656E03CE4652/855385.png",
+    "unlock_items": [
+      67040
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Raiment of the Lich",
+    "icon": "https://render.guildwars2.com/file/5A4C04B84D5C7BA4CB7E7C0804D83FC0EE38BA1B/882252.png",
+    "unlock_items": [
+      67037
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Hexed Outfit",
+    "icon": "https://render.guildwars2.com/file/05E44B7E1251C30A49640FB26C03F6E6F2D1CB7A/888377.png",
+    "unlock_items": [
+      67374
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Noble Count Outfit",
+    "icon": "https://render.guildwars2.com/file/6A09CBC6C5AD6634CDEF1BFBC85A51262BCFA073/888388.png",
+    "unlock_items": [
+      67398
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Jungle Explorer Outfit",
+    "icon": "https://render.guildwars2.com/file/06DF543BF76322F4A57AA82F01DE2B9A6996FA01/915570.png",
+    "unlock_items": [
+      67990
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Arctic Explorer Outfit",
+    "icon": "https://render.guildwars2.com/file/1CA69FFE21A1B046D4355A13FD454F6E4E7BF438/919386.png",
+    "unlock_items": [
+      67868
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Arcane Outfit",
+    "icon": "https://render.guildwars2.com/file/150AD0A9A1C9DCD841E506BF240AA92F25D7B90B/930976.png",
+    "unlock_items": [
+      68577
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Imperial Outfit",
+    "icon": "https://render.guildwars2.com/file/945CD6DEFAA6A8B2CA64FC16F9F11A5B059A0805/947661.png",
+    "unlock_items": [
+      68654
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Crystal Nomad Outfit",
+    "icon": "https://render.guildwars2.com/file/C4BE1E0CEDA175DEC25DC829622C42AE0FE21621/951783.png",
+    "unlock_items": [
+      68684
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Exemplar Attire",
+    "icon": "https://render.guildwars2.com/file/E80866F093F0C972B7FA34159453DB0DD2C37A80/978009.png",
+    "unlock_items": [
+      69623
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Balthazar's Regalia",
+    "icon": "https://render.guildwars2.com/file/150E6E5932D00A0A6EC4382B05DE7B634EA7E211/978008.png",
+    "unlock_items": [
+      69607
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Daydreamer's Finery",
+    "icon": "https://render.guildwars2.com/file/CA0CD8280EF7BFA5C6C049555A45510E1E04233D/986317.png",
+    "unlock_items": [
+      69662
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Mad Scientist Outfit",
+    "icon": "https://render.guildwars2.com/file/616DA4EFB120F9EF237257C673B0A4D0BAD9A7F8/991354.png",
+    "unlock_items": [
+      69753
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Dwayna's Regalia",
+    "icon": "https://render.guildwars2.com/file/0B7B09BB69BD0FFBA3919E60F07209E8EEE1C86E/1001358.png",
+    "unlock_items": [
+      69806
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Monk's Outfit",
+    "icon": "https://render.guildwars2.com/file/A501B02227ABE1D952BA9368A5D770375B9C6C75/1011714.png",
+    "unlock_items": [
+      69863
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Harbinger of Mordremoth Outfit",
+    "icon": "https://render.guildwars2.com/file/806576D20DA0426BB1D8E55A1CC50AF52806C33A/1024051.png",
+    "unlock_items": [
+      70071
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Wedding Attire",
+    "icon": "https://render.guildwars2.com/file/CC6FE873D0A126E3E3B5A4292B7BDF4F34FADAD6/1053405.png",
+    "unlock_items": [
+      70253
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Royal Guard Outfit",
+    "icon": "https://render.guildwars2.com/file/06654D021C3E4EC4AA7EDC4F0F17DF804EE4A261/1063712.png",
+    "unlock_items": [
+      70299
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Lunatic Guard Outfit",
+    "icon": "https://render.guildwars2.com/file/21DF9BD3E8FA3E63E4B0D90F0820CE2617E22D95/1223686.png",
+    "unlock_items": [
+      70385
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Crystal Arbiter Outfit",
+    "icon": "https://render.guildwars2.com/file/62230B3E52E262F814E10D5A2C49EBC3ACAE9640/1223685.png",
+    "unlock_items": [
+      76905
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Lyssa's Regalia",
+    "icon": "https://render.guildwars2.com/file/7D1AAED555D13BDEBB1736DB77D0DF1C56141F64/1223684.png",
+    "unlock_items": [
+      75129
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Bandit Sniper's Outfit",
+    "icon": "https://render.guildwars2.com/file/E14849EC6EFF53DD5D9D467F51C6A7A608D9216C/1302477.png",
+    "unlock_items": [
+      77282
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Slayer's Outfit",
+    "icon": "https://render.guildwars2.com/file/EA2FC116C5CACAF5DCA434765F2871D39DFA7824/1313301.png",
+    "unlock_items": [
+      77483
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Winter Solstice Outfit",
+    "icon": "https://render.guildwars2.com/file/7133DC4108BE42C2F010D61CE406772D360F0E39/1322763.png",
+    "unlock_items": [
+      77595
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Nature's Oath Outfit",
+    "icon": "https://render.guildwars2.com/file/F0C5DCBAAFBF5C1BA3DB5201D19154A30D35BD57/1335090.png",
+    "unlock_items": [
+      77676
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Crystal Savant Outfit",
+    "icon": "https://render.guildwars2.com/file/169610D56164BBB24B95EB94B2240C3E0259515A/1373353.png",
+    "unlock_items": [
+      77808
+    ]
+  },
+  {
+    "id": 36,
+    "name": "White Mantle Outfit",
+    "icon": "https://render.guildwars2.com/file/C95E24300CAE3CAE99C25E1272D805DC1F0A076D/1459322.png",
+    "unlock_items": [
+      78011
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Ironclad Outfit",
+    "icon": "https://render.guildwars2.com/file/4AC41CCB4EF639B0607097ADD1E9B9A40DF8A207/1411155.png",
+    "unlock_items": [
+      78010
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Gwen's Attire",
+    "icon": "https://render.guildwars2.com/file/0A99D02E1AA6E13E7E3B3323932951DB0D7B0F97/1418462.png",
+    "unlock_items": [
+      78008
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Sentinel Outfit",
+    "icon": "https://render.guildwars2.com/file/26E30220FBCF3DBB40335ADD426B2F1B16202842/1424120.png",
+    "unlock_items": [
+      78574
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Verdant Executor Outfit",
+    "icon": "https://render.guildwars2.com/file/0FB393B4D4AD2702AE57E4FE0901E3C2F660996D/1466042.png",
+    "unlock_items": [
+      79220
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Taimi Outfit",
+    "icon": "https://render.guildwars2.com/file/94E33212D565D103794AAC49B3CDD620597C527A/1493923.png",
+    "unlock_items": [
+      79380
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Mursaat Robes",
+    "icon": "https://render.guildwars2.com/file/1EA4E44EAB95F36EA5B9420121332D0B9EF6D010/1493906.png",
+    "unlock_items": [
+      79531
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Ghostly Outfit",
+    "icon": "https://render.guildwars2.com/file/15E3B055A29FD9065AD227B402C66957AAB8C4CD/1507894.png",
+    "unlock_items": [
+      79671
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Braham's Wolfblood Outfit",
+    "icon": "https://render.guildwars2.com/file/CBDA26AA40AC0677B0FF2B9EAB77493C065649AA/1525117.png",
+    "unlock_items": [
+      79703
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Marjory's Shrouded Outfit",
+    "icon": "https://render.guildwars2.com/file/6E317C42D8FE33A7E8052931055DAB21535776C0/1525116.png",
+    "unlock_items": [
+      79705
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Ice Encasement Outfit",
+    "icon": "https://render.guildwars2.com/file/FC4156DAF798BA1C057AA979EB3D37E1EF2434D2/1614743.png",
+    "unlock_items": [
+      80049
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Rox's Pathfinder Outfit",
+    "icon": "https://render.guildwars2.com/file/12E78056944B4C669202A9FD63A0257BBBB4484F/1624035.png",
+    "unlock_items": [
+      80077
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Spring Promenade Outfit",
+    "icon": "https://render.guildwars2.com/file/B2161391BE9A550E0FA620AD15F99D7A900AE922/1664127.png",
+    "unlock_items": [
+      80906
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Kasmeer's Regal Outfit",
+    "icon": "https://render.guildwars2.com/file/53A42304A1EDAB74336D9A027D6833C508132127/1676969.png",
+    "unlock_items": [
+      80973
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Outlaw Outfit",
+    "icon": "https://render.guildwars2.com/file/2D53434B68B6B42DD5CE3F2BBB0F9521560CBC20/1692048.png",
+    "unlock_items": [
+      81223
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Dynamics Exo-Suit Outfit",
+    "icon": "https://render.guildwars2.com/file/BE02A5EADE6AAA571FF807C1B3050DA07D6F027C/1711183.png",
+    "unlock_items": [
+      81548
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Sunspear Outfit",
+    "icon": "https://render.guildwars2.com/file/35461AC31531CEF4B3EF03D4A313D89E9192ACC2/1748208.png",
+    "unlock_items": [
+      82075
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Champion of Tyria Outfit",
+    "icon": "https://render.guildwars2.com/file/DB3E28272942C4CA3E66043C38DED65F50D17A1B/1768403.png",
+    "unlock_items": [
+      83865
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Grenth's Regalia Outfit",
+    "icon": "https://render.guildwars2.com/file/4F5CAEE575785DEE4A15CB2D1F97AD1D6A925291/1768404.png",
+    "unlock_items": [
+      82391
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Imperial Guard Outfit",
+    "icon": "https://render.guildwars2.com/file/08D615EBEAC1B9E400F5B35B0E492BF6C4B2A3C3/1938454.png",
+    "unlock_items": [
+      82360
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Forged Outfit",
+    "icon": "https://render.guildwars2.com/file/F09E2D1B5B27297B01200961AC6DDAD43D780EB7/1822781.png",
+    "unlock_items": [
+      85034
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Fallen Balthazar Outfit",
+    "icon": "https://render.guildwars2.com/file/3607FE0D017645E5300C654BED622B2409DC1263/1862587.png",
+    "unlock_items": [
+      85383
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Awakened Zealot Outfit",
+    "icon": "https://render.guildwars2.com/file/0805EC4BC968527C5AC69343509F32C9D27A1847/1862586.png",
+    "unlock_items": [
+      85448
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Cherry Blossom Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/4E66CE8069617F4E0AC30333B96CA3E390F6FD16/575129.png",
+    "unlock_items": [
+      85521
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Common Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/A146C05DE3F7D9067204BD7EC80F5906B4212AE1/66608.png",
+    "unlock_items": [
+      85590
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Silk Brocade Outfit",
+    "icon": "https://render.guildwars2.com/file/C82F075E5EB4E7C4CEA25DD35D03F4AD73FF0299/561963.png",
+    "unlock_items": [
+      85547
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Leather Hoodie Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/F1915CB0F11804E5985098781E96616362AC17DD/543867.png",
+    "unlock_items": [
+      85596
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Casual Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/C33C2E360DFB77FA3509070AAAAB4C80644A28FB/561960.png",
+    "unlock_items": [
+      85619
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Country Lace Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/6B0871D143F40A9BF2E848CEFAC20F34F367C402/575130.png",
+    "unlock_items": [
+      85530
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Riding Clothes Outfit",
+    "icon": "https://render.guildwars2.com/file/0C2F7D54EFB13178F70821910A3F331EE3D60471/543868.png",
+    "unlock_items": [
+      85570
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Casual Hoodie Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/65F69797A63448BFCD4E7602F0FFD165E1069F40/543869.png",
+    "unlock_items": [
+      85552
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Ornate Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/2592BB31349D2FD620E29A5F46553BFCF0E02AD2/575132.png",
+    "unlock_items": [
+      85616
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Layered Vest Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/02AA5338F932FC970248CBAAB8DB4B2D6C075149/561961.png",
+    "unlock_items": [
+      85532
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Striped Silk Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/56155F9AD09FAFFEF332A8E66C0C97AA080450BC/561962.png",
+    "unlock_items": [
+      85591
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Designer Hoodie Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/3AE6C52608D603F46939E01401BBC945CB7CA8AC/543870.png",
+    "unlock_items": [
+      85543
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Khaki Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/D80855EB569E5376ACF4D3EAEBB4ED3C5940A26C/575131.png",
+    "unlock_items": [
+      85542
+    ]
+  },
+  {
+    "id": 72,
+    "name": "First Follower Desmina Outfit",
+    "icon": "https://render.guildwars2.com/file/542769E4E3BD29EDDE9F063E51940EE22CD05C75/1895224.png",
+    "unlock_items": [
+      85740
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Dragon Emblem Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/0C07510296147FBF71B7084F4425D600D615109A/415002.png",
+    "unlock_items": [
+      86417
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Winter Monarch Outfit",
+    "icon": "https://render.guildwars2.com/file/0F0868BD1219663F2C02D128AF04B54E25E91201/1915384.png",
+    "unlock_items": [
+      86637
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Inquest Exo-Suit Outfit",
+    "icon": "https://render.guildwars2.com/file/0A4030D900D7A5C50D23A0D5641FDE9CE753DEBA/1947257.png",
+    "unlock_items": [
+      87182
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Primeval Dervish Outfit",
+    "icon": "https://render.guildwars2.com/file/C1535DD3E4E0E41F0B640DCF50F5DB48595555D8/1977899.png",
+    "unlock_items": [
+      87477
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Elonian Elementalist Outfit",
+    "icon": "https://render.guildwars2.com/file/FAD55FA6D24E9F36D2041D655BC1042EC9685F3C/1986192.png",
+    "unlock_items": [
+      87548
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Timekeeper Outfit",
+    "icon": "https://render.guildwars2.com/file/6FA5CDD222B2C8E30969964A10AEE61A252CE9D8/2022141.png",
+    "unlock_items": [
+      88321
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Zafirah's Tactical Outfit",
+    "icon": "https://render.guildwars2.com/file/1591F3077CD400D24B57FD479CE1C14ED740316E/2038662.png",
+    "unlock_items": [
+      88808
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Haunted Armor Outfit",
+    "icon": "https://render.guildwars2.com/file/09AF97237D4CEFEC1AFC77BB1471B95392FC7CD9/2056208.png",
+    "unlock_items": [
+      89079
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Gem Aura Outfit",
+    "icon": "https://render.guildwars2.com/file/80421DCDAFC0941A030E6747199E6E3CE3511C0B/2075498.png",
+    "unlock_items": [
+      89428
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Logan's Pact Marshal Outfit",
+    "icon": "https://render.guildwars2.com/file/1FAE7CEC6F2C701C2377564A539C09DC774FB255/2083355.png",
+    "unlock_items": [
+      89971
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Shrine Guardian Outfit",
+    "icon": "https://render.guildwars2.com/file/3C277440FAE15143133468C27C804221479B5925/2100812.png",
+    "unlock_items": [
+      89998
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Defiant Glass Outfit",
+    "icon": "https://render.guildwars2.com/file/78BFD535C07B68F8EE2AA1D1191D2A0E184506EF/2117652.png",
+    "unlock_items": [
+      90098
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Ritualist Outfit",
+    "icon": "https://render.guildwars2.com/file/CCF55D3CFBCCAE060C73483213EC01E4A0B02EE3/2124136.png",
+    "unlock_items": [
+      90113
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Mist Stranger Outfit",
+    "icon": "https://render.guildwars2.com/file/116A0AF4597B4CD46E19673369C6D926D143C076/2155920.png",
+    "unlock_items": [
+      91207
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Starborn Outfit",
+    "icon": "https://render.guildwars2.com/file/D5643B6E72282E9D4A237B28B697050CA0A0BF3F/2179649.png",
+    "unlock_items": [
+      91469
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Noble Courtier Outfit",
+    "icon": "https://render.guildwars2.com/file/34A0D5F276E3C55B0CF84903161FC3F5B8AA282A/2185867.png",
+    "unlock_items": [
+      91623
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Heart of Thorns Emblem Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/F1F372C09CB6120CD2B8B4E06C3B7946560B53E6/2196159.png",
+    "unlock_items": [
+      91879
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Ascended Aurene Clothing Outfit",
+    "icon": "https://render.guildwars2.com/file/72C1B65CBA3E289EDFE89DFF78AE1B19CCB3621E/2196158.png",
+    "unlock_items": [
+      91880
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Mage Knight Outfit",
+    "icon": "https://render.guildwars2.com/file/1CE61A0570FEB762451FFE2B9AB5D4607632381C/2199554.png",
+    "unlock_items": [
+      91998
+    ]
+  }
+]

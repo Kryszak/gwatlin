@@ -8,19 +8,19 @@ internal class MasteriesClient : BaseHttpClient() {
     private val masteriesEndpoint: String = "masteries"
 
     fun getMasteriesIds(): List<Int> {
-        return getRequest("$baseUrl/$masteriesEndpoint")
+        return getRequest(masteriesEndpoint)
     }
 
     fun getMastery(id: Int, language: String): Mastery {
-        return getRequest("$baseUrl/$masteriesEndpoint/$id?lang=$language")
+        return getRequest("$masteriesEndpoint/$id?lang=$language")
     }
 
     fun getMasteries(ids: List<Int>, language: String): List<Mastery> {
         val params = ids.joinToString(",")
-        return getRequest("$baseUrl/$masteriesEndpoint?ids=$params&lang=$language")
+        return getRequest("$masteriesEndpoint?ids=$params&lang=$language")
     }
 
     fun getAllMasteries(language: String): List<Mastery> {
-        return getRequest("$baseUrl/$masteriesEndpoint?ids=all&lang=$language")
+        return getRequest("$masteriesEndpoint?ids=all&lang=$language")
     }
 }

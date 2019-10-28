@@ -13,28 +13,28 @@ internal class MountsClient : BaseHttpClient() {
     private val typesEndpoint: String = "$baseEndpoint/types"
 
     fun getMountSkinsIds(): List<Int> {
-        return getRequest("$baseUrl/$skinsEndpoint")
+        return getRequest(skinsEndpoint)
     }
 
     fun getMountSkins(ids: List<Int>, language: String): List<MountSkin> {
         val params = ids.joinToString(",")
-        return getRequest("$baseUrl/$skinsEndpoint?ids=$params&lang=$language")
+        return getRequest("$skinsEndpoint?ids=$params&lang=$language")
     }
 
     fun getAllMountSkins(language: String): List<MountSkin> {
-        return getRequest("$baseUrl/$skinsEndpoint?ids=all&lang=$language")
+        return getRequest("$skinsEndpoint?ids=all&lang=$language")
     }
 
     fun getMountTypesIds(): List<String> {
-        return getRequest("$baseUrl/$typesEndpoint")
+        return getRequest(typesEndpoint)
     }
 
     fun getMountTypes(ids: List<String>, language: String): List<MountType> {
         val params = ids.joinToString(",")
-        return getRequest("$baseUrl/$typesEndpoint?ids=$params&lang=$language")
+        return getRequest("$typesEndpoint?ids=$params&lang=$language")
     }
 
     fun getAllMountTypes(language: String): List<MountType> {
-        return getRequest("$baseUrl/$typesEndpoint?ids=all&lang=$language")
+        return getRequest("$typesEndpoint?ids=all&lang=$language")
     }
 }

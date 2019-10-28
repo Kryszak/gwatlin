@@ -11,14 +11,14 @@ internal class DailyRewardsClient : BaseHttpClient() {
     private val worldBossesEndpoint: String = "worldbosses"
 
     fun getDailyCraftingRecipesIds(): List<String> {
-        return getRequest("$baseUrl/$dailyCraftingEndpoint")
+        return getRequest(dailyCraftingEndpoint)
     }
 
     fun getMapChestsIds(): List<String> {
-        return getRequest("$baseUrl/$mapChestsEndpoint")
+        return getRequest(mapChestsEndpoint)
     }
 
     fun getWorldBossesIds(): List<String> {
-        return getRequest("$baseUrl/$worldBossesEndpoint")
+        return getRequest(worldBossesEndpoint)
     }
 }

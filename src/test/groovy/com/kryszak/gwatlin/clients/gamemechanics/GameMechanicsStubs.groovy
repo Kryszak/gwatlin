@@ -2,7 +2,11 @@ package com.kryszak.gwatlin.clients.gamemechanics
 
 import com.kryszak.gwatlin.config.WiremockConfig
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*
+import static com.github.tomakehurst.wiremock.client.WireMock.get
+import static com.github.tomakehurst.wiremock.client.WireMock.notFound
+import static com.github.tomakehurst.wiremock.client.WireMock.okJson
+import static com.github.tomakehurst.wiremock.client.WireMock.stubFor
+import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo
 
 class GameMechanicsStubs extends WiremockConfig {
 
@@ -102,6 +106,34 @@ class GameMechanicsStubs extends WiremockConfig {
         stubFor(
                 get(urlEqualTo("/mounts/types?ids=i_do_not_exist&lang=en"))
                         .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/mount_type_error.json")))
+        )
+    }
+
+    def stubOutfitIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/outfits"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/outfit_ids.json")))
+        )
+    }
+
+    def stubOutfitsResponse() {
+        stubFor(
+                get(urlEqualTo("/outfits?ids=1,2&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/outfits.json")))
+        )
+    }
+
+    def stubOutfitErrorResponse() {
+        stubFor(
+                get(urlEqualTo("/outfits?ids=1000&lang=en"))
+                        .willReturn(notFound().withBody(parseResponseText("/responses/gamemechanics/outfit_error.json")))
+        )
+    }
+
+    def stubAllOutfitsResponse() {
+        stubFor(
+                get(urlEqualTo("/outfits?ids=all&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/outfits_all.json")))
         )
     }
 }
