@@ -136,4 +136,25 @@ class GameMechanicsStubs extends WiremockConfig {
                         .willReturn(okJson(parseResponseText("/responses/gamemechanics/outfits_all.json")))
         )
     }
+
+    def stubPetIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/pets"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/pet_ids.json")))
+        )
+    }
+
+    def stubPetsResponse() {
+        stubFor(
+                get(urlEqualTo("/pets?ids=1,2&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/pets.json")))
+        )
+    }
+
+    def stubAllPetsResponse() {
+        stubFor(
+                get(urlEqualTo("/pets?ids=all&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/pets_all.json")))
+        )
+    }
 }
