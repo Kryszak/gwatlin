@@ -25,7 +25,7 @@ class GWPetsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
-    fun getPets(ids: List<Int>, language: String): List<Pet> {
+    fun getPets(ids: List<Int>, language: String = "en"): List<Pet> {
         return petsClient.getPets(ids, language)
     }
 
@@ -34,7 +34,7 @@ class GWPetsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
-    fun getAllPets(language: String): List<Pet> {
+    fun getAllPets(language: String = "en"): List<Pet> {
         return petsClient.getAllPets(language)
     }
 }

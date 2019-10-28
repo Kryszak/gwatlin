@@ -63,7 +63,7 @@ class GWMountsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
      */
-    fun getAllMountTypes(language: String): List<MountType> {
+    fun getAllMountTypes(language: String = "en"): List<MountType> {
         return mountsClient.getAllMountTypes(language)
     }
 }
