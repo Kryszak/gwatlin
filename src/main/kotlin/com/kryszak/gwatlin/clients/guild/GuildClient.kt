@@ -3,6 +3,7 @@ package com.kryszak.gwatlin.clients.guild
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
+import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
 import com.kryszak.gwatlin.http.BaseHttpClient
 
 internal class GuildClient : BaseHttpClient() {
@@ -16,6 +17,8 @@ internal class GuildClient : BaseHttpClient() {
     private val foregroundEndpoint = "$emblemEndpoint/foregrounds"
 
     private val permissionEndpoint = "$guildEndpoint/permissions"
+
+    private val upgradesEndpoint = "$guildEndpoint/upgrades"
 
     fun getGuild(id: String): Guild {
         return getRequest("$guildEndpoint/$id")
@@ -46,5 +49,22 @@ internal class GuildClient : BaseHttpClient() {
     fun getGuildPermissions(ids: List<String>, language: String): List<GuildPermission> {
         val params = ids.joinToString(",")
         return getRequest("$permissionEndpoint?ids=$params&lang=$language")
+    }
+
+    fun findGuildId(name: String): String {
+        val nameList: List<String> = getRequest("$guildEndpoint/search?name=${encodeParam(name)}")
+        return when (nameList.isNotEmpty()) {
+            true -> nameList[0]
+            false -> ""
+        }
+    }
+
+    fun getGuildUpgradesIds(): List<Int> {
+        return getRequest(upgradesEndpoint)
+    }
+
+    fun getGuildUpgrades(ids: List<Int>, language: String): List<GuildUpgrade> {
+        val params = ids.joinToString(",")
+        return getRequest("$upgradesEndpoint?ids=$params&lang=$language")
     }
 }

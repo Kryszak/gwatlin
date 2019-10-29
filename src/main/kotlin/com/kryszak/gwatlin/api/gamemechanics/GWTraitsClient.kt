@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.clients.gamemechanics.TraitsClient
 
 /**
  * Client for game mechanic - traits endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWTraitsClient {
 

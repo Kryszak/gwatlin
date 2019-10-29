@@ -6,7 +6,7 @@ import com.kryszak.gwatlin.clients.gamemechanics.MountsClient
 
 /**
  * Client for game mechanic - mounts endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWMountsClient {
 
@@ -25,7 +25,7 @@ class GWMountsClient {
      * Retrieves mount skins by ids
      * @param ids mount skin ids
      * @param language of returned text (default=en)
-     * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.MountSkin
+     * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
      */
     fun getMountSkins(ids: List<Int>, language: String = "en"): List<MountSkin> {
         return mountsClient.getMountSkins(ids, language)
@@ -34,7 +34,7 @@ class GWMountsClient {
     /**
      * Retrieves all mount skins
      * @param language of returned text (default=en)
-     * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.MountSkin
+     * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
      */
     fun getAllMountSkins(language: String = "en"): List<MountSkin> {
         return mountsClient.getAllMountSkins(language)

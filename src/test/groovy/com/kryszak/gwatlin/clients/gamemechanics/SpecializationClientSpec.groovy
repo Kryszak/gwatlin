@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.clients.gamemechanics
 
-import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
 import spock.lang.Subject
 

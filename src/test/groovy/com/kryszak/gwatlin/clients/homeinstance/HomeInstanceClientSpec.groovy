@@ -1,7 +1,7 @@
 package com.kryszak.gwatlin.clients.homeinstance
 
 import com.google.common.reflect.TypeToken
-import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
 import spock.lang.Subject
 

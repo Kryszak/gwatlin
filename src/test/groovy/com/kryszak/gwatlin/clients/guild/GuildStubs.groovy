@@ -2,10 +2,7 @@ package com.kryszak.gwatlin.clients.guild
 
 import com.kryszak.gwatlin.config.WiremockConfig
 
-import static com.github.tomakehurst.wiremock.client.WireMock.get
-import static com.github.tomakehurst.wiremock.client.WireMock.okJson
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo
+import static com.github.tomakehurst.wiremock.client.WireMock.*
 
 class GuildStubs extends WiremockConfig {
 
@@ -55,6 +52,34 @@ class GuildStubs extends WiremockConfig {
         stubFor(
                 get(urlEqualTo("/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem&lang=en"))
                         .willReturn(okJson(parseResponseText("/responses/guild/permissions.json")))
+        )
+    }
+
+    def stubGuildIdResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/search?name=Edit%20Conflict"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/guild_id.json")))
+        )
+    }
+
+    def stubGuildIdNotFoundResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/search?name=Edit%20Conflic"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/guild_id_not_found.json")))
+        )
+    }
+
+    def stubUpgradeIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/upgrades"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/upgrade_ids.json")))
+        )
+    }
+
+    def stubUpgradesResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/upgrades?ids=38,43&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/upgrades.json")))
         )
     }
 }

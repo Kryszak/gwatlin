@@ -1,7 +1,7 @@
 package com.kryszak.gwatlin.clients.gamemechanics
 
 import com.google.gson.reflect.TypeToken
-import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
 import spock.lang.Subject
 

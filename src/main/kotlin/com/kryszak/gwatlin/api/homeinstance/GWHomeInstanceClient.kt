@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.clients.homeinstance.HomeInstanceClient
 
 /**
  * Client for home instance endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWHomeInstanceClient {
 
@@ -23,7 +23,7 @@ class GWHomeInstanceClient {
      * Retrieves specific cat
      * @param id of cat
      * @return Cat
-     * @see com.kryszak.gwatlin.api.model.homeinstance.Cat
+     * @see com.kryszak.gwatlin.api.homeinstance.model.Cat
      */
     fun getCat(id: Int): Cat {
         return homeInstanceClient.getCat(id)
@@ -33,7 +33,7 @@ class GWHomeInstanceClient {
      * Retrieves list of cats
      * @param ids of cats
      * @return List of cats
-     * @see com.kryszak.gwatlin.api.model.homeinstance.Cat
+     * @see com.kryszak.gwatlin.api.homeinstance.model.Cat
      */
     fun getCats(ids: List<Int>): List<Cat> {
         return homeInstanceClient.getCats(ids)

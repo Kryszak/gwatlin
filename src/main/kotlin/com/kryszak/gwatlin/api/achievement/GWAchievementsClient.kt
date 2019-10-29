@@ -8,7 +8,7 @@ import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 
 /**
  * Client for achievements endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWAchievementsClient {
 
@@ -26,7 +26,7 @@ class GWAchievementsClient {
      * Retrieves list of achievements by given list of ids
      * @param ids list of requested achievement ids
      * @return list of Achievements
-     * @see com.kryszak.gwatlin.api.model.achievement.Achievement
+     * @see com.kryszak.gwatlin.api.achievement.model.Achievement
      */
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
         return achievementsClient.getAchievementByIds(ids)
@@ -35,7 +35,7 @@ class GWAchievementsClient {
     /**
      * Retrieves list of today daily achievements
      * @return list of daily achievements
-     * @see com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
+     * @see com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
      */
     fun getDailyAchievements(): DailyAchievementList {
         return achievementsClient.getDailyAchievements()
@@ -44,7 +44,7 @@ class GWAchievementsClient {
     /**
      * Retrieves list of tomorrow daily achievements
      * @return list of daily achievements
-     * @see com.kryszak.gwatlin.api.model.achievement.daily.DailyAchievementList
+     * @see com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
      */
     fun getDailyTomorrowAchievements(): DailyAchievementList {
         return achievementsClient.getTomorrowDailyAchievements()
@@ -62,7 +62,7 @@ class GWAchievementsClient {
      * Retrieves specific achievement group
      * @param id of achievement group
      * @return Achievement group
-     * @see com.kryszak.gwatlin.api.model.achievement.group.AchievementGroup
+     * @see com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
      */
     fun getAchievementGroup(id: String): AchievementGroup {
         return achievementsClient.getAchievementGroup(id)
@@ -80,7 +80,7 @@ class GWAchievementsClient {
      * Retrieves specific achievement category
      * @param id of achievement category
      * @return Achievement category
-     * @see com.kryszak.gwatlin.api.model.achievement.category.AchievementCategory
+     * @see com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
      */
     fun getAchievementCategory(id: Int): AchievementCategory {
         return achievementsClient.getAchievementCategory(id)

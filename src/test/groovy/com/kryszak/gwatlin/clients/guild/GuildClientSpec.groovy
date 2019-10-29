@@ -4,6 +4,7 @@ import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
+import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
 import spock.lang.Subject
 
 class GuildClientSpec extends GuildStubs {
@@ -107,6 +108,67 @@ class GuildClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         permissions == parsePermissions()
+    }
+
+    def "Should find guild's id"() {
+        given: "Guild name"
+        def name = "Edit Conflict"
+
+        and: "External api is stubbed"
+        stubGuildIdResponse()
+
+        when: "Guild id is searched"
+        def guildId = guildClient.findGuildId(name)
+
+        then: "Found id matches expected"
+        guildId == "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
+    }
+
+    def "Should return empty string if guild id is not found"() {
+        given: "Non existing guild name"
+        def name = "Edit Conflic"
+
+        and: "External api is stubbed"
+        stubGuildIdNotFoundResponse()
+
+        when: "Guild id is searched"
+        def guildId = guildClient.findGuildId(name)
+
+        then: "Empty string is returned"
+        guildId == ""
+    }
+
+    def "Should get guild upgrade ids"() {
+        given: "Expected upgrade ids"
+        def ids = parseResponse("/responses/guild/upgrade_ids.json")
+
+        and: "External api is stubbed"
+        stubUpgradeIdsResponse()
+
+        when: "Upgrade ids are requested"
+        def upgradeIds = guildClient.getGuildUpgradesIds()
+
+        then: "Retrieved list matches expected"
+        upgradeIds == ids
+    }
+
+    def "Should get guild upgrades"() {
+        given: "Guild upgrade ids"
+        def ids = [38, 43]
+
+        and: "External api is stubbed"
+        stubUpgradesResponse()
+
+        when: "Requesting guild upgrades"
+        def upgrades = guildClient.getGuildUpgrades(ids, "en")
+
+        then: "Retrieved list matches expected"
+        upgrades == parseUpgrades()
+    }
+
+    private List<GuildUpgrade> parseUpgrades() {
+        gson.fromJson(parseResponseText("/responses/guild/upgrades.json"),
+                new TypeToken<List<GuildUpgrade>>() {}.getType())
     }
 
     private List<GuildPermission> parsePermissions() {

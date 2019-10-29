@@ -4,7 +4,7 @@ import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.achievement.model.Achievement
 import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
-import com.kryszak.gwatlin.api.achievement.model.exception.ApiRequestException
+import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import spock.lang.Subject
 

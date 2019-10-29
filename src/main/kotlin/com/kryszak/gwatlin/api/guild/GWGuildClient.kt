@@ -3,11 +3,12 @@ package com.kryszak.gwatlin.api.guild
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
+import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
 import com.kryszak.gwatlin.clients.guild.GuildClient
 
 /**
  * Client for guild unauthenticated endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWGuildClient {
 
@@ -69,5 +70,30 @@ class GWGuildClient {
      */
     fun getGuildPermissions(ids: List<String>, language: String = "en"): List<GuildPermission> {
         return guildClient.getGuildPermissions(ids, language)
+    }
+
+    /**
+     * Searches for guild id
+     * @param name of the guild
+     */
+    fun findGuildId(name: String): String {
+        return guildClient.findGuildId(name)
+    }
+
+    /**
+     * Retrieves list of all guild upgrade ids
+     */
+    fun getGuildUpgradeIds(): List<Int> {
+        return guildClient.getGuildUpgradesIds()
+    }
+
+    /**
+     * Retrieves specific guild upgrades
+     * @param ids od upgrades
+     * @param language of returned text (default=en)
+     * @see com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
+     */
+    fun getGuildUpgrades(ids: List<Int>, language: String = "en"): List<GuildUpgrade> {
+        return guildClient.getGuildUpgrades(ids, language)
     }
 }

@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.achievement.model.exception
+package com.kryszak.gwatlin.api.exception
 
 /**
  * Exception thrown on problems with api requests

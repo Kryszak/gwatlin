@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.clients.gamemechanics.ProfessionsClient
 
 /**
  * Client for game mechanic - professions endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWProfessionsClient {
 

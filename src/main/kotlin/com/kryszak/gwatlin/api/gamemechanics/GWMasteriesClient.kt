@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.clients.gamemechanics.MasteriesClient
 
 /**
  * Client for game mechanic - masteries endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWMasteriesClient {
 
@@ -42,7 +42,7 @@ class GWMasteriesClient {
     /**
      * Retrieves all masteries
      * @param language of returned text (default=en)
-     * @see com.kryszak.gwatlin.api.gamemechanics.model.Mastery
+     * @see com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
      */
     fun getAllMasteries(language: String = "en"): List<Mastery> {
         return masteriesClient.getAllMasteries(language)

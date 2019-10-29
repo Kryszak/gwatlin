@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.clients.gamemechanics.SpecializationClient
 
 /**
  * Client for game mechanic - specialization endpoints
- * @see com.kryszak.gwatlin.api.model.achievement.exception.ApiRequestException for errors
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWSpecializationClient {
 
