@@ -255,4 +255,18 @@ class GameMechanicsStubs extends WiremockConfig {
                         .willReturn(okJson(parseResponseText("/responses/gamemechanics/traits.json")))
         )
     }
+
+    def stubLegendIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/legends"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/legend_ids.json")))
+        )
+    }
+
+    def stubLegendsResponse() {
+        stubFor(
+                get(urlEqualTo("/legends?ids=Legend1,Legend2&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/legends.json")))
+        )
+    }
 }
