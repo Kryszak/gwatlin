@@ -1,0 +1,23 @@
+{
+  "id": "116E0C0E-0035-44A9-BB22-4AE3E23127E5",
+  "name": "Edit Conflict",
+  "tag": "wiki",
+  "emblem": {
+    "background": {
+      "id": 8,
+      "colors": [
+        64
+      ]
+    },
+    "foreground": {
+      "id": 18,
+      "colors": [
+        584,
+        146
+      ]
+    },
+    "flags": [
+      "FlipBackgroundHorizontal"
+    ]
+  }
+}

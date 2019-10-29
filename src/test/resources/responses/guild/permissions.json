@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ClaimableEditOptions",
+    "name": "Edit Claimable Options",
+    "description": "Allowed to edit options at guild-owned claimables."
+  },
+  {
+    "id": "Admin",
+    "name": "Admin Lower Ranks.",
+    "description": "Invite new players to the guild. Promote, demote, and kick current members only from lower ranks."
+  },
+  {
+    "id": "EditAnthem",
+    "name": "Change Guild Anthem",
+    "description": "Change the guild's anthem."
+  }
+]
