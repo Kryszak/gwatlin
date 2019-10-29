@@ -2,7 +2,11 @@ package com.kryszak.gwatlin.clients.gamemechanics
 
 import com.kryszak.gwatlin.config.WiremockConfig
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*
+import static com.github.tomakehurst.wiremock.client.WireMock.get
+import static com.github.tomakehurst.wiremock.client.WireMock.notFound
+import static com.github.tomakehurst.wiremock.client.WireMock.okJson
+import static com.github.tomakehurst.wiremock.client.WireMock.stubFor
+import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo
 
 class GameMechanicsStubs extends WiremockConfig {
 
@@ -235,6 +239,20 @@ class GameMechanicsStubs extends WiremockConfig {
         stubFor(
                 get(urlEqualTo("/skills?ids=1110,1115&lang=en"))
                         .willReturn(okJson(parseResponseText("/responses/gamemechanics/skills.json")))
+        )
+    }
+
+    def stubTraitIdsResponse() {
+        stubFor(
+                get(urlEqualTo("/traits"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/trait_ids.json")))
+        )
+    }
+
+    def stubTraitsResponse() {
+        stubFor(
+                get(urlEqualTo("/traits?ids=214,221&lang=en"))
+                        .willReturn(okJson(parseResponseText("/responses/gamemechanics/traits.json")))
         )
     }
 }

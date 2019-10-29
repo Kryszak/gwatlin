@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Data model for traited fact skill property
  */
-data class SkillTraitedFact(
+data class TraitedFact(
         @SerializedName("requires_trait") val requiresTrait: Int,
         val overrides: Int
 )

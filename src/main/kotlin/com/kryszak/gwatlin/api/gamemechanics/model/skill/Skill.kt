@@ -16,7 +16,7 @@ data class Skill(
         val professions: List<String>,
         val slot: SkillSlot,
         val facts: List<SkillFact>,
-        @SerializedName("traited_facts") val traitedFacts: List<SkillTraitedFact>,
+        @SerializedName("traited_facts") val traitedFacts: List<TraitedFact>,
         val categories: List<String>?,
         val attunement: String?,
         val cost: Int?,

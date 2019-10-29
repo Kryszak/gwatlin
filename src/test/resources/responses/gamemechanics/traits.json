@@ -1,0 +1,53 @@
+[
+  {
+    "id": 214,
+    "tier": 2,
+    "order": 1,
+    "name": "Raging Storm",
+    "description": "Critically striking a foe grants fury. Gain ferocity while under the effects of fury.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 3
+      },
+      {
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/E1E7C4D3A6E62F3D5C9F627CE8175BFB0C614CBE/156652.png",
+        "value": 180,
+        "target": "CritDamage"
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+        "duration": 2,
+        "status": "Fury",
+        "description": "Critical Chance increased by 20%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
+  },
+  {
+    "id": 221,
+    "tier": 1,
+    "order": 0,
+    "name": "Zephyr's Speed",
+    "description": "Move faster while attuned to air.",
+    "slot": "Minor",
+    "facts": [
+      {
+        "text": "Movement Speed Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "percent": 25
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/9B55449FC8EF093FE4925DDE9BF41B5A6298BAAA/1012279.png"
+  }
+]
