@@ -19,7 +19,7 @@ internal open class BaseHttpClient {
 
     protected val logMessage = "Requested url: %s"
 
-    private val baseUrl: String
+    protected val baseUrl: String
 
     private val gson = Gson()
 
@@ -40,7 +40,7 @@ internal open class BaseHttpClient {
 
     protected fun encodeParam(param: String) = param.replace(" ", "%20")
 
-    private fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
+    protected fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
         when (result) {
             is Result.Success -> return result.get()
             is Result.Failure -> {

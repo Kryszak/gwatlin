@@ -82,4 +82,28 @@ class GuildStubs extends WiremockConfig {
                         .willReturn(okJson(parseResponseText("/responses/guild/upgrades.json")))
         )
     }
+
+    def stubGuildLogFullResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log"))
+                        .withHeader("Authorization", equalTo("Bearer 1234"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/guild_log.json")))
+        )
+    }
+
+    def stubGuildLogSinceResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285"))
+                        .withHeader("Authorization", equalTo("Bearer 1234"))
+                        .willReturn(okJson(parseResponseText("/responses/guild/guild_log_since.json")))
+        )
+    }
+
+    def stubGuildLogUnauthenticatedResponse() {
+        stubFor(
+                get(urlEqualTo("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log"))
+                        .withHeader("Authorization", equalTo("Bearer 123"))
+                        .willReturn(unauthorized().withBody(parseResponseText("/responses/guild/guild_log_unauthenticated.json")))
+        )
+    }
 }

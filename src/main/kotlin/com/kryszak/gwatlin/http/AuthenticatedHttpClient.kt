@@ -1,0 +1,22 @@
+package com.kryszak.gwatlin.http
+
+import com.github.kittinunf.fuel.core.extensions.authentication
+import com.github.kittinunf.fuel.gson.responseObject
+import com.github.kittinunf.fuel.httpGet
+import com.kryszak.gwatlin.clients.exception.RetrieveError
+import com.kryszak.gwatlin.http.exception.ErrorResponse
+
+internal open class AuthenticatedHttpClient(val apiKey: String) : BaseHttpClient() {
+
+    protected inline fun <reified T : Any> getRequestAuth(uri: String): T {
+
+        val (_, response, result) = "$baseUrl/$uri"
+                .httpGet()
+                .also { log.info(logMessage.format(it.url)) }
+                .authentication()
+                .bearer(apiKey)
+                .responseObject<T>()
+
+        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
+    }
+}

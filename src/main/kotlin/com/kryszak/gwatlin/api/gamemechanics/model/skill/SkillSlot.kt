@@ -3,7 +3,7 @@ package com.kryszak.gwatlin.api.gamemechanics.model.skill
 /**
  * Skill slot values
  */
-enum class SkillSlot(value: String) {
+enum class SkillSlot(val value: String) {
     DOWNED1_4("Downed_[1-4]"),
     PET("Pet"),
     PROFESSION1_5("Profession_[1-5]"),
