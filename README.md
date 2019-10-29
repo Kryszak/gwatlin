@@ -18,11 +18,11 @@ At this moment this project is in development phase.
 ### Present
 -   Achievements
 -   Daily Rewards
+-   Game Mechanics
 -   Home Instance
 
 ### To be done 
 -   Account
--   Game Mechanics
 -   Guild 
 -   Items
 -   Map Information
