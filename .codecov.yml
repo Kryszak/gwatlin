@@ -24,5 +24,6 @@ comment:
   behavior: default
   require_changes: no
 
-ignore:
-  - "src/main/kotlin/com/kryszak/gwatlin/api/[a-z]+/model/.*"
+# Ignore model classes
+#ignore:
+#  - "src/main/kotlin/com/kryszak/gwatlin/api/[a-z]+/model/.*"

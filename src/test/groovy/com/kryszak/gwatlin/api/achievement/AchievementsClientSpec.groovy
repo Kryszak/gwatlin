@@ -4,8 +4,8 @@ import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.achievement.model.Achievement
 import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
-import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
+import com.kryszak.gwatlin.api.exception.ApiRequestException
 import spock.lang.Subject
 
 class AchievementsClientSpec extends AchievementStubs {
@@ -40,6 +40,15 @@ class AchievementsClientSpec extends AchievementStubs {
         then: "Retrieved achievement matches expected"
         achievementList.size() == 1
         achievementList == parseAchievementList("/responses/achievements/achievement.json")
+        verifyAll(achievementList.get(0)) {
+            id == 1840
+            name == "Daily Completionist"
+            description == ""
+            requirement == "Complete any  PvE, WvW, or PvP Daily Achievements."
+            lockedText == ""
+            type == "Default"
+            flags == ["Pvp", "CategoryDisplay", "Daily"]
+        }
     }
 
     def "Should get list of achievements"() {
@@ -83,12 +92,18 @@ class AchievementsClientSpec extends AchievementStubs {
 
         then: "Retrieved list matches expected"
         dailyAchievementList == dailyAchievements
+        verifyAll(dailyAchievementList.pve.get(0)) {
+            id == 1837
+            level.min == 1
+            level.max == 80
+            requiredAccess == ["GuildWars2", "HeartOfThorns", "PathOfFire"]
+        }
     }
 
     def "Should get list of tomorrow daily achievements"() {
         given: "Expected tomorrow daily achievements"
-        def tomorrowDailyAchievements    \
-                   = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
+        def tomorrowDailyAchievements                   \
+                                  = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
 
         and: "External api is stubbed"
         stubDailyTomorrowAchievementListResponse()
@@ -126,6 +141,13 @@ class AchievementsClientSpec extends AchievementStubs {
 
         then: "Retrieved group matches expected"
         achievementGroup == parseAchievementGroup()
+        verifyAll(achievementGroup) {
+            id == "65B4B678-607E-4D97-B458-076C3E96A810"
+            name == "Heart of Thorns"
+            description == "Achievements for accomplishments throughout the jungle."
+            order == 6
+            categories.size() == 6
+        }
     }
 
     def "Should retrieve achievement category ids"() {
@@ -154,6 +176,14 @@ class AchievementsClientSpec extends AchievementStubs {
 
         then: "Retrieved category matches expected"
         achievementCategory == parseAchievementCategory()
+        verifyAll(achievementCategory) {
+            id == 1
+            name == "Slayer"
+            description == ""
+            order == 10
+            icon == "https://render.guildwars2.com/file/E00460A2CAD85D47406EAB4213D1010B3E80C9B0/42675.png"
+            achievements.size() == 44
+        }
     }
 
     def "Should throw exception on non existing category"() {
@@ -186,4 +216,5 @@ class AchievementsClientSpec extends AchievementStubs {
         gson.fromJson(parseResponseText(fileName),
                 new TypeToken<List<Achievement>>() {}.getType())
     }
+
 }
