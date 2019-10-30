@@ -25,4 +25,4 @@ comment:
   require_changes: no
 
 ignore:
-  - "src/main/kotlin/api/*/model/**/*"
+  - "src/main/kotlin/com/kryszak/gwatlin/api/[a-z]+/model/**/*"
