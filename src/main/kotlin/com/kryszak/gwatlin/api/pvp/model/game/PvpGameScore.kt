@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.pvp.model
+package com.kryszak.gwatlin.api.pvp.model.game
 
 /**
  * Data model for pvp score object

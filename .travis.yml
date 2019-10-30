@@ -24,7 +24,7 @@ stages:
 jobs:
   include:
     - stage: Build
-      script: gradle build --info --stacktrace --max-workers=1 --no-daemon --build-cache
+      script: gradle build --info --stacktrace --max-workers=1 --build-cache
 
 after_success:
   - gradle jacocoTestReport

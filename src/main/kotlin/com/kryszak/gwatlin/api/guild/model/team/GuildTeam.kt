@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.guild.model.team
 
-import com.kryszak.gwatlin.api.pvp.model.PvpGame
+import com.kryszak.gwatlin.api.pvp.model.game.PvpGame
 import com.kryszak.gwatlin.api.pvp.model.WinLossStats
 
 /**

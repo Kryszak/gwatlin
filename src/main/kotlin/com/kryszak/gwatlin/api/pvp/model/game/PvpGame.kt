@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.pvp.model
+package com.kryszak.gwatlin.api.pvp.model.game
 
 import com.google.gson.annotations.SerializedName
 
