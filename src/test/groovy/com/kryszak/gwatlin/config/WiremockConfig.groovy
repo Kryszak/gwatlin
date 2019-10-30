@@ -16,7 +16,7 @@ class WiremockConfig extends Specification {
     @ClassRule
     WireMockRule wireMockRule = new WireMockRule(options()
             .port(8089)
-            .notifier(new ConsoleNotifier(true)))
+            .notifier(new ConsoleNotifier(!Boolean.parseBoolean(System.getenv("CI")))))
 
     def gson = new Gson()
 
