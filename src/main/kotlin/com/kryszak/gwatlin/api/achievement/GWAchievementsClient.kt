@@ -29,7 +29,7 @@ class GWAchievementsClient {
      * @see com.kryszak.gwatlin.api.achievement.model.Achievement
      */
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
-        return achievementsClient.getAchievementByIds(ids)
+        return achievementsClient.getAchievementsByIds(ids)
     }
 
     /**
@@ -73,7 +73,7 @@ class GWAchievementsClient {
      * @return list of achievement category ids
      */
     fun getAchievementCategoryIds(): List<Int> {
-        return achievementsClient.getAchievementIdsList()
+        return achievementsClient.getAchievementCategoryIds()
     }
 
     /**

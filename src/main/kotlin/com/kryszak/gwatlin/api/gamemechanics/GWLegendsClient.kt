@@ -15,7 +15,7 @@ class GWLegendsClient {
      * Retrieves list of all legend ids
      * @return legend ids list
      */
-    fun getMasteriesIds(): List<String> {
+    fun getLegendIds(): List<String> {
         return legendsClient.getLegendIds()
     }
 
@@ -25,7 +25,7 @@ class GWLegendsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.legend.Legend
      */
-    fun getMasteries(ids: List<String>, language: String = "en"): List<Legend> {
+    fun getLegends(ids: List<String>, language: String = "en"): List<Legend> {
         return legendsClient.getLegends(ids, language)
     }
 }

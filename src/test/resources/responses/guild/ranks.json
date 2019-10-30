@@ -1,0 +1,28 @@
+[
+  {
+    "id": "Leader",
+    "order": 1,
+    "permissions": [
+      "Admin",
+      "EditRoles",
+      "ClaimableEditOptions"
+    ],
+    "icon": "..."
+  },
+  {
+    "id": "Member",
+    "order": 3,
+    "permissions": [
+      "StartingRole"
+    ],
+    "icon": "..."
+  },
+  {
+    "id": "Officer",
+    "order": 2,
+    "permissions": [
+      "Admin"
+    ],
+    "icon": "..."
+  }
+]

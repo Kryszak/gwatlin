@@ -1,0 +1,55 @@
+[
+  {
+    "id" : 1,
+    "members" : [
+      {
+        "name" : "Lawton.9413",
+        "role" : "Captain"
+      },
+      {
+        "name" : "NotLawton.3149",
+        "role" : "Member"
+      }
+    ],
+    "name" : "1v1 Me Bro",
+    "aggregate" : {
+      "wins"       : 3,
+      "losses"     : 0,
+      "desertions" : 0,
+      "byes"       : 0,
+      "forfeits"   : 0
+    },
+    "ladders" : {
+      "unranked" : {
+        "wins"       : 3,
+        "losses"     : 0,
+        "desertions" : 0,
+        "byes"       : 0,
+        "forfeits"   : 0
+      }
+    },
+    "games" : [
+      {
+        "id": "98EBE4DC-E36B-4A6C-A38C-A5B898AF53A4",
+        "map_id": 549,
+        "started": "2015-08-29T13:42:45.000Z",
+        "ended": "2015-08-29T13:53:49.000Z",
+        "result": "Victory",
+        "team": "Blue",
+        "scores": {
+          "red": 344,
+          "blue": 500
+        },
+        "rating_type" : "Ranked"
+      }
+    ],
+    "seasons" : [
+      {
+        "id" : "44B85826-B5ED-4890-8C77-82DDF9F2CF2B",
+        "wins" : 1,
+        "losses" : 0,
+        "rating" : 1437
+      }
+    ]
+  }
+]

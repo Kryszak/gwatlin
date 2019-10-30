@@ -9,7 +9,6 @@ import com.kryszak.gwatlin.http.exception.ErrorResponse
 internal open class AuthenticatedHttpClient(val apiKey: String) : BaseHttpClient() {
 
     protected inline fun <reified T : Any> getRequestAuth(uri: String): T {
-
         val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
                 .also { log.info(logMessage.format(it.url)) }

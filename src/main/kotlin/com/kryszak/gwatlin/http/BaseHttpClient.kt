@@ -44,10 +44,15 @@ internal open class BaseHttpClient {
         when (result) {
             is Result.Success -> return result.get()
             is Result.Failure -> {
-                log.error("Request failed!", result.getException())
-                val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
-                log.error("Error: $error")
-                throw ApiRequestException(error.toString())
+                log.error("Request failed! ${result.getException().message}")
+                try {
+                    val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
+                    log.error("Error: $error")
+                    throw ApiRequestException(error.toString())
+                } catch (e: IllegalStateException) {
+                    log.warn("Failed to deserialize error response", e)
+                    throw ApiRequestException("Unknown error")
+                }
             }
         }
     }
