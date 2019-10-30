@@ -35,6 +35,16 @@ class SpecializationClientSpec extends GameMechanicsStubs {
 
         then: "Retrieves specialization matches expected"
         specialization == parseSpecialization()
+        verifyAll(specialization) {
+            id == 1
+            name == "Dueling"
+            profession == "Mesmer"
+            !elite
+            minorTraits.size() == 3
+            majorTraits.size() == 9
+            icon == "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png"
+            background == "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+        }
     }
 
     def "Should throw exception on non existing specialization"() {

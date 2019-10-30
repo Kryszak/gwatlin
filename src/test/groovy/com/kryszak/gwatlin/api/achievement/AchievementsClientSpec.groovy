@@ -48,6 +48,14 @@ class AchievementsClientSpec extends AchievementStubs {
             lockedText == ""
             type == "Default"
             flags == ["Pvp", "CategoryDisplay", "Daily"]
+            verifyAll(tiers.get(0)) {
+                count == 3
+                points == 10
+            }
+            verifyAll(rewards.get(0)) {
+                type == "Item"
+                count == 1
+            }
         }
     }
 

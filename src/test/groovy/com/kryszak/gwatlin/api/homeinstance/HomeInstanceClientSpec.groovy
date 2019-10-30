@@ -36,6 +36,10 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
 
         then: "Retrieved cat matches expected"
         cat == parseCat()
+        verifyAll(cat) {
+            hint == "chicken"
+            id == 1
+        }
     }
 
     def "Should throw exception on non existing cat"() {

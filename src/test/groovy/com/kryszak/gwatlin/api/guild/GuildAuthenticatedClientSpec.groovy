@@ -59,6 +59,11 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         members == parseGuildMembers()
+        verifyAll(members.get(0)) {
+            name == "Lawton Campbell.9413"
+            rank == "Leader"
+            joined == "2015-07-22T06:18:35.000Z"
+        }
     }
 
     def "Should retrieve guild ranks"() {
@@ -70,6 +75,12 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         ranks == parseRanks()
+        verifyAll(ranks.get(0)) {
+            id == "Leader"
+            order == 1
+            permissions.size() == 3
+            icon == "..."
+        }
     }
 
     def "Should retrieve guild stash"() {
@@ -81,6 +92,13 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         stash == parseStash()
+        verifyAll(stash.get(0)) {
+            upgradeId == 58
+            size == 100
+            coins == 100039
+            note == "put extra siege/seaweed here please"
+            inventory.size() == 6
+        }
     }
 
     def "Should retrieve guild treasury"() {
@@ -92,6 +110,11 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
         then: "Retrieved treasury matches expected"
         treasury == parseTreasury()
+        verifyAll(treasury.get(0)) {
+            itemId == 12138
+            count == 200
+            neededBy.size() == 1
+        }
     }
 
     def "Should retrieve guild teams"() {
@@ -103,6 +126,26 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
         then: "Retrieved teams matches expected"
         teams == parseTeams()
+        verifyAll(teams.get(0)) {
+            id == 1
+            members.size() == 2
+            name == "1v1 Me Bro"
+            verifyAll(aggregate) {
+                wins == 3
+                losses == 0
+                desertions == 0
+                byes == 0
+                forfeits == 0
+            }
+            verifyAll(ladders.unranked) {
+                wins == 3
+                losses == 0
+                desertions == 0
+                byes == 0
+                forfeits == 0
+            }
+            games.size() == 1
+        }
     }
 
     def "Should retrieve guild upgrade ids"() {

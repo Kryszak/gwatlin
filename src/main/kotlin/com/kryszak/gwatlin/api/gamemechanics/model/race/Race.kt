@@ -5,5 +5,6 @@ package com.kryszak.gwatlin.api.gamemechanics.model.race
  */
 data class Race(
         val id: String,
+        val name: String,
         val skills: List<Int>
 )

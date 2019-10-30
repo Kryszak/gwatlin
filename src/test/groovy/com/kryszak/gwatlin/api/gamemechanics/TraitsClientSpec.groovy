@@ -2,6 +2,8 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
+import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
+import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
 import spock.lang.Subject
 
 class TraitsClientSpec extends GameMechanicsStubs {
@@ -35,6 +37,17 @@ class TraitsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         traits == parseTraits()
+        verifyAll(traits.get(0)) {
+            id == 214
+            tier == TraitTier.MASTER
+            order == 1
+            name == "Raging Storm"
+            description == "Critically striking a foe grants fury. Gain ferocity while under the effects of fury."
+            slot == TraitSlot.MAJOR
+            facts.size() == 3
+            specialization == 41
+            icon == "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
+        }
     }
 
     private List<Trait> parseTraits() {

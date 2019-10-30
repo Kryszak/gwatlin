@@ -1,13 +1,21 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.skill
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * Skill type values
  */
-enum class SkillType(val value: String) {
-    BUNDLE("Bundle"),
-    ELITE("Elite"),
-    HEAL("Heal"),
-    PROFESSION("Profession"),
-    UTILITY("Utility"),
-    WEAPON("Weapon")
+enum class SkillType {
+    @SerializedName("Bundle")
+    BUNDLE,
+    @SerializedName("Elite")
+    ELITE,
+    @SerializedName("Heal")
+    HEAL,
+    @SerializedName("Profession")
+    PROFESSION,
+    @SerializedName("Utility")
+    UTILITY,
+    @SerializedName("Weapon")
+    WEAPON
 }

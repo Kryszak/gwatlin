@@ -38,6 +38,18 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         professions == parseProfessions("professions.json")
+        verifyAll(professions.get(0)) {
+            id == "Engineer"
+            name == "Engineer"
+            icon == "https://render.guildwars2.com/file/5CCB361F44CCC7256132405D31E3A24DACCF440A/156632.png"
+            iconBig == "https://render.guildwars2.com/file/A94D00911BD47CDE39A104F90C7D07DE623554ED/156631.png"
+            specializations.size() == 7
+            verifyAll(weapons.hammer) {
+                specialization == 43
+                flags.size() == 1
+                skills.size() == 5
+            }
+        }
     }
 
     def "Should get all professions"() {

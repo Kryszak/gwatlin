@@ -36,6 +36,12 @@ class OutfitsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved outfits match expected"
         outfits == parseOutfits("outfits.json")
+        verifyAll(outfits.get(0)) {
+            id == 1
+            name == "Cook's Outfit"
+            icon == "https://render.guildwars2.com/file/1509D1B76FCECC111E28D2F50EBEAD5DA102995A/340522.png"
+            unlockItems.size() == 1
+        }
     }
 
     def "Should throw error on non existing outfit"() {

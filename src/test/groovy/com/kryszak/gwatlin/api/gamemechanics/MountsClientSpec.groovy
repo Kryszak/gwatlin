@@ -37,6 +37,13 @@ class MountsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         mountSkins == parseMountSkins("mount_skins.json")
+        verifyAll(mountSkins.get(0)) {
+            id == 1
+            name == "Raptor"
+            icon == "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png"
+            dyeSlots.size() == 1
+            mount == "raptor"
+        }
     }
 
     def "Should throw exception on non existing mount skin id"() {
@@ -90,6 +97,13 @@ class MountsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         mountTypes == parseMountTypes("mount_types.json")
+        verifyAll(mountTypes.get(0)) {
+            id == "griffon"
+            name == "Griffon"
+            defaultSkin == 4
+            skins.size() == 29
+            skills.size() == 1
+        }
     }
 
     def "Should get all mount types"() {

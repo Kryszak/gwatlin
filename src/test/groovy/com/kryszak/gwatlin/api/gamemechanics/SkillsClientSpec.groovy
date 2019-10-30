@@ -2,6 +2,8 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
+import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
+import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import spock.lang.Subject
 
 class SkillsClientSpec extends GameMechanicsStubs {
@@ -35,6 +37,19 @@ class SkillsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         skills == parseSkills()
+        verifyAll(skills.get(0)) {
+            name == 'Throw Gunk'
+            facts.size() == 5
+            description == "Throw gunk at target area to inflict a random condition."
+            icon == "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png"
+            type == SkillType.PROFESSION
+            weaponType == "None"
+            professions.size() == 0
+            slot == SkillSlot.PROFESSION2
+            flags.size() == 2
+            id == 1110
+            chatLink == "[&BlYEAAA=]"
+        }
     }
 
     private List<Skill> parseSkills() {

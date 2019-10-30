@@ -24,6 +24,16 @@ class GuildClientSpec extends GuildStubs {
 
         then: "Retrieved guild matches expected"
         guild == parseGuild()
+        verifyAll(guild) {
+            id == "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
+            name == "Edit Conflict"
+            tag == "wiki"
+            verifyAll(emblem) {
+                background != null
+                foreground != null
+                flags.size() == 1
+            }
+        }
     }
 
     def "Should get background ids"() {
@@ -80,6 +90,10 @@ class GuildClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         foregrounds == parseForegrounds()
+        verifyAll(foregrounds.get(0)) {
+            id == 1
+            layers.size() == 3
+        }
     }
 
     def "Should get guild permission ids"() {
@@ -108,6 +122,11 @@ class GuildClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         permissions == parsePermissions()
+        verifyAll(permissions.get(0)) {
+            id == "ClaimableEditOptions"
+            name == "Edit Claimable Options"
+            description == "Allowed to edit options at guild-owned claimables."
+        }
     }
 
     def "Should find guild's id"() {
@@ -164,6 +183,23 @@ class GuildClientSpec extends GuildStubs {
 
         then: "Retrieved list matches expected"
         upgrades == parseUpgrades()
+        verifyAll(upgrades.get(0)) {
+            id == 38
+            name == "Guild Armorer 1"
+            description == "Add a guild armorer to the market, from whom basic guild armor skins can be purchased."
+            buildTime == 0
+            icon == "https://render.guildwars2.com/file/0321165D23EAA60D9831456BEC0095C0EB1D501F/1228499.png"
+            type == "Unlock"
+            requiredLevel == 10
+            experience == 35
+            prerequisites.size() == 1
+            verifyAll(costs.get(0)) {
+                type == "Collectible"
+                count == 200
+                name == "Guild Favor"
+                itemId == 70701
+            }
+        }
     }
 
     private List<GuildUpgrade> parseUpgrades() {

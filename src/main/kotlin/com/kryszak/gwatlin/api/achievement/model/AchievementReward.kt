@@ -6,5 +6,6 @@ package com.kryszak.gwatlin.api.achievement.model
 data class AchievementReward(
         val int: Int,
         val type: String,
-        val region: String?
+        val region: String?,
+        val count: Int
 )

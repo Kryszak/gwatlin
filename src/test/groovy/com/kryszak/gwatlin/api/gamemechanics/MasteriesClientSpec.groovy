@@ -72,6 +72,15 @@ class MasteriesClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved masteries match expected"
         masteries == parseMasteries("masteries.json")
+        verifyAll(masteries.get(0)) {
+            id == 1
+            name == "Exalted Lore"
+            requirement == "Journey to Auric Basin to unlock the Exalted Lore Mastery track."
+            order == 2
+            background == "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png"
+            region == "Maguuma"
+            levels.size() == 5
+        }
     }
 
     def "Should get all masteries"() {

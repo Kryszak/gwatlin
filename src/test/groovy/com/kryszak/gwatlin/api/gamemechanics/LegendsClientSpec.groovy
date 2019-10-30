@@ -35,6 +35,13 @@ class LegendsClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved list matches expected"
         legends == parseLegends()
+        verifyAll(legends.get(0)) {
+            id == "Legend1"
+            swap == 28229
+            heal == 27220
+            elite == 27760
+            utilities.size() == 3
+        }
     }
 
     private List<Legend> parseLegends() {

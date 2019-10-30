@@ -36,6 +36,11 @@ class RacesClientSpec extends GameMechanicsStubs {
 
         then: "Retrieved race matches expected"
         race == parseRace()
+        verifyAll(race) {
+            id == "Asura"
+            name == "Asura"
+            skills.size() == 7
+        }
     }
 
     def "Should throw exception on non existing race"() {

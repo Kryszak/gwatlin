@@ -13,6 +13,7 @@ data class Trait(
         val description: String,
         val specialization: Int,
         val tier: TraitTier,
+        val order: Int,
         val slot: TraitSlot,
         val facts: List<TraitFact>,
         @SerializedName("traited_facts") val traitedFacts: List<TraitedFact>,
