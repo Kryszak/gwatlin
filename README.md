@@ -21,6 +21,7 @@ At this moment this project is in development phase.
 -   Game Mechanics
 -   Guild 
 -   Home Instance
+-   Structured PvP
 
 ### To be done 
 -   Account
@@ -28,6 +29,5 @@ At this moment this project is in development phase.
 -   Map Information
 -   Miscellaneous
 -   Story
--   Structured PvP
 -   Trading post
 -   World vs. World
