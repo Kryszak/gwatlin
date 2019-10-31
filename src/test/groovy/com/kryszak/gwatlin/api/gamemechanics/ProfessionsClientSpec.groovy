@@ -3,6 +3,8 @@ package com.kryszak.gwatlin.api.gamemechanics
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
+import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingCategory
+import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingTrackType
 import spock.lang.Subject
 
 class ProfessionsClientSpec extends GameMechanicsStubs {
@@ -48,6 +50,17 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
                 specialization == 43
                 flags.size() == 1
                 skills.size() == 5
+            }
+            flags.size() == 1
+            verifyAll(training.get(0)) {
+                id == 21
+                category == TrainingCategory.SKILLS
+                name == "Elixir Training"
+                verifyAll(track.get(0)) {
+                    cost == 2
+                    type == TrainingTrackType.SKILL
+                    skillId == 5821
+                }
             }
         }
     }

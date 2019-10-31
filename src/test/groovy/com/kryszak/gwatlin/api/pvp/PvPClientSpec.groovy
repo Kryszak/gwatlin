@@ -93,6 +93,23 @@ class PvPClientSpec extends PvpStubs {
                     points == 5
                 }
             }
+            verifyAll(leaderboards.legendary) {
+                verifyAll(settings) {
+                    name == ""
+                    duration == 0
+                    scoring == "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
+                    verifyAll(tiers.get(0)) {
+                        range.size() == 2
+                    }
+                }
+                verifyAll(scorings.get(0)) {
+                    id == "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
+                    type == "Integer"
+                    description == "Current prestige rank. Prestige rank can be gained or lost by winning or losing ranked matches in the legendary division."
+                    name == "Prestige"
+                    ordering == "MoreIsBetter"
+                }
+            }
         }
     }
 

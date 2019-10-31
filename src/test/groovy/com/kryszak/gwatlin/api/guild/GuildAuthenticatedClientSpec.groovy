@@ -144,7 +144,19 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
                 byes == 0
                 forfeits == 0
             }
-            games.size() == 1
+            verifyAll(games.get(0)) {
+                id == "98EBE4DC-E36B-4A6C-A38C-A5B898AF53A4"
+                mapId == 549
+                started == "2015-08-29T13:42:45.000Z"
+                ended == "2015-08-29T13:53:49.000Z"
+                result == "Victory"
+                team == "Blue"
+                ratingType == "Ranked"
+                verifyAll(scores) {
+                    red == 344
+                    blue == 500
+                }
+            }
         }
     }
 

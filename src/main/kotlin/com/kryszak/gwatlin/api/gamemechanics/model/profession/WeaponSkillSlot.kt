@@ -1,11 +1,17 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.profession
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * Weapon skill type values
  */
-enum class WeaponSkillSlot(val value: String) {
-    PROFESSION_1("Profession_1"),
-    UTILITY("Utility"),
-    HEAL("Heal"),
-    ELITE("Elite")
+enum class WeaponSkillSlot {
+    @SerializedName("Profession_1")
+    PROFESSION_1,
+    @SerializedName("Profession_1")
+    UTILITY,
+    @SerializedName("Heal")
+    HEAL,
+    @SerializedName("Elite")
+    ELITE
 }

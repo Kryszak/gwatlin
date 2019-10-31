@@ -9,5 +9,6 @@ data class PvpSeason(
         val start: String,
         val end: String,
         val active: Boolean,
-        val divisions: List<PvpSeasonDivision>
+        val divisions: List<PvpSeasonDivision>,
+        val leaderboards: PvpSeasonLeaderboard
 )

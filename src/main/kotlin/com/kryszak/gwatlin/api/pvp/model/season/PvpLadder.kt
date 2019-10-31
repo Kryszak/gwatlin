@@ -5,5 +5,5 @@ package com.kryszak.gwatlin.api.pvp.model.season
  */
 data class PvpLadder(
     val settings: PvpLadderSettings,
-    val scorings: PvpLadderScorings
+    val scorings: List<PvpLadderScorings>
 )
