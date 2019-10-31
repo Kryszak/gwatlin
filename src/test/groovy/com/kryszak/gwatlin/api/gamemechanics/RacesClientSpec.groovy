@@ -3,9 +3,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.race.Race
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class RacesClientSpec extends GameMechanicsStubs {
+class RacesClientSpec extends WiremockConfig {
 
     @Subject
     def racesClient = new GWRacesClient()
@@ -15,7 +16,7 @@ class RacesClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/race_ids.json")
 
         and: "External api is stubbed"
-        stubRaceIdsResponse()
+        stubResponse("/races", "/responses/gamemechanics/race_ids.json")
 
         when: "Requesting race ids"
         def raceIds = racesClient.getRaceIds()
@@ -29,7 +30,7 @@ class RacesClientSpec extends GameMechanicsStubs {
         def id = "Asura"
 
         and: "External api is stubbed"
-        stubRaceResponse()
+        stubResponse("/races/Asura", "/responses/gamemechanics/race.json")
 
         when: "Retrieving race"
         def race = racesClient.getRace(id)
@@ -48,7 +49,7 @@ class RacesClientSpec extends GameMechanicsStubs {
         def id = "nobody"
 
         and: "External api is stubbed"
-        stubRaceErrorResponse()
+        stubNotFoundResponse("/races/nobody", "/responses/gamemechanics/race_error.json")
 
         when: "Retrieving non existing race"
         racesClient.getRace(id)

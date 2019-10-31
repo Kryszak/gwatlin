@@ -5,9 +5,10 @@ import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
 import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class GuildClientSpec extends GuildStubs {
+class GuildClientSpec extends WiremockConfig {
 
     @Subject
     def guildClient = new GWGuildClient()
@@ -17,7 +18,7 @@ class GuildClientSpec extends GuildStubs {
         def id = "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
 
         and: "External api is stubbed"
-        stubGuildResponse()
+        stubResponse("/guild/116E0C0E-0035-44A9-BB22-4AE3E23127E5", "/responses/guild/guild.json")
 
         when: "Requesting guild"
         def guild = guildClient.getGuild(id)
@@ -41,7 +42,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = parseResponse("/responses/guild/background_ids.json")
 
         and: "External api is stubbed"
-        stubBackgroundIdsResponse()
+        stubResponse("/emblem/backgrounds", "/responses/guild/background_ids.json")
 
         when: "Requesting background ids"
         def backgroundIds = guildClient.getBackgroundIds()
@@ -55,7 +56,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubBackgroundResponse()
+        stubResponse("/emblem/backgrounds?ids=1,2", "/responses/guild/backgrounds.json")
 
         when: "Requesting backgrounds"
         def backgrounds = guildClient.getBackgrounds(ids)
@@ -69,7 +70,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = parseResponse("/responses/guild/foreground_ids.json")
 
         and: "External api is stubbed"
-        stubForegroundIdsResponse()
+        stubResponse("/emblem/foregrounds", "/responses/guild/foreground_ids.json")
 
         when: "Requesting foreground ids"
         def foregroundIds = guildClient.getForegroundIds()
@@ -83,7 +84,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubForegroundResponse()
+        stubResponse("/emblem/foregrounds?ids=1,2", "/responses/guild/foregrounds.json")
 
         when: "Requesting foregrounds"
         def foregrounds = guildClient.getForegrounds(ids)
@@ -101,7 +102,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = parseResponse("/responses/guild/permission_ids.json")
 
         and: "External api is stubbed"
-        stubGuildPermissionIdsResponse()
+        stubResponse("/guild/permissions", "/responses/guild/permission_ids.json")
 
         when: "Requesting permission ids"
         def permissionIds = guildClient.getGuildPermissionIds()
@@ -115,7 +116,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = ["ClaimableEditOptions", "Admin", "EditAnthem"]
 
         and: "External api is stubbed"
-        stubGuildPermissionsResponse()
+        stubResponse("/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem&lang=en", "/responses/guild/permissions.json")
 
         when: "Requesting guild permissions"
         def permissions = guildClient.getGuildPermissions(ids, "en")
@@ -134,7 +135,7 @@ class GuildClientSpec extends GuildStubs {
         def name = "Edit Conflict"
 
         and: "External api is stubbed"
-        stubGuildIdResponse()
+        stubResponse("/guild/search?name=Edit%20Conflict", "/responses/guild/guild_id.json")
 
         when: "Guild id is searched"
         def guildId = guildClient.findGuildId(name)
@@ -148,7 +149,7 @@ class GuildClientSpec extends GuildStubs {
         def name = "Edit Conflic"
 
         and: "External api is stubbed"
-        stubGuildIdNotFoundResponse()
+        stubResponse("/guild/search?name=Edit%20Conflic", "/responses/guild/guild_id_not_found.json")
 
         when: "Guild id is searched"
         def guildId = guildClient.findGuildId(name)
@@ -162,7 +163,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = parseResponse("/responses/guild/upgrade_ids.json")
 
         and: "External api is stubbed"
-        stubUpgradeIdsResponse()
+        stubResponse("/guild/upgrades", "/responses/guild/upgrade_ids.json")
 
         when: "Upgrade ids are requested"
         def upgradeIds = guildClient.getGuildUpgradeIds()
@@ -176,7 +177,7 @@ class GuildClientSpec extends GuildStubs {
         def ids = [38, 43]
 
         and: "External api is stubbed"
-        stubUpgradesResponse()
+        stubResponse("/guild/upgrades?ids=38,43&lang=en", "/responses/guild/upgrades.json")
 
         when: "Requesting guild upgrades"
         def upgrades = guildClient.getGuildUpgrades(ids, "en")

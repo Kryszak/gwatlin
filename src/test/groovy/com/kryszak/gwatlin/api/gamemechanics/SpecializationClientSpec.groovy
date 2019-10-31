@@ -2,9 +2,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class SpecializationClientSpec extends GameMechanicsStubs {
+class SpecializationClientSpec extends WiremockConfig {
 
     @Subject
     def specializationClient = new GWSpecializationClient()
@@ -14,7 +15,7 @@ class SpecializationClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/specialization_ids.json")
 
         and: "External api is stubbed"
-        stubSpecializationIdsResponse()
+        stubResponse("/specializations", "/responses/gamemechanics/specialization_ids.json")
 
         when: "Retrieving specialization ids"
         def specializationIds = specializationClient.getSpecializationIds()
@@ -28,7 +29,7 @@ class SpecializationClientSpec extends GameMechanicsStubs {
         def id = 1
 
         and: "External api is stubbed"
-        stubSpecializationResponse()
+        stubResponse("/specializations/1?lang=en", "/responses/gamemechanics/specialization.json")
 
         when: "Requesting specialization"
         def specialization = specializationClient.getSpecialization(id, "en")
@@ -52,7 +53,7 @@ class SpecializationClientSpec extends GameMechanicsStubs {
         def id = 100
 
         and: "External api is stubbed"
-        stubSpecializationErrorResponse()
+        stubNotFoundResponse("/specializations/100?lang=en", "/responses/gamemechanics/specialization_error.json")
 
         when: "Requesting non existing specialization"
         specializationClient.getSpecialization(id, "en")

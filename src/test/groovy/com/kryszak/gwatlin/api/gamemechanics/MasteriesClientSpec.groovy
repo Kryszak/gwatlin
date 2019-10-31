@@ -3,11 +3,11 @@ package com.kryszak.gwatlin.api.gamemechanics
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
-import com.kryszak.gwatlin.clients.gamemechanics.MasteriesClient
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 import spock.lang.Unroll
 
-class MasteriesClientSpec extends GameMechanicsStubs {
+class MasteriesClientSpec extends WiremockConfig {
 
     @Subject
     def gameMechanicsClient = new GWMasteriesClient()
@@ -17,7 +17,7 @@ class MasteriesClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/masteries_ids.json")
 
         and: "External api is stubbed"
-        stubMasteriesIdsResponse()
+        stubResponse("/masteries", "/responses/gamemechanics/masteries_ids.json")
 
         when: "Retrieving list of masteries ids"
         def idsList = gameMechanicsClient.getMasteriesIds()
@@ -42,8 +42,8 @@ class MasteriesClientSpec extends GameMechanicsStubs {
 
         where:
         lang               | language | file              | stub
-        "default language" | "en"     | "mastery.json"    | stubMasteryResponse()
-        "French"           | "fr"     | "mastery_fr.json" | stubMasteryFrenchResponse()
+        "default language" | "en"     | "mastery.json"    | stubResponse("/masteries/1?lang=en", "/responses/gamemechanics/mastery.json")
+        "French"           | "fr"     | "mastery_fr.json" | stubResponse("/masteries/1?lang=fr", "/responses/gamemechanics/mastery_fr.json")
     }
 
     def "Should throw exception on non existing mastery"() {
@@ -51,7 +51,7 @@ class MasteriesClientSpec extends GameMechanicsStubs {
         def id = 40
 
         and: "External api is stubbed"
-        stubMasteryErrorResponse()
+        stubNotFoundResponse("/masteries/40?lang=en", "/responses/gamemechanics/mastery_error.json")
 
         when: "Retrieving mastery"
         gameMechanicsClient.getMastery(id, "en")
@@ -65,7 +65,7 @@ class MasteriesClientSpec extends GameMechanicsStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubMasteriesResponse()
+        stubResponse("/masteries?ids=1,2&lang=en", "/responses/gamemechanics/masteries.json")
 
         when: "Retrieving masteries"
         def masteries = gameMechanicsClient.getMasteries(ids, "en")
@@ -85,7 +85,7 @@ class MasteriesClientSpec extends GameMechanicsStubs {
 
     def "Should get all masteries"() {
         given: "External api is stubbed"
-        stubAllMasteriesResponse()
+        stubResponse("/masteries?ids=all&lang=en", "/responses/gamemechanics/masteries_all.json")
 
         when: "Retrieving all masteries"
         def masteries = gameMechanicsClient.getAllMasteries("en")

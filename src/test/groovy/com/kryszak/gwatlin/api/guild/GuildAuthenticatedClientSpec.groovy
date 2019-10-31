@@ -9,10 +9,11 @@ import com.kryszak.gwatlin.api.guild.model.stash.GuildStash
 import com.kryszak.gwatlin.api.guild.model.team.GuildTeam
 import com.kryszak.gwatlin.api.guild.model.treasury.GuildTreasury
 import com.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 import spock.lang.Unroll
 
-class GuildAuthenticatedClientSpec extends GuildStubs {
+class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def GUILD_ID = "4BBB52AA-D768-4FC6-8EDE-C299F2822F0F"
 
@@ -31,9 +32,9 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
         guildLogs == parseGuildLog(expected)
 
         where:
-        description  | since  | stub                        | expected
-        ""           | ""     | stubGuildLogFullResponse()  | "guild_log.json"
-        "since 1285" | "1285" | stubGuildLogSinceResponse() | "guild_log_since.json"
+        description  | since  | expected               | stub
+        ""           | ""     | "guild_log.json"       | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log", "/responses/guild/guild_log.json", "1234")
+        "since 1285" | "1285" | "guild_log_since.json" | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285", "/responses/guild/guild_log_since.json", "1234")
     }
 
     def "Should throw exception on wrong api key"() {
@@ -41,7 +42,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
         def apiKey = "123"
 
         and: "External api is stubbed"
-        stubGuildLogUnauthenticatedResponse()
+        stubUnauthenticatedResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log", "/responses/guild/guild_log_unauthenticated.json", "123")
 
         when: "Requesting guild log"
         new GuildAuthenticatedClient(apiKey).getGuildLog(GUILD_ID, "")
@@ -52,7 +53,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
     def "Should retrieve guild members"() {
         given: "External api is stubbed"
-        stubGuildMembersResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members", "/responses/guild/members.json", "1234")
 
         when: "Requesting guild members"
         def members = guildAuthClient.getGuildMembers(GUILD_ID)
@@ -68,7 +69,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
     def "Should retrieve guild ranks"() {
         given: "External api is stubbed"
-        stubGuildRanksResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks", "/responses/guild/ranks.json", "1234")
 
         when: "Requesting guild ranks"
         def ranks = guildAuthClient.getGuildRanks(GUILD_ID)
@@ -85,7 +86,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
     def "Should retrieve guild stash"() {
         given: "External api is stubbed"
-        stubGuildStashResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash", "/responses/guild/stash.json", "1234")
 
         when: "Requesting guild stash"
         def stash = guildAuthClient.getGuildStash(GUILD_ID)
@@ -103,7 +104,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
     def "Should retrieve guild treasury"() {
         given: "External api is stubbed"
-        stubGuildTreasuryResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury", "/responses/guild/treasury.json", "1234")
 
         when: "Requesting guild treasury"
         def treasury = guildAuthClient.getGuildTreasury(GUILD_ID)
@@ -119,7 +120,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
 
     def "Should retrieve guild teams"() {
         given: "External api is stubbed"
-        stubGuildTeamsResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams", "/responses/guild/teams.json", "1234")
 
         when: "Guild teams are requested"
         def teams = guildAuthClient.getGuildTeams(GUILD_ID)
@@ -165,7 +166,7 @@ class GuildAuthenticatedClientSpec extends GuildStubs {
         def ids = parseResponse("/responses/guild/guild_upgrade_ids.json")
 
         and: "External api is stubbed"
-        stubGuildUpgradesResponse()
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades", "/responses/guild/guild_upgrade_ids.json", "1234")
 
         when: "Guild upgrade ids are requested"
         def upgradeIds = guildAuthClient.getGuildUpgrades(GUILD_ID)

@@ -2,9 +2,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class PetsClientSpec extends GameMechanicsStubs {
+class PetsClientSpec extends WiremockConfig {
 
     @Subject
     def petsClient = new GWPetsClient()
@@ -14,7 +15,7 @@ class PetsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/pet_ids.json")
 
         and: "External api is stubbed"
-        stubPetIdsResponse()
+        stubResponse("/pets", "/responses/gamemechanics/pet_ids.json")
 
         when: "Pet ids are requested"
         def petIds = petsClient.getPetIds()
@@ -28,7 +29,7 @@ class PetsClientSpec extends GameMechanicsStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubPetsResponse()
+        stubResponse("/pets?ids=1,2&lang=en", "/responses/gamemechanics/pets.json")
 
         when: "Pets are requested"
         def pets = petsClient.getPets(ids, "en")
@@ -46,7 +47,7 @@ class PetsClientSpec extends GameMechanicsStubs {
 
     def "Should get all pets"() {
         given: "External api is stubbed"
-        stubAllPetsResponse()
+        stubResponse("/pets?ids=all&lang=en", "/responses/gamemechanics/pets_all.json")
 
         when: "All pets are requested"
         def pets = petsClient.getAllPets("en")

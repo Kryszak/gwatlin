@@ -4,9 +4,10 @@ import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class TraitsClientSpec extends GameMechanicsStubs {
+class TraitsClientSpec extends WiremockConfig {
 
     @Subject
     def traitsClient = new GWTraitsClient()
@@ -16,7 +17,7 @@ class TraitsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/trait_ids.json")
 
         and: "External api is stubbed"
-        stubTraitIdsResponse()
+        stubResponse("/traits", "/responses/gamemechanics/trait_ids.json")
 
         when: "Requesting trait ids"
         def traitIds = traitsClient.getTraitIds()
@@ -30,7 +31,7 @@ class TraitsClientSpec extends GameMechanicsStubs {
         def ids = [214, 221]
 
         and: "External api is stubbed"
-        stubTraitsResponse()
+        stubResponse("/traits?ids=214,221&lang=en", "/responses/gamemechanics/traits.json")
 
         when: "Traits are requested"
         def traits = traitsClient.getTraits(ids, "en")

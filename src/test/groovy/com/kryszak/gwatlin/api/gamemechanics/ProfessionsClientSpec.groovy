@@ -5,9 +5,10 @@ import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingCategory
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingTrackType
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class ProfessionsClientSpec extends GameMechanicsStubs {
+class ProfessionsClientSpec extends WiremockConfig {
 
     @Subject
     def professionsClient = new GWProfessionsClient()
@@ -17,7 +18,7 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/profession_ids.json")
 
         and: "External api is stubbed"
-        stubProfessionIdsResponse()
+        stubResponse("/professions", "/responses/gamemechanics/profession_ids.json")
 
         when: "Requesting profession ids"
         def professionIds = professionsClient.getProfessionIds()
@@ -31,7 +32,7 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
         def ids = ["Engineer", "Warrior"]
 
         and: "External api is stubbed"
-        stubProfessionsResponse()
+        stubResponse("/professions?ids=Engineer,Warrior&lang=en", "/responses/gamemechanics/professions.json")
 
         parseProfessions("professions.json")
 
@@ -67,7 +68,7 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
 
     def "Should get all professions"() {
         given: "External api is stubbed"
-        stubAllProfessionsResponse()
+        stubResponse("/professions?ids=all&lang=en", "/responses/gamemechanics/professions_all.json")
 
         when: "Requesting professions"
         def professions = professionsClient.getAllProfessions("en")
@@ -81,7 +82,7 @@ class ProfessionsClientSpec extends GameMechanicsStubs {
         def id = "asdf"
 
         and: "External api is stubbed"
-        stubProfessionErrorResponse()
+        stubNotFoundResponse("/professions?ids=asdf&lang=en", "/responses/gamemechanics/professions_error.json")
 
         when: "Requesting non existing profession"
         professionsClient.getProfessions([id], "en")

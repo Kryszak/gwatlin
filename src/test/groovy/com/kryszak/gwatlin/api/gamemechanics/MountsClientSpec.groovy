@@ -4,9 +4,10 @@ import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
 import com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class MountsClientSpec extends GameMechanicsStubs {
+class MountsClientSpec extends WiremockConfig {
 
     @Subject
     def mountsClient = new GWMountsClient()
@@ -16,7 +17,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/mount_skin_ids.json")
 
         and: "External api is stubbed"
-        stubMountSkinIdsResponse()
+        stubResponse("/mounts/skins", "/responses/gamemechanics/mount_skin_ids.json")
 
         when: "Retrieving mount skin ids list"
         def idsList = mountsClient.getMountSkinsIds()
@@ -30,7 +31,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubMountSkinsResponse()
+        stubResponse("/mounts/skins?ids=1,2&lang=en", "/responses/gamemechanics/mount_skins.json")
 
         when: "Mount skins are requested"
         def mountSkins = mountsClient.getMountSkins(ids, "en")
@@ -51,7 +52,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def id = 1000
 
         and: "External api is stubbed"
-        stubMountSkinErrorResponse()
+        stubNotFoundResponse("/mounts/skins?ids=1000&lang=en", "/responses/gamemechanics/mount_skins_error.json")
 
         when: "Non existing mount skin is requested"
         mountsClient.getMountSkins([id], "en")
@@ -62,7 +63,7 @@ class MountsClientSpec extends GameMechanicsStubs {
 
     def "Should get all mount skins"() {
         given: "External api is stubbed"
-        stubAllMountSkinsResponse()
+        stubResponse("/mounts/skins?ids=all&lang=en", "/responses/gamemechanics/mount_skins_all.json")
 
         when: "All mount skins are requested"
         def mountSkins = mountsClient.getAllMountSkins("en")
@@ -76,7 +77,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/mount_types_ids.json")
 
         and: "External api is stubbed"
-        stubMountTypesIdsResponse()
+        stubResponse("/mounts/types", "/responses/gamemechanics/mount_types_ids.json")
 
         when: "Mount types ids are requested"
         def typesIds = mountsClient.getMountTypesIds()
@@ -90,7 +91,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def ids = ["griffon", "jackal"]
 
         and: "External api is stubbed"
-        stubMountTypesResponse()
+        stubResponse("/mounts/types?ids=griffon,jackal&lang=en", "/responses/gamemechanics/mount_types.json")
 
         when: "Requesting mount types"
         def mountTypes = mountsClient.getMountTypes(ids, "en")
@@ -108,7 +109,7 @@ class MountsClientSpec extends GameMechanicsStubs {
 
     def "Should get all mount types"() {
         given: "External api is stubbed"
-        stubAllMountTypeResponse()
+        stubResponse("/mounts/types?ids=all&lang=en", "/responses/gamemechanics/mount_types_all.json")
 
         when: "Requesting all mount types"
         def mountTypes = mountsClient.getAllMountTypes("en")
@@ -122,7 +123,7 @@ class MountsClientSpec extends GameMechanicsStubs {
         def id = "i_do_not_exist"
 
         and: "External api is stubbed"
-        stubMountTypeErrorResponse()
+        stubNotFoundResponse("/mounts/types?ids=i_do_not_exist&lang=en", "/responses/gamemechanics/mount_type_error.json")
 
         when: "Requesting non existing mount type"
         mountsClient.getMountTypes([id], "en")

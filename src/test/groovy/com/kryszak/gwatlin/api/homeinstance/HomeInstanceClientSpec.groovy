@@ -3,9 +3,10 @@ package com.kryszak.gwatlin.api.homeinstance
 import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class HomeInstanceClientSpec extends HomeInstanceStubs {
+class HomeInstanceClientSpec extends WiremockConfig {
 
     @Subject
     def homeInstanceClient = new GWHomeInstanceClient()
@@ -15,7 +16,7 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
         def catIds = parseResponse("/responses/homeinstance/cat_ids.json")
 
         and: "External api is stubbed"
-        stubCatIdsResponse()
+        stubResponse("/home/cats", "/responses/homeinstance/cat_ids.json")
 
         when: "Cat ids list is requested"
         def catIdsList = homeInstanceClient.getCatIds()
@@ -29,7 +30,7 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
         def id = 1
 
         and: "External api is stubbed"
-        stubCatResponse()
+        stubResponse("/home/cats/1", "/responses/homeinstance/cat.json")
 
         when: "Cat is requested"
         def cat = homeInstanceClient.getCat(id)
@@ -47,7 +48,7 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
         def id = 100
 
         and: "External api is stubbed"
-        stubErrorCatResponse()
+        stubNotFoundResponse("/home/cats/100", "/responses/homeinstance/cat_error.json")
 
         when: "Cat is requested"
         homeInstanceClient.getCat(id)
@@ -61,7 +62,7 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
         def ids = [1, 2, 3]
 
         and: "External api is stubbed"
-        stubCatsResponse()
+        stubResponse("/home/cats?ids=1,2,3", "/responses/homeinstance/cats.json")
 
         when: "Cats are requested"
         def catList = homeInstanceClient.getCats(ids)
@@ -75,7 +76,7 @@ class HomeInstanceClientSpec extends HomeInstanceStubs {
         def nodeIds = parseResponse("/responses/homeinstance/node_ids.json")
 
         and: "External api is stubbed"
-        stubNodeIdsResponse()
+        stubResponse("/home/nodes", "/responses/homeinstance/node_ids.json")
 
         when: "Node ids list is requested"
         def nodeIdsList = homeInstanceClient.getNodeIds()

@@ -3,9 +3,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class OutfitsClientSpec extends GameMechanicsStubs {
+class OutfitsClientSpec extends WiremockConfig {
 
     @Subject
     def outfitsClient = new GWOutfitsClient()
@@ -15,7 +16,7 @@ class OutfitsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/outfit_ids.json")
 
         and: "External api is stubbed"
-        stubOutfitIdsResponse()
+        stubResponse("/outfits", "/responses/gamemechanics/outfit_ids.json")
 
         when: "Outfit ids are requested"
         def idsList = outfitsClient.getOutfitsIds()
@@ -29,7 +30,7 @@ class OutfitsClientSpec extends GameMechanicsStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubOutfitsResponse()
+        stubResponse("/outfits?ids=1,2&lang=en", "/responses/gamemechanics/outfits.json")
 
         when: "Outfits are requested"
         def outfits = outfitsClient.getOutfits(ids, "en")
@@ -49,7 +50,7 @@ class OutfitsClientSpec extends GameMechanicsStubs {
         def id = 1000
 
         and: "External api is stubbed"
-        stubOutfitErrorResponse()
+        stubNotFoundResponse("/outfits?ids=1000&lang=en", "/responses/gamemechanics/outfit_error.json")
 
         when: "Requesting non existing outfit"
         outfitsClient.getOutfits([id], "en")
@@ -60,7 +61,7 @@ class OutfitsClientSpec extends GameMechanicsStubs {
 
     def "Should retrieve all outfits"() {
         given: "External api is stubbed"
-        stubAllOutfitsResponse()
+        stubResponse("/outfits?ids=all&lang=en", "/responses/gamemechanics/outfits_all.json")
 
         when: "Outfits are requested"
         def outfits = outfitsClient.getAllOutfits("en")

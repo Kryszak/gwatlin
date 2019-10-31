@@ -6,9 +6,10 @@ import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
 import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import com.kryszak.gwatlin.api.exception.ApiRequestException
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class AchievementsClientSpec extends AchievementStubs {
+class AchievementsClientSpec extends WiremockConfig {
 
     @Subject
     def achievementsClient = new GWAchievementsClient()
@@ -18,7 +19,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def achievementIds = parseResponse("/responses/achievements/achievement_ids.json")
 
         and: "External api is stubbed"
-        stubAchievementIdsResponse()
+        stubResponse("/achievements", "/responses/achievements/achievement_ids.json")
 
         when: "Achievement list is retrieved"
         def idsList = achievementsClient.getAchievementIdsList()
@@ -32,7 +33,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def id = 1840
 
         and: "External api is stubbed"
-        stubAchievementSingleResponse()
+        stubResponse("/achievements?ids=1840", "/responses/achievements/achievement.json")
 
         when: "Achievement is requested"
         def achievementList = achievementsClient.getAchievementsByIds([id])
@@ -64,7 +65,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def ids = [1840, 910, 2258]
 
         and: "External api is stubbed"
-        stubAchievementListResponse()
+        stubResponse("/achievements?ids=1840,910,2258", "/responses/achievements/achievement_list.json")
 
         when: "Achievement list is requested"
         def achievementList = achievementsClient.getAchievementsByIds(ids)
@@ -79,7 +80,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def id = 12345
 
         and: "External api is stubbed"
-        stubAchievementListErrorResponse()
+        stubNotFoundResponse("/achievements?ids=12345", "/responses/achievements/achievement_error.json")
 
         when: "Achievement is requested"
         achievementsClient.getAchievementsByIds([id])
@@ -93,7 +94,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def dailyAchievements = parseDailyAchievementList("/responses/achievements/daily_achievements.json")
 
         and: "External api is stubbed"
-        stubDailyAchievementListResponse()
+        stubResponse("/achievements/daily", "/responses/achievements/daily_achievements.json")
 
         when: "Daily achievements are requested"
         def dailyAchievementList = achievementsClient.getDailyAchievements()
@@ -114,7 +115,7 @@ class AchievementsClientSpec extends AchievementStubs {
                                   = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
 
         and: "External api is stubbed"
-        stubDailyTomorrowAchievementListResponse()
+        stubResponse("/achievements/daily/tomorrow", "/responses/achievements/daily_tomorrow_achievements.json")
 
         when: "Tomorrow daily achievements are requested"
         def tomorrowDailyAchievementList = achievementsClient.getDailyTomorrowAchievements()
@@ -128,7 +129,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def groupIds = parseResponse("/responses/achievements/achievement_group_ids.json")
 
         and: "External api is stubbed"
-        stubAchievementGroupIdsResponse()
+        stubResponse("/achievements/groups", "/responses/achievements/achievement_group_ids.json")
 
         when: "Achievement group ids are requested"
         def achievementGroupIdsList = achievementsClient.getAchievementGroupIds()
@@ -142,7 +143,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def id = "65B4B678-607E-4D97-B458-076C3E96A810"
 
         and: "External api is stubbed"
-        stubAchievementGroupResponse()
+        stubResponse("/achievements/groups/65B4B678-607E-4D97-B458-076C3E96A810", "/responses/achievements/achievement_group.json")
 
         when: "Achievement group is requested"
         def achievementGroup = achievementsClient.getAchievementGroup(id)
@@ -163,7 +164,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def categoryIds = parseResponse("/responses/achievements/achievement_categories.json")
 
         and: "external api is stubbed"
-        stubAchievementCategoryIdsResponse()
+        stubResponse("/achievements/categories", "/responses/achievements/achievement_categories.json")
 
         when: "Achievement category ids are requested"
         def achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
@@ -177,7 +178,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def id = 1
 
         and: "External api is stubbed"
-        stubAchievementCategoryResponse()
+        stubResponse("/achievements/categories/1", "/responses/achievements/achievement_category.json")
 
         when: "Achievement category is requested"
         def achievementCategory = achievementsClient.getAchievementCategory(id)
@@ -199,7 +200,7 @@ class AchievementsClientSpec extends AchievementStubs {
         def id = 1000
 
         and: "External api is stubbed"
-        stubAchievementCategoryErrorResponse()
+        stubNotFoundResponse("/achievements/categories/1000", "/responses/achievements/achievement_category_error.json")
 
         when: "Achievement is requested"
         achievementsClient.getAchievementCategory(id)

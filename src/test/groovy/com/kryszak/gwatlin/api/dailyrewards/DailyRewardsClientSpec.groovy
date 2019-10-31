@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.dailyrewards
 
-
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class DailyRewardsClientSpec extends DailyRewardsStubs {
+class DailyRewardsClientSpec extends WiremockConfig {
 
     @Subject
     def dailyRewardsClient = new GWDailyRewardsClient()
@@ -13,7 +13,7 @@ class DailyRewardsClientSpec extends DailyRewardsStubs {
         def ids = parseResponse("/responses/dailyrewards/crafting_recipes_ids.json")
 
         and: "External api is stubbed"
-        stubDailyCraftingRecipesResponse()
+        stubResponse("/dailycrafting", "/responses/dailyrewards/crafting_recipes_ids.json")
 
         when: "Retrieving list of recipes ids"
         def recipesIds = dailyRewardsClient.getDailyCraftingRecipesIds()
@@ -27,7 +27,7 @@ class DailyRewardsClientSpec extends DailyRewardsStubs {
         def ids = parseResponse("/responses/dailyrewards/map_chests.json")
 
         and: "External api is stubbed"
-        stubMapChestsResponse()
+        stubResponse("/mapchests", "/responses/dailyrewards/map_chests.json")
 
         when: "Retrieving list of chests ids"
         def chestsIds = dailyRewardsClient.getMapChestsIds()
@@ -41,7 +41,7 @@ class DailyRewardsClientSpec extends DailyRewardsStubs {
         def ids = parseResponse("/responses/dailyrewards/world_bosses.json")
 
         and: "External api is stubbed"
-        stubWorldBossesResponse()
+        stubResponse("/worldbosses", "/responses/dailyrewards/world_bosses.json")
 
         when: "Retrieving list of world bosses ids"
         def chestsIds = dailyRewardsClient.getWorldBossesIds()

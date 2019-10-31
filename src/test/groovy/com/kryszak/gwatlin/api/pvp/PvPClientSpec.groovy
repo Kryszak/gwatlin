@@ -3,9 +3,10 @@ package com.kryszak.gwatlin.api.pvp
 import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class PvPClientSpec extends PvpStubs {
+class PvPClientSpec extends WiremockConfig {
 
     @Subject
     def pvpClient = new GWPvPClient()
@@ -15,7 +16,7 @@ class PvPClientSpec extends PvpStubs {
         def ids = parseResponse("/responses/pvp/rank_ids,json")
 
         and: "External api is stubbed"
-        stubPvpRankIdsResponse()
+        stubResponse("/pvp/ranks", "/responses/pvp/rank_ids,json")
 
         when: "Requesting rank ids"
         def rankIds = pvpClient.getPvpRankIds()
@@ -29,7 +30,7 @@ class PvPClientSpec extends PvpStubs {
         def ids = [1, 2]
 
         and: "External api is stubbed"
-        stubPvpRanksResponse()
+        stubResponse("/pvp/ranks?ids=1,2&lang=en", "/responses/pvp/ranks.json")
 
         when: "Requesting pvp ranks"
         def ranks = pvpClient.getPvpRanks(ids, "en")
@@ -56,7 +57,7 @@ class PvPClientSpec extends PvpStubs {
         def ids = parseResponse("/responses/pvp/season_ids.json")
 
         and: "External api is stubbed"
-        stubPvpSeasonsIdsResponse()
+        stubResponse("/pvp/seasons", "/responses/pvp/season_ids.json")
 
         when: "Requesting season ids"
         def seasonIds = pvpClient.getPvpSeasonIds()
@@ -70,7 +71,8 @@ class PvPClientSpec extends PvpStubs {
         def ids = ["44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72"]
 
         and: "External api is stubbed"
-        stubPvpSeasonsResponse()
+        stubResponse("/pvp/seasons?ids=44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72&lang=en",
+                "/responses/pvp/seasons.json")
 
         when: "Requesting pvp seasons"
         def seasons = pvpClient.getPvpSeasons(ids, "en")

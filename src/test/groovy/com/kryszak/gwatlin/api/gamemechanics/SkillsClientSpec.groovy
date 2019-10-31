@@ -4,9 +4,10 @@ import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
+import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-class SkillsClientSpec extends GameMechanicsStubs {
+class SkillsClientSpec extends WiremockConfig {
 
     @Subject
     def skillsClient = new GWSkillsClient()
@@ -16,7 +17,7 @@ class SkillsClientSpec extends GameMechanicsStubs {
         def ids = parseResponse("/responses/gamemechanics/skill_ids.json")
 
         and: "External api is stubbed"
-        stubSkillIdsResponse()
+        stubResponse("/skills", "/responses/gamemechanics/skill_ids.json")
 
         when: "Requesting skill ids"
         def skillIds = skillsClient.getSkillIds()
@@ -30,7 +31,7 @@ class SkillsClientSpec extends GameMechanicsStubs {
         def ids = [1110, 1115]
 
         and: "External api is stubbed"
-        stubSkillsResponse()
+        stubResponse("/skills?ids=1110,1115&lang=en", "/responses/gamemechanics/skills.json")
 
         when: "Skills are requested"
         def skills = skillsClient.getSkills(ids, "en")
