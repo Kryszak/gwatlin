@@ -40,7 +40,6 @@ class SkillsClientSpec extends WiremockConfig {
         skills == parseSkills()
         verifyAll(skills.get(0)) {
             name == 'Throw Gunk'
-            facts.size() == 5
             description == "Throw gunk at target area to inflict a random condition."
             icon == "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png"
             type == SkillType.PROFESSION
@@ -50,6 +49,12 @@ class SkillsClientSpec extends WiremockConfig {
             flags.size() == 2
             id == 1110
             chatLink == "[&BlYEAAA=]"
+            verifyAll(facts.get(0)) {
+                text == "Range"
+                type == "Range"
+                icon == "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png"
+                value == 900
+            }
         }
     }
 

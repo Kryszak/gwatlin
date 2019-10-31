@@ -42,8 +42,11 @@ class MountsClientSpec extends WiremockConfig {
             id == 1
             name == "Raptor"
             icon == "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png"
-            dyeSlots.size() == 1
             mount == "raptor"
+            verifyAll(dyeSlots.get(0)) {
+                colorId == 19
+                material == "leather"
+            }
         }
     }
 
@@ -104,6 +107,10 @@ class MountsClientSpec extends WiremockConfig {
             defaultSkin == 4
             skins.size() == 29
             skills.size() == 1
+            verifyAll(skills.get(0)) {
+                id == 40576
+                slot == "Weapon_1"
+            }
         }
     }
 

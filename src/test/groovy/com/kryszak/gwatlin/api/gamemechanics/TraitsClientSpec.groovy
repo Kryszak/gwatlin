@@ -45,9 +45,13 @@ class TraitsClientSpec extends WiremockConfig {
             name == "Raging Storm"
             description == "Critically striking a foe grants fury. Gain ferocity while under the effects of fury."
             slot == TraitSlot.MAJOR
-            facts.size() == 3
             specialization == 41
             icon == "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
+            verifyAll(facts.get(0)) {
+                text == "Recharge"
+                type == "Recharge"
+                icon == "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png"
+            }
         }
     }
 

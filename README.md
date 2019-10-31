@@ -14,6 +14,10 @@ Client operates on API version v2.
 
 At this moment this project is in development phase.
 
+### Important
+It seems that not all api features are documented, so feel free to create issues for missing features.
+Issue should contain example json response for given endpoint.
+
 ## Features
 ### Present
 -   Achievements

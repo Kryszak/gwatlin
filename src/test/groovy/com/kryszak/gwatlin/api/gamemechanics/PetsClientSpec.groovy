@@ -41,7 +41,9 @@ class PetsClientSpec extends WiremockConfig {
             name == "Juvenile Jungle Stalker"
             description == "Jungle stalkers rely on their power to take down prey. They enter battle with a mighty roar, inspiring allies as they lay into their victims with claws and teeth. They love tummy rubs. —Acht"
             icon == "https://render.guildwars2.com/file/EF1CBC60372CC60E420AD479A3504D90207A9A3F/52535.png"
-            skills.size() == 1
+            verifyAll(skills.get(0)) {
+                id == 12658
+            }
         }
     }
 

@@ -6,5 +6,6 @@ package com.kryszak.gwatlin.api.gamemechanics.model.skill
 data class SkillFact(
     val text: String,
     val icon: String,
-    val type: String
+    val type: String,
+    val value: Int
 )

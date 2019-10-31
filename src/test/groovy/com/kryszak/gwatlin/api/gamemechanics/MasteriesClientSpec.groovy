@@ -79,7 +79,14 @@ class MasteriesClientSpec extends WiremockConfig {
             order == 2
             background == "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png"
             region == "Maguuma"
-            levels.size() == 5
+            verifyAll(levels.get(0)) {
+                name == "Exalted Markings"
+                description == "Gain the knowledge to read Exalted markings. You can now decipher their words and gain access to secrets of their civilization."
+                instruction == "You can now interact with Exalted artifacts found in Auric Basin and the greater Maguuma Jungle."
+                icon == "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png"
+                pointCost == 1
+                expCost == 508000
+            }
         }
     }
 
