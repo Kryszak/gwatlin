@@ -1,0 +1,12 @@
+[
+  {
+    "id": 7,
+    "name": "Barbarian Amulet",
+    "icon": "https://render.guildwars2.com/file/C1B81CDC163B21EE5824AD34B4E2640C5E340ACA/643283.png",
+    "attributes": {
+      "Vitality": 1200,
+      "Power": 900,
+      "Precision": 900
+    }
+  }
+]
