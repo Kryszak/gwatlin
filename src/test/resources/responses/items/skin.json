@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Seer Pants",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 10,
+    "icon": "https://render.guildwars2.com/file/1920ACA302E656B60C38605521760351F147809D/61088.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 68,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  }
+]
