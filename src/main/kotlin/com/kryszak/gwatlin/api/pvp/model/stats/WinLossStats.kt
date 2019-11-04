@@ -1,4 +1,4 @@
-package com.kryszak.gwatlin.api.pvp.model
+package com.kryszak.gwatlin.api.pvp.model.stats
 
 /**
  * Data model for pvp statistics

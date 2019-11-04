@@ -15,6 +15,6 @@ data class PvpGame(
         val profession: String?,
         val scores: PvpGameScore,
         @SerializedName("rating_type") val ratingType: String,
-        @SerializedName("rating_change") val ratingChange: String,
+        @SerializedName("rating_change") val ratingChange: Int,
         val season: String?
 )

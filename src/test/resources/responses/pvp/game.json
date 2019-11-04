@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ABCDE02B-8888-FEBA-1234-DE98765C7DEF",
+    "map_id": 894,
+    "started": "2015-07-08T21:29:50.000Z",
+    "ended": "2015-07-08T21:37:02.000Z",
+    "result": "Defeat",
+    "team": "Red",
+    "profession": "Guardian",
+    "scores": {
+      "red": 165,
+      "blue": 507
+    },
+    "rating_type": "Ranked",
+    "rating_change": -26,
+    "season": "49CCE661-9DCC-473B-B106-666FE9942721"
+  }
+]

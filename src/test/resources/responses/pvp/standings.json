@@ -1,0 +1,19 @@
+{
+  "current": {
+    "total_points": 101,
+    "division": 4,
+    "tier": 1,
+    "points": 1,
+    "repeats": 0,
+    "rating": 845,
+    "decay": 100
+  },
+  "best": {
+    "total_points": 200,
+    "division": 5,
+    "tier": 4,
+    "points": 0,
+    "repeats": 2
+  },
+  "season_id": "44B85826-B5ED-4890-8C77-82DDF9F2CF2B"
+}

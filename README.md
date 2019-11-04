@@ -31,6 +31,7 @@ Issue should contain example json response for given endpoint.
 
 ### To be done 
 -   Characters
+-   Commerce
 -   Map Information
 -   Miscellaneous
 -   Story

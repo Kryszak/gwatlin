@@ -1,13 +1,13 @@
 package com.kryszak.gwatlin.api.items
 
-import com.kryszak.gwatlin.clients.items.FinishersClient
+
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
 class FinishersClientSpec extends WiremockConfig {
 
     @Subject
-    def finishersClient = new FinishersClient()
+    def finishersClient = new GWFinishersClient()
 
     def "Should get finisher ids"() {
         given: "Expected finisher ids"

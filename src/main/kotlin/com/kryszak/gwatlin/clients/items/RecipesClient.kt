@@ -1,6 +1,5 @@
 package com.kryszak.gwatlin.clients.items
 
-import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.items.model.recipe.Recipe
 import com.kryszak.gwatlin.http.BaseHttpClient
 
