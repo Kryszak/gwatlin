@@ -20,6 +20,7 @@ Issue should contain example json response for given endpoint.
 
 ## Features
 ### Present
+-   Account
 -   Achievements
 -   Daily Rewards
 -   Game Mechanics
@@ -29,7 +30,7 @@ Issue should contain example json response for given endpoint.
 -   Structured PvP
 
 ### To be done 
--   Account
+-   Characters
 -   Map Information
 -   Miscellaneous
 -   Story
