@@ -5,6 +5,10 @@ import com.kryszak.gwatlin.api.pvp.model.stats.PvpStanding
 import com.kryszak.gwatlin.api.pvp.model.stats.PvpStats
 import com.kryszak.gwatlin.clients.pvp.PvpAuthenticatedClient
 
+/**
+ * Client for pvp authenticated endpoints
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
+ */
 class GWPvPAuthenticatedClient(apiKey: String) {
 
     private val pvpAuthenticatedClient: PvpAuthenticatedClient = PvpAuthenticatedClient(apiKey)
