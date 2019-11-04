@@ -10,15 +10,19 @@ import com.kryszak.gwatlin.api.guild.model.team.GuildTeam
 import com.kryszak.gwatlin.api.guild.model.treasury.GuildTreasury
 import com.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
 import com.kryszak.gwatlin.config.WiremockConfig
+import spock.lang.Shared
 import spock.lang.Subject
 import spock.lang.Unroll
 
 class GuildAuthenticatedClientSpec extends WiremockConfig {
 
+    @Shared
+    def VALID_API_KEY = "1234"
+
     def GUILD_ID = "4BBB52AA-D768-4FC6-8EDE-C299F2822F0F"
 
     @Subject
-    def guildAuthClient = new GWGuildAuthenticatedClient("1234")
+    def guildAuthClient = new GWGuildAuthenticatedClient(VALID_API_KEY)
 
     @Unroll
     def "Should get guild log #description"() {
@@ -33,8 +37,8 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
         where:
         description  | since  | expected               | stub
-        ""           | ""     | "guild_log.json"       | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log", "/responses/guild/guild_log.json", "1234")
-        "since 1285" | "1285" | "guild_log_since.json" | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285", "/responses/guild/guild_log_since.json", "1234")
+        ""           | ""     | "guild_log.json"       | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log", "/responses/guild/guild_log.json", VALID_API_KEY)
+        "since 1285" | "1285" | "guild_log_since.json" | stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285", "/responses/guild/guild_log_since.json", VALID_API_KEY)
     }
 
     def "Should throw exception on wrong api key"() {
@@ -53,7 +57,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def "Should retrieve guild members"() {
         given: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members", "/responses/guild/members.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members", "/responses/guild/members.json", VALID_API_KEY)
 
         when: "Requesting guild members"
         def members = guildAuthClient.getGuildMembers(GUILD_ID)
@@ -69,7 +73,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def "Should retrieve guild ranks"() {
         given: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks", "/responses/guild/ranks.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks", "/responses/guild/ranks.json", VALID_API_KEY)
 
         when: "Requesting guild ranks"
         def ranks = guildAuthClient.getGuildRanks(GUILD_ID)
@@ -86,7 +90,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def "Should retrieve guild stash"() {
         given: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash", "/responses/guild/stash.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash", "/responses/guild/stash.json", VALID_API_KEY)
 
         when: "Requesting guild stash"
         def stash = guildAuthClient.getGuildStash(GUILD_ID)
@@ -104,7 +108,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def "Should retrieve guild treasury"() {
         given: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury", "/responses/guild/treasury.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury", "/responses/guild/treasury.json", VALID_API_KEY)
 
         when: "Requesting guild treasury"
         def treasury = guildAuthClient.getGuildTreasury(GUILD_ID)
@@ -120,7 +124,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
 
     def "Should retrieve guild teams"() {
         given: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams", "/responses/guild/teams.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams", "/responses/guild/teams.json", VALID_API_KEY)
 
         when: "Guild teams are requested"
         def teams = guildAuthClient.getGuildTeams(GUILD_ID)
@@ -166,7 +170,7 @@ class GuildAuthenticatedClientSpec extends WiremockConfig {
         def ids = parseResponse("/responses/guild/guild_upgrade_ids.json")
 
         and: "External api is stubbed"
-        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades", "/responses/guild/guild_upgrade_ids.json", "1234")
+        stubAuthResponse("/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades", "/responses/guild/guild_upgrade_ids.json", VALID_API_KEY)
 
         when: "Guild upgrade ids are requested"
         def upgradeIds = guildAuthClient.getGuildUpgrades(GUILD_ID)
