@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "permanent": true
+  },
+  {
+    "id": 15,
+    "permanent": false,
+    "quantity": 5
+  }
+]
