@@ -25,11 +25,11 @@ Issue should contain example json response for given endpoint.
 -   Game Mechanics
 -   Guild 
 -   Home Instance
+-   Items
 -   Structured PvP
 
 ### To be done 
 -   Account
--   Items
 -   Map Information
 -   Miscellaneous
 -   Story
