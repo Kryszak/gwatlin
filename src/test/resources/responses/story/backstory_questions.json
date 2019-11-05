@@ -1,0 +1,363 @@
+[
+  {
+    "id": 7,
+    "title": "My Personality",
+    "description": "Trouble may follow me, but I use my ______ to overcome it.",
+    "answers": [
+      "7-53",
+      "7-54",
+      "7-55"
+    ],
+    "order": 1
+  },
+  {
+    "id": 10,
+    "title": "My college",
+    "description": "I'm a member of the College of ______.",
+    "answers": [
+      "10-67",
+      "10-68",
+      "10-69"
+    ],
+    "order": 2,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "My first invention",
+    "description": "My first invention was ______.",
+    "answers": [
+      "11-70",
+      "11-71",
+      "11-72"
+    ],
+    "order": 3,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "My first mentor",
+    "description": "My first advisor, the one who taught me almost everything I know (almost), was ______.",
+    "answers": [
+      "12-73",
+      "12-74",
+      "12-75",
+      "12-76"
+    ],
+    "order": 4,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "",
+    "description": "I am proud to be _____.",
+    "answers": [
+      "15-84",
+      "15-85",
+      "15-86"
+    ],
+    "order": 2,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "",
+    "description": "I would die for my warband, especially ______, my sparring partner.",
+    "answers": [
+      "16-87",
+      "16-88",
+      "16-89",
+      "16-90",
+      "16-91"
+    ],
+    "order": 3,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "",
+    "description": "They tell me the soldier that sired me is a ______.",
+    "answers": [
+      "17-92",
+      "17-93",
+      "17-94"
+    ],
+    "order": 4,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Social Class",
+    "description": "I was raised ______.",
+    "answers": [
+      "21-107",
+      "21-105",
+      "21-106"
+    ],
+    "order": 2,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Regret",
+    "description": "One of my biggest regrets is that ______.",
+    "answers": [
+      "22-108",
+      "22-109",
+      "22-110"
+    ],
+    "order": 3,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "My Totem Spirit",
+    "description": "When I was still a kid, I had a vision. A Spirit of the Wild spoke to me and offered its guardianship. That Spirit was ______.",
+    "answers": [
+      "25-117",
+      "25-118",
+      "25-119",
+      "25-120"
+    ],
+    "order": 4,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Quality Of A Great Hero",
+    "description": "My most important quality is that I have the necessary ______.",
+    "answers": [
+      "26-121",
+      "26-122",
+      "26-123"
+    ],
+    "order": 2,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Most Embarrassing Moment",
+    "description": "At a recent celebratory moot held in Hoelbrak, I ______.",
+    "answers": [
+      "27-124",
+      "27-125",
+      "27-126"
+    ],
+    "order": 3,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Cycle Of My Birth",
+    "description": "The Pale Tree awakened me during the ______.",
+    "answers": [
+      "30-133",
+      "30-134",
+      "30-135",
+      "30-136"
+    ],
+    "order": 4,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Ventari's Teaching",
+    "description": "I believe that the most important of Ventari's teachings is ______",
+    "answers": [
+      "31-137",
+      "31-138",
+      "31-140"
+    ],
+    "order": 3,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "My Dream",
+    "description": "I dreamed of a quest that calls me to action. It was a vision of the ______.",
+    "answers": [
+      "32-141",
+      "32-142",
+      "32-143"
+    ],
+    "order": 2,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "The Six Gods",
+    "description": "Everyone said I was blessed by ______ when I was young.",
+    "answers": [
+      "36-153",
+      "36-154",
+      "36-155",
+      "36-156",
+      "36-157",
+      "36-158"
+    ],
+    "order": 4,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": 181,
+    "title": "My Most Useful Tool.",
+    "description": "My most useful tool is my ______.",
+    "answers": [
+      "181-178",
+      "181-179",
+      "181-180"
+    ],
+    "order": 0,
+    "professions": [
+      "Engineer"
+    ]
+  },
+  {
+    "id": 182,
+    "title": "Cape",
+    "description": "As a symbol of my dedication, I wear ______.",
+    "answers": [
+      "182-166",
+      "182-176",
+      "182-177"
+    ],
+    "order": 0,
+    "professions": [
+      "Guardian"
+    ]
+  },
+  {
+    "id": 183,
+    "title": "Pet",
+    "description": "My pet ______ fights at my side and guards my back.",
+    "answers": [
+      "183-171",
+      "183-172",
+      "183-173",
+      "183-174",
+      "183-175",
+      "183-181",
+      "183-182",
+      "183-1"
+    ],
+    "order": 0,
+    "professions": [
+      "Ranger"
+    ]
+  },
+  {
+    "id": 184,
+    "title": "Skull",
+    "description": "A necromancer's closest companion is death. In acknowledgement of this, I mark my face with the symbol of a ___________.",
+    "answers": [
+      "184-167",
+      "184-168",
+      "184-169"
+    ],
+    "order": 0,
+    "professions": [
+      "Necromancer"
+    ]
+  },
+  {
+    "id": 185,
+    "title": "Helm",
+    "description": "I wear ______ on the battlefield. Because of this, I am recognized and given proper respect.",
+    "answers": [
+      "185-163",
+      "185-164",
+      "185-165"
+    ],
+    "order": 0,
+    "professions": [
+      "Warrior"
+    ]
+  },
+  {
+    "id": 186,
+    "title": "Trinket",
+    "description": "I study all the elements, but I wear a gem that symbolizes my love of ______.",
+    "answers": [
+      "186-159",
+      "186-160",
+      "186-161",
+      "186-162"
+    ],
+    "order": 0,
+    "professions": [
+      "Elementalist"
+    ]
+  },
+  {
+    "id": 187,
+    "title": "The Guise I Wear.",
+    "description": "In my line of work, it's important to understand the power of ______.",
+    "answers": [
+      "187-184",
+      "187-185",
+      "187-186"
+    ],
+    "order": 0,
+    "professions": [
+      "Thief"
+    ]
+  },
+  {
+    "id": 188,
+    "title": "The Face I Wear",
+    "description": "A mesmer's mask creates an image. I choose to look out from behind a ______.",
+    "answers": [
+      "188-187",
+      "188-188",
+      "188-189"
+    ],
+    "order": 0,
+    "professions": [
+      "Mesmer"
+    ]
+  },
+  {
+    "id": 189,
+    "title": "Blindfold",
+    "description": "I fight with my ______ blindfold on to shut out the distractions of the physical world and focus my magical inner sight.",
+    "answers": [
+      "189-187",
+      "189-188",
+      "189-189"
+    ],
+    "order": 0,
+    "professions": [
+      "Revenant"
+    ]
+  }
+]

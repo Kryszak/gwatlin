@@ -1,0 +1,914 @@
+[
+  {
+    "id": "7-54",
+    "title": "Dignity",
+    "description": "I'm dignified even when up to my ears in mud. It's what makes people respect me. A serious, thoughtful demeanor is the route to success.",
+    "journal": "Though trouble may follow me, I overcome it with dignity.",
+    "question": 7
+  },
+  {
+    "id": "188-189",
+    "title": "Fanged Dread",
+    "description": "I'm a whisper in the night, eyes that glow in darkness. I stand in shadow, and my mask is the monster you fear.",
+    "journal": "<br><br>I look out from behind a mask of fanged dread.<br><br>This is my story.<br>",
+    "question": 188,
+    "professions": [
+      "Mesmer"
+    ]
+  },
+  {
+    "id": "22-109",
+    "title": "Dead Sister",
+    "description": "My sister was a Seraph. Centaurs killed her while she was out on patrol. They never recovered her body, and it has always bothered me.",
+    "journal": "I've made something of myself, and the only thing I regret is that I never recovered my sister's body.",
+    "question": 22,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "15-84",
+    "title": "Blood Legion",
+    "description": "I'm Blood Legion. I charge straight into battle. The Blood Legion pushes to the front line in any combat. We're powerful and bold, and none can match our prowess on the field.",
+    "journal": "I'm a soldier in the Blood Legion, and",
+    "question": 15,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "187-186",
+    "title": "Subterfuge",
+    "description": "A mask draws attention, and an uncovered face allows people to identify you. I prefer a more subtle subterfuge. A drawn hood lets me blend into the crowd, and no one knows I was there.",
+    "journal": "<br><br>I'm an expert at subtlety and intrigue. A drawn hood lets me blend into the crowd.<br><br>This is my story.<br>",
+    "question": 187,
+    "professions": [
+      "Thief"
+    ]
+  },
+  {
+    "id": "189-189",
+    "title": "Resplendent Curtain",
+    "description": "The resplendent curtain is for revenants who choose to make a more elegant and stylish impression; because even if they can't see the world around them, it can still see them.",
+    "journal": "<br><br>When I fight, I use the resplendent curtain to block out the physical world in style.<br><br>This is my story.<br>",
+    "question": 189,
+    "professions": [
+      "Revenant"
+    ]
+  },
+  {
+    "id": "17-94",
+    "title": "Honorless Gladium",
+    "description": "A gladium has no warband. My father turned his back on his. Now, he's an honorless gladium with no respect for the chain of command, and I have no respect for him.",
+    "journal": "<br><br>They tell me my sire is an honorless gladium. I have no respect for him, and I refuse to live in his shadow.",
+    "question": 17,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "21-107",
+    "title": "Street Rat",
+    "description": "I grew up poor, on the streets, living hand to mouth. Every day was a challenge, but like I tell my ol' buddy Quinn, \"If it doesn't kill you, it makes you stronger.\" I've worked hard to change my luck, but I've still got a long way to go.",
+    "journal": "<br><br>My people are dirt poor, and I've struggled all my life.",
+    "question": 21,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "184-167",
+    "title": "Trickster Demon",
+    "description": "Trickster demons from the Mists find ways to enter our world to tear it apart. I, too, am a destructive force, and all shall fear me.",
+    "journal": "<br><br>A necromancer's closest companion is death. In acknowledgement of this, I mark my face with the symbol of a trickster demon.<br><br>This is my story.<br>",
+    "question": 184,
+    "professions": [
+      "Necromancer"
+    ]
+  },
+  {
+    "id": "27-126",
+    "title": "Lost an Heirloom",
+    "description": "I inherited Romke's Horn, a magical ancestral heirloom passed down through generations. After one too many drinks, however, I wagered it on a contest of strength...and lost.",
+    "journal": "And yet, in the past, I have been foolish. I wagered Romke's Horn, an ancestral heirloom with magical properties, on a test of strength. I was overconfident, but I'm determined to get it back.",
+    "question": 27,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "36-153",
+    "title": "Dwayna",
+    "description": "Dwayna—the goddess of healing, air, and life—is the even-tempered leader of the old gods. She is often depicted as young, tall, and slender, rising into the air on immense feathery wings.",
+    "journal": "Dwayna, the goddess of healing, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "183-174",
+    "title": "Stalker",
+    "description": "My stalker is a dear friend. It is quiet, still, and as quick as an arrow from a bow. Its intelligence shows in its eyes.",
+    "journal": "<br><br>I'm a ranger, and I have a stalker that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Sylvari",
+      "Asura",
+      "Charr",
+      "Human"
+    ]
+  },
+  {
+    "id": "184-168",
+    "title": "Skull",
+    "description": "I respect the traditions of necromancers that have gone before me. I mark my face with the symbol of a skull to remind me that even the greatest die eventually.",
+    "journal": "<br><br>A necromancer's closest companion is death. In acknowledgement of this, I mark my face with the symbol of a skull.<br><br>This is my story.<br>",
+    "question": 184,
+    "professions": [
+      "Necromancer"
+    ]
+  },
+  {
+    "id": "36-158",
+    "title": "Kormir",
+    "description": "Kormir is the goddess of order, spirit, and truth. She was once mortal like me. She inspires me every day to find greater courage and to seek rightness of heart, mind, and action.",
+    "journal": "Kormir, the goddess of truth, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "21-105",
+    "title": "Commoner",
+    "description": "I was raised among the common folk of Divinity's Reach. We're the working class, the cogs that keep the city running. I help out at a tavern owned by my friends, Andrew and his daughter Petra.",
+    "journal": "<br><br>I was raised by common folk, and I've done plenty of honest, hard work.",
+    "question": 21,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "22-110",
+    "title": "Missed Opportunity",
+    "description": "When I was young, I had the opportunity to perform in the circus, but I turned it down. To this day, I'm sorry I didn't leap at the chance.",
+    "journal": "I've made something of myself, and the only thing I regret is that I turned down a chance to perform in the circus.",
+    "question": 22,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "12-75",
+    "title": "Blipp",
+    "description": "Master Blipp was known for his redundancies as well as his redundancies. He often said, \"Your first try should never be your last, especially if it succeeded. You can always succeed bigger next time.\"",
+    "journal": ", and one day, my adoring fans will say that I have surpassed even my first advisor, Master Blipp.",
+    "question": 12,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "7-55",
+    "title": "Ferocity",
+    "description": "I'm ferocious. Threatening violence gets me further than anything else. I'm a natural, though I do try to use my powers of intimidation for good.",
+    "journal": "Though trouble may follow me, I overcome it with ferocity.",
+    "question": 7
+  },
+  {
+    "id": "12-74",
+    "title": "Zinga",
+    "description": "Mistress Zinga taught me that the best form of magic is good old-fashioned luck. She liked to say, \"Planning ahead is for ninnies who think they can predict every possible outcome. The future is mutable! Go with the flow!\"",
+    "journal": ", and one day, my adoring fans will say that I have surpassed even my first advisor, Mistress Zinga.",
+    "question": 12,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "183-175",
+    "title": "Drake",
+    "description": "I tamed my drake when it was a hatchling. Now, it follows me everywhere. It has proven itself a relentless and powerful friend.",
+    "journal": "<br><br>I'm a ranger, and I have a drake that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Asura",
+      "Charr",
+      "Human"
+    ]
+  },
+  {
+    "id": "36-156",
+    "title": "Melandru",
+    "description": "Melandru—the goddess of nature, earth, and growth—can be found in every harvest and every flower. She smiles upon those, like me, who have an affinity with animals. I am a follower of Melandru.",
+    "journal": "Melandru, the goddess of nature, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "186-162",
+    "title": "Air",
+    "description": "Air is the source of all life. It is invisible, and yet it can destroy whole villages.",
+    "journal": "<br><br>I'm an elementalist, and I study all the elements. I wear a gem that symbolizes my love of air.<br><br>This is my story.<br>",
+    "question": 186,
+    "professions": [
+      "Elementalist"
+    ]
+  },
+  {
+    "id": "185-163",
+    "title": "Spangenhelm",
+    "description": "My spangenhelm intimidates my enemies and inspires respect among my allies. I am nearly invulnerable when I wear it.",
+    "journal": "<br><br>I'm a warrior, and I wear a spangenhelm on the battlefield. Because of this, I am nearly invulnerable.<br><br>This is my story.<br>",
+    "question": 185,
+    "professions": [
+      "Warrior"
+    ]
+  },
+  {
+    "id": "15-85",
+    "title": "Ash Legion",
+    "description": "I'm Ash Legion. I use cunning to overcome my enemies. The Ash Legion teaches stealth and subterfuge. We end battles before they begin with infiltration, information gathering, and precision strikes.",
+    "journal": "I'm a soldier in the Ash Legion, and",
+    "question": 15,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "184-169",
+    "title": "Ghostly Wraith",
+    "description": "A wraith is a creature of energy, and its cunning helps it elude its enemies. What you cannot see...can kill you.",
+    "journal": "<br><br>A necromancer's closest companion is death. In acknowledgement of this, I mark my face with the symbol of a ghostly wraith.<br><br>This is my story.<br>",
+    "question": 184,
+    "professions": [
+      "Necromancer"
+    ]
+  },
+  {
+    "id": "12-76",
+    "title": "Canni",
+    "description": "Councillor Canni wasn't just another bureaucrat. She was an esopolitical parascientologist. She was fond of saying, \"Always bring a witness, preferably an expendable one. You never know when you'll need a scapegoat.\"",
+    "journal": ", and one day, my adoring fans will say that I have surpassed even my first advisor, Councillor Canni.",
+    "question": 12,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "183-182",
+    "title": "Snow Leopard",
+    "description": "The beautiful snow leopard is a symbol of independence. Its grace and stealth makes it both inspiring and an unbeatable hunter.",
+    "journal": "<br><br>I'm a ranger, and I have a snow leopard that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "182-166",
+    "title": "Conqueror's Pauldrons",
+    "description": "When I was young, a famed hero returning from battle stopped and gave me his pauldrons. Ever since, I've worn them as my own, and I make every attempt to live up to his legend. I too will be a conqueror.",
+    "journal": "<br><br>I'm a guardian. I wear the armor and have the aspirations of a conqueror.<br><br>This is my story.<br>",
+    "question": 182,
+    "professions": [
+      "Guardian"
+    ]
+  },
+  {
+    "id": "11-72",
+    "title": "Infinity Ball",
+    "description": "They said it was a toy, a pipe dream, and a waste of resources. They were wrong. My invention predicts the future. So what if it doesn't predict it correctly every time. That's irrelevant! Could it give me an advantage? Reply hazy. Ask again.",
+    "journal": "<br><br>My first invention was an infinity ball",
+    "question": 11,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "188-188",
+    "title": "Phantasm of Sorrow",
+    "description": "I show the world a face lined by tragedy. Too bad you can't see behind the mask—to know whether I'm secretly laughing or not.",
+    "journal": "<br><br>I watch the world from behind a mask of sorrow.<br><br>This is my story.<br>",
+    "question": 188,
+    "professions": [
+      "Mesmer"
+    ]
+  },
+  {
+    "id": "10-69",
+    "title": "Synergetics",
+    "description": "As members of the College of Synergetics, we study how energy patterns form and alchemagical fractals propagate. Few beyond our college understand the philosophical and mystical complexities of our interests. We devoutly research the true nature of the Eternal Alchemy.",
+    "journal": "I'm a member in good standing of the College of Synergetics.",
+    "question": 10,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "30-136",
+    "title": "Cycle of Night",
+    "description": "Sylvari awakened at night are secretive and cautious with information. We make our own decisions, and we come and go as we please, nimble of mind and body.",
+    "journal": "<br><br>The Pale Tree awakened me during the Cycle of Night, and",
+    "question": 30,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "32-143",
+    "title": "The Shield of the Moon",
+    "description": "The moon is a powerful symbol of healing and magic. Any who dream they're protected by the moon shall know faith and fortitude. I hope I'm worthy of such a vision.",
+    "journal": "<br><br>While in my Dream, I dreamed about the Shield of the Moon, and I'm called to find it.",
+    "question": 32,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "181-180",
+    "title": "Panscopic Monocle",
+    "description": "The details matter. Whether you're double-checking the wiring on your new explosives or changing the gear shaft on your favorite turret, this monocle lets you see what needs to be seen.",
+    "journal": "<br><br>I'm an engineer, and you'll never find me without my panscopic monocle handy.<br><br>This is my story.<br>",
+    "question": 181,
+    "professions": [
+      "Engineer"
+    ]
+  },
+  {
+    "id": "10-68",
+    "title": "Dynamics",
+    "description": "The College of Dynamics produces gizmo-makers extraordinaire. Energy, enthusiasm, and boldness are our best qualities. We believe in leveraging the expendable nature of all things. If a prototype explodes, it isn't a failure unless the lesson goes unlearned.",
+    "journal": "I'm a member in good standing of the College of Dynamics.",
+    "question": 10,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "16-89",
+    "title": "Clawspur",
+    "description": "Clawspur lets his blades do the talking. He's extremely calm and quiet, even for a thief. While others are making threats, Clawspur is silently positioning himself to make a quick kill. Good thing he's on my side.",
+    "journal": "my warband is my family. I would die for them, especially Clawspur, my sparring partner.",
+    "question": 16,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "12-73",
+    "title": "Bronk",
+    "description": "Good ol' Master Bronk taught me the benefits of superior firepower. He liked to say, \"When it comes to besting the enemy, there's no such thing as 'overkill.'\"",
+    "journal": ", and one day, my adoring fans will say that I have surpassed even my first advisor, Master Bronk.",
+    "question": 12,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "186-161",
+    "title": "Earth",
+    "description": "Earth is the foundation that supports all life. Stone fortifies us. Rock grounds us.",
+    "journal": "<br><br>I'm an elementalist, and I study all the elements. I wear a gem that symbolizes my love of earth.<br><br>This is my story.<br>",
+    "question": 186,
+    "professions": [
+      "Elementalist"
+    ]
+  },
+  {
+    "id": "25-119",
+    "title": "Wolf",
+    "description": "Wolf has the cunning of the pack behind him. He imparts the virtues of loyalty, ferocity, and strength in numbers. When he came to me, he whispered of my heroic future and told me I would never be alone.",
+    "journal": "Wolf, my spirit guide, teaches that there's a time for violence and a time for peace.",
+    "question": 25,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "185-164",
+    "title": "Galea",
+    "description": "My helm is open-faced so that my enemies can see my face and look me in the eyes. They will remember who defeated them.",
+    "journal": "<br><br>I'm a warrior, and I wear an open-faced galea on the battlefield. Because of this, my enemies will remember who defeated them.<br><br>This is my story.<br>",
+    "question": 185,
+    "professions": [
+      "Warrior"
+    ]
+  },
+  {
+    "id": "181-178",
+    "title": "Universal Multitool Pack",
+    "description": "It's got a wrench. It's got a screwdriver. It's got a spade. It's got a lateral displacer! It doesn't matter what you need; this pack has a gadget for every situation.",
+    "journal": "<br><br>I'm an engineer, and you'll never find me without my universal multitool pack at hand.<br><br>This is my story.<br>",
+    "question": 181,
+    "professions": [
+      "Engineer"
+    ]
+  },
+  {
+    "id": "187-185",
+    "title": "Determination",
+    "description": "I mean business. I'm the bruiser, the muscle, the bear you don't want to poke. My headband keeps my vision clear, no matter how physical I get.",
+    "journal": "<br><br>I mean business. I'm the bruiser, the muscle, the bear you don't want to poke. My headband keeps my vision clear, no matter how physical I get. <br><br>This is my story.<br>",
+    "question": 187,
+    "professions": [
+      "Thief"
+    ]
+  },
+  {
+    "id": "32-141",
+    "title": "The White Stag",
+    "description": "The White Stag is a creature of enchantment, an immortal beast with great power. It is said that the stag will trade a magical boon for its freedom, if I can catch it.",
+    "journal": "<br><br>While still in my Dream, I dreamed of the White Stag, and I'm called to find it.",
+    "question": 32,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "30-133",
+    "title": "Cycle of Dawn",
+    "description": "Sylvari awakened at dawn are natural talkers, diplomats, and forward-thinkers. We are intimately connected with our surroundings and markedly empathic toward all, even other races.",
+    "journal": "<br><br>The Pale Tree awakened me during the Cycle of Dawn, and",
+    "question": 30,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "16-88",
+    "title": "Euryale",
+    "description": "Euryale, our elementalist, is the most loyal soldier in the warband. She's also stubborn, bad-tempered and protective — but at least she's honest. She stands by me, and I trust her with my life.",
+    "journal": "my warband is my family. I would die for them, especially Euryale, my sparring partner.",
+    "question": 16,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "183-172",
+    "title": "Bear",
+    "description": "My bear and I fight as a single unit. It takes only the slightest gesture to give a command, and then we're tearing through our enemies.",
+    "journal": "<br><br>I'm a ranger, and I have a bear that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Human",
+      "Norn"
+    ]
+  },
+  {
+    "id": "11-71",
+    "title": "Transatmospheric Converter",
+    "description": "What unmitigated joy to be able to change the weather at my whim! If only the prototype had been more powerful. Nevertheless, the design was cutting edge. My transatmospheric converter was a masterpiece of utter genius. I wish I'd had more funding.",
+    "journal": "<br><br>My first invention was a transatmospheric converter",
+    "question": 11,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "26-121",
+    "title": "Defeat Our Ancient Foes",
+    "description": "I keep my body strong so that I can defeat our ancient enemies and protect the Great Lodge.",
+    "journal": "<br><br>I work hard to maintain my physical strength and prowess.",
+    "question": 26,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "27-124",
+    "title": "Blacked Out",
+    "description": "Ale! Rowdy brawling! It's far too easy to let loose in the thrill of the moment. After I woke up, I couldn't remember what I'd done. I'm sure it was nothing too terrible.",
+    "journal": "And yet, in the past, I've been careless. I overindulged in merriment at a moot and woke up the next morning with no memory of what I'd done. It's a mystery I must solve.",
+    "question": 27,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "25-117",
+    "title": "Bear",
+    "description": "Bear is the most powerful among the Spirits of the Wild. She is a symbol of fortitude and self-reliance. She roared over me when I was a babe, and ever since, I've had Bear's courage in my heart.",
+    "journal": "Bear, my spirit guide, teaches that there's a time to be forceful and a time to be gentle.",
+    "question": 25,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "26-123",
+    "title": "Guard the Mists",
+    "description": "My intuition gives me the insight I need to guard the Mists, where the souls of our ancestors endure in glory.",
+    "journal": "<br><br>I listen to my intuition and instinct in dangerous situations.",
+    "question": 26,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "181-179",
+    "title": "Eagle-Eye Goggles",
+    "description": "Nothing sees the world more clearly than a soaring eagle. These goggles allow its wearer to see just as well.",
+    "journal": "<br><br>I'm an engineer, and you'll never find me without my eagle-eye goggles at hand.<br><br>This is my story.<br>",
+    "question": 181,
+    "professions": [
+      "Engineer"
+    ]
+  },
+  {
+    "id": "15-86",
+    "title": "Iron Legion",
+    "description": "I'm Iron Legion. I march to the boom of war machines. The Iron Legion has ignited our industrial revolution. We perfected metalwork, cannons, and—most importantly—guns.",
+    "journal": "I'm a soldier in the Iron Legion, and",
+    "question": 15,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "17-93",
+    "title": "Sorcerous Shaman",
+    "description": "Flame Legion shamans once enslaved us. Because of this, my father, who is a shaman, is treated with suspicion and mistrust. I must overcome his reputation.",
+    "journal": "<br><br>They tell me my sire is a sorcerous shaman. I must overcome his reputation, whatever it takes.",
+    "question": 17,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "26-122",
+    "title": "Protect the Spirits",
+    "description": "It is my duty to protect the Spirits of the Wild, and it requires cunning to keep them safe from the Ice Dragon.",
+    "journal": "<br><br>I rely on cunning to protect myself and my allies.",
+    "question": 26,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "183-181",
+    "title": "Wolf",
+    "description": "A wolf companion is considered a great prize. When fully grown, it's a shrewd hunter and devoted ally.",
+    "journal": "<br><br>I'm a ranger, and I have a wolf that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "185-165",
+    "title": "No Helm",
+    "description": "A true warrior doesn't need a helm! My enemies will cringe and falter when they see the fearless determination on my face.",
+    "journal": "<br><br>I'm a warrior, and I wear no helm on the battlefield. Because of this, my enemies falter when they see the fearless determination in my eyes.<br><br>This is my story.<br>",
+    "question": 185,
+    "professions": [
+      "Warrior"
+    ]
+  },
+  {
+    "id": "10-67",
+    "title": "Statics",
+    "description": "Builders and architects make up the College of Statics, and we build to last. Some call us conservative, but we excel at creating new designs, using old materials in innovative ways, and expanding the purview of known magics for practical application.",
+    "journal": "I'm a member in good standing of the College of Statics.",
+    "question": 10,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "31-137",
+    "title": "Act with wisdom, but act.",
+    "description": "It is one thing to know what is right and another to change the world. We all have a calling. I will distinguish myself through my actions and thereby lift Tyria to a higher state of nobility.",
+    "journal": "the most important of Ventari's teachings is: \"Act with wisdom, but act.\"",
+    "question": 31,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "32-142",
+    "title": "The Green Knight",
+    "description": "I saw a powerful knight in green armor, his face obscured. He was defeated, but did not submit; was killed, but did not die. Dare I face him in battle?",
+    "journal": "<br><br>While in my Dream, I dreamed of the Green Knight, and I'm called to find him.",
+    "question": 32,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "27-125",
+    "title": "Revenge",
+    "description": "I've had a rival ever since I was young. He's intelligent, treacherous, and cunning. I lost our last fight, but next time we meet, I'll even the score.",
+    "journal": "And yet, I know failure. I challenged my lifelong rival to fight at a moot, and in my overconfidence, I lost. I look forward to the day when I can even the score.",
+    "question": 27,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "30-134",
+    "title": "Cycle of Noon",
+    "description": "Sylvari awakened mid-day solve problems by attacking them head-on. We are the warriors, hunters, and travelers who experience life first-hand and enjoy the rush of taking risks in order to feel truly alive.",
+    "journal": "<br><br>The Pale Tree awakened me during the Cycle of Noon, and",
+    "question": 30,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "183-171",
+    "title": "Moa",
+    "description": "I raised my moa from the egg. Its devotion to me is unmatched, and I've seen it drop an enemy before I could even draw my weapon.",
+    "journal": "<br><br>I'm a ranger, and I have a moa that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Sylvari",
+      "Asura"
+    ]
+  },
+  {
+    "id": "17-92",
+    "title": "Loyal Soldier",
+    "description": "I've heard my sire's name spoken with reverence ever since I was a cub in the fahrar. I plan to live up to his reputation—or exceed it.",
+    "journal": "<br><br>They tell me my sire is a loyal soldier. I plan to live up to his reputation, whatever it takes.",
+    "question": 17,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "188-187",
+    "title": "Harlequin's Smile",
+    "description": "It takes bravery to face your fears and seize your victories. Never let them see you without a smile.",
+    "journal": "<br><br>To the world, I'm never without my harlequin's smile.<br><br>This is my story.<br>",
+    "question": 188,
+    "professions": [
+      "Mesmer"
+    ]
+  },
+  {
+    "id": "187-184",
+    "title": "Anonymity",
+    "description": "My talents lie in the arts of stealth, infiltration, and escape. I do not draw attention to myself. To guard my identity, I hide my face behind a mask of darkness.",
+    "journal": "<br><br>My talents lie in the arts of stealth, infiltration, and escape. I do not draw attention to myself. To guard my identity, I hide my face behind a mask of darkness.<br><br>This is my story.<br>",
+    "question": 187,
+    "professions": [
+      "Thief"
+    ]
+  },
+  {
+    "id": "182-177",
+    "title": "Visionary's Helm",
+    "description": "Tyria is bigger than we know and filled with mystery. This helm is open, allowing me to see with clarity. With it, I seek out the world's greater truths that others fear to explore.",
+    "journal": "<br><br>I'm a guardian. I have the helm and the curiosity of a visionary.<br><br>This is my story.<br>",
+    "question": 182,
+    "professions": [
+      "Guardian"
+    ]
+  },
+  {
+    "id": "30-135",
+    "title": "Cycle of Dusk",
+    "description": "Sylvari awakened at dusk are naturally curious and thoughtful. We love to learn and spend time reading and studying. We are intelligent and drawn toward the luscious complexities of magic.",
+    "journal": "<br><br>The Pale Tree awakened me during the Cycle of Dusk, and",
+    "question": 30,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "189-188",
+    "title": "Veil Piercer",
+    "description": "Form follows function with this blindfold, designed both to cover a revenant's eyes and help punch through the barriers that conceal the unseen.",
+    "journal": "<br><br>When I fight, I use the veil piercer to punch through the barriers that conceal the unseen.<br><br>This is my story.<br>",
+    "question": 189,
+    "professions": [
+      "Revenant"
+    ]
+  },
+  {
+    "id": "16-90",
+    "title": "Dinky",
+    "description": "Dinky was the smallest cub in our fahrar, so he had to be twice as tough just to break even. He gets picked on because he's a guardian, and not so smart, but I stand by him. He's always been a good friend.",
+    "journal": "my warband is my family. I would die for them, especially Dinky, my sparring partner.",
+    "question": 16,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "36-154",
+    "title": "Grenth",
+    "description": "Grenth is the god of darkness, ice, and death. His acolytes know that the veil between worlds is thin. Death does not frighten me. Even the darkest nights give me comfort because Grenth watches over me.",
+    "journal": "Grenth, the god of death, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "186-160",
+    "title": "Fire",
+    "description": "Fire's hunger, its destructive burn, demands respect. It immolates and clears the path for new growth.",
+    "journal": "<br><br>I'm an elementalist, and I study all the elements. I wear a gem that symbolizes my love of fire.<br><br>This is my story.<br>",
+    "question": 186,
+    "professions": [
+      "Elementalist"
+    ]
+  },
+  {
+    "id": "25-118",
+    "title": "Snow Leopard",
+    "description": "Snow Leopard is a stealthy, smiling spirit. She teaches us independence, strategy, and laughter in the face of danger. To this day, her wisdom guides me, and my memory of her visit comforts me on dark nights.",
+    "journal": "Snow Leopard, my spirit guide, teaches that there's a time to be serious and a time to laugh.",
+    "question": 25,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "16-87",
+    "title": "Maverick",
+    "description": "Maverick is the best single-combat fighter I've ever met. Unfortunately, he has a wild streak and an ego the size of the Black Citadel. He may be a loose cannon, but he knows how to make things epic!",
+    "journal": "my warband is my family. I would die for them, especially Maverick, my sparring partner.",
+    "question": 16,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "22-108",
+    "title": "Unknown Parents",
+    "description": "When I was an infant, I was abandoned at an orphanage. A kind couple adopted me and became my family. However, I've always wondered about my birth parents.",
+    "journal": "I've made something of myself, and the only thing I regret is that I never searched for my true parents.",
+    "question": 22,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "36-155",
+    "title": "Balthazar",
+    "description": "Balthazar—the god of war, fire, and challenge—oversees the battle arena. He gifts those who have a knack for combat strategy and skill with weapons. I have trained hard to honor Balthazar.",
+    "journal": "Balthazar, the god of war, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "11-70",
+    "title": "VAL-A Golem",
+    "description": "Most golems are powerhouses, designed for warfare. They show absolutely no subtlety or originality of design. My golem was compact and efficient, and it had an unparalleled package of features. It revolutionized lab cleanup, and it mixed a great cocktail too.",
+    "journal": "<br><br>My first invention was the VAL-A golem",
+    "question": 11,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": "186-159",
+    "title": "Water",
+    "description": "Water, whether frozen or flowing, is life, and its currents run deep in us.",
+    "journal": "<br><br>I'm an elementalist, and I study all the elements. I wear a gem that symbolizes my love of water.<br><br>This is my story.<br>",
+    "question": 186,
+    "professions": [
+      "Elementalist"
+    ]
+  },
+  {
+    "id": "25-120",
+    "title": "Raven",
+    "description": "Raven, clever and wise, guides us with truths that others fear. He bestows a far-seeing clarity of mind. In my vision, he spoke of riddles and opened my eyes to secrets that few others can see.",
+    "journal": "Raven, my spirit guide, teaches that there's a time for action and a time for thought.",
+    "question": 25,
+    "races": [
+      "Norn"
+    ]
+  },
+  {
+    "id": "183-1",
+    "title": "Fern Hound",
+    "description": "My dog has always stood by me, even against the most dangerous attackers. I couldn't ask for a better friend and ally.",
+    "journal": "<br><br>I'm a ranger, and I have a dog that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "31-140",
+    "title": "Where life goes, so too, should you.",
+    "description": "The world is a delicious and gorgeous place created for us to explore, enjoy, and protect. I will seek out the lessons in every experience, and as I grow, I will have more to offer in return.",
+    "journal": "the most important of Ventari's teachings is: \"Where life goes, so too, should you.\"",
+    "question": 31,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "182-176",
+    "title": "Fanatic's Pauldrons",
+    "description": "Long ago, I determined my path, and nothing will sway me from it. I'm stalwart in my beliefs and immovable in my loyalties. The weight of my pauldrons reminds me of the burden I carry.",
+    "journal": "<br><br>I'm a guardian. I wear the pauldrons and bear the burden and loyalties of a fanatic.<br><br>This is my story.<br>",
+    "question": 182,
+    "professions": [
+      "Guardian"
+    ]
+  },
+  {
+    "id": "189-187",
+    "title": "Mist Scrim",
+    "description": "Simple, straightforward, and utterly effective, this blindfold is preferred by revenants who rely on utility and efficiency to get results.",
+    "journal": "<br><br>When I fight, I use the mist scrim to focus my inner sight.<br><br>This is my story.<br>",
+    "question": 189,
+    "professions": [
+      "Revenant"
+    ]
+  },
+  {
+    "id": "16-91",
+    "title": "Reeva",
+    "description": "Reeva fights hard and plays hard. Nothing gets her down. She always jokes that her best weapons are her engineering tools and a sharp sense of humor. To Reeva, life isn't worth much if it isn't fun.",
+    "journal": "my warband is my family. I would die for them, especially Reeva, my sparring partner.",
+    "question": 16,
+    "races": [
+      "Charr"
+    ]
+  },
+  {
+    "id": "36-157",
+    "title": "Lyssa",
+    "description": "Lyssa wears many masks. She is the dual-faced goddess of beauty, water, and illusion. She is the patron of the most attractive and graceful among us. Her blessings have touched me all my life.",
+    "journal": "Lyssa, the goddess of beauty, blessed me when I was young.",
+    "question": 36,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "7-53",
+    "title": "Charm",
+    "description": "I'm charming. No one can resist me when I'm at my best. I know just what to say to lighten the mood or bolster courage.",
+    "journal": "Though trouble may follow me, I overcome it with charm.",
+    "question": 7
+  },
+  {
+    "id": "21-106",
+    "title": "Nobility",
+    "description": "I grew up among nobles, including my friend Lord Faren, who can trace their ancestry back to ancient kings. I received an excellent education, am well versed in courtly graces, and understand the responsibility that comes with privilege.",
+    "journal": "<br><br>I grew up among the nobility, and I value my honor.",
+    "question": 21,
+    "races": [
+      "Human"
+    ]
+  },
+  {
+    "id": "31-138",
+    "title": "All things have a right to grow.",
+    "description": "The blossom is brother to the weed. Diversity of opinion is good. Discussion is healthy. No one should be condemned simply for being different. I will stand up for the rights of all.",
+    "journal": "the most important of Ventari's teachings is: \"All things have a right to grow.\"",
+    "question": 31,
+    "races": [
+      "Sylvari"
+    ]
+  },
+  {
+    "id": "183-173",
+    "title": "Devourer",
+    "description": "My devourer is a vicious and unforgiving fighter. I raised it from the egg and earned its loyalty. It will die in my defense.",
+    "journal": "<br><br>I'm a ranger, and I have a devourer that fights at my side and guards my back.<br><br>This is my story.<br>",
+    "question": 183,
+    "professions": [
+      "Ranger"
+    ],
+    "races": [
+      "Charr"
+    ]
+  }
+]
