@@ -15,17 +15,14 @@ class AchievementsClientSpec extends WiremockConfig {
     def achievementsClient = new GWAchievementsClient()
 
     def "Should get list of achievement ids"() {
-        given: "Expected achievement id list"
-        def achievementIds = parseResponse("/responses/achievements/achievement_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/achievements", "/responses/achievements/achievement_ids.json")
 
         when: "Achievement list is retrieved"
         def idsList = achievementsClient.getAchievementIdsList()
 
         then: "Retrieved list matches expected list"
-        idsList == achievementIds
+        idsList.size() == 3392
     }
 
     def "Should get single achievement"() {
@@ -40,7 +37,6 @@ class AchievementsClientSpec extends WiremockConfig {
 
         then: "Retrieved achievement matches expected"
         achievementList.size() == 1
-        achievementList == parseAchievementList("/responses/achievements/achievement.json")
         verifyAll(achievementList.get(0)) {
             id == 1840
             name == "Daily Completionist"
@@ -72,7 +68,6 @@ class AchievementsClientSpec extends WiremockConfig {
 
         then: "Retrieved achievement list matches expected"
         achievementList.size() == 3
-        achievementList == parseAchievementList("/responses/achievements/achievement_list.json")
     }
 
     def "Should throw exception when non existing achievement is requested"() {
@@ -90,17 +85,13 @@ class AchievementsClientSpec extends WiremockConfig {
     }
 
     def "Should get list of daily achievements"() {
-        given: "Expected daily achievements"
-        def dailyAchievements = parseDailyAchievementList("/responses/achievements/daily_achievements.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/achievements/daily", "/responses/achievements/daily_achievements.json")
 
         when: "Daily achievements are requested"
         def dailyAchievementList = achievementsClient.getDailyAchievements()
 
         then: "Retrieved list matches expected"
-        dailyAchievementList == dailyAchievements
         verifyAll(dailyAchievementList.pve.get(0)) {
             id == 1837
             level.min == 1
@@ -110,32 +101,30 @@ class AchievementsClientSpec extends WiremockConfig {
     }
 
     def "Should get list of tomorrow daily achievements"() {
-        given: "Expected tomorrow daily achievements"
-        def tomorrowDailyAchievements                   \
-                                  = parseDailyAchievementList("/responses/achievements/daily_tomorrow_achievements.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/achievements/daily/tomorrow", "/responses/achievements/daily_tomorrow_achievements.json")
 
         when: "Tomorrow daily achievements are requested"
         def tomorrowDailyAchievementList = achievementsClient.getDailyTomorrowAchievements()
 
         then: "Retrieved list matches expected"
-        tomorrowDailyAchievementList == tomorrowDailyAchievements
+        verifyAll(tomorrowDailyAchievementList.pve.get(0)) {
+            id == 3880
+            level.min == 80
+            level.max == 80
+            requiredAccess == ["GuildWars2", "HeartOfThorns", "PathOfFire"]
+        }
     }
 
     def "Should get list of achievement group ids"() {
-        given: "Expected group ids list"
-        def groupIds = parseResponse("/responses/achievements/achievement_group_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/achievements/groups", "/responses/achievements/achievement_group_ids.json")
 
         when: "Achievement group ids are requested"
         def achievementGroupIdsList = achievementsClient.getAchievementGroupIds()
 
         then: "Retrieved list matches expected"
-        achievementGroupIdsList == groupIds
+        achievementGroupIdsList.size() == 11
     }
 
     def "Should retrieve achievement group"() {
@@ -149,7 +138,6 @@ class AchievementsClientSpec extends WiremockConfig {
         def achievementGroup = achievementsClient.getAchievementGroup(id)
 
         then: "Retrieved group matches expected"
-        achievementGroup == parseAchievementGroup()
         verifyAll(achievementGroup) {
             id == "65B4B678-607E-4D97-B458-076C3E96A810"
             name == "Heart of Thorns"
@@ -160,17 +148,14 @@ class AchievementsClientSpec extends WiremockConfig {
     }
 
     def "Should retrieve achievement category ids"() {
-        given: "Expected category ids"
-        def categoryIds = parseResponse("/responses/achievements/achievement_categories.json")
-
-        and: "external api is stubbed"
+        given: "external api is stubbed"
         stubResponse("/achievements/categories", "/responses/achievements/achievement_categories.json")
 
         when: "Achievement category ids are requested"
         def achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
 
         then: "Retrieved ids match expected"
-        achievementCategoryIdsList == categoryIds
+        achievementCategoryIdsList.size() == 196
     }
 
     def "Should retrieve achievement category"() {
@@ -184,7 +169,6 @@ class AchievementsClientSpec extends WiremockConfig {
         def achievementCategory = achievementsClient.getAchievementCategory(id)
 
         then: "Retrieved category matches expected"
-        achievementCategory == parseAchievementCategory()
         verifyAll(achievementCategory) {
             id == 1
             name == "Slayer"
@@ -208,22 +192,4 @@ class AchievementsClientSpec extends WiremockConfig {
         then: "Exception is thrown"
         thrown(ApiRequestException)
     }
-
-    private AchievementCategory parseAchievementCategory() {
-        gson.fromJson(parseResponseText("/responses/achievements/achievement_category.json"), AchievementCategory)
-    }
-
-    private AchievementGroup parseAchievementGroup() {
-        gson.fromJson(parseResponseText("/responses/achievements/achievement_group.json"), AchievementGroup)
-    }
-
-    private DailyAchievementList parseDailyAchievementList(String fileName) {
-        gson.fromJson(parseResponseText(fileName), DailyAchievementList)
-    }
-
-    private List<Achievement> parseAchievementList(String fileName) {
-        gson.fromJson(parseResponseText(fileName),
-                new TypeToken<List<Achievement>>() {}.getType())
-    }
-
 }
