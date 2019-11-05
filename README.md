@@ -28,12 +28,12 @@ Issue should contain example json response for given endpoint.
 -   Home Instance
 -   Items
 -   Miscellaneous
+-   Story
 -   Structured PvP
 
 ### To be done 
 -   Characters
 -   Commerce
 -   Map Information
--   Story
 -   Trading post
 -   World vs. World
