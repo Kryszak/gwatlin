@@ -1,0 +1,466 @@
+[
+  {
+    "id": "map_complete",
+    "icon": "https://render.guildwars2.com/file/5A4E663071250EC72668C09E3C082E595A380BF7/528724.png"
+  },
+  {
+    "id": "map_dungeon",
+    "icon": "https://render.guildwars2.com/file/943538394A94A491C8632FBEF6203C2013443555/102478.png"
+  },
+  {
+    "id": "map_heart_empty",
+    "icon": "https://render.guildwars2.com/file/09ACBA53B7412CC3C76E7FEF39929843C20CB0E4/102440.png"
+  },
+  {
+    "id": "map_heart_full",
+    "icon": "https://render.guildwars2.com/file/B3DEEC72BBEF0C6FC6FEF835A0E275FCB1151BB7/102439.png"
+  },
+  {
+    "id": "map_node_harvesting",
+    "icon": "https://render.guildwars2.com/file/995534EBE5D26804AE605E205E50539821C0CBCB/157332.png"
+  },
+  {
+    "id": "map_node_logging",
+    "icon": "https://render.guildwars2.com/file/FC01BB452D5327A0E5B2E4A3F5EFDF03F8264A7B/157333.png"
+  },
+  {
+    "id": "map_node_mining",
+    "icon": "https://render.guildwars2.com/file/A89EB66C39C7C006A4A6CBEDA28061F16847E9BC/157334.png"
+  },
+  {
+    "id": "map_poi",
+    "icon": "https://render.guildwars2.com/file/25B230711176AB5728E86F5FC5F0BFAE48B32F6E/97461.png"
+  },
+  {
+    "id": "map_special_event",
+    "icon": "https://render.guildwars2.com/file/1273C427032320DDDB63062C140E72DCB0D9B411/502087.png"
+  },
+  {
+    "id": "map_story",
+    "icon": "https://render.guildwars2.com/file/540BA9BB6662A5154BD13306A1AEAD6219F95361/102369.png"
+  },
+  {
+    "id": "map_waypoint",
+    "icon": "https://render.guildwars2.com/file/32633AF8ADEA696A1EF56D3AE32D617B10D3AC57/157353.png"
+  },
+  {
+    "id": "map_waypoint_contested",
+    "icon": "https://render.guildwars2.com/file/5EF051273B40CFAC4AEA6C1F1D0DA612C1B0776C/102349.png"
+  },
+  {
+    "id": "map_waypoint_hover",
+    "icon": "https://render.guildwars2.com/file/95CE3F6B0502232AD90034E4B7CE6E5B0FD3CC5F/157354.png"
+  },
+  {
+    "id": "map_vista",
+    "icon": "https://render.guildwars2.com/file/A2C16AF497BA3A0903A0499FFBAF531477566F10/358415.png"
+  },
+  {
+    "id": "map_heropoint",
+    "icon": "https://render.guildwars2.com/file/B4EC6BB3FDBC42557C3CAE0CAA9E57EBF9E462E3/156626.png"
+  },
+  {
+    "id": "wvw_battles_hollow_blue",
+    "icon": "https://render.guildwars2.com/file/CB3378BC9E271A00436DE2D69FC0BB51BEF90EC9/638706.png"
+  },
+  {
+    "id": "wvw_battles_hollow_green",
+    "icon": "https://render.guildwars2.com/file/CEF3D705B196EEDB38A674AF5FE4059F3F9CE4DC/638707.png"
+  },
+  {
+    "id": "wvw_battles_hollow_red",
+    "icon": "https://render.guildwars2.com/file/46BBA1794334552D0AF35BEE093C451F9FF6A00E/638708.png"
+  },
+  {
+    "id": "wvw_battles_hollow_white",
+    "icon": "https://render.guildwars2.com/file/F621AEFE09A7261D4796070D0F022FB0AEEE4814/638709.png"
+  },
+  {
+    "id": "wvw_bauers_estate_blue",
+    "icon": "https://render.guildwars2.com/file/A0BF72046348F2F6372CADA10CFFAA3CE4DC6A76/638710.png"
+  },
+  {
+    "id": "wvw_bauers_estate_green",
+    "icon": "https://render.guildwars2.com/file/03E80CA87C24A2AD6A987932AC76916D91C6BF27/638711.png"
+  },
+  {
+    "id": "wvw_bauers_estate_red",
+    "icon": "https://render.guildwars2.com/file/0C1556930114F35442BB2AD2C6E1C129F1FB5CD3/638712.png"
+  },
+  {
+    "id": "wvw_bauers_estate_white",
+    "icon": "https://render.guildwars2.com/file/1B2FFE9A59B60110BEF42744A10B433AACE008FF/638714.png"
+  },
+  {
+    "id": "wvw_carvers_ascent_blue",
+    "icon": "https://render.guildwars2.com/file/71D3634C91AB94B13E4546BF16ECFD07EFF6200F/638713.png"
+  },
+  {
+    "id": "wvw_carvers_ascent_green",
+    "icon": "https://render.guildwars2.com/file/0250A2AA6353DE29460A13F7F5FCC7AA523DBBA4/638715.png"
+  },
+  {
+    "id": "wvw_carvers_ascent_red",
+    "icon": "https://render.guildwars2.com/file/9F079BD0BB74976458603D17E80FF44E54FC0C1F/638716.png"
+  },
+  {
+    "id": "wvw_carvers_ascent_white",
+    "icon": "https://render.guildwars2.com/file/9CA7DFB4B46C231B6C5B2BDEE04B0459340D64B3/638717.png"
+  },
+  {
+    "id": "wvw_orchard_overlook_blue",
+    "icon": "https://render.guildwars2.com/file/7C7C5EA9586B206C43D7029E0C41EFF3A5C9D6BC/638718.png"
+  },
+  {
+    "id": "wvw_orchard_overlook_green",
+    "icon": "https://render.guildwars2.com/file/A4ADF9683FF2E3CAD20154D75A24C0B6B4EC7973/638719.png"
+  },
+  {
+    "id": "wvw_orchard_overlook_red",
+    "icon": "https://render.guildwars2.com/file/503CB0C03B962F92E8B2F4A0A92DFD46A62D5471/638720.png"
+  },
+  {
+    "id": "wvw_orchard_overlook_white",
+    "icon": "https://render.guildwars2.com/file/7DD0BD0DEC0F18B2D70775F9BCF4C7080DCC0BB1/638722.png"
+  },
+  {
+    "id": "wvw_temple_of_lost_prayers_blue",
+    "icon": "https://render.guildwars2.com/file/D4E1C3C552995FA46B57F1ED3F0203AE0E05AE49/638721.png"
+  },
+  {
+    "id": "wvw_temple_of_lost_prayers_green",
+    "icon": "https://render.guildwars2.com/file/B049213F4CE347C9CEDB5A0BD554BC4BF93A5819/638723.png"
+  },
+  {
+    "id": "wvw_temple_of_lost_prayers_red",
+    "icon": "https://render.guildwars2.com/file/7672656D0D92CA6D66D00601B4210745BAC8775A/638724.png"
+  },
+  {
+    "id": "wvw_temple_of_lost_prayers_white",
+    "icon": "https://render.guildwars2.com/file/1502A342DF603C06910E0F0FFF0C010AC928B946/638725.png"
+  },
+  {
+    "id": "wvw_camp",
+    "icon": "https://render.guildwars2.com/file/015D365A08AAE105287A100AAE04529FDAE14155/102532.png"
+  },
+  {
+    "id": "wvw_tower",
+    "icon": "https://render.guildwars2.com/file/ABEC80C79576A103EA33EC66FCB99B77291A2F0D/102531.png"
+  },
+  {
+    "id": "wvw_keep",
+    "icon": "https://render.guildwars2.com/file/DB580419C8AD9449309A96C8E7C3D61631020EBB/102535.png"
+  },
+  {
+    "id": "wvw_castle",
+    "icon": "https://render.guildwars2.com/file/F0F1DA1C807444F4DF53090343F43BED02E50523/102608.png"
+  },
+  {
+    "id": "ui_upgrade_slot_open",
+    "icon": "https://render.guildwars2.com/file/0C6956A85FDB6F5FFF49D708E10549D1A8459003/517197.png"
+  },
+  {
+    "id": "ui_infusion_slot_agony",
+    "icon": "https://render.guildwars2.com/file/F54BC4283FFAB7531073FF08F470A9730E47FB4D/683590.png"
+  },
+  {
+    "id": "ui_infusion_slot_defensive",
+    "icon": "https://render.guildwars2.com/file/3D941C5F3C0BE9FFAFE27A2C4AE70ABC94AAE724/517202.png"
+  },
+  {
+    "id": "ui_infusion_slot_offensive",
+    "icon": "https://render.guildwars2.com/file/FD212A4A36BEA799E3BDCDFFDC55DEC2A50FE19D/517203.png"
+  },
+  {
+    "id": "ui_infusion_slot_utility",
+    "icon": "https://render.guildwars2.com/file/0B5F38D94AAA1539EC6009F4CF37DF5673C81DA0/517204.png"
+  },
+  {
+    "id": "ui_coin_gold",
+    "icon": "https://render.guildwars2.com/file/090A980A96D39FD36FBB004903644C6DBEFB1FFB/156904.png"
+  },
+  {
+    "id": "ui_coin_silver",
+    "icon": "https://render.guildwars2.com/file/E5A2197D78ECE4AE0349C8B3710D033D22DB0DA6/156907.png"
+  },
+  {
+    "id": "ui_coin_copper",
+    "icon": "https://render.guildwars2.com/file/6CF8F96A3299CFC75D5CC90617C3C70331A1EF0E/156902.png"
+  },
+  {
+    "id": "ui_gem",
+    "icon": "https://render.guildwars2.com/file/086CF7BC17BC0106A4B15F61213EDB68A2A874AB/502064.png"
+  },
+  {
+    "id": "ui_supply",
+    "icon": "https://render.guildwars2.com/file/0A90B5007662D701123EA8BD22422CD93F0B0C6B/358416.png"
+  },
+  {
+    "id": "ui_minor_trait_mask",
+    "icon": "https://render.guildwars2.com/file/5E6C38D5E7D74202D195079AACC8D13D38440C59/1002160.png"
+  },
+  {
+    "id": "ui_major_trait_mask",
+    "icon": "https://render.guildwars2.com/file/262B285FBF947A6CF7CF806653F50C9B97AC0DA2/1002159.png"
+  },
+  {
+    "id": "icon_guardian",
+    "icon": "https://render.guildwars2.com/file/1A9F69A06300C6C53D2CF609079E1CAA3A2E0435/156605.png"
+  },
+  {
+    "id": "icon_warrior",
+    "icon": "https://render.guildwars2.com/file/9501B7D50641EC0227951A73A96B9F2A6CF8119A/156614.png"
+  },
+  {
+    "id": "icon_revenant",
+    "icon": "https://render.guildwars2.com/file/973E79562B7697744FE0A14CC8CEFC69A9C438AE/965714.png"
+  },
+  {
+    "id": "icon_necromancer",
+    "icon": "https://render.guildwars2.com/file/B033097E199A79C413AEF8BB0A9A32FA1438C2FD/156608.png"
+  },
+  {
+    "id": "icon_mesmer",
+    "icon": "https://render.guildwars2.com/file/74ECC014D51E9D02B338C9CBC067B304B71E79FF/156607.png"
+  },
+  {
+    "id": "icon_elementalist",
+    "icon": "https://render.guildwars2.com/file/BD0EAAA6CA57361AB29BA080F8C267B343F1BF04/156603.png"
+  },
+  {
+    "id": "icon_thief",
+    "icon": "https://render.guildwars2.com/file/B703CC71D9BC56F5750D0D35A8F0D40D5827D7DC/156611.png"
+  },
+  {
+    "id": "icon_ranger",
+    "icon": "https://render.guildwars2.com/file/DF3F0BB2EA1FE9A762A00907B168E242B237F7C8/156610.png"
+  },
+  {
+    "id": "icon_engineer",
+    "icon": "https://render.guildwars2.com/file/48527C5B96C71F9706E1A2A9A246EC75EC4745F7/156604.png"
+  },
+  {
+    "id": "icon_guardian_big",
+    "icon": "https://render.guildwars2.com/file/28D46E95F70834CE45640375FCDB0DEAF198325B/716635.png"
+  },
+  {
+    "id": "icon_warrior_big",
+    "icon": "https://render.guildwars2.com/file/09903302A30373E52F49CBA948D4A268D30A5E39/716647.png"
+  },
+  {
+    "id": "icon_revenant_big",
+    "icon": "https://render.guildwars2.com/file/FF240FFCF7D86A0436450FB610AB21716D5B6AA7/965716.png"
+  },
+  {
+    "id": "icon_necromancer_big",
+    "icon": "https://render.guildwars2.com/file/08BD360F557115260FA4D71E6F76ACCCF59FF70F/716639.png"
+  },
+  {
+    "id": "icon_mesmer_big",
+    "icon": "https://render.guildwars2.com/file/B2D21D2FFDB5C95CDC72B91BB02F60080F0F463D/716638.png"
+  },
+  {
+    "id": "icon_elementalist_big",
+    "icon": "https://render.guildwars2.com/file/0303027C1F73E97F5F011ECFCE9C9A40767BB747/716633.png"
+  },
+  {
+    "id": "icon_thief_big",
+    "icon": "https://render.guildwars2.com/file/5C092FE9351A2DF820B1B5719B5F5097D20633EE/716644.png"
+  },
+  {
+    "id": "icon_ranger_big",
+    "icon": "https://render.guildwars2.com/file/9BFA11F4D5114FBF11AFBEF00F249C3934AD62AD/716643.png"
+  },
+  {
+    "id": "icon_engineer_big",
+    "icon": "https://render.guildwars2.com/file/1E90D49793D5BAFDE2DFDC95089FDF9A997401F1/716634.png"
+  },
+  {
+    "id": "map_crafting_scribe",
+    "icon": "https://render.guildwars2.com/file/F95DFA3FBDCC9E9F317551A903E5A2A6DF1CC7E3/1293677.png"
+  },
+  {
+    "id": "map_bank",
+    "icon": "https://render.guildwars2.com/file/B497533A51E879284D029DD10A2CDE23D04F6A4D/102494.png"
+  },
+  {
+    "id": "map_guild_bank",
+    "icon": "https://render.guildwars2.com/file/BE7D7158C522C37B02DB9FE0ADA4D733B9D0C333/102684.png"
+  },
+  {
+    "id": "map_trading_post",
+    "icon": "https://render.guildwars2.com/file/1608A16AF9B0EEE466699380AA30F54A36A0EEDA/102496.png"
+  },
+  {
+    "id": "map_crafting_armorsmith",
+    "icon": "https://render.guildwars2.com/file/2952B92FA93C03A5281F94D223A4CE4C7E0B0906/102461.png"
+  },
+  {
+    "id": "map_crafting_artificer",
+    "icon": "https://render.guildwars2.com/file/0D75999D6DEA1FDFF9DB43BBC2054B62764EB9A0/102463.png"
+  },
+  {
+    "id": "map_crafting_cook",
+    "icon": "https://render.guildwars2.com/file/424E410B90DE300CEB4A1DE2AB954A287C7A5419/102465.png"
+  },
+  {
+    "id": "map_crafting_huntsman",
+    "icon": "https://render.guildwars2.com/file/0C91017241F016EF35A2BCCE183CA9F7374023FC/102462.png"
+  },
+  {
+    "id": "map_crafting_jeweler",
+    "icon": "https://render.guildwars2.com/file/F97F4D212B1294052A196734C71BCE42E199735B/102458.png"
+  },
+  {
+    "id": "map_crafting_leatherworker",
+    "icon": "https://render.guildwars2.com/file/192D1D0D73BA7899F1745F32BAC1634C1B4671BF/102464.png"
+  },
+  {
+    "id": "map_crafting_tailor",
+    "icon": "https://render.guildwars2.com/file/0EB64958BE48AB9605DD56807713215095B8BEED/102459.png"
+  },
+  {
+    "id": "map_crafting_weaponsmith",
+    "icon": "https://render.guildwars2.com/file/AEEF1CF774EE0D5917D5E1CF3AAC269FEE5EC03A/102460.png"
+  },
+  {
+    "id": "map_guild_registrar",
+    "icon": "https://render.guildwars2.com/file/98EECF5621BB3DFC98BA9CB3D938C939CA0B227B/102498.png"
+  },
+  {
+    "id": "map_profession_trainer",
+    "icon": "https://render.guildwars2.com/file/0BA90BAA02D468ABF8CB9FD90AEB4DFCC1F1D43A/102363.png"
+  },
+  {
+    "id": "map_repair",
+    "icon": "https://render.guildwars2.com/file/A5DE06130C0D1E2C9A9780EAD037E61462B1E825/102597.png"
+  },
+  {
+    "id": "map_vendor",
+    "icon": "https://render.guildwars2.com/file/061298EB40D97DEC6C73F7631BE2393ECAB50B4E/240662.png"
+  },
+  {
+    "id": "map_vendor_armor",
+    "icon": "https://render.guildwars2.com/file/A03D9027D6B80E95C8E49947A39D1B3FA6B59D4F/240661.png"
+  },
+  {
+    "id": "map_vendor_weapons",
+    "icon": "https://render.guildwars2.com/file/08B5431F5D6DF7D5983437C5197E6ED96901A431/240663.png"
+  },
+  {
+    "id": "map_vendor_mystic_forge",
+    "icon": "https://render.guildwars2.com/file/0A294B967DFAF499263F0EE76163566543EEC470/866143.png"
+  },
+  {
+    "id": "map_vendor_laurel",
+    "icon": "https://render.guildwars2.com/file/5ECCB15E69380AED53619C01E4AC604669BE9709/534744.png"
+  },
+  {
+    "id": "map_fractal",
+    "icon": "https://render.guildwars2.com/file/80F608A1E8112313595813033BDEAD3C05A43D01/514379.png"
+  },
+  {
+    "id": "map_raid_entrance",
+    "icon": "https://render.guildwars2.com/file/5866630DA52DCB5C423FB81ECF69FD071611E36B/1128644.png"
+  },
+  {
+    "id": "map_adventure",
+    "icon": "https://render.guildwars2.com/file/94ED0C4A49295657095EF5D09CC8C4E6709E6FCA/961368.png"
+  },
+  {
+    "id": "map_adventure_complete",
+    "icon": "https://render.guildwars2.com/file/B40B6E1EF07719AC0AC5641068390F12250C0B68/961381.png"
+  },
+  {
+    "id": "map_adventure_locked",
+    "icon": "https://render.guildwars2.com/file/79D1034931E46459AB6FBEB77C7B7491A9641F16/961365.png"
+  },
+  {
+    "id": "map_outpost",
+    "icon": "https://render.guildwars2.com/file/A1DAD9F89738A8B87E5A5F42D0F4E504CDD9DB67/961370.png"
+  },
+  {
+    "id": "map_outpost_locked",
+    "icon": "https://render.guildwars2.com/file/EC6F495BBB6ADDF013DD0C1433E7EEC774433623/961378.png"
+  },
+  {
+    "id": "map_outpost_contested",
+    "icon": "https://render.guildwars2.com/file/9675B9054E6C74E00835623B190C07D7430970F3/961367.png"
+  },
+  {
+    "id": "map_outpost_active",
+    "icon": "https://render.guildwars2.com/file/62949A4FB4DBFA3541C60929540F4908979CC8E3/961377.png"
+  },
+  {
+    "id": "map_vendor_festival",
+    "icon": "https://render.guildwars2.com/file/FCC165DB616D50C24812E74914B02D45E10B5A9F/1013044.png"
+  },
+  {
+    "id": "map_guild_armorer",
+    "icon": "https://render.guildwars2.com/file/FBFE070F0AC0E86ADB5C0F56B30A27CD7703EF98/1302774.png"
+  },
+  {
+    "id": "map_guild_weaponsmith",
+    "icon": "https://render.guildwars2.com/file/993B219C020F4510F6091BC8D1EFFA66A5B84E98/1302777.png"
+  },
+  {
+    "id": "map_vendor_ecto",
+    "icon": "https://render.guildwars2.com/file/E45E205E24055C1BA62FA3C03618B57334AE4553/1013043.png"
+  },
+  {
+    "id": "map_vendor_guild",
+    "icon": "https://render.guildwars2.com/file/A932E10F313765CC2931714AD32DE3326C29D901/544515.png"
+  },
+  {
+    "id": "map_vendor_cultural_armor",
+    "icon": "https://render.guildwars2.com/file/3C09B54C729FF4C24BDE45E4F226ADBE73ECEAA8/400047.png"
+  },
+  {
+    "id": "map_vendor_cultural_weapons",
+    "icon": "https://render.guildwars2.com/file/08B5431F5D6DF7D5983437C5197E6ED96901A431/240663.png"
+  },
+  {
+    "id": "map_vendor_crystalline_ore",
+    "icon": "https://render.guildwars2.com/file/73C5A813B2C8167F04010708A1FD5FB931D1BB7D/1302771.png"
+  },
+  {
+    "id": "map_vendor_airship_parts",
+    "icon": "https://render.guildwars2.com/file/5F91B42F0C454C695EEC345AF0BABF1D5D2D4196/1228846.png"
+  },
+  {
+    "id": "map_vendor_aurillium",
+    "icon": "https://render.guildwars2.com/file/7792E9BDC4E13F940F5527239ADD5423046D79C8/1228847.png"
+  },
+  {
+    "id": "map_vendor_leyline_crystals",
+    "icon": "https://render.guildwars2.com/file/2F78C0A0E29B0E0601B77BEA9C9DB4B174D6D5E9/1228926.png"
+  },
+  {
+    "id": "map_vendor_dungeon",
+    "icon": "https://render.guildwars2.com/file/06A8E45802010ABCE0E2FC5DF0E0334833BD8009/1030009.png"
+  },
+  {
+    "id": "map_elevator_down",
+    "icon": "https://render.guildwars2.com/file/2AE198D4A5BCC57FBEAB07C242A00B979BA3914A/102619.png"
+  },
+  {
+    "id": "map_elevator_up",
+    "icon": "https://render.guildwars2.com/file/1540B246DCCFBC5E22039765DBACCEDCD3E20BEB/102620.png"
+  },
+  {
+    "id": "map_ramp_down",
+    "icon": "https://render.guildwars2.com/file/9092CD68AE63A8F1AA436878B2BCB5C2DC45012E/102622.png"
+  },
+  {
+    "id": "map_ramp_up",
+    "icon": "https://render.guildwars2.com/file/04B2EE3D5822B30F1F3508BA710244C5E4F94AB2/102621.png"
+  },
+  {
+    "id": "map_stairs_down",
+    "icon": "https://render.guildwars2.com/file/05486465DF0BAE1301D48042FF5708B51D062FB8/102443.png"
+  },
+  {
+    "id": "map_stairs_up",
+    "icon": "https://render.guildwars2.com/file/0F80D8D900E1F356B41F752594BEFCE52693DEB3/102442.png"
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "ascalonian_catacombs",
+    "paths": [
+      {
+        "id": "ac_story",
+        "type": "Story"
+      },
+      {
+        "id": "hodgins",
+        "type": "Explorable"
+      },
+      {
+        "id": "detha",
+        "type": "Explorable"
+      },
+      {
+        "id": "tzark",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "caudecus_manor",
+    "paths": [
+      {
+        "id": "cm_story",
+        "type": "Story"
+      },
+      {
+        "id": "asura",
+        "type": "Explorable"
+      },
+      {
+        "id": "seraph",
+        "type": "Explorable"
+      },
+      {
+        "id": "butler",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "twilight_arbor",
+    "paths": [
+      {
+        "id": "ta_story",
+        "type": "Story"
+      },
+      {
+        "id": "leurent",
+        "type": "Explorable"
+      },
+      {
+        "id": "vevina",
+        "type": "Explorable"
+      },
+      {
+        "id": "aetherpath",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "sorrows_embrace",
+    "paths": [
+      {
+        "id": "se_story",
+        "type": "Story"
+      },
+      {
+        "id": "fergg",
+        "type": "Explorable"
+      },
+      {
+        "id": "rasalov",
+        "type": "Explorable"
+      },
+      {
+        "id": "koptev",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "citadel_of_flame",
+    "paths": [
+      {
+        "id": "cof_story",
+        "type": "Story"
+      },
+      {
+        "id": "ferrah",
+        "type": "Explorable"
+      },
+      {
+        "id": "magg",
+        "type": "Explorable"
+      },
+      {
+        "id": "rhiannon",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "honor_of_the_waves",
+    "paths": [
+      {
+        "id": "hotw_story",
+        "type": "Story"
+      },
+      {
+        "id": "butcher",
+        "type": "Explorable"
+      },
+      {
+        "id": "plunderer",
+        "type": "Explorable"
+      },
+      {
+        "id": "zealot",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "crucible_of_eternity",
+    "paths": [
+      {
+        "id": "coe_story",
+        "type": "Story"
+      },
+      {
+        "id": "submarine",
+        "type": "Explorable"
+      },
+      {
+        "id": "teleporter",
+        "type": "Explorable"
+      },
+      {
+        "id": "front_door",
+        "type": "Explorable"
+      }
+    ]
+  },
+  {
+    "id": "ruined_city_of_arah",
+    "paths": [
+      {
+        "id": "arah_story",
+        "type": "Story"
+      },
+      {
+        "id": "jotun",
+        "type": "Explorable"
+      },
+      {
+        "id": "mursaat",
+        "type": "Explorable"
+      },
+      {
+        "id": "forgotten",
+        "type": "Explorable"
+      },
+      {
+        "id": "seer",
+        "type": "Explorable"
+      }
+    ]
+  }
+]
