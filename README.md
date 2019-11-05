@@ -27,13 +27,13 @@ Issue should contain example json response for given endpoint.
 -   Guild 
 -   Home Instance
 -   Items
+-   Miscellaneous
 -   Structured PvP
 
 ### To be done 
 -   Characters
 -   Commerce
 -   Map Information
--   Miscellaneous
 -   Story
 -   Trading post
 -   World vs. World
