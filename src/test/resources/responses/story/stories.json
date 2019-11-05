@@ -1,0 +1,731 @@
+[
+  {
+    "id": 1,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Charr"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Getting the Band Back Together"
+      },
+      {
+        "name": "2. Sins of the Father"
+      },
+      {
+        "name": "3. Crystal Corruption"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Norn"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Forging a Legend"
+      },
+      {
+        "name": "2. Everyone Makes Mistakes"
+      },
+      {
+        "name": "3. Death from Below"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Human"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Krytan Politics"
+      },
+      {
+        "name": "2. Shadows of the Past"
+      },
+      {
+        "name": "3. Traitor to the Queen"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Sylvari"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Following the Dream"
+      },
+      {
+        "name": "2. The Teachings of Ventari"
+      },
+      {
+        "name": "3. Justice for Riannoc"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Asura"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Experiments Gone Wrong"
+      },
+      {
+        "name": "2. Interested Parties"
+      },
+      {
+        "name": "3. Rescue Researcher"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "The Orders of Tyria",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 40,
+    "order": 1,
+    "chapters": [
+      {
+        "name": "4. Order Neophyte"
+      },
+      {
+        "name": "5. Helping Hands"
+      },
+      {
+        "name": "6. The Battle of Claw Island"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "The Elder Dragon Zhaitan",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 70,
+    "order": 2,
+    "chapters": [
+      {
+        "name": "7. Forming the Pact"
+      },
+      {
+        "name": "8. Victory or Death"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "1. Gates of Maguuma",
+    "description": "When a roar was heard from somewhere out west, many worried that Scarlet Briar managed to rouse an Elder Dragon during her destructive attack on Lion's Arch. Now, mysterious incursions into Brisban Wildlands have alerted Tyria's heroes to a new threat reaching across its frontiers to tear at its foundations.",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 12,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "2. Entanglement",
+    "description": "Treachery and tragedy led Tyria's heroes on a chase across the frontiers of the Maguuma Wastes and landed them at the doorstep of their former adversary. What has Taimi been able to learn from her investigation, and who's been watching from atop the mesa above Prospect Valley?",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 13,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "3. The Dragon's Reach, Part 1",
+    "description": "With an Elder Dragon's corruption spreading, the heroes of Tyria set out in an attempt to gather allies to meet this new threat. But with problems of their own close to home, will world leaders add their support or just introduce more challenges?",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 3,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 14,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "4. The Dragon's Reach, Part 2",
+    "description": "World leaders are converging for a historic summit in the spreading shadow of Mordremoth's advance. Can you convince uneasy allies to cooperate, or will political turmoil spell Tyria's doom?",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 4,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 15,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "5. Echoes of the Past",
+    "description": "As Tyria prepares for war with another Elder Dragon, the search for information becomes paramount. The arcane secrets stashed inside the depths of the Durmand Priory shed some light on your mysterious vision, and also give hope for the future.",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 5,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 16,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "6. Tangled Paths",
+    "description": "As the Pact continues its preparations for the fight against Mordremoth, a new opportunity arises. But the search for the Master of Peace ends in tragedy, calling into question the motives of a friend.",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 6,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 17,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "7. Seeds of Truth",
+    "description": "To find where Caithe may be now, the Pale Tree suggests returning to where she's been. Retracing your friend's steps across the years will take you down a strange and dark path.",
+    "timeline": "1327 AE",
+    "level": 80,
+    "order": 7,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 18,
+    "season": "A515A1D3-4BD7-4594-AE30-2C5D05FF5960",
+    "name": "8. Point of No Return",
+    "description": "The memory seeds have led to a cave in the Silverwastes where Caithe once chased after Wynne. Getting into it, however, won't be so easy. Perhaps Ogden Stonehealer at the Durmand Priory will know of a solution.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 8,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 19,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "1. Prologue: Rally to Maguuma",
+    "description": "The Elder Dragon Mordremoth has risen, dominating the Maguuma Jungle and destroying the Pact fleet sent to confront it. Now Tyria's bravest heroes race to find the downed Pact flagship and determine the fates of Marshal Trahearne and Destiny's Edge before the dragon's minions completely colonize the jungle and swarm out to overwhelm all of Tyria.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": []
+  },
+  {
+    "id": 20,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "8. City of Hope",
+    "description": "Secure Glint's egg in Tarir, the golden city designed and built to safeguard Glint's legacy.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 8,
+    "chapters": []
+  },
+  {
+    "id": 21,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "7. Prized Possessions",
+    "description": "Expand your search for Destiny's Edge to include Caithe, who has been spotted nearby with Glint's egg.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 7,
+    "chapters": []
+  },
+  {
+    "id": 22,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "13. Buried Insight",
+    "description": "Find the dragon research lab in the lost city of Rata Novus.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 14,
+    "chapters": []
+  },
+  {
+    "id": 23,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "12. The Way In",
+    "description": "Find a way into Rata Novus.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 13,
+    "chapters": []
+  },
+  {
+    "id": 25,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "16. Hearts and Minds",
+    "description": "Storm Modremoth's stronghold.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 17,
+    "chapters": []
+  },
+  {
+    "id": 26,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "5. In Their Footsteps",
+    "description": "Navigate the jungle and confer with the hylek scouts to pick up Rytlock and Braham's trail.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 5,
+    "chapters": []
+  },
+  {
+    "id": 27,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "15. Bitter Harvest",
+    "description": "Explore Mordremoth's stronghold and try to find your friends and expose the jungle dragon's weakness.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 16,
+    "chapters": []
+  },
+  {
+    "id": 31,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "10. Strange Observations",
+    "description": "The egg is safe in Tarir, but as you search for your friends, the jungle grows even more menacing and steeped in mystery.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 11,
+    "chapters": []
+  },
+  {
+    "id": 32,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "2. Torn from the Sky",
+    "description": "Take charge of the demoralized and disorganized survivors of the Pact fleet disaster.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": []
+  },
+  {
+    "id": 33,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "6. Prisoners of the Dragon",
+    "description": "Storm the Mordrem Guard prison camp, and release the prisoners.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 6,
+    "chapters": []
+  },
+  {
+    "id": 34,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "4. The Jungle Provides",
+    "description": "Make contact with the local Itzel hylek and secure their help as allies against Mordremoth.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 4,
+    "chapters": []
+  },
+  {
+    "id": 35,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "9. The Predator's Path",
+    "description": "Follow the trail of holo-disks left by Taimi in order to catch up with the others.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 10,
+    "chapters": []
+  },
+  {
+    "id": 36,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "11. Roots of Terror",
+    "description": "Summary of Chapter 06",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 12,
+    "chapters": []
+  },
+  {
+    "id": 39,
+    "season": "002C2D90-69B5-41A2-A422-8DB6F2EFC53E",
+    "name": "Season 1 History Lesson",
+    "description": "Scarlet Briar sought to harness the natural flow of magic for selfish purposes, or so people thought. She orchestrated her reign of terror from the shadows, sending her minions across Tyria to dispose of anyone who stood in her way. But by the time her plans were deciphered, terrible events were already in motion that would change Tyria forever.\n\n\n<c=@Warning>Message from ArenaNet</c>\nLiving World Season 1 was a series of live content events that ran from January 2013 to March 2014. The story was designed to be experienced as it happened. It is currently unavailable for episodic replay like Season 2, so we've created a recap to inform you of the events that bridge the gap between the end of the Personal Story (circa 1325 AE) and Living World Season 2 (1327 AE).\n\nOnce you've completed the Season 1 recap, we encourage you to peruse the Season 2 catalog of playable episodes. Season 2 episodes are replayable, so once you've unlocked them on your account, you may play them as often as you like, whenever you want. You may enjoy the episodes for free by partying with another player who has them unlocked, or you may purchase them with gems so that you have full access to the associated achievements and rewards.",
+    "timeline": "1326—1327 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [
+      {
+        "name": "Season 1 Recap"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "3. Establishing a Foothold",
+    "description": "Help the Pact survivors regroup and establish defenses against Mordrem attacks.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 3,
+    "chapters": []
+  },
+  {
+    "id": 42,
+    "season": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "14. Sign Cutting",
+    "description": "Follow the trail Rox left for you so you can reunite with your team.",
+    "timeline": "1328 AE",
+    "level": 80,
+    "order": 15,
+    "chapters": []
+  },
+  {
+    "id": 46,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "1. Out of the Shadows",
+    "description": "The events in the war against Mordremoth came with deep consequences.",
+    "timeline": "1329 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 56,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "2. Rising Flames",
+    "description": "Taimi has another task for you; one of extreme importance to the war on the Elder Dragons. Help her with her research as she tries to nail down how best to deal with them.",
+    "timeline": "1329 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 63,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "3. A Crack in the Ice",
+    "description": "Braham has gone after Svanir in the Shiverpeaks. What better opportunity to kill two birds with one stone: recruit him to Dragon's Watch, and find another corrupted sample for Taimi.",
+    "timeline": "1329 AE",
+    "level": 80,
+    "order": 3,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 64,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "4. The Head of the Snake",
+    "description": "Queen Jennah has summoned you to an emergency gathering of the ministry in Divinity's Reach. What are her plans for Kryta, and what role will you play in them?",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 4,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 65,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "5. Flashpoint",
+    "description": "Taimi says she's completed her device. Has she found a solution to the Elder Dragon problem?",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 5,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 66,
+    "season": "09766A86-D88D-4DF2-9385-259E9A8CA583",
+    "name": "6. One Path Ends",
+    "description": "Balthazar has gone missing. How does one go about finding a god?",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 6,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 67,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "2. Blazing a Trail",
+    "description": "Establish your noble intentions with the people of Amnoon.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": []
+  },
+  {
+    "id": 68,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "8. The Way Forward",
+    "description": "Search the desert for answers.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 8,
+    "chapters": []
+  },
+  {
+    "id": 69,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "6. Hallowed Ground",
+    "description": "Travel through the Tomb of Primeval Kings to find entrance into the Mists in order to seek an audience with the gods.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 6,
+    "chapters": []
+  },
+  {
+    "id": 71,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "9. The Departing",
+    "description": "Explore the lost ruins of Kesho for answers about the Forgotten and Glint's Legacy.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 9,
+    "chapters": []
+  },
+  {
+    "id": 72,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "4. The Sacrifice",
+    "description": "Confronting the god of fire has unintended consequences.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 4,
+    "chapters": []
+  },
+  {
+    "id": 75,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "10. Enemy of My Enemy",
+    "description": "Deceive Palawa Joko's military into battle against Balthazar.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 10,
+    "chapters": []
+  },
+  {
+    "id": 76,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "11. Beast of War",
+    "description": "Stop Balthazar's campaign to destroy Kralkatorrik.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 11,
+    "chapters": []
+  },
+  {
+    "id": 78,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "13. Small Victory (Epilogue)",
+    "description": "Balthazar is dead, but bigger problems may be on the horizon.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 13,
+    "chapters": []
+  },
+  {
+    "id": 79,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "5. Crystalline Memories",
+    "description": "Travel to Glint's lair in search of the weapon mentioned in Vlast's memories.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 5,
+    "chapters": []
+  },
+  {
+    "id": 80,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "7. Facing the Truth",
+    "description": "Confront the gods and learn the truth about Balthazar.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 7,
+    "chapters": []
+  },
+  {
+    "id": 81,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "12. To Kill a God",
+    "description": "Defeat Balthazar.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 12,
+    "chapters": []
+  },
+  {
+    "id": 82,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "3. Night of Fires",
+    "description": "Searching for Balthazar's whereabouts.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 3,
+    "chapters": []
+  },
+  {
+    "id": 83,
+    "season": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "1. Sparking the Flame",
+    "description": "Travel to the Crystal Desert and confront the rampaging war god, Balthazar.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": []
+  },
+  {
+    "id": 85,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "1. Daybreak",
+    "description": "Kralkatorrik is on the loose and Aurene is missing. But before you can deal with your dragon problems, Amnoon needs your help.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 86,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "2. A Bug in the System",
+    "description": "A scientist in the mysterious Inquest facility known as Rata Primus appears to hold the key to stopping Palawa Joko's vengeful invasion of Tyria, but infiltrating the enemy's stronghold will prove challenging.",
+    "timeline": "1331 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 87,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "3. Long Live the Lich",
+    "description": "As the Scarab Plague threatens the Free City of Amnoon, Joko's plans are revealed in all their horrific splendor. Put an end to them.",
+    "timeline": "1331 AE",
+    "level": 80,
+    "order": 3,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 88,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "4. A Star to Guide Us",
+    "description": "Palawa Joko is gone for good, and Elona can finally begin to rebuild. But when a leadership summit in Jahai is unexpectedly interrupted, Elona finds itself at the center of yet another crisis.",
+    "timeline": "1331 AE",
+    "level": 80,
+    "order": 4,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 89,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "5. All or Nothing",
+    "description": "When the details of Glint's legacy are revealed, the commander and Aurene must prove their trust for one another and prepare their allies for the battle of their lives: bringing down the Crystal Dragon.",
+    "timeline": "1332 AE",
+    "level": 80,
+    "order": 5,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 90,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "6. War Eternal",
+    "description": "Following their catastrophic loss in Thunderhead Keep, the commander's allies gather to honor the fallen. For them, a single question lingers: What now?",
+    "timeline": "1332 AE",
+    "level": 80,
+    "order": 6,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 91,
+    "season": "EDCAE800-302A-4D9B-8331-3CC769ADA0B3",
+    "name": "Prologue: Bound by Blood",
+    "description": "Dragon's Watch travels to the Blood Legion homelands at the invitation of Imperator Bangar Ruinbringer to commemorate Kralkatorrik's defeat with an all-legion rally.",
+    "timeline": "1332 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  }
+]
