@@ -1,0 +1,6171 @@
+[
+  {
+    "id": 19684,
+    "buys": [
+      {
+        "listings": 170,
+        "unit_price": 81,
+        "quantity": 42424
+      },
+      {
+        "listings": 165,
+        "unit_price": 80,
+        "quantity": 41217
+      },
+      {
+        "listings": 6,
+        "unit_price": 79,
+        "quantity": 1450
+      },
+      {
+        "listings": 3,
+        "unit_price": 78,
+        "quantity": 750
+      },
+      {
+        "listings": 23,
+        "unit_price": 77,
+        "quantity": 5750
+      },
+      {
+        "listings": 32,
+        "unit_price": 76,
+        "quantity": 8000
+      },
+      {
+        "listings": 21,
+        "unit_price": 75,
+        "quantity": 5167
+      },
+      {
+        "listings": 3,
+        "unit_price": 74,
+        "quantity": 628
+      },
+      {
+        "listings": 1,
+        "unit_price": 72,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 71,
+        "quantity": 1000
+      },
+      {
+        "listings": 16,
+        "unit_price": 70,
+        "quantity": 3983
+      },
+      {
+        "listings": 4,
+        "unit_price": 68,
+        "quantity": 954
+      },
+      {
+        "listings": 6,
+        "unit_price": 66,
+        "quantity": 999
+      },
+      {
+        "listings": 10,
+        "unit_price": 65,
+        "quantity": 2500
+      },
+      {
+        "listings": 7,
+        "unit_price": 64,
+        "quantity": 1750
+      },
+      {
+        "listings": 3,
+        "unit_price": 63,
+        "quantity": 750
+      },
+      {
+        "listings": 5,
+        "unit_price": 62,
+        "quantity": 1250
+      },
+      {
+        "listings": 4,
+        "unit_price": 61,
+        "quantity": 1000
+      },
+      {
+        "listings": 12,
+        "unit_price": 60,
+        "quantity": 3000
+      },
+      {
+        "listings": 3,
+        "unit_price": 59,
+        "quantity": 750
+      },
+      {
+        "listings": 5,
+        "unit_price": 58,
+        "quantity": 1250
+      },
+      {
+        "listings": 2,
+        "unit_price": 57,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 56,
+        "quantity": 750
+      },
+      {
+        "listings": 3,
+        "unit_price": 55,
+        "quantity": 750
+      },
+      {
+        "listings": 6,
+        "unit_price": 54,
+        "quantity": 1500
+      },
+      {
+        "listings": 20,
+        "unit_price": 53,
+        "quantity": 5000
+      },
+      {
+        "listings": 29,
+        "unit_price": 52,
+        "quantity": 7250
+      },
+      {
+        "listings": 25,
+        "unit_price": 51,
+        "quantity": 5576
+      },
+      {
+        "listings": 359,
+        "unit_price": 50,
+        "quantity": 89051
+      },
+      {
+        "listings": 125,
+        "unit_price": 49,
+        "quantity": 31250
+      },
+      {
+        "listings": 109,
+        "unit_price": 48,
+        "quantity": 27250
+      },
+      {
+        "listings": 93,
+        "unit_price": 47,
+        "quantity": 23250
+      },
+      {
+        "listings": 102,
+        "unit_price": 46,
+        "quantity": 25500
+      },
+      {
+        "listings": 9,
+        "unit_price": 45,
+        "quantity": 2250
+      },
+      {
+        "listings": 1,
+        "unit_price": 44,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 42,
+        "quantity": 500
+      },
+      {
+        "listings": 12,
+        "unit_price": 41,
+        "quantity": 3000
+      },
+      {
+        "listings": 104,
+        "unit_price": 40,
+        "quantity": 26000
+      },
+      {
+        "listings": 1,
+        "unit_price": 38,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 37,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 34,
+        "quantity": 250
+      },
+      {
+        "listings": 18,
+        "unit_price": 31,
+        "quantity": 4500
+      },
+      {
+        "listings": 6,
+        "unit_price": 30,
+        "quantity": 1500
+      },
+      {
+        "listings": 1,
+        "unit_price": 29,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 28,
+        "quantity": 18
+      },
+      {
+        "listings": 1,
+        "unit_price": 26,
+        "quantity": 1
+      },
+      {
+        "listings": 4,
+        "unit_price": 24,
+        "quantity": 1000
+      },
+      {
+        "listings": 2,
+        "unit_price": 23,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 22,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 18,
+        "quantity": 88
+      },
+      {
+        "listings": 1,
+        "unit_price": 15,
+        "quantity": 1
+      },
+      {
+        "listings": 2,
+        "unit_price": 12,
+        "quantity": 2
+      },
+      {
+        "listings": 2,
+        "unit_price": 11,
+        "quantity": 264
+      },
+      {
+        "listings": 360,
+        "unit_price": 10,
+        "quantity": 55506
+      },
+      {
+        "listings": 61,
+        "unit_price": 9,
+        "quantity": 5141
+      }
+    ],
+    "sells": [
+      {
+        "listings": 1,
+        "unit_price": 89,
+        "quantity": 121
+      },
+      {
+        "listings": 5,
+        "unit_price": 90,
+        "quantity": 596
+      },
+      {
+        "listings": 1,
+        "unit_price": 94,
+        "quantity": 150
+      },
+      {
+        "listings": 17,
+        "unit_price": 95,
+        "quantity": 3466
+      },
+      {
+        "listings": 26,
+        "unit_price": 96,
+        "quantity": 6493
+      },
+      {
+        "listings": 1,
+        "unit_price": 97,
+        "quantity": 15
+      },
+      {
+        "listings": 10,
+        "unit_price": 99,
+        "quantity": 2258
+      },
+      {
+        "listings": 29,
+        "unit_price": 100,
+        "quantity": 5225
+      },
+      {
+        "listings": 29,
+        "unit_price": 101,
+        "quantity": 6777
+      },
+      {
+        "listings": 129,
+        "unit_price": 102,
+        "quantity": 30051
+      },
+      {
+        "listings": 2,
+        "unit_price": 104,
+        "quantity": 300
+      },
+      {
+        "listings": 89,
+        "unit_price": 105,
+        "quantity": 21675
+      },
+      {
+        "listings": 36,
+        "unit_price": 106,
+        "quantity": 8179
+      },
+      {
+        "listings": 11,
+        "unit_price": 107,
+        "quantity": 2204
+      },
+      {
+        "listings": 122,
+        "unit_price": 108,
+        "quantity": 29492
+      },
+      {
+        "listings": 2,
+        "unit_price": 109,
+        "quantity": 252
+      },
+      {
+        "listings": 4,
+        "unit_price": 110,
+        "quantity": 590
+      },
+      {
+        "listings": 5,
+        "unit_price": 111,
+        "quantity": 935
+      },
+      {
+        "listings": 40,
+        "unit_price": 112,
+        "quantity": 9018
+      },
+      {
+        "listings": 46,
+        "unit_price": 113,
+        "quantity": 10182
+      },
+      {
+        "listings": 40,
+        "unit_price": 114,
+        "quantity": 7606
+      },
+      {
+        "listings": 58,
+        "unit_price": 115,
+        "quantity": 12817
+      },
+      {
+        "listings": 24,
+        "unit_price": 116,
+        "quantity": 5760
+      },
+      {
+        "listings": 9,
+        "unit_price": 117,
+        "quantity": 1889
+      },
+      {
+        "listings": 37,
+        "unit_price": 118,
+        "quantity": 8681
+      },
+      {
+        "listings": 35,
+        "unit_price": 119,
+        "quantity": 7597
+      },
+      {
+        "listings": 434,
+        "unit_price": 120,
+        "quantity": 105426
+      },
+      {
+        "listings": 53,
+        "unit_price": 121,
+        "quantity": 13055
+      },
+      {
+        "listings": 6,
+        "unit_price": 122,
+        "quantity": 1117
+      },
+      {
+        "listings": 14,
+        "unit_price": 123,
+        "quantity": 1918
+      },
+      {
+        "listings": 52,
+        "unit_price": 124,
+        "quantity": 11461
+      },
+      {
+        "listings": 184,
+        "unit_price": 125,
+        "quantity": 43574
+      },
+      {
+        "listings": 10,
+        "unit_price": 126,
+        "quantity": 1795
+      },
+      {
+        "listings": 26,
+        "unit_price": 127,
+        "quantity": 5247
+      },
+      {
+        "listings": 29,
+        "unit_price": 128,
+        "quantity": 6891
+      },
+      {
+        "listings": 125,
+        "unit_price": 129,
+        "quantity": 30404
+      },
+      {
+        "listings": 73,
+        "unit_price": 130,
+        "quantity": 16693
+      },
+      {
+        "listings": 78,
+        "unit_price": 131,
+        "quantity": 19174
+      },
+      {
+        "listings": 106,
+        "unit_price": 132,
+        "quantity": 25603
+      },
+      {
+        "listings": 38,
+        "unit_price": 133,
+        "quantity": 8776
+      },
+      {
+        "listings": 29,
+        "unit_price": 134,
+        "quantity": 6184
+      },
+      {
+        "listings": 222,
+        "unit_price": 135,
+        "quantity": 54546
+      },
+      {
+        "listings": 23,
+        "unit_price": 136,
+        "quantity": 3520
+      },
+      {
+        "listings": 11,
+        "unit_price": 137,
+        "quantity": 1334
+      },
+      {
+        "listings": 31,
+        "unit_price": 138,
+        "quantity": 6515
+      },
+      {
+        "listings": 11,
+        "unit_price": 139,
+        "quantity": 2132
+      },
+      {
+        "listings": 9,
+        "unit_price": 140,
+        "quantity": 1186
+      },
+      {
+        "listings": 11,
+        "unit_price": 141,
+        "quantity": 1176
+      },
+      {
+        "listings": 26,
+        "unit_price": 142,
+        "quantity": 5360
+      },
+      {
+        "listings": 24,
+        "unit_price": 143,
+        "quantity": 4632
+      },
+      {
+        "listings": 15,
+        "unit_price": 144,
+        "quantity": 3284
+      },
+      {
+        "listings": 31,
+        "unit_price": 145,
+        "quantity": 6549
+      },
+      {
+        "listings": 9,
+        "unit_price": 146,
+        "quantity": 1446
+      },
+      {
+        "listings": 104,
+        "unit_price": 147,
+        "quantity": 25202
+      },
+      {
+        "listings": 10,
+        "unit_price": 148,
+        "quantity": 1773
+      },
+      {
+        "listings": 113,
+        "unit_price": 149,
+        "quantity": 27326
+      },
+      {
+        "listings": 112,
+        "unit_price": 150,
+        "quantity": 23352
+      },
+      {
+        "listings": 37,
+        "unit_price": 151,
+        "quantity": 7901
+      },
+      {
+        "listings": 16,
+        "unit_price": 152,
+        "quantity": 3124
+      },
+      {
+        "listings": 10,
+        "unit_price": 153,
+        "quantity": 1842
+      },
+      {
+        "listings": 11,
+        "unit_price": 154,
+        "quantity": 1902
+      },
+      {
+        "listings": 11,
+        "unit_price": 155,
+        "quantity": 1079
+      },
+      {
+        "listings": 11,
+        "unit_price": 156,
+        "quantity": 1785
+      },
+      {
+        "listings": 13,
+        "unit_price": 157,
+        "quantity": 947
+      },
+      {
+        "listings": 60,
+        "unit_price": 158,
+        "quantity": 14251
+      },
+      {
+        "listings": 26,
+        "unit_price": 159,
+        "quantity": 4306
+      },
+      {
+        "listings": 52,
+        "unit_price": 160,
+        "quantity": 11863
+      },
+      {
+        "listings": 9,
+        "unit_price": 161,
+        "quantity": 1558
+      },
+      {
+        "listings": 6,
+        "unit_price": 162,
+        "quantity": 1058
+      },
+      {
+        "listings": 4,
+        "unit_price": 163,
+        "quantity": 106
+      },
+      {
+        "listings": 8,
+        "unit_price": 164,
+        "quantity": 1737
+      },
+      {
+        "listings": 42,
+        "unit_price": 165,
+        "quantity": 9443
+      },
+      {
+        "listings": 26,
+        "unit_price": 166,
+        "quantity": 6168
+      },
+      {
+        "listings": 23,
+        "unit_price": 167,
+        "quantity": 4990
+      },
+      {
+        "listings": 10,
+        "unit_price": 168,
+        "quantity": 1945
+      },
+      {
+        "listings": 8,
+        "unit_price": 169,
+        "quantity": 1566
+      },
+      {
+        "listings": 50,
+        "unit_price": 170,
+        "quantity": 10872
+      },
+      {
+        "listings": 13,
+        "unit_price": 171,
+        "quantity": 2709
+      },
+      {
+        "listings": 34,
+        "unit_price": 172,
+        "quantity": 7786
+      },
+      {
+        "listings": 14,
+        "unit_price": 173,
+        "quantity": 3253
+      },
+      {
+        "listings": 19,
+        "unit_price": 174,
+        "quantity": 4073
+      },
+      {
+        "listings": 14,
+        "unit_price": 175,
+        "quantity": 2881
+      },
+      {
+        "listings": 6,
+        "unit_price": 176,
+        "quantity": 1215
+      },
+      {
+        "listings": 5,
+        "unit_price": 177,
+        "quantity": 1035
+      },
+      {
+        "listings": 13,
+        "unit_price": 178,
+        "quantity": 2714
+      },
+      {
+        "listings": 30,
+        "unit_price": 179,
+        "quantity": 6807
+      },
+      {
+        "listings": 45,
+        "unit_price": 180,
+        "quantity": 10463
+      },
+      {
+        "listings": 11,
+        "unit_price": 181,
+        "quantity": 1814
+      },
+      {
+        "listings": 14,
+        "unit_price": 182,
+        "quantity": 2498
+      },
+      {
+        "listings": 52,
+        "unit_price": 183,
+        "quantity": 12190
+      },
+      {
+        "listings": 14,
+        "unit_price": 184,
+        "quantity": 3148
+      },
+      {
+        "listings": 8,
+        "unit_price": 185,
+        "quantity": 2000
+      },
+      {
+        "listings": 4,
+        "unit_price": 186,
+        "quantity": 702
+      },
+      {
+        "listings": 36,
+        "unit_price": 187,
+        "quantity": 8879
+      },
+      {
+        "listings": 29,
+        "unit_price": 188,
+        "quantity": 6754
+      },
+      {
+        "listings": 13,
+        "unit_price": 189,
+        "quantity": 3013
+      },
+      {
+        "listings": 25,
+        "unit_price": 190,
+        "quantity": 5172
+      },
+      {
+        "listings": 19,
+        "unit_price": 191,
+        "quantity": 3800
+      },
+      {
+        "listings": 6,
+        "unit_price": 192,
+        "quantity": 1131
+      },
+      {
+        "listings": 12,
+        "unit_price": 193,
+        "quantity": 2326
+      },
+      {
+        "listings": 10,
+        "unit_price": 194,
+        "quantity": 2191
+      },
+      {
+        "listings": 20,
+        "unit_price": 195,
+        "quantity": 4079
+      },
+      {
+        "listings": 33,
+        "unit_price": 196,
+        "quantity": 7889
+      },
+      {
+        "listings": 33,
+        "unit_price": 197,
+        "quantity": 7370
+      },
+      {
+        "listings": 164,
+        "unit_price": 198,
+        "quantity": 39869
+      },
+      {
+        "listings": 67,
+        "unit_price": 199,
+        "quantity": 15641
+      },
+      {
+        "listings": 220,
+        "unit_price": 200,
+        "quantity": 52003
+      },
+      {
+        "listings": 8,
+        "unit_price": 201,
+        "quantity": 1557
+      },
+      {
+        "listings": 95,
+        "unit_price": 202,
+        "quantity": 23506
+      },
+      {
+        "listings": 27,
+        "unit_price": 203,
+        "quantity": 6599
+      },
+      {
+        "listings": 21,
+        "unit_price": 204,
+        "quantity": 4660
+      },
+      {
+        "listings": 9,
+        "unit_price": 205,
+        "quantity": 2022
+      },
+      {
+        "listings": 9,
+        "unit_price": 206,
+        "quantity": 2250
+      },
+      {
+        "listings": 45,
+        "unit_price": 207,
+        "quantity": 11250
+      },
+      {
+        "listings": 27,
+        "unit_price": 208,
+        "quantity": 6612
+      },
+      {
+        "listings": 21,
+        "unit_price": 209,
+        "quantity": 5018
+      },
+      {
+        "listings": 16,
+        "unit_price": 210,
+        "quantity": 3486
+      },
+      {
+        "listings": 8,
+        "unit_price": 211,
+        "quantity": 1678
+      },
+      {
+        "listings": 12,
+        "unit_price": 212,
+        "quantity": 2272
+      },
+      {
+        "listings": 16,
+        "unit_price": 213,
+        "quantity": 3985
+      },
+      {
+        "listings": 6,
+        "unit_price": 214,
+        "quantity": 1422
+      },
+      {
+        "listings": 16,
+        "unit_price": 215,
+        "quantity": 3628
+      },
+      {
+        "listings": 14,
+        "unit_price": 216,
+        "quantity": 3093
+      },
+      {
+        "listings": 3,
+        "unit_price": 218,
+        "quantity": 564
+      },
+      {
+        "listings": 12,
+        "unit_price": 220,
+        "quantity": 2881
+      },
+      {
+        "listings": 1,
+        "unit_price": 223,
+        "quantity": 7
+      },
+      {
+        "listings": 2,
+        "unit_price": 225,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 227,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 228,
+        "quantity": 250
+      },
+      {
+        "listings": 14,
+        "unit_price": 229,
+        "quantity": 3408
+      },
+      {
+        "listings": 5,
+        "unit_price": 230,
+        "quantity": 741
+      },
+      {
+        "listings": 8,
+        "unit_price": 231,
+        "quantity": 1912
+      },
+      {
+        "listings": 3,
+        "unit_price": 233,
+        "quantity": 310
+      },
+      {
+        "listings": 4,
+        "unit_price": 234,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 235,
+        "quantity": 954
+      },
+      {
+        "listings": 3,
+        "unit_price": 236,
+        "quantity": 577
+      },
+      {
+        "listings": 1,
+        "unit_price": 237,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 238,
+        "quantity": 250
+      },
+      {
+        "listings": 16,
+        "unit_price": 240,
+        "quantity": 4000
+      },
+      {
+        "listings": 4,
+        "unit_price": 242,
+        "quantity": 894
+      },
+      {
+        "listings": 8,
+        "unit_price": 243,
+        "quantity": 1723
+      },
+      {
+        "listings": 5,
+        "unit_price": 244,
+        "quantity": 1250
+      },
+      {
+        "listings": 3,
+        "unit_price": 246,
+        "quantity": 427
+      },
+      {
+        "listings": 4,
+        "unit_price": 247,
+        "quantity": 848
+      },
+      {
+        "listings": 1,
+        "unit_price": 248,
+        "quantity": 67
+      },
+      {
+        "listings": 15,
+        "unit_price": 249,
+        "quantity": 3291
+      },
+      {
+        "listings": 41,
+        "unit_price": 250,
+        "quantity": 9706
+      },
+      {
+        "listings": 2,
+        "unit_price": 251,
+        "quantity": 221
+      },
+      {
+        "listings": 2,
+        "unit_price": 252,
+        "quantity": 336
+      },
+      {
+        "listings": 2,
+        "unit_price": 253,
+        "quantity": 258
+      },
+      {
+        "listings": 1,
+        "unit_price": 254,
+        "quantity": 250
+      },
+      {
+        "listings": 9,
+        "unit_price": 255,
+        "quantity": 1951
+      },
+      {
+        "listings": 6,
+        "unit_price": 256,
+        "quantity": 1180
+      },
+      {
+        "listings": 2,
+        "unit_price": 257,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 260,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 266,
+        "quantity": 417
+      },
+      {
+        "listings": 4,
+        "unit_price": 267,
+        "quantity": 853
+      },
+      {
+        "listings": 1,
+        "unit_price": 269,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 270,
+        "quantity": 208
+      },
+      {
+        "listings": 5,
+        "unit_price": 271,
+        "quantity": 845
+      },
+      {
+        "listings": 9,
+        "unit_price": 272,
+        "quantity": 2120
+      },
+      {
+        "listings": 1,
+        "unit_price": 273,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 274,
+        "quantity": 550
+      },
+      {
+        "listings": 5,
+        "unit_price": 275,
+        "quantity": 823
+      },
+      {
+        "listings": 6,
+        "unit_price": 277,
+        "quantity": 1341
+      },
+      {
+        "listings": 1,
+        "unit_price": 278,
+        "quantity": 61
+      },
+      {
+        "listings": 1,
+        "unit_price": 280,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 281,
+        "quantity": 12
+      },
+      {
+        "listings": 1,
+        "unit_price": 282,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 285,
+        "quantity": 192
+      },
+      {
+        "listings": 1,
+        "unit_price": 286,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 287,
+        "quantity": 814
+      },
+      {
+        "listings": 5,
+        "unit_price": 288,
+        "quantity": 368
+      },
+      {
+        "listings": 1,
+        "unit_price": 290,
+        "quantity": 126
+      },
+      {
+        "listings": 4,
+        "unit_price": 292,
+        "quantity": 608
+      },
+      {
+        "listings": 1,
+        "unit_price": 293,
+        "quantity": 8
+      },
+      {
+        "listings": 28,
+        "unit_price": 295,
+        "quantity": 7000
+      },
+      {
+        "listings": 3,
+        "unit_price": 296,
+        "quantity": 235
+      },
+      {
+        "listings": 1,
+        "unit_price": 298,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 299,
+        "quantity": 250
+      },
+      {
+        "listings": 8,
+        "unit_price": 300,
+        "quantity": 1865
+      },
+      {
+        "listings": 1,
+        "unit_price": 318,
+        "quantity": 17
+      },
+      {
+        "listings": 1,
+        "unit_price": 319,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 320,
+        "quantity": 176
+      },
+      {
+        "listings": 1,
+        "unit_price": 323,
+        "quantity": 14
+      },
+      {
+        "listings": 4,
+        "unit_price": 325,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 338,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 340,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 341,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 348,
+        "quantity": 500
+      },
+      {
+        "listings": 9,
+        "unit_price": 350,
+        "quantity": 2117
+      },
+      {
+        "listings": 1,
+        "unit_price": 351,
+        "quantity": 15
+      },
+      {
+        "listings": 2,
+        "unit_price": 352,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 356,
+        "quantity": 7
+      },
+      {
+        "listings": 8,
+        "unit_price": 359,
+        "quantity": 1572
+      },
+      {
+        "listings": 15,
+        "unit_price": 360,
+        "quantity": 3508
+      },
+      {
+        "listings": 8,
+        "unit_price": 361,
+        "quantity": 1755
+      },
+      {
+        "listings": 3,
+        "unit_price": 363,
+        "quantity": 727
+      },
+      {
+        "listings": 6,
+        "unit_price": 365,
+        "quantity": 1500
+      },
+      {
+        "listings": 9,
+        "unit_price": 369,
+        "quantity": 2250
+      },
+      {
+        "listings": 9,
+        "unit_price": 369,
+        "quantity": 2250
+      },
+      {
+        "listings": 3,
+        "unit_price": 370,
+        "quantity": 749
+      },
+      {
+        "listings": 1,
+        "unit_price": 371,
+        "quantity": 7
+      },
+      {
+        "listings": 2,
+        "unit_price": 372,
+        "quantity": 256
+      },
+      {
+        "listings": 1,
+        "unit_price": 373,
+        "quantity": 100
+      },
+      {
+        "listings": 3,
+        "unit_price": 374,
+        "quantity": 750
+      },
+      {
+        "listings": 5,
+        "unit_price": 375,
+        "quantity": 1250
+      },
+      {
+        "listings": 1,
+        "unit_price": 376,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 377,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 378,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 379,
+        "quantity": 818
+      },
+      {
+        "listings": 1,
+        "unit_price": 380,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 383,
+        "quantity": 750
+      },
+      {
+        "listings": 4,
+        "unit_price": 384,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 385,
+        "quantity": 23
+      },
+      {
+        "listings": 1,
+        "unit_price": 386,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 388,
+        "quantity": 80
+      },
+      {
+        "listings": 2,
+        "unit_price": 390,
+        "quantity": 113
+      },
+      {
+        "listings": 1,
+        "unit_price": 392,
+        "quantity": 53
+      },
+      {
+        "listings": 1,
+        "unit_price": 393,
+        "quantity": 103
+      },
+      {
+        "listings": 4,
+        "unit_price": 395,
+        "quantity": 1000
+      },
+      {
+        "listings": 8,
+        "unit_price": 396,
+        "quantity": 1716
+      },
+      {
+        "listings": 1,
+        "unit_price": 397,
+        "quantity": 164
+      },
+      {
+        "listings": 2,
+        "unit_price": 398,
+        "quantity": 500
+      },
+      {
+        "listings": 7,
+        "unit_price": 399,
+        "quantity": 1208
+      },
+      {
+        "listings": 83,
+        "unit_price": 400,
+        "quantity": 20629
+      },
+      {
+        "listings": 2,
+        "unit_price": 401,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 402,
+        "quantity": 259
+      },
+      {
+        "listings": 18,
+        "unit_price": 403,
+        "quantity": 4249
+      },
+      {
+        "listings": 2,
+        "unit_price": 404,
+        "quantity": 315
+      },
+      {
+        "listings": 9,
+        "unit_price": 405,
+        "quantity": 1846
+      },
+      {
+        "listings": 7,
+        "unit_price": 408,
+        "quantity": 1502
+      },
+      {
+        "listings": 3,
+        "unit_price": 409,
+        "quantity": 437
+      },
+      {
+        "listings": 1,
+        "unit_price": 410,
+        "quantity": 125
+      },
+      {
+        "listings": 3,
+        "unit_price": 411,
+        "quantity": 750
+      },
+      {
+        "listings": 4,
+        "unit_price": 413,
+        "quantity": 798
+      },
+      {
+        "listings": 3,
+        "unit_price": 415,
+        "quantity": 523
+      },
+      {
+        "listings": 2,
+        "unit_price": 416,
+        "quantity": 353
+      },
+      {
+        "listings": 4,
+        "unit_price": 417,
+        "quantity": 572
+      },
+      {
+        "listings": 2,
+        "unit_price": 418,
+        "quantity": 446
+      },
+      {
+        "listings": 2,
+        "unit_price": 419,
+        "quantity": 57
+      },
+      {
+        "listings": 1,
+        "unit_price": 420,
+        "quantity": 12
+      },
+      {
+        "listings": 1,
+        "unit_price": 421,
+        "quantity": 4
+      },
+      {
+        "listings": 7,
+        "unit_price": 422,
+        "quantity": 1565
+      },
+      {
+        "listings": 1,
+        "unit_price": 426,
+        "quantity": 19
+      },
+      {
+        "listings": 4,
+        "unit_price": 430,
+        "quantity": 937
+      },
+      {
+        "listings": 2,
+        "unit_price": 434,
+        "quantity": 424
+      },
+      {
+        "listings": 5,
+        "unit_price": 435,
+        "quantity": 801
+      },
+      {
+        "listings": 2,
+        "unit_price": 440,
+        "quantity": 256
+      },
+      {
+        "listings": 5,
+        "unit_price": 441,
+        "quantity": 1250
+      },
+      {
+        "listings": 7,
+        "unit_price": 444,
+        "quantity": 1066
+      },
+      {
+        "listings": 1,
+        "unit_price": 446,
+        "quantity": 220
+      },
+      {
+        "listings": 4,
+        "unit_price": 448,
+        "quantity": 590
+      },
+      {
+        "listings": 6,
+        "unit_price": 449,
+        "quantity": 1485
+      },
+      {
+        "listings": 4,
+        "unit_price": 450,
+        "quantity": 854
+      },
+      {
+        "listings": 2,
+        "unit_price": 451,
+        "quantity": 13
+      },
+      {
+        "listings": 2,
+        "unit_price": 460,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 461,
+        "quantity": 255
+      },
+      {
+        "listings": 1,
+        "unit_price": 462,
+        "quantity": 185
+      },
+      {
+        "listings": 2,
+        "unit_price": 463,
+        "quantity": 281
+      },
+      {
+        "listings": 2,
+        "unit_price": 464,
+        "quantity": 206
+      },
+      {
+        "listings": 5,
+        "unit_price": 465,
+        "quantity": 1058
+      },
+      {
+        "listings": 4,
+        "unit_price": 466,
+        "quantity": 755
+      },
+      {
+        "listings": 1,
+        "unit_price": 467,
+        "quantity": 180
+      },
+      {
+        "listings": 1,
+        "unit_price": 469,
+        "quantity": 7
+      },
+      {
+        "listings": 2,
+        "unit_price": 470,
+        "quantity": 122
+      },
+      {
+        "listings": 1,
+        "unit_price": 471,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 472,
+        "quantity": 633
+      },
+      {
+        "listings": 1,
+        "unit_price": 473,
+        "quantity": 33
+      },
+      {
+        "listings": 3,
+        "unit_price": 474,
+        "quantity": 133
+      },
+      {
+        "listings": 4,
+        "unit_price": 475,
+        "quantity": 692
+      },
+      {
+        "listings": 4,
+        "unit_price": 476,
+        "quantity": 819
+      },
+      {
+        "listings": 2,
+        "unit_price": 479,
+        "quantity": 500
+      },
+      {
+        "listings": 5,
+        "unit_price": 480,
+        "quantity": 1114
+      },
+      {
+        "listings": 1,
+        "unit_price": 481,
+        "quantity": 85
+      },
+      {
+        "listings": 3,
+        "unit_price": 482,
+        "quantity": 602
+      },
+      {
+        "listings": 2,
+        "unit_price": 483,
+        "quantity": 500
+      },
+      {
+        "listings": 6,
+        "unit_price": 484,
+        "quantity": 1400
+      },
+      {
+        "listings": 3,
+        "unit_price": 485,
+        "quantity": 505
+      },
+      {
+        "listings": 25,
+        "unit_price": 488,
+        "quantity": 6114
+      },
+      {
+        "listings": 4,
+        "unit_price": 493,
+        "quantity": 1000
+      },
+      {
+        "listings": 2,
+        "unit_price": 495,
+        "quantity": 179
+      },
+      {
+        "listings": 7,
+        "unit_price": 499,
+        "quantity": 1056
+      },
+      {
+        "listings": 3,
+        "unit_price": 500,
+        "quantity": 535
+      },
+      {
+        "listings": 15,
+        "unit_price": 503,
+        "quantity": 3750
+      },
+      {
+        "listings": 3,
+        "unit_price": 504,
+        "quantity": 37
+      },
+      {
+        "listings": 4,
+        "unit_price": 510,
+        "quantity": 469
+      },
+      {
+        "listings": 4,
+        "unit_price": 513,
+        "quantity": 1000
+      },
+      {
+        "listings": 3,
+        "unit_price": 514,
+        "quantity": 395
+      },
+      {
+        "listings": 1,
+        "unit_price": 515,
+        "quantity": 12
+      },
+      {
+        "listings": 3,
+        "unit_price": 517,
+        "quantity": 600
+      },
+      {
+        "listings": 1,
+        "unit_price": 518,
+        "quantity": 17
+      },
+      {
+        "listings": 2,
+        "unit_price": 519,
+        "quantity": 229
+      },
+      {
+        "listings": 1,
+        "unit_price": 527,
+        "quantity": 10
+      },
+      {
+        "listings": 2,
+        "unit_price": 542,
+        "quantity": 5
+      },
+      {
+        "listings": 2,
+        "unit_price": 545,
+        "quantity": 35
+      },
+      {
+        "listings": 2,
+        "unit_price": 546,
+        "quantity": 115
+      },
+      {
+        "listings": 1,
+        "unit_price": 547,
+        "quantity": 76
+      },
+      {
+        "listings": 1,
+        "unit_price": 552,
+        "quantity": 9
+      },
+      {
+        "listings": 8,
+        "unit_price": 554,
+        "quantity": 1956
+      },
+      {
+        "listings": 2,
+        "unit_price": 555,
+        "quantity": 254
+      },
+      {
+        "listings": 1,
+        "unit_price": 556,
+        "quantity": 30
+      },
+      {
+        "listings": 1,
+        "unit_price": 560,
+        "quantity": 54
+      },
+      {
+        "listings": 1,
+        "unit_price": 561,
+        "quantity": 17
+      },
+      {
+        "listings": 1,
+        "unit_price": 562,
+        "quantity": 3
+      },
+      {
+        "listings": 2,
+        "unit_price": 565,
+        "quantity": 213
+      },
+      {
+        "listings": 1,
+        "unit_price": 570,
+        "quantity": 7
+      },
+      {
+        "listings": 2,
+        "unit_price": 575,
+        "quantity": 126
+      },
+      {
+        "listings": 1,
+        "unit_price": 577,
+        "quantity": 52
+      },
+      {
+        "listings": 2,
+        "unit_price": 578,
+        "quantity": 259
+      },
+      {
+        "listings": 2,
+        "unit_price": 579,
+        "quantity": 400
+      },
+      {
+        "listings": 1,
+        "unit_price": 584,
+        "quantity": 37
+      },
+      {
+        "listings": 5,
+        "unit_price": 585,
+        "quantity": 813
+      },
+      {
+        "listings": 1,
+        "unit_price": 587,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 588,
+        "quantity": 20
+      },
+      {
+        "listings": 1,
+        "unit_price": 589,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 591,
+        "quantity": 150
+      },
+      {
+        "listings": 1,
+        "unit_price": 598,
+        "quantity": 47
+      },
+      {
+        "listings": 1,
+        "unit_price": 599,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 600,
+        "quantity": 8
+      },
+      {
+        "listings": 2,
+        "unit_price": 601,
+        "quantity": 319
+      },
+      {
+        "listings": 1,
+        "unit_price": 602,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 605,
+        "quantity": 16
+      },
+      {
+        "listings": 4,
+        "unit_price": 608,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 611,
+        "quantity": 850
+      },
+      {
+        "listings": 1,
+        "unit_price": 612,
+        "quantity": 5
+      },
+      {
+        "listings": 2,
+        "unit_price": 614,
+        "quantity": 375
+      },
+      {
+        "listings": 1,
+        "unit_price": 615,
+        "quantity": 59
+      },
+      {
+        "listings": 1,
+        "unit_price": 618,
+        "quantity": 41
+      },
+      {
+        "listings": 1,
+        "unit_price": 627,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 636,
+        "quantity": 44
+      },
+      {
+        "listings": 1,
+        "unit_price": 639,
+        "quantity": 10
+      },
+      {
+        "listings": 2,
+        "unit_price": 652,
+        "quantity": 432
+      },
+      {
+        "listings": 1,
+        "unit_price": 657,
+        "quantity": 75
+      },
+      {
+        "listings": 1,
+        "unit_price": 663,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 666,
+        "quantity": 83
+      },
+      {
+        "listings": 1,
+        "unit_price": 669,
+        "quantity": 44
+      },
+      {
+        "listings": 2,
+        "unit_price": 670,
+        "quantity": 18
+      },
+      {
+        "listings": 3,
+        "unit_price": 671,
+        "quantity": 504
+      },
+      {
+        "listings": 5,
+        "unit_price": 672,
+        "quantity": 1068
+      },
+      {
+        "listings": 2,
+        "unit_price": 674,
+        "quantity": 251
+      },
+      {
+        "listings": 4,
+        "unit_price": 678,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 679,
+        "quantity": 621
+      },
+      {
+        "listings": 1,
+        "unit_price": 687,
+        "quantity": 75
+      },
+      {
+        "listings": 1,
+        "unit_price": 692,
+        "quantity": 97
+      },
+      {
+        "listings": 1,
+        "unit_price": 693,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 694,
+        "quantity": 4
+      },
+      {
+        "listings": 29,
+        "unit_price": 697,
+        "quantity": 7210
+      },
+      {
+        "listings": 3,
+        "unit_price": 700,
+        "quantity": 327
+      },
+      {
+        "listings": 1,
+        "unit_price": 711,
+        "quantity": 23
+      },
+      {
+        "listings": 2,
+        "unit_price": 716,
+        "quantity": 365
+      },
+      {
+        "listings": 1,
+        "unit_price": 727,
+        "quantity": 10
+      },
+      {
+        "listings": 2,
+        "unit_price": 729,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 730,
+        "quantity": 75
+      },
+      {
+        "listings": 1,
+        "unit_price": 734,
+        "quantity": 122
+      },
+      {
+        "listings": 1,
+        "unit_price": 739,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 748,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 763,
+        "quantity": 62
+      },
+      {
+        "listings": 3,
+        "unit_price": 764,
+        "quantity": 688
+      },
+      {
+        "listings": 1,
+        "unit_price": 771,
+        "quantity": 45
+      },
+      {
+        "listings": 1,
+        "unit_price": 772,
+        "quantity": 249
+      },
+      {
+        "listings": 1,
+        "unit_price": 777,
+        "quantity": 94
+      },
+      {
+        "listings": 1,
+        "unit_price": 787,
+        "quantity": 97
+      },
+      {
+        "listings": 1,
+        "unit_price": 797,
+        "quantity": 171
+      },
+      {
+        "listings": 1,
+        "unit_price": 805,
+        "quantity": 14
+      },
+      {
+        "listings": 5,
+        "unit_price": 815,
+        "quantity": 1175
+      },
+      {
+        "listings": 1,
+        "unit_price": 818,
+        "quantity": 12
+      },
+      {
+        "listings": 1,
+        "unit_price": 826,
+        "quantity": 7
+      },
+      {
+        "listings": 2,
+        "unit_price": 829,
+        "quantity": 490
+      },
+      {
+        "listings": 1,
+        "unit_price": 831,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 842,
+        "quantity": 8
+      },
+      {
+        "listings": 2,
+        "unit_price": 854,
+        "quantity": 206
+      },
+      {
+        "listings": 1,
+        "unit_price": 858,
+        "quantity": 101
+      },
+      {
+        "listings": 1,
+        "unit_price": 864,
+        "quantity": 238
+      },
+      {
+        "listings": 1,
+        "unit_price": 870,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 873,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 875,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 878,
+        "quantity": 21
+      },
+      {
+        "listings": 2,
+        "unit_price": 884,
+        "quantity": 316
+      },
+      {
+        "listings": 2,
+        "unit_price": 885,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 886,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 887,
+        "quantity": 250
+      },
+      {
+        "listings": 8,
+        "unit_price": 888,
+        "quantity": 2000
+      },
+      {
+        "listings": 1,
+        "unit_price": 892,
+        "quantity": 19
+      },
+      {
+        "listings": 1,
+        "unit_price": 897,
+        "quantity": 79
+      },
+      {
+        "listings": 1,
+        "unit_price": 898,
+        "quantity": 73
+      },
+      {
+        "listings": 1,
+        "unit_price": 912,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 922,
+        "quantity": 91
+      },
+      {
+        "listings": 1,
+        "unit_price": 928,
+        "quantity": 39
+      },
+      {
+        "listings": 1,
+        "unit_price": 929,
+        "quantity": 209
+      },
+      {
+        "listings": 1,
+        "unit_price": 930,
+        "quantity": 231
+      },
+      {
+        "listings": 3,
+        "unit_price": 935,
+        "quantity": 599
+      },
+      {
+        "listings": 1,
+        "unit_price": 939,
+        "quantity": 8
+      },
+      {
+        "listings": 3,
+        "unit_price": 949,
+        "quantity": 714
+      },
+      {
+        "listings": 1,
+        "unit_price": 955,
+        "quantity": 8
+      },
+      {
+        "listings": 4,
+        "unit_price": 957,
+        "quantity": 997
+      },
+      {
+        "listings": 1,
+        "unit_price": 964,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 975,
+        "quantity": 33
+      },
+      {
+        "listings": 4,
+        "unit_price": 976,
+        "quantity": 973
+      },
+      {
+        "listings": 3,
+        "unit_price": 978,
+        "quantity": 703
+      },
+      {
+        "listings": 1,
+        "unit_price": 986,
+        "quantity": 22
+      },
+      {
+        "listings": 6,
+        "unit_price": 987,
+        "quantity": 1437
+      },
+      {
+        "listings": 5,
+        "unit_price": 989,
+        "quantity": 1222
+      },
+      {
+        "listings": 7,
+        "unit_price": 990,
+        "quantity": 1697
+      },
+      {
+        "listings": 3,
+        "unit_price": 992,
+        "quantity": 731
+      },
+      {
+        "listings": 5,
+        "unit_price": 993,
+        "quantity": 1250
+      },
+      {
+        "listings": 2,
+        "unit_price": 994,
+        "quantity": 490
+      },
+      {
+        "listings": 2,
+        "unit_price": 995,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 997,
+        "quantity": 4
+      },
+      {
+        "listings": 7,
+        "unit_price": 998,
+        "quantity": 1590
+      },
+      {
+        "listings": 10,
+        "unit_price": 999,
+        "quantity": 2456
+      },
+      {
+        "listings": 1,
+        "unit_price": 1016,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 1024,
+        "quantity": 9
+      },
+      {
+        "listings": 5,
+        "unit_price": 1031,
+        "quantity": 1208
+      },
+      {
+        "listings": 1,
+        "unit_price": 1040,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1042,
+        "quantity": 173
+      },
+      {
+        "listings": 1,
+        "unit_price": 1046,
+        "quantity": 131
+      },
+      {
+        "listings": 1,
+        "unit_price": 1048,
+        "quantity": 18
+      },
+      {
+        "listings": 2,
+        "unit_price": 1051,
+        "quantity": 211
+      },
+      {
+        "listings": 1,
+        "unit_price": 1052,
+        "quantity": 27
+      },
+      {
+        "listings": 1,
+        "unit_price": 1057,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 1070,
+        "quantity": 60
+      },
+      {
+        "listings": 1,
+        "unit_price": 1071,
+        "quantity": 23
+      },
+      {
+        "listings": 1,
+        "unit_price": 1076,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1081,
+        "quantity": 142
+      },
+      {
+        "listings": 1,
+        "unit_price": 1082,
+        "quantity": 47
+      },
+      {
+        "listings": 3,
+        "unit_price": 1086,
+        "quantity": 591
+      },
+      {
+        "listings": 1,
+        "unit_price": 1089,
+        "quantity": 10
+      },
+      {
+        "listings": 2,
+        "unit_price": 1090,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1091,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 1095,
+        "quantity": 60
+      },
+      {
+        "listings": 1,
+        "unit_price": 1100,
+        "quantity": 63
+      },
+      {
+        "listings": 1,
+        "unit_price": 1104,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1107,
+        "quantity": 203
+      },
+      {
+        "listings": 1,
+        "unit_price": 1111,
+        "quantity": 29
+      },
+      {
+        "listings": 1,
+        "unit_price": 1114,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 1115,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1118,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1122,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 1127,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1128,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 1130,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 1135,
+        "quantity": 30
+      },
+      {
+        "listings": 1,
+        "unit_price": 1139,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 1145,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1148,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 1150,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 1151,
+        "quantity": 8
+      },
+      {
+        "listings": 3,
+        "unit_price": 1154,
+        "quantity": 591
+      },
+      {
+        "listings": 1,
+        "unit_price": 1160,
+        "quantity": 89
+      },
+      {
+        "listings": 1,
+        "unit_price": 1165,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1166,
+        "quantity": 25
+      },
+      {
+        "listings": 1,
+        "unit_price": 1170,
+        "quantity": 108
+      },
+      {
+        "listings": 1,
+        "unit_price": 1186,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 1188,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1189,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 1196,
+        "quantity": 24
+      },
+      {
+        "listings": 1,
+        "unit_price": 1198,
+        "quantity": 38
+      },
+      {
+        "listings": 1,
+        "unit_price": 1201,
+        "quantity": 104
+      },
+      {
+        "listings": 2,
+        "unit_price": 1208,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1222,
+        "quantity": 4
+      },
+      {
+        "listings": 1,
+        "unit_price": 1231,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 1236,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1251,
+        "quantity": 65
+      },
+      {
+        "listings": 1,
+        "unit_price": 1260,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1262,
+        "quantity": 18
+      },
+      {
+        "listings": 1,
+        "unit_price": 1268,
+        "quantity": 3
+      },
+      {
+        "listings": 1,
+        "unit_price": 1299,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1300,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1301,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1354,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 1363,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 1445,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 1466,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1493,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1500,
+        "quantity": 14
+      },
+      {
+        "listings": 1,
+        "unit_price": 1575,
+        "quantity": 156
+      },
+      {
+        "listings": 1,
+        "unit_price": 1600,
+        "quantity": 55
+      },
+      {
+        "listings": 1,
+        "unit_price": 1620,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 1763,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1766,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 1923,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 1985,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1993,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 2019,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 2086,
+        "quantity": 14
+      },
+      {
+        "listings": 1,
+        "unit_price": 2099,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 2200,
+        "quantity": 109
+      },
+      {
+        "listings": 2,
+        "unit_price": 2235,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 2291,
+        "quantity": 750
+      },
+      {
+        "listings": 1,
+        "unit_price": 2305,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 2368,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 2399,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 2404,
+        "quantity": 78
+      },
+      {
+        "listings": 1,
+        "unit_price": 2432,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 2455,
+        "quantity": 14
+      },
+      {
+        "listings": 2,
+        "unit_price": 2500,
+        "quantity": 61
+      },
+      {
+        "listings": 1,
+        "unit_price": 2595,
+        "quantity": 24
+      },
+      {
+        "listings": 1,
+        "unit_price": 3101,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 3131,
+        "quantity": 20
+      },
+      {
+        "listings": 1,
+        "unit_price": 3154,
+        "quantity": 61
+      },
+      {
+        "listings": 1,
+        "unit_price": 3334,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 3346,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 3389,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 3501,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 3600,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 3662,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 3855,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 4115,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 4337,
+        "quantity": 4
+      },
+      {
+        "listings": 1,
+        "unit_price": 4600,
+        "quantity": 48
+      },
+      {
+        "listings": 2,
+        "unit_price": 4993,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 5065,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 5573,
+        "quantity": 37
+      },
+      {
+        "listings": 1,
+        "unit_price": 6081,
+        "quantity": 80
+      },
+      {
+        "listings": 1,
+        "unit_price": 6856,
+        "quantity": 109
+      },
+      {
+        "listings": 1,
+        "unit_price": 6957,
+        "quantity": 168
+      },
+      {
+        "listings": 1,
+        "unit_price": 7660,
+        "quantity": 53
+      },
+      {
+        "listings": 3,
+        "unit_price": 9000,
+        "quantity": 150
+      },
+      {
+        "listings": 1,
+        "unit_price": 9083,
+        "quantity": 29
+      },
+      {
+        "listings": 1,
+        "unit_price": 9666,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 9905,
+        "quantity": 13
+      },
+      {
+        "listings": 4,
+        "unit_price": 10000,
+        "quantity": 502
+      },
+      {
+        "listings": 1,
+        "unit_price": 10012,
+        "quantity": 65
+      },
+      {
+        "listings": 1,
+        "unit_price": 10042,
+        "quantity": 4
+      },
+      {
+        "listings": 1,
+        "unit_price": 10061,
+        "quantity": 8
+      },
+      {
+        "listings": 1,
+        "unit_price": 10062,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 10068,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 10078,
+        "quantity": 39
+      },
+      {
+        "listings": 1,
+        "unit_price": 10081,
+        "quantity": 65
+      },
+      {
+        "listings": 1,
+        "unit_price": 10083,
+        "quantity": 4
+      },
+      {
+        "listings": 2,
+        "unit_price": 10085,
+        "quantity": 254
+      },
+      {
+        "listings": 1,
+        "unit_price": 10099,
+        "quantity": 20
+      },
+      {
+        "listings": 2,
+        "unit_price": 10113,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 10128,
+        "quantity": 59
+      },
+      {
+        "listings": 1,
+        "unit_price": 10137,
+        "quantity": 99
+      },
+      {
+        "listings": 1,
+        "unit_price": 10156,
+        "quantity": 29
+      },
+      {
+        "listings": 1,
+        "unit_price": 10175,
+        "quantity": 47
+      },
+      {
+        "listings": 1,
+        "unit_price": 10528,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 10673,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 11422,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 12843,
+        "quantity": 29
+      },
+      {
+        "listings": 1,
+        "unit_price": 41347,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 85103,
+        "quantity": 11
+      },
+      {
+        "listings": 1,
+        "unit_price": 90000,
+        "quantity": 32
+      },
+      {
+        "listings": 1,
+        "unit_price": 90077,
+        "quantity": 135
+      },
+      {
+        "listings": 1,
+        "unit_price": 100073,
+        "quantity": 21
+      },
+      {
+        "listings": 1,
+        "unit_price": 108403,
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "id": 19709,
+    "buys": [
+      {
+        "listings": 1,
+        "unit_price": 424,
+        "quantity": 15
+      },
+      {
+        "listings": 4,
+        "unit_price": 423,
+        "quantity": 894
+      },
+      {
+        "listings": 1,
+        "unit_price": 418,
+        "quantity": 157
+      },
+      {
+        "listings": 2,
+        "unit_price": 416,
+        "quantity": 418
+      },
+      {
+        "listings": 3,
+        "unit_price": 412,
+        "quantity": 615
+      },
+      {
+        "listings": 1,
+        "unit_price": 409,
+        "quantity": 246
+      },
+      {
+        "listings": 5,
+        "unit_price": 408,
+        "quantity": 1026
+      },
+      {
+        "listings": 16,
+        "unit_price": 407,
+        "quantity": 3900
+      },
+      {
+        "listings": 4,
+        "unit_price": 406,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 405,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 404,
+        "quantity": 189
+      },
+      {
+        "listings": 1,
+        "unit_price": 403,
+        "quantity": 80
+      },
+      {
+        "listings": 1,
+        "unit_price": 402,
+        "quantity": 104
+      },
+      {
+        "listings": 6,
+        "unit_price": 401,
+        "quantity": 1375
+      },
+      {
+        "listings": 5,
+        "unit_price": 400,
+        "quantity": 1212
+      },
+      {
+        "listings": 3,
+        "unit_price": 399,
+        "quantity": 750
+      },
+      {
+        "listings": 1,
+        "unit_price": 398,
+        "quantity": 250
+      },
+      {
+        "listings": 6,
+        "unit_price": 395,
+        "quantity": 1129
+      },
+      {
+        "listings": 1,
+        "unit_price": 394,
+        "quantity": 250
+      },
+      {
+        "listings": 6,
+        "unit_price": 392,
+        "quantity": 1321
+      },
+      {
+        "listings": 3,
+        "unit_price": 391,
+        "quantity": 500
+      },
+      {
+        "listings": 24,
+        "unit_price": 390,
+        "quantity": 6000
+      },
+      {
+        "listings": 5,
+        "unit_price": 389,
+        "quantity": 1133
+      },
+      {
+        "listings": 1,
+        "unit_price": 388,
+        "quantity": 250
+      },
+      {
+        "listings": 12,
+        "unit_price": 387,
+        "quantity": 2942
+      },
+      {
+        "listings": 7,
+        "unit_price": 378,
+        "quantity": 1494
+      },
+      {
+        "listings": 2,
+        "unit_price": 377,
+        "quantity": 486
+      },
+      {
+        "listings": 6,
+        "unit_price": 375,
+        "quantity": 1500
+      },
+      {
+        "listings": 4,
+        "unit_price": 374,
+        "quantity": 957
+      },
+      {
+        "listings": 1,
+        "unit_price": 373,
+        "quantity": 182
+      },
+      {
+        "listings": 1,
+        "unit_price": 371,
+        "quantity": 226
+      },
+      {
+        "listings": 12,
+        "unit_price": 366,
+        "quantity": 2824
+      },
+      {
+        "listings": 1,
+        "unit_price": 363,
+        "quantity": 250
+      },
+      {
+        "listings": 31,
+        "unit_price": 362,
+        "quantity": 7502
+      },
+      {
+        "listings": 3,
+        "unit_price": 339,
+        "quantity": 604
+      },
+      {
+        "listings": 2,
+        "unit_price": 330,
+        "quantity": 500
+      },
+      {
+        "listings": 8,
+        "unit_price": 326,
+        "quantity": 2000
+      },
+      {
+        "listings": 1,
+        "unit_price": 316,
+        "quantity": 47
+      },
+      {
+        "listings": 1,
+        "unit_price": 315,
+        "quantity": 46
+      },
+      {
+        "listings": 2,
+        "unit_price": 311,
+        "quantity": 216
+      },
+      {
+        "listings": 1,
+        "unit_price": 310,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 309,
+        "quantity": 100
+      },
+      {
+        "listings": 1,
+        "unit_price": 307,
+        "quantity": 250
+      },
+      {
+        "listings": 8,
+        "unit_price": 306,
+        "quantity": 1770
+      },
+      {
+        "listings": 3,
+        "unit_price": 305,
+        "quantity": 750
+      },
+      {
+        "listings": 2,
+        "unit_price": 303,
+        "quantity": 164
+      },
+      {
+        "listings": 1,
+        "unit_price": 262,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 261,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 253,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 252,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 229,
+        "quantity": 500
+      },
+      {
+        "listings": 6,
+        "unit_price": 224,
+        "quantity": 1247
+      },
+      {
+        "listings": 6,
+        "unit_price": 223,
+        "quantity": 1500
+      },
+      {
+        "listings": 2,
+        "unit_price": 211,
+        "quantity": 89
+      },
+      {
+        "listings": 2,
+        "unit_price": 205,
+        "quantity": 260
+      },
+      {
+        "listings": 6,
+        "unit_price": 200,
+        "quantity": 1051
+      },
+      {
+        "listings": 4,
+        "unit_price": 199,
+        "quantity": 751
+      },
+      {
+        "listings": 5,
+        "unit_price": 190,
+        "quantity": 1150
+      },
+      {
+        "listings": 2,
+        "unit_price": 170,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 147,
+        "quantity": 60
+      },
+      {
+        "listings": 1,
+        "unit_price": 146,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 108,
+        "quantity": 500
+      },
+      {
+        "listings": 4,
+        "unit_price": 100,
+        "quantity": 253
+      },
+      {
+        "listings": 1,
+        "unit_price": 93,
+        "quantity": 117
+      },
+      {
+        "listings": 1,
+        "unit_price": 77,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 75,
+        "quantity": 100
+      },
+      {
+        "listings": 2,
+        "unit_price": 68,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 61,
+        "quantity": 111
+      },
+      {
+        "listings": 1,
+        "unit_price": 60,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 50,
+        "quantity": 465
+      },
+      {
+        "listings": 1,
+        "unit_price": 48,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 46,
+        "quantity": 200
+      },
+      {
+        "listings": 2,
+        "unit_price": 40,
+        "quantity": 300
+      },
+      {
+        "listings": 1,
+        "unit_price": 39,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 36,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 30,
+        "quantity": 100
+      },
+      {
+        "listings": 1,
+        "unit_price": 29,
+        "quantity": 200
+      },
+      {
+        "listings": 1,
+        "unit_price": 28,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 27,
+        "quantity": 1250
+      },
+      {
+        "listings": 11,
+        "unit_price": 26,
+        "quantity": 2750
+      },
+      {
+        "listings": 1,
+        "unit_price": 25,
+        "quantity": 100
+      },
+      {
+        "listings": 1,
+        "unit_price": 24,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 22,
+        "quantity": 1000
+      },
+      {
+        "listings": 2,
+        "unit_price": 21,
+        "quantity": 11
+      },
+      {
+        "listings": 2,
+        "unit_price": 20,
+        "quantity": 252
+      },
+      {
+        "listings": 1,
+        "unit_price": 17,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 16,
+        "quantity": 12
+      },
+      {
+        "listings": 7,
+        "unit_price": 15,
+        "quantity": 1706
+      },
+      {
+        "listings": 1,
+        "unit_price": 14,
+        "quantity": 187
+      },
+      {
+        "listings": 1,
+        "unit_price": 12,
+        "quantity": 50
+      },
+      {
+        "listings": 2,
+        "unit_price": 11,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 10,
+        "quantity": 32
+      },
+      {
+        "listings": 211,
+        "unit_price": 9,
+        "quantity": 28062
+      },
+      {
+        "listings": 45,
+        "unit_price": 8,
+        "quantity": 2013
+      }
+    ],
+    "sells": [
+      {
+        "listings": 1,
+        "unit_price": 460,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 465,
+        "quantity": 73
+      },
+      {
+        "listings": 23,
+        "unit_price": 468,
+        "quantity": 5737
+      },
+      {
+        "listings": 8,
+        "unit_price": 475,
+        "quantity": 1819
+      },
+      {
+        "listings": 1,
+        "unit_price": 476,
+        "quantity": 200
+      },
+      {
+        "listings": 3,
+        "unit_price": 477,
+        "quantity": 368
+      },
+      {
+        "listings": 7,
+        "unit_price": 478,
+        "quantity": 1361
+      },
+      {
+        "listings": 5,
+        "unit_price": 479,
+        "quantity": 930
+      },
+      {
+        "listings": 10,
+        "unit_price": 480,
+        "quantity": 1749
+      },
+      {
+        "listings": 11,
+        "unit_price": 481,
+        "quantity": 2193
+      },
+      {
+        "listings": 1,
+        "unit_price": 484,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 485,
+        "quantity": 226
+      },
+      {
+        "listings": 3,
+        "unit_price": 486,
+        "quantity": 519
+      },
+      {
+        "listings": 9,
+        "unit_price": 487,
+        "quantity": 2109
+      },
+      {
+        "listings": 45,
+        "unit_price": 488,
+        "quantity": 11113
+      },
+      {
+        "listings": 16,
+        "unit_price": 489,
+        "quantity": 3471
+      },
+      {
+        "listings": 37,
+        "unit_price": 490,
+        "quantity": 9113
+      },
+      {
+        "listings": 17,
+        "unit_price": 491,
+        "quantity": 3543
+      },
+      {
+        "listings": 38,
+        "unit_price": 492,
+        "quantity": 9000
+      },
+      {
+        "listings": 17,
+        "unit_price": 493,
+        "quantity": 3222
+      },
+      {
+        "listings": 1,
+        "unit_price": 494,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 495,
+        "quantity": 406
+      },
+      {
+        "listings": 2,
+        "unit_price": 496,
+        "quantity": 476
+      },
+      {
+        "listings": 13,
+        "unit_price": 497,
+        "quantity": 3046
+      },
+      {
+        "listings": 23,
+        "unit_price": 498,
+        "quantity": 5305
+      },
+      {
+        "listings": 45,
+        "unit_price": 499,
+        "quantity": 10599
+      },
+      {
+        "listings": 233,
+        "unit_price": 500,
+        "quantity": 57185
+      },
+      {
+        "listings": 5,
+        "unit_price": 502,
+        "quantity": 837
+      },
+      {
+        "listings": 6,
+        "unit_price": 503,
+        "quantity": 1487
+      },
+      {
+        "listings": 4,
+        "unit_price": 504,
+        "quantity": 590
+      },
+      {
+        "listings": 5,
+        "unit_price": 505,
+        "quantity": 1250
+      },
+      {
+        "listings": 7,
+        "unit_price": 506,
+        "quantity": 1433
+      },
+      {
+        "listings": 2,
+        "unit_price": 507,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 508,
+        "quantity": 393
+      },
+      {
+        "listings": 2,
+        "unit_price": 509,
+        "quantity": 175
+      },
+      {
+        "listings": 9,
+        "unit_price": 510,
+        "quantity": 1989
+      },
+      {
+        "listings": 5,
+        "unit_price": 513,
+        "quantity": 1016
+      },
+      {
+        "listings": 1,
+        "unit_price": 514,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 515,
+        "quantity": 204
+      },
+      {
+        "listings": 2,
+        "unit_price": 516,
+        "quantity": 500
+      },
+      {
+        "listings": 8,
+        "unit_price": 517,
+        "quantity": 1698
+      },
+      {
+        "listings": 10,
+        "unit_price": 518,
+        "quantity": 1832
+      },
+      {
+        "listings": 6,
+        "unit_price": 519,
+        "quantity": 738
+      },
+      {
+        "listings": 15,
+        "unit_price": 520,
+        "quantity": 3335
+      },
+      {
+        "listings": 3,
+        "unit_price": 521,
+        "quantity": 750
+      },
+      {
+        "listings": 4,
+        "unit_price": 522,
+        "quantity": 790
+      },
+      {
+        "listings": 4,
+        "unit_price": 525,
+        "quantity": 770
+      },
+      {
+        "listings": 4,
+        "unit_price": 526,
+        "quantity": 1000
+      },
+      {
+        "listings": 2,
+        "unit_price": 528,
+        "quantity": 500
+      },
+      {
+        "listings": 8,
+        "unit_price": 529,
+        "quantity": 1580
+      },
+      {
+        "listings": 1,
+        "unit_price": 531,
+        "quantity": 78
+      },
+      {
+        "listings": 2,
+        "unit_price": 532,
+        "quantity": 286
+      },
+      {
+        "listings": 1,
+        "unit_price": 534,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 535,
+        "quantity": 750
+      },
+      {
+        "listings": 2,
+        "unit_price": 536,
+        "quantity": 41
+      },
+      {
+        "listings": 61,
+        "unit_price": 537,
+        "quantity": 15033
+      },
+      {
+        "listings": 29,
+        "unit_price": 538,
+        "quantity": 7250
+      },
+      {
+        "listings": 1,
+        "unit_price": 539,
+        "quantity": 9
+      },
+      {
+        "listings": 53,
+        "unit_price": 540,
+        "quantity": 12682
+      },
+      {
+        "listings": 1,
+        "unit_price": 541,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 542,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 544,
+        "quantity": 58
+      },
+      {
+        "listings": 2,
+        "unit_price": 545,
+        "quantity": 114
+      },
+      {
+        "listings": 1,
+        "unit_price": 547,
+        "quantity": 68
+      },
+      {
+        "listings": 21,
+        "unit_price": 548,
+        "quantity": 4689
+      },
+      {
+        "listings": 40,
+        "unit_price": 549,
+        "quantity": 9784
+      },
+      {
+        "listings": 29,
+        "unit_price": 550,
+        "quantity": 6911
+      },
+      {
+        "listings": 2,
+        "unit_price": 551,
+        "quantity": 288
+      },
+      {
+        "listings": 2,
+        "unit_price": 552,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 553,
+        "quantity": 559
+      },
+      {
+        "listings": 7,
+        "unit_price": 554,
+        "quantity": 1465
+      },
+      {
+        "listings": 2,
+        "unit_price": 555,
+        "quantity": 299
+      },
+      {
+        "listings": 2,
+        "unit_price": 556,
+        "quantity": 396
+      },
+      {
+        "listings": 10,
+        "unit_price": 560,
+        "quantity": 2187
+      },
+      {
+        "listings": 3,
+        "unit_price": 563,
+        "quantity": 488
+      },
+      {
+        "listings": 4,
+        "unit_price": 564,
+        "quantity": 808
+      },
+      {
+        "listings": 15,
+        "unit_price": 565,
+        "quantity": 3434
+      },
+      {
+        "listings": 10,
+        "unit_price": 566,
+        "quantity": 2377
+      },
+      {
+        "listings": 16,
+        "unit_price": 567,
+        "quantity": 3765
+      },
+      {
+        "listings": 3,
+        "unit_price": 568,
+        "quantity": 648
+      },
+      {
+        "listings": 6,
+        "unit_price": 569,
+        "quantity": 686
+      },
+      {
+        "listings": 7,
+        "unit_price": 570,
+        "quantity": 1286
+      },
+      {
+        "listings": 1,
+        "unit_price": 571,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 572,
+        "quantity": 1250
+      },
+      {
+        "listings": 64,
+        "unit_price": 573,
+        "quantity": 15942
+      },
+      {
+        "listings": 2,
+        "unit_price": 574,
+        "quantity": 87
+      },
+      {
+        "listings": 1,
+        "unit_price": 575,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 576,
+        "quantity": 637
+      },
+      {
+        "listings": 1,
+        "unit_price": 577,
+        "quantity": 90
+      },
+      {
+        "listings": 7,
+        "unit_price": 578,
+        "quantity": 1618
+      },
+      {
+        "listings": 8,
+        "unit_price": 580,
+        "quantity": 2000
+      },
+      {
+        "listings": 3,
+        "unit_price": 581,
+        "quantity": 527
+      },
+      {
+        "listings": 8,
+        "unit_price": 585,
+        "quantity": 1624
+      },
+      {
+        "listings": 2,
+        "unit_price": 586,
+        "quantity": 393
+      },
+      {
+        "listings": 8,
+        "unit_price": 587,
+        "quantity": 2000
+      },
+      {
+        "listings": 5,
+        "unit_price": 588,
+        "quantity": 1084
+      },
+      {
+        "listings": 1,
+        "unit_price": 589,
+        "quantity": 108
+      },
+      {
+        "listings": 1,
+        "unit_price": 590,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 591,
+        "quantity": 408
+      },
+      {
+        "listings": 2,
+        "unit_price": 593,
+        "quantity": 500
+      },
+      {
+        "listings": 19,
+        "unit_price": 594,
+        "quantity": 4568
+      },
+      {
+        "listings": 143,
+        "unit_price": 595,
+        "quantity": 35460
+      },
+      {
+        "listings": 3,
+        "unit_price": 596,
+        "quantity": 750
+      },
+      {
+        "listings": 24,
+        "unit_price": 598,
+        "quantity": 5262
+      },
+      {
+        "listings": 6,
+        "unit_price": 599,
+        "quantity": 1300
+      },
+      {
+        "listings": 105,
+        "unit_price": 600,
+        "quantity": 25272
+      },
+      {
+        "listings": 4,
+        "unit_price": 602,
+        "quantity": 1000
+      },
+      {
+        "listings": 10,
+        "unit_price": 604,
+        "quantity": 2481
+      },
+      {
+        "listings": 7,
+        "unit_price": 605,
+        "quantity": 1666
+      },
+      {
+        "listings": 3,
+        "unit_price": 607,
+        "quantity": 591
+      },
+      {
+        "listings": 7,
+        "unit_price": 608,
+        "quantity": 1157
+      },
+      {
+        "listings": 2,
+        "unit_price": 609,
+        "quantity": 398
+      },
+      {
+        "listings": 5,
+        "unit_price": 611,
+        "quantity": 1250
+      },
+      {
+        "listings": 6,
+        "unit_price": 612,
+        "quantity": 1500
+      },
+      {
+        "listings": 2,
+        "unit_price": 613,
+        "quantity": 301
+      },
+      {
+        "listings": 1,
+        "unit_price": 614,
+        "quantity": 50
+      },
+      {
+        "listings": 29,
+        "unit_price": 615,
+        "quantity": 7077
+      },
+      {
+        "listings": 1,
+        "unit_price": 617,
+        "quantity": 21
+      },
+      {
+        "listings": 1,
+        "unit_price": 618,
+        "quantity": 9
+      },
+      {
+        "listings": 1,
+        "unit_price": 619,
+        "quantity": 250
+      },
+      {
+        "listings": 7,
+        "unit_price": 620,
+        "quantity": 1512
+      },
+      {
+        "listings": 5,
+        "unit_price": 621,
+        "quantity": 1250
+      },
+      {
+        "listings": 3,
+        "unit_price": 625,
+        "quantity": 583
+      },
+      {
+        "listings": 5,
+        "unit_price": 626,
+        "quantity": 1250
+      },
+      {
+        "listings": 3,
+        "unit_price": 629,
+        "quantity": 750
+      },
+      {
+        "listings": 1,
+        "unit_price": 632,
+        "quantity": 201
+      },
+      {
+        "listings": 3,
+        "unit_price": 633,
+        "quantity": 750
+      },
+      {
+        "listings": 5,
+        "unit_price": 635,
+        "quantity": 1250
+      },
+      {
+        "listings": 2,
+        "unit_price": 637,
+        "quantity": 251
+      },
+      {
+        "listings": 1,
+        "unit_price": 639,
+        "quantity": 27
+      },
+      {
+        "listings": 57,
+        "unit_price": 640,
+        "quantity": 14209
+      },
+      {
+        "listings": 13,
+        "unit_price": 650,
+        "quantity": 3069
+      },
+      {
+        "listings": 2,
+        "unit_price": 655,
+        "quantity": 500
+      },
+      {
+        "listings": 9,
+        "unit_price": 662,
+        "quantity": 2128
+      },
+      {
+        "listings": 6,
+        "unit_price": 663,
+        "quantity": 1218
+      },
+      {
+        "listings": 1,
+        "unit_price": 664,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 666,
+        "quantity": 1250
+      },
+      {
+        "listings": 2,
+        "unit_price": 667,
+        "quantity": 340
+      },
+      {
+        "listings": 3,
+        "unit_price": 668,
+        "quantity": 664
+      },
+      {
+        "listings": 13,
+        "unit_price": 669,
+        "quantity": 2871
+      },
+      {
+        "listings": 8,
+        "unit_price": 670,
+        "quantity": 1860
+      },
+      {
+        "listings": 8,
+        "unit_price": 671,
+        "quantity": 1621
+      },
+      {
+        "listings": 3,
+        "unit_price": 673,
+        "quantity": 512
+      },
+      {
+        "listings": 1,
+        "unit_price": 674,
+        "quantity": 123
+      },
+      {
+        "listings": 4,
+        "unit_price": 675,
+        "quantity": 969
+      },
+      {
+        "listings": 1,
+        "unit_price": 676,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 677,
+        "quantity": 1045
+      },
+      {
+        "listings": 2,
+        "unit_price": 678,
+        "quantity": 199
+      },
+      {
+        "listings": 9,
+        "unit_price": 679,
+        "quantity": 2025
+      },
+      {
+        "listings": 54,
+        "unit_price": 680,
+        "quantity": 13302
+      },
+      {
+        "listings": 2,
+        "unit_price": 683,
+        "quantity": 500
+      },
+      {
+        "listings": 4,
+        "unit_price": 684,
+        "quantity": 893
+      },
+      {
+        "listings": 1,
+        "unit_price": 685,
+        "quantity": 250
+      },
+      {
+        "listings": 38,
+        "unit_price": 686,
+        "quantity": 9307
+      },
+      {
+        "listings": 16,
+        "unit_price": 687,
+        "quantity": 3765
+      },
+      {
+        "listings": 20,
+        "unit_price": 688,
+        "quantity": 4799
+      },
+      {
+        "listings": 19,
+        "unit_price": 689,
+        "quantity": 4750
+      },
+      {
+        "listings": 28,
+        "unit_price": 690,
+        "quantity": 7000
+      },
+      {
+        "listings": 1,
+        "unit_price": 691,
+        "quantity": 14
+      },
+      {
+        "listings": 4,
+        "unit_price": 694,
+        "quantity": 768
+      },
+      {
+        "listings": 5,
+        "unit_price": 696,
+        "quantity": 1081
+      },
+      {
+        "listings": 25,
+        "unit_price": 697,
+        "quantity": 5991
+      },
+      {
+        "listings": 56,
+        "unit_price": 698,
+        "quantity": 13734
+      },
+      {
+        "listings": 82,
+        "unit_price": 699,
+        "quantity": 19747
+      },
+      {
+        "listings": 26,
+        "unit_price": 700,
+        "quantity": 5845
+      },
+      {
+        "listings": 2,
+        "unit_price": 701,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 702,
+        "quantity": 87
+      },
+      {
+        "listings": 4,
+        "unit_price": 704,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 705,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 707,
+        "quantity": 32
+      },
+      {
+        "listings": 10,
+        "unit_price": 708,
+        "quantity": 2500
+      },
+      {
+        "listings": 1,
+        "unit_price": 714,
+        "quantity": 1
+      },
+      {
+        "listings": 15,
+        "unit_price": 718,
+        "quantity": 3617
+      },
+      {
+        "listings": 11,
+        "unit_price": 720,
+        "quantity": 2750
+      },
+      {
+        "listings": 4,
+        "unit_price": 721,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 724,
+        "quantity": 7
+      },
+      {
+        "listings": 3,
+        "unit_price": 726,
+        "quantity": 750
+      },
+      {
+        "listings": 2,
+        "unit_price": 731,
+        "quantity": 367
+      },
+      {
+        "listings": 1,
+        "unit_price": 732,
+        "quantity": 95
+      },
+      {
+        "listings": 6,
+        "unit_price": 733,
+        "quantity": 1500
+      },
+      {
+        "listings": 4,
+        "unit_price": 734,
+        "quantity": 809
+      },
+      {
+        "listings": 4,
+        "unit_price": 735,
+        "quantity": 859
+      },
+      {
+        "listings": 2,
+        "unit_price": 737,
+        "quantity": 379
+      },
+      {
+        "listings": 5,
+        "unit_price": 739,
+        "quantity": 1116
+      },
+      {
+        "listings": 7,
+        "unit_price": 740,
+        "quantity": 1198
+      },
+      {
+        "listings": 2,
+        "unit_price": 741,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 744,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 749,
+        "quantity": 50
+      },
+      {
+        "listings": 8,
+        "unit_price": 750,
+        "quantity": 1629
+      },
+      {
+        "listings": 1,
+        "unit_price": 751,
+        "quantity": 38
+      },
+      {
+        "listings": 2,
+        "unit_price": 752,
+        "quantity": 359
+      },
+      {
+        "listings": 1,
+        "unit_price": 753,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 754,
+        "quantity": 419
+      },
+      {
+        "listings": 4,
+        "unit_price": 757,
+        "quantity": 1000
+      },
+      {
+        "listings": 3,
+        "unit_price": 758,
+        "quantity": 750
+      },
+      {
+        "listings": 2,
+        "unit_price": 760,
+        "quantity": 396
+      },
+      {
+        "listings": 13,
+        "unit_price": 766,
+        "quantity": 3215
+      },
+      {
+        "listings": 13,
+        "unit_price": 767,
+        "quantity": 3248
+      },
+      {
+        "listings": 9,
+        "unit_price": 768,
+        "quantity": 2094
+      },
+      {
+        "listings": 3,
+        "unit_price": 770,
+        "quantity": 417
+      },
+      {
+        "listings": 1,
+        "unit_price": 775,
+        "quantity": 250
+      },
+      {
+        "listings": 7,
+        "unit_price": 777,
+        "quantity": 1750
+      },
+      {
+        "listings": 3,
+        "unit_price": 778,
+        "quantity": 591
+      },
+      {
+        "listings": 33,
+        "unit_price": 779,
+        "quantity": 8089
+      },
+      {
+        "listings": 41,
+        "unit_price": 780,
+        "quantity": 9902
+      },
+      {
+        "listings": 14,
+        "unit_price": 783,
+        "quantity": 3388
+      },
+      {
+        "listings": 3,
+        "unit_price": 785,
+        "quantity": 548
+      },
+      {
+        "listings": 2,
+        "unit_price": 786,
+        "quantity": 360
+      },
+      {
+        "listings": 2,
+        "unit_price": 787,
+        "quantity": 500
+      },
+      {
+        "listings": 15,
+        "unit_price": 788,
+        "quantity": 3750
+      },
+      {
+        "listings": 9,
+        "unit_price": 789,
+        "quantity": 1868
+      },
+      {
+        "listings": 49,
+        "unit_price": 790,
+        "quantity": 12212
+      },
+      {
+        "listings": 1,
+        "unit_price": 793,
+        "quantity": 250
+      },
+      {
+        "listings": 8,
+        "unit_price": 794,
+        "quantity": 1744
+      },
+      {
+        "listings": 2,
+        "unit_price": 795,
+        "quantity": 347
+      },
+      {
+        "listings": 1,
+        "unit_price": 797,
+        "quantity": 83
+      },
+      {
+        "listings": 8,
+        "unit_price": 798,
+        "quantity": 1437
+      },
+      {
+        "listings": 15,
+        "unit_price": 799,
+        "quantity": 3507
+      },
+      {
+        "listings": 108,
+        "unit_price": 800,
+        "quantity": 26491
+      },
+      {
+        "listings": 41,
+        "unit_price": 801,
+        "quantity": 10166
+      },
+      {
+        "listings": 2,
+        "unit_price": 802,
+        "quantity": 69
+      },
+      {
+        "listings": 4,
+        "unit_price": 803,
+        "quantity": 754
+      },
+      {
+        "listings": 9,
+        "unit_price": 804,
+        "quantity": 1767
+      },
+      {
+        "listings": 5,
+        "unit_price": 805,
+        "quantity": 808
+      },
+      {
+        "listings": 11,
+        "unit_price": 806,
+        "quantity": 2561
+      },
+      {
+        "listings": 32,
+        "unit_price": 807,
+        "quantity": 7337
+      },
+      {
+        "listings": 47,
+        "unit_price": 808,
+        "quantity": 11598
+      },
+      {
+        "listings": 8,
+        "unit_price": 809,
+        "quantity": 2000
+      },
+      {
+        "listings": 4,
+        "unit_price": 810,
+        "quantity": 487
+      },
+      {
+        "listings": 51,
+        "unit_price": 811,
+        "quantity": 12579
+      },
+      {
+        "listings": 1,
+        "unit_price": 812,
+        "quantity": 211
+      },
+      {
+        "listings": 4,
+        "unit_price": 813,
+        "quantity": 800
+      },
+      {
+        "listings": 39,
+        "unit_price": 814,
+        "quantity": 9539
+      },
+      {
+        "listings": 64,
+        "unit_price": 815,
+        "quantity": 16000
+      },
+      {
+        "listings": 1,
+        "unit_price": 816,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 817,
+        "quantity": 1250
+      },
+      {
+        "listings": 10,
+        "unit_price": 818,
+        "quantity": 2226
+      },
+      {
+        "listings": 6,
+        "unit_price": 819,
+        "quantity": 1283
+      },
+      {
+        "listings": 1,
+        "unit_price": 820,
+        "quantity": 2
+      },
+      {
+        "listings": 2,
+        "unit_price": 822,
+        "quantity": 91
+      },
+      {
+        "listings": 2,
+        "unit_price": 827,
+        "quantity": 429
+      },
+      {
+        "listings": 1,
+        "unit_price": 828,
+        "quantity": 239
+      },
+      {
+        "listings": 1,
+        "unit_price": 829,
+        "quantity": 9
+      },
+      {
+        "listings": 12,
+        "unit_price": 830,
+        "quantity": 3000
+      },
+      {
+        "listings": 1,
+        "unit_price": 832,
+        "quantity": 199
+      },
+      {
+        "listings": 4,
+        "unit_price": 834,
+        "quantity": 932
+      },
+      {
+        "listings": 1,
+        "unit_price": 835,
+        "quantity": 250
+      },
+      {
+        "listings": 16,
+        "unit_price": 838,
+        "quantity": 3733
+      },
+      {
+        "listings": 1,
+        "unit_price": 839,
+        "quantity": 5
+      },
+      {
+        "listings": 9,
+        "unit_price": 840,
+        "quantity": 2250
+      },
+      {
+        "listings": 4,
+        "unit_price": 847,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 850,
+        "quantity": 674
+      },
+      {
+        "listings": 1,
+        "unit_price": 851,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 854,
+        "quantity": 3
+      },
+      {
+        "listings": 6,
+        "unit_price": 855,
+        "quantity": 1208
+      },
+      {
+        "listings": 1,
+        "unit_price": 856,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 860,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 863,
+        "quantity": 26
+      },
+      {
+        "listings": 1,
+        "unit_price": 870,
+        "quantity": 250
+      },
+      {
+        "listings": 17,
+        "unit_price": 874,
+        "quantity": 4250
+      },
+      {
+        "listings": 1,
+        "unit_price": 875,
+        "quantity": 1
+      },
+      {
+        "listings": 4,
+        "unit_price": 879,
+        "quantity": 750
+      },
+      {
+        "listings": 11,
+        "unit_price": 880,
+        "quantity": 2501
+      },
+      {
+        "listings": 1,
+        "unit_price": 882,
+        "quantity": 250
+      },
+      {
+        "listings": 4,
+        "unit_price": 883,
+        "quantity": 771
+      },
+      {
+        "listings": 1,
+        "unit_price": 884,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 886,
+        "quantity": 50
+      },
+      {
+        "listings": 39,
+        "unit_price": 887,
+        "quantity": 9368
+      },
+      {
+        "listings": 3,
+        "unit_price": 889,
+        "quantity": 501
+      },
+      {
+        "listings": 1,
+        "unit_price": 892,
+        "quantity": 101
+      },
+      {
+        "listings": 3,
+        "unit_price": 895,
+        "quantity": 407
+      },
+      {
+        "listings": 4,
+        "unit_price": 896,
+        "quantity": 625
+      },
+      {
+        "listings": 2,
+        "unit_price": 898,
+        "quantity": 300
+      },
+      {
+        "listings": 30,
+        "unit_price": 900,
+        "quantity": 6839
+      },
+      {
+        "listings": 1,
+        "unit_price": 903,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 905,
+        "quantity": 581
+      },
+      {
+        "listings": 1,
+        "unit_price": 908,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 909,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 911,
+        "quantity": 50
+      },
+      {
+        "listings": 4,
+        "unit_price": 912,
+        "quantity": 1000
+      },
+      {
+        "listings": 8,
+        "unit_price": 918,
+        "quantity": 1630
+      },
+      {
+        "listings": 10,
+        "unit_price": 919,
+        "quantity": 2420
+      },
+      {
+        "listings": 3,
+        "unit_price": 924,
+        "quantity": 750
+      },
+      {
+        "listings": 1,
+        "unit_price": 925,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 944,
+        "quantity": 250
+      },
+      {
+        "listings": 7,
+        "unit_price": 950,
+        "quantity": 1535
+      },
+      {
+        "listings": 2,
+        "unit_price": 958,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 959,
+        "quantity": 510
+      },
+      {
+        "listings": 1,
+        "unit_price": 964,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 965,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 969,
+        "quantity": 378
+      },
+      {
+        "listings": 1,
+        "unit_price": 970,
+        "quantity": 48
+      },
+      {
+        "listings": 1,
+        "unit_price": 971,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 973,
+        "quantity": 589
+      },
+      {
+        "listings": 3,
+        "unit_price": 974,
+        "quantity": 735
+      },
+      {
+        "listings": 1,
+        "unit_price": 976,
+        "quantity": 218
+      },
+      {
+        "listings": 1,
+        "unit_price": 977,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 978,
+        "quantity": 558
+      },
+      {
+        "listings": 2,
+        "unit_price": 979,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 980,
+        "quantity": 43
+      },
+      {
+        "listings": 1,
+        "unit_price": 981,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 983,
+        "quantity": 420
+      },
+      {
+        "listings": 2,
+        "unit_price": 984,
+        "quantity": 297
+      },
+      {
+        "listings": 1,
+        "unit_price": 985,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 986,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 987,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 988,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 989,
+        "quantity": 1176
+      },
+      {
+        "listings": 9,
+        "unit_price": 995,
+        "quantity": 2250
+      },
+      {
+        "listings": 2,
+        "unit_price": 996,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 997,
+        "quantity": 193
+      },
+      {
+        "listings": 58,
+        "unit_price": 999,
+        "quantity": 14304
+      },
+      {
+        "listings": 106,
+        "unit_price": 1000,
+        "quantity": 26272
+      },
+      {
+        "listings": 1,
+        "unit_price": 1005,
+        "quantity": 167
+      },
+      {
+        "listings": 1,
+        "unit_price": 1013,
+        "quantity": 67
+      },
+      {
+        "listings": 1,
+        "unit_price": 1015,
+        "quantity": 67
+      },
+      {
+        "listings": 1,
+        "unit_price": 1019,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1020,
+        "quantity": 89
+      },
+      {
+        "listings": 1,
+        "unit_price": 1021,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1022,
+        "quantity": 18
+      },
+      {
+        "listings": 1,
+        "unit_price": 1023,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1024,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1025,
+        "quantity": 223
+      },
+      {
+        "listings": 1,
+        "unit_price": 1027,
+        "quantity": 71
+      },
+      {
+        "listings": 1,
+        "unit_price": 1029,
+        "quantity": 50
+      },
+      {
+        "listings": 3,
+        "unit_price": 1030,
+        "quantity": 585
+      },
+      {
+        "listings": 1,
+        "unit_price": 1035,
+        "quantity": 11
+      },
+      {
+        "listings": 1,
+        "unit_price": 1036,
+        "quantity": 23
+      },
+      {
+        "listings": 3,
+        "unit_price": 1038,
+        "quantity": 534
+      },
+      {
+        "listings": 1,
+        "unit_price": 1046,
+        "quantity": 250
+      },
+      {
+        "listings": 17,
+        "unit_price": 1049,
+        "quantity": 4250
+      },
+      {
+        "listings": 4,
+        "unit_price": 1056,
+        "quantity": 664
+      },
+      {
+        "listings": 4,
+        "unit_price": 1057,
+        "quantity": 1000
+      },
+      {
+        "listings": 4,
+        "unit_price": 1058,
+        "quantity": 1000
+      },
+      {
+        "listings": 2,
+        "unit_price": 1070,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1083,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1084,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1085,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1086,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1087,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1088,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1089,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1090,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1091,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1092,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1093,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 1094,
+        "quantity": 607
+      },
+      {
+        "listings": 3,
+        "unit_price": 1095,
+        "quantity": 750
+      },
+      {
+        "listings": 2,
+        "unit_price": 1096,
+        "quantity": 500
+      },
+      {
+        "listings": 6,
+        "unit_price": 1097,
+        "quantity": 1500
+      },
+      {
+        "listings": 5,
+        "unit_price": 1098,
+        "quantity": 1250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1099,
+        "quantity": 34
+      },
+      {
+        "listings": 2,
+        "unit_price": 1107,
+        "quantity": 135
+      },
+      {
+        "listings": 2,
+        "unit_price": 1109,
+        "quantity": 450
+      },
+      {
+        "listings": 1,
+        "unit_price": 1112,
+        "quantity": 100
+      },
+      {
+        "listings": 1,
+        "unit_price": 1113,
+        "quantity": 250
+      },
+      {
+        "listings": 10,
+        "unit_price": 1114,
+        "quantity": 2500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1118,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1119,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1120,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1121,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 1122,
+        "quantity": 571
+      },
+      {
+        "listings": 1,
+        "unit_price": 1123,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1125,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1128,
+        "quantity": 88
+      },
+      {
+        "listings": 1,
+        "unit_price": 1129,
+        "quantity": 225
+      },
+      {
+        "listings": 1,
+        "unit_price": 1130,
+        "quantity": 85
+      },
+      {
+        "listings": 1,
+        "unit_price": 1139,
+        "quantity": 124
+      },
+      {
+        "listings": 2,
+        "unit_price": 1147,
+        "quantity": 398
+      },
+      {
+        "listings": 1,
+        "unit_price": 1148,
+        "quantity": 180
+      },
+      {
+        "listings": 1,
+        "unit_price": 1149,
+        "quantity": 2
+      },
+      {
+        "listings": 2,
+        "unit_price": 1150,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1169,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1170,
+        "quantity": 145
+      },
+      {
+        "listings": 1,
+        "unit_price": 1171,
+        "quantity": 172
+      },
+      {
+        "listings": 2,
+        "unit_price": 1176,
+        "quantity": 265
+      },
+      {
+        "listings": 3,
+        "unit_price": 1185,
+        "quantity": 528
+      },
+      {
+        "listings": 1,
+        "unit_price": 1187,
+        "quantity": 250
+      },
+      {
+        "listings": 40,
+        "unit_price": 1189,
+        "quantity": 10000
+      },
+      {
+        "listings": 1,
+        "unit_price": 1193,
+        "quantity": 190
+      },
+      {
+        "listings": 3,
+        "unit_price": 1198,
+        "quantity": 730
+      },
+      {
+        "listings": 6,
+        "unit_price": 1200,
+        "quantity": 1500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1202,
+        "quantity": 363
+      },
+      {
+        "listings": 1,
+        "unit_price": 1205,
+        "quantity": 25
+      },
+      {
+        "listings": 1,
+        "unit_price": 1209,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1210,
+        "quantity": 106
+      },
+      {
+        "listings": 1,
+        "unit_price": 1211,
+        "quantity": 151
+      },
+      {
+        "listings": 1,
+        "unit_price": 1212,
+        "quantity": 68
+      },
+      {
+        "listings": 1,
+        "unit_price": 1213,
+        "quantity": 148
+      },
+      {
+        "listings": 1,
+        "unit_price": 1219,
+        "quantity": 88
+      },
+      {
+        "listings": 41,
+        "unit_price": 1233,
+        "quantity": 10109
+      },
+      {
+        "listings": 1,
+        "unit_price": 1235,
+        "quantity": 107
+      },
+      {
+        "listings": 1,
+        "unit_price": 1242,
+        "quantity": 186
+      },
+      {
+        "listings": 1,
+        "unit_price": 1249,
+        "quantity": 117
+      },
+      {
+        "listings": 1,
+        "unit_price": 1273,
+        "quantity": 129
+      },
+      {
+        "listings": 1,
+        "unit_price": 1274,
+        "quantity": 87
+      },
+      {
+        "listings": 1,
+        "unit_price": 1275,
+        "quantity": 116
+      },
+      {
+        "listings": 1,
+        "unit_price": 1283,
+        "quantity": 138
+      },
+      {
+        "listings": 1,
+        "unit_price": 1291,
+        "quantity": 90
+      },
+      {
+        "listings": 2,
+        "unit_price": 1292,
+        "quantity": 268
+      },
+      {
+        "listings": 1,
+        "unit_price": 1298,
+        "quantity": 90
+      },
+      {
+        "listings": 1,
+        "unit_price": 1302,
+        "quantity": 52
+      },
+      {
+        "listings": 1,
+        "unit_price": 1303,
+        "quantity": 95
+      },
+      {
+        "listings": 1,
+        "unit_price": 1305,
+        "quantity": 112
+      },
+      {
+        "listings": 3,
+        "unit_price": 1313,
+        "quantity": 750
+      },
+      {
+        "listings": 3,
+        "unit_price": 1314,
+        "quantity": 750
+      },
+      {
+        "listings": 4,
+        "unit_price": 1316,
+        "quantity": 1000
+      },
+      {
+        "listings": 5,
+        "unit_price": 1318,
+        "quantity": 1250
+      },
+      {
+        "listings": 10,
+        "unit_price": 1319,
+        "quantity": 2284
+      },
+      {
+        "listings": 14,
+        "unit_price": 1320,
+        "quantity": 3259
+      },
+      {
+        "listings": 5,
+        "unit_price": 1321,
+        "quantity": 1250
+      },
+      {
+        "listings": 3,
+        "unit_price": 1322,
+        "quantity": 750
+      },
+      {
+        "listings": 1,
+        "unit_price": 1330,
+        "quantity": 169
+      },
+      {
+        "listings": 4,
+        "unit_price": 1331,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 1339,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 1348,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 1352,
+        "quantity": 1250
+      },
+      {
+        "listings": 5,
+        "unit_price": 1353,
+        "quantity": 1250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1354,
+        "quantity": 20
+      },
+      {
+        "listings": 1,
+        "unit_price": 1355,
+        "quantity": 48
+      },
+      {
+        "listings": 1,
+        "unit_price": 1369,
+        "quantity": 16
+      },
+      {
+        "listings": 2,
+        "unit_price": 1375,
+        "quantity": 264
+      },
+      {
+        "listings": 1,
+        "unit_price": 1376,
+        "quantity": 250
+      },
+      {
+        "listings": 5,
+        "unit_price": 1377,
+        "quantity": 1250
+      },
+      {
+        "listings": 13,
+        "unit_price": 1379,
+        "quantity": 3250
+      },
+      {
+        "listings": 4,
+        "unit_price": 1381,
+        "quantity": 846
+      },
+      {
+        "listings": 1,
+        "unit_price": 1387,
+        "quantity": 69
+      },
+      {
+        "listings": 2,
+        "unit_price": 1395,
+        "quantity": 252
+      },
+      {
+        "listings": 2,
+        "unit_price": 1397,
+        "quantity": 457
+      },
+      {
+        "listings": 2,
+        "unit_price": 1400,
+        "quantity": 500
+      },
+      {
+        "listings": 3,
+        "unit_price": 1401,
+        "quantity": 721
+      },
+      {
+        "listings": 1,
+        "unit_price": 1402,
+        "quantity": 83
+      },
+      {
+        "listings": 1,
+        "unit_price": 1404,
+        "quantity": 202
+      },
+      {
+        "listings": 2,
+        "unit_price": 1423,
+        "quantity": 373
+      },
+      {
+        "listings": 1,
+        "unit_price": 1426,
+        "quantity": 59
+      },
+      {
+        "listings": 1,
+        "unit_price": 1462,
+        "quantity": 37
+      },
+      {
+        "listings": 2,
+        "unit_price": 1475,
+        "quantity": 500
+      },
+      {
+        "listings": 8,
+        "unit_price": 1500,
+        "quantity": 1896
+      },
+      {
+        "listings": 1,
+        "unit_price": 1506,
+        "quantity": 67
+      },
+      {
+        "listings": 2,
+        "unit_price": 1507,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1511,
+        "quantity": 11
+      },
+      {
+        "listings": 1,
+        "unit_price": 1522,
+        "quantity": 15
+      },
+      {
+        "listings": 1,
+        "unit_price": 1523,
+        "quantity": 36
+      },
+      {
+        "listings": 1,
+        "unit_price": 1525,
+        "quantity": 165
+      },
+      {
+        "listings": 1,
+        "unit_price": 1532,
+        "quantity": 91
+      },
+      {
+        "listings": 4,
+        "unit_price": 1533,
+        "quantity": 1000
+      },
+      {
+        "listings": 1,
+        "unit_price": 1538,
+        "quantity": 13
+      },
+      {
+        "listings": 2,
+        "unit_price": 1563,
+        "quantity": 264
+      },
+      {
+        "listings": 1,
+        "unit_price": 1594,
+        "quantity": 194
+      },
+      {
+        "listings": 1,
+        "unit_price": 1595,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1596,
+        "quantity": 367
+      },
+      {
+        "listings": 1,
+        "unit_price": 1603,
+        "quantity": 166
+      },
+      {
+        "listings": 2,
+        "unit_price": 1604,
+        "quantity": 360
+      },
+      {
+        "listings": 1,
+        "unit_price": 1606,
+        "quantity": 158
+      },
+      {
+        "listings": 1,
+        "unit_price": 1608,
+        "quantity": 200
+      },
+      {
+        "listings": 5,
+        "unit_price": 1609,
+        "quantity": 1250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1617,
+        "quantity": 58
+      },
+      {
+        "listings": 1,
+        "unit_price": 1620,
+        "quantity": 31
+      },
+      {
+        "listings": 3,
+        "unit_price": 1622,
+        "quantity": 544
+      },
+      {
+        "listings": 8,
+        "unit_price": 1623,
+        "quantity": 2000
+      },
+      {
+        "listings": 1,
+        "unit_price": 1624,
+        "quantity": 230
+      },
+      {
+        "listings": 1,
+        "unit_price": 1626,
+        "quantity": 85
+      },
+      {
+        "listings": 1,
+        "unit_price": 1631,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 1685,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1689,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 1698,
+        "quantity": 537
+      },
+      {
+        "listings": 3,
+        "unit_price": 1699,
+        "quantity": 733
+      },
+      {
+        "listings": 1,
+        "unit_price": 1700,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1710,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1715,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1716,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1717,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1718,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1719,
+        "quantity": 250
+      },
+      {
+        "listings": 2,
+        "unit_price": 1724,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1725,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1726,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1741,
+        "quantity": 322
+      },
+      {
+        "listings": 2,
+        "unit_price": 1749,
+        "quantity": 274
+      },
+      {
+        "listings": 10,
+        "unit_price": 1750,
+        "quantity": 2500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1758,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 1759,
+        "quantity": 553
+      },
+      {
+        "listings": 1,
+        "unit_price": 1763,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1766,
+        "quantity": 250
+      },
+      {
+        "listings": 3,
+        "unit_price": 1786,
+        "quantity": 655
+      },
+      {
+        "listings": 1,
+        "unit_price": 1799,
+        "quantity": 185
+      },
+      {
+        "listings": 2,
+        "unit_price": 1800,
+        "quantity": 500
+      },
+      {
+        "listings": 2,
+        "unit_price": 1827,
+        "quantity": 500
+      },
+      {
+        "listings": 1,
+        "unit_price": 1831,
+        "quantity": 98
+      },
+      {
+        "listings": 2,
+        "unit_price": 1833,
+        "quantity": 334
+      },
+      {
+        "listings": 1,
+        "unit_price": 1835,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1836,
+        "quantity": 112
+      },
+      {
+        "listings": 1,
+        "unit_price": 1837,
+        "quantity": 53
+      },
+      {
+        "listings": 1,
+        "unit_price": 1840,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1849,
+        "quantity": 100
+      },
+      {
+        "listings": 1,
+        "unit_price": 1850,
+        "quantity": 50
+      },
+      {
+        "listings": 1,
+        "unit_price": 1860,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1870,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1880,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1890,
+        "quantity": 10
+      },
+      {
+        "listings": 1,
+        "unit_price": 1895,
+        "quantity": 1
+      },
+      {
+        "listings": 2,
+        "unit_price": 1899,
+        "quantity": 195
+      },
+      {
+        "listings": 1,
+        "unit_price": 1900,
+        "quantity": 10
+      },
+      {
+        "listings": 3,
+        "unit_price": 1950,
+        "quantity": 644
+      },
+      {
+        "listings": 1,
+        "unit_price": 1970,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1979,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1989,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 1996,
+        "quantity": 243
+      },
+      {
+        "listings": 2,
+        "unit_price": 1997,
+        "quantity": 450
+      },
+      {
+        "listings": 1,
+        "unit_price": 2016,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 2094,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 2110,
+        "quantity": 67
+      },
+      {
+        "listings": 1,
+        "unit_price": 2231,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 2279,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 2327,
+        "quantity": 3
+      },
+      {
+        "listings": 1,
+        "unit_price": 2488,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 2493,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 2499,
+        "quantity": 230
+      },
+      {
+        "listings": 1,
+        "unit_price": 2669,
+        "quantity": 4
+      },
+      {
+        "listings": 1,
+        "unit_price": 3500,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 3517,
+        "quantity": 7
+      },
+      {
+        "listings": 1,
+        "unit_price": 4993,
+        "quantity": 250
+      },
+      {
+        "listings": 1,
+        "unit_price": 5000,
+        "quantity": 20
+      },
+      {
+        "listings": 1,
+        "unit_price": 5130,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 6367,
+        "quantity": 27
+      },
+      {
+        "listings": 1,
+        "unit_price": 10061,
+        "quantity": 70
+      },
+      {
+        "listings": 1,
+        "unit_price": 10108,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 10192,
+        "quantity": 28
+      },
+      {
+        "listings": 1,
+        "unit_price": 10553,
+        "quantity": 158
+      },
+      {
+        "listings": 1,
+        "unit_price": 15304,
+        "quantity": 6
+      },
+      {
+        "listings": 1,
+        "unit_price": 20541,
+        "quantity": 62
+      },
+      {
+        "listings": 1,
+        "unit_price": 21270,
+        "quantity": 25
+      },
+      {
+        "listings": 1,
+        "unit_price": 38507,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 44707,
+        "quantity": 83
+      }
+    ]
+  }
+]

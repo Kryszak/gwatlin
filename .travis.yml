@@ -31,12 +31,12 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 deploy:
-  provider: releases
-  api_key:
-    secure: RrhyRGmhKp9SMZ7eI1m5X0dpKW2CEk02iKjgoAFX5axlWkoOIUPGB/iI6RYrWRp4uyZABxSb5/oIQAgLNY3OUWEKO5InqRAZJwaWtXcPtg+LNc2C9vBilbEohJr9Ymp8ErjS+gQn2VTIi0hA4A9GGbocDvzCHGY+8EU8ZVZHZH/lz+oxTJBQcY1lsIEhUCBaJGWBlpBQ7PYoW/6+4QQD4t7fhp5En00Ed9gOZFj06PWsIvTq+0KWYmAaTl3qXBFTqfMJXyajEVWRu0bVCtPT/hUjGRSwy9kataA52RjWXJxjFAjYj4TBLBVDi/3S8AsCkueLIhYPszTcJOe+Qr/azTsxmEs/wCScvKMw8ob8z/VL1pOd1NuktUeONuMcevOtF2zPEO59UqPSqstIigZGy3xoSgMwtqIF5deh94Sjzzs5gJ9VPpmwvnOoZqVrzcSW/GBsKnu4ltukxRx5+mKWwOyvRESvHYoUKiYtVJ7G4VA+2zSVGKe02o1d1jnLVaKPqeiiTc4CKvguZNxTad/mrtVBKDo2/IiNvRu21RS38QCnHIsp4kCWQRdqqZZt2RwL6DbFL/dtNIJwIA4kon7bH4PO31+VpsmTJSC1aHtZxuNWYvQIAoF9yQwJjRwfvXMPEFVvgF10Y4elgnDGdFWfdUCJ9tChu6UxQ2k1Lhsl4cI=
-  file_glob: true
-  file: build/libs/*
-  skip_cleanup: true
-  on:
-    repo: Kryszak/gwatlin
-    tags: true
+  - provider: releases
+    api_key:
+      secure: RrhyRGmhKp9SMZ7eI1m5X0dpKW2CEk02iKjgoAFX5axlWkoOIUPGB/iI6RYrWRp4uyZABxSb5/oIQAgLNY3OUWEKO5InqRAZJwaWtXcPtg+LNc2C9vBilbEohJr9Ymp8ErjS+gQn2VTIi0hA4A9GGbocDvzCHGY+8EU8ZVZHZH/lz+oxTJBQcY1lsIEhUCBaJGWBlpBQ7PYoW/6+4QQD4t7fhp5En00Ed9gOZFj06PWsIvTq+0KWYmAaTl3qXBFTqfMJXyajEVWRu0bVCtPT/hUjGRSwy9kataA52RjWXJxjFAjYj4TBLBVDi/3S8AsCkueLIhYPszTcJOe+Qr/azTsxmEs/wCScvKMw8ob8z/VL1pOd1NuktUeONuMcevOtF2zPEO59UqPSqstIigZGy3xoSgMwtqIF5deh94Sjzzs5gJ9VPpmwvnOoZqVrzcSW/GBsKnu4ltukxRx5+mKWwOyvRESvHYoUKiYtVJ7G4VA+2zSVGKe02o1d1jnLVaKPqeiiTc4CKvguZNxTad/mrtVBKDo2/IiNvRu21RS38QCnHIsp4kCWQRdqqZZt2RwL6DbFL/dtNIJwIA4kon7bH4PO31+VpsmTJSC1aHtZxuNWYvQIAoF9yQwJjRwfvXMPEFVvgF10Y4elgnDGdFWfdUCJ9tChu6UxQ2k1Lhsl4cI=
+    file_glob: true
+    file: build/libs/*
+    skip_cleanup: true
+    on:
+      repo: Kryszak/gwatlin
+      tags: true

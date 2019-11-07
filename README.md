@@ -30,10 +30,10 @@ Issue should contain example json response for given endpoint.
 -   Miscellaneous
 -   Story
 -   Structured PvP
+-   Trading post
 
 ### To be done 
 -   Characters
 -   Commerce
 -   Map Information
--   Trading post
 -   World vs. World
