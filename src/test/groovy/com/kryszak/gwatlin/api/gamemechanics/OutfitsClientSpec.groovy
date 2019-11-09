@@ -1,8 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-import com.google.gson.reflect.TypeToken
+
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
@@ -12,17 +11,14 @@ class OutfitsClientSpec extends WiremockConfig {
     def outfitsClient = new GWOutfitsClient()
 
     def "Should get outfits ids"() {
-        given: "Expected list of outfits ids"
-        def ids = parseResponse("/responses/gamemechanics/outfit_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/outfits", "/responses/gamemechanics/outfit_ids.json")
 
         when: "Outfit ids are requested"
         def idsList = outfitsClient.getOutfitsIds()
 
         then: "Retrieved list matches expected"
-        idsList == ids
+        idsList.size() == 91
     }
 
     def "Should get outfits"() {
@@ -36,7 +32,6 @@ class OutfitsClientSpec extends WiremockConfig {
         def outfits = outfitsClient.getOutfits(ids, "en")
 
         then: "Retrieved outfits match expected"
-        outfits == parseOutfits("outfits.json")
         verifyAll(outfits.get(0)) {
             id == 1
             name == "Cook's Outfit"
@@ -67,10 +62,6 @@ class OutfitsClientSpec extends WiremockConfig {
         def outfits = outfitsClient.getAllOutfits("en")
 
         then: "Retrieved outfits match expected"
-        outfits == parseOutfits("outfits_all.json")
-    }
-
-    private List<Outfit> parseOutfits(String file) {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"), new TypeToken<List<Outfit>>() {}.getType())
+        outfits.size() == 91
     }
 }

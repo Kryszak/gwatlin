@@ -1,7 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
@@ -11,17 +10,14 @@ class SpecializationClientSpec extends WiremockConfig {
     def specializationClient = new GWSpecializationClient()
 
     def "Should get specialization ids"() {
-        given: "Expected specialization ids"
-        def ids = parseResponse("/responses/gamemechanics/specialization_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/specializations", "/responses/gamemechanics/specialization_ids.json")
 
         when: "Retrieving specialization ids"
         def specializationIds = specializationClient.getSpecializationIds()
 
         then: "Retrieved list matches expected"
-        specializationIds == ids
+        specializationIds.size() == 63
     }
 
     def "Should get specialization"() {
@@ -35,7 +31,6 @@ class SpecializationClientSpec extends WiremockConfig {
         def specialization = specializationClient.getSpecialization(id, "en")
 
         then: "Retrieves specialization matches expected"
-        specialization == parseSpecialization()
         verifyAll(specialization) {
             id == 1
             name == "Dueling"
@@ -60,9 +55,5 @@ class SpecializationClientSpec extends WiremockConfig {
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
-    }
-
-    private Specialization parseSpecialization() {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/specialization.json"), Specialization)
     }
 }

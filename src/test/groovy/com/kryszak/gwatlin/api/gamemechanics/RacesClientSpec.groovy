@@ -1,8 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-import com.google.common.reflect.TypeToken
+
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.api.gamemechanics.model.race.Race
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
@@ -12,17 +11,14 @@ class RacesClientSpec extends WiremockConfig {
     def racesClient = new GWRacesClient()
 
     def "Should get race ids"() {
-        given: "Expected race ids"
-        def ids = parseResponse("/responses/gamemechanics/race_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/races", "/responses/gamemechanics/race_ids.json")
 
         when: "Requesting race ids"
         def raceIds = racesClient.getRaceIds()
 
         then: "Retrieved list matches expected"
-        raceIds == ids
+        raceIds.size() == 5
     }
 
     def "Should get race"() {
@@ -36,7 +32,6 @@ class RacesClientSpec extends WiremockConfig {
         def race = racesClient.getRace(id)
 
         then: "Retrieved race matches expected"
-        race == parseRace()
         verifyAll(race) {
             id == "Asura"
             name == "Asura"
@@ -56,9 +51,5 @@ class RacesClientSpec extends WiremockConfig {
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
-    }
-
-    private Race parseRace() {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/race.json"), new TypeToken<Race>() {}.getType())
     }
 }

@@ -1,9 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-import com.google.gson.reflect.TypeToken
+
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
-import com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
@@ -13,17 +11,14 @@ class MountsClientSpec extends WiremockConfig {
     def mountsClient = new GWMountsClient()
 
     def "Should get mount skins ids"() {
-        given: "Expected list of ids"
-        def ids = parseResponse("/responses/gamemechanics/mount_skin_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/mounts/skins", "/responses/gamemechanics/mount_skin_ids.json")
 
         when: "Retrieving mount skin ids list"
         def idsList = mountsClient.getMountSkinsIds()
 
         then: "Retrieved list matches expected"
-        idsList == ids
+        idsList.size() == 172
     }
 
     def "Should get list of mount skins"() {
@@ -37,7 +32,6 @@ class MountsClientSpec extends WiremockConfig {
         def mountSkins = mountsClient.getMountSkins(ids, "en")
 
         then: "Retrieved list matches expected"
-        mountSkins == parseMountSkins("mount_skins.json")
         verifyAll(mountSkins.get(0)) {
             id == 1
             name == "Raptor"
@@ -72,21 +66,18 @@ class MountsClientSpec extends WiremockConfig {
         def mountSkins = mountsClient.getAllMountSkins("en")
 
         then: "Retrieved list matches expected"
-        mountSkins == parseMountSkins("mount_skins_all.json")
+        mountSkins.size() == 172
     }
 
     def "Should get mount types ids"() {
-        given: "Expected response"
-        def ids = parseResponse("/responses/gamemechanics/mount_types_ids.json")
-
-        and: "External api is stubbed"
+        given: "External api is stubbed"
         stubResponse("/mounts/types", "/responses/gamemechanics/mount_types_ids.json")
 
         when: "Mount types ids are requested"
         def typesIds = mountsClient.getMountTypesIds()
 
         then: "Retrieved list matches expected"
-        typesIds == ids
+        typesIds.size() == 8
     }
 
     def "Should get mount types"() {
@@ -100,7 +91,6 @@ class MountsClientSpec extends WiremockConfig {
         def mountTypes = mountsClient.getMountTypes(ids, "en")
 
         then: "Retrieved list matches expected"
-        mountTypes == parseMountTypes("mount_types.json")
         verifyAll(mountTypes.get(0)) {
             id == "griffon"
             name == "Griffon"
@@ -122,7 +112,7 @@ class MountsClientSpec extends WiremockConfig {
         def mountTypes = mountsClient.getAllMountTypes("en")
 
         then: "Retrieved list matches expected"
-        mountTypes == parseMountTypes("mount_types_all.json")
+        mountTypes.size() == 8
     }
 
     def "Should throw exception on non existing mount type id"() {
@@ -137,15 +127,5 @@ class MountsClientSpec extends WiremockConfig {
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
-    }
-
-    private List<MountType> parseMountTypes(String file) {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"),
-                new TypeToken<List<MountType>>() {}.getType())
-    }
-
-    private List<MountSkin> parseMountSkins(String file) {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"),
-                new TypeToken<List<MountSkin>>() {}.getType())
     }
 }
