@@ -38,4 +38,64 @@ class WvwClientSpec extends WiremockConfig {
             }
         }
     }
+
+    def "Should get match ids"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/matches", "/responses/wvw/match_ids.json")
+
+        when: "Requesting wvw match ids"
+        def ids = wvwClient.getMatchIds()
+
+        then: "Retrieved list matches expected"
+        ids == [
+                "2-1",
+                "2-2",
+                "2-3",
+                "2-4",
+                "2-5",
+                "1-1",
+                "1-2",
+                "1-3",
+                "1-4"
+        ]
+    }
+
+    def "Should get match"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/matches?ids=1-3", "/responses/wvw/match.json")
+
+        when: "Requesting matches"
+        def matches = wvwClient.getMatches(["1-3"])
+
+        then: "Retrieved matches match expected"
+        verifyAll(matches.get(0)) {
+            id == "1-3"
+            startTime == "2019-11-09T02:00:00Z"
+            endTime == "2019-11-16T01:58:00Z"
+            verifyAll(scores) {
+                red == 63163
+                blue == 132823
+                green == 68400
+            }
+            verifyAll(skirmishes.get(0)) {
+                id == 1
+                verifyAll(mapScores.get(0)) {
+                    type == "Center"
+                }
+            }
+            verifyAll(maps.get(0)) {
+                id == 38
+                type == "Center"
+                bonuses == []
+                verifyAll(objectives.get(0)) {
+                    id == "38-131"
+                    it.type == "Spawn"
+                    it.owner == "Green"
+                    lastFlipped == "2019-11-09T02:03:50Z"
+                    pointsTick == 0
+                    pointsCapture == 0
+                }
+            }
+        }
+    }
 }
