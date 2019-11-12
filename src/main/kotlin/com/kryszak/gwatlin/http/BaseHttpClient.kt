@@ -5,7 +5,7 @@ import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import com.google.gson.Gson
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.clients.exception.RetrieveError
+import com.kryszak.gwatlin.http.exception.RetrieveError
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import org.slf4j.Logger
