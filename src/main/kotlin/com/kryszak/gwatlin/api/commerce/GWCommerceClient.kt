@@ -24,7 +24,6 @@ class GWCommerceClient {
      * Returns current buy and sell listings from the trading post
      */
     fun getCommerceListings(ids: List<Int>): List<CommerceListing> {
-        val params = ids.joinToString(",")
         return commerceClient.getCommerceListings(ids)
     }
 

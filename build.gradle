@@ -59,14 +59,16 @@ dependencies {
     testCompile "com.github.tomakehurst:wiremock-jre8:$wiremock_version"
 }
 
-task createPom << {
-    pom {
-        project {
-            groupId "$project.group"
-            artifactId 'gwatlin'
-            version "$project.version"
-        }
-    }.writeTo("build/libs/pom.xml")
+task createPom {
+    doLast {
+        pom {
+            project {
+                groupId "$project.group"
+                artifactId 'gwatlin'
+                version "$project.version"
+            }
+        }.writeTo("build/libs/pom.xml")
+    }
 }
 
 jar.doLast { task ->
