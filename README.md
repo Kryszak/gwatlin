@@ -58,7 +58,7 @@ compile 'com.kryszak:gwatlin:1.0'
 ```kotlin
 // Client without API KEY
 val wvwClient = GWWvwClient()
-val wvwRank = wvwClient.getRanks(2)
+val wvwRank = wvwClient.getRanks(1)
 println(wvwRank)
 // WvwRank(id=1, minRank=1, title=Invader)
 
