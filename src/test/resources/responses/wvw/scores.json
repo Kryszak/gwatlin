@@ -1,0 +1,1691 @@
+{
+  "id": "1-1",
+  "scores": {
+    "red": 222430,
+    "blue": 169425,
+    "green": 279133
+  },
+  "victory_points": {
+    "red": 163,
+    "blue": 119,
+    "green": 174
+  },
+  "skirmishes": [
+    {
+      "id": 1,
+      "scores": {
+        "red": 5796,
+        "blue": 3915,
+        "green": 8762
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1755,
+            "blue": 1542,
+            "green": 2596
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1442,
+            "blue": 397,
+            "green": 2135
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1777,
+            "blue": 1429,
+            "green": 2228
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 822,
+            "blue": 547,
+            "green": 1803
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scores": {
+        "red": 5019,
+        "blue": 3932,
+        "green": 9437
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2125,
+            "blue": 1568,
+            "green": 3446
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1689,
+            "blue": 593,
+            "green": 534
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 776,
+            "blue": 1529,
+            "green": 3322
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 429,
+            "blue": 242,
+            "green": 2135
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scores": {
+        "red": 5575,
+        "blue": 4688,
+        "green": 6716
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2689,
+            "blue": 2066,
+            "green": 3695
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2309,
+            "blue": 282,
+            "green": 250
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 257,
+            "blue": 1906,
+            "green": 1091
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 320,
+            "blue": 434,
+            "green": 1680
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scores": {
+        "red": 6688,
+        "blue": 5841,
+        "green": 4196
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3263,
+            "blue": 2388,
+            "green": 2616
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2300,
+            "blue": 248,
+            "green": 273
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 235,
+            "blue": 1875,
+            "green": 350
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 890,
+            "blue": 1330,
+            "green": 957
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scores": {
+        "red": 6731,
+        "blue": 5406,
+        "green": 2891
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3571,
+            "blue": 1961,
+            "green": 1581
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2476,
+            "blue": 538,
+            "green": 159
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 226,
+            "blue": 2009,
+            "green": 225
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 458,
+            "blue": 898,
+            "green": 926
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "scores": {
+        "red": 6036,
+        "blue": 4972,
+        "green": 4454
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2824,
+            "blue": 1700,
+            "green": 2456
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2574,
+            "blue": 181,
+            "green": 323
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 236,
+            "blue": 2623,
+            "green": 303
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 402,
+            "blue": 468,
+            "green": 1372
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "scores": {
+        "red": 6445,
+        "blue": 4007,
+        "green": 6891
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2339,
+            "blue": 1686,
+            "green": 3429
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2698,
+            "blue": 185,
+            "green": 351
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 639,
+            "blue": 1786,
+            "green": 869
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 769,
+            "blue": 350,
+            "green": 2242
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "scores": {
+        "red": 7430,
+        "blue": 3466,
+        "green": 7088
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2669,
+            "blue": 1600,
+            "green": 3334
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2990,
+            "blue": 268,
+            "green": 334
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 777,
+            "blue": 1358,
+            "green": 550
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 994,
+            "blue": 240,
+            "green": 2870
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "scores": {
+        "red": 5168,
+        "blue": 4127,
+        "green": 7414
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2146,
+            "blue": 1693,
+            "green": 3188
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2197,
+            "blue": 548,
+            "green": 841
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 384,
+            "blue": 1511,
+            "green": 895
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 441,
+            "blue": 375,
+            "green": 2490
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "scores": {
+        "red": 5079,
+        "blue": 3495,
+        "green": 7442
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2109,
+            "blue": 1535,
+            "green": 3505
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2119,
+            "blue": 503,
+            "green": 278
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 392,
+            "blue": 1224,
+            "green": 1144
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 459,
+            "blue": 233,
+            "green": 2515
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "scores": {
+        "red": 5147,
+        "blue": 3319,
+        "green": 8132
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2181,
+            "blue": 1518,
+            "green": 3706
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2179,
+            "blue": 382,
+            "green": 444
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 544,
+            "blue": 1230,
+            "green": 1279
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 243,
+            "blue": 189,
+            "green": 2703
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "scores": {
+        "red": 6565,
+        "blue": 5021,
+        "green": 9317
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2757,
+            "blue": 2199,
+            "green": 4103
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2689,
+            "blue": 426,
+            "green": 343
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 400,
+            "blue": 1985,
+            "green": 1838
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 719,
+            "blue": 411,
+            "green": 3033
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "scores": {
+        "red": 6483,
+        "blue": 5432,
+        "green": 9722
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1993,
+            "blue": 1892,
+            "green": 4041
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2876,
+            "blue": 565,
+            "green": 283
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 944,
+            "blue": 2646,
+            "green": 2173
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 670,
+            "blue": 329,
+            "green": 3225
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "scores": {
+        "red": 6731,
+        "blue": 5948,
+        "green": 8377
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2092,
+            "blue": 2229,
+            "green": 3697
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2852,
+            "blue": 560,
+            "green": 233
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1024,
+            "blue": 2733,
+            "green": 1743
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 763,
+            "blue": 426,
+            "green": 2704
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "scores": {
+        "red": 5767,
+        "blue": 5134,
+        "green": 5605
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2216,
+            "blue": 2280,
+            "green": 2308
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2583,
+            "blue": 288,
+            "green": 343
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 617,
+            "blue": 2241,
+            "green": 489
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 351,
+            "blue": 325,
+            "green": 2465
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "scores": {
+        "red": 6495,
+        "blue": 5889,
+        "green": 4633
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2545,
+            "blue": 2730,
+            "green": 2302
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3056,
+            "blue": 201,
+            "green": 103
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 437,
+            "blue": 2435,
+            "green": 186
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 457,
+            "blue": 523,
+            "green": 2042
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "scores": {
+        "red": 6057,
+        "blue": 5464,
+        "green": 4600
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2223,
+            "blue": 1889,
+            "green": 2799
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2841,
+            "blue": 368,
+            "green": 200
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 388,
+            "blue": 2500,
+            "green": 121
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 605,
+            "blue": 707,
+            "green": 1480
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "scores": {
+        "red": 6123,
+        "blue": 4498,
+        "green": 5336
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2853,
+            "blue": 1694,
+            "green": 2133
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2708,
+            "blue": 388,
+            "green": 408
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 337,
+            "blue": 2252,
+            "green": 478
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 225,
+            "blue": 164,
+            "green": 2317
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "scores": {
+        "red": 6352,
+        "blue": 4731,
+        "green": 7636
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1960,
+            "blue": 2093,
+            "green": 2744
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2865,
+            "blue": 233,
+            "green": 369
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1301,
+            "blue": 2254,
+            "green": 1337
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 226,
+            "blue": 151,
+            "green": 3186
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "scores": {
+        "red": 5283,
+        "blue": 4136,
+        "green": 8159
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1738,
+            "blue": 1757,
+            "green": 3634
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2762,
+            "blue": 333,
+            "green": 336
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 565,
+            "blue": 1826,
+            "green": 1292
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 218,
+            "blue": 220,
+            "green": 2897
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "scores": {
+        "red": 5301,
+        "blue": 2681,
+        "green": 8327
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1860,
+            "blue": 1467,
+            "green": 3705
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2591,
+            "blue": 397,
+            "green": 442
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 652,
+            "blue": 703,
+            "green": 957
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 198,
+            "blue": 114,
+            "green": 3223
+          }
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "scores": {
+        "red": 5313,
+        "blue": 3189,
+        "green": 8530
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2168,
+            "blue": 1410,
+            "green": 4010
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2723,
+            "blue": 406,
+            "green": 213
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 306,
+            "blue": 1190,
+            "green": 1164
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 116,
+            "blue": 183,
+            "green": 3143
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "scores": {
+        "red": 5716,
+        "blue": 3351,
+        "green": 8628
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1941,
+            "blue": 1254,
+            "green": 4328
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3087,
+            "blue": 236,
+            "green": 220
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 362,
+            "blue": 1722,
+            "green": 1013
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 326,
+            "blue": 139,
+            "green": 3067
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "scores": {
+        "red": 5543,
+        "blue": 4377,
+        "green": 9019
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1949,
+            "blue": 1598,
+            "green": 4001
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3032,
+            "blue": 317,
+            "green": 1006
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 276,
+            "blue": 2162,
+            "green": 860
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 286,
+            "blue": 300,
+            "green": 3152
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "scores": {
+        "red": 4882,
+        "blue": 4641,
+        "green": 10770
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1915,
+            "blue": 1529,
+            "green": 2989
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2053,
+            "blue": 524,
+            "green": 2332
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 608,
+            "blue": 2417,
+            "green": 1966
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 306,
+            "blue": 171,
+            "green": 3483
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "scores": {
+        "red": 4956,
+        "blue": 4710,
+        "green": 7210
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2319,
+            "blue": 2242,
+            "green": 2511
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1722,
+            "blue": 413,
+            "green": 1267
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 435,
+            "blue": 1874,
+            "green": 687
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 480,
+            "blue": 181,
+            "green": 2745
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "scores": {
+        "red": 5603,
+        "blue": 4124,
+        "green": 5869
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2166,
+            "blue": 2279,
+            "green": 2009
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1864,
+            "blue": 255,
+            "green": 1090
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1108,
+            "blue": 1416,
+            "green": 536
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 465,
+            "blue": 174,
+            "green": 2234
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "scores": {
+        "red": 5273,
+        "blue": 4919,
+        "green": 5782
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2245,
+            "blue": 2590,
+            "green": 2511
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2174,
+            "blue": 253,
+            "green": 651
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 531,
+            "blue": 1989,
+            "green": 170
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 323,
+            "blue": 87,
+            "green": 2450
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "scores": {
+        "red": 5753,
+        "blue": 5088,
+        "green": 5636
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2040,
+            "blue": 2626,
+            "green": 2737
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2977,
+            "blue": 225,
+            "green": 74
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 484,
+            "blue": 2105,
+            "green": 172
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 252,
+            "blue": 132,
+            "green": 2653
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "scores": {
+        "red": 6105,
+        "blue": 4463,
+        "green": 5198
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2078,
+            "blue": 1825,
+            "green": 2068
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3233,
+            "blue": 245,
+            "green": 95
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 258,
+            "blue": 2234,
+            "green": 282
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 536,
+            "blue": 159,
+            "green": 2753
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "scores": {
+        "red": 6368,
+        "blue": 4329,
+        "green": 5930
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2898,
+            "blue": 1753,
+            "green": 2266
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2563,
+            "blue": 566,
+            "green": 266
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 556,
+            "blue": 1767,
+            "green": 489
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 351,
+            "blue": 243,
+            "green": 2909
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "scores": {
+        "red": 5448,
+        "blue": 4504,
+        "green": 6573
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2364,
+            "blue": 1780,
+            "green": 2996
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2582,
+            "blue": 317,
+            "green": 313
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 325,
+            "blue": 2163,
+            "green": 214
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 177,
+            "blue": 244,
+            "green": 3050
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "scores": {
+        "red": 5560,
+        "blue": 3567,
+        "green": 6901
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2692,
+            "blue": 1584,
+            "green": 2913
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2449,
+            "blue": 82,
+            "green": 573
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 226,
+            "blue": 1697,
+            "green": 676
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 193,
+            "blue": 204,
+            "green": 2739
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "scores": {
+        "red": 5669,
+        "blue": 3920,
+        "green": 7198
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2102,
+            "blue": 1780,
+            "green": 3298
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2962,
+            "blue": 189,
+            "green": 389
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 329,
+            "blue": 1778,
+            "green": 561
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 276,
+            "blue": 173,
+            "green": 2950
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "scores": {
+        "red": 4814,
+        "blue": 4746,
+        "green": 8267
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1786,
+            "blue": 1827,
+            "green": 4243
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2566,
+            "blue": 541,
+            "green": 440
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 249,
+            "blue": 2211,
+            "green": 416
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 213,
+            "blue": 167,
+            "green": 3168
+          }
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "scores": {
+        "red": 5140,
+        "blue": 3728,
+        "green": 10045
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1902,
+            "blue": 1338,
+            "green": 4156
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2788,
+            "blue": 306,
+            "green": 735
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 238,
+            "blue": 1933,
+            "green": 1964
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 212,
+            "blue": 151,
+            "green": 3190
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "scores": {
+        "red": 5513,
+        "blue": 3318,
+        "green": 10611
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1787,
+            "blue": 1346,
+            "green": 3629
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2916,
+            "blue": 224,
+            "green": 1488
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 555,
+            "blue": 1475,
+            "green": 2369
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 255,
+            "blue": 273,
+            "green": 3125
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "scores": {
+        "red": 5215,
+        "blue": 4060,
+        "green": 8043
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2055,
+            "blue": 1823,
+            "green": 3087
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2456,
+            "blue": 193,
+            "green": 693
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 474,
+            "blue": 1787,
+            "green": 1528
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 230,
+            "blue": 257,
+            "green": 2735
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "scores": {
+        "red": 3288,
+        "blue": 2289,
+        "green": 3788
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1811,
+            "blue": 1144,
+            "green": 1245
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1215,
+            "blue": 96,
+            "green": 378
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 154,
+            "blue": 976,
+            "green": 602
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 108,
+            "blue": 73,
+            "green": 1563
+          }
+        }
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": 38,
+      "type": "Center",
+      "scores": {
+        "red": 88126,
+        "blue": 71215,
+        "green": 120015
+      }
+    },
+    {
+      "id": 1099,
+      "type": "RedHome",
+      "scores": {
+        "red": 98158,
+        "blue": 13272,
+        "green": 21205
+      }
+    },
+    {
+      "id": 96,
+      "type": "BlueHome",
+      "scores": {
+        "red": 20382,
+        "blue": 72951,
+        "green": 38539
+      }
+    },
+    {
+      "id": 95,
+      "type": "GreenHome",
+      "scores": {
+        "red": 15764,
+        "blue": 11987,
+        "green": 99374
+      }
+    }
+  ]
+}

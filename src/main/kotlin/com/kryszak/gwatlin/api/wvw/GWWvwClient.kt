@@ -2,6 +2,10 @@ package com.kryszak.gwatlin.api.wvw
 
 import com.kryszak.gwatlin.api.wvw.model.ability.WvwAbility
 import com.kryszak.gwatlin.api.wvw.model.match.WvwMatch
+import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldOverview
+import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldScores
+import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldStats
+import com.kryszak.gwatlin.api.wvw.model.objective.WvwObjective
 import com.kryszak.gwatlin.clients.wvw.WvwClient
 
 /**
@@ -38,5 +42,40 @@ class GWWvwClient {
      */
     fun getMatches(ids: List<String>): List<WvwMatch> {
         return wvwClient.getMatches(ids)
+    }
+
+    /**
+     * Lists the world ids for each matches along with the start and end times
+     */
+    fun getMatchesOverview(worldId: Int): WvwWorldOverview {
+        return wvwClient.getMatchesOverview(worldId)
+    }
+
+    /**
+     * Returns a detailed object of scores per map along with the overall score
+     */
+    fun getMatchScores(worldId: Int): WvwWorldScores {
+        return wvwClient.getMatchScores(worldId)
+    }
+
+    /**
+     * Returns information on map specific, and overall, kills and deaths
+     */
+    fun getMatchStats(worldId: Int): WvwWorldStats {
+        return wvwClient.getMatchStats(worldId)
+    }
+
+    /**
+     * Retrieves list of all objective ids
+     */
+    fun getObjectiveIds() :List<String> {
+        return wvwClient.getObjectiveIds()
+    }
+
+    /**
+     * Returns details about World vs. World objectives such as camps, towers, and keeps
+     */
+    fun getObjectives(ids: List<String>, language: String = "en"): List<WvwObjective> {
+        return wvwClient.getObjectives(ids, language)
     }
 }

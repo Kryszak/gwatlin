@@ -1,0 +1,22 @@
+[
+  {
+    "id": "38-6",
+    "name": "Speldan Clearcut",
+    "sector_id": 844,
+    "type": "Camp",
+    "map_type": "Center",
+    "map_id": 38,
+    "upgrade_id": 22,
+    "coord": [
+      9841.05,
+      13545.8,
+      -508.295
+    ],
+    "label_coord": [
+      9730.23,
+      13640.4
+    ],
+    "marker": "https://render.guildwars2.com/file/015D365A08AAE105287A100AAE04529FDAE14155/102532.png",
+    "chat_link": "[&DAYAAAAmAAAA]"
+  }
+]

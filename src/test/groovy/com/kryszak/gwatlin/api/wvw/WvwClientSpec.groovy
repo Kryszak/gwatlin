@@ -98,4 +98,88 @@ class WvwClientSpec extends WiremockConfig {
             }
         }
     }
+
+    def "Should get match overview"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/matches/overview?world=1008", "/responses/wvw/overview.json")
+
+        when: "Requesting match overview"
+        def overview = wvwClient.getMatchesOverview(1008)
+
+        then: "Retrieved overview matches expected"
+        verifyAll(overview) {
+            id == "1-1"
+            startTime == "2019-11-09T02:00:00Z"
+            endTime == "2019-11-16T01:58:00Z"
+            worlds != null
+            allWorlds != null
+        }
+    }
+
+    def "Should get match scores"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/matches/scores?world=1008", "/responses/wvw/scores.json")
+
+        when: "Requesting match scores"
+        def scores = wvwClient.getMatchScores(1008)
+
+        then: "Retrieved scores match expected"
+        verifyAll(scores) {
+            id == "1-1"
+            scores != null
+            victoryPoints != null
+            skirmishes != null
+            maps != null
+        }
+    }
+
+    def "Should get match stats"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/matches/stats?world=1008", "/responses/wvw/stats.json")
+
+        when: "Requesting match stats"
+        def stats = wvwClient.getMatchStats(1008)
+
+        then: "Retrieved stats match expected"
+        verifyAll(stats) {
+            id == "1-1"
+            deaths != null
+            kills != null
+            maps != null
+        }
+    }
+
+    def "Should get objective ids"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/objectives", "/responses/wvw/objective_ids.json")
+
+        when: "Requesting objective ids"
+        def ids = wvwClient.getObjectiveIds()
+
+        then: "Retrieved list matches expected"
+        ids.size() == 178
+    }
+
+    def "Should get objective"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/objectives?ids=38-6&lang=en", "/responses/wvw/objective.json")
+
+        when: "Requesting objective"
+        def objectives = wvwClient.getObjectives(["38-6"], "en")
+
+        then: "Retrieved objective match expected"
+        verifyAll(objectives.get(0)) {
+            id == "38-6"
+            name == "Speldan Clearcut"
+            sectorId == 844
+            type == "Camp"
+            mapType == "Center"
+            mapId == 38
+            upgradeId == 22
+            coord == [9841.05d, 13545.8d, -508.295d]
+            labelCoord == [9730.23d, 13640.4d]
+            marker == "https://render.guildwars2.com/file/015D365A08AAE105287A100AAE04529FDAE14155/102532.png"
+            chatLink == "[&DAYAAAAmAAAA]"
+        }
+    }
 }

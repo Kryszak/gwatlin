@@ -40,3 +40,12 @@ deploy:
     on:
       repo: Kryszak/gwatlin
       tags: true
+  - provider: bintray
+    file: "descriptor.json"
+    user: "kryszak"
+    key: NBtgzBlcIdjjjHK44wIKY17L4VOtnmfWYvmRxNXt9bPwfTnqzFVXbp1MWTFd1eD2OlgSdRZ3yJe2ljarAhRE7WM7eIqZ0prLnGS8AIZxMae1u1IRiSVvFKl3f+jknpdgR88qGfT23Cd1ebn5jCGZFP/h2sIbh0C9xt5suQrDqw7PjfJP7CjxmcSCRRPGgkE6fi4SfpH4Wmtx8K/R2vK1SzbemSHoxtuQTo3MOspkvdrB3dvGOWLCoTTUKPONupAmdLrR7coJPdGR0FBiO0mCNPQ6xDCOdfg/OHKwbbh5PD8VRWKjBwY7/v78mIhec0TsgOAlwdWmYqnmi3j5DfZu2wW30SNkIXdeBKCRG2wSwP5xPQiumAjXUM7YztLs93XYr7TyPY8m5tULPtjuJe0MZ09vTVUBilfCO3PN9TQtpOnCkbnWoGYuIrDeQwEPZdA4Ancv5lddP8j4zyunT2yi1W6tY3m+IzppMzs+HqWMobzCiW2WjfppPUz6KwxBwIfqdhJbSbVbntiGqzY4cBd6ydR2AVmZbo8TrToyhfmXSb/o9H/NY/zc1ojAVWepFDw+lFEY8cgwRSu1Na2xjC/EPj9NFa2AZ4d5Y6mFmjn/4+nj3eclQSJ0lWdByFijYPB7TcRtdeVuNBguJqqgQ9yBRYy1riP347bOx7PmbQI++F4=
+    skip_cleanup: true
+    on:
+      repo: Kryszak/gwatlin
+      tags: true
+
