@@ -3,7 +3,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cd1b40830b484dafb1150f3314eb6de2)](https://www.codacy.com/manual/Kryszak/gwatlin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kryszak/gwatlin&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/Kryszak/gwatlin)](https://GitHub.com/Kryszak/gwatlin/releases/)
-[![Download](https://api.bintray.com/packages/kryszak/guildwars2/gwatlin/images/download.svg)](https://bintray.com/kryszak/guildwars2/gwatlin/_latestVersion)
 
 # Gwatlin
 **G**uild **W**ars 2 **A**PI client written in Ko**tlin**
@@ -19,7 +18,7 @@ Issue should contain example json response for given endpoint.
 
 ## Features
 | Category          | Finished           |
-| --------          | :----------------: |
+| ----------------- | :----------------: |
 | Account           | :heavy_check_mark: |
 | Achievements      | :heavy_check_mark: |
 | Characters        | :x:                |
