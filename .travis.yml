@@ -43,8 +43,7 @@ deploy:
   - provider: bintray
     file: "descriptor.json"
     user: "kryszak"
-    key:
-      secure: geQghpRthMplvVybblD3ok2nKx7Jvc4mTT4vdPax+icz13rmhH70iDXU8l9DuDMzWOWAX9910LSiMbCb0/ahd94ISbYi2yZokiCHwZDx2v25eXNIhql2upTx+R/oz050yhAm8q4ruJ/iD36TwgyCGrYYhGChsRkn7oQAzZfK7yMN9mt0+fCEYK27vHjKcB3CMc3pRAvRASOPFkyLiOSqL+uR2Qh4I8th6EG/tVyPErdemz6kgnYWT3O4WJE+hVqL8ez+LqaADhd6bIFwH90JP3m+upqkUlPWNmXgaqw2dDIihG4h47gqQr48ml9fx8dTwJ98HbQy2m4qkg73xIoEaPSvaGY0pQccNo7aCFg1trz8Cyme4Xpco8d6t9fM8u0unmeYGcUxVefEZJUEN6Ng2w9MM8d5D101MJSDYmz5SooRVe+wY4aB8e40UCoREW99IBr+NtNnxFcmKfVpj3tCXeE3COfXKLP5Z/9VqZ5g+iQ7MYXTNBphKeBOAM/Js8W9Io1SlSAzAEmKXzBE2L2Vb8Tci8OFTkQVi5whf78dukhFwOq2V7Y/tIcJL9cXqIk4pFuSF3Ubl39PaZN0zkmZAknzgS+N1uB9NuZIu+Ianag475MtANy8IevMORR5s+XWnUZ53y2J9z1hMtxB477t1po6TvphatDSrg7FO/AuO4w=
+    key: $BINTRAY_KEY
     skip_cleanup: true
     on:
       repo: Kryszak/gwatlin
