@@ -14,6 +14,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
     }
 }
 
@@ -21,12 +22,15 @@ plugins {
     id "com.jfrog.bintray" version "1.7"
 }
 
-project.group = 'com.kryszak'
-project.version = '1.0'
-
 apply plugin: 'kotlin'
 apply plugin: "groovy"
 apply plugin: 'jacoco'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+project.group = 'com.kryszak'
+project.version = '1.0'
+
 
 sourceSets {
     main.kotlin.srcDirs += 'src/main/kotlin'
@@ -41,6 +45,56 @@ jacocoTestReport {
     reports {
         xml.enabled true
         html.enabled false
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar, javadocJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+}
+
+bintray {
+    user = "kryszak"
+    key = System.getenv("BINTRAY_KEY")
+    publications = ['mavenJava'] //When uploading Maven-based publication files
+    dryRun = false
+    publish = true
+    pkg {
+        repo = "gw2"
+        name = 'gwatlin'
+        desc = 'Guild Wars 2 API client written in Kotlin'
+        websiteUrl = 'https://github.com/Kryszak/gwatlin'
+        issueTrackerUrl = 'https://github.com/Kryszak/gwatlin/issues'
+        vcsUrl = 'https://github.com/Kryszak/gwatlin.git'
+        licenses = ['MIT']
+        publicDownloadNumbers = true
+        version {
+            name = "v${project.version}"
+            released = new Date()
+            vcsTag = "v${project.version}"
+            mavenCentralSync {
+                sync = false //Optional (true by default). Determines whether to sync the version to Maven Central.
+            }
+        }
     }
 }
 

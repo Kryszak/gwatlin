@@ -40,3 +40,9 @@ deploy:
     on:
       repo: Kryszak/gwatlin
       tags: true
+  - provider: script
+    script: gradle bintrayUpload
+    skip_cleanup: true
+    on:
+      repo: Kryszak/gwatlin
+      tags: true
