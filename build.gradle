@@ -60,7 +60,7 @@ publishing {
 
 bintray {
     user = "kryszak"
-    key = "c7edfe1773cb347db9969dcd91c5ded1b733b7ec"
+    key = System.getenv('BINTRAY_KEY')
     configurations = ['archives']
     publish = true
     override = true
