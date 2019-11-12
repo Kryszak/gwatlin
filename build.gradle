@@ -67,7 +67,7 @@ task createPom {
                 artifactId 'gwatlin'
                 version "$project.version"
             }
-        }.writeTo("build/libs/pom.xml")
+        }.writeTo("build/libs/gwatlin-${project.version}.pom")
     }
 }
 

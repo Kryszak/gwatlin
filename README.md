@@ -21,9 +21,9 @@ Issue should contain example json response for given endpoint.
 | Category          | Finished           |
 | --------          | :----------------: |
 | Account           | :heavy_check_mark: |
-| Achievements      | :x:                |
+| Achievements      | :heavy_check_mark: |
 | Characters        | :x:                |
-| Commerce          | :x:                |
+| Commerce          | :heavy_check_mark: |
 | Daily Rewards     | :heavy_check_mark: |
 | Game Mechanics    | :heavy_check_mark: |
 | Guild             | :heavy_check_mark: |
