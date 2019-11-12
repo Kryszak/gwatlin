@@ -182,4 +182,63 @@ class WvwClientSpec extends WiremockConfig {
             chatLink == "[&DAYAAAAmAAAA]"
         }
     }
+
+    def "Should get rank ids"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/ranks", "/responses/wvw/rank_ids.json")
+
+        when: "Requesting rank ids"
+        def ids = wvwClient.getRankIds()
+
+        then: "Retrieved list matches expected"
+        ids.size() == 105
+    }
+
+    def "Should get rank"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/ranks?ids=1&lang=en", "/responses/wvw/rank.json")
+
+        when: "Requesting rank"
+        def ranks = wvwClient.getRanks([1], "en")
+
+        then: "Retrieved rank matches expected"
+        verifyAll(ranks.get(0)) {
+            id == 1
+            title == "Invader"
+            minRank == 1
+        }
+    }
+
+    def "Should get upgrade ids"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/upgrades", "/responses/wvw/upgrade_ids.json")
+
+        when: "Requesting upgrade ids"
+        def ids = wvwClient.getUpgradeIds()
+
+        then: "Retrieved list matches expected"
+        ids.size() == 48
+    }
+
+    def "Should get upgrade"() {
+        given: "External api is stubbed"
+        stubResponse("/wvw/upgrades?ids=2&lang=en", "/responses/wvw/upgrade.json")
+
+        when: "Requesting upgrade"
+        def upgrades = wvwClient.getUpgrades([2], "en")
+
+        then: "Retrieved upgrade matches expected"
+        verifyAll(upgrades.get(0)) {
+            id == 2
+            verifyAll(tiers.get(0)) {
+                name == "Secured"
+                yaksRequired == 20
+                verifyAll(it.upgrades.get(0)) {
+                    name == "Caravan Guards"
+                    description == "Recruits guards to escort the camp's dolyak caravans."
+                    icon == "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+                }
+            }
+        }
+    }
 }

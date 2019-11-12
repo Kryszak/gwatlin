@@ -6,6 +6,8 @@ import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldOverview
 import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldScores
 import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldStats
 import com.kryszak.gwatlin.api.wvw.model.objective.WvwObjective
+import com.kryszak.gwatlin.api.wvw.model.rank.WvwRank
+import com.kryszak.gwatlin.api.wvw.model.upgrade.WvwUpgrade
 import com.kryszak.gwatlin.clients.wvw.WvwClient
 
 /**
@@ -77,5 +79,33 @@ class GWWvwClient {
      */
     fun getObjectives(ids: List<String>, language: String = "en"): List<WvwObjective> {
         return wvwClient.getObjectives(ids, language)
+    }
+
+    /**
+     * Retrieves all wvw rank ids
+     */
+    fun getRankIds(): List<Int> {
+        return wvwClient.getRankIds()
+    }
+
+    /**
+     * Returns information about the available ranks in the World versus World game mode
+     */
+    fun getRanks(ids: List<Int>, language: String = "en"): List<WvwRank> {
+        return wvwClient.getRanks(ids, language)
+    }
+
+    /**
+     * Retrieves all wvw upgrade ids
+     */
+    fun getUpgradeIds(): List<Int> {
+        return wvwClient.getUpgradeIds()
+    }
+
+    /**
+     * Returns details about available World vs. World upgrades for objectives such as camps, towers, and keeps
+     */
+    fun getUpgrades(ids: List<Int>, language: String = "en"): List<WvwUpgrade> {
+        return wvwClient.getUpgrades(ids, language)
     }
 }

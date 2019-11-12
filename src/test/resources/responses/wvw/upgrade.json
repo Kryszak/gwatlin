@@ -1,0 +1,55 @@
+[
+  {
+    "id": 2,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  }
+]
