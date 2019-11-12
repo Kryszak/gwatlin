@@ -13,28 +13,40 @@ This repository contains code for Guild Wars 2 API client based on [documentatio
 
 Client operates on API version v2.
 
-At this moment this project is in development phase.
-
 ### Important
-It seems that not all api features are documented, so feel free to create issues for missing features.
+It seems that not all api features are documented on wiki page, so feel free to create issues for missing features.
 Issue should contain example json response for given endpoint.
 
 ## Features
-### Present
--   Account
--   Achievements
--   Daily Rewards
--   Game Mechanics
--   Guild 
--   Home Instance
--   Items
--   Miscellaneous
--   Story
--   Structured PvP
--   Trading post
+| Category          | Finished           |
+| --------          | :----------------: |
+| Account           | :heavy_check_mark: |
+| Achievements      | :x:                |
+| Characters        | :x:                |
+| Commerce          | :x:                |
+| Daily Rewards     | :heavy_check_mark: |
+| Game Mechanics    | :heavy_check_mark: |
+| Guild             | :heavy_check_mark: |
+| Home Instance     | :heavy_check_mark: |
+| Items             | :heavy_check_mark: |
+| Map Information   | :x:                |
+| Miscellaneous     | :heavy_check_mark: |
+| Story             | :heavy_check_mark: |
+| Structured PvP    | :heavy_check_mark: |
+| Trading Post      | :heavy_check_mark: |
+| World vs. World   | :heavy_check_mark: |
 
-### To be done 
--   Characters
--   Commerce
--   Map Information
--   World vs. World
+## Example usage
+```kotlin
+// Client without API KEY
+val wvwClient = GWWvwClient()
+val wvwRank = wvwClient.getRanks(2)
+println(wvwRank)
+// WvwRank(id=1, minRank=1, title=Invader)
+
+// Client with API KEY
+val tokenInfoClient = GWTokenClient("API KEY here")
+val tokenInfo = tokenInfoClient.getTokenInfo()
+println(tokenInfo)
+// Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)
+```

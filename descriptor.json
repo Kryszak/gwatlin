@@ -16,10 +16,10 @@
     "attributes": []
   },
   "version": {
-    "name": "0.14",
+    "name": "v1.0",
     "desc": "",
     "released": "2019-11-12",
-    "vcs_tag": "0.14",
+    "vcs_tag": "1.0",
     "attributes": [],
     "gpgSign": false
   },
