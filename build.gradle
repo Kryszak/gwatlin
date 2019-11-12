@@ -18,7 +18,7 @@ buildscript {
 }
 
 project.group = 'com.kryszak'
-project.version = '1.2'
+project.version = '1.0'
 
 apply plugin: 'kotlin'
 apply plugin: "groovy"
@@ -73,5 +73,6 @@ task createPom {
 
 jar.doLast { task ->
     ant.checksum file: task.archivePath
-    createPom.execute()
 }
+
+jar.finalizedBy createPom
