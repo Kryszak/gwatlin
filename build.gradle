@@ -86,9 +86,9 @@ bintray {
         licenses = ['MIT']
         publicDownloadNumbers = true
         version {
-            name = "v${project.version}"
+            name = "${project.version}"
             released = new Date()
-            vcsTag = "v${project.version}"
+            vcsTag = "${project.version}"
             mavenCentralSync {
                 sync = false //Optional (true by default). Determines whether to sync the version to Maven Central.
             }
