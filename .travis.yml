@@ -40,10 +40,8 @@ deploy:
     on:
       repo: Kryszak/gwatlin
       tags: true
-  - provider: bintray
-    file: "descriptor.json"
-    user: "kryszak"
-    key: $BINTRAY_KEY
+  - provider: script
+    script: gradle bintrayUpload
     skip_cleanup: true
     on:
       repo: Kryszak/gwatlin
