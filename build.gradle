@@ -19,7 +19,7 @@ ext {
 }
 
 project.group = 'com.kryszak'
-project.version = '1.1'
+project.version = '1.2'
 
 sourceSets {
     main.kotlin.srcDirs += 'src/main/kotlin'

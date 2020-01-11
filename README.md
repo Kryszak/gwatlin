@@ -45,13 +45,13 @@ Include dependency:
 <dependency>
   <groupId>com.kryszak</groupId>
   <artifactId>gwatlin</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <type>pom</type>
 </dependency>
 ```
 #### Gradle
 ```groovy
-compile 'com.kryszak:gwatlin:1.0'
+compile 'com.kryszak:gwatlin:1.1'
 ```
 
 ### Code
