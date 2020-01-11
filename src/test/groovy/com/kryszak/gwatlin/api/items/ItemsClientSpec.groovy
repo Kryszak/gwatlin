@@ -50,6 +50,20 @@ class ItemsClientSpec extends WiremockConfig {
             id == 28445
             chatLink == "[&AgEdbwAA]"
             icon == "https://render.guildwars2.com/file/C6110F52DF5AFE0F00A56F9E143E9732176DDDE9/65015.png"
+            verifyAll(details) {
+                get("type") == "LongBow"
+                get("damage_type") == "Physical"
+                get("min_power") == 385
+                get("max_power") == 452
+                get("defense") == 0
+                get("infusion_slots") == []
+                get("suffix_item_id") == 24547
+                get("secondary_suffix_item_id") == ""
+                verifyAll(get("infix_upgrade")) {
+                    get("id") == 142
+                    get("attributes").size == 2
+                }
+            }
         }
     }
 }

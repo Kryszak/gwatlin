@@ -18,5 +18,6 @@ data class Item(
     @SerializedName("default_skin") val defaultSkin: Int?,
     val flags: List<String>,
     @SerializedName("game_types") val gameTypes: List<String>,
-    val restrictions: List<String>
+    val restrictions: List<String>,
+    val details: Map<String, Any>
 )
