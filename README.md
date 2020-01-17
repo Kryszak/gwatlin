@@ -40,7 +40,7 @@ Issue should contain example json response for given endpoint.
 Follow instructions from Bintray on how to add repository to your pom.xml or build.gradle file.
 
 Include dependency:
-#### Maven
+### Maven
 ```xml
 <dependency>
   <groupId>com.kryszak</groupId>
@@ -49,7 +49,7 @@ Include dependency:
   <type>pom</type>
 </dependency>
 ```
-#### Gradle
+### Gradle
 ```groovy
 compile 'com.kryszak:gwatlin:1.1'
 ```
