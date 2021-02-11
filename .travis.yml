@@ -24,10 +24,10 @@ stages:
 jobs:
   include:
     - stage: Build
-      script: gradle build --info --stacktrace --max-workers=1 --build-cache
+      script: ./gradlew build --info --stacktrace --max-workers=1 --build-cache
 
 after_success:
-  - gradle jacocoTestReport
+  - ./gradlew jacocoTestReport
   - bash <(curl -s https://codecov.io/bash)
 
 deploy:
