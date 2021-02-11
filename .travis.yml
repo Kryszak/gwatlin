@@ -41,7 +41,7 @@ deploy:
       repo: Kryszak/gwatlin
       tags: true
   - provider: script
-    script: gradle bintrayUpload
+    script: ./gradlew artifactoryPublish
     skip_cleanup: true
     on:
       repo: Kryszak/gwatlin

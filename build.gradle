@@ -3,7 +3,7 @@ plugins {
     id 'jacoco'
     id 'maven-publish'
     id "org.jetbrains.kotlin.jvm" version "1.3.50"
-    id "com.jfrog.bintray" version "1.8.4"
+    id "com.jfrog.artifactory" version "4.20.0"
 }
 
 ext {
@@ -15,7 +15,6 @@ ext {
     gson_version = '2.8.5'
     slf4j_version = '1.7.28'
     logback_version = '1.2.3'
-    bintray_plugin_version = "1.8.4"
 }
 
 project.group = 'com.kryszak'
@@ -61,28 +60,18 @@ publishing {
     }
 }
 
-bintray {
-    user = "kryszak"
-    key = System.getenv("BINTRAY_KEY")
-    publications = ['mavenJava']
-    dryRun = false
-    publish = true
-    pkg {
-        repo = "gw2"
-        name = 'gwatlin'
-        desc = 'Guild Wars 2 API client written in Kotlin'
-        websiteUrl = 'https://github.com/Kryszak/gwatlin'
-        issueTrackerUrl = 'https://github.com/Kryszak/gwatlin/issues'
-        vcsUrl = 'https://github.com/Kryszak/gwatlin.git'
-        licenses = ['MIT']
-        publicDownloadNumbers = true
-        version {
-            name = "${project.version}"
-            released = new Date()
-            vcsTag = "${project.version}"
-            mavenCentralSync {
-                sync = false //Optional (true by default). Determines whether to sync the version to Maven Central.
-            }
+artifactory {
+    publish {
+        contextUrl = 'https://kryszak.jfrog.io/artifactory'
+        repository {
+            repoKey = 'gwatlin'
+            username = System.getenv("ARTIFACTORY_USER")
+            password = System.getenv("ARTIFACTORY_PASSWORD")
+        }
+        defaults {
+            publications('mavenJava')
+            publishConfigs('archives', 'published')
+            publishBuildInfo = false
         }
     }
 }
@@ -93,16 +82,16 @@ repositories {
 }
 
 dependencies {
-    compile "com.github.kittinunf.fuel:fuel:$fuel_version"
-    compile "com.github.kittinunf.fuel:fuel-gson:$fuel_version"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "com.google.code.gson:gson:$gson_version"
-    compile "org.slf4j:slf4j-api:$slf4j_version"
-    compile "ch.qos.logback:logback-classic:$logback_version"
-    compile "ch.qos.logback:logback-core:$logback_version"
-    testCompile "org.spockframework:spock-core:$spock_version"
-    testCompile "org.codehaus.groovy:groovy-all:$groovy_version"
-    testCompile "com.github.tomakehurst:wiremock-jre8:$wiremock_version"
+    implementation "com.github.kittinunf.fuel:fuel:$fuel_version"
+    implementation "com.github.kittinunf.fuel:fuel-gson:$fuel_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation "org.slf4j:slf4j-api:$slf4j_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation "ch.qos.logback:logback-core:$logback_version"
+    testImplementation "org.spockframework:spock-core:$spock_version"
+    testImplementation "org.codehaus.groovy:groovy-all:$groovy_version"
+    testImplementation "com.github.tomakehurst:wiremock-jre8:$wiremock_version"
 }
 
 jar.doLast { task ->

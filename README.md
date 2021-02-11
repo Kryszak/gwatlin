@@ -37,7 +37,10 @@ Issue should contain example json response for given endpoint.
 | World vs. World   | :heavy_check_mark: |
 
 ## Example usage
-Follow instructions from Bintray on how to add repository to your pom.xml or build.gradle file.
+Add following repository address:
+```
+https://kryszak.jfrog.io/artifactory/gwatlin/
+```
 
 Include dependency:
 ### Maven
@@ -45,13 +48,13 @@ Include dependency:
 <dependency>
   <groupId>com.kryszak</groupId>
   <artifactId>gwatlin</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
   <type>pom</type>
 </dependency>
 ```
 ### Gradle
 ```groovy
-compile 'com.kryszak:gwatlin:1.1'
+compile 'com.kryszak:gwatlin:1.2'
 ```
 
 ### Code
