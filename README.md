@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Kryszak/gwatlin.svg?branch=master)](https://travis-ci.org/Kryszak/gwatlin)
+[![Build Status](https://travis-ci.com/Kryszak/gwatlin.svg?branch=master)](https://travis-ci.com/Kryszak/gwatlin)
 [![codecov](https://codecov.io/gh/Kryszak/gwatlin/branch/master/graph/badge.svg)](https://codecov.io/gh/Kryszak/gwatlin)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cd1b40830b484dafb1150f3314eb6de2)](https://www.codacy.com/manual/Kryszak/gwatlin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kryszak/gwatlin&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
