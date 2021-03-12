@@ -35,10 +35,7 @@ Issue should contain example json response for given endpoint.
 | World vs. World   | :heavy_check_mark: |
 
 ## Example usage
-Add following repository address:
-```text
-https://kryszak.jfrog.io/artifactory/gwatlin/
-```
+Follow instructions from Bintray on how to add repository to your pom.xml or build.gradle file.
 
 Include dependency:
 ### Maven
