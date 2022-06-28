@@ -1,4 +1,4 @@
-[!Build Status](https://github.com/Kryszak/gwatlin/actions/workflows/build.yml/badge.svg)
+![Build Status](https://github.com/Kryszak/gwatlin/actions/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/gh/Kryszak/gwatlin/branch/master/graph/badge.svg)](https://codecov.io/gh/Kryszak/gwatlin)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6888080bc19640b4ad89efd0fd84ad9e)](https://www.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kryszak/gwatlin&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
