@@ -1,6 +1,9 @@
 name: Publish
 
-on: [release]
+on:
+  push:
+    tags:        
+      - v**
 
 jobs:
   publish:
