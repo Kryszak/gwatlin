@@ -35,24 +35,7 @@ Issue should contain example json response for given endpoint.
 | World vs. World   | :heavy_check_mark: |
 
 ## Example usage
-> :warning: **Bintray service is now deprecated**: In near future adding Bintray repository will probably stop working. I'm currently searching for best solution to host gwatlin artifact.
-
-Follow instructions from Bintray on how to add repository to your pom.xml or build.gradle file.
-
-Include dependency:
-### Maven
-```xml
-<dependency>
-  <groupId>com.kryszak</groupId>
-  <artifactId>gwatlin</artifactId>
-  <version>1.1</version>
-  <type>pom</type>
-</dependency>
-```
-### Gradle
-```groovy
-compile 'com.kryszak:gwatlin:1.1'
-```
+Artifact is available on GitHub Maven repository: [Instructions](https://github.com/Kryszak/gwatlin/packages/1509407)
 
 ### Code
 ```kotlin
