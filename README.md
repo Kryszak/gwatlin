@@ -51,3 +51,4 @@ val tokenInfo = tokenInfoClient.getTokenInfo()
 println(tokenInfo)
 // Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)
 ```
+
