@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.http
 
+import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
@@ -11,7 +12,9 @@ import com.kryszak.gwatlin.http.exception.ErrorResponse
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory.getLogger
 
-internal open class BaseHttpClient {
+internal open class BaseHttpClient(
+    protected val schemaVersion: String? = null
+) {
 
     companion object {
         val log: Logger = getLogger(BaseHttpClient::class.java.simpleName)
@@ -32,10 +35,15 @@ internal open class BaseHttpClient {
     protected inline fun <reified T : Any> getRequest(uri: String): T {
         val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
+                .also { addDefaultHeaders(it) }
                 .also { log.info(logMessage.format(it.url)) }
                 .responseObject<T>()
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
+    }
+
+    protected fun addDefaultHeaders(request: Request) {
+        schemaVersion?.let { request.appendHeader("X-Schema-Version" to schemaVersion) }
     }
 
     protected fun encodeParam(param: String) = param.replace(" ", "%20")
