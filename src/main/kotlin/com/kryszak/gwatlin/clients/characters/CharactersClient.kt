@@ -47,7 +47,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
         getRequestAuth<Map<String, List<String>>>("$endpoint/$characterName/recipes").values.firstOrNull()
 
     fun getTraining(characterName: String) =
-        getRequestAuth<Map<String, Training>>("$endpoint/$characterName/training").values.firstOrNull()
+        getRequestAuth<Map<String, List<Training>>>("$endpoint/$characterName/training").values.firstOrNull()
 
     fun getActiveBuildTab(characterName: String) =
         getRequestAuth<BuildTab>("$endpoint/$characterName/buildtabs/active")
