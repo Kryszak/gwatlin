@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class Build(
     val name: String,
     val profession: String,
-    val specializations: List<CharacterSpecialization>,
-    val skills: CharacterSkills,
+    val specializations: List<Specialization>,
+    val skills: Skills,
     @SerializedName("aquatic_skills")
-    val aquaticSkills: CharacterSkills
+    val aquaticSkills: Skills
 )
