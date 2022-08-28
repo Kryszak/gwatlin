@@ -1,8 +1,8 @@
-package com.kryszak.gwatlin.api.characters.model.character.equipment
+package com.kryszak.gwatlin.api.shared
 
 import com.google.gson.annotations.SerializedName
 
-enum class EquipmentItemBinding {
+enum class ItemBinding {
     @SerializedName("Account")
     ACCOUNT,
     @SerializedName("Character")
