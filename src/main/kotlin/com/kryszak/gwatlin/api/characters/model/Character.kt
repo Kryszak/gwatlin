@@ -6,6 +6,7 @@ import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentIte
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
 
 data class Character(
+    // Core
     val name: String,
     val race: String,
     val gender: String,
@@ -18,8 +19,10 @@ data class Character(
     @SerializedName("last_modified")
     val lastModified: String,
     val deaths: Int,
-    val crafting: List<Crafting>,
     val title: Int,
+
+    // Non-Core
+    val crafting: List<Crafting>,
     val backstory: List<String>,
     @SerializedName("wvw_abilities")
     val wvwAbilities: List<WvwAbility>,

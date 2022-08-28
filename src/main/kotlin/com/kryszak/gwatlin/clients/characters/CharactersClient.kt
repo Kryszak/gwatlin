@@ -4,6 +4,7 @@ import com.kryszak.gwatlin.api.characters.model.Character
 import com.kryszak.gwatlin.api.characters.model.character.*
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
+import com.kryszak.gwatlin.api.characters.model.character.inventory.Bag
 import com.kryszak.gwatlin.api.characters.model.character.sab.CharacterSAB
 import com.kryszak.gwatlin.http.AuthenticatedHttpClient
 
@@ -25,7 +26,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
     fun getBuildTabs(characterName: String) =
         getRequestAuth<List<BuildTab>>("$endpoint/$characterName/buildtabs?tabs=all")
 
-    fun getCore(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName")
+    fun getCore(characterName: String) = getRequestAuth<CharacterCore>("$endpoint/$characterName")
 
     fun getCrafting(characterName: String) =
         getRequestAuth<Map<String, List<Crafting>>>("$endpoint/$characterName/crafting").values.firstOrNull()
