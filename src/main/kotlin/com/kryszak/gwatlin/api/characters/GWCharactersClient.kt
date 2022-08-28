@@ -2,6 +2,12 @@ package com.kryszak.gwatlin.api.characters
 
 import com.kryszak.gwatlin.clients.characters.CharactersClient
 
+/**
+ * Client for characters endpoint. Doesn't include the /skills and /specializations sub-endpoints, as these
+ * are not available anymore in the schema version that's being used by the internal client. Use buildtabs for that.
+ * @param apiKey account api key
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
+ */
 class GWCharactersClient(apiKey: String) {
 
     private val charactersClient: CharactersClient = CharactersClient(apiKey)
