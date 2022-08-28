@@ -1,7 +1,7 @@
 package com.kryszak.gwatlin.api.characters.model.character.equipment
 
 import com.google.gson.annotations.SerializedName
-import com.kryszak.gwatlin.api.items.model.stats.ItemStats
+import com.kryszak.gwatlin.api.characters.model.character.ItemStats
 import com.kryszak.gwatlin.api.shared.ItemSlot
 import com.kryszak.gwatlin.api.shared.ItemBinding
 
@@ -15,7 +15,7 @@ data class EquipmentItem(
     val location: EquipmentItemLocation?,
     val skin: Int?,
     val upgrades: List<Int>?,
-    val stats: EquipmentItemStats?,
+    val stats: ItemStats?,
     val dyes: List<Int>?,
     val charges: Int?,
     val tabs: Set<Int>?
