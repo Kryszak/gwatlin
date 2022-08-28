@@ -24,7 +24,6 @@ class GWCharactersClient(apiKey: String) {
 
     fun getEquipmentTabs(characterName: String) = charactersClient.getEquipmentTabs(characterName)
 
-    // TODO
     fun getInventory(characterName: String) = charactersClient.getInventory(characterName)
 
     fun getRecipes(characterName: String) = charactersClient.getRecipes(characterName)
