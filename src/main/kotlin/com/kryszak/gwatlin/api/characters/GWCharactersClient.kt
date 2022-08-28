@@ -29,11 +29,6 @@ class GWCharactersClient(apiKey: String) {
 
     fun getRecipes(characterName: String) = charactersClient.getRecipes(characterName)
 
-    // TODO
-    fun getSkills(characterName: String) = charactersClient.getSkills(characterName)
-
-    // TODO
-    fun getSpecializations(characterName: String) = charactersClient.getSpecializations(characterName)
 
     fun getTraining(characterName: String) = charactersClient.getTraining(characterName)
 

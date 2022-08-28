@@ -40,12 +40,6 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
 
     fun getRecipes(characterName: String) = getRequestAuth<CharacterRecipes>("$endpoint/$characterName/recipes")
 
-    // TODO
-    fun getSkills(characterName: String) = getRequestAuth<List<CharacterSkills>>("$endpoint/$characterName/skills")
-
-    // TODO
-    fun getSpecializations(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName/specializations")
-
     fun getTraining(characterName: String) = getRequestAuth<CharacterTraining>("$endpoint/$characterName/training")
 
     fun getActiveBuildTab(characterName: String) =
