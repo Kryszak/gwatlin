@@ -2,6 +2,7 @@ package com.kryszak.gwatlin.clients.characters
 
 import com.kryszak.gwatlin.api.characters.model.Character
 import com.kryszak.gwatlin.api.characters.model.character.*
+import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
 import com.kryszak.gwatlin.api.characters.model.character.sab.CharacterSAB
 import com.kryszak.gwatlin.http.AuthenticatedHttpClient
@@ -15,7 +16,8 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
 
     fun getCharacter(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName")
 
-    fun getBackstory(characterName: String) = getRequestAuth<List<String>>("$endpoint/$characterName/backstory")
+    fun getBackstory(characterName: String) =
+        getRequestAuth<Map<String, List<String>>>("$endpoint/$characterName/backstory").values.firstOrNull()
 
     fun getBuildTab(characterName: String, tab: Int) =
         getRequestAuth<BuildTab>("$endpoint/$characterName/buildtabs?tab=$tab")
@@ -25,9 +27,11 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
 
     fun getCore(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName")
 
-    fun getCrafting(characterName: String) = getRequestAuth<List<Crafting>>("$endpoint/$characterName/crafting")
+    fun getCrafting(characterName: String) =
+        getRequestAuth<Map<String, List<Crafting>>>("$endpoint/$characterName/crafting").values.firstOrNull()
 
-    fun getEquipment(characterName: String) = getRequestAuth<CharacterEquipment>("$endpoint/$characterName/equipment")
+    fun getEquipment(characterName: String) =
+        getRequestAuth<Map<String, List<EquipmentItem>>>("$endpoint/$characterName/equipment").values.firstOrNull()
 
     fun getEquipmentTab(characterName: String, tab: Int) =
         getRequestAuth<EquipmentTab>("$endpoint/$characterName/equipmenttabs?tab=$tab")
@@ -38,9 +42,11 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
     // TODO
     fun getInventory(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName")
 
-    fun getRecipes(characterName: String) = getRequestAuth<CharacterRecipes>("$endpoint/$characterName/recipes")
+    fun getRecipes(characterName: String) =
+        getRequestAuth<Map<String, List<String>>>("$endpoint/$characterName/recipes").values.firstOrNull()
 
-    fun getTraining(characterName: String) = getRequestAuth<CharacterTraining>("$endpoint/$characterName/training")
+    fun getTraining(characterName: String) =
+        getRequestAuth<Map<String, Training>>("$endpoint/$characterName/training").values.firstOrNull()
 
     fun getActiveBuildTab(characterName: String) =
         getRequestAuth<BuildTab>("$endpoint/$characterName/buildtabs/active")
