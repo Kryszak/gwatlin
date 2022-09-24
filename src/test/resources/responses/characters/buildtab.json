@@ -1,0 +1,52 @@
+{
+  "tab": 2,
+  "is_active": true,
+  "build": {
+    "name": "Power Weaver",
+    "profession": "Elementalist",
+    "specializations": [
+      {
+        "id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      {
+        "id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      {
+        "id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    ],
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5734,
+        5539,
+        40183
+      ],
+      "elite": 5516
+    },
+    "aquatic_skills": {
+      "heal": 5569,
+      "utilities": [
+        5554,
+        5535,
+        5536
+      ],
+      "elite": 5534
+    }
+  }
+}

@@ -1,0 +1,3642 @@
+{
+  "name": "Cados Frazar",
+  "race": "Charr",
+  "gender": "Male",
+  "flags": [],
+  "profession": "Elementalist",
+  "level": 80,
+  "guild": "7311DE04-55DD-E811-81A8-E944283D67C1",
+  "age": 4732983,
+  "last_modified": "2022-09-24T14:27:00Z",
+  "created": "2013-08-09T12:22:00Z",
+  "deaths": 3519,
+  "crafting": [
+    {
+      "discipline": "Jeweler",
+      "rating": 400,
+      "active": true
+    },
+    {
+      "discipline": "Tailor",
+      "rating": 500,
+      "active": true
+    }
+  ],
+  "title": 300,
+  "backstory": [
+    "15-84",
+    "7-55",
+    "186-161",
+    "16-88",
+    "17-93"
+  ],
+  "wvw_abilities": [
+    {
+      "id": 24,
+      "rank": 6
+    },
+    {
+      "id": 7,
+      "rank": 5
+    },
+    {
+      "id": 25,
+      "rank": 5
+    },
+    {
+      "id": 17,
+      "rank": 5
+    },
+    {
+      "id": 26,
+      "rank": 7
+    }
+  ],
+  "build_tabs_unlocked": 4,
+  "active_build_tab": 2,
+  "build_tabs": [
+    {
+      "tab": 1,
+      "is_active": false,
+      "build": {
+        "name": "",
+        "profession": "Elementalist",
+        "specializations": [
+          {
+            "id": 31,
+            "traits": [
+              296,
+              334,
+              1510
+            ]
+          },
+          {
+            "id": 41,
+            "traits": [
+              232,
+              214,
+              1503
+            ]
+          },
+          {
+            "id": 48,
+            "traits": [
+              1952,
+              1902,
+              1839
+            ]
+          }
+        ],
+        "skills": {
+          "heal": 29535,
+          "utilities": [
+            30662,
+            29948,
+            30047
+          ],
+          "elite": 29968
+        },
+        "aquatic_skills": {
+          "heal": 29535,
+          "utilities": [
+            5539,
+            5641,
+            30662
+          ],
+          "elite": 5534
+        }
+      }
+    },
+    {
+      "tab": 2,
+      "is_active": true,
+      "build": {
+        "name": "Power Weaver",
+        "profession": "Elementalist",
+        "specializations": [
+          {
+            "id": 41,
+            "traits": [
+              232,
+              214,
+              226
+            ]
+          },
+          {
+            "id": 31,
+            "traits": [
+              296,
+              334,
+              1510
+            ]
+          },
+          {
+            "id": 56,
+            "traits": [
+              2177,
+              2061,
+              2131
+            ]
+          }
+        ],
+        "skills": {
+          "heal": 5503,
+          "utilities": [
+            5734,
+            5539,
+            40183
+          ],
+          "elite": 5516
+        },
+        "aquatic_skills": {
+          "heal": 5569,
+          "utilities": [
+            5554,
+            5535,
+            5536
+          ],
+          "elite": 5534
+        }
+      }
+    },
+    {
+      "tab": 3,
+      "is_active": false,
+      "build": {
+        "name": "Quick Cata",
+        "profession": "Elementalist",
+        "specializations": [
+          {
+            "id": 37,
+            "traits": [
+              253,
+              265,
+              1511
+            ]
+          },
+          {
+            "id": 41,
+            "traits": [
+              232,
+              214,
+              226
+            ]
+          },
+          {
+            "id": 67,
+            "traits": [
+              2252,
+              2247,
+              2251
+            ]
+          }
+        ],
+        "skills": {
+          "heal": 62827,
+          "utilities": [
+            5734,
+            62965,
+            62982
+          ],
+          "elite": 62725
+        },
+        "aquatic_skills": {
+          "heal": null,
+          "utilities": [
+            null,
+            null,
+            null
+          ],
+          "elite": null
+        }
+      }
+    },
+    {
+      "tab": 4,
+      "is_active": false,
+      "build": {
+        "name": "Heal Tempest",
+        "profession": "Elementalist",
+        "specializations": [
+          {
+            "id": 37,
+            "traits": [
+              253,
+              265,
+              238
+            ]
+          },
+          {
+            "id": 17,
+            "traits": [
+              363,
+              358,
+              2028
+            ]
+          },
+          {
+            "id": 48,
+            "traits": [
+              1952,
+              2015,
+              2033
+            ]
+          }
+        ],
+        "skills": {
+          "heal": 29535,
+          "utilities": [
+            30662,
+            30432,
+            30047
+          ],
+          "elite": 29968
+        },
+        "aquatic_skills": {
+          "heal": 29535,
+          "utilities": [
+            29948,
+            30432,
+            30662
+          ],
+          "elite": 29968
+        }
+      }
+    }
+  ],
+  "equipment_tabs_unlocked": 5,
+  "active_equipment_tab": 2,
+  "equipment": [
+    {
+      "id": 75573,
+      "slot": "HelmAquatic",
+      "upgrades": [
+        24836
+      ],
+      "binding": "Account",
+      "location": "Equipped",
+      "tabs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 74155,
+      "slot": "Backpack",
+      "infusions": [
+        49432,
+        49432
+      ],
+      "skin": 5544,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 63,
+          "Precision": 40,
+          "CritDamage": 40
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80190,
+      "slot": "Coat",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 1419,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 141,
+          "Precision": 101,
+          "CritDamage": 101
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        473,
+        473,
+        67,
+        473
+      ]
+    },
+    {
+      "id": 80399,
+      "slot": "Boots",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 1427,
+      "stats": {
+        "id": 753,
+        "attributes": {
+          "Power": 34,
+          "Precision": 47,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80111,
+      "slot": "Gloves",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 1420,
+      "stats": {
+        "id": 753,
+        "attributes": {
+          "Power": 34,
+          "Precision": 47,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        480,
+        15,
+        473,
+        null
+      ]
+    },
+    {
+      "id": 80248,
+      "slot": "Helm",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        77310
+      ],
+      "skin": 8817,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 63,
+          "Precision": 45,
+          "CritDamage": 45
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        473,
+        473,
+        473,
+        6
+      ]
+    },
+    {
+      "id": 80356,
+      "slot": "Leggings",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 1401,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 94,
+          "Precision": 67,
+          "CritDamage": 67
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        473,
+        473,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 80131,
+      "slot": "Shoulders",
+      "upgrades": [
+        91595
+      ],
+      "infusions": [
+        49434
+      ],
+      "skin": 6970,
+      "stats": {
+        "id": 753,
+        "attributes": {
+          "Power": 34,
+          "Precision": 47,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ],
+      "dyes": [
+        473,
+        67,
+        473,
+        15
+      ]
+    },
+    {
+      "id": 81908,
+      "slot": "Accessory1",
+      "infusions": [
+        77274
+      ],
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 74,
+          "Precision": 110,
+          "CritDamage": 74
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 91048,
+      "slot": "Accessory2",
+      "infusions": [
+        49432
+      ],
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 74,
+          "Precision": 110,
+          "CritDamage": 74
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 91234,
+      "slot": "Ring1",
+      "infusions": [
+        49432,
+        49432,
+        49432
+      ],
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 85,
+          "Precision": 126,
+          "CritDamage": 85
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 93105,
+      "slot": "Ring2",
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 126,
+          "Precision": 85,
+          "CritDamage": 85
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 95380,
+      "slot": "Amulet",
+      "infusions": [
+        93953
+      ],
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 108,
+          "Precision": 157,
+          "CritDamage": 108
+        }
+      },
+      "binding": "Account",
+      "location": "EquippedFromLegendaryArmory",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 13990,
+      "slot": "WeaponAquaticA",
+      "binding": "Character",
+      "bound_to": "Cados Frazar",
+      "location": "Equipped",
+      "tabs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 46774,
+      "slot": "WeaponA1",
+      "upgrades": [
+        24615
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 7681,
+      "binding": "Account",
+      "location": "Equipped",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 85935,
+      "slot": "WeaponA2",
+      "upgrades": [
+        24868
+      ],
+      "stats": {
+        "id": 753,
+        "attributes": {
+          "Power": 90,
+          "Precision": 125,
+          "CritDamage": 90
+        }
+      },
+      "binding": "Account",
+      "location": "Equipped",
+      "tabs": [
+        2
+      ]
+    },
+    {
+      "id": 46773,
+      "slot": "WeaponB1",
+      "upgrades": [
+        24618,
+        24615
+      ],
+      "infusions": [
+        49432,
+        49432
+      ],
+      "skin": 5334,
+      "binding": "Account",
+      "location": "Equipped",
+      "tabs": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 70044,
+      "slot": "Sickle",
+      "binding": "Account",
+      "location": "Equipped"
+    },
+    {
+      "id": 23000,
+      "slot": "Axe",
+      "binding": "Account",
+      "location": "Equipped"
+    },
+    {
+      "id": 48933,
+      "slot": "Pick",
+      "binding": "Account",
+      "location": "Equipped"
+    },
+    {
+      "id": 49432,
+      "count": 4,
+      "location": "Armory",
+      "tabs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 75669,
+      "count": 1,
+      "infusions": [
+        49432,
+        49434,
+        49434
+      ],
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 46769,
+      "count": 1,
+      "skin": 7802,
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 85704,
+      "count": 1,
+      "upgrades": [
+        72339
+      ],
+      "stats": {
+        "id": 1377,
+        "attributes": {
+          "Power": 125,
+          "Healing": 90,
+          "BoonDuration": 90
+        }
+      },
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 46763,
+      "count": 1,
+      "upgrades": [
+        24615,
+        24618
+      ],
+      "skin": 10228,
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 78808,
+      "count": 1,
+      "stats": {
+        "id": 1377,
+        "attributes": {
+          "Power": 125,
+          "Healing": 90,
+          "BoonDuration": 90
+        }
+      },
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        5
+      ]
+    },
+    {
+      "id": 46777,
+      "count": 1,
+      "upgrades": [
+        24618
+      ],
+      "skin": 8942,
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 91199,
+      "count": 1,
+      "upgrades": [
+        74326
+      ],
+      "skin": 8942,
+      "stats": {
+        "id": 1377,
+        "attributes": {
+          "Power": 125,
+          "Healing": 90,
+          "BoonDuration": 90
+        }
+      },
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": 77312,
+      "count": 1,
+      "upgrades": [
+        72339,
+        74326
+      ],
+      "stats": {
+        "id": 1377,
+        "attributes": {
+          "Power": 251,
+          "Healing": 179,
+          "BoonDuration": 179
+        }
+      },
+      "binding": "Account",
+      "location": "Armory",
+      "tabs": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": 80190,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1403,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 121,
+          "Precision": 67,
+          "CritDamage": 67,
+          "BoonDuration": 121
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        25,
+        15,
+        1247,
+        null
+      ]
+    },
+    {
+      "id": 80399,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1410,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 40,
+          "Precision": 22,
+          "CritDamage": 22,
+          "BoonDuration": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80190,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9251,
+      "stats": {
+        "id": 1363,
+        "attributes": {
+          "Power": 141,
+          "Healing": 101,
+          "BoonDuration": 101
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        25,
+        15,
+        1247,
+        1305
+      ]
+    },
+    {
+      "id": 80111,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1404,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 40,
+          "Precision": 22,
+          "CritDamage": 22,
+          "BoonDuration": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        1247,
+        15,
+        15,
+        null
+      ]
+    },
+    {
+      "id": 80248,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1402,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 54,
+          "Precision": 30,
+          "CritDamage": 30,
+          "BoonDuration": 54
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80356,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1401,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 81,
+          "Precision": 44,
+          "CritDamage": 44,
+          "BoonDuration": 81
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 80190,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 11031,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 141,
+          "Precision": 101,
+          "CritDamage": 101
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        25,
+        15,
+        1247,
+        null
+      ]
+    },
+    {
+      "id": 80399,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 10978,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 47,
+          "Precision": 34,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80111,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 10974,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 47,
+          "Precision": 34,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        480,
+        15,
+        473,
+        null
+      ]
+    },
+    {
+      "id": 80131,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 1395,
+      "stats": {
+        "id": 1556,
+        "attributes": {
+          "Power": 40,
+          "Precision": 22,
+          "CritDamage": 22,
+          "BoonDuration": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 74155,
+      "count": 1,
+      "skin": 10161,
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 40,
+          "Precision": 63,
+          "CritDamage": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ],
+      "dyes": [
+        1247,
+        584,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 81908,
+      "count": 1,
+      "stats": {
+        "id": 1538,
+        "attributes": {
+          "Power": 92,
+          "Precision": 49,
+          "CritDamage": 49,
+          "BoonDuration": 92
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 91048,
+      "count": 1,
+      "stats": {
+        "id": 1538,
+        "attributes": {
+          "Power": 92,
+          "Precision": 49,
+          "CritDamage": 49,
+          "BoonDuration": 92
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 91234,
+      "count": 1,
+      "stats": {
+        "id": 1538,
+        "attributes": {
+          "Power": 106,
+          "Precision": 56,
+          "CritDamage": 56,
+          "BoonDuration": 106
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 93105,
+      "count": 1,
+      "stats": {
+        "id": 1538,
+        "attributes": {
+          "Power": 106,
+          "Precision": 56,
+          "CritDamage": 56,
+          "BoonDuration": 106
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 80399,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 10866,
+      "stats": {
+        "id": 156,
+        "attributes": {
+          "Precision": 34,
+          "Vitality": 34,
+          "Healing": 47
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        25,
+        15,
+        20,
+        349
+      ]
+    },
+    {
+      "id": 80111,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 10028,
+      "stats": {
+        "id": 1363,
+        "attributes": {
+          "Power": 47,
+          "Healing": 34,
+          "BoonDuration": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        1247,
+        15,
+        15,
+        349
+      ]
+    },
+    {
+      "id": 80248,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9544,
+      "stats": {
+        "id": 1363,
+        "attributes": {
+          "Power": 63,
+          "Healing": 45,
+          "BoonDuration": 45
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80356,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9278,
+      "stats": {
+        "id": 1363,
+        "attributes": {
+          "Power": 94,
+          "Healing": 67,
+          "BoonDuration": 67
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 80131,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9457,
+      "stats": {
+        "id": 1363,
+        "attributes": {
+          "Power": 47,
+          "Healing": 34,
+          "BoonDuration": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 74155,
+      "count": 1,
+      "skin": 7218,
+      "stats": {
+        "id": 1037,
+        "attributes": {
+          "Precision": 40,
+          "Vitality": 40,
+          "Healing": 63
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ],
+      "dyes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80248,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 11028,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 63,
+          "Precision": 45,
+          "CritDamage": 45
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80356,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 10995,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 94,
+          "Precision": 67,
+          "CritDamage": 67
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        473,
+        473,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 80131,
+      "count": 1,
+      "upgrades": [
+        91595
+      ],
+      "skin": 11012,
+      "stats": {
+        "id": 161,
+        "attributes": {
+          "Power": 47,
+          "Precision": 34,
+          "CritDamage": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        473,
+        67,
+        473,
+        15
+      ]
+    },
+    {
+      "id": 74155,
+      "count": 1,
+      "skin": 7218,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 63,
+          "Precision": 40,
+          "CritDamage": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ],
+      "dyes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 81908,
+      "count": 1,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 110,
+          "Precision": 74,
+          "CritDamage": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 91048,
+      "count": 1,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 110,
+          "Precision": 74,
+          "CritDamage": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 81908,
+      "count": 1,
+      "stats": {
+        "id": 1345,
+        "attributes": {
+          "Power": 110,
+          "Healing": 74,
+          "BoonDuration": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 91048,
+      "count": 1,
+      "stats": {
+        "id": 1345,
+        "attributes": {
+          "Power": 110,
+          "Healing": 74,
+          "BoonDuration": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 91234,
+      "count": 1,
+      "stats": {
+        "id": 1345,
+        "attributes": {
+          "Power": 126,
+          "Healing": 85,
+          "BoonDuration": 85
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 91234,
+      "count": 1,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 126,
+          "Precision": 85,
+          "CritDamage": 85
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 93105,
+      "count": 1,
+      "stats": {
+        "id": 1345,
+        "attributes": {
+          "Power": 126,
+          "Healing": 85,
+          "BoonDuration": 85
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 95380,
+      "count": 1,
+      "stats": {
+        "id": 584,
+        "attributes": {
+          "Power": 157,
+          "Precision": 108,
+          "CritDamage": 108
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        1
+      ]
+    },
+    {
+      "id": 95380,
+      "count": 1,
+      "stats": {
+        "id": 1128,
+        "attributes": {
+          "Power": 108,
+          "Precision": 157,
+          "CritDamage": 108
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        3
+      ]
+    },
+    {
+      "id": 95380,
+      "count": 1,
+      "stats": {
+        "id": 1345,
+        "attributes": {
+          "Power": 157,
+          "Healing": 108,
+          "BoonDuration": 108
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        4
+      ]
+    },
+    {
+      "id": 80190,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9251,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 141,
+          "Healing": 101,
+          "BoonDuration": 101
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        25,
+        15,
+        1247,
+        1305
+      ]
+    },
+    {
+      "id": 80399,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 10866,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 47,
+          "Healing": 34,
+          "BoonDuration": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        25,
+        15,
+        20,
+        349
+      ]
+    },
+    {
+      "id": 80111,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 10028,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 47,
+          "Healing": 34,
+          "BoonDuration": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        1247,
+        15,
+        15,
+        349
+      ]
+    },
+    {
+      "id": 80248,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9544,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 63,
+          "Healing": 45,
+          "BoonDuration": 45
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        25,
+        15,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 80356,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9278,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 94,
+          "Healing": 67,
+          "BoonDuration": 67
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 80131,
+      "count": 1,
+      "upgrades": [
+        91501
+      ],
+      "skin": 9457,
+      "stats": {
+        "id": 628,
+        "attributes": {
+          "Toughness": 47,
+          "Healing": 34,
+          "BoonDuration": 34
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        15,
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "id": 74155,
+      "count": 1,
+      "skin": 7218,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 63,
+          "Healing": 40,
+          "BoonDuration": 40
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ],
+      "dyes": [
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 81908,
+      "count": 1,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 110,
+          "Healing": 74,
+          "BoonDuration": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ]
+    },
+    {
+      "id": 91048,
+      "count": 1,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 110,
+          "Healing": 74,
+          "BoonDuration": 74
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ]
+    },
+    {
+      "id": 91234,
+      "count": 1,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 126,
+          "Healing": 85,
+          "BoonDuration": 85
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ]
+    },
+    {
+      "id": 93105,
+      "count": 1,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 126,
+          "Healing": 85,
+          "BoonDuration": 85
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ]
+    },
+    {
+      "id": 95380,
+      "count": 1,
+      "stats": {
+        "id": 1430,
+        "attributes": {
+          "Toughness": 157,
+          "Healing": 108,
+          "BoonDuration": 108
+        }
+      },
+      "binding": "Account",
+      "location": "LegendaryArmory",
+      "tabs": [
+        5
+      ]
+    }
+  ],
+  "equipment_tabs": [
+    {
+      "tab": 1,
+      "name": "Tempest SC WH",
+      "is_active": false,
+      "equipment": [
+        {
+          "id": 75573,
+          "slot": "HelmAquatic",
+          "upgrades": [
+            24836
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 80190,
+          "slot": "Coat",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 11031,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            1247,
+            null
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 141,
+              "Precision": 101,
+              "CritDamage": 101
+            }
+          }
+        },
+        {
+          "id": 80399,
+          "slot": "Boots",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10978,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 47,
+              "Precision": 34,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 80111,
+          "slot": "Gloves",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10974,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            480,
+            15,
+            473,
+            null
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 47,
+              "Precision": 34,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 80248,
+          "slot": "Helm",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            77310
+          ],
+          "skin": 11028,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 63,
+              "Precision": 45,
+              "CritDamage": 45
+            }
+          }
+        },
+        {
+          "id": 80356,
+          "slot": "Leggings",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10995,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            473,
+            473,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 94,
+              "Precision": 67,
+              "CritDamage": 67
+            }
+          }
+        },
+        {
+          "id": 80131,
+          "slot": "Shoulders",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49434
+          ],
+          "skin": 11012,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            473,
+            67,
+            473,
+            15
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 47,
+              "Precision": 34,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 74155,
+          "slot": "Backpack",
+          "infusions": [
+            49432,
+            49432
+          ],
+          "skin": 7218,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 63,
+              "Precision": 40,
+              "CritDamage": 40
+            }
+          }
+        },
+        {
+          "id": 81908,
+          "slot": "Accessory1",
+          "infusions": [
+            77274
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 110,
+              "Precision": 74,
+              "CritDamage": 74
+            }
+          }
+        },
+        {
+          "id": 91048,
+          "slot": "Accessory2",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 110,
+              "Precision": 74,
+              "CritDamage": 74
+            }
+          }
+        },
+        {
+          "id": 91234,
+          "slot": "Ring1",
+          "infusions": [
+            49432,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 126,
+              "Precision": 85,
+              "CritDamage": 85
+            }
+          }
+        },
+        {
+          "id": 75669,
+          "slot": "Ring2",
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 95380,
+          "slot": "Amulet",
+          "infusions": [
+            93953
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 157,
+              "Precision": 108,
+              "CritDamage": 108
+            }
+          }
+        },
+        {
+          "id": 13990,
+          "slot": "WeaponAquaticA",
+          "binding": "Character",
+          "bound_to": "Cados Frazar",
+          "location": "Equipped"
+        },
+        {
+          "id": 46769,
+          "slot": "WeaponA1",
+          "skin": 7802,
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 46777,
+          "slot": "WeaponA2",
+          "upgrades": [
+            24618
+          ],
+          "skin": 8942,
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 46773,
+          "slot": "WeaponB1",
+          "upgrades": [
+            24618,
+            24615
+          ],
+          "skin": 5334,
+          "binding": "Account",
+          "location": "Equipped"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": 8,
+        "rune": 21215,
+        "sigils": [
+          21155,
+          null,
+          21152,
+          null
+        ]
+      }
+    },
+    {
+      "tab": 2,
+      "name": "Weaver SW DA",
+      "is_active": true,
+      "equipment": [
+        {
+          "id": 75573,
+          "slot": "HelmAquatic",
+          "upgrades": [
+            24836
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 80190,
+          "slot": "Coat",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1419,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            473,
+            473,
+            67,
+            473
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 141,
+              "Precision": 101,
+              "CritDamage": 101
+            }
+          }
+        },
+        {
+          "id": 80399,
+          "slot": "Boots",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1427,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 753,
+            "attributes": {
+              "Power": 34,
+              "Precision": 47,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 80111,
+          "slot": "Gloves",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1420,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            480,
+            15,
+            473,
+            null
+          ],
+          "stats": {
+            "id": 753,
+            "attributes": {
+              "Power": 34,
+              "Precision": 47,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 80248,
+          "slot": "Helm",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            77310
+          ],
+          "skin": 8817,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            473,
+            473,
+            473,
+            6
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 63,
+              "Precision": 45,
+              "CritDamage": 45
+            }
+          }
+        },
+        {
+          "id": 80356,
+          "slot": "Leggings",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1401,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            473,
+            473,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 94,
+              "Precision": 67,
+              "CritDamage": 67
+            }
+          }
+        },
+        {
+          "id": 80131,
+          "slot": "Shoulders",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49434
+          ],
+          "skin": 6970,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            473,
+            67,
+            473,
+            15
+          ],
+          "stats": {
+            "id": 753,
+            "attributes": {
+              "Power": 34,
+              "Precision": 47,
+              "CritDamage": 34
+            }
+          }
+        },
+        {
+          "id": 74155,
+          "slot": "Backpack",
+          "infusions": [
+            49432,
+            49432
+          ],
+          "skin": 5544,
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "dyes": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 63,
+              "Precision": 40,
+              "CritDamage": 40
+            }
+          }
+        },
+        {
+          "id": 81908,
+          "slot": "Accessory1",
+          "infusions": [
+            77274
+          ],
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 74,
+              "Precision": 110,
+              "CritDamage": 74
+            }
+          }
+        },
+        {
+          "id": 91048,
+          "slot": "Accessory2",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 74,
+              "Precision": 110,
+              "CritDamage": 74
+            }
+          }
+        },
+        {
+          "id": 91234,
+          "slot": "Ring1",
+          "infusions": [
+            49432,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 85,
+              "Precision": 126,
+              "CritDamage": 85
+            }
+          }
+        },
+        {
+          "id": 93105,
+          "slot": "Ring2",
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "stats": {
+            "id": 584,
+            "attributes": {
+              "Power": 126,
+              "Precision": 85,
+              "CritDamage": 85
+            }
+          }
+        },
+        {
+          "id": 95380,
+          "slot": "Amulet",
+          "infusions": [
+            93953
+          ],
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory",
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 108,
+              "Precision": 157,
+              "CritDamage": 108
+            }
+          }
+        },
+        {
+          "id": 13990,
+          "slot": "WeaponAquaticA",
+          "binding": "Character",
+          "bound_to": "Cados Frazar",
+          "location": "Equipped"
+        },
+        {
+          "id": 46774,
+          "slot": "WeaponA1",
+          "upgrades": [
+            24615
+          ],
+          "skin": 7681,
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 85935,
+          "slot": "WeaponA2",
+          "upgrades": [
+            24868
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 46773,
+          "slot": "WeaponB1",
+          "upgrades": [
+            24618,
+            24615
+          ],
+          "skin": 5334,
+          "binding": "Account",
+          "location": "Equipped"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": 8,
+        "rune": 21215,
+        "sigils": [
+          21155,
+          null,
+          21152,
+          null
+        ]
+      }
+    },
+    {
+      "tab": 3,
+      "name": "Quickness Catalyst",
+      "is_active": false,
+      "equipment": [
+        {
+          "id": 75573,
+          "slot": "HelmAquatic",
+          "upgrades": [
+            24836
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 80190,
+          "slot": "Coat",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1403,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            1247,
+            null
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 121,
+              "Precision": 67,
+              "CritDamage": 67,
+              "BoonDuration": 121
+            }
+          }
+        },
+        {
+          "id": 80399,
+          "slot": "Boots",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1410,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 40,
+              "Precision": 22,
+              "CritDamage": 22,
+              "BoonDuration": 40
+            }
+          }
+        },
+        {
+          "id": 80111,
+          "slot": "Gloves",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1404,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            1247,
+            15,
+            15,
+            null
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 40,
+              "Precision": 22,
+              "CritDamage": 22,
+              "BoonDuration": 40
+            }
+          }
+        },
+        {
+          "id": 80248,
+          "slot": "Helm",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            77310
+          ],
+          "skin": 1402,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 54,
+              "Precision": 30,
+              "CritDamage": 30,
+              "BoonDuration": 54
+            }
+          }
+        },
+        {
+          "id": 80356,
+          "slot": "Leggings",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 1401,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 81,
+              "Precision": 44,
+              "CritDamage": 44,
+              "BoonDuration": 81
+            }
+          }
+        },
+        {
+          "id": 80131,
+          "slot": "Shoulders",
+          "upgrades": [
+            91595
+          ],
+          "infusions": [
+            49434
+          ],
+          "skin": 1395,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 1556,
+            "attributes": {
+              "Power": 40,
+              "Precision": 22,
+              "CritDamage": 22,
+              "BoonDuration": 40
+            }
+          }
+        },
+        {
+          "id": 74155,
+          "slot": "Backpack",
+          "infusions": [
+            49432,
+            49432
+          ],
+          "skin": 10161,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            1247,
+            584,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 40,
+              "Precision": 63,
+              "CritDamage": 40
+            }
+          }
+        },
+        {
+          "id": 81908,
+          "slot": "Accessory1",
+          "infusions": [
+            77274
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1538,
+            "attributes": {
+              "Power": 92,
+              "Precision": 49,
+              "CritDamage": 49,
+              "BoonDuration": 92
+            }
+          }
+        },
+        {
+          "id": 91048,
+          "slot": "Accessory2",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1538,
+            "attributes": {
+              "Power": 92,
+              "Precision": 49,
+              "CritDamage": 49,
+              "BoonDuration": 92
+            }
+          }
+        },
+        {
+          "id": 91234,
+          "slot": "Ring1",
+          "infusions": [
+            49432,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1538,
+            "attributes": {
+              "Power": 106,
+              "Precision": 56,
+              "CritDamage": 56,
+              "BoonDuration": 106
+            }
+          }
+        },
+        {
+          "id": 93105,
+          "slot": "Ring2",
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1538,
+            "attributes": {
+              "Power": 106,
+              "Precision": 56,
+              "CritDamage": 56,
+              "BoonDuration": 106
+            }
+          }
+        },
+        {
+          "id": 95380,
+          "slot": "Amulet",
+          "infusions": [
+            93953
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1128,
+            "attributes": {
+              "Power": 108,
+              "Precision": 157,
+              "CritDamage": 108
+            }
+          }
+        },
+        {
+          "id": 13990,
+          "slot": "WeaponAquaticA",
+          "binding": "Character",
+          "bound_to": "Cados Frazar",
+          "location": "Equipped"
+        },
+        {
+          "id": 46763,
+          "slot": "WeaponA1",
+          "upgrades": [
+            24615,
+            24618
+          ],
+          "skin": 10228,
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 46773,
+          "slot": "WeaponB1",
+          "upgrades": [
+            24618,
+            24615
+          ],
+          "skin": 5334,
+          "binding": "Account",
+          "location": "Equipped"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": 8,
+        "rune": 21215,
+        "sigils": [
+          21155,
+          null,
+          21152,
+          null
+        ]
+      }
+    },
+    {
+      "tab": 4,
+      "name": "Heal Dagger",
+      "is_active": false,
+      "equipment": [
+        {
+          "id": 75573,
+          "slot": "HelmAquatic",
+          "upgrades": [
+            24836
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 80190,
+          "slot": "Coat",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9251,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            1247,
+            1305
+          ],
+          "stats": {
+            "id": 1363,
+            "attributes": {
+              "Power": 141,
+              "Healing": 101,
+              "BoonDuration": 101
+            }
+          }
+        },
+        {
+          "id": 80399,
+          "slot": "Boots",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10866,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            20,
+            349
+          ],
+          "stats": {
+            "id": 156,
+            "attributes": {
+              "Precision": 34,
+              "Vitality": 34,
+              "Healing": 47
+            }
+          }
+        },
+        {
+          "id": 80111,
+          "slot": "Gloves",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10028,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            1247,
+            15,
+            15,
+            349
+          ],
+          "stats": {
+            "id": 1363,
+            "attributes": {
+              "Power": 47,
+              "Healing": 34,
+              "BoonDuration": 34
+            }
+          }
+        },
+        {
+          "id": 80248,
+          "slot": "Helm",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9544,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1363,
+            "attributes": {
+              "Power": 63,
+              "Healing": 45,
+              "BoonDuration": 45
+            }
+          }
+        },
+        {
+          "id": 80356,
+          "slot": "Leggings",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9278,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 1363,
+            "attributes": {
+              "Power": 94,
+              "Healing": 67,
+              "BoonDuration": 67
+            }
+          }
+        },
+        {
+          "id": 80131,
+          "slot": "Shoulders",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49434
+          ],
+          "skin": 9457,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 1363,
+            "attributes": {
+              "Power": 47,
+              "Healing": 34,
+              "BoonDuration": 34
+            }
+          }
+        },
+        {
+          "id": 74155,
+          "slot": "Backpack",
+          "infusions": [
+            49432,
+            49432
+          ],
+          "skin": 7218,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1037,
+            "attributes": {
+              "Precision": 40,
+              "Vitality": 40,
+              "Healing": 63
+            }
+          }
+        },
+        {
+          "id": 81908,
+          "slot": "Accessory1",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1345,
+            "attributes": {
+              "Power": 110,
+              "Healing": 74,
+              "BoonDuration": 74
+            }
+          }
+        },
+        {
+          "id": 91048,
+          "slot": "Accessory2",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1345,
+            "attributes": {
+              "Power": 110,
+              "Healing": 74,
+              "BoonDuration": 74
+            }
+          }
+        },
+        {
+          "id": 91234,
+          "slot": "Ring1",
+          "infusions": [
+            49432,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1345,
+            "attributes": {
+              "Power": 126,
+              "Healing": 85,
+              "BoonDuration": 85
+            }
+          }
+        },
+        {
+          "id": 93105,
+          "slot": "Ring2",
+          "infusions": [
+            77274,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1345,
+            "attributes": {
+              "Power": 126,
+              "Healing": 85,
+              "BoonDuration": 85
+            }
+          }
+        },
+        {
+          "id": 95380,
+          "slot": "Amulet",
+          "infusions": [
+            93953
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1345,
+            "attributes": {
+              "Power": 157,
+              "Healing": 108,
+              "BoonDuration": 108
+            }
+          }
+        },
+        {
+          "id": 13990,
+          "slot": "WeaponAquaticA",
+          "binding": "Character",
+          "bound_to": "Cados Frazar",
+          "location": "Equipped"
+        },
+        {
+          "id": 85704,
+          "slot": "WeaponA1",
+          "upgrades": [
+            72339
+          ],
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 91199,
+          "slot": "WeaponA2",
+          "upgrades": [
+            74326
+          ],
+          "skin": 8942,
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 77312,
+          "slot": "WeaponB1",
+          "upgrades": [
+            72339,
+            74326
+          ],
+          "binding": "Account",
+          "location": "Armory"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": null,
+        "rune": null,
+        "sigils": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    {
+      "tab": 5,
+      "name": "Heal Scepter",
+      "is_active": false,
+      "equipment": [
+        {
+          "id": 75573,
+          "slot": "HelmAquatic",
+          "upgrades": [
+            24836
+          ],
+          "binding": "Account",
+          "location": "Equipped"
+        },
+        {
+          "id": 80190,
+          "slot": "Coat",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9251,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            1247,
+            1305
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 141,
+              "Healing": 101,
+              "BoonDuration": 101
+            }
+          }
+        },
+        {
+          "id": 80399,
+          "slot": "Boots",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10866,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            20,
+            349
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 47,
+              "Healing": 34,
+              "BoonDuration": 34
+            }
+          }
+        },
+        {
+          "id": 80111,
+          "slot": "Gloves",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 10028,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            1247,
+            15,
+            15,
+            349
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 47,
+              "Healing": 34,
+              "BoonDuration": 34
+            }
+          }
+        },
+        {
+          "id": 80248,
+          "slot": "Helm",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9544,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            25,
+            15,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 63,
+              "Healing": 45,
+              "BoonDuration": 45
+            }
+          }
+        },
+        {
+          "id": 80356,
+          "slot": "Leggings",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 9278,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 94,
+              "Healing": 67,
+              "BoonDuration": 67
+            }
+          }
+        },
+        {
+          "id": 80131,
+          "slot": "Shoulders",
+          "upgrades": [
+            91501
+          ],
+          "infusions": [
+            49434
+          ],
+          "skin": 9457,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            15,
+            15,
+            15,
+            15
+          ],
+          "stats": {
+            "id": 628,
+            "attributes": {
+              "Toughness": 47,
+              "Healing": 34,
+              "BoonDuration": 34
+            }
+          }
+        },
+        {
+          "id": 74155,
+          "slot": "Backpack",
+          "infusions": [
+            49432,
+            49432
+          ],
+          "skin": 7218,
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "dyes": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 63,
+              "Healing": 40,
+              "BoonDuration": 40
+            }
+          }
+        },
+        {
+          "id": 81908,
+          "slot": "Accessory1",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 110,
+              "Healing": 74,
+              "BoonDuration": 74
+            }
+          }
+        },
+        {
+          "id": 91048,
+          "slot": "Accessory2",
+          "infusions": [
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 110,
+              "Healing": 74,
+              "BoonDuration": 74
+            }
+          }
+        },
+        {
+          "id": 91234,
+          "slot": "Ring1",
+          "infusions": [
+            49432,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 126,
+              "Healing": 85,
+              "BoonDuration": 85
+            }
+          }
+        },
+        {
+          "id": 93105,
+          "slot": "Ring2",
+          "infusions": [
+            77274,
+            49432,
+            49432
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 126,
+              "Healing": 85,
+              "BoonDuration": 85
+            }
+          }
+        },
+        {
+          "id": 95380,
+          "slot": "Amulet",
+          "infusions": [
+            93953
+          ],
+          "binding": "Account",
+          "location": "LegendaryArmory",
+          "stats": {
+            "id": 1430,
+            "attributes": {
+              "Toughness": 157,
+              "Healing": 108,
+              "BoonDuration": 108
+            }
+          }
+        },
+        {
+          "id": 13990,
+          "slot": "WeaponAquaticA",
+          "binding": "Character",
+          "bound_to": "Cados Frazar",
+          "location": "Equipped"
+        },
+        {
+          "id": 78808,
+          "slot": "WeaponA1",
+          "upgrades": [
+            91473
+          ],
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 91199,
+          "slot": "WeaponA2",
+          "upgrades": [
+            74326
+          ],
+          "skin": 8942,
+          "binding": "Account",
+          "location": "Armory"
+        },
+        {
+          "id": 77312,
+          "slot": "WeaponB1",
+          "upgrades": [
+            72339,
+            74326
+          ],
+          "binding": "Account",
+          "location": "Armory"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": null,
+        "rune": null,
+        "sigils": [
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  ],
+  "training": [
+    {
+      "id": 33,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 111,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 115,
+      "spent": 13,
+      "done": true
+    },
+    {
+      "id": 86,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 107,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 34,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 69,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 36,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 39,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 93,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 31,
+      "spent": 250,
+      "done": true
+    },
+    {
+      "id": 416,
+      "spent": 250,
+      "done": true
+    },
+    {
+      "id": 467,
+      "spent": 250,
+      "done": true
+    }
+  ]
+}

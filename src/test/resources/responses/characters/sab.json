@@ -1,0 +1,101 @@
+{
+  "zones": [
+    {
+      "id": 1,
+      "mode": "normal",
+      "world": 1,
+      "zone": 1
+    },
+    {
+      "id": 2,
+      "mode": "normal",
+      "world": 1,
+      "zone": 2
+    },
+    {
+      "id": 3,
+      "mode": "normal",
+      "world": 1,
+      "zone": 3
+    },
+    {
+      "id": 4,
+      "mode": "normal",
+      "world": 2,
+      "zone": 1
+    },
+    {
+      "id": 5,
+      "mode": "normal",
+      "world": 2,
+      "zone": 2
+    },
+    {
+      "id": 13,
+      "mode": "infantile",
+      "world": 1,
+      "zone": 1
+    },
+    {
+      "id": 14,
+      "mode": "infantile",
+      "world": 1,
+      "zone": 2
+    },
+    {
+      "id": 15,
+      "mode": "infantile",
+      "world": 1,
+      "zone": 3
+    },
+    {
+      "id": 16,
+      "mode": "infantile",
+      "world": 2,
+      "zone": 1
+    },
+    {
+      "id": 17,
+      "mode": "infantile",
+      "world": 2,
+      "zone": 2
+    },
+    {
+      "id": 18,
+      "mode": "infantile",
+      "world": 2,
+      "zone": 3
+    }
+  ],
+  "unlocks": [
+    {
+      "id": 6,
+      "name": "whip"
+    },
+    {
+      "id": 12,
+      "name": "candle"
+    },
+    {
+      "id": 15,
+      "name": "wooden_whistle"
+    },
+    {
+      "id": 18,
+      "name": "digger"
+    },
+    {
+      "id": 21,
+      "name": "glove_of_wisdom"
+    },
+    {
+      "id": 31,
+      "name": "health_vessel_1"
+    },
+    {
+      "id": 32,
+      "name": "health_vessel_2"
+    }
+  ],
+  "songs": []
+}

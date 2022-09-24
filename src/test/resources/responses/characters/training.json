@@ -1,0 +1,69 @@
+{
+  "training": [
+    {
+      "id": 33,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 111,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 115,
+      "spent": 13,
+      "done": true
+    },
+    {
+      "id": 86,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 107,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 34,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 69,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 36,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 39,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 93,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 31,
+      "spent": 250,
+      "done": true
+    },
+    {
+      "id": 416,
+      "spent": 250,
+      "done": true
+    },
+    {
+      "id": 467,
+      "spent": 250,
+      "done": true
+    }
+  ]
+}

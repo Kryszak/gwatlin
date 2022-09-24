@@ -1,0 +1,210 @@
+[
+  {
+    "tab": 1,
+    "is_active": true,
+    "build": {
+      "name": "",
+      "profession": "Elementalist",
+      "specializations": [
+        {
+          "id": 31,
+          "traits": [
+            296,
+            334,
+            1510
+          ]
+        },
+        {
+          "id": 41,
+          "traits": [
+            232,
+            214,
+            1503
+          ]
+        },
+        {
+          "id": 48,
+          "traits": [
+            1952,
+            1902,
+            1839
+          ]
+        }
+      ],
+      "skills": {
+        "heal": 29535,
+        "utilities": [
+          30662,
+          29948,
+          30047
+        ],
+        "elite": 29968
+      },
+      "aquatic_skills": {
+        "heal": 29535,
+        "utilities": [
+          5539,
+          5641,
+          30662
+        ],
+        "elite": 5534
+      }
+    }
+  },
+  {
+    "tab": 2,
+    "is_active": true,
+    "build": {
+      "name": "Power Weaver",
+      "profession": "Elementalist",
+      "specializations": [
+        {
+          "id": 41,
+          "traits": [
+            232,
+            214,
+            226
+          ]
+        },
+        {
+          "id": 31,
+          "traits": [
+            296,
+            334,
+            1510
+          ]
+        },
+        {
+          "id": 56,
+          "traits": [
+            2177,
+            2061,
+            2131
+          ]
+        }
+      ],
+      "skills": {
+        "heal": 5503,
+        "utilities": [
+          5734,
+          5539,
+          40183
+        ],
+        "elite": 5516
+      },
+      "aquatic_skills": {
+        "heal": 5569,
+        "utilities": [
+          5554,
+          5535,
+          5536
+        ],
+        "elite": 5534
+      }
+    }
+  },
+  {
+    "tab": 3,
+    "is_active": false,
+    "build": {
+      "name": "Quick Cata",
+      "profession": "Elementalist",
+      "specializations": [
+        {
+          "id": 37,
+          "traits": [
+            253,
+            265,
+            1511
+          ]
+        },
+        {
+          "id": 41,
+          "traits": [
+            232,
+            214,
+            226
+          ]
+        },
+        {
+          "id": 67,
+          "traits": [
+            2252,
+            2247,
+            2251
+          ]
+        }
+      ],
+      "skills": {
+        "heal": 62827,
+        "utilities": [
+          5734,
+          62965,
+          62982
+        ],
+        "elite": 62725
+      },
+      "aquatic_skills": {
+        "heal": null,
+        "utilities": [
+          null,
+          null,
+          null
+        ],
+        "elite": null
+      }
+    }
+  },
+  {
+    "tab": 4,
+    "is_active": false,
+    "build": {
+      "name": "Heal Tempest",
+      "profession": "Elementalist",
+      "specializations": [
+        {
+          "id": 37,
+          "traits": [
+            253,
+            265,
+            238
+          ]
+        },
+        {
+          "id": 17,
+          "traits": [
+            363,
+            358,
+            2028
+          ]
+        },
+        {
+          "id": 48,
+          "traits": [
+            1952,
+            2015,
+            2033
+          ]
+        }
+      ],
+      "skills": {
+        "heal": 29535,
+        "utilities": [
+          30662,
+          30432,
+          30047
+        ],
+        "elite": 29968
+      },
+      "aquatic_skills": {
+        "heal": 29535,
+        "utilities": [
+          29948,
+          30432,
+          30662
+        ],
+        "elite": 29968
+      }
+    }
+  }
+]
