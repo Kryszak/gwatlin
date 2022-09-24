@@ -2,7 +2,9 @@ package com.kryszak.gwatlin.api.characters.model.character
 
 data class Skills(
     val heal: Int,
-    val utilities: List<Int>,
+    val utilities: Set<Int>,
     val elite: Int,
-    val legends: List<String>?
-)
+    val legends: Set<String>? = null
+) {
+    constructor(heal: Int, utilities: Set<Int>, elite: Int) : this(heal, utilities, elite, null)
+}
