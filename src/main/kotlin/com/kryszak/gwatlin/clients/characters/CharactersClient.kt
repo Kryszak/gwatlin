@@ -26,7 +26,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
     fun getBuildTabs(characterName: String) =
         getRequestAuth<List<BuildTab>>("$endpoint/$characterName/buildtabs?tabs=all")
 
-    fun getCore(characterName: String) = getRequestAuth<CharacterCore>("$endpoint/$characterName")
+    fun getCore(characterName: String) = getRequestAuth<CharacterCore>("$endpoint/$characterName/core")
 
     fun getCrafting(characterName: String) =
         getRequestAuth<Map<String, List<Crafting>>>("$endpoint/$characterName/crafting").values.firstOrNull()
@@ -44,7 +44,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
         getRequestAuth<Map<String, List<Bag>>>("$endpoint/$characterName/inventory").values.firstOrNull()
 
     fun getRecipes(characterName: String) =
-        getRequestAuth<Map<String, List<String>>>("$endpoint/$characterName/recipes").values.firstOrNull()
+        getRequestAuth<Map<String, List<Int>>>("$endpoint/$characterName/recipes").values.firstOrNull()
 
     fun getTraining(characterName: String) =
         getRequestAuth<Map<String, List<Training>>>("$endpoint/$characterName/training").values.firstOrNull()
