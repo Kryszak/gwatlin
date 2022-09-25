@@ -29,8 +29,10 @@ import spock.lang.Subject
 
 class CharactersClientSpec extends WiremockConfig {
 
+    final TARGET_SCHEMA_VERSION = "2021-07-15T13:00:00.000Z"
+    
     def API_KEY = "1234"
-
+    
     @Subject
     def charactersClient = new GWCharactersClient(API_KEY)
 
@@ -39,8 +41,15 @@ class CharactersClientSpec extends WiremockConfig {
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
 
+        and: ""
+
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName", "/responses/characters/character.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName",
+                "/responses/characters/character.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getCharacter(characterName)
@@ -157,7 +166,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/buildtabs?tabs=all", "/responses/characters/buildtabs.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/buildtabs?tabs=all",
+                "/responses/characters/buildtabs.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getBuildTabs(characterName)
@@ -190,7 +204,12 @@ class CharactersClientSpec extends WiremockConfig {
         )
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/buildtabs?tab=$buildtabNumber", "/responses/characters/buildtab.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/buildtabs?tab=$buildtabNumber",
+                "/responses/characters/buildtab.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getBuildTab(characterName, buildtabNumber)
@@ -223,7 +242,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/buildtabs/active", "/responses/characters/buildtab.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/buildtabs/active",
+                "/responses/characters/buildtab.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getActiveBuildTab(characterName)
@@ -240,7 +264,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/backstory", "/responses/characters/backstory.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/backstory",
+                "/responses/characters/backstory.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getBackstory(characterName)
@@ -257,7 +286,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/core", "/responses/characters/character-core.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/core",
+                "/responses/characters/character-core.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getCore(characterName)
@@ -288,7 +322,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/crafting", "/responses/characters/crafting.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/crafting",
+                "/responses/characters/crafting.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getCrafting(characterName)
@@ -309,7 +348,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/equipment", "/responses/characters/equipment.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/equipment",
+                "/responses/characters/equipment.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getEquipment(characterName)
@@ -348,7 +392,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/equipmenttabs?tabs=all", "/responses/characters/equipmenttabs.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/equipmenttabs?tabs=all",
+                "/responses/characters/equipmenttabs.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getEquipmentTabs(characterName)
@@ -368,7 +417,12 @@ class CharactersClientSpec extends WiremockConfig {
         def equipmenttabNumber = 2
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/equipmenttabs?tab=$equipmenttabNumber", "/responses/characters/equipmenttab.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/equipmenttabs?tab=$equipmenttabNumber",
+                "/responses/characters/equipmenttab.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getEquipmentTab(characterName, equipmenttabNumber)
@@ -396,7 +450,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/equipmenttabs/active", "/responses/characters/equipmenttab.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/equipmenttabs/active",
+                "/responses/characters/equipmenttab.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getActiveEquipmentTab(characterName)
@@ -413,7 +472,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/inventory", "/responses/characters/inventory.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/inventory",
+                "/responses/characters/inventory.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getInventory(characterName)
@@ -481,7 +545,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/recipes", "/responses/characters/recipes.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/recipes",
+                "/responses/characters/recipes.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getRecipes(characterName)
@@ -503,7 +572,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/training", "/responses/characters/training.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/training",
+                "/responses/characters/training.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getTraining(characterName)
@@ -523,7 +597,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/heropoints", "/responses/characters/heropoints.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/heropoints",
+                "/responses/characters/heropoints.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getHeropoints(characterName)
@@ -546,7 +625,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/quests", "/responses/characters/quests.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/quests",
+                "/responses/characters/quests.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getQuests(characterName)
@@ -569,7 +653,12 @@ class CharactersClientSpec extends WiremockConfig {
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
-        stubAuthResponse("/characters/$escapedName/sab", "/responses/characters/sab.json", API_KEY)
+        stubAuthResponseWithSchema(
+                "/characters/$escapedName/sab",
+                "/responses/characters/sab.json",
+                API_KEY,
+                TARGET_SCHEMA_VERSION
+        )
 
         when: "Requesting character"
         def character = charactersClient.getSAB(characterName)
