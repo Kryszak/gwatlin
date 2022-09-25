@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.shared
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Enum for possible item slot values
+ */
 enum class ItemSlot {
     @SerializedName("HelmAquatic")
     HELM_AQUATIC,
