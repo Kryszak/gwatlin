@@ -10,7 +10,6 @@ data class Character(
     val name: String,
     val race: String,
     val gender: String,
-    val flags: List<String>,
     val profession: String,
     val level: Int,
     val guild: String,
@@ -22,6 +21,7 @@ data class Character(
     val title: Int,
 
     // Non-Core
+    val flags: List<String>,
     val crafting: List<Crafting>,
     val backstory: List<String>,
     @SerializedName("wvw_abilities")
