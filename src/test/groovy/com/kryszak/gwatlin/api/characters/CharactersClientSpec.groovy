@@ -1,11 +1,25 @@
 package com.kryszak.gwatlin.api.characters
 
+import com.kryszak.gwatlin.api.characters.model.Character
 import com.kryszak.gwatlin.api.characters.model.character.Build
+import com.kryszak.gwatlin.api.characters.model.character.BuildTab
+import com.kryszak.gwatlin.api.characters.model.character.CharacterCore
 import com.kryszak.gwatlin.api.characters.model.character.Crafting
+import com.kryszak.gwatlin.api.characters.model.character.ItemStats
 import com.kryszak.gwatlin.api.characters.model.character.Skills
 import com.kryszak.gwatlin.api.characters.model.character.Specialization
+import com.kryszak.gwatlin.api.characters.model.character.Training
 import com.kryszak.gwatlin.api.characters.model.character.WvwAbility
+import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItemLocation
+import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentPvp
+import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
+import com.kryszak.gwatlin.api.characters.model.character.inventory.Bag
+import com.kryszak.gwatlin.api.characters.model.character.inventory.InventorySlot
+import com.kryszak.gwatlin.api.characters.model.character.sab.CharacterSAB
+import com.kryszak.gwatlin.api.characters.model.character.sab.SabSong
+import com.kryszak.gwatlin.api.characters.model.character.sab.SabUnlock
+import com.kryszak.gwatlin.api.characters.model.character.sab.SabZone
 import com.kryszak.gwatlin.api.characters.model.character.sab.SabZoneMode
 import com.kryszak.gwatlin.api.shared.ItemBinding
 import com.kryszak.gwatlin.api.shared.ItemSlot
@@ -43,6 +57,7 @@ class CharactersClientSpec extends WiremockConfig {
             guild == "7311DE04-55DD-E811-81A8-E944283D67C1"
             age == 4732983
             created == "2013-08-09T12:22:00Z"
+            lastModified == "2022-09-24T14:27:00Z"
             deaths == 3519
             crafting.size() == 2
             title == 300
@@ -63,6 +78,7 @@ class CharactersClientSpec extends WiremockConfig {
             matchWvWAbilities(wvwAbilities[2], 25, 5)
             matchWvWAbilities(wvwAbilities[3], 17, 5)
             matchWvWAbilities(wvwAbilities[4], 26, 7)
+            wvwAbilities[0] == new WvwAbility(wvwAbilities[0].id, wvwAbilities[0].rank)
 
             buildTabsUnlocked == 4
             activeBuildTab == 2
@@ -86,7 +102,17 @@ class CharactersClientSpec extends WiremockConfig {
             equipmentTabs[1].equipment[1].id == 80190
             equipmentTabs[1].equipment[1].infusions.size() == 1
             equipmentTabs[1].equipment[1].dyes.size() == 4
-
+            equipmentTabs[1].equipment[1].charges == null
+            equipmentTabs[1].equipment[1].stats.id == 161
+            equipmentTabs[1].equipment[1].stats.attributes == [
+                    "Power": 141,
+                    "Precision": 101,
+                    "CritDamage": 101
+            ]
+            equipmentTabs[1].equipment[1].stats == new ItemStats(
+                    equipmentTabs[1].equipment[1].stats.id,
+                    equipmentTabs[1].equipment[1].stats.attributes
+            )
 
             training.size() == 13
             training[5].id == 34
@@ -96,8 +122,33 @@ class CharactersClientSpec extends WiremockConfig {
             training[12].spent == 250
             training[12].done
 
+            training[12] == new Training(training[12].id, training[12].spent, training[12].done)
 
-
+            it == new Character(
+                    name,
+                    race,
+                    gender,
+                    profession,
+                    level,
+                    guild,
+                    age,
+                    created,
+                    lastModified,
+                    deaths,
+                    title,
+                    flags,
+                    crafting,
+                    backstory,
+                    wvwAbilities,
+                    training,
+                    buildTabsUnlocked,
+                    activeBuildTab,
+                    buildTabs,
+                    equipmentTabsUnlocked,
+                    activeEquipmentTab,
+                    equipment,
+                    equipmentTabs
+            )
         }
     }
 
@@ -149,7 +200,21 @@ class CharactersClientSpec extends WiremockConfig {
         verifyAll(character) {
             tab == 2
             isActive()
+            build.name == "Power Weaver"
+            build.profession == "Elementalist"
+            build.specializations[0].id == 41
+            build.specializations[0].traits == [232, 214, 226] as Set
+            build.skills.heal == 5503
+            build.skills.utilities == [5734, 5539, 40183] as Set
+            build.skills.elite == 5516
+            build.skills.legends == null
+            build.aquaticSkills.heal == 5569
+            build.aquaticSkills.utilities == [5554, 5535, 5536] as Set
+            build.aquaticSkills.elite == 5534
+            build.aquaticSkills.legends == null
             build == referenceBuild
+
+            it == new BuildTab(tab, isActive(), build)
         }
     }
 
@@ -211,6 +276,10 @@ class CharactersClientSpec extends WiremockConfig {
             lastModified == "2022-09-24T14:27:00Z"
             deaths == 3519
             title == 300
+
+            it == new CharacterCore(
+                    name, race, gender, profession, level, guild, age, created, lastModified, deaths, title
+            )
         }
     }
 
@@ -228,10 +297,10 @@ class CharactersClientSpec extends WiremockConfig {
         then: "Retrieved details matches expected"
         verifyAll(character) {
             size() == 2
-            it == [
-                new Crafting("Jeweler", 400, true),
-                new Crafting("Tailor", 500, true),
-            ]
+            it[0].discipline == "Jeweler"
+            it[0].rating == 400
+            it[0].active
+            it[0] == new Crafting(it[0].discipline, it[0].rating, it[0].active)
         }
     }
 
@@ -249,6 +318,28 @@ class CharactersClientSpec extends WiremockConfig {
         then: "Retrieved details matches expected"
         verifyAll(character) {
             size() == 76
+
+            it[4].id == 80111
+            it[4].binding == ItemBinding.CHARACTER
+            it[4].location == EquipmentItemLocation.EQUIPPED
+            it[4].boundTo == characterName
+
+            it[6].upgrades == [91595]
+
+            it[6] == new EquipmentItem(
+                    it[6].id,
+                    it[6].slot,
+                    it[6].binding,
+                    it[6].boundTo,
+                    it[6].infusions,
+                    it[6].location,
+                    it[6].skin,
+                    it[6].upgrades,
+                    it[6].stats,
+                    it[6].dyes,
+                    it[6].charges,
+                    it[6].tabs
+            )
         }
     }
 
@@ -289,6 +380,14 @@ class CharactersClientSpec extends WiremockConfig {
             name == "Quickness Catalyst"
             isActive()
             equipment.size() == 16
+
+            equipmentPvp.amulet == 8
+            equipmentPvp.rune == 21215
+            equipmentPvp.sigils == [21155, null, 21152, null]
+
+            equipmentPvp == new EquipmentPvp(equipmentPvp.amulet, equipmentPvp.rune, equipmentPvp.sigils)
+
+            it == new EquipmentTab(tab, name, isActive(), equipment, equipmentPvp)
         }
     }
 
@@ -324,6 +423,22 @@ class CharactersClientSpec extends WiremockConfig {
         verifyAll(character) {
             size() == 6
 
+            it[0].inventory[6].id == 2258
+            it[0].inventory[6].upgrades == [24774]
+            it[0].inventory[6].upgradeSlotIndices == [0]
+            it[0].inventory[6].dyes == null
+            it[0].inventory[6].boundTo == null
+            it[0].inventory[6].stats == null
+            it[0].inventory[6].charges == null
+            it[0].inventory[6].infusions == null
+
+            it[0].inventory[9].skin == 746
+            it[0].inventory[9].upgrades == [71425]
+            it[0].inventory[9].dyes == [6, 315, 453, 1]
+            it[0].inventory[9].binding == ItemBinding.CHARACTER
+            it[0].inventory[9].boundTo == characterName
+
+
             it[1].id == 45053
             it[1].size == 18
             it[1].inventory.size() == 18
@@ -342,6 +457,22 @@ class CharactersClientSpec extends WiremockConfig {
             it[4].inventory[0].id == 23001
             it[4].inventory[0].count == 1
             it[4].inventory[0].binding == ItemBinding.ACCOUNT
+
+            it[4] == new Bag(it[4].id, it[4].size, it[4].inventory)
+
+            it[4].inventory[0] == new InventorySlot(
+                    it[4].inventory[0].id,
+                    it[4].inventory[0].count,
+                    it[4].inventory[0].charges,
+                    it[4].inventory[0].infusions,
+                    it[4].inventory[0].upgrades,
+                    it[4].inventory[0].upgradeSlotIndices,
+                    it[4].inventory[0].skin,
+                    it[4].inventory[0].stats,
+                    it[4].inventory[0].dyes,
+                    it[4].inventory[0].binding,
+                    it[4].inventory[0].boundTo
+            )
         }
     }
 
@@ -451,15 +582,35 @@ class CharactersClientSpec extends WiremockConfig {
             zones[4].mode == SabZoneMode.NORMAL
             zones[4].world == 2
             zones[4].zone == 2
+            zones[4] == new SabZone(
+                    zones[4].id,
+                    zones[4].mode,
+                    zones[4].world,
+                    zones[4].zone
+            )
 
             zones[5].id == 13
             zones[5].mode == SabZoneMode.INFANTILE
             zones[5].world == 1
             zones[5].zone == 1
 
-            unlocks.size() == 7
+            unlocks.size() == 8
             unlocks[0].id == 6
-            unlocks[3].id == 18
+            unlocks[0].name == "whip"
+            unlocks[0] == new SabUnlock(unlocks[0].id, unlocks[0].name)
+
+            // Apparently there's an API bug, where the unlock with ID 10 does not have a name attribute
+            // https://wiki.guildwars2.com/wiki/API:2/characters/:id/sab - bottom of the page
+            unlocks[1] == new SabUnlock(10, null)
+
+            unlocks[4].id == 18
+
+            songs.size() == 1
+            songs[0].id == 1
+            songs[0].name == "secret_song"
+            songs[0] == new SabSong(songs[0].id, songs[0].name)
+
+            it == new CharacterSAB(zones, unlocks, songs)
         }
     }
 
