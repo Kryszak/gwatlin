@@ -49,6 +49,15 @@ class WiremockConfig extends Specification {
         )
     }
 
+    protected def stubAuthResponseWithSchema(String url, String responseFile, String auth, String schemaVersion) {
+        stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("Authorization", equalTo("Bearer $auth"))
+                        .withHeader("X-Schema-Version", equalTo(schemaVersion))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
     protected def stubUnauthenticatedResponse(String url, String responseFile, String auth) {
         stubFor(
                 get(urlEqualTo(url))
