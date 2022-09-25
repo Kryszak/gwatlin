@@ -1,11 +1,11 @@
 {
-  "name": "Cados Frazar",
+  "name": "Test Character",
   "race": "Charr",
   "gender": "Male",
   "flags": [],
   "profession": "Elementalist",
   "level": 80,
-  "guild": "7311DE04-55DD-E811-81A8-E944283D67C1",
+  "guild": "116E0C0E-0035-44A9-BB22-4AE3E23127E5",
   "age": 4732983,
   "last_modified": "2022-09-24T14:27:00Z",
   "created": "2013-08-09T12:22:00Z",
@@ -594,7 +594,7 @@
       "id": 13990,
       "slot": "WeaponAquaticA",
       "binding": "Character",
-      "bound_to": "Cados Frazar",
+      "bound_to": "Test Character",
       "location": "Equipped",
       "tabs": [
         1,
@@ -2182,7 +2182,7 @@
           "id": 13990,
           "slot": "WeaponAquaticA",
           "binding": "Character",
-          "bound_to": "Cados Frazar",
+          "bound_to": "Test Character",
           "location": "Equipped"
         },
         {
@@ -2514,7 +2514,7 @@
           "id": 13990,
           "slot": "WeaponAquaticA",
           "binding": "Character",
-          "bound_to": "Cados Frazar",
+          "bound_to": "Test Character",
           "location": "Equipped"
         },
         {
@@ -2858,7 +2858,7 @@
           "id": 13990,
           "slot": "WeaponAquaticA",
           "binding": "Character",
-          "bound_to": "Cados Frazar",
+          "bound_to": "Test Character",
           "location": "Equipped"
         },
         {
@@ -3189,7 +3189,7 @@
           "id": 13990,
           "slot": "WeaponAquaticA",
           "binding": "Character",
-          "bound_to": "Cados Frazar",
+          "bound_to": "Test Character",
           "location": "Equipped"
         },
         {
@@ -3527,7 +3527,7 @@
           "id": 13990,
           "slot": "WeaponAquaticA",
           "binding": "Character",
-          "bound_to": "Cados Frazar",
+          "bound_to": "Test Character",
           "location": "Equipped"
         },
         {

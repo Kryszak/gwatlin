@@ -38,7 +38,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: ""
@@ -62,7 +62,7 @@ class CharactersClientSpec extends WiremockConfig {
             flags == []
             profession == "Elementalist"
             level == 80
-            guild == "7311DE04-55DD-E811-81A8-E944283D67C1"
+            guild == "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
             age == 4732983
             created == "2013-08-09T12:22:00Z"
             lastModified == "2022-09-24T14:27:00Z"
@@ -162,7 +162,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character buildtabs"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -184,7 +184,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character buildtab"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "Buildtab number"
@@ -238,7 +238,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character active build tab"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -260,7 +260,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character backstory"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -282,7 +282,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character core"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -303,7 +303,7 @@ class CharactersClientSpec extends WiremockConfig {
             gender == "Male"
             profession == "Elementalist"
             level == 80
-            guild == "7311DE04-55DD-E811-81A8-E944283D67C1"
+            guild == "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
             age == 4732983
             created == "2013-08-09T12:22:00Z"
             lastModified == "2022-09-24T14:27:00Z"
@@ -318,7 +318,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character crafting"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -344,7 +344,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character equipment"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -388,7 +388,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character equipment tabs"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -410,7 +410,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character equipment tab"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "Equipmenttab number"
@@ -446,7 +446,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character active equipment tab"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -468,7 +468,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character inventory"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -541,7 +541,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character recipes"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -568,7 +568,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character training"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -593,7 +593,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character heropoints"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -621,7 +621,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character quests"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
@@ -649,7 +649,7 @@ class CharactersClientSpec extends WiremockConfig {
 
     def "Should get character SAB details"() {
         given: "Character name"
-        def characterName = "Cados Frazar"
+        def characterName = "Test Character"
         def escapedName = characterName.replace(" ", "%20")
 
         and: "External api is stubbed"
