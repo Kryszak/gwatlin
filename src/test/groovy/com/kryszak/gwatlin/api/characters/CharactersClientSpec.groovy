@@ -26,7 +26,6 @@ import com.kryszak.gwatlin.api.shared.ItemSlot
 import com.kryszak.gwatlin.config.WiremockConfig
 import spock.lang.Subject
 
-import java.time.format.DateTimeFormatter
 
 class CharactersClientSpec extends WiremockConfig {
 
@@ -35,7 +34,7 @@ class CharactersClientSpec extends WiremockConfig {
     @Subject
     def charactersClient = new GWCharactersClient(API_KEY)
 
-    def "Should get Character"() {
+    def "Should get character"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -95,8 +94,8 @@ class CharactersClientSpec extends WiremockConfig {
             equipmentTabsUnlocked == 5
             activeEquipmentTab == 2
             equipmentTabs.size() == 5
-            !equipmentTabs[0].isActive()
-            equipmentTabs[1].isActive()
+            !equipmentTabs[0].active
+            equipmentTabs[1].active
             equipmentTabs[1].name == "Weaver SW DA"
             equipmentTabs[1].equipment.size() == 17
             equipmentTabs[1].equipment[1].id == 80190
@@ -152,7 +151,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character buildtabs"() {
+    def "Should get character buildtabs"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -169,7 +168,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character buildtab"() {
+    def "Should get character buildtab"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -199,7 +198,7 @@ class CharactersClientSpec extends WiremockConfig {
         then: "Retrieved details matches expected"
         verifyAll(character) {
             tab == 2
-            isActive()
+            active
             build.name == "Power Weaver"
             build.profession == "Elementalist"
             build.specializations[0].id == 41
@@ -214,11 +213,11 @@ class CharactersClientSpec extends WiremockConfig {
             build.aquaticSkills.legends == null
             build == referenceBuild
 
-            it == new BuildTab(tab, isActive(), build)
+            it == new BuildTab(tab, active, build)
         }
     }
 
-    def "Should get Character active build tab"() {
+    def "Should get character active build tab"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -235,7 +234,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character backstory"() {
+    def "Should get character backstory"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -252,7 +251,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character core"() {
+    def "Should get character core"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -283,7 +282,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character crafting"() {
+    def "Should get character crafting"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -304,7 +303,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character equipment"() {
+    def "Should get character equipment"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -343,7 +342,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character equipment tabs"() {
+    def "Should get character equipment tabs"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -360,7 +359,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character equipment tab"() {
+    def "Should get character equipment tab"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -378,7 +377,7 @@ class CharactersClientSpec extends WiremockConfig {
         verifyAll(character) {
             tab == 3
             name == "Quickness Catalyst"
-            isActive()
+            active
             equipment.size() == 16
 
             equipmentPvp.amulet == 8
@@ -387,11 +386,11 @@ class CharactersClientSpec extends WiremockConfig {
 
             equipmentPvp == new EquipmentPvp(equipmentPvp.amulet, equipmentPvp.rune, equipmentPvp.sigils)
 
-            it == new EquipmentTab(tab, name, isActive(), equipment, equipmentPvp)
+            it == new EquipmentTab(tab, name, active, equipment, equipmentPvp)
         }
     }
 
-    def "Should get Character active equipment tab"() {
+    def "Should get character active equipment tab"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -408,7 +407,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character inventory"() {
+    def "Should get character inventory"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -476,7 +475,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character recipes"() {
+    def "Should get character recipes"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -498,7 +497,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character training"() {
+    def "Should get character training"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -518,7 +517,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character heropoints"() {
+    def "Should get character heropoints"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -541,7 +540,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character quests"() {
+    def "Should get character quests"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
@@ -564,7 +563,7 @@ class CharactersClientSpec extends WiremockConfig {
         }
     }
 
-    def "Should get Character SAB details"() {
+    def "Should get character SAB details"() {
         given: "Character name"
         def characterName = "Cados Frazar"
         def escapedName = characterName.replace(" ", "%20")
