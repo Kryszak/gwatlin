@@ -5,6 +5,9 @@ import com.kryszak.gwatlin.api.characters.model.character.ItemStats
 import com.kryszak.gwatlin.api.shared.ItemSlot
 import com.kryszak.gwatlin.api.shared.ItemBinding
 
+/**
+ * Data model for equipment items
+ */
 data class EquipmentItem(
     val id: Int,
     val slot: ItemSlot,

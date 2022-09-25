@@ -1,5 +1,8 @@
 package com.kryszak.gwatlin.api.characters.model.character
 
+/**
+ * Data model for skill sets
+ */
 data class Skills(
     val heal: Int,
     val utilities: Set<Int>,

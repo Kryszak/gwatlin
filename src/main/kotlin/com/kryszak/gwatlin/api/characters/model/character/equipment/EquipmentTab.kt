@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.characters.model.character.equipment
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data model for equipment tabs
+ */
 data class EquipmentTab(
     val tab: Int,
     val name: String,

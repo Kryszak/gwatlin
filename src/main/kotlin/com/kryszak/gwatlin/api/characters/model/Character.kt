@@ -5,6 +5,9 @@ import com.kryszak.gwatlin.api.characters.model.character.*
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
 
+/**
+ * Data model for consolidated character infos
+ */
 data class Character(
     // Core
     val name: String,

@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName
 import com.kryszak.gwatlin.api.characters.model.character.ItemStats
 import com.kryszak.gwatlin.api.shared.ItemBinding
 
+/**
+ * Data model for inventory slots
+ */
 data class InventorySlot(
     val id: Int,
     val count: Int,

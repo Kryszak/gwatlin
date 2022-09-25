@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.characters.model.character
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data model for core character infos
+ */
 data class CharacterCore(
     val name: String,
     val race: String,
