@@ -43,7 +43,22 @@
           "binding": "Character",
           "bound_to": "Cados Frazar"
         },
-        null,
+        {
+          "id": 71836,
+          "count": 1,
+          "skin": 746,
+          "upgrades": [
+            71425
+          ],
+          "dyes": [
+            6,
+            315,
+            453,
+            1
+          ],
+          "binding": "Character",
+          "bound_to": "Cados Frazar"
+        },
         null,
         null,
         {

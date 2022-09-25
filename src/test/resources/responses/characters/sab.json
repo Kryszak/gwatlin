@@ -73,6 +73,9 @@
       "name": "whip"
     },
     {
+      "id": 10
+    },
+    {
       "id": 12,
       "name": "candle"
     },
@@ -97,5 +100,10 @@
       "name": "health_vessel_2"
     }
   ],
-  "songs": []
+  "songs": [
+    {
+      "id": 1,
+      "name": "secret_song"
+    }
+  ]
 }

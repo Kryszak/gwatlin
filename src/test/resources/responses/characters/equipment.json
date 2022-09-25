@@ -122,8 +122,9 @@
           "CritDamage": 34
         }
       },
-      "binding": "Account",
-      "location": "EquippedFromLegendaryArmory",
+      "binding": "Character",
+      "bound_to": "Cados Frazar",
+      "location": "Equipped",
       "tabs": [
         2
       ],
