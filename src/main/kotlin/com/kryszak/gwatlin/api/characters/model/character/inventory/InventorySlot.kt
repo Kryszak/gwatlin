@@ -10,6 +10,8 @@ data class InventorySlot(
     val charges: Int?,
     val infusions: List<Int>?,
     val upgrades: List<Int>?,
+    @SerializedName("upgrade_slot_indices")
+    val upgradeSlotIndices: List<Int>?,
     val skin: Int?,
     val stats: ItemStats?,
     val dyes: List<Int>?,
