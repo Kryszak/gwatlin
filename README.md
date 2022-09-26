@@ -20,7 +20,7 @@ Issue should contain example json response for given endpoint.
 | ----------------- | :----------------: |
 | Account           | :heavy_check_mark: |
 | Achievements      | :heavy_check_mark: |
-| Characters        | :x:                |
+| Characters        | :heavy_check_mark: |
 | Commerce          | :heavy_check_mark: |
 | Daily Rewards     | :heavy_check_mark: |
 | Game Mechanics    | :heavy_check_mark: |
