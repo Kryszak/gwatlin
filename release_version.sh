@@ -1,12 +1,6 @@
 #!/bin/bash
 
-VERSION=$1
-
-if [[ -z $VERSION ]]
-then
-    echo "No version provided"
-    exit 1
-fi
+VERSION=v$(grep "project.version" build.gradle | grep -Eo "[0-9].[0-9]")
 
 git tag $VERSION
 git push origin --tags
