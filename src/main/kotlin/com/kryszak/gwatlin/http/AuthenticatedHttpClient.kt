@@ -18,7 +18,7 @@ internal open class AuthenticatedHttpClient(
                 .also { log.info(logMessage.format(it.url)) }
                 .authentication()
                 .bearer(apiKey)
-                .responseObject<T>()
+                .responseObject<T>(gson)
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
