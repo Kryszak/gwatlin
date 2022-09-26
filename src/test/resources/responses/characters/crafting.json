@@ -1,0 +1,14 @@
+{
+  "crafting": [
+    {
+      "discipline": "Jeweler",
+      "rating": 400,
+      "active": true
+    },
+    {
+      "discipline": "Tailor",
+      "rating": 500,
+      "active": true
+    }
+  ]
+}

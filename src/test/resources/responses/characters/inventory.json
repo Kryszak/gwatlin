@@ -1,0 +1,330 @@
+{
+  "bags": [
+    {
+      "id": 38013,
+      "size": 20,
+      "inventory": [
+        {
+          "id": 41569,
+          "count": 28
+        },
+        {
+          "id": 43451,
+          "count": 128
+        },
+        {
+          "id": 68634,
+          "count": 2
+        },
+        null,
+        {
+          "id": 20799,
+          "count": 50,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 2258,
+          "count": 1,
+          "upgrades": [
+            24774
+          ],
+          "upgrade_slot_indices": [
+            0
+          ]
+        },
+        {
+          "id": 84731,
+          "count": 1
+        },
+        {
+          "id": 79744,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Test Character"
+        },
+        {
+          "id": 71836,
+          "count": 1,
+          "skin": 746,
+          "upgrades": [
+            71425
+          ],
+          "dyes": [
+            6,
+            315,
+            453,
+            1
+          ],
+          "binding": "Character",
+          "bound_to": "Test Character"
+        },
+        null,
+        null,
+        {
+          "id": 79105,
+          "count": 1,
+          "charges": 2,
+          "binding": "Account"
+        },
+        {
+          "id": 67826,
+          "count": 13,
+          "binding": "Account"
+        },
+        {
+          "id": 80890,
+          "count": 2,
+          "binding": "Account"
+        },
+        {
+          "id": 986,
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 45053,
+      "size": 18,
+      "inventory": [
+        null,
+        {
+          "id": 87517,
+          "count": 68,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 43998,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 78116,
+          "count": 5,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 95886,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 20002,
+          "count": 2,
+          "binding": "Account"
+        },
+        {
+          "id": 92659,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 43361,
+          "count": 14
+        },
+        {
+          "id": 79835,
+          "count": 10,
+          "binding": "Character",
+          "bound_to": "Test Character"
+        },
+        {
+          "id": 78462,
+          "count": 10,
+          "binding": "Account"
+        },
+        {
+          "id": 93659,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 20003,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 43418,
+          "count": 109,
+          "binding": "Character",
+          "bound_to": "Test Character"
+        },
+        {
+          "id": 93605,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 19996,
+          "count": 3,
+          "binding": "Account"
+        },
+        {
+          "id": 48717,
+          "count": 9
+        }
+      ]
+    },
+    {
+      "id": 9586,
+      "size": 18,
+      "inventory": [
+        {
+          "id": 36038,
+          "count": 107
+        },
+        {
+          "id": 77699,
+          "count": 1
+        },
+        {
+          "id": 46731,
+          "count": 10,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 95167,
+          "count": 1,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 19983,
+          "count": 15,
+          "binding": "Account"
+        },
+        {
+          "id": 20000,
+          "count": 1,
+          "binding": "Account"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 46684,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 8932,
+      "size": 20,
+      "inventory": [
+        {
+          "id": 75919,
+          "count": 22
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 68109,
+          "count": 98,
+          "binding": "Account"
+        },
+        null,
+        null,
+        null,
+        {
+          "id": 79312,
+          "count": 1,
+          "binding": "Account"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 9423,
+      "size": 15,
+      "inventory": [
+        {
+          "id": 23001,
+          "count": 1,
+          "binding": "Account"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 46731,
+          "count": 63,
+          "binding": "Account"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 98040,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 46760,
+          "count": 1,
+          "skin": 8435,
+          "upgrades": [
+            24615
+          ],
+          "upgrade_slot_indices": [
+            0
+          ],
+          "infusions": [
+            49432
+          ],
+          "binding": "Account"
+        }
+      ]
+    }
+  ]
+}
