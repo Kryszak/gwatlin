@@ -24,7 +24,7 @@ internal open class BaseHttpClient(
 
     protected val baseUrl: String
 
-    private val gson = Gson()
+    protected val gson = Gson()
 
     private val httpConfig: HttpConfig = HttpConfig()
 
@@ -37,7 +37,7 @@ internal open class BaseHttpClient(
                 .httpGet()
                 .also { addDefaultHeaders(it) }
                 .also { log.info(logMessage.format(it.url)) }
-                .responseObject<T>()
+                .responseObject<T>(gson)
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
