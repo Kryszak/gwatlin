@@ -6,10 +6,16 @@ import com.kryszak.gwatlin.api.mapinfo.model.Floor
 import com.kryszak.gwatlin.api.mapinfo.model.Region
 import com.kryszak.gwatlin.clients.mapinfo.MapInfoClient
 
-class GWMapInfoClient {
+/**
+ * Client for characters endpoint. Includes the /map and /contintens endpoints
+ * @param defaultLang the language to be used if no other language is specified when calling a specific method
+ * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
+ */
+class GWMapInfoClient(
+    private val defaultLang: String = "en"
+) {
 
     private val mapInfoClient = MapInfoClient()
-    private val defaultLang = "en"
 
     fun getMaps() = mapInfoClient.getMaps()
 
