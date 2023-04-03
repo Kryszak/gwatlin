@@ -9,7 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest 
     permissions: 
-      contents: read
+      contents: write
       packages: write 
     steps:
       - uses: actions/checkout@v3
@@ -26,10 +26,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create GitHub release
-        uses: marvinpinto/action-automatic-releases@latest
+        uses: ncipollo/release-action@v1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: false
-          files: |
-            *.jar
-        
+          artifacts: "build/libs/*"
