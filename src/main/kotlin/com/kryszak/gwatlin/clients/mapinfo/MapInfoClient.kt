@@ -21,39 +21,39 @@ internal class MapInfoClient : BaseHttpClient(
     fun getContinents(continentIds: Collection<Int>, lang: String) =
         handleOneOrMultipleIds<Continent>(continentIds, lang, continentsEndpoint)
 
-    fun getFloors(continentId: Int, lang: String) =
-        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors?lang=$lang")
+    fun getFloors(continentId: Int) =
+        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors")
 
     fun getFloor(continentId: Int, floorId: Int, lang: String) =
         getRequest<Floor>("$continentsEndpoint/$continentId/floors/$floorId?lang=$lang")
 
-    fun getRegions(continentId: Int, floorId: Int, lang: String) =
-        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions?lang=$lang")
+    fun getRegions(continentId: Int, floorId: Int) =
+        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions")
 
     fun getRegion(continentId: Int, floorId: Int, regionId: Int, lang: String) =
         getRequest<Region>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId?lang=$lang")
 
-    fun getMaps(continentId: Int, floorId: Int, regionId: Int, lang: String) =
-        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps?lang=$lang")
+    fun getMaps(continentId: Int, floorId: Int, regionId: Int) =
+        getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps")
 
     fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String) =
         getRequest<ContinentMap>(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId?lang=$lang"
         )
 
-    fun getSectors(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String) =
+    fun getSectors(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
         getRequest<List<Int>>(
-            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors?lang=$lang"
+            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors"
         )
 
-    fun getPointsOfInterest(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String) =
+    fun getPointsOfInterest(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
         getRequest<List<Int>>(
-            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois?lang=$lang"
+            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois"
         )
 
-    fun getTasks(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String) =
+    fun getTasks(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
         getRequest<List<Int>>(
-            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks?lang=$lang"
+            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks"
         )
 
 
