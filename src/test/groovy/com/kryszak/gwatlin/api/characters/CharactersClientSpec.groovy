@@ -29,8 +29,8 @@ import spock.lang.Subject
 
 class CharactersClientSpec extends WiremockConfig {
 
-    final TARGET_SCHEMA_VERSION = "2021-07-15T13:00:00.000Z"
-    final API_KEY = "1234"
+    def TARGET_SCHEMA_VERSION = "2021-07-15T13:00:00.000Z"
+    def API_KEY = "1234"
     
     @Subject
     def charactersClient = new GWCharactersClient(API_KEY)
