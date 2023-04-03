@@ -7,6 +7,7 @@ import kotlin.collections.Map
  * Data model for map info returned by the /continents endpoint
  */
 data class ContinentMap(
+    val id: Int,
     val name: String,
     @SerializedName("min_level")
     val minLevel: Int,
@@ -14,7 +15,6 @@ data class ContinentMap(
     val maxLevel: Int,
     @SerializedName("default_floor")
     val defaultFloor: Int,
-    val floors: List<Int>,
     @SerializedName("map_rect")
     val mapRect: Rectangle,
     @SerializedName("continent_rect")
