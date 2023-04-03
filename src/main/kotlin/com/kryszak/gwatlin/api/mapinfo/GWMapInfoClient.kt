@@ -47,7 +47,7 @@ class GWMapInfoClient(
         mapInfoClient.getMaps(continentId, floorId, regionId, lang)
 
     fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String = defaultLang) =
-        mapInfoClient.getMaps(continentId, floorId, regionId, lang)
+        mapInfoClient.getMap(continentId, floorId, regionId, mapId, lang)
 
     fun getSectors(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String = defaultLang) =
         mapInfoClient.getSectors(continentId, floorId, regionId, mapId, lang)
