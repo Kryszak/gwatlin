@@ -5,6 +5,7 @@ data class Dimensions(
     val y: Float
 ) {
     companion object {
+        @JvmStatic
         fun fromPair(pair: Pair<Float, Float>) = Dimensions(pair.first, pair.second)
     }
     fun asPair() = x to y

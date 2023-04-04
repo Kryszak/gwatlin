@@ -1,9 +1,5 @@
 package com.kryszak.gwatlin.api.mapinfo
 
-import com.kryszak.gwatlin.api.mapinfo.model.Continent
-import com.kryszak.gwatlin.api.mapinfo.model.ContinentMap
-import com.kryszak.gwatlin.api.mapinfo.model.Floor
-import com.kryszak.gwatlin.api.mapinfo.model.Region
 import com.kryszak.gwatlin.clients.mapinfo.MapInfoClient
 
 /**
@@ -26,10 +22,6 @@ class GWMapInfoClient(
     fun getMap(mapId: Int, lang: String = defaultLang) = getMaps(listOf(mapId), lang).firstOrNull()
 
     fun getContinents() = mapInfoClient.getContinents()
-
-    @JvmOverloads
-    fun getContinents(continentIds: Collection<Int>, lang: String = defaultLang) =
-        mapInfoClient.getContinents(continentIds, lang)
 
     @JvmOverloads
     fun getContinent(continentId: Int, lang: String = defaultLang) =

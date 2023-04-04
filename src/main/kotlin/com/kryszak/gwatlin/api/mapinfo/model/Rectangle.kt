@@ -5,6 +5,7 @@ data class Rectangle(
     val second: Dimensions
 ) {
     companion object {
+        @JvmStatic
         fun fromPair(pair: Pair<Dimensions, Dimensions>) = Rectangle(pair.first, pair.second)
     }
     fun asPair() = first to second

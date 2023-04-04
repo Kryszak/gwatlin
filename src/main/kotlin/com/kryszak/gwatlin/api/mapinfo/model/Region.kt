@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 import kotlin.collections.Map
 
 data class Region(
+    val id: Int,
     val name: String,
     @SerializedName("label_coord")
     val labelCoord: Coordinates,
