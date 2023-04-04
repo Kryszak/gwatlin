@@ -1,0 +1,78 @@
+[
+  {
+    "id": 26,
+    "name": "Dredgehaunt Cliffs",
+    "min_level": 40,
+    "max_level": 50,
+    "default_floor": 1,
+    "type": "Public",
+    "floors": [
+      1,
+      3,
+      2,
+      0
+    ],
+    "region_id": 1,
+    "region_name": "Shiverpeak Mountains",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -27648,
+        -36864
+      ],
+      [
+        27648,
+        39936
+      ]
+    ],
+    "continent_rect": [
+      [
+        52224,
+        31360
+      ],
+      [
+        54528,
+        34560
+      ]
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Lornar's Pass",
+    "min_level": 25,
+    "max_level": 40,
+    "default_floor": 1,
+    "type": "Public",
+    "floors": [
+      1,
+      3,
+      2,
+      0
+    ],
+    "region_id": 1,
+    "region_name": "Shiverpeak Mountains",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -21504,
+        -58368
+      ],
+      [
+        21504,
+        58368
+      ]
+    ],
+    "continent_rect": [
+      [
+        50432,
+        29696
+      ],
+      [
+        52224,
+        34560
+      ]
+    ]
+  }
+]
