@@ -2,10 +2,10 @@ package com.kryszak.gwatlin.api.items
 
 import com.kryszak.gwatlin.api.items.model.item.ItemRarity
 import com.kryszak.gwatlin.api.items.model.item.ItemType
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class ItemsClientSpec extends WiremockConfig {
+class ItemsClientSpec extends WiremockTest {
 
     @Subject
     def itemsClient = new GWItemsClient()
@@ -61,7 +61,7 @@ class ItemsClientSpec extends WiremockConfig {
                 get("secondary_suffix_item_id") == ""
                 verifyAll(get("infix_upgrade")) {
                     get("id") == 142
-                    get("attributes").size == 2
+                    get("attributes").size() == 2
                 }
             }
         }

@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class SpecializationClientSpec extends WiremockConfig {
+class SpecializationClientSpec extends WiremockTest {
 
     @Subject
     def specializationClient = new GWSpecializationClient()

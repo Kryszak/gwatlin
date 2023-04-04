@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.commerce
 
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class CommerceClientSpec extends WiremockConfig {
+class CommerceClientSpec extends WiremockTest {
 
     @Subject
     def commerceClient = new GWCommerceClient()

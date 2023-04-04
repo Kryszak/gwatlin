@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.dailyrewards
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class DailyRewardsClientSpec extends WiremockConfig {
+class DailyRewardsClientSpec extends WiremockTest {
 
     @Subject
     def dailyRewardsClient = new GWDailyRewardsClient()

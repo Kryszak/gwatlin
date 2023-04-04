@@ -5,10 +5,10 @@ import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
 import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class GuildClientSpec extends WiremockConfig {
+class GuildClientSpec extends WiremockTest {
 
     @Subject
     def guildClient = new GWGuildClient()

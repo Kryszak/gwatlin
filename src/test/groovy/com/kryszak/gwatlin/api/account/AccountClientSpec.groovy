@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.account
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class AccountClientSpec extends WiremockConfig {
+class AccountClientSpec extends WiremockTest {
 
     def API_KEY = "1234"
 

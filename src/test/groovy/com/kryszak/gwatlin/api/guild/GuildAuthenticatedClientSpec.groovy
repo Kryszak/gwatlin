@@ -9,12 +9,12 @@ import com.kryszak.gwatlin.api.guild.model.stash.GuildStash
 import com.kryszak.gwatlin.api.guild.model.team.GuildTeam
 import com.kryszak.gwatlin.api.guild.model.treasury.GuildTreasury
 import com.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Shared
 import spock.lang.Subject
 import spock.lang.Unroll
 
-class GuildAuthenticatedClientSpec extends WiremockConfig {
+class GuildAuthenticatedClientSpec extends WiremockTest {
 
     @Shared
     def VALID_API_KEY = "1234"

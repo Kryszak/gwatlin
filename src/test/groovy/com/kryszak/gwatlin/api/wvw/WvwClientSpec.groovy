@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.wvw
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class WvwClientSpec extends WiremockConfig {
+class WvwClientSpec extends WiremockTest {
 
     @Subject
     def wvwClient = new GWWvwClient()
