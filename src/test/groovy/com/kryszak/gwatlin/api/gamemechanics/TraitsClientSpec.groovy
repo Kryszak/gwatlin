@@ -3,10 +3,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class TraitsClientSpec extends WiremockConfig {
+class TraitsClientSpec extends WiremockTest {
 
     @Subject
     def traitsClient = new GWTraitsClient()

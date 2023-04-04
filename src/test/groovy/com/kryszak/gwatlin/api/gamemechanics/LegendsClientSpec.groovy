@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class LegendsClientSpec extends WiremockConfig {
+class LegendsClientSpec extends WiremockTest {
 
     @Subject
     def legendsClient = new GWLegendsClient()

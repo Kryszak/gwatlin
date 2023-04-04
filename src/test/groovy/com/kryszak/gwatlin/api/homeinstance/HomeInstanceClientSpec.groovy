@@ -3,10 +3,10 @@ package com.kryszak.gwatlin.api.homeinstance
 import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class HomeInstanceClientSpec extends WiremockConfig {
+class HomeInstanceClientSpec extends WiremockTest {
 
     @Subject
     def homeInstanceClient = new GWHomeInstanceClient()

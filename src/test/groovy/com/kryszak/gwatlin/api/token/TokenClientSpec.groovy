@@ -1,8 +1,8 @@
 package com.kryszak.gwatlin.api.token
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 
-class TokenClientSpec extends WiremockConfig {
+class TokenClientSpec extends WiremockTest {
 
     def API_KEY = "1234"
 

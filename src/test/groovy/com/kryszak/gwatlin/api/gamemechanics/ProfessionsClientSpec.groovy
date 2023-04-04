@@ -5,10 +5,10 @@ import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingCategory
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingTrackType
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class ProfessionsClientSpec extends WiremockConfig {
+class ProfessionsClientSpec extends WiremockTest {
 
     @Subject
     def professionsClient = new GWProfessionsClient()

@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.items
 
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 
-class ItemStatsClientSpec extends WiremockConfig {
+class ItemStatsClientSpec extends WiremockTest {
 
     def itemStatsClient = new GWItemStatsClient()
 

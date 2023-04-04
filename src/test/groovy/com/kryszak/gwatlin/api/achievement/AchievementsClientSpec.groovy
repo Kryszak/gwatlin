@@ -1,15 +1,11 @@
 package com.kryszak.gwatlin.api.achievement
 
-import com.google.common.reflect.TypeToken
-import com.kryszak.gwatlin.api.achievement.model.Achievement
-import com.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
-import com.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
-import com.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
+
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class AchievementsClientSpec extends WiremockConfig {
+class AchievementsClientSpec extends WiremockTest {
 
     @Subject
     def achievementsClient = new GWAchievementsClient()

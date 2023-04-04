@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.items
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class MaterialsClientSpec extends WiremockConfig {
+class MaterialsClientSpec extends WiremockTest {
 
     @Subject
     def materialsClient = new GWMaterialsClient()

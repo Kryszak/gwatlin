@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.story
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class BackstoryClientSpec extends WiremockConfig {
+class BackstoryClientSpec extends WiremockTest {
 
     @Subject
     def backstoryClient = new GWBackstoryClient()

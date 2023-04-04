@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.miscellaneous
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class MiscellaneousClientSpec extends WiremockConfig {
+class MiscellaneousClientSpec extends WiremockTest {
 
     @Subject
     def miscellaneousClient = new GWMiscellaneousClient()

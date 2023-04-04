@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class PetsClientSpec extends WiremockConfig {
+class PetsClientSpec extends WiremockTest {
 
     @Subject
     def petsClient = new GWPetsClient()

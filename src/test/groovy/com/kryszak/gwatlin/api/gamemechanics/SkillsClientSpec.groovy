@@ -3,10 +3,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class SkillsClientSpec extends WiremockConfig {
+class SkillsClientSpec extends WiremockTest {
 
     @Subject
     def skillsClient = new GWSkillsClient()

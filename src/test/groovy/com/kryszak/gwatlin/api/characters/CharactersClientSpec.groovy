@@ -23,11 +23,11 @@ import com.kryszak.gwatlin.api.characters.model.character.sab.SabZone
 import com.kryszak.gwatlin.api.characters.model.character.sab.SabZoneMode
 import com.kryszak.gwatlin.api.shared.ItemBinding
 import com.kryszak.gwatlin.api.shared.ItemSlot
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
 
-class CharactersClientSpec extends WiremockConfig {
+class CharactersClientSpec extends WiremockTest {
 
     def TARGET_SCHEMA_VERSION = "2021-07-15T13:00:00.000Z"
     def API_KEY = "1234"

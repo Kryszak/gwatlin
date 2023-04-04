@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.items
 
-import com.kryszak.gwatlin.config.WiremockConfig
+import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
-class RecipesClientSpec extends WiremockConfig {
+class RecipesClientSpec extends WiremockTest {
 
     @Subject
     def recipesClient = new GWRecipesClient()

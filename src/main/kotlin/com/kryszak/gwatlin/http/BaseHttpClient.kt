@@ -13,7 +13,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory.getLogger
 
 internal open class BaseHttpClient(
-    protected val schemaVersion: String? = null
+    private val schemaVersion: String? = null
 ) {
 
     companion object {
