@@ -8,9 +8,15 @@ data class Dimensions(
     val y: Float
 ) {
     companion object {
+        /**
+         * Constructs a new instance from the specified pair of floats
+         */
         @JvmStatic
         fun fromPair(pair: Pair<Float, Float>) = Dimensions(pair.first, pair.second)
     }
+    /**
+     * Converts this instance to a pair of floats
+     */
     fun asPair() = x to y
 }
 

@@ -9,8 +9,15 @@ data class Rectangle(
     val second: Coordinates
 ) {
     companion object {
+        /**
+         * Constructs a new instance from the specified pair of coordinates
+         */
         @JvmStatic
         fun fromPair(pair: Pair<Coordinates, Coordinates>) = Rectangle(pair.first, pair.second)
     }
+
+    /**
+     * Converts this instance to a pair of coordinates
+     */
     fun asPair() = first to second
 }
