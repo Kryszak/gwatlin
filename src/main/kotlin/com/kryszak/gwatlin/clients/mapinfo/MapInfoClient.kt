@@ -56,15 +56,10 @@ internal class MapInfoClient : BaseHttpClient(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks"
         )
 
-
-    private inline fun <reified R : Any> handleOneOrMultipleIds(ids: Collection<Int>, lang: String, endpoint: String): List<R> {
-        if (ids.isEmpty()) return emptyList()
-
-        // The endpoint returns an array if two or more IDs are specified, but just the object if it's just one
-        // so we need to handle that
-        if (ids.size == 1) return listOf(getRequest("$endpoint/${ids.first()}?lang=$lang"))
-
-        return getRequest("$endpoint?ids=${ids.joinToString(",")}&lang=$lang")
+    private inline fun <reified R : Any> handleOneOrMultipleIds(ids: Collection<Int>, lang: String, endpoint: String) = when {
+        ids.isEmpty() -> emptyList<R>()
+        ids.size == 1 -> listOf(getRequest("$endpoint/${ids.first()}?lang=$lang"))
+        else -> getRequest("$endpoint?ids=${ids.joinToString(",")}&lang=$lang")
     }
 
 }
