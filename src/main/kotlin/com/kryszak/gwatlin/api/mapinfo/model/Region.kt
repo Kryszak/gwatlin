@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.mapinfo.model
 import com.google.gson.annotations.SerializedName
 import kotlin.collections.Map
 
+/**
+ * Data model for regions. Regions are part of a [com.kryszak.gwatlin.api.mapinfo.model.Floor]
+ */
 data class Region(
     val id: Int,
     val name: String,

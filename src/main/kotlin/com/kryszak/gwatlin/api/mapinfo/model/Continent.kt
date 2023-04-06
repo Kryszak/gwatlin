@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.mapinfo.model
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data model for Continents
+ */
 data class Continent(
     val id: Int,
     val name: String,

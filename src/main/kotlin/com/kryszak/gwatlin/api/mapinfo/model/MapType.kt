@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.mapinfo.model
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Enumeration for the possible types of a map
+ */
 enum class MapType {
     // WvW maps
     @SerializedName("Center")

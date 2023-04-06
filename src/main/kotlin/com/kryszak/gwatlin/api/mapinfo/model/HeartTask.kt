@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.mapinfo.model
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data model for Tasks, aka "Hearts"
+ */
 data class HeartTask(
     val id: Int,
     val objective: String,

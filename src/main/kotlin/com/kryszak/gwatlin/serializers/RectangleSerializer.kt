@@ -5,6 +5,9 @@ import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import java.lang.reflect.Type
 
+/**
+ * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Rectangle], supporting serialization and deserialization
+ */
 class RectangleSerializer: JsonSerializer<Rectangle>, JsonDeserializer<Rectangle> {
     override fun serialize(src: Rectangle?, typeOfSrc: Type?, context: JsonSerializationContext): JsonElement {
         return context.serialize(src?.asPair())
