@@ -11,15 +11,8 @@ internal open class AuthenticatedHttpClient(
     schemaVersion: String? = null
 ) : BaseHttpClient(schemaVersion) {
 
-    protected inline fun <reified T : Any> getRequestAuth(uri: String): T {
-        val (_, response, result) = "$baseUrl/$uri"
-                .httpGet()
-                .also { addDefaultHeaders(it) }
-                .also { log.info(logMessage.format(it.url)) }
-                .authentication()
-                .bearer(apiKey)
-                .responseObject<T>(gson)
-
-        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
-    }
+    protected inline fun <reified T : Any> getRequestAuth(uri: String) =
+        getRequest<T>(uri) {
+            it.authentication().bearer(apiKey)
+        }
 }

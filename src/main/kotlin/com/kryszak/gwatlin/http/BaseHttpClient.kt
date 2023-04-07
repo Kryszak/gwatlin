@@ -41,11 +41,12 @@ internal open class BaseHttpClient(
         baseUrl = httpConfig.baseUrl
     }
 
-    protected inline fun <reified T : Any> getRequest(uri: String): T {
+    protected inline fun <reified T : Any> getRequest(uri: String, configBlock: (Request) -> Unit = {}): T {
         val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
                 .also { addDefaultHeaders(it) }
                 .also { log.info(logMessage.format(it.url)) }
+                .also { configBlock(it) }
                 .responseObject<T>(gson)
 
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
