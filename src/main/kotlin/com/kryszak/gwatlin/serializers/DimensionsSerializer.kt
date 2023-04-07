@@ -13,7 +13,7 @@ class DimensionsSerializer: JsonSerializer<Dimensions>, JsonDeserializer<Dimensi
     }
 
     override fun deserialize(json: JsonElement?, typeOfT: Type?, context: JsonDeserializationContext): Dimensions? {
-        if (json == null || !json.isJsonArray || json !is JsonArray || json.size() != 2) return null
+        if (json == null || json !is JsonArray || json.size() != 2) return null
         return Dimensions(json.get(0).asFloat, json.get(1).asFloat)
     }
 

@@ -14,7 +14,7 @@ class RectangleSerializer: JsonSerializer<Rectangle>, JsonDeserializer<Rectangle
     }
 
     override fun deserialize(json: JsonElement?, typeOfT: Type?, context: JsonDeserializationContext): Rectangle? {
-        if (json == null || !json.isJsonArray || json !is JsonArray || json.size() != 2) return null
+        if (json == null || json !is JsonArray || json.size() != 2) return null
         return Rectangle(
             context.deserialize(json.get(0), Dimensions::class.java),
             context.deserialize(json.get(1), Dimensions::class.java)
