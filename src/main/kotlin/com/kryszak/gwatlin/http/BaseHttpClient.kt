@@ -4,11 +4,16 @@ import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
-import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.kryszak.gwatlin.api.exception.ApiRequestException
+import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
+import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import com.kryszak.gwatlin.http.exception.RetrieveError
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
+import com.kryszak.gwatlin.serializers.RectangleSerializer
+import com.kryszak.gwatlin.serializers.DimensionsSerializer
+import com.kryszak.gwatlin.serializers.PairSerializer
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory.getLogger
 
@@ -24,7 +29,11 @@ internal open class BaseHttpClient(
 
     protected val baseUrl: String
 
-    protected val gson = Gson()
+    protected val gson = GsonBuilder()
+        .registerTypeAdapter(Pair::class.java, PairSerializer())
+        .registerTypeAdapter(Dimensions::class.java, DimensionsSerializer())
+        .registerTypeAdapter(Rectangle::class.java, RectangleSerializer())
+        .create()
 
     private val httpConfig: HttpConfig = HttpConfig()
 

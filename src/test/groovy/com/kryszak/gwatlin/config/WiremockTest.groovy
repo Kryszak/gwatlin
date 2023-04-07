@@ -27,6 +27,14 @@ class WiremockTest extends Specification {
         )
     }
 
+    protected def stubResponseWithSchema(String url, String responseFile, String schemaVersion) {
+        wireMockRule.stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("X-Schema-Version", equalTo(schemaVersion))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
     protected def stubNotFoundResponse(String url, String responseFile) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))

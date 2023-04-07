@@ -27,7 +27,7 @@ Issue should contain example json response for given endpoint.
 | Guild             | :heavy_check_mark: |
 | Home Instance     | :heavy_check_mark: |
 | Items             | :heavy_check_mark: |
-| Map Information   | :x:                |
+| Map Information   | :heavy_check_mark: |
 | Miscellaneous     | :heavy_check_mark: |
 | Story             | :heavy_check_mark: |
 | Structured PvP    | :heavy_check_mark: |
