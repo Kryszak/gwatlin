@@ -8,11 +8,12 @@ import com.kryszak.gwatlin.http.exception.ErrorResponse
 
 internal open class AuthenticatedHttpClient(
     val apiKey: String,
-    schemaVersion: String? = null
-) : BaseHttpClient(schemaVersion) {
+    schemaVersion: String? = null,
+    defaultLanguage: String = "en"
+) : BaseHttpClient(schemaVersion, defaultLanguage) {
 
-    protected inline fun <reified T : Any> getRequestAuth(uri: String) =
-        getRequest<T>(uri) {
+    protected inline fun <reified T : Any> getRequestAuth(uri: String, language: String? = null) =
+        getRequest<T>(uri, language) {
             it.authentication().bearer(apiKey)
         }
 }
