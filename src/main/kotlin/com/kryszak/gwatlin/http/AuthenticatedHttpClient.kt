@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.http
 
+import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.extensions.authentication
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
@@ -12,8 +13,9 @@ internal open class AuthenticatedHttpClient(
     defaultLanguage: String = "en"
 ) : BaseHttpClient(schemaVersion, defaultLanguage) {
 
-    protected inline fun <reified T : Any> getRequestAuth(uri: String, language: String? = null) =
+    protected inline fun <reified T : Any> getRequestAuth(uri: String, language: String? = null, configBlock: Request.() -> Unit = {}) =
         getRequest<T>(uri, language) {
-            it.authentication().bearer(apiKey)
+            authentication().bearer(apiKey)
+            configBlock(this)
         }
 }

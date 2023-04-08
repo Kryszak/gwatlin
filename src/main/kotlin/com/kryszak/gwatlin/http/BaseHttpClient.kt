@@ -43,7 +43,7 @@ internal open class BaseHttpClient(
         baseUrl = httpConfig.baseUrl
     }
 
-    protected inline fun <reified T : Any> getRequest(uri: String, language: String? = null, configBlock: (Request) -> Unit = {}): T {
+    protected inline fun <reified T : Any> getRequest(uri: String, language: String? = null, configBlock: Request.() -> Unit = {}): T {
         val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
                 .also { addDefaultHeaders(it, language) }
