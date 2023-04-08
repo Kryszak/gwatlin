@@ -26,11 +26,14 @@ class RecipesClientSpec extends WiremockTest {
         given: "Recipe id"
         def ids = [1]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/recipes?ids=1&lang=en", "/responses/items/recipe.json")
+        stubResponseWithLanguage("/recipes?ids=1", "/responses/items/recipe.json", lang)
 
         when: "Requesting recipe"
-        def recipes = recipesClient.getRecipes(ids, "en")
+        def recipes = recipesClient.getRecipes(ids, lang)
 
         then: "Retrieved recipe matches expected"
         verifyAll(recipes.get(0)) {

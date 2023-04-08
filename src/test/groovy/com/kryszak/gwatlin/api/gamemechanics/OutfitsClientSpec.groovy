@@ -25,11 +25,14 @@ class OutfitsClientSpec extends WiremockTest {
         given: "Outfits ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/outfits?ids=1,2&lang=en", "/responses/gamemechanics/outfits.json")
+        stubResponseWithLanguage("/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", lang)
 
         when: "Outfits are requested"
-        def outfits = outfitsClient.getOutfits(ids, "en")
+        def outfits = outfitsClient.getOutfits(ids, lang)
 
         then: "Retrieved outfits match expected"
         verifyAll(outfits.get(0)) {
@@ -45,7 +48,7 @@ class OutfitsClientSpec extends WiremockTest {
         def id = 1000
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/outfits?ids=1000&lang=en", "/responses/gamemechanics/outfit_error.json")
+        stubNotFoundResponse("/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json")
 
         when: "Requesting non existing outfit"
         outfitsClient.getOutfits([id], "en")
@@ -55,11 +58,14 @@ class OutfitsClientSpec extends WiremockTest {
     }
 
     def "Should retrieve all outfits"() {
-        given: "External api is stubbed"
-        stubResponse("/outfits?ids=all&lang=en", "/responses/gamemechanics/outfits_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", lang)
 
         when: "Outfits are requested"
-        def outfits = outfitsClient.getAllOutfits("en")
+        def outfits = outfitsClient.getAllOutfits(lang)
 
         then: "Retrieved outfits match expected"
         outfits.size() == 91

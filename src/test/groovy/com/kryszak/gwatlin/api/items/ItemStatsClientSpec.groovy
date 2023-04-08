@@ -25,11 +25,14 @@ class ItemStatsClientSpec extends WiremockTest {
         given: "Item stat id"
         def id = 584
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/itemstats?ids=584&lang=en", "/responses/items/item_stats.json")
+        stubResponseWithLanguage("/itemstats?ids=584", "/responses/items/item_stats.json", lang)
 
         when: "Requesting item stats"
-        def stats = itemStatsClient.getItemStats([id], "en")
+        def stats = itemStatsClient.getItemStats([id], lang)
 
         then: "Retrieved statistics matches expected"
         verifyAll(stats.get(0)) {

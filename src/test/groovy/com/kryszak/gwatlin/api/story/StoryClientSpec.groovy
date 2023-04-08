@@ -9,11 +9,14 @@ class StoryClientSpec extends WiremockTest {
     def storyClient = new GWStoryClient()
 
     def "Should get stories"() {
-        given: "External api is stubbed"
-        stubResponse("/stories?ids=all&lang=en", "/responses/story/stories.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/stories?ids=all", "/responses/story/stories.json", lang)
 
         when: "Requesting stories"
-        def stories = storyClient.getStories("en")
+        def stories = storyClient.getStories(lang)
 
         then: "Retrieved stories match expected"
         verifyAll(stories.get(0)) {
@@ -33,11 +36,14 @@ class StoryClientSpec extends WiremockTest {
     }
 
     def "Should get story seasons"() {
-        given: "External api is stubbed"
-        stubResponse("/stories/seasons?ids=all&lang=en", "/responses/story/story_seasons.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/stories/seasons?ids=all", "/responses/story/story_seasons.json", lang)
 
         when: "Requesting story seasons"
-        def seasons = storyClient.getStorySeasons("en")
+        def seasons = storyClient.getStorySeasons(lang)
 
         then: "Retrieved seasons matches expected"
         verifyAll(seasons.get(0)) {

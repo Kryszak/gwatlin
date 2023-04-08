@@ -28,11 +28,14 @@ class ItemsClientSpec extends WiremockTest {
         given: "Item id"
         def id = 28445
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/items?ids=28445&lang=en", "/responses/items/item.json")
+        stubResponseWithLanguage("/items?ids=28445", "/responses/items/item.json", lang)
 
         when: "Requesting item"
-        def items = itemsClient.getItems([id], "en")
+        def items = itemsClient.getItems([id], lang)
 
         then: "Retrieved item matches expected"
         items.size() == 1

@@ -26,11 +26,14 @@ class SkillsClientSpec extends WiremockTest {
         given: "Skill ids"
         def ids = [1110, 1115]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/skills?ids=1110,1115&lang=en", "/responses/gamemechanics/skills.json")
+        stubResponseWithLanguage("/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", lang)
 
         when: "Skills are requested"
-        def skills = skillsClient.getSkills(ids, "en")
+        def skills = skillsClient.getSkills(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(skills.get(0)) {

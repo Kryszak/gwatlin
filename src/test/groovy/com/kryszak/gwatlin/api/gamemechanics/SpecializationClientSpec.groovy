@@ -24,11 +24,14 @@ class SpecializationClientSpec extends WiremockTest {
         given: "Specialization id"
         def id = 1
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/specializations/1?lang=en", "/responses/gamemechanics/specialization.json")
+        stubResponseWithLanguage("/specializations/1", "/responses/gamemechanics/specialization.json", lang)
 
         when: "Requesting specialization"
-        def specialization = specializationClient.getSpecialization(id, "en")
+        def specialization = specializationClient.getSpecialization(id, lang)
 
         then: "Retrieves specialization matches expected"
         verifyAll(specialization) {
@@ -48,7 +51,7 @@ class SpecializationClientSpec extends WiremockTest {
         def id = 100
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/specializations/100?lang=en", "/responses/gamemechanics/specialization_error.json")
+        stubNotFoundResponse("/specializations/100", "/responses/gamemechanics/specialization_error.json")
 
         when: "Requesting non existing specialization"
         specializationClient.getSpecialization(id, "en")

@@ -115,11 +115,14 @@ class GuildClientSpec extends WiremockTest {
         given: "Permission ids"
         def ids = ["ClaimableEditOptions", "Admin", "EditAnthem"]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem&lang=en", "/responses/guild/permissions.json")
+        stubResponseWithLanguage("/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem", "/responses/guild/permissions.json", lang)
 
         when: "Requesting guild permissions"
-        def permissions = guildClient.getGuildPermissions(ids, "en")
+        def permissions = guildClient.getGuildPermissions(ids, lang)
 
         then: "Retrieved list matches expected"
         permissions == parsePermissions()
@@ -176,11 +179,14 @@ class GuildClientSpec extends WiremockTest {
         given: "Guild upgrade ids"
         def ids = [38, 43]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/guild/upgrades?ids=38,43&lang=en", "/responses/guild/upgrades.json")
+        stubResponseWithLanguage("/guild/upgrades?ids=38,43", "/responses/guild/upgrades.json", lang)
 
         when: "Requesting guild upgrades"
-        def upgrades = guildClient.getGuildUpgrades(ids, "en")
+        def upgrades = guildClient.getGuildUpgrades(ids, lang)
 
         then: "Retrieved list matches expected"
         upgrades == parseUpgrades()

@@ -20,11 +20,14 @@ class WvwClientSpec extends WiremockTest {
     }
 
     def "Should get ability"() {
-        given: "External api is stubbed"
-        stubResponse("/wvw/abilities?ids=2&lang=en", "/responses/wvw/ability.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/wvw/abilities?ids=2", "/responses/wvw/ability.json", lang)
 
         when: "Requesting ability"
-        def abilities = wvwClient.getAbilities([2], "en")
+        def abilities = wvwClient.getAbilities([2], lang)
 
         then: "Retrieved ability matches expected"
         verifyAll(abilities.get(0)) {
@@ -161,11 +164,14 @@ class WvwClientSpec extends WiremockTest {
     }
 
     def "Should get objective"() {
-        given: "External api is stubbed"
-        stubResponse("/wvw/objectives?ids=38-6&lang=en", "/responses/wvw/objective.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", lang)
 
         when: "Requesting objective"
-        def objectives = wvwClient.getObjectives(["38-6"], "en")
+        def objectives = wvwClient.getObjectives(["38-6"], lang)
 
         then: "Retrieved objective match expected"
         verifyAll(objectives.get(0)) {
@@ -195,11 +201,14 @@ class WvwClientSpec extends WiremockTest {
     }
 
     def "Should get rank"() {
-        given: "External api is stubbed"
-        stubResponse("/wvw/ranks?ids=1&lang=en", "/responses/wvw/rank.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/wvw/ranks?ids=1", "/responses/wvw/rank.json", lang)
 
         when: "Requesting rank"
-        def ranks = wvwClient.getRanks([1], "en")
+        def ranks = wvwClient.getRanks([1], lang)
 
         then: "Retrieved rank matches expected"
         verifyAll(ranks.get(0)) {
@@ -221,11 +230,14 @@ class WvwClientSpec extends WiremockTest {
     }
 
     def "Should get upgrade"() {
-        given: "External api is stubbed"
-        stubResponse("/wvw/upgrades?ids=2&lang=en", "/responses/wvw/upgrade.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", lang)
 
         when: "Requesting upgrade"
-        def upgrades = wvwClient.getUpgrades([2], "en")
+        def upgrades = wvwClient.getUpgrades([2], lang)
 
         then: "Retrieved upgrade matches expected"
         verifyAll(upgrades.get(0)) {

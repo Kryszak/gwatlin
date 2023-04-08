@@ -33,7 +33,8 @@ class GWMapInfoClient(
      * @param mapId ID of the map to be fetched
      * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
      */
-    fun getMap(mapId: Int, language: String?) = getMaps(listOf(mapId), language).firstOrNull()
+    @JvmOverloads
+    fun getMap(mapId: Int, language: String? = null) = getMaps(listOf(mapId), language).firstOrNull()
 
     /**
      * Returns a list of continent IDs

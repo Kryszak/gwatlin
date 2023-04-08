@@ -55,7 +55,7 @@ internal class MiscellaneousClient : BaseHttpClient() {
     }
 
     fun getMinis(language: String): List<Mini> {
-        return getRequest("$minisEndpoint?ids=all&", language)
+        return getRequest("$minisEndpoint?ids=all", language)
     }
 
     fun getNovelties(language: String): List<Novelty> {

@@ -26,11 +26,14 @@ class PvpAmuletsClientSpec extends WiremockTest {
         given: "Pvp amulet id"
         def ids = [7]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/pvp/amulets?ids=7&lang=en", "/responses/items/pvp_amulet.json")
+        stubResponseWithLanguage("/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", lang)
 
         when: "Requesting pvp amulet"
-        def pvpAmulets = pvpAmuletClient.getPvpAmulets(ids, "en")
+        def pvpAmulets = pvpAmuletClient.getPvpAmulets(ids, lang)
 
         then: "Retrieved amulet matches expected"
         verifyAll(pvpAmulets.get(0)) {
