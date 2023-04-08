@@ -13,6 +13,6 @@ internal class MaterialsClient : BaseHttpClient() {
 
     fun getMaterials(ids: List<Int>, language: String): List<Material> {
         val params = ids.joinToString(",")
-        return getRequest("$materialsEndpoint?ids=$params&lang=$language")
+        return getRequest("$materialsEndpoint?ids=$params", language)
     }
 }

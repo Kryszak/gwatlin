@@ -20,7 +20,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getAbilities(ids: List<Int>, language: String): List<WvwAbility> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/abilities?ids=$params&lang=$language")
+        return getRequest("$wvwEndpoint/abilities?ids=$params", language)
     }
 
     fun getMatchIds(): List<String> {
@@ -50,7 +50,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getObjectives(ids: List<String>, language: String): List<WvwObjective> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/objectives?ids=$params&lang=$language")
+        return getRequest("$wvwEndpoint/objectives?ids=$params", language)
     }
 
     fun getRankIds(): List<Int> {
@@ -59,7 +59,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getRanks(ids: List<Int>, language: String): List<WvwRank> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/ranks?ids=$params&lang=$language")
+        return getRequest("$wvwEndpoint/ranks?ids=$params", language)
     }
 
     fun getUpgradeIds(): List<Int> {
@@ -68,6 +68,6 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getUpgrades(ids: List<Int>, language: String): List<WvwUpgrade> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/upgrades?ids=$params&lang=$language")
+        return getRequest("$wvwEndpoint/upgrades?ids=$params", language)
     }
 }

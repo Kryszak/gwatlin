@@ -12,6 +12,6 @@ internal class SpecializationClient : BaseHttpClient() {
     }
 
     fun getSpecialization(id: Int, language: String): Specialization {
-        return getRequest("$specializationEndpoint/$id?lang=$language")
+        return getRequest("$specializationEndpoint/$id", language)
     }
 }

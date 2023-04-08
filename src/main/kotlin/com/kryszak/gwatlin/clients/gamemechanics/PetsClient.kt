@@ -13,10 +13,10 @@ internal class PetsClient : BaseHttpClient() {
 
     fun getPets(ids: List<Int>, language: String): List<Pet> {
         val params = ids.joinToString(",")
-        return getRequest("$petsEndpoint?ids=$params&lang=$language")
+        return getRequest("$petsEndpoint?ids=$params", language)
     }
 
     fun getAllPets(language: String): List<Pet> {
-        return getRequest("$petsEndpoint?ids=all&lang=$language")
+        return getRequest("$petsEndpoint?ids=all", language)
     }
 }

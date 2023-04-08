@@ -9,10 +9,10 @@ internal class StoryClient : BaseHttpClient() {
     private val storyEndpoint = "stories"
 
     fun getStories(language: String): List<Story> {
-        return getRequest("$storyEndpoint?ids=all&lang=$language")
+        return getRequest("$storyEndpoint?ids=all", language)
     }
 
     fun getStorySeasons(language: String): List<StorySeason> {
-        return getRequest("$storyEndpoint/seasons?ids=all&lang=$language")
+        return getRequest("$storyEndpoint/seasons?ids=all", language)
     }
 }

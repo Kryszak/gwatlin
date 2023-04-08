@@ -13,10 +13,10 @@ internal class OutfitsClient : BaseHttpClient() {
 
     fun getOutfits(ids: List<Int>, language: String): List<Outfit> {
         val params = ids.joinToString(",")
-        return getRequest("$outfitsEndpoint?ids=$params&lang=$language")
+        return getRequest("$outfitsEndpoint?ids=$params", language)
     }
 
     fun getAllOutfits(language: String): List<Outfit> {
-        return getRequest("$outfitsEndpoint?ids=all&lang=$language")
+        return getRequest("$outfitsEndpoint?ids=all", language)
     }
 }

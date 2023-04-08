@@ -13,6 +13,6 @@ internal class SkinsClient : BaseHttpClient() {
 
     fun getSkins(ids: List<Int>, language: String): List<Skin> {
         val params = ids.joinToString(",")
-        return getRequest("$skinsEndpoint?ids=$params&lang=$language")
+        return getRequest("$skinsEndpoint?ids=$params", language)
     }
 }

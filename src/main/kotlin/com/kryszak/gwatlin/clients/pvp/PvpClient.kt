@@ -18,7 +18,7 @@ internal class PvpClient : BaseHttpClient() {
 
     fun getPvpRanks(ids: List<Int>, language: String): List<PvpRank> {
         val params = ids.joinToString(",")
-        return getRequest("$ranksEndpoint?ids=$params&lang=$language")
+        return getRequest("$ranksEndpoint?ids=$params", language)
     }
 
     fun getPvpSeasonIds(): List<String> {
@@ -27,6 +27,6 @@ internal class PvpClient : BaseHttpClient() {
 
     fun getPvpSeasons(ids: List<String>, language: String): List<PvpSeason> {
         val params = ids.joinToString(",")
-        return getRequest("$seasonsEndpoint?ids=$params&lang=$language")
+        return getRequest("$seasonsEndpoint?ids=$params", language)
     }
 }

@@ -48,7 +48,7 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getGuildPermissions(ids: List<String>, language: String): List<GuildPermission> {
         val params = ids.joinToString(",")
-        return getRequest("$permissionEndpoint?ids=$params&lang=$language")
+        return getRequest("$permissionEndpoint?ids=$params", language)
     }
 
     fun findGuildId(name: String): String {
@@ -65,6 +65,6 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getGuildUpgrades(ids: List<Int>, language: String): List<GuildUpgrade> {
         val params = ids.joinToString(",")
-        return getRequest("$upgradesEndpoint?ids=$params&lang=$language")
+        return getRequest("$upgradesEndpoint?ids=$params", language)
     }
 }
