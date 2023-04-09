@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.recipe.Recipe
 import com.kryszak.gwatlin.clients.items.RecipesClient
 
@@ -24,7 +25,7 @@ class GWRecipesClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.recipe.Recipe
      */
-    fun getRecipes(ids: List<Int>, language: String = "en"): List<Recipe> {
+    fun getRecipes(ids: List<Int>, language: ApiLanguage? = null): List<Recipe> {
         return recipesClient.getRecipes(ids, language)
     }
 

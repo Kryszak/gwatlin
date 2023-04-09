@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
 import com.kryszak.gwatlin.clients.gamemechanics.SpecializationClient
 
@@ -24,7 +25,7 @@ class GWSpecializationClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
      */
-    fun getSpecialization(id: Int, language: String = "en"): Specialization {
+    fun getSpecialization(id: Int, language: ApiLanguage? = null): Specialization {
         return specializationClient.getSpecialization(id, language)
     }
 }

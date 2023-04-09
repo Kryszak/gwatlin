@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.pvp.amulet.PvpAmulet
 import com.kryszak.gwatlin.clients.items.PvpAmuletsClient
 
@@ -24,7 +25,7 @@ class GWPvpAmuletsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.pvp.amulet.PvpAmulet
      */
-    fun getPvpAmulets(ids: List<Int>, language: String = "en"): List<PvpAmulet> {
+    fun getPvpAmulets(ids: List<Int>, language: ApiLanguage? = null): List<PvpAmulet> {
         return pvpAmuletsClient.getPvpAmulets(ids, language)
     }
 }

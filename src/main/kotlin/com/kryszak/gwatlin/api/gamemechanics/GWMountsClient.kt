@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
 import com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
 import com.kryszak.gwatlin.clients.gamemechanics.MountsClient
@@ -27,7 +28,7 @@ class GWMountsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
      */
-    fun getMountSkins(ids: List<Int>, language: String = "en"): List<MountSkin> {
+    fun getMountSkins(ids: List<Int>, language: ApiLanguage? = null): List<MountSkin> {
         return mountsClient.getMountSkins(ids, language)
     }
 
@@ -36,7 +37,7 @@ class GWMountsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
      */
-    fun getAllMountSkins(language: String = "en"): List<MountSkin> {
+    fun getAllMountSkins(language: ApiLanguage? = null): List<MountSkin> {
         return mountsClient.getAllMountSkins(language)
     }
 
@@ -54,7 +55,7 @@ class GWMountsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
      */
-    fun getMountTypes(ids: List<String>, language: String = "en"): List<MountType> {
+    fun getMountTypes(ids: List<String>, language: ApiLanguage? = null): List<MountType> {
         return mountsClient.getMountTypes(ids, language)
     }
 
@@ -63,7 +64,7 @@ class GWMountsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
      */
-    fun getAllMountTypes(language: String = "en"): List<MountType> {
+    fun getAllMountTypes(language: ApiLanguage? = null): List<MountType> {
         return mountsClient.getAllMountTypes(language)
     }
 }

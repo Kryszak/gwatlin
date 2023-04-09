@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.miscellaneous
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.miscellaneous.model.*
 import com.kryszak.gwatlin.api.miscellaneous.model.color.DyeColor
 import com.kryszak.gwatlin.api.miscellaneous.model.dungeon.Dungeon
@@ -38,56 +39,56 @@ class GWMiscellaneousClient {
     /**
      * Returns all dye colors in the game, including localized names and their color component information
      */
-    fun getDyeColors(language: String = "en"): List<DyeColor> {
+    fun getDyeColors(language: ApiLanguage? = null): List<DyeColor> {
         return miscellaneousClient.getColors(language)
     }
 
     /**
      * Returns a list of the currencies contained in the account wallet
      */
-    fun getCurrencies(language: String = "en"): List<Currency> {
+    fun getCurrencies(language: ApiLanguage? = null): List<Currency> {
         return miscellaneousClient.getCurrencies(language)
     }
 
     /**
      * Returns details about each dungeon and it's associated paths
      */
-    fun getDungeons(language: String = "en"): List<Dungeon> {
+    fun getDungeons(language: ApiLanguage? = null): List<Dungeon> {
         return miscellaneousClient.getDungeons(language)
     }
 
     /**
      * Returns all minis in the game
      */
-    fun getMinis(language: String = "en"): List<Mini> {
+    fun getMinis(language: ApiLanguage? = null): List<Mini> {
         return miscellaneousClient.getMinis(language)
     }
 
     /**
      * Returns information about novelties that are available in-game
      */
-    fun getNovelties(language: String = "en"): List<Novelty> {
+    fun getNovelties(language: ApiLanguage? = null): List<Novelty> {
         return miscellaneousClient.getNovelties(language)
     }
 
     /**
      * Resource returns details about each raid and it's associated wings
      */
-    fun getRaids(language: String = "en"): List<Raid> {
+    fun getRaids(language: ApiLanguage? = null): List<Raid> {
         return miscellaneousClient.getRaids(language)
     }
 
     /**
      * Returns information about the titles that are in the game
      */
-    fun getTitles(language: String = "en"): List<Title> {
+    fun getTitles(language: ApiLanguage? = null): List<Title> {
         return miscellaneousClient.getTitles(language)
     }
 
     /**
      * Returns information about the available worlds, or servers
      */
-    fun getWorlds(language: String = "en"): List<World> {
+    fun getWorlds(language: ApiLanguage? = null): List<World> {
         return miscellaneousClient.getWorlds(language)
     }
 }

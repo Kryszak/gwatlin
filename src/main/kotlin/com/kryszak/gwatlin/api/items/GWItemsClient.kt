@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.item.Item
 import com.kryszak.gwatlin.clients.items.ItemsClient
 
@@ -24,7 +25,7 @@ class GWItemsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.item.Item
      */
-    fun getItems(ids: List<Int>, language: String = "en"): List<Item> {
+    fun getItems(ids: List<Int>, language: ApiLanguage? = null): List<Item> {
         return itemClient.getItems(ids, language)
     }
 }

@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.guild
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
@@ -68,7 +69,7 @@ class GWGuildClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
      */
-    fun getGuildPermissions(ids: List<String>, language: String = "en"): List<GuildPermission> {
+    fun getGuildPermissions(ids: List<String>, language: ApiLanguage? = null): List<GuildPermission> {
         return guildClient.getGuildPermissions(ids, language)
     }
 
@@ -93,7 +94,7 @@ class GWGuildClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
      */
-    fun getGuildUpgrades(ids: List<Int>, language: String = "en"): List<GuildUpgrade> {
+    fun getGuildUpgrades(ids: List<Int>, language: ApiLanguage? = null): List<GuildUpgrade> {
         return guildClient.getGuildUpgrades(ids, language)
     }
 }

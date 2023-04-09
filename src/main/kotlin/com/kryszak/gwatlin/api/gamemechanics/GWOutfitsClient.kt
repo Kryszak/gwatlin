@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
 import com.kryszak.gwatlin.clients.gamemechanics.OutfitsClient
 
@@ -25,7 +26,7 @@ class GWOutfitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
      */
-    fun getOutfits(ids: List<Int>, language: String = "en"): List<Outfit> {
+    fun getOutfits(ids: List<Int>, language: ApiLanguage? = null): List<Outfit> {
         return outfitsClient.getOutfits(ids, language)
     }
 
@@ -34,7 +35,7 @@ class GWOutfitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
      */
-    fun getAllOutfits(language: String = "en"): List<Outfit> {
+    fun getAllOutfits(language: ApiLanguage? = null): List<Outfit> {
         return outfitsClient.getAllOutfits(language)
     }
 }

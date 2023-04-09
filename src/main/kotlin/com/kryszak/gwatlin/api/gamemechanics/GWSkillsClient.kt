@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import com.kryszak.gwatlin.clients.gamemechanics.SkillsClient
 
@@ -25,7 +26,7 @@ class GWSkillsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
      */
-    fun getSkills(ids: List<Int>, language: String = "en"): List<Skill> {
+    fun getSkills(ids: List<Int>, language: ApiLanguage? = null): List<Skill> {
         return skillsClient.getSkills(ids, language)
     }
 }

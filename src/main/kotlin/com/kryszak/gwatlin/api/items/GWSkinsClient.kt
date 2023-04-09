@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.skins.Skin
 import com.kryszak.gwatlin.clients.items.SkinsClient
 
@@ -24,7 +25,7 @@ class GWSkinsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.skins.Skin
      */
-    fun getSkins(ids: List<Int>, language: String): List<Skin> {
+    fun getSkins(ids: List<Int>, language: ApiLanguage? = null): List<Skin> {
         return skinsClient.getSkins(ids, language)
     }
 }
