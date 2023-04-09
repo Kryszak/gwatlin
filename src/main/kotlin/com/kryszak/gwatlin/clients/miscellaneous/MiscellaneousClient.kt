@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.miscellaneous
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.miscellaneous.model.*
 import com.kryszak.gwatlin.api.miscellaneous.model.color.DyeColor
 import com.kryszak.gwatlin.api.miscellaneous.model.dungeon.Dungeon
@@ -42,35 +43,35 @@ internal class MiscellaneousClient : BaseHttpClient() {
         return getRequest("$quaggansEndpoint?ids=all")
     }
 
-    fun getColors(language: String): List<DyeColor> {
+    fun getColors(language: ApiLanguage?): List<DyeColor> {
         return getRequest("$colorsEndpoint?ids=all", language)
     }
 
-    fun getCurrencies(language: String): List<Currency> {
+    fun getCurrencies(language: ApiLanguage?): List<Currency> {
         return getRequest("$currenciesEndpoint?ids=all", language)
     }
 
-    fun getDungeons(language: String): List<Dungeon> {
+    fun getDungeons(language: ApiLanguage?): List<Dungeon> {
         return getRequest("$dungeonsEndpoint?ids=all", language)
     }
 
-    fun getMinis(language: String): List<Mini> {
+    fun getMinis(language: ApiLanguage?): List<Mini> {
         return getRequest("$minisEndpoint?ids=all", language)
     }
 
-    fun getNovelties(language: String): List<Novelty> {
+    fun getNovelties(language: ApiLanguage?): List<Novelty> {
         return getRequest("$noveltiesEndpoint?ids=all", language)
     }
 
-    fun getRaids(language: String): List<Raid> {
+    fun getRaids(language: ApiLanguage?): List<Raid> {
         return getRequest("$raidsEndpoint?ids=all", language)
     }
 
-    fun getTitles(language: String): List<Title> {
+    fun getTitles(language: ApiLanguage?): List<Title> {
         return getRequest("$titlesEndpoint?ids=all", language)
     }
 
-    fun getWorlds(language: String): List<World> {
+    fun getWorlds(language: ApiLanguage?): List<World> {
         return getRequest("$worldsEndpoint?ids=all", language)
     }
 }

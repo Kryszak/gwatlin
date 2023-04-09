@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.wvw
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.wvw.model.ability.WvwAbility
 import com.kryszak.gwatlin.api.wvw.model.match.WvwMatch
 import com.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldOverview
@@ -18,7 +19,7 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/abilities")
     }
 
-    fun getAbilities(ids: List<Int>, language: String): List<WvwAbility> {
+    fun getAbilities(ids: List<Int>, language: ApiLanguage?): List<WvwAbility> {
         val params = ids.joinToString(",")
         return getRequest("$wvwEndpoint/abilities?ids=$params", language)
     }
@@ -48,7 +49,7 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/objectives")
     }
 
-    fun getObjectives(ids: List<String>, language: String): List<WvwObjective> {
+    fun getObjectives(ids: List<String>, language: ApiLanguage?): List<WvwObjective> {
         val params = ids.joinToString(",")
         return getRequest("$wvwEndpoint/objectives?ids=$params", language)
     }
@@ -57,7 +58,7 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/ranks")
     }
 
-    fun getRanks(ids: List<Int>, language: String): List<WvwRank> {
+    fun getRanks(ids: List<Int>, language: ApiLanguage?): List<WvwRank> {
         val params = ids.joinToString(",")
         return getRequest("$wvwEndpoint/ranks?ids=$params", language)
     }
@@ -66,7 +67,7 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/upgrades")
     }
 
-    fun getUpgrades(ids: List<Int>, language: String): List<WvwUpgrade> {
+    fun getUpgrades(ids: List<Int>, language: ApiLanguage?): List<WvwUpgrade> {
         val params = ids.joinToString(",")
         return getRequest("$wvwEndpoint/upgrades?ids=$params", language)
     }

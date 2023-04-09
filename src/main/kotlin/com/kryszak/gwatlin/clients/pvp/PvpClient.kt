@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.pvp
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
 import com.kryszak.gwatlin.http.BaseHttpClient
@@ -16,7 +17,7 @@ internal class PvpClient : BaseHttpClient() {
         return getRequest(ranksEndpoint)
     }
 
-    fun getPvpRanks(ids: List<Int>, language: String): List<PvpRank> {
+    fun getPvpRanks(ids: List<Int>, language: ApiLanguage?): List<PvpRank> {
         val params = ids.joinToString(",")
         return getRequest("$ranksEndpoint?ids=$params", language)
     }
@@ -25,7 +26,7 @@ internal class PvpClient : BaseHttpClient() {
         return getRequest(seasonsEndpoint)
     }
 
-    fun getPvpSeasons(ids: List<String>, language: String): List<PvpSeason> {
+    fun getPvpSeasons(ids: List<String>, language: ApiLanguage?): List<PvpSeason> {
         val params = ids.joinToString(",")
         return getRequest("$seasonsEndpoint?ids=$params", language)
     }

@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class TraitsClient : BaseHttpClient() {
         return getRequest(traitsEndpoint)
     }
 
-    fun getTraits(ids: List<Int>, language: String): List<Trait> {
+    fun getTraits(ids: List<Int>, language: ApiLanguage?): List<Trait> {
         val params = ids.joinToString(",")
         return getRequest("$traitsEndpoint?ids=$params", language)
     }

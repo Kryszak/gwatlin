@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.finisher.Finisher
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class FinishersClient : BaseHttpClient() {
         return getRequest(finisherEndpoint)
     }
 
-    fun getFinishers(ids: List<Int>, language: String): List<Finisher> {
+    fun getFinishers(ids: List<Int>, language: ApiLanguage?): List<Finisher> {
         val params = ids.joinToString(",")
         return getRequest("$finisherEndpoint?ids=$params", language)
     }

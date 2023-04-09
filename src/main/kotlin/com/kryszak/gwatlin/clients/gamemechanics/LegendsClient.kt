@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.legend.Legend
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class LegendsClient : BaseHttpClient() {
         return getRequest(legendsEndpoint)
     }
 
-    fun getLegends(ids: List<String>, language: String): List<Legend> {
+    fun getLegends(ids: List<String>, language: ApiLanguage?): List<Legend> {
         val params = ids.joinToString(",")
         return getRequest("$legendsEndpoint?ids=$params", language)
     }

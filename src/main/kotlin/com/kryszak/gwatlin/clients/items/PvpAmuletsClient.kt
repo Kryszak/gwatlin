@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.pvp.amulet.PvpAmulet
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class PvpAmuletsClient : BaseHttpClient() {
         return getRequest(amuletsEndpoint)
     }
 
-    fun getPvpAmulets(ids: List<Int>, language: String): List<PvpAmulet> {
+    fun getPvpAmulets(ids: List<Int>, language: ApiLanguage?): List<PvpAmulet> {
         val params = ids.joinToString(",")
         return getRequest("$amuletsEndpoint?ids=$params", language)
     }

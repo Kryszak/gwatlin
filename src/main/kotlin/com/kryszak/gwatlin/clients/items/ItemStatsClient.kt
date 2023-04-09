@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.stats.ItemStats
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class ItemStatsClient : BaseHttpClient() {
         return getRequest(statsEndpoint)
     }
 
-    fun getItemStats(ids: List<Int>, language: String): List<ItemStats> {
+    fun getItemStats(ids: List<Int>, language: ApiLanguage?): List<ItemStats> {
         val params = ids.joinToString(",")
         return getRequest("$statsEndpoint?ids=$params", language)
     }
