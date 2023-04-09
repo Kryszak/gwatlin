@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import com.kryszak.gwatlin.config.WiremockTest
@@ -27,7 +27,7 @@ class SkillsClientSpec extends WiremockTest {
         def ids = [1110, 1115]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", lang)

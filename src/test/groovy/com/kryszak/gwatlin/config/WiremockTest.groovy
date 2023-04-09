@@ -3,6 +3,7 @@ package com.kryszak.gwatlin.config
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import com.google.gson.Gson
+import com.kryszak.gwatlin.api.ApiLanguage
 import groovy.json.JsonSlurper
 import spock.lang.Shared
 import spock.lang.Specification
@@ -27,18 +28,18 @@ class WiremockTest extends Specification {
         )
     }
 
-    protected def stubResponseWithLanguage(String url, String responseFile, String language) {
+    protected def stubResponseWithLanguage(String url, String responseFile, ApiLanguage language) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
-                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("Accept-Language", equalTo(language.apiString))
                         .willReturn(okJson(parseResponseText(responseFile)))
         )
     }
 
-    protected def stubResponseWithSchemaAndLanguage(String url, String responseFile, String language, String schemaVersion) {
+    protected def stubResponseWithSchemaAndLanguage(String url, String responseFile, ApiLanguage language, String schemaVersion) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
-                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("Accept-Language", equalTo(language.apiString))
                         .withHeader("X-Schema-Version", equalTo(schemaVersion))
                         .willReturn(okJson(parseResponseText(responseFile)))
         )
@@ -67,20 +68,20 @@ class WiremockTest extends Specification {
         )
     }
 
-    protected def stubAuthResponseWithLanguage(String url, String responseFile, String language) {
+    protected def stubAuthResponseWithLanguage(String url, String responseFile, ApiLanguage language) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
                         .withHeader("Authorization", equalTo("Bearer $auth"))
-                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("Accept-Language", equalTo(language.apiString))
                         .willReturn(okJson(parseResponseText(responseFile)))
         )
     }
 
-    protected def stubAuthResponseWithSchemaAndLanguage(String url, String responseFile, String language, String schemaVersion) {
+    protected def stubAuthResponseWithSchemaAndLanguage(String url, String responseFile, ApiLanguage language, String schemaVersion) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
                         .withHeader("Authorization", equalTo("Bearer $auth"))
-                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("Accept-Language", equalTo(language.apiString))
                         .withHeader("X-Schema-Version", equalTo(schemaVersion))
                         .willReturn(okJson(parseResponseText(responseFile)))
         )

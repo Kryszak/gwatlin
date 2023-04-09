@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.story
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -10,7 +11,7 @@ class StoryClientSpec extends WiremockTest {
 
     def "Should get stories"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/stories?ids=all", "/responses/story/stories.json", lang)
@@ -37,7 +38,7 @@ class StoryClientSpec extends WiremockTest {
 
     def "Should get story seasons"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/stories/seasons?ids=all", "/responses/story/story_seasons.json", lang)

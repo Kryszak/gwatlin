@@ -1,6 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 import com.google.gson.reflect.TypeToken
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.TrainingCategory
@@ -29,7 +30,7 @@ class ProfessionsClientSpec extends WiremockTest {
         def ids = ["Engineer", "Warrior"]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/professions?ids=Engineer,Warrior", "/responses/gamemechanics/professions.json", lang)
@@ -65,7 +66,7 @@ class ProfessionsClientSpec extends WiremockTest {
 
     def "Should get all professions"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/professions?ids=all", "/responses/gamemechanics/professions_all.json", lang)
@@ -85,7 +86,7 @@ class ProfessionsClientSpec extends WiremockTest {
         stubNotFoundResponse("/professions?ids=asdf", "/responses/gamemechanics/professions_error.json")
 
         when: "Requesting non existing profession"
-        professionsClient.getProfessions([id], "en")
+        professionsClient.getProfessions([id])
 
         then: "Exception is thrown"
         thrown(ApiRequestException)

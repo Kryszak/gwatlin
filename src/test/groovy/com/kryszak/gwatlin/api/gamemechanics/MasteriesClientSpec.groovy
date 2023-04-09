@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
 import com.kryszak.gwatlin.config.WiremockTest
@@ -38,9 +38,9 @@ class MasteriesClientSpec extends WiremockTest {
         mastery == parseMastery(file)
 
         where:
-        lang               | language | file              | stub
-        "default language" | "en"     | "mastery.json"    | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery.json", language)
-        "French"           | "fr"     | "mastery_fr.json" | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery_fr.json", language)
+        lang               | language           | file              | stub
+        "default language" | ApiLanguage.EN     | "mastery.json"    | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery.json", language)
+        "French"           | ApiLanguage.FR     | "mastery_fr.json" | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery_fr.json", language)
     }
 
     def "Should throw exception on non existing mastery"() {
@@ -51,7 +51,7 @@ class MasteriesClientSpec extends WiremockTest {
         stubNotFoundResponse("/masteries/40", "/responses/gamemechanics/mastery_error.json")
 
         when: "Retrieving mastery"
-        gameMechanicsClient.getMastery(id, "en")
+        gameMechanicsClient.getMastery(id)
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
@@ -62,7 +62,7 @@ class MasteriesClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", lang)
@@ -91,7 +91,7 @@ class MasteriesClientSpec extends WiremockTest {
 
     def "Should get all masteries"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", lang)

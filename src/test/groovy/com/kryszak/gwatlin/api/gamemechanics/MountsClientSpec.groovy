@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
@@ -26,7 +26,7 @@ class MountsClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/mounts/skins?ids=1,2", "/responses/gamemechanics/mount_skins.json", lang)
@@ -55,7 +55,7 @@ class MountsClientSpec extends WiremockTest {
         stubNotFoundResponse("/mounts/skins?ids=1000", "/responses/gamemechanics/mount_skins_error.json")
 
         when: "Non existing mount skin is requested"
-        mountsClient.getMountSkins([id], "en")
+        mountsClient.getMountSkins([id])
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
@@ -63,7 +63,7 @@ class MountsClientSpec extends WiremockTest {
 
     def "Should get all mount skins"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/mounts/skins?ids=all", "/responses/gamemechanics/mount_skins_all.json", lang)
@@ -91,7 +91,7 @@ class MountsClientSpec extends WiremockTest {
         def ids = ["griffon", "jackal"]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/mounts/types?ids=griffon,jackal", "/responses/gamemechanics/mount_types.json", lang)
@@ -115,7 +115,7 @@ class MountsClientSpec extends WiremockTest {
 
     def "Should get all mount types"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/mounts/types?ids=all", "/responses/gamemechanics/mount_types_all.json", lang)
@@ -135,7 +135,7 @@ class MountsClientSpec extends WiremockTest {
         stubNotFoundResponse("/mounts/types?ids=i_do_not_exist", "/responses/gamemechanics/mount_type_error.json")
 
         when: "Requesting non existing mount type"
-        mountsClient.getMountTypes([id], "en")
+        mountsClient.getMountTypes([id])
 
         then: "Exception is thrown"
         thrown(ApiRequestException)

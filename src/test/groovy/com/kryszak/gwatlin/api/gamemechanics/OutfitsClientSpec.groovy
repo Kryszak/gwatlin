@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
@@ -26,7 +26,7 @@ class OutfitsClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", lang)
@@ -51,7 +51,7 @@ class OutfitsClientSpec extends WiremockTest {
         stubNotFoundResponse("/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json")
 
         when: "Requesting non existing outfit"
-        outfitsClient.getOutfits([id], "en")
+        outfitsClient.getOutfits([id])
 
         then: "Exception is thrown"
         thrown(ApiRequestException)
@@ -59,7 +59,7 @@ class OutfitsClientSpec extends WiremockTest {
 
     def "Should retrieve all outfits"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", lang)

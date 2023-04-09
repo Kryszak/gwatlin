@@ -1,6 +1,7 @@
 package com.kryszak.gwatlin.api.pvp
 
 import com.google.gson.reflect.TypeToken
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
 import com.kryszak.gwatlin.config.WiremockTest
@@ -30,7 +31,7 @@ class PvPClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", lang)
@@ -74,7 +75,7 @@ class PvPClientSpec extends WiremockTest {
         def ids = ["44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72"]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/pvp/seasons?ids=44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",

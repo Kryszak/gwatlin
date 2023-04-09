@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.miscellaneous
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -46,7 +47,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get dye colors"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/colors?ids=all", "/responses/miscellaneous/dye_colors.json", lang)
@@ -77,7 +78,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get currencies"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/currencies?ids=all", "/responses/miscellaneous/currencies.json", lang)
@@ -97,7 +98,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get dungeons"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", lang)
@@ -117,7 +118,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get minis"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/minis?ids=all", "/responses/miscellaneous/minis.json", lang)
@@ -137,7 +138,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get novelties"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/novelties?ids=all", "/responses/miscellaneous/novelties.json", lang)
@@ -158,7 +159,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get raids"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/raids?ids=all", "/responses/miscellaneous/raids.json", lang)
@@ -181,7 +182,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get titles"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/titles?ids=all", "/responses/miscellaneous/titles.json", lang)
@@ -200,7 +201,7 @@ class MiscellaneousClientSpec extends WiremockTest {
 
     def "Should get worlds"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/worlds?ids=all", "/responses/miscellaneous/worlds.json", lang)

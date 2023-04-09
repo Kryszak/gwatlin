@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.wvw
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -21,7 +22,7 @@ class WvwClientSpec extends WiremockTest {
 
     def "Should get ability"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/wvw/abilities?ids=2", "/responses/wvw/ability.json", lang)
@@ -165,7 +166,7 @@ class WvwClientSpec extends WiremockTest {
 
     def "Should get objective"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", lang)
@@ -202,7 +203,7 @@ class WvwClientSpec extends WiremockTest {
 
     def "Should get rank"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/wvw/ranks?ids=1", "/responses/wvw/rank.json", lang)
@@ -231,7 +232,7 @@ class WvwClientSpec extends WiremockTest {
 
     def "Should get upgrade"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", lang)
