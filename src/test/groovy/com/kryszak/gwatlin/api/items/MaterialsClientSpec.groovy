@@ -26,11 +26,16 @@ class MaterialsClientSpec extends WiremockTest {
         given: "Material id"
         def ids = [5]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/materials?ids=5&lang=en", "/responses/items/material.json")
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/materials?ids=5", "/responses/items/material.json", lang)
 
         when: "Requesting material"
-        def materials = materialsClient.getMaterials(ids, "en")
+        def materials = materialsClient.getMaterials(ids, lang)
 
         then: "Retrieved material matches expected"
         verifyAll(materials.get(0)) {

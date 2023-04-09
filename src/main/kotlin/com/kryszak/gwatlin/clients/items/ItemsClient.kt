@@ -13,6 +13,6 @@ internal class ItemsClient : BaseHttpClient() {
 
     fun getItems(ids: List<Int>, language: String): List<Item> {
         val params = ids.joinToString(",")
-        return getRequest("$itemEndpoint?ids=$params&lang=$language")
+        return getRequest("$itemEndpoint?ids=$params", language)
     }
 }

@@ -26,11 +26,14 @@ class TraitsClientSpec extends WiremockTest {
         given: "Trait ids"
         def ids = [214, 221]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/traits?ids=214,221&lang=en", "/responses/gamemechanics/traits.json")
+        stubResponseWithLanguage("/traits?ids=214,221", "/responses/gamemechanics/traits.json", lang)
 
         when: "Traits are requested"
-        def traits = traitsClient.getTraits(ids, "en")
+        def traits = traitsClient.getTraits(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(traits.get(0)) {

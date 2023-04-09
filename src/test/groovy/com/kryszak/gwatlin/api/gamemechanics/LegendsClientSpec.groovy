@@ -24,11 +24,14 @@ class LegendsClientSpec extends WiremockTest {
         given: "Legend ids"
         def ids = ["Legend1", "Legend2"]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/legends?ids=Legend1,Legend2&lang=en", "/responses/gamemechanics/legends.json")
+        stubResponseWithLanguage("/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends.json", lang)
 
         when: "Legends are requested"
-        def legends = legendsClient.getLegends(ids, "en")
+        def legends = legendsClient.getLegends(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(legends.get(0)) {

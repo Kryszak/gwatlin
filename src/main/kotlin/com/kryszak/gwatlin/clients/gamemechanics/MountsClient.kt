@@ -18,11 +18,11 @@ internal class MountsClient : BaseHttpClient() {
 
     fun getMountSkins(ids: List<Int>, language: String): List<MountSkin> {
         val params = ids.joinToString(",")
-        return getRequest("$skinsEndpoint?ids=$params&lang=$language")
+        return getRequest("$skinsEndpoint?ids=$params", language)
     }
 
     fun getAllMountSkins(language: String): List<MountSkin> {
-        return getRequest("$skinsEndpoint?ids=all&lang=$language")
+        return getRequest("$skinsEndpoint?ids=all", language)
     }
 
     fun getMountTypesIds(): List<String> {
@@ -31,10 +31,10 @@ internal class MountsClient : BaseHttpClient() {
 
     fun getMountTypes(ids: List<String>, language: String): List<MountType> {
         val params = ids.joinToString(",")
-        return getRequest("$typesEndpoint?ids=$params&lang=$language")
+        return getRequest("$typesEndpoint?ids=$params", language)
     }
 
     fun getAllMountTypes(language: String): List<MountType> {
-        return getRequest("$typesEndpoint?ids=all&lang=$language")
+        return getRequest("$typesEndpoint?ids=all", language)
     }
 }

@@ -13,6 +13,6 @@ internal class PvpAmuletsClient : BaseHttpClient() {
 
     fun getPvpAmulets(ids: List<Int>, language: String): List<PvpAmulet> {
         val params = ids.joinToString(",")
-        return getRequest("$amuletsEndpoint?ids=$params&lang=$language")
+        return getRequest("$amuletsEndpoint?ids=$params", language)
     }
 }

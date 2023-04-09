@@ -24,11 +24,14 @@ class PetsClientSpec extends WiremockTest {
         given: "Pet ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/pets?ids=1,2&lang=en", "/responses/gamemechanics/pets.json")
+        stubResponseWithLanguage("/pets?ids=1,2", "/responses/gamemechanics/pets.json", lang)
 
         when: "Pets are requested"
-        def pets = petsClient.getPets(ids, "en")
+        def pets = petsClient.getPets(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(pets.get(0)) {
@@ -43,11 +46,14 @@ class PetsClientSpec extends WiremockTest {
     }
 
     def "Should get all pets"() {
-        given: "External api is stubbed"
-        stubResponse("/pets?ids=all&lang=en", "/responses/gamemechanics/pets_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/pets?ids=all", "/responses/gamemechanics/pets_all.json", lang)
 
         when: "All pets are requested"
-        def pets = petsClient.getAllPets("en")
+        def pets = petsClient.getAllPets(lang)
 
         then: "Retrieved list matches expected"
         pets.size() == 55

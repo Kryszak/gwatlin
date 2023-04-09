@@ -13,6 +13,6 @@ internal class SkillsClient : BaseHttpClient() {
 
     fun getSkills(ids: List<Int>, language: String): List<Skill> {
         val params = ids.joinToString(",")
-        return getRequest("$skillsEndpoint?ids=$params&lang=$language")
+        return getRequest("$skillsEndpoint?ids=$params", language)
     }
 }

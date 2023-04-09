@@ -45,11 +45,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get dye colors"() {
-        given: "External api is stubbed"
-        stubResponse("/colors?ids=all&lang=en", "/responses/miscellaneous/dye_colors.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/colors?ids=all", "/responses/miscellaneous/dye_colors.json", lang)
 
         when: "Requesting dye colors"
-        def colors = miscellaneousClient.getDyeColors("en")
+        def colors = miscellaneousClient.getDyeColors(lang)
 
         then: "Retrieved list matches expected"
         verifyAll(colors.get(1)) {
@@ -73,11 +76,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get currencies"() {
-        given: "External api is stubbed"
-        stubResponse("/currencies?ids=all&lang=en", "/responses/miscellaneous/currencies.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/currencies?ids=all", "/responses/miscellaneous/currencies.json", lang)
 
         when: "Requesting currencies"
-        def currencies = miscellaneousClient.getCurrencies("en")
+        def currencies = miscellaneousClient.getCurrencies(lang)
 
         then: "Retrieved currencies match expected"
         verifyAll(currencies.get(0)) {
@@ -90,11 +96,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get dungeons"() {
-        given: "External api is stubbed"
-        stubResponse("/dungeons?ids=all&lang=en", "/responses/miscellaneous/dungeons.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", lang)
 
         when: "Requesting dungeons"
-        def dungeons = miscellaneousClient.getDungeons("en")
+        def dungeons = miscellaneousClient.getDungeons(lang)
 
         then: "Retrieved dungeons match expected"
         verifyAll(dungeons.get(0)) {
@@ -107,11 +116,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get minis"() {
-        given: "External api is stubbed"
-        stubResponse("/minis?ids=all&lang=en", "/responses/miscellaneous/minis.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/minis?ids=all", "/responses/miscellaneous/minis.json", lang)
 
         when: "Requesting minis"
-        def minis = miscellaneousClient.getMinis("en")
+        def minis = miscellaneousClient.getMinis(lang)
 
         then: "Retrieved minis matches expected"
         verifyAll(minis.get(0)) {
@@ -124,11 +136,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get novelties"() {
-        given: "External api is stubbed"
-        stubResponse("/novelties?ids=all&lang=en", "/responses/miscellaneous/novelties.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/novelties?ids=all", "/responses/miscellaneous/novelties.json", lang)
 
         when: "Requesting novelties"
-        def novelties = miscellaneousClient.getNovelties("en")
+        def novelties = miscellaneousClient.getNovelties(lang)
 
         then: "Retrieved novelties match expected"
         verifyAll(novelties.get(0)) {
@@ -142,11 +157,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get raids"() {
-        given: "External api is stubbed"
-        stubResponse("/raids?ids=all&lang=en", "/responses/miscellaneous/raids.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/raids?ids=all", "/responses/miscellaneous/raids.json", lang)
 
         when: "Requesting raids"
-        def raids = miscellaneousClient.getRaids("en")
+        def raids = miscellaneousClient.getRaids(lang)
 
         then: "Retrieved raids match expected"
         verifyAll(raids.get(0)) {
@@ -162,11 +180,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get titles"() {
-        given: "External api is stubbed"
-        stubResponse("/titles?ids=all&lang=en", "/responses/miscellaneous/titles.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/titles?ids=all", "/responses/miscellaneous/titles.json", lang)
 
         when: "Requesting titles"
-        def titles = miscellaneousClient.getTitles("en")
+        def titles = miscellaneousClient.getTitles(lang)
 
         then: "Retrieved titles matches expected"
         verifyAll(titles.get(0)) {
@@ -178,11 +199,14 @@ class MiscellaneousClientSpec extends WiremockTest {
     }
 
     def "Should get worlds"() {
-        given: "External api is stubbed"
-        stubResponse("/worlds?ids=all&lang=en", "/responses/miscellaneous/worlds.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/worlds?ids=all", "/responses/miscellaneous/worlds.json", lang)
 
         when: "Requesting worlds"
-        def worlds = miscellaneousClient.getWorlds("en")
+        def worlds = miscellaneousClient.getWorlds(lang)
 
         then: "Retrieved worlds match expected"
         verifyAll(worlds.get(0)) {

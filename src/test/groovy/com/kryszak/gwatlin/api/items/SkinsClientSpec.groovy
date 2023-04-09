@@ -26,11 +26,14 @@ class SkinsClientSpec extends WiremockTest {
         given: "Skin id"
         def id = 10
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/skins?ids=10&lang=en", "/responses/items/skin.json")
+        stubResponseWithLanguage("/skins?ids=10", "/responses/items/skin.json", lang)
 
         when: "Requesting skin"
-        def skins = skinsClient.getSkins([id], "en")
+        def skins = skinsClient.getSkins([id], lang)
 
         then: "Retrieved skin matches expected"
         verifyAll(skins.get(0)) {

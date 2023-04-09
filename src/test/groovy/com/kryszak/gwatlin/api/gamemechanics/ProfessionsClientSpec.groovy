@@ -28,11 +28,14 @@ class ProfessionsClientSpec extends WiremockTest {
         given: "Profession ids"
         def ids = ["Engineer", "Warrior"]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/professions?ids=Engineer,Warrior&lang=en", "/responses/gamemechanics/professions.json")
+        stubResponseWithLanguage("/professions?ids=Engineer,Warrior", "/responses/gamemechanics/professions.json", lang)
 
         when: "Requesting professions"
-        def professions = professionsClient.getProfessions(ids, "en")
+        def professions = professionsClient.getProfessions(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(professions.get(0)) {
@@ -61,11 +64,14 @@ class ProfessionsClientSpec extends WiremockTest {
     }
 
     def "Should get all professions"() {
-        given: "External api is stubbed"
-        stubResponse("/professions?ids=all&lang=en", "/responses/gamemechanics/professions_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/professions?ids=all", "/responses/gamemechanics/professions_all.json", lang)
 
         when: "Requesting professions"
-        def professions = professionsClient.getAllProfessions("en")
+        def professions = professionsClient.getAllProfessions(lang)
 
         then: "Retrieved list matches expected"
         professions.size() == 9
@@ -76,7 +82,7 @@ class ProfessionsClientSpec extends WiremockTest {
         def id = "asdf"
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/professions?ids=asdf&lang=en", "/responses/gamemechanics/professions_error.json")
+        stubNotFoundResponse("/professions?ids=asdf", "/responses/gamemechanics/professions_error.json")
 
         when: "Requesting non existing profession"
         professionsClient.getProfessions([id], "en")

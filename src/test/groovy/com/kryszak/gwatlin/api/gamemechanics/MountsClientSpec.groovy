@@ -25,11 +25,14 @@ class MountsClientSpec extends WiremockTest {
         given: "List of ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/mounts/skins?ids=1,2&lang=en", "/responses/gamemechanics/mount_skins.json")
+        stubResponseWithLanguage("/mounts/skins?ids=1,2", "/responses/gamemechanics/mount_skins.json", lang)
 
         when: "Mount skins are requested"
-        def mountSkins = mountsClient.getMountSkins(ids, "en")
+        def mountSkins = mountsClient.getMountSkins(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(mountSkins.get(0)) {
@@ -49,7 +52,7 @@ class MountsClientSpec extends WiremockTest {
         def id = 1000
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/mounts/skins?ids=1000&lang=en", "/responses/gamemechanics/mount_skins_error.json")
+        stubNotFoundResponse("/mounts/skins?ids=1000", "/responses/gamemechanics/mount_skins_error.json")
 
         when: "Non existing mount skin is requested"
         mountsClient.getMountSkins([id], "en")
@@ -59,11 +62,14 @@ class MountsClientSpec extends WiremockTest {
     }
 
     def "Should get all mount skins"() {
-        given: "External api is stubbed"
-        stubResponse("/mounts/skins?ids=all&lang=en", "/responses/gamemechanics/mount_skins_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/mounts/skins?ids=all", "/responses/gamemechanics/mount_skins_all.json", lang)
 
         when: "All mount skins are requested"
-        def mountSkins = mountsClient.getAllMountSkins("en")
+        def mountSkins = mountsClient.getAllMountSkins(lang)
 
         then: "Retrieved list matches expected"
         mountSkins.size() == 172
@@ -84,11 +90,14 @@ class MountsClientSpec extends WiremockTest {
         given: "Mount ids"
         def ids = ["griffon", "jackal"]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/mounts/types?ids=griffon,jackal&lang=en", "/responses/gamemechanics/mount_types.json")
+        stubResponseWithLanguage("/mounts/types?ids=griffon,jackal", "/responses/gamemechanics/mount_types.json", lang)
 
         when: "Requesting mount types"
-        def mountTypes = mountsClient.getMountTypes(ids, "en")
+        def mountTypes = mountsClient.getMountTypes(ids, lang)
 
         then: "Retrieved list matches expected"
         verifyAll(mountTypes.get(0)) {
@@ -105,11 +114,14 @@ class MountsClientSpec extends WiremockTest {
     }
 
     def "Should get all mount types"() {
-        given: "External api is stubbed"
-        stubResponse("/mounts/types?ids=all&lang=en", "/responses/gamemechanics/mount_types_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/mounts/types?ids=all", "/responses/gamemechanics/mount_types_all.json", lang)
 
         when: "Requesting all mount types"
-        def mountTypes = mountsClient.getAllMountTypes("en")
+        def mountTypes = mountsClient.getAllMountTypes(lang)
 
         then: "Retrieved list matches expected"
         mountTypes.size() == 8
@@ -120,7 +132,7 @@ class MountsClientSpec extends WiremockTest {
         def id = "i_do_not_exist"
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/mounts/types?ids=i_do_not_exist&lang=en", "/responses/gamemechanics/mount_type_error.json")
+        stubNotFoundResponse("/mounts/types?ids=i_do_not_exist", "/responses/gamemechanics/mount_type_error.json")
 
         when: "Requesting non existing mount type"
         mountsClient.getMountTypes([id], "en")

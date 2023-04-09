@@ -41,7 +41,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId?lang=en",
+                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId",
                 "/responses/mapinfo/continentMap.json",
                 TARGET_SCHEMA_VERSION
         )
@@ -180,7 +180,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/continents/$continentId?lang=en",
+                "/continents/$continentId",
                 "/responses/mapinfo/continentOne.json",
                 TARGET_SCHEMA_VERSION
         )
@@ -233,7 +233,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/continents/$continentId/floors/$floorId?lang=en",
+                "/continents/$continentId/floors/$floorId",
                 "/responses/mapinfo/continentOneFloor6.json",
                 TARGET_SCHEMA_VERSION
         )
@@ -292,7 +292,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/continents/$continentId/floors/$floorId/regions/$regionId?lang=en",
+                "/continents/$continentId/floors/$floorId/regions/$regionId",
                 "/responses/mapinfo/continentOneFloor6Region1.json",
                 TARGET_SCHEMA_VERSION
         )
@@ -364,7 +364,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/maps?ids=${ids.join(",")}&lang=en",
+                "/maps?ids=${ids.join(",")}",
                 "/responses/mapinfo/mapsMultiple.json",
                 TARGET_SCHEMA_VERSION
         )
@@ -384,7 +384,7 @@ class MapInfoClientSpec extends WiremockTest {
 
         and: "External API is stubbed"
         stubResponseWithSchema(
-                "/maps/$mapId?lang=en",
+                "/maps/$mapId",
                 "/responses/mapinfo/map26.json",
                 TARGET_SCHEMA_VERSION
         )

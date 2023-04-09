@@ -27,11 +27,14 @@ class FinishersClientSpec extends WiremockTest {
         given: "Finisher ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/finishers?ids=1,2&lang=en", "/responses/items/finishers.json")
+        stubResponseWithLanguage("/finishers?ids=1,2", "/responses/items/finishers.json", lang)
 
         when: "Requesting finishers"
-        def finishers = finishersClient.getFinishers(ids, "en")
+        def finishers = finishersClient.getFinishers(ids, lang)
 
         then: "Retrieved finishers matches expected"
         finishers.size() == 2

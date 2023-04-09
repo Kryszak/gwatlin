@@ -15,7 +15,7 @@ internal class RecipesClient : BaseHttpClient() {
 
     fun getRecipes(ids: List<Int>, language: String): List<Recipe> {
         val params = ids.joinToString(",")
-        return getRequest("$recipesEndpoint?ids=$params&lang=$language")
+        return getRequest("$recipesEndpoint?ids=$params", language)
     }
 
     fun searchRecipesWithInput(itemId: Int): List<Int> {

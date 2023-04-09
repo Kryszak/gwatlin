@@ -4,8 +4,9 @@ import com.kryszak.gwatlin.api.mapinfo.model.*
 import com.kryszak.gwatlin.api.mapinfo.model.Map
 import com.kryszak.gwatlin.http.BaseHttpClient
 
-internal class MapInfoClient : BaseHttpClient(
-    "2022-03-23T19:00:00.000Z"
+internal class MapInfoClient(defaultLanguage: String) : BaseHttpClient(
+    "2022-03-23T19:00:00.000Z",
+    defaultLanguage
 ) {
 
     private val mapsEndpoint = "maps"
@@ -13,32 +14,32 @@ internal class MapInfoClient : BaseHttpClient(
 
     fun getMaps() = getRequest<List<Int>>(mapsEndpoint)
 
-    fun getMaps(mapdIds: Collection<Int>, lang: String) =
-        handleOneOrMultipleIds<Map>(mapdIds, lang, mapsEndpoint)
+    fun getMaps(mapIds: Collection<Int>, language: String?) =
+        handleOneOrMultipleIds<Map>(mapIds, language, mapsEndpoint)
 
     fun getContinents() = getRequest<List<Int>>(continentsEndpoint)
 
-    fun getContinents(continentIds: Collection<Int>, lang: String) =
-        handleOneOrMultipleIds<Continent>(continentIds, lang, continentsEndpoint)
+    fun getContinents(continentIds: Collection<Int>, language: String?) =
+        handleOneOrMultipleIds<Continent>(continentIds, language, continentsEndpoint)
 
     fun getFloors(continentId: Int) =
         getRequest<List<Int>>("$continentsEndpoint/$continentId/floors")
 
-    fun getFloor(continentId: Int, floorId: Int, lang: String) =
-        getRequest<Floor>("$continentsEndpoint/$continentId/floors/$floorId?lang=$lang")
+    fun getFloor(continentId: Int, floorId: Int, language: String?) =
+        getRequest<Floor>("$continentsEndpoint/$continentId/floors/$floorId", language)
 
     fun getRegions(continentId: Int, floorId: Int) =
         getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions")
 
-    fun getRegion(continentId: Int, floorId: Int, regionId: Int, lang: String) =
-        getRequest<Region>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId?lang=$lang")
+    fun getRegion(continentId: Int, floorId: Int, regionId: Int, language: String?) =
+        getRequest<Region>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId", language)
 
     fun getMaps(continentId: Int, floorId: Int, regionId: Int) =
         getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps")
 
-    fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, lang: String) =
+    fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, language: String?) =
         getRequest<ContinentMap>(
-            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId?lang=$lang"
+            "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId", language
         )
 
     fun getSectors(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
@@ -56,10 +57,10 @@ internal class MapInfoClient : BaseHttpClient(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks"
         )
 
-    private inline fun <reified R : Any> handleOneOrMultipleIds(ids: Collection<Int>, lang: String, endpoint: String) = when {
+    private inline fun <reified R : Any> handleOneOrMultipleIds(ids: Collection<Int>, language: String?, endpoint: String) = when {
         ids.isEmpty() -> emptyList<R>()
-        ids.size == 1 -> listOf(getRequest("$endpoint/${ids.first()}?lang=$lang"))
-        else -> getRequest("$endpoint?ids=${ids.joinToString(",")}&lang=$lang")
+        ids.size == 1 -> listOf(getRequest("$endpoint/${ids.first()}", language))
+        else -> getRequest("$endpoint?ids=${ids.joinToString(",")}", language)
     }
 
 }

@@ -13,6 +13,6 @@ internal class FinishersClient : BaseHttpClient() {
 
     fun getFinishers(ids: List<Int>, language: String): List<Finisher> {
         val params = ids.joinToString(",")
-        return getRequest("$finisherEndpoint?ids=$params&lang=$language")
+        return getRequest("$finisherEndpoint?ids=$params", language)
     }
 }

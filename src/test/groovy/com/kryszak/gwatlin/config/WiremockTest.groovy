@@ -27,6 +27,23 @@ class WiremockTest extends Specification {
         )
     }
 
+    protected def stubResponseWithLanguage(String url, String responseFile, String language) {
+        wireMockRule.stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("Accept-Language", equalTo(language))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
+    protected def stubResponseWithSchemaAndLanguage(String url, String responseFile, String language, String schemaVersion) {
+        wireMockRule.stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("X-Schema-Version", equalTo(schemaVersion))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
     protected def stubResponseWithSchema(String url, String responseFile, String schemaVersion) {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
@@ -46,6 +63,25 @@ class WiremockTest extends Specification {
         wireMockRule.stubFor(
                 get(urlEqualTo(url))
                         .withHeader("Authorization", equalTo("Bearer $auth"))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
+    protected def stubAuthResponseWithLanguage(String url, String responseFile, String language) {
+        wireMockRule.stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("Authorization", equalTo("Bearer $auth"))
+                        .withHeader("Accept-Language", equalTo(language))
+                        .willReturn(okJson(parseResponseText(responseFile)))
+        )
+    }
+
+    protected def stubAuthResponseWithSchemaAndLanguage(String url, String responseFile, String language, String schemaVersion) {
+        wireMockRule.stubFor(
+                get(urlEqualTo(url))
+                        .withHeader("Authorization", equalTo("Bearer $auth"))
+                        .withHeader("Accept-Language", equalTo(language))
+                        .withHeader("X-Schema-Version", equalTo(schemaVersion))
                         .willReturn(okJson(parseResponseText(responseFile)))
         )
     }

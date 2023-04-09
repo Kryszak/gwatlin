@@ -9,11 +9,14 @@ class BackstoryClientSpec extends WiremockTest {
     def backstoryClient = new GWBackstoryClient()
 
     def "Should get backstory answers"() {
-        given: "External api is stubbed"
-        stubResponse("/backstory/answers?ids=all&lang=en", "/responses/story/backstory_answers.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/backstory/answers?ids=all", "/responses/story/backstory_answers.json", lang)
 
         when: "Requesting backstory answers"
-        def answers = backstoryClient.getBackstoryAnswers("en")
+        def answers = backstoryClient.getBackstoryAnswers(lang)
 
         then: "Retrieved answers match expected"
         verifyAll(answers.get(0)) {
@@ -28,11 +31,14 @@ class BackstoryClientSpec extends WiremockTest {
     }
 
     def "Should get backstory questions"() {
-        given: "External api is stubbed"
-        stubResponse("/backstory/questions?ids=all&lang=en", "/responses/story/backstory_questions.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/backstory/questions?ids=all", "/responses/story/backstory_questions.json", lang)
 
         when: "Requesting backstory questions"
-        def questions = backstoryClient.getBackstoryQuestions("en")
+        def questions = backstoryClient.getBackstoryQuestions(lang)
 
         then: "Retrieved questions match expected"
         verifyAll(questions.get(0)) {

@@ -13,6 +13,6 @@ internal class TraitsClient : BaseHttpClient() {
 
     fun getTraits(ids: List<Int>, language: String): List<Trait> {
         val params = ids.joinToString(",")
-        return getRequest("$traitsEndpoint?ids=$params&lang=$language")
+        return getRequest("$traitsEndpoint?ids=$params", language)
     }
 }

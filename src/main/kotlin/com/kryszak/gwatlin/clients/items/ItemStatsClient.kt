@@ -13,6 +13,6 @@ internal class ItemStatsClient : BaseHttpClient() {
 
     fun getItemStats(ids: List<Int>, language: String): List<ItemStats> {
         val params = ids.joinToString(",")
-        return getRequest("$statsEndpoint?ids=$params&lang=$language")
+        return getRequest("$statsEndpoint?ids=$params", language)
     }
 }

@@ -39,8 +39,8 @@ class MasteriesClientSpec extends WiremockTest {
 
         where:
         lang               | language | file              | stub
-        "default language" | "en"     | "mastery.json"    | stubResponse("/masteries/1?lang=en", "/responses/gamemechanics/mastery.json")
-        "French"           | "fr"     | "mastery_fr.json" | stubResponse("/masteries/1?lang=fr", "/responses/gamemechanics/mastery_fr.json")
+        "default language" | "en"     | "mastery.json"    | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery.json", language)
+        "French"           | "fr"     | "mastery_fr.json" | stubResponseWithLanguage("/masteries/1", "/responses/gamemechanics/mastery_fr.json", language)
     }
 
     def "Should throw exception on non existing mastery"() {
@@ -48,7 +48,7 @@ class MasteriesClientSpec extends WiremockTest {
         def id = 40
 
         and: "External api is stubbed"
-        stubNotFoundResponse("/masteries/40?lang=en", "/responses/gamemechanics/mastery_error.json")
+        stubNotFoundResponse("/masteries/40", "/responses/gamemechanics/mastery_error.json")
 
         when: "Retrieving mastery"
         gameMechanicsClient.getMastery(id, "en")
@@ -61,11 +61,14 @@ class MasteriesClientSpec extends WiremockTest {
         given: "Masteries ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/masteries?ids=1,2&lang=en", "/responses/gamemechanics/masteries.json")
+        stubResponseWithLanguage("/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", lang)
 
         when: "Retrieving masteries"
-        def masteries = gameMechanicsClient.getMasteries(ids, "en")
+        def masteries = gameMechanicsClient.getMasteries(ids, lang)
 
         then: "Retrieved masteries match expected"
         verifyAll(masteries.get(0)) {
@@ -87,11 +90,14 @@ class MasteriesClientSpec extends WiremockTest {
     }
 
     def "Should get all masteries"() {
-        given: "External api is stubbed"
-        stubResponse("/masteries?ids=all&lang=en", "/responses/gamemechanics/masteries_all.json")
+        given: "language"
+        def lang = "en"
+
+        and: "External api is stubbed"
+        stubResponseWithLanguage("/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", lang)
 
         when: "Retrieving all masteries"
-        def masteries = gameMechanicsClient.getAllMasteries("en")
+        def masteries = gameMechanicsClient.getAllMasteries(lang)
 
         then: "Retrieved list matches expected"
         masteries.size() == 17

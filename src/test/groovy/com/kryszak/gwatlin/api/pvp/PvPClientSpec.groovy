@@ -29,11 +29,14 @@ class PvPClientSpec extends WiremockTest {
         given: "Pvp rank ids"
         def ids = [1, 2]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/pvp/ranks?ids=1,2&lang=en", "/responses/pvp/ranks.json")
+        stubResponseWithLanguage("/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", lang)
 
         when: "Requesting pvp ranks"
-        def ranks = pvpClient.getPvpRanks(ids, "en")
+        def ranks = pvpClient.getPvpRanks(ids, lang)
 
         then: "Retrieved list matches expected"
         ranks == parseRanks()
@@ -70,12 +73,15 @@ class PvPClientSpec extends WiremockTest {
         given: "Season ids"
         def ids = ["44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72"]
 
+        and: "language"
+        def lang = "en"
+
         and: "External api is stubbed"
-        stubResponse("/pvp/seasons?ids=44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72&lang=en",
-                "/responses/pvp/seasons.json")
+        stubResponseWithLanguage("/pvp/seasons?ids=44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
+                "/responses/pvp/seasons.json", lang)
 
         when: "Requesting pvp seasons"
-        def seasons = pvpClient.getPvpSeasons(ids, "en")
+        def seasons = pvpClient.getPvpSeasons(ids, lang)
 
         then: "Retrieved list matches expected"
         seasons == parseSeasons()

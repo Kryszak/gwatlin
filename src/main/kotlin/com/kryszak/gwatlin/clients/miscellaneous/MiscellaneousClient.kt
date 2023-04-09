@@ -43,34 +43,34 @@ internal class MiscellaneousClient : BaseHttpClient() {
     }
 
     fun getColors(language: String): List<DyeColor> {
-        return getRequest("$colorsEndpoint?ids=all&lang=$language")
+        return getRequest("$colorsEndpoint?ids=all", language)
     }
 
     fun getCurrencies(language: String): List<Currency> {
-        return getRequest("$currenciesEndpoint?ids=all&lang=$language")
+        return getRequest("$currenciesEndpoint?ids=all", language)
     }
 
     fun getDungeons(language: String): List<Dungeon> {
-        return getRequest("$dungeonsEndpoint?ids=all&lang=$language")
+        return getRequest("$dungeonsEndpoint?ids=all", language)
     }
 
     fun getMinis(language: String): List<Mini> {
-        return getRequest("$minisEndpoint?ids=all&lang=$language")
+        return getRequest("$minisEndpoint?ids=all", language)
     }
 
     fun getNovelties(language: String): List<Novelty> {
-        return getRequest("$noveltiesEndpoint?ids=all&lang=$language")
+        return getRequest("$noveltiesEndpoint?ids=all", language)
     }
 
     fun getRaids(language: String): List<Raid> {
-        return getRequest("$raidsEndpoint?ids=all&lang=$language")
+        return getRequest("$raidsEndpoint?ids=all", language)
     }
 
     fun getTitles(language: String): List<Title> {
-        return getRequest("$titlesEndpoint?ids=all&lang=$language")
+        return getRequest("$titlesEndpoint?ids=all", language)
     }
 
     fun getWorlds(language: String): List<World> {
-        return getRequest("$worldsEndpoint?ids=all&lang=$language")
+        return getRequest("$worldsEndpoint?ids=all", language)
     }
 }

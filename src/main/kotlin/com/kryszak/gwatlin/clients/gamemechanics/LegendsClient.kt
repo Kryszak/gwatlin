@@ -13,6 +13,6 @@ internal class LegendsClient : BaseHttpClient() {
 
     fun getLegends(ids: List<String>, language: String): List<Legend> {
         val params = ids.joinToString(",")
-        return getRequest("$legendsEndpoint?ids=$params&lang=$language")
+        return getRequest("$legendsEndpoint?ids=$params", language)
     }
 }
