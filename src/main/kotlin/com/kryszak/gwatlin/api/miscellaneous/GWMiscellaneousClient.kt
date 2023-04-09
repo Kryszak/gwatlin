@@ -39,6 +39,7 @@ class GWMiscellaneousClient {
     /**
      * Returns all dye colors in the game, including localized names and their color component information
      */
+    @JvmOverloads
     fun getDyeColors(language: ApiLanguage? = null): List<DyeColor> {
         return miscellaneousClient.getColors(language)
     }
@@ -46,6 +47,7 @@ class GWMiscellaneousClient {
     /**
      * Returns a list of the currencies contained in the account wallet
      */
+    @JvmOverloads
     fun getCurrencies(language: ApiLanguage? = null): List<Currency> {
         return miscellaneousClient.getCurrencies(language)
     }
@@ -53,6 +55,7 @@ class GWMiscellaneousClient {
     /**
      * Returns details about each dungeon and it's associated paths
      */
+    @JvmOverloads
     fun getDungeons(language: ApiLanguage? = null): List<Dungeon> {
         return miscellaneousClient.getDungeons(language)
     }
@@ -60,6 +63,7 @@ class GWMiscellaneousClient {
     /**
      * Returns all minis in the game
      */
+    @JvmOverloads
     fun getMinis(language: ApiLanguage? = null): List<Mini> {
         return miscellaneousClient.getMinis(language)
     }
@@ -67,6 +71,7 @@ class GWMiscellaneousClient {
     /**
      * Returns information about novelties that are available in-game
      */
+    @JvmOverloads
     fun getNovelties(language: ApiLanguage? = null): List<Novelty> {
         return miscellaneousClient.getNovelties(language)
     }
@@ -74,6 +79,7 @@ class GWMiscellaneousClient {
     /**
      * Resource returns details about each raid and it's associated wings
      */
+    @JvmOverloads
     fun getRaids(language: ApiLanguage? = null): List<Raid> {
         return miscellaneousClient.getRaids(language)
     }
@@ -81,6 +87,7 @@ class GWMiscellaneousClient {
     /**
      * Returns information about the titles that are in the game
      */
+    @JvmOverloads
     fun getTitles(language: ApiLanguage? = null): List<Title> {
         return miscellaneousClient.getTitles(language)
     }
@@ -88,6 +95,7 @@ class GWMiscellaneousClient {
     /**
      * Returns information about the available worlds, or servers
      */
+    @JvmOverloads
     fun getWorlds(language: ApiLanguage? = null): List<World> {
         return miscellaneousClient.getWorlds(language)
     }

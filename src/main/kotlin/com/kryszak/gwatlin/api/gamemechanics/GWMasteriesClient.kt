@@ -26,6 +26,7 @@ class GWMasteriesClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
      */
+    @JvmOverloads
     fun getMastery(id: Int, language: ApiLanguage? = null): Mastery {
         return masteriesClient.getMastery(id, language)
     }
@@ -36,6 +37,7 @@ class GWMasteriesClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
      */
+    @JvmOverloads
     fun getMasteries(ids: List<Int>, language: ApiLanguage? = null): List<Mastery> {
         return masteriesClient.getMasteries(ids, language)
     }
@@ -45,6 +47,7 @@ class GWMasteriesClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
      */
+    @JvmOverloads
     fun getAllMasteries(language: ApiLanguage? = null): List<Mastery> {
         return masteriesClient.getAllMasteries(language)
     }

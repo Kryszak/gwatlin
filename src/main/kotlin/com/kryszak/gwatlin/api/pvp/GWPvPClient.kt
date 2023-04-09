@@ -26,6 +26,7 @@ class GWPvPClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
      */
+    @JvmOverloads
     fun getPvpRanks(ids: List<Int>, language: ApiLanguage? = null): List<PvpRank> {
         return pvpClient.getPvpRanks(ids, language)
     }
@@ -43,6 +44,7 @@ class GWPvPClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
      */
+    @JvmOverloads
     fun getPvpSeasons(ids: List<String>, language: ApiLanguage? = null): List<PvpSeason> {
         return pvpClient.getPvpSeasons(ids, language)
     }

@@ -25,6 +25,7 @@ class GWFinishersClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.finisher.Finisher
      */
+    @JvmOverloads
     fun getFinishers(ids: List<Int>, language: ApiLanguage? = null): List<Finisher> {
         return finishersClient.getFinishers(ids, language)
     }

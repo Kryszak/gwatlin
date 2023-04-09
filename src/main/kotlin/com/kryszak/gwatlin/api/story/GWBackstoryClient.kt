@@ -16,6 +16,7 @@ class GWBackstoryClient {
     /**
      * Returns information about the Biography answers that are in the game
      */
+    @JvmOverloads
     fun getBackstoryAnswers(language: ApiLanguage? = null): List<BackstoryAnswer> {
         return backstoryClient.getBackstoryAnswers(language)
     }
@@ -23,6 +24,7 @@ class GWBackstoryClient {
     /**
      * Returns information about the Biography questions that are in the game
      */
+    @JvmOverloads
     fun getBackstoryQuestions(language: ApiLanguage? = null): List<BackstoryQuestion> {
         return backstoryClient.getBackstoryQuestions(language)
     }

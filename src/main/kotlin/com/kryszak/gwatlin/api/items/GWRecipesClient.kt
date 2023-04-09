@@ -25,6 +25,7 @@ class GWRecipesClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.recipe.Recipe
      */
+    @JvmOverloads
     fun getRecipes(ids: List<Int>, language: ApiLanguage? = null): List<Recipe> {
         return recipesClient.getRecipes(ids, language)
     }

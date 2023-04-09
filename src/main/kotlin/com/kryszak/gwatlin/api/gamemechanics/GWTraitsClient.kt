@@ -25,6 +25,7 @@ class GWTraitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
      */
+    @JvmOverloads
     fun getTraits(ids: List<Int>, language: ApiLanguage? = null): List<Trait> {
         return traitsClient.getTraits(ids, language)
     }

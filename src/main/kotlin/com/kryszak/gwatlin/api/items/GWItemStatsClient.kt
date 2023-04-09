@@ -25,6 +25,7 @@ class GWItemStatsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.stats.ItemStats
      */
+    @JvmOverloads
     fun getItemStats(ids: List<Int>, language: ApiLanguage? = null): List<ItemStats> {
         return itemStatsClient.getItemStats(ids, language)
     }

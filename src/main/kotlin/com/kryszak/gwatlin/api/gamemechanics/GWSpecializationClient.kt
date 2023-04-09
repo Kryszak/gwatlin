@@ -25,6 +25,7 @@ class GWSpecializationClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
      */
+    @JvmOverloads
     fun getSpecialization(id: Int, language: ApiLanguage? = null): Specialization {
         return specializationClient.getSpecialization(id, language)
     }

@@ -16,6 +16,7 @@ class GWStoryClient {
     /**
      * Returns information about the Story Journal stories; including the personal story and Living World
      */
+    @JvmOverloads
     fun getStories(language: ApiLanguage? = null): List<Story> {
         return storyClient.getStories(language)
     }
@@ -23,6 +24,7 @@ class GWStoryClient {
     /**
      * Returns information about the Story Journal story seasons; including the personal story and Living World
      */
+    @JvmOverloads
     fun getStorySeasons(language: ApiLanguage? = null): List<StorySeason> {
         return storyClient.getStorySeasons(language)
     }

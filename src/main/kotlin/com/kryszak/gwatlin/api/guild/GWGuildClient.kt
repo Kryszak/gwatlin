@@ -69,6 +69,7 @@ class GWGuildClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
      */
+    @JvmOverloads
     fun getGuildPermissions(ids: List<String>, language: ApiLanguage? = null): List<GuildPermission> {
         return guildClient.getGuildPermissions(ids, language)
     }
@@ -94,6 +95,7 @@ class GWGuildClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
      */
+    @JvmOverloads
     fun getGuildUpgrades(ids: List<Int>, language: ApiLanguage? = null): List<GuildUpgrade> {
         return guildClient.getGuildUpgrades(ids, language)
     }

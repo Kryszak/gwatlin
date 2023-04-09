@@ -29,6 +29,7 @@ class GWWvwClient {
     /**
      * Returns information about the available abilities in the World versus World game mode
      */
+    @JvmOverloads
     fun getAbilities(ids: List<Int>, language: ApiLanguage? = null): List<WvwAbility> {
         return wvwClient.getAbilities(ids, language)
     }
@@ -78,6 +79,7 @@ class GWWvwClient {
     /**
      * Returns details about World vs. World objectives such as camps, towers, and keeps
      */
+    @JvmOverloads
     fun getObjectives(ids: List<String>, language: ApiLanguage? = null): List<WvwObjective> {
         return wvwClient.getObjectives(ids, language)
     }
@@ -92,6 +94,7 @@ class GWWvwClient {
     /**
      * Returns information about the available ranks in the World versus World game mode
      */
+    @JvmOverloads
     fun getRanks(ids: List<Int>, language: ApiLanguage? = null): List<WvwRank> {
         return wvwClient.getRanks(ids, language)
     }
@@ -106,6 +109,7 @@ class GWWvwClient {
     /**
      * Returns details about available World vs. World upgrades for objectives such as camps, towers, and keeps
      */
+    @JvmOverloads
     fun getUpgrades(ids: List<Int>, language: ApiLanguage? = null): List<WvwUpgrade> {
         return wvwClient.getUpgrades(ids, language)
     }

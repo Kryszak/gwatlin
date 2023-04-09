@@ -25,6 +25,7 @@ class GWMaterialsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.material.Material
      */
+    @JvmOverloads
     fun getMaterials(ids: List<Int>, language: ApiLanguage? = null): List<Material> {
         return materialsClient.getMaterials(ids, language)
     }

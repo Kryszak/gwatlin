@@ -26,6 +26,7 @@ class GWSkillsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
      */
+    @JvmOverloads
     fun getSkills(ids: List<Int>, language: ApiLanguage? = null): List<Skill> {
         return skillsClient.getSkills(ids, language)
     }

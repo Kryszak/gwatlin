@@ -25,6 +25,7 @@ class GWPvpAmuletsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.pvp.amulet.PvpAmulet
      */
+    @JvmOverloads
     fun getPvpAmulets(ids: List<Int>, language: ApiLanguage? = null): List<PvpAmulet> {
         return pvpAmuletsClient.getPvpAmulets(ids, language)
     }

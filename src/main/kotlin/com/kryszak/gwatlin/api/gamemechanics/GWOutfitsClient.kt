@@ -26,6 +26,7 @@ class GWOutfitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
      */
+    @JvmOverloads
     fun getOutfits(ids: List<Int>, language: ApiLanguage? = null): List<Outfit> {
         return outfitsClient.getOutfits(ids, language)
     }
@@ -35,6 +36,7 @@ class GWOutfitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
      */
+    @JvmOverloads
     fun getAllOutfits(language: ApiLanguage? = null): List<Outfit> {
         return outfitsClient.getAllOutfits(language)
     }
