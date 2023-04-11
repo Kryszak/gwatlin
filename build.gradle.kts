@@ -5,14 +5,13 @@ plugins {
     kotlin("jvm") version "1.8.20"
 }
 
-val kotlin_version = "1.8.20"
-val spock_version = "2.3-groovy-4.0"
-val groovy_version = "4.0.11"
 val fuel_version = "2.3.1"
-val wiremock_version = "2.35.0"
 val gson_version = "2.10.1"
 val logging_version = "3.0.5"
 val logback_version = "1.4.6"
+val spock_version = "2.3-groovy-4.0"
+val groovy_version = "4.0.11"
+val wiremock_version = "2.35.0"
 
 project.group = "com.kryszak"
 project.version = "1.5"
@@ -71,13 +70,14 @@ repositories {
 }
 
 dependencies {
+    // http dependencies
     implementation("com.github.kittinunf.fuel:fuel:$fuel_version")
     implementation("com.github.kittinunf.fuel:fuel-gson:$fuel_version")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
     implementation("com.google.code.gson:gson:$gson_version")
+    // logging
     implementation("io.github.microutils:kotlin-logging-jvm:$logging_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("ch.qos.logback:logback-core:$logback_version")
+    // testing
     testImplementation("org.spockframework:spock-core:$spock_version")
     testImplementation("org.apache.groovy:groovy-all:$groovy_version")
     testImplementation("com.github.tomakehurst:wiremock-jre8:$wiremock_version")
