@@ -52,4 +52,4 @@ println(tokenInfo)
 // Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)
 ```
 ## Release
-To release new version, increment `project.version` property in [build file](./build.gradle). Next, run [release](./release_version.sh) script to create new tag and push it to GitHub or create and push new tag manually. New package version will be deployed to Maven repository by GitHub Actions.
+To release new version, increment `project.version` property in [build file](./build.gradle.kts). Next, run [release](./release_version.sh) script to create new tag and push it to GitHub or create and push new tag manually. New package version will be deployed to Maven repository by GitHub Actions.
