@@ -9,23 +9,20 @@ import com.google.gson.GsonBuilder
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
-import com.kryszak.gwatlin.http.exception.RetrieveError
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
-import com.kryszak.gwatlin.serializers.RectangleSerializer
+import com.kryszak.gwatlin.http.exception.RetrieveError
 import com.kryszak.gwatlin.serializers.DimensionsSerializer
 import com.kryszak.gwatlin.serializers.PairSerializer
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory.getLogger
+import com.kryszak.gwatlin.serializers.RectangleSerializer
+import mu.KotlinLogging
 
 internal open class BaseHttpClient(
     private val schemaVersion: String? = null,
     private val defaultLanguage: String = "en"
 ) {
 
-    companion object {
-        val log: Logger = getLogger(BaseHttpClient::class.java.simpleName)
-    }
+    private val log = KotlinLogging.logger {}
 
     protected val logMessage = "Requested url: %s"
 

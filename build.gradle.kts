@@ -11,11 +11,11 @@ val groovy_version = "4.0.11"
 val fuel_version = "2.3.1"
 val wiremock_version = "2.35.0"
 val gson_version = "2.10.1"
-val slf4j_version = "2.0.7"
+val logging_version = "2.0.11"
 val logback_version = "1.4.6"
 
-group = "com.kryszak"
-version = "1.5"
+project.group = "com.kryszak"
+project.version = "1.5"
 
 sourceSets {
     getByName("main").apply {
@@ -75,7 +75,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel-gson:$fuel_version")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
     implementation("com.google.code.gson:gson:$gson_version")
-    implementation("org.slf4j:slf4j-api:$slf4j_version")
+    implementation("io.github.microutils:kotlin-logging-jvm:$logging_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("ch.qos.logback:logback-core:$logback_version")
     testImplementation("org.spockframework:spock-core:$spock_version")
