@@ -11,7 +11,7 @@ val groovy_version = "4.0.11"
 val fuel_version = "2.3.1"
 val wiremock_version = "2.35.0"
 val gson_version = "2.10.1"
-val logging_version = "2.0.11"
+val logging_version = "3.0.5"
 val logback_version = "1.4.6"
 
 project.group = "com.kryszak"
