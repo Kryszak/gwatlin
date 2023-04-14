@@ -90,9 +90,4 @@ class ProfessionsClientSpec extends WiremockTest {
         then: "Exception is thrown"
         thrown(ApiRequestException)
     }
-
-    private List<Profession> parseProfessions(String file) {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"), new TypeToken<List<Profession>>() {
-        }.getType())
-    }
 }

@@ -2,10 +2,6 @@ package com.kryszak.gwatlin.http
 
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.extensions.authentication
-import com.github.kittinunf.fuel.gson.responseObject
-import com.github.kittinunf.fuel.httpGet
-import com.kryszak.gwatlin.http.exception.RetrieveError
-import com.kryszak.gwatlin.http.exception.ErrorResponse
 
 internal open class AuthenticatedHttpClient(
     val apiKey: String,
