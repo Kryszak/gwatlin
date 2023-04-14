@@ -5,14 +5,11 @@ import com.kryszak.gwatlin.clients.mapinfo.MapInfoClient
 
 /**
  * Client for characters endpoint. Includes the /maps and /continents endpoints
- * @param defaultLanguage the language to be used if no other language is specified when calling a specific method
  * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
-class GWMapInfoClient(
-    defaultLanguage: ApiLanguage? = null
-) {
+class GWMapInfoClient {
 
-    private val mapInfoClient = MapInfoClient(defaultLanguage)
+    private val mapInfoClient = MapInfoClient()
 
     /**
      * Returns a list of map IDs from the /maps endpoint

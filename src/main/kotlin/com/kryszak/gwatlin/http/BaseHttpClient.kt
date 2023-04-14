@@ -19,8 +19,7 @@ import com.kryszak.gwatlin.serializers.RectangleSerializer
 import mu.KotlinLogging
 
 internal open class BaseHttpClient(
-    private val schemaVersion: String? = null,
-    private val defaultLanguage: ApiLanguage? = null
+    private val schemaVersion: String? = null
 ) {
 
     private val log = KotlinLogging.logger {}
@@ -55,13 +54,8 @@ internal open class BaseHttpClient(
     protected fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
 
-        // Language priority list:
-        // 1. Language specified for this request, if any
-        // 2. Set default language for this client, if any
-        // If one of the mentioned languages is not null, the Accept-Language header gets set
-        arrayOf(language, defaultLanguage)
-            .firstOrNull { it != null }
-            ?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
+        // Only send the Accept-Language header when a specific language has been requested
+        language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
 
 

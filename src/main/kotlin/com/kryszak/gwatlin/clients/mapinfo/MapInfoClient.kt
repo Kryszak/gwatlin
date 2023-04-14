@@ -5,9 +5,8 @@ import com.kryszak.gwatlin.api.mapinfo.model.*
 import com.kryszak.gwatlin.api.mapinfo.model.Map
 import com.kryszak.gwatlin.http.BaseHttpClient
 
-internal class MapInfoClient(defaultLanguage: ApiLanguage?) : BaseHttpClient(
-    "2022-03-23T19:00:00.000Z",
-    defaultLanguage
+internal class MapInfoClient : BaseHttpClient(
+    "2022-03-23T19:00:00.000Z"
 ) {
 
     private val mapsEndpoint = "maps"
