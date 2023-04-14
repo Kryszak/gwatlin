@@ -20,7 +20,7 @@ class GWMapInfoClient {
      * Returns a list of [com.kryszak.gwatlin.api.mapinfo.model.Map]
      * instances corresponding to the specified IDs from the /maps endpoint
      * @param mapIds a collection of map IDs
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads
@@ -30,7 +30,7 @@ class GWMapInfoClient {
      * Returns a single [com.kryszak.gwatlin.api.mapinfo.model.Map]
      * instance corresponding to the specidfed ID from the /maps endpoint
      * @param mapId ID of the map to be fetched
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads
@@ -44,7 +44,7 @@ class GWMapInfoClient {
     /**
      * Returns the continent corresponding to the specified ID, or null if no such continent exists
      * @param continentId ID of the continent to be fetched
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads
@@ -62,7 +62,7 @@ class GWMapInfoClient {
      * Returns the floor corresponding to the specified continentId and floorID
      * @param continentId ID of the continent
      * @param floorId ID of the floor on the continent
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads
@@ -82,7 +82,7 @@ class GWMapInfoClient {
      * @param continentId ID of the continent
      * @param floorId ID of the floor on the continent
      * @param regionId ID of the region on the floor
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads
@@ -106,7 +106,7 @@ class GWMapInfoClient {
      * @param floorId ID of the floor on the continent
      * @param regionId ID of the region on the floor
      * @param mapId ID of the map in the region
-     * @param language one of the languages defined in [ApiLanguage], or null to use the default language specified
+     * @param language one of the languages defined in [ApiLanguage]
      * when creating this client, if any
      */
     @JvmOverloads

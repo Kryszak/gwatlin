@@ -53,8 +53,6 @@ internal open class BaseHttpClient(
 
     protected fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
-
-        // Only send the Accept-Language header when a specific language has been requested
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
 
