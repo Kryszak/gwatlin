@@ -6,6 +6,7 @@ import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import com.google.gson.GsonBuilder
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
@@ -18,8 +19,7 @@ import com.kryszak.gwatlin.serializers.RectangleSerializer
 import mu.KotlinLogging
 
 internal open class BaseHttpClient(
-    private val schemaVersion: String? = null,
-    private val defaultLanguage: String = "en"
+    private val schemaVersion: String? = null
 ) {
 
     private val log = KotlinLogging.logger {}
@@ -40,7 +40,7 @@ internal open class BaseHttpClient(
         baseUrl = httpConfig.baseUrl
     }
 
-    protected inline fun <reified T : Any> getRequest(uri: String, language: String? = null, configBlock: Request.() -> Unit = {}): T {
+    protected inline fun <reified T : Any> getRequest(uri: String, language: ApiLanguage? = null, configBlock: Request.() -> Unit = {}): T {
         val (_, response, result) = "$baseUrl/$uri"
                 .httpGet()
                 .also { addDefaultHeaders(it, language) }
@@ -51,10 +51,11 @@ internal open class BaseHttpClient(
         return processResult(result, ErrorResponse(response, RetrieveError::class.java))
     }
 
-    protected fun addDefaultHeaders(request: Request, language: String?) {
+    protected fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
-        request.appendHeader(Headers.ACCEPT_LANGUAGE to (language ?: defaultLanguage))
+        language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
+
 
     protected fun encodeParam(param: String) = param.replace(" ", "%20")
 

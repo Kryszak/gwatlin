@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import com.kryszak.gwatlin.clients.gamemechanics.TraitsClient
 
@@ -24,7 +25,8 @@ class GWTraitsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
      */
-    fun getTraits(ids: List<Int>, language: String = "en"): List<Trait> {
+    @JvmOverloads
+    fun getTraits(ids: List<Int>, language: ApiLanguage? = null): List<Trait> {
         return traitsClient.getTraits(ids, language)
     }
 }

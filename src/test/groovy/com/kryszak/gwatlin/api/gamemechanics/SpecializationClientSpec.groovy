@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
@@ -25,7 +26,7 @@ class SpecializationClientSpec extends WiremockTest {
         def id = 1
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/specializations/1", "/responses/gamemechanics/specialization.json", lang)
@@ -54,7 +55,7 @@ class SpecializationClientSpec extends WiremockTest {
         stubNotFoundResponse("/specializations/100", "/responses/gamemechanics/specialization_error.json")
 
         when: "Requesting non existing specialization"
-        specializationClient.getSpecialization(id, "en")
+        specializationClient.getSpecialization(id)
 
         then: "Exception is thrown"
         thrown(ApiRequestException)

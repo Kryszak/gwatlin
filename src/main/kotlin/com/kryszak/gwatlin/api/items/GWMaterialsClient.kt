@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.material.Material
 import com.kryszak.gwatlin.clients.items.MaterialsClient
 
@@ -24,7 +25,8 @@ class GWMaterialsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.material.Material
      */
-    fun getMaterials(ids: List<Int>, language: String = "en"): List<Material> {
+    @JvmOverloads
+    fun getMaterials(ids: List<Int>, language: ApiLanguage? = null): List<Material> {
         return materialsClient.getMaterials(ids, language)
     }
 }

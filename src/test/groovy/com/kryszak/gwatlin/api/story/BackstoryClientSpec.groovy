@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.story
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -10,7 +11,7 @@ class BackstoryClientSpec extends WiremockTest {
 
     def "Should get backstory answers"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/backstory/answers?ids=all", "/responses/story/backstory_answers.json", lang)
@@ -32,7 +33,7 @@ class BackstoryClientSpec extends WiremockTest {
 
     def "Should get backstory questions"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/backstory/questions?ids=all", "/responses/story/backstory_questions.json", lang)

@@ -1,6 +1,7 @@
 package com.kryszak.gwatlin.api.guild
 
 import com.google.gson.reflect.TypeToken
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
@@ -116,7 +117,7 @@ class GuildClientSpec extends WiremockTest {
         def ids = ["ClaimableEditOptions", "Admin", "EditAnthem"]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem", "/responses/guild/permissions.json", lang)
@@ -180,7 +181,7 @@ class GuildClientSpec extends WiremockTest {
         def ids = [38, 43]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/guild/upgrades?ids=38,43", "/responses/guild/upgrades.json", lang)

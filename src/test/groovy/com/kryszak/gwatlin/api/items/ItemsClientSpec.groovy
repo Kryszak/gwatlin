@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.item.ItemRarity
 import com.kryszak.gwatlin.api.items.model.item.ItemType
 import com.kryszak.gwatlin.config.WiremockTest
@@ -29,7 +30,7 @@ class ItemsClientSpec extends WiremockTest {
         def id = 28445
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/items?ids=28445", "/responses/items/item.json", lang)

@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -25,7 +25,7 @@ class PetsClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/pets?ids=1,2", "/responses/gamemechanics/pets.json", lang)
@@ -47,7 +47,7 @@ class PetsClientSpec extends WiremockTest {
 
     def "Should get all pets"() {
         given: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/pets?ids=all", "/responses/gamemechanics/pets_all.json", lang)

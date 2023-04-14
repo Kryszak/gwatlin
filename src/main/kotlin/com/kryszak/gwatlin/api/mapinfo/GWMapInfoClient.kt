@@ -1,17 +1,15 @@
 package com.kryszak.gwatlin.api.mapinfo
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.clients.mapinfo.MapInfoClient
 
 /**
  * Client for characters endpoint. Includes the /maps and /continents endpoints
- * @param defaultLanguage the language to be used if no other language is specified when calling a specific method
  * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
-class GWMapInfoClient(
-    defaultLanguage: String = "en"
-) {
+class GWMapInfoClient {
 
-    private val mapInfoClient = MapInfoClient(defaultLanguage)
+    private val mapInfoClient = MapInfoClient()
 
     /**
      * Returns a list of map IDs from the /maps endpoint
@@ -22,19 +20,21 @@ class GWMapInfoClient(
      * Returns a list of [com.kryszak.gwatlin.api.mapinfo.model.Map]
      * instances corresponding to the specified IDs from the /maps endpoint
      * @param mapIds a collection of map IDs
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getMaps(mapIds: Collection<Int>, language: String? = null) = mapInfoClient.getMaps(mapIds, language)
+    fun getMaps(mapIds: Collection<Int>, language: ApiLanguage? = null) = mapInfoClient.getMaps(mapIds, language)
 
     /**
      * Returns a single [com.kryszak.gwatlin.api.mapinfo.model.Map]
      * instance corresponding to the specidfed ID from the /maps endpoint
      * @param mapId ID of the map to be fetched
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getMap(mapId: Int, language: String? = null) = getMaps(listOf(mapId), language).firstOrNull()
+    fun getMap(mapId: Int, language: ApiLanguage? = null) = getMaps(listOf(mapId), language).firstOrNull()
 
     /**
      * Returns a list of continent IDs
@@ -44,10 +44,11 @@ class GWMapInfoClient(
     /**
      * Returns the continent corresponding to the specified ID, or null if no such continent exists
      * @param continentId ID of the continent to be fetched
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getContinent(continentId: Int, language: String? = null) =
+    fun getContinent(continentId: Int, language: ApiLanguage? = null) =
         mapInfoClient.getContinents(listOf(continentId), language).firstOrNull()
 
     /**
@@ -61,10 +62,11 @@ class GWMapInfoClient(
      * Returns the floor corresponding to the specified continentId and floorID
      * @param continentId ID of the continent
      * @param floorId ID of the floor on the continent
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getFloor(continentId: Int, floorId: Int, language: String? = null) =
+    fun getFloor(continentId: Int, floorId: Int, language: ApiLanguage? = null) =
         mapInfoClient.getFloor(continentId, floorId, language)
 
     /**
@@ -80,10 +82,11 @@ class GWMapInfoClient(
      * @param continentId ID of the continent
      * @param floorId ID of the floor on the continent
      * @param regionId ID of the region on the floor
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getRegion(continentId: Int, floorId: Int, regionId: Int, language: String? = null) =
+    fun getRegion(continentId: Int, floorId: Int, regionId: Int, language: ApiLanguage? = null) =
         mapInfoClient.getRegion(continentId, floorId, regionId, language)
 
     /**
@@ -103,10 +106,11 @@ class GWMapInfoClient(
      * @param floorId ID of the floor on the continent
      * @param regionId ID of the region on the floor
      * @param mapId ID of the map in the region
-     * @param language an ISO 639-1 language code, defaults to the language specified when constructing this instance
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
      */
     @JvmOverloads
-    fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, language: String? = null) =
+    fun getMap(continentId: Int, floorId: Int, regionId: Int, mapId: Int, language: ApiLanguage? = null) =
         mapInfoClient.getMap(continentId, floorId, regionId, mapId, language)
 
     /**

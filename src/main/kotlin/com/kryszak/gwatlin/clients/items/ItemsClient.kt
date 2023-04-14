@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.item.Item
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,7 +12,7 @@ internal class ItemsClient : BaseHttpClient() {
         return getRequest(itemEndpoint)
     }
 
-    fun getItems(ids: List<Int>, language: String): List<Item> {
+    fun getItems(ids: List<Int>, language: ApiLanguage?): List<Item> {
         val params = ids.joinToString(",")
         return getRequest("$itemEndpoint?ids=$params", language)
     }

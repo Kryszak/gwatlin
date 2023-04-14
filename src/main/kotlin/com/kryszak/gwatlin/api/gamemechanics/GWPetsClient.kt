@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
 import com.kryszak.gwatlin.clients.gamemechanics.PetsClient
 
@@ -25,7 +26,8 @@ class GWPetsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
-    fun getPets(ids: List<Int>, language: String = "en"): List<Pet> {
+    @JvmOverloads
+    fun getPets(ids: List<Int>, language: ApiLanguage? = null): List<Pet> {
         return petsClient.getPets(ids, language)
     }
 
@@ -34,7 +36,8 @@ class GWPetsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
-    fun getAllPets(language: String = "en"): List<Pet> {
+    @JvmOverloads
+    fun getAllPets(language: ApiLanguage? = null): List<Pet> {
         return petsClient.getAllPets(language)
     }
 }

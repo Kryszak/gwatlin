@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.recipe.Recipe
 import com.kryszak.gwatlin.http.BaseHttpClient
 
@@ -13,7 +14,7 @@ internal class RecipesClient : BaseHttpClient() {
         return getRequest(recipesEndpoint)
     }
 
-    fun getRecipes(ids: List<Int>, language: String): List<Recipe> {
+    fun getRecipes(ids: List<Int>, language: ApiLanguage?): List<Recipe> {
         val params = ids.joinToString(",")
         return getRequest("$recipesEndpoint?ids=$params", language)
     }

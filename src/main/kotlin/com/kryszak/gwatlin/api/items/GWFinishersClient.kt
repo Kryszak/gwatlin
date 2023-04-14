@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.finisher.Finisher
 import com.kryszak.gwatlin.clients.items.FinishersClient
 
@@ -24,7 +25,8 @@ class GWFinishersClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.items.model.finisher.Finisher
      */
-    fun getFinishers(ids: List<Int>, language: String = "en"): List<Finisher> {
+    @JvmOverloads
+    fun getFinishers(ids: List<Int>, language: ApiLanguage? = null): List<Finisher> {
         return finishersClient.getFinishers(ids, language)
     }
 }

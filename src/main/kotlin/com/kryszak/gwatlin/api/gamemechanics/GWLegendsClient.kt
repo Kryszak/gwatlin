@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.legend.Legend
 import com.kryszak.gwatlin.clients.gamemechanics.LegendsClient
 
@@ -25,7 +26,8 @@ class GWLegendsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.legend.Legend
      */
-    fun getLegends(ids: List<String>, language: String = "en"): List<Legend> {
+    @JvmOverloads
+    fun getLegends(ids: List<String>, language: ApiLanguage? = null): List<Legend> {
         return legendsClient.getLegends(ids, language)
     }
 }

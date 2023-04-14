@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.clients.guild
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
@@ -46,7 +47,7 @@ internal class GuildClient : BaseHttpClient() {
         return getRequest(permissionEndpoint)
     }
 
-    fun getGuildPermissions(ids: List<String>, language: String): List<GuildPermission> {
+    fun getGuildPermissions(ids: List<String>, language: ApiLanguage?): List<GuildPermission> {
         val params = ids.joinToString(",")
         return getRequest("$permissionEndpoint?ids=$params", language)
     }
@@ -63,7 +64,7 @@ internal class GuildClient : BaseHttpClient() {
         return getRequest(upgradesEndpoint)
     }
 
-    fun getGuildUpgrades(ids: List<Int>, language: String): List<GuildUpgrade> {
+    fun getGuildUpgrades(ids: List<Int>, language: ApiLanguage?): List<GuildUpgrade> {
         val params = ids.joinToString(",")
         return getRequest("$upgradesEndpoint?ids=$params", language)
     }

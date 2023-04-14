@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.items
 
-
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTest
 import spock.lang.Subject
 
@@ -28,7 +28,7 @@ class FinishersClientSpec extends WiremockTest {
         def ids = [1, 2]
 
         and: "language"
-        def lang = "en"
+        def lang = ApiLanguage.EN
 
         and: "External api is stubbed"
         stubResponseWithLanguage("/finishers?ids=1,2", "/responses/items/finishers.json", lang)

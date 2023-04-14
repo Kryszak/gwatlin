@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import com.kryszak.gwatlin.clients.gamemechanics.ProfessionsClient
 
@@ -25,7 +26,8 @@ class GWProfessionsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
      */
-    fun getProfessions(ids: List<String>, language: String = "en"): List<Profession> {
+    @JvmOverloads
+    fun getProfessions(ids: List<String>, language: ApiLanguage? = null): List<Profession> {
         return professionsClient.getProfessions(ids, language)
     }
 
@@ -34,7 +36,8 @@ class GWProfessionsClient {
      * @param language of returned text (default=en)
      * @see com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
      */
-    fun getAllProfessions(language: String = "en"): List<Profession> {
+    @JvmOverloads
+    fun getAllProfessions(language: ApiLanguage? = null): List<Profession> {
         return professionsClient.getAllProfessions(language)
     }
 }

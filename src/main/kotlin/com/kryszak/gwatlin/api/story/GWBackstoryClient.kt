@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.story
 
+import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.story.model.BackstoryAnswer
 import com.kryszak.gwatlin.api.story.model.BackstoryQuestion
 import com.kryszak.gwatlin.clients.backstory.BackstoryClient
@@ -15,14 +16,16 @@ class GWBackstoryClient {
     /**
      * Returns information about the Biography answers that are in the game
      */
-    fun getBackstoryAnswers(language: String = "en"): List<BackstoryAnswer> {
+    @JvmOverloads
+    fun getBackstoryAnswers(language: ApiLanguage? = null): List<BackstoryAnswer> {
         return backstoryClient.getBackstoryAnswers(language)
     }
 
     /**
      * Returns information about the Biography questions that are in the game
      */
-    fun getBackstoryQuestions(language: String = "en"): List<BackstoryQuestion> {
+    @JvmOverloads
+    fun getBackstoryQuestions(language: ApiLanguage? = null): List<BackstoryQuestion> {
         return backstoryClient.getBackstoryQuestions(language)
     }
 }
