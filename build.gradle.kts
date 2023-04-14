@@ -14,7 +14,7 @@ val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
 
 project.group = "com.kryszak"
-project.version = "1.5"
+project.version = "1.6"
 
 sourceSets {
     getByName("main").apply {
