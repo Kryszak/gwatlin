@@ -21,5 +21,6 @@ data class Item(
     val flags: List<String>,
     @SerialName("game_types") val gameTypes: List<String>,
     val restrictions: List<String>,
-    val details: Map<String, Any>
+    // TODO
+    //val details: Map<String, Any>
 )
