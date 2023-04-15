@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.profession
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Training track type values
  */
+@Serializable
 enum class TrainingTrackType {
-    @SerializedName("Trait")
+    @SerialName("Trait")
     TRAIT,
-    @SerializedName("Skill")
+    @SerialName("Skill")
     SKILL
 }

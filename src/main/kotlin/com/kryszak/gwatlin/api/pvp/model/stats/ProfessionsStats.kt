@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.pvp.model.stats
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for profession stats
  */
+@Serializable
 data class ProfessionsStats(
         val guardian: WinLossStats?,
         val warrior: WinLossStats?,

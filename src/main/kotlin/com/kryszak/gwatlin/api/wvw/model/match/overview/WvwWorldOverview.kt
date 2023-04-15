@@ -1,16 +1,18 @@
 package com.kryszak.gwatlin.api.wvw.model.match.overview
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
 import com.kryszak.gwatlin.api.wvw.model.match.WvwMatchAllWorlds
 import com.kryszak.gwatlin.api.wvw.model.match.WvwMatchWorldCount
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for overview sub-endpoint
  */
+@Serializable
 data class WvwWorldOverview(
-        @SerializedName("all_worlds") val allWorlds: WvwMatchAllWorlds,
-        @SerializedName("end_time") val endTime: String,
+        @SerialName("all_worlds") val allWorlds: WvwMatchAllWorlds,
+        @SerialName("end_time") val endTime: String,
         val id: String,
-        @SerializedName("start_time") val startTime: String,
+        @SerialName("start_time") val startTime: String,
         val worlds: WvwMatchWorldCount
 )

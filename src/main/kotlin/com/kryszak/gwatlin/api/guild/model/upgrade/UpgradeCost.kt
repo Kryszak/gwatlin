@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.guild.model.upgrade
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for cost property of guild upgrade object
  */
+@Serializable
 data class UpgradeCost(
         val type: String,
         val name: String,
         val count: Int,
-        @SerializedName("item_id") val itemId: Int?
+        @SerialName("item_id") val itemId: Int?
 )

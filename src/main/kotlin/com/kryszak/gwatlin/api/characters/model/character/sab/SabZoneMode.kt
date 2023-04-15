@@ -1,15 +1,17 @@
 package com.kryszak.gwatlin.api.characters.model.character.sab
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Enum for SAB zone modes
  */
+@Serializable
 enum class SabZoneMode {
-    @SerializedName("infantile")
+    @SerialName("infantile")
     INFANTILE,
-    @SerializedName("normal")
+    @SerialName("normal")
     NORMAL,
-    @SerializedName("tribulation")
+    @SerialName("tribulation")
     TRIBULATION
 }

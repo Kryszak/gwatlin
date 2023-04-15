@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.commerce.model.listing
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for buys/sells object in commerce listing
  */
+@Serializable
 data class Listing(
         val listings: Int,
-        @SerializedName("unit_price") val unitPrice: Int,
+        @SerialName("unit_price") val unitPrice: Int,
         val quantity: Int
 )

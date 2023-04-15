@@ -1,17 +1,19 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import kotlin.collections.Map
 
 /**
  * Data model for regions. Regions are part of a [com.kryszak.gwatlin.api.mapinfo.model.Floor]
  */
+@Serializable
 data class Region(
     val id: Int,
     val name: String,
-    @SerializedName("label_coord")
+    @SerialName("label_coord")
     val labelCoord: Coordinates,
-    @SerializedName("continent_rect")
+    @SerialName("continent_rect")
     val continentRect: Rectangle,
     val maps: Map<Int, ContinentMap>
 )

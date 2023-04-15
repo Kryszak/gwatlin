@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.pvp.model.stats
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for pvp standings object
  */
+@Serializable
 data class PvpStanding(
         val current: CurrentPvpStanding,
         val best: BestPvpStanding,
-        @SerializedName("season_id") val seasonId: String
+        @SerialName("season_id") val seasonId: String
 )

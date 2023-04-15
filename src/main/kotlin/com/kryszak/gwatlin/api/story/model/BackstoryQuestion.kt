@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.story.model
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for backstory question object
  */
+@Serializable
 data class BackstoryQuestion(
         val id: Int,
         val title: String,

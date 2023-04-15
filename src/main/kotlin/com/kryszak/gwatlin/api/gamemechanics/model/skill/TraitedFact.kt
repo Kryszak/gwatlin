@@ -1,11 +1,13 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.skill
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for traited fact skill property
  */
+@Serializable
 data class TraitedFact(
-        @SerializedName("requires_trait") val requiresTrait: Int,
+        @SerialName("requires_trait") val requiresTrait: Int,
         val overrides: Int
 )

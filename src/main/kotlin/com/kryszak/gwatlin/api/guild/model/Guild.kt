@@ -1,18 +1,21 @@
 package com.kryszak.gwatlin.api.guild.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 
 /**
  * Data model for guild object
  */
+@Serializable
 data class Guild(
         val level: Int,
-        @SerializedName("motd") val messageOfTheDay: String,
+        @SerialName("motd") val messageOfTheDay: String,
         val influence: Int,
         val aetherium: String,
         val favor: Int,
-        @SerializedName("member_count") val memberCount: Int,
-        @SerializedName("member_capacity") val memberCapacity: Int,
+        @SerialName("member_count") val memberCount: Int,
+        @SerialName("member_capacity") val memberCapacity: Int,
         val id: String,
         val name: String,
         val tag: String,

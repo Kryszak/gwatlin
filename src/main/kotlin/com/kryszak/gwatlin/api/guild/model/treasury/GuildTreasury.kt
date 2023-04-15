@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.guild.model.treasury
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for guild treasury object
  */
+@Serializable
 data class GuildTreasury(
-        @SerializedName("item_id") val itemId: Int,
+        @SerialName("item_id") val itemId: Int,
         val count: Int,
-        @SerializedName("needed_by") val neededBy: List<GuildTreasuryUpgrade>
+        @SerialName("needed_by") val neededBy: List<GuildTreasuryUpgrade>
 )

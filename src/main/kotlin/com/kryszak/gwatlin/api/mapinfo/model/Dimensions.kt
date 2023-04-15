@@ -1,8 +1,12 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
+import com.kryszak.gwatlin.serializers.DimensionsSerializer
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for Dimensions. A dimension is something with a size in both the X and Y directions.
  */
+@Serializable(with = DimensionsSerializer::class)
 data class Dimensions(
     val x: Float,
     val y: Float

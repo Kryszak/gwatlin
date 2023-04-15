@@ -1,30 +1,32 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.skill
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for skill object
  */
+@Serializable
 data class Skill(
         val id: Int,
         val name: String,
         val description: String?,
         val icon: String,
-        @SerializedName("weapon_type") val weaponType: String,
-        @SerializedName("chat_link") val chatLink: String,
+        @SerialName("weapon_type") val weaponType: String,
+        @SerialName("chat_link") val chatLink: String,
         val type: SkillType,
-        @SerializedName("skill_type") val skillType: String?,
+        @SerialName("skill_type") val skillType: String?,
         val professions: List<String>,
         val slot: SkillSlot,
         val facts: List<SkillFact>,
         val flags: List<String>,
-        @SerializedName("traited_facts") val traitedFacts: List<TraitedFact>,
+        @SerialName("traited_facts") val traitedFacts: List<TraitedFact>,
         val categories: List<String>?,
         val attunement: String?,
         val cost: Int?,
-        @SerializedName("dual_wield") val dualWield: String?,
-        @SerializedName("flip_skill") val flipSkill: Int?,
+        @SerialName("dual_wield") val dualWield: String?,
+        @SerialName("flip_skill") val flipSkill: Int?,
         val initiative: Int?,
-        @SerializedName("next_chain") val nextChain: Int?,
-        @SerializedName("prev_chain") val previousChain: Int?
+        @SerialName("next_chain") val nextChain: Int?,
+        @SerialName("prev_chain") val previousChain: Int?
 )

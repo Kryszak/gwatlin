@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.pet
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for pet object
  */
+@Serializable
 data class Pet(
         val id: Int,
         val name: String,

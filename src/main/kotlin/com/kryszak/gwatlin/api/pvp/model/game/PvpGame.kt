@@ -1,20 +1,22 @@
 package com.kryszak.gwatlin.api.pvp.model.game
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for pvp game object
  */
+@Serializable
 data class PvpGame(
         val id: String,
-        @SerializedName("map_id") val mapId: Int,
+        @SerialName("map_id") val mapId: Int,
         val started: String,
         val ended: String,
         val result: String,
         val team: String,
         val profession: String?,
         val scores: PvpGameScore,
-        @SerializedName("rating_type") val ratingType: String,
-        @SerializedName("rating_change") val ratingChange: Int,
+        @SerialName("rating_type") val ratingType: String,
+        @SerialName("rating_change") val ratingChange: Int,
         val season: String?
 )

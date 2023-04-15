@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
 
 /**
  * Data model for map info returned by the /maps endpoint
@@ -8,24 +8,24 @@ import com.google.gson.annotations.SerializedName
 data class Map(
     val id: Int,
     val name: String,
-    @SerializedName("min_level")
+    @SerialName("min_level")
     val minLevel: Int,
-    @SerializedName("max_level")
+    @SerialName("max_level")
     val maxLevel: Int,
-    @SerializedName("default_floor")
+    @SerialName("default_floor")
     val defaultFloor: Int,
     val type: MapType,
     val floors: List<Int>,
-    @SerializedName("region_id")
+    @SerialName("region_id")
     val regionId: Int,
-    @SerializedName("region_name")
+    @SerialName("region_name")
     val regionName: String?,
-    @SerializedName("continent_id")
+    @SerialName("continent_id")
     val continentId: Int,
-    @SerializedName("continent_name")
+    @SerialName("continent_name")
     val continentName: String?,
-    @SerializedName("map_rect")
+    @SerialName("map_rect")
     val mapRect: Rectangle,
-    @SerializedName("continent_rect")
+    @SerialName("continent_rect")
     val continentRect: Rectangle
 )

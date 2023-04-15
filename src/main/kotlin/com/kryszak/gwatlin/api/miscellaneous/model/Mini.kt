@@ -1,14 +1,16 @@
 package com.kryszak.gwatlin.api.miscellaneous.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for mini object
  */
+@Serializable
 data class Mini(
         val id: Int,
         val name: String,
         val icon: String,
         val order: Int,
-        @SerializedName("item_id") val itemId: Int
+        @SerialName("item_id") val itemId: Int
 )

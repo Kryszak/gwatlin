@@ -1,13 +1,14 @@
 package com.kryszak.gwatlin.api.characters.model.character
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for skill sets
  */
-data class Skills(
+@Serializable
+data class Skills @JvmOverloads constructor(
     val heal: Int,
     val utilities: Set<Int>,
     val elite: Int,
     val legends: Set<String>? = null
-) {
-    constructor(heal: Int, utilities: Set<Int>, elite: Int) : this(heal, utilities, elite, null)
-}
+)
