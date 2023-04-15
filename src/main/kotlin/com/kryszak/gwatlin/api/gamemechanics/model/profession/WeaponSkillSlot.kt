@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
 enum class WeaponSkillSlot {
     @SerializedName("Profession_1")
     PROFESSION_1,
-    @SerializedName("Profession_1")
+    @SerializedName("Utility")
     UTILITY,
     @SerializedName("Heal")
     HEAL,
