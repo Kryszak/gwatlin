@@ -1,20 +1,28 @@
 package com.kryszak.gwatlin.serializers
 
-import com.google.gson.*
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
-import java.lang.reflect.Type
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.builtins.PairSerializer
+import kotlinx.serialization.builtins.serializer
+import kotlinx.serialization.descriptors.buildClassSerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 
 /**
  * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Dimensions], supporting serialization and deserialization
  */
-class DimensionsSerializer: JsonSerializer<Dimensions>, JsonDeserializer<Dimensions> {
-    override fun serialize(src: Dimensions?, typeOfSrc: Type?, context: JsonSerializationContext): JsonElement {
-        return context.serialize(src?.asPair())
+object DimensionsSerializer : KSerializer<Dimensions> {
+    override val descriptor = buildClassSerialDescriptor("Dimensions") {
+        element("x", Float.serializer().descriptor)
+        element("y", Float.serializer().descriptor)
+    }
+    private val delegateSerializer = PairSerializer(Float.serializer(), Float.serializer())
+
+    override fun serialize(encoder: Encoder, value: Dimensions) {
+        encoder.encodeSerializableValue(delegateSerializer, value.asPair())
     }
 
-    override fun deserialize(json: JsonElement?, typeOfT: Type?, context: JsonDeserializationContext): Dimensions? {
-        if (json == null || json !is JsonArray || json.size() != 2) return null
-        return Dimensions(json.get(0).asFloat, json.get(1).asFloat)
-    }
-
+    override fun deserialize(decoder: Decoder): Dimensions = Dimensions.fromPair(
+        decoder.decodeSerializableValue(delegateSerializer)
+    )
 }

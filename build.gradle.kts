@@ -3,10 +3,12 @@ plugins {
     jacoco
     id("maven-publish")
     kotlin("jvm") version "1.8.20"
+    kotlin("plugin.serialization") version "1.8.20"
 }
 
 val fuelVersion = "2.3.1"
 val gsonVersion = "2.10.1"
+val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.6"
 val spockVersion = "2.3-groovy-4.0"
@@ -72,8 +74,8 @@ repositories {
 dependencies {
     // http
     implementation("com.github.kittinunf.fuel:fuel:$fuelVersion")
-    implementation("com.github.kittinunf.fuel:fuel-gson:$fuelVersion")
-    implementation("com.google.code.gson:gson:$gsonVersion")
+    implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:$fuelVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
     // logging
     implementation("io.github.microutils:kotlin-logging-jvm:$loggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
