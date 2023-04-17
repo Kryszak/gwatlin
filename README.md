@@ -38,7 +38,7 @@ Issue should contain example json response for given endpoint.
 Artifact is available on GitHub Maven repository: [Instructions](https://github.com/Kryszak/gwatlin/packages/1509407)
 
 ### Documentation
-For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs.github.io/)
+For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs//)
 
 ### Code
 ```kotlin
