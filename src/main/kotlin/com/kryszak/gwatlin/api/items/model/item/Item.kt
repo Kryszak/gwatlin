@@ -2,6 +2,7 @@ package com.kryszak.gwatlin.api.items.model.item
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
 
 /**
  * Data model for item class
@@ -22,5 +23,5 @@ data class Item(
     @SerialName("game_types") val gameTypes: List<String>,
     val restrictions: List<String>,
     // TODO
-    //val details: Map<String, Any>
+    val details: JsonObject? = null
 )
