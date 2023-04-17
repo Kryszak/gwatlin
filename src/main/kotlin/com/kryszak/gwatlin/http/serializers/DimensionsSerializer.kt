@@ -1,13 +1,11 @@
-package com.kryszak.gwatlin.serializers
+package com.kryszak.gwatlin.http.serializers
 
 import com.google.gson.*
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import java.lang.reflect.Type
 
-/**
- * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Dimensions], supporting serialization and deserialization
- */
-class DimensionsSerializer: JsonSerializer<Dimensions>, JsonDeserializer<Dimensions> {
+
+internal class DimensionsSerializer : JsonSerializer<Dimensions>, JsonDeserializer<Dimensions> {
     override fun serialize(src: Dimensions?, typeOfSrc: Type?, context: JsonSerializationContext): JsonElement {
         return context.serialize(src?.asPair())
     }
