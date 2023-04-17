@@ -17,8 +17,8 @@ import kotlinx.serialization.encoding.Encoder
  * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Rectangle], supporting serialization and deserialization
  */
 object RectangleSerializer : KSerializer<Rectangle> {
-    override val descriptor = serialDescriptor<List<Dimensions>>()
     private val delegateSerializer = ListSerializer(Dimensions.serializer())
+    override val descriptor = delegateSerializer.descriptor
 
     override fun serialize(encoder: Encoder, value: Rectangle) {
         encoder.encodeSerializableValue(delegateSerializer, listOf(value.first, value.second))
