@@ -24,7 +24,9 @@ internal open class BaseHttpClient(
 
     protected val baseUrl: String
 
-    protected val json = Json.Default
+    protected val json = Json {
+        isLenient = true
+    }
 
     private val httpConfig: HttpConfig = HttpConfig()
 
