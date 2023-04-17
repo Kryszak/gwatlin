@@ -7,8 +7,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class AchievementReward(
-        val int: Int,
+        val id: Int? = null,
         val type: String,
-        val region: String?,
-        val count: Int
+        val region: String? = null,
+        val count: Int? = null
 )

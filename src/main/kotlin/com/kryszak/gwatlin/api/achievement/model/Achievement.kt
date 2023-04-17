@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class Achievement(
-        val id: String,
+        val id: Int,
         val name: String,
         val description: String,
         val requirement: String,
@@ -16,5 +16,6 @@ data class Achievement(
         val type: String,
         val flags: List<String>,
         val tiers: List<AchievementTier>,
-        val rewards: List<AchievementReward>
+        val rewards: List<AchievementReward>,
+        val bits: List<AchievementBit> = listOf()
 )
