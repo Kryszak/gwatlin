@@ -8,10 +8,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class AccountAchievement(
         val id: Int,
-        val bits: List<Int>?,
-        val current: Int?,
-        val max: Int?,
+        val bits: List<Int> = listOf(),
+        val current: Int? = null,
+        val max: Int? = null,
         val done: Boolean,
-        val repeated: Int?,
-        val unlocked: Boolean?
+        val repeated: Int? = null,
+        val unlocked: Boolean? = null
 )

@@ -21,5 +21,5 @@ data class Account(
         @SerialName("daily_ap") val dailyAp: Int,
         @SerialName("monthly_ap") val monthlyAp: Int,
         @SerialName("wvw_rank") val wvwRank: Int,
-        @SerialName("last_modified") val lastModified: String
+        @SerialName("last_modified") val lastModified: String? = null
 )

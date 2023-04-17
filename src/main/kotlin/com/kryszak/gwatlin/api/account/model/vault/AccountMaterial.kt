@@ -9,6 +9,6 @@ import kotlinx.serialization.Serializable
 data class AccountMaterial(
         val id: Int,
         val category: Int,
-        val binding: String?,
+        val binding: String? = null,
         val count: Int
 )

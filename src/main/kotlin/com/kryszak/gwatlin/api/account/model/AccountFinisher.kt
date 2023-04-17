@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 data class AccountFinisher(
         val id: Int,
         val permanent: Boolean,
-        val quantity: Int?
+        val quantity: Int? = null
 )
