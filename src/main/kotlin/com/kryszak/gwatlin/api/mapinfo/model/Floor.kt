@@ -9,6 +9,7 @@ import kotlin.collections.Map
  */
 @Serializable
 data class Floor(
+    val id: Int,
     @SerialName("texture_dims")
     val textureDims: Dimensions,
     @SerialName("clamped_view")

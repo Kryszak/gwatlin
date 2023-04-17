@@ -1,10 +1,12 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for map info returned by the /maps endpoint
  */
+@Serializable
 data class Map(
     val id: Int,
     val name: String,
@@ -23,7 +25,7 @@ data class Map(
     @SerialName("continent_id")
     val continentId: Int,
     @SerialName("continent_name")
-    val continentName: String?,
+    val continentName: String? = null,
     @SerialName("map_rect")
     val mapRect: Rectangle,
     @SerialName("continent_rect")

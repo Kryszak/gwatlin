@@ -244,7 +244,7 @@ class MapInfoClientSpec extends WiremockTest {
         then: "Retrieved details matches expected"
         verifyAll(result) {
             // Test constructor
-            def constructed = new Floor(textureDims, clampedView, regions)
+            def constructed = new Floor(id, textureDims, clampedView, regions)
             it == constructed
 
             textureDims.x.intValue() == 81920

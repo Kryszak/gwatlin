@@ -9,11 +9,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PointOfInterest(
     val id: Int,
-    val name: String,
+    val name: String? = null,
     val type: PointOfInterestType,
     val floor: Int,
     val coord: Coordinates,
     @SerialName("chat_link")
     val chatLink: String,
-    val icon: String?
+    val icon: String? = null
 )
