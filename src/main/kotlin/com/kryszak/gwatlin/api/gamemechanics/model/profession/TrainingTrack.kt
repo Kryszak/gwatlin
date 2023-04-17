@@ -10,6 +10,6 @@ import kotlinx.serialization.Serializable
 data class TrainingTrack(
         val cost: Int,
         val type: TrainingTrackType,
-        @SerialName("skill_id") val skillId: Int?,
-        @SerialName("trait_it") val traitId: Int?
+        @SerialName("skill_id") val skillId: Int? = null,
+        @SerialName("trait_id") val traitId: Int? = null
 )

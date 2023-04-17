@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class Weapon(
-        val specialization: Int,
+        val specialization: Int? = null,
         val skills: List<WeaponSkill>,
         val flags: List<String>
 )

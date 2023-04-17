@@ -15,5 +15,6 @@ data class Profession(
         val flags: List<String>,
         val specializations: List<Int>,
         val training: List<Training>,
+        val skills: List<ProfessionSkill>,
         val weapons: ProfessionWeapons
 )

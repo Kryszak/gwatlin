@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 enum class TrainingCategory {
     @SerialName("Skills")
     SKILLS,
-    @SerialName("5821")
+    @SerialName("Specializations")
     SPECIALIZATIONS,
     @SerialName("EliteSpecializations")
     ELITE_SPECIALIZATIONS

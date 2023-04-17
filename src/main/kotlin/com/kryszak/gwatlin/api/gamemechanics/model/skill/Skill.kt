@@ -1,5 +1,6 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.skill
 
+import com.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -10,23 +11,23 @@ import kotlinx.serialization.Serializable
 data class Skill(
         val id: Int,
         val name: String,
-        val description: String?,
+        val description: String? = null,
         val icon: String,
         @SerialName("weapon_type") val weaponType: String,
         @SerialName("chat_link") val chatLink: String,
         val type: SkillType,
-        @SerialName("skill_type") val skillType: String?,
+        @SerialName("skill_type") val skillType: String? = null,
         val professions: List<String>,
         val slot: SkillSlot,
-        val facts: List<SkillFact>,
-        val flags: List<String>,
-        @SerialName("traited_facts") val traitedFacts: List<TraitedFact>,
-        val categories: List<String>?,
-        val attunement: String?,
-        val cost: Int?,
-        @SerialName("dual_wield") val dualWield: String?,
-        @SerialName("flip_skill") val flipSkill: Int?,
-        val initiative: Int?,
-        @SerialName("next_chain") val nextChain: Int?,
-        @SerialName("prev_chain") val previousChain: Int?
+        val facts: List<Fact> = listOf(),
+        val flags: List<String> = listOf(),
+        @SerialName("traited_facts") val traitedFacts: List<TraitedFact> = listOf(),
+        val categories: List<String> = listOf(),
+        val attunement: String? = null,
+        val cost: Int? = null,
+        @SerialName("dual_wield") val dualWield: String? = null,
+        @SerialName("flip_skill") val flipSkill: Int? = null,
+        val initiative: Int? = null,
+        @SerialName("next_chain") val nextChain: Int? = null,
+        @SerialName("prev_chain") val previousChain: Int? = null
 )
