@@ -29,11 +29,12 @@ jobs:
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
       - name: Push documentation
-        uses: nkoppel/push-files-to-another-repository@v1.1.1
+        uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: 'build/dokka/'
-          destination-username: 'Kryszak'
-          destination-repository: 'gwatlin-docs.github.io'
-          commit-email: '13157331+Kryszak@users.noreply.github.com'
+          source-directory: 'build/dokka'
+          destination-github-username: "Kryszak"
+          destination-repository-name: "gwatlin-docs.github.io"
+          user-email: 13157331+Kryszak@users.noreply.github.com
+          target-branch: master
