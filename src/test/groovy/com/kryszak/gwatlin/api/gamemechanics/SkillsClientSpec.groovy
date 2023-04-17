@@ -1,6 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.ApiLanguage
+import com.kryszak.gwatlin.api.gamemechanics.model.facts.Range
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import com.kryszak.gwatlin.config.WiremockTest
@@ -48,8 +49,9 @@ class SkillsClientSpec extends WiremockTest {
             id == 1110
             chatLink == "[&BlYEAAA=]"
             verifyAll(facts.get(0)) {
-                text == "Range"
+                it instanceof Range
                 type == "Range"
+                text == "Range"
                 icon == "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png"
                 value == 900
             }

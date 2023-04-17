@@ -1,6 +1,7 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
 import com.kryszak.gwatlin.api.ApiLanguage
+import com.kryszak.gwatlin.api.gamemechanics.model.facts.Recharge
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import com.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
 import com.kryszak.gwatlin.config.WiremockTest
@@ -46,8 +47,9 @@ class TraitsClientSpec extends WiremockTest {
             specialization == 41
             icon == "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
             verifyAll(facts.get(0)) {
-                text == "Recharge"
+                it instanceof Recharge
                 type == "Recharge"
+                text == "Recharge"
                 icon == "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png"
             }
         }
