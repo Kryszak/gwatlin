@@ -31,3 +31,12 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/libs/*"
+      - name: Push documentation
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-files: 'build/dokka/'
+          destination-username: 'Kryszak'
+          destination-repository: 'gwatlin-docs.github.io'
+          commit-email: '13157331+Kryszak@users.noreply.github.com'
