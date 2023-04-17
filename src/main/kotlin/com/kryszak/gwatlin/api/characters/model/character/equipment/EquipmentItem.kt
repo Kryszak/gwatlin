@@ -12,16 +12,17 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class EquipmentItem(
     val id: Int,
-    val slot: ItemSlot,
-    val binding: ItemBinding,
+    val slot: ItemSlot? = null,
+    val binding: ItemBinding? = null,
     @SerialName("bound_to")
-    val boundTo: String?,
-    val infusions: List<Int>?,
-    val location: EquipmentItemLocation?,
-    val skin: Int?,
-    val upgrades: List<Int>?,
-    val stats: ItemStats?,
-    val dyes: List<Int>?,
-    val charges: Int?,
-    val tabs: Set<Int>?
+    val boundTo: String? = null,
+    val infusions: List<Int> = listOf(),
+    val location: EquipmentItemLocation,
+    val skin: Int? = null,
+    val upgrades: List<Int> = listOf(),
+    val stats: ItemStats? = null,
+    val dyes: List<Int?> = listOf(),
+    val charges: Int? = null,
+    val tabs: Set<Int> = setOf(),
+    val count: Int? = null
 )

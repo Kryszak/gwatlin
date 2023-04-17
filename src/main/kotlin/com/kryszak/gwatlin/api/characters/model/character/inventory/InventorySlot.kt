@@ -12,15 +12,15 @@ import kotlinx.serialization.Serializable
 data class InventorySlot(
     val id: Int,
     val count: Int,
-    val charges: Int?,
-    val infusions: List<Int>?,
-    val upgrades: List<Int>?,
+    val charges: Int? = null,
+    val infusions: List<Int> = listOf(),
+    val upgrades: List<Int> = listOf(),
     @SerialName("upgrade_slot_indices")
-    val upgradeSlotIndices: List<Int>?,
-    val skin: Int?,
-    val stats: ItemStats?,
-    val dyes: List<Int>?,
-    val binding: ItemBinding?,
+    val upgradeSlotIndices: List<Int> = listOf(),
+    val skin: Int? = null,
+    val stats: ItemStats? = null,
+    val dyes: List<Int?> = listOf(),
+    val binding: ItemBinding? = null,
     @SerialName("bound_to")
-    val boundTo: String?
+    val boundTo: String? = null
 )

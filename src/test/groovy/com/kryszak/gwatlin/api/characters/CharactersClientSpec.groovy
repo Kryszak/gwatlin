@@ -380,7 +380,8 @@ class CharactersClientSpec extends WiremockTest {
                     it[6].stats,
                     it[6].dyes,
                     it[6].charges,
-                    it[6].tabs
+                    it[6].tabs,
+                    it[6].count
             )
         }
     }
@@ -488,11 +489,11 @@ class CharactersClientSpec extends WiremockTest {
             it[0].inventory[6].id == 2258
             it[0].inventory[6].upgrades == [24774]
             it[0].inventory[6].upgradeSlotIndices == [0]
-            it[0].inventory[6].dyes == null
+            it[0].inventory[6].dyes == []
             it[0].inventory[6].boundTo == null
             it[0].inventory[6].stats == null
             it[0].inventory[6].charges == null
-            it[0].inventory[6].infusions == null
+            it[0].inventory[6].infusions == []
 
             it[0].inventory[9].skin == 746
             it[0].inventory[9].upgrades == [71425]

@@ -4,10 +4,12 @@ import kotlinx.serialization.SerialName
 import com.kryszak.gwatlin.api.characters.model.character.*
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for consolidated character infos
  */
+@Serializable
 data class Character(
     // Core
     val name: String,

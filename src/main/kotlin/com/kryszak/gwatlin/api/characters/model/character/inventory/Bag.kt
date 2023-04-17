@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 data class Bag(
     val id: Int,
     val size: Int,
-    val inventory: List<InventorySlot>
+    val inventory: List<InventorySlot?>
 )
