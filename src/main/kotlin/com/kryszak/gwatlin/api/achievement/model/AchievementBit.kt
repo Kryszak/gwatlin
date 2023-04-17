@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.achievement.model
 
 import kotlinx.serialization.Serializable
 
+/**
+ * Data mode for achievement bits. Can give further information on the progress towards the achievement.
+ */
 @Serializable
 data class AchievementBit(
     val type: AchievementBitType,

@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.gamemechanics.model.facts
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for skill/trait facts with type Buff
+ */
 @Serializable
 @SerialName("Buff")
 data class Buff(

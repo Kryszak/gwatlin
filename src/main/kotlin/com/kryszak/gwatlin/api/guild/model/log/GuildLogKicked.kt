@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.guild.model.log
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for guild log objects with type "kicked"
+ */
 @Serializable
 @SerialName("kicked")
 data class GuildLogKicked(

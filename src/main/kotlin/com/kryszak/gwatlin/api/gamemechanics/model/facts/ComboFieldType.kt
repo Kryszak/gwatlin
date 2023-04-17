@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.gamemechanics.model.facts
 
 import kotlinx.serialization.SerialName
 
+/**
+ * Possible values for combo field types
+ */
 enum class ComboFieldType {
     @SerialName("Air")
     AIR,

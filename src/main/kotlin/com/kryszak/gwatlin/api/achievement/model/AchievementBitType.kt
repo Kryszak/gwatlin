@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.achievement.model
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Possible values for achievement bit types.
+ */
 @Serializable
 enum class AchievementBitType {
     @SerialName("Text")

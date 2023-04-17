@@ -2,6 +2,9 @@ package com.kryszak.gwatlin.api.guild.model.log
 
 import kotlinx.serialization.SerialName
 
+/**
+ * Possible values for upgrade actions
+ */
 enum class UpgradeAction {
     @SerialName("queued")
     QUEUED,

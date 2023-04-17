@@ -3,7 +3,7 @@ package com.kryszak.gwatlin.api.guild.model.log
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for guild log object
+ * Shared interface for guild log types
  */
 @Serializable
 sealed interface GuildLog {

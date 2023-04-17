@@ -3,6 +3,9 @@ package com.kryszak.gwatlin.api.guild.model.log
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for guild log objects with type "upgrade"
+ */
 @Serializable
 @SerialName("upgrade")
 data class GuildLogUpgrade(

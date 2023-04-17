@@ -3,7 +3,7 @@ package com.kryszak.gwatlin.api.gamemechanics.model.facts
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for trait fact property
+ * Shared interface for skill and trait facts
  */
 @Serializable
 sealed interface Fact {
