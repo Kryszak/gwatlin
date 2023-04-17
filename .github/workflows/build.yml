@@ -28,13 +28,3 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-      - name: Push documentation
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source-directory: 'build/dokka/html'
-          destination-github-username: "Kryszak"
-          destination-repository-name: "gwatlin-docs.github.io"
-          user-email: 13157331+Kryszak@users.noreply.github.com
-          target-branch: master
