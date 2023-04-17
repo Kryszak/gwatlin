@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 @SerialName("HealingAdjust")
-data class HealingAdjist(
+data class HealingAdjust(
     override val type: String,
     override val text: String? = null,
     override val icon: String? = null,
