@@ -7,7 +7,6 @@ plugins {
 }
 
 val fuelVersion = "2.3.1"
-val gsonVersion = "2.10.1"
 val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.6"
