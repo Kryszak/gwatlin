@@ -12,5 +12,6 @@ data class Mini(
         val name: String,
         val icon: String,
         val order: Int,
-        @SerialName("item_id") val itemId: Int
+        @SerialName("item_id") val itemId: Int,
+        val unlock: String? = null
 )

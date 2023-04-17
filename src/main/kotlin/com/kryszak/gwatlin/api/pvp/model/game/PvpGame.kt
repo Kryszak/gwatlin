@@ -14,9 +14,9 @@ data class PvpGame(
         val ended: String,
         val result: String,
         val team: String,
-        val profession: String?,
+        val profession: String? = null,
         val scores: PvpGameScore,
         @SerialName("rating_type") val ratingType: String,
-        @SerialName("rating_change") val ratingChange: Int,
-        val season: String?
+        @SerialName("rating_change") val ratingChange: Int? = null,
+        val season: String? = null
 )

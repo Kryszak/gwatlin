@@ -15,6 +15,7 @@ data class Story(
         val level: Int,
         val order: Int,
         val chapters: List<StoryChapter>,
-        val races: List<String>?,
-        val professions: List<String>?
+        val races: List<String> = listOf(),
+        val professions: List<String> = listOf(),
+        val flags: List<String> = listOf()
 )

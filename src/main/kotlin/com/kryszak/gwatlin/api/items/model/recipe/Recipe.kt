@@ -17,7 +17,7 @@ data class Recipe(
         @SerialName("min_rating") val minRating: Int,
         val flags: List<String>,
         val ingredients: List<Ingredient>,
-        @SerialName("guild_ingredients") val guildIngredients: List<GuildIngredient>,
-        @SerialName("output_upgrade_id") val outputUpgradeId: Int?,
+        @SerialName("guild_ingredients") val guildIngredients: List<GuildIngredient> = listOf(),
+        @SerialName("output_upgrade_id") val outputUpgradeId: Int? = null,
         @SerialName("chat_link") val chatLink: String
 )

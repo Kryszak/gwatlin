@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PvpLadderSettings(
         val name: String,
-        val duration: Int,
+        val duration: Int? = null,
         val scoring: String,
         val tiers: List<SettingsTier>
 )

@@ -14,7 +14,7 @@ data class DyeColor(
         val cloth: ColorDetails,
         val leather: ColorDetails,
         val metal: ColorDetails,
-        val fur: ColorDetails?,
-        val item: Int,
+        val fur: ColorDetails? = null,
+        val item: Int? = null,
         val categories: List<String>
 )

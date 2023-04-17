@@ -14,5 +14,5 @@ data class PvpSeasonDivision(
         @SerialName("small_icon") val smallIcon: String,
         @SerialName("pip_icon") val pipIcon: String,
         val tiers: List<Tier>,
-        val leaderboards: List<PvpSeasonLeaderboard>
+        val leaderboards: List<PvpSeasonLeaderboard> = listOf()
 )

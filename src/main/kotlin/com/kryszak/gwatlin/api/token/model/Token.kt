@@ -11,8 +11,8 @@ data class Token(
         val id: String,
         val name: String,
         val permissions: List<String>,
-        val type: String?,
-        @SerialName("expires_at") val expiresAt: String?,
-        @SerialName("issued_at") val issuedAt: String?,
-        val urls: List<String>?
+        val type: String? = null,
+        @SerialName("expires_at") val expiresAt: String? = null,
+        @SerialName("issued_at") val issuedAt: String? = null,
+        val urls: List<String> = listOf()
 )

@@ -106,7 +106,7 @@ class PvPClientSpec extends WiremockTest {
             verifyAll(leaderboards.legendary) {
                 verifyAll(settings) {
                     name == ""
-                    duration == 0
+                    duration == null
                     scoring == "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
                     verifyAll(tiers.get(0)) {
                         range.size() == 2

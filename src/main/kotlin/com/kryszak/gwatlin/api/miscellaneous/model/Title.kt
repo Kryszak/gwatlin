@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 data class Title(
         val id: Int,
         val name: String,
-        val achievement: Int,
-        val achievements: List<Int>,
-        @SerialName("ap_required") val apRequired: Int?
+        val achievement: Int? = null,
+        val achievements: List<Int> = listOf(),
+        @SerialName("ap_required") val apRequired: Int? = null
 )

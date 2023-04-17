@@ -12,6 +12,6 @@ data class BackstoryAnswer(
         val description: String,
         val journal: String,
         val question: Int,
-        val professions: List<String>?,
-        val races: List<String>?
+        val professions: List<String> = listOf(),
+        val races: List<String> = listOf()
 )

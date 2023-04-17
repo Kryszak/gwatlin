@@ -7,13 +7,13 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class ProfessionsStats(
-        val guardian: WinLossStats?,
-        val warrior: WinLossStats?,
-        val engineer: WinLossStats?,
-        val ranger: WinLossStats?,
-        val thief: WinLossStats?,
-        val elementalist: WinLossStats?,
-        val mesmer: WinLossStats?,
-        val necromancer: WinLossStats?,
-        val revenant: WinLossStats?
+        val guardian: WinLossStats? = null,
+        val warrior: WinLossStats? = null,
+        val engineer: WinLossStats? = null,
+        val ranger: WinLossStats? = null,
+        val thief: WinLossStats? = null,
+        val elementalist: WinLossStats? = null,
+        val mesmer: WinLossStats? = null,
+        val necromancer: WinLossStats? = null,
+        val revenant: WinLossStats? = null
 )

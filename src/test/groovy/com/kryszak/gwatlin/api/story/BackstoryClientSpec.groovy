@@ -26,8 +26,8 @@ class BackstoryClientSpec extends WiremockTest {
             description == "I'm dignified even when up to my ears in mud. It's what makes people respect me. A serious, thoughtful demeanor is the route to success."
             journal == "Though trouble may follow me, I overcome it with dignity."
             question == 7
-            races == null
-            professions == null
+            races == []
+            professions == []
         }
     }
 
@@ -48,8 +48,8 @@ class BackstoryClientSpec extends WiremockTest {
             description == "Trouble may follow me, but I use my ______ to overcome it."
             answers == ["7-53", "7-54", "7-55"]
             order == 1
-            races == null
-            professions == null
+            races == []
+            professions == []
         }
     }
 }
