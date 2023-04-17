@@ -2,9 +2,9 @@ package com.kryszak.gwatlin.serializers
 
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.builtins.PairSerializer
-import kotlinx.serialization.builtins.serializer
-import kotlinx.serialization.descriptors.buildClassSerialDescriptor
+import kotlinx.serialization.SerializationException
+import kotlinx.serialization.builtins.FloatArraySerializer
+import kotlinx.serialization.descriptors.*
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
@@ -12,17 +12,16 @@ import kotlinx.serialization.encoding.Encoder
  * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Dimensions], supporting serialization and deserialization
  */
 object DimensionsSerializer : KSerializer<Dimensions> {
-    override val descriptor = buildClassSerialDescriptor("Dimensions") {
-        element("x", Float.serializer().descriptor)
-        element("y", Float.serializer().descriptor)
-    }
-    private val delegateSerializer = PairSerializer(Float.serializer(), Float.serializer())
+    override val descriptor = serialDescriptor<List<Float>>()
+    private val delegateSerializer = FloatArraySerializer()
 
     override fun serialize(encoder: Encoder, value: Dimensions) {
-        encoder.encodeSerializableValue(delegateSerializer, value.asPair())
+        encoder.encodeSerializableValue(delegateSerializer, floatArrayOf(value.x, value.y))
     }
 
-    override fun deserialize(decoder: Decoder): Dimensions = Dimensions.fromPair(
-        decoder.decodeSerializableValue(delegateSerializer)
-    )
+    override fun deserialize(decoder: Decoder): Dimensions {
+        val floatArray = decoder.decodeSerializableValue(delegateSerializer)
+        if (floatArray.size != 2) throw SerializationException("Dimensions must consist of exactly 2 float values")
+        return Dimensions(floatArray[0], floatArray[1])
+    }
 }
