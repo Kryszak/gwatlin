@@ -1,6 +1,5 @@
 package com.kryszak.gwatlin.api.gamemechanics
 
-import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.profession.Profession

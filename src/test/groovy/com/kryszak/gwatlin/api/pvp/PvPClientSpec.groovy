@@ -1,10 +1,11 @@
 package com.kryszak.gwatlin.api.pvp
 
-import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
 import com.kryszak.gwatlin.config.WiremockTest
+import kotlinx.serialization.SerializersKt
+import kotlinx.serialization.builtins.BuiltinSerializersKt
 import spock.lang.Subject
 
 class PvPClientSpec extends WiremockTest {
@@ -123,12 +124,16 @@ class PvPClientSpec extends WiremockTest {
     }
 
     private List<PvpSeason> parseSeasons() {
-        gson.fromJson(parseResponseText("/responses/pvp/seasons.json"),
-                new TypeToken<List<PvpSeason>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(PvpSeason)),
+                parseResponseText("/responses/pvp/seasons.json")
+        ) as List<PvpSeason>
     }
 
     private List<PvpRank> parseRanks() {
-        gson.fromJson(parseResponseText("/responses/pvp/ranks.json"),
-                new TypeToken<List<PvpRank>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(PvpRank)),
+                parseResponseText("/responses/pvp/ranks.json")
+        ) as List<PvpRank>
     }
 }

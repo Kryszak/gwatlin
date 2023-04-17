@@ -4,6 +4,7 @@ import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
 import com.kryszak.gwatlin.config.WiremockTest
+import kotlinx.serialization.SerializersKt
 import spock.lang.Subject
 import spock.lang.Unroll
 
@@ -104,6 +105,6 @@ class MasteriesClientSpec extends WiremockTest {
     }
 
     private Mastery parseMastery(String file) {
-        gson.fromJson(parseResponseText("/responses/gamemechanics/$file"), Mastery)
+        json.decodeFromString(SerializersKt.serializer(Mastery), parseResponseText("/responses/gamemechanics/$file")) as Mastery
     }
 }
