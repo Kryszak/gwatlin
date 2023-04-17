@@ -11,5 +11,5 @@ data class UpgradeCost(
         val type: String,
         val name: String,
         val count: Int,
-        @SerialName("item_id") val itemId: Int?
+        @SerialName("item_id") val itemId: Int? = null
 )
