@@ -39,5 +39,5 @@ jobs:
           source-directory: 'build/dokka/html'
           destination-github-username: "Kryszak"
           destination-repository-name: "gwatlin-docs"
-          user-email: 13157331+Kryszak@users.noreply.github.com
+          user-email: github-actions[bot]@users.noreply.github.com
           target-branch: master
