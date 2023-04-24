@@ -37,6 +37,9 @@ Issue should contain example json response for given endpoint.
 ## Example usage
 Artifact is available on GitHub Maven repository: [Instructions](https://github.com/Kryszak/gwatlin/packages/1509407)
 
+### Documentation
+For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs//)
+
 ### Code
 ```kotlin
 // Client without API KEY
