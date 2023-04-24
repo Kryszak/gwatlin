@@ -8,7 +8,7 @@ plugins {
 val fuelVersion = "2.3.1"
 val gsonVersion = "2.10.1"
 val loggingVersion = "3.0.5"
-val logbackVersion = "1.4.6"
+val logbackVersion = "1.4.7"
 val spockVersion = "2.3-groovy-4.0"
 val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
