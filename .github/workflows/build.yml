@@ -26,5 +26,7 @@ jobs:
           arguments: clean build
       - name: Upload coverage reports to Codacy
         uses: codacy/codacy-coverage-reporter-action@v1
+        # allow code coverage step to fail for dependabot PRs
+        continue-on-error: true 
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
