@@ -13,9 +13,9 @@ import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import com.kryszak.gwatlin.http.exception.RetrieveError
-import com.kryszak.gwatlin.serializers.DimensionsSerializer
-import com.kryszak.gwatlin.serializers.PairSerializer
-import com.kryszak.gwatlin.serializers.RectangleSerializer
+import com.kryszak.gwatlin.http.serializers.DimensionsSerializer
+import com.kryszak.gwatlin.http.serializers.PairSerializer
+import com.kryszak.gwatlin.http.serializers.RectangleSerializer
 import mu.KotlinLogging
 
 internal open class BaseHttpClient(
