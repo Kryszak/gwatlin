@@ -15,6 +15,7 @@ val logbackVersion = "1.4.7"
 val spockVersion = "2.3-groovy-4.0"
 val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
+val kotestVersion = "5.6.1"
 
 project.group = "com.kryszak"
 project.version = "1.6"
@@ -24,6 +25,7 @@ sourceSets {
         kotlin.srcDirs("src/main/kotlin")
     }
     getByName("test").apply {
+        kotlin.srcDirs("src/test/kotlin")
         groovy.srcDirs("src/test/groovy")
     }
 }
@@ -88,4 +90,7 @@ dependencies {
     testImplementation("org.spockframework:spock-core:$spockVersion")
     testImplementation("org.apache.groovy:groovy-all:$groovyVersion")
     testImplementation("com.github.tomakehurst:wiremock-jre8:$wiremockVersion")
+
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
 }
