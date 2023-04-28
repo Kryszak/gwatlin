@@ -57,6 +57,23 @@ internal open class WiremockTestKt : ShouldSpec({
         }
     }
 
+
+    protected fun stubAuthResponseWithSchema(
+        requestUrl: String,
+        responseFile: String,
+        apiKey: String,
+        schemaVersion: String
+    ) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            headers contains "Authorization" equalTo "Bearer $apiKey"
+            headers contains "X-Schema-Version" equalTo schemaVersion
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
+    }
+
     protected fun stubNotFoundResponse(requestUrl: String, responseFile: String) {
         wiremockServer.get {
             url equalTo requestUrl
