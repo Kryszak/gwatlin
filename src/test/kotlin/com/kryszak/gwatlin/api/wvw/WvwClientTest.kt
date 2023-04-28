@@ -4,8 +4,8 @@ import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.WiremockTestKt
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
 
 internal class WvwClientTest : WiremockTestKt() {
 
@@ -138,8 +138,8 @@ internal class WvwClientTest : WiremockTestKt() {
                 id shouldBe "1-1"
                 startTime shouldBe "2019-11-09T02:00:00Z"
                 endTime shouldBe "2019-11-16T01:58:00Z"
-                worlds shouldNotBe null
-                allWorlds shouldNotBe null
+                worlds.shouldNotBeNull()
+                allWorlds.shouldNotBeNull()
             }
         }
 
@@ -153,10 +153,10 @@ internal class WvwClientTest : WiremockTestKt() {
             // then
             assertSoftly(scores) {
                 id shouldBe "1-1"
-                scores shouldNotBe null
-                victoryPoints shouldNotBe null
-                skirmishes shouldNotBe null
-                maps shouldNotBe null
+                scores.shouldNotBeNull()
+                victoryPoints.shouldNotBeNull()
+                skirmishes.shouldNotBeNull()
+                maps.shouldNotBeNull()
             }
         }
 
@@ -170,9 +170,9 @@ internal class WvwClientTest : WiremockTestKt() {
             // then
             assertSoftly(stats) {
                 id shouldBe "1-1"
-                deaths shouldNotBe null
-                kills shouldNotBe null
-                maps shouldNotBe null
+                deaths.shouldNotBeNull()
+                kills.shouldNotBeNull()
+                maps.shouldNotBeNull()
             }
         }
 

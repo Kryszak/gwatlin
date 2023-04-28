@@ -47,6 +47,16 @@ internal open class WiremockTestKt : ShouldSpec({
         }
     }
 
+    protected fun stubAuthResponse(requestUrl: String, responseFile: String, apiKey: String) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            headers contains "Authorization" equalTo "Bearer $apiKey"
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
+    }
+
     protected fun parseResponseText(file: String): String {
         return WiremockTestKt::class.java.getResource(file)?.readText()!!
     }
