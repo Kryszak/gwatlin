@@ -10,7 +10,7 @@ import spock.lang.Specification
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*
 
-class WiremockTest extends Specification {
+class WiremockSpec extends Specification {
 
     @Shared
     WireMockRule wireMockRule = WiremockInstance.getInstance().wiremockRule

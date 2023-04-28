@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.items
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class SkinsClientSpec extends WiremockTest {
+class SkinsClientSpec extends WiremockSpec {
 
     @Subject
     def skinsClient = new GWSkinsClient()

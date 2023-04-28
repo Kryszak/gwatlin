@@ -3,10 +3,10 @@ package com.kryszak.gwatlin.api.items
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.items.model.item.ItemRarity
 import com.kryszak.gwatlin.api.items.model.item.ItemType
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class ItemsClientSpec extends WiremockTest {
+class ItemsClientSpec extends WiremockSpec {
 
     @Subject
     def itemsClient = new GWItemsClient()

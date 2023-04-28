@@ -5,7 +5,7 @@ import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentIte
 import com.kryszak.gwatlin.api.characters.model.character.sab.SabZoneMode
 import com.kryszak.gwatlin.api.shared.ItemBinding
 import com.kryszak.gwatlin.api.shared.ItemSlot
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
@@ -16,7 +16,7 @@ import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
-internal class CharactersClientTest : WiremockTestKt() {
+internal class CharactersClientTest : WiremockTest() {
 
     private val targetSchemaVersion = "2021-07-15T13:00:00.000Z"
     private val apiKey = "1234"

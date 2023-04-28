@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.miscellaneous
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class MiscellaneousClientSpec extends WiremockTest {
+class MiscellaneousClientSpec extends WiremockSpec {
 
     @Subject
     def miscellaneousClient = new GWMiscellaneousClient()

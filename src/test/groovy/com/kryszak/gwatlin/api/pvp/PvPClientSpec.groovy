@@ -4,10 +4,10 @@ import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import com.kryszak.gwatlin.api.pvp.model.season.PvpSeason
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class PvPClientSpec extends WiremockTest {
+class PvPClientSpec extends WiremockSpec {
 
     @Subject
     def pvpClient = new GWPvPClient()

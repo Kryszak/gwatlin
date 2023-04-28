@@ -2,10 +2,10 @@ package com.kryszak.gwatlin.api.gamemechanics
 
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class RacesClientSpec extends WiremockTest {
+class RacesClientSpec extends WiremockSpec {
 
     @Subject
     def racesClient = new GWRacesClient()

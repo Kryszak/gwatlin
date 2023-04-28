@@ -15,11 +15,11 @@ import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import com.kryszak.gwatlin.api.mapinfo.model.Region
 import com.kryszak.gwatlin.api.mapinfo.model.Sector
 import com.kryszak.gwatlin.api.mapinfo.model.SkillChallenge
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import kotlin.Pair
 import spock.lang.Subject
 
-class MapInfoClientSpec extends WiremockTest {
+class MapInfoClientSpec extends WiremockSpec {
 
     final TARGET_SCHEMA_VERSION = "2022-03-23T19:00:00.000Z"
 

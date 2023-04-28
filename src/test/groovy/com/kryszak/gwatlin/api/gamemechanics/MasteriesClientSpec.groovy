@@ -3,11 +3,11 @@ package com.kryszak.gwatlin.api.gamemechanics
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 import spock.lang.Unroll
 
-class MasteriesClientSpec extends WiremockTest {
+class MasteriesClientSpec extends WiremockSpec {
 
     @Subject
     def gameMechanicsClient = new GWMasteriesClient()

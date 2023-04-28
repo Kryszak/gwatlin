@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.items
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class FinishersClientSpec extends WiremockTest {
+class FinishersClientSpec extends WiremockSpec {
 
     @Subject
     def finishersClient = new GWFinishersClient()

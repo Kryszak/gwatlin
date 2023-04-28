@@ -1,12 +1,12 @@
 package com.kryszak.gwatlin.api.account
 
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
 
-internal class AccountClientTest : WiremockTestKt() {
+internal class AccountClientTest : WiremockTest() {
     private val apiKey = "1234"
 
     private val accountClient = GWAccountClient(apiKey)

@@ -1,13 +1,13 @@
 package com.kryszak.gwatlin.api.wvw
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
-internal class WvwClientTest : WiremockTestKt() {
+internal class WvwClientTest : WiremockTest() {
 
     private val wvwClient = GWWvwClient()
 

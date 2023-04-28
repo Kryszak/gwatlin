@@ -1,11 +1,11 @@
 package com.kryszak.gwatlin.api.token
 
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
 
-internal class TokenClientTest : WiremockTestKt() {
+internal class TokenClientTest : WiremockTest() {
 
     private val apiKey = "1234"
 

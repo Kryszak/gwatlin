@@ -1,10 +1,10 @@
 package com.kryszak.gwatlin.api.items
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class PvpAmuletsClientSpec extends WiremockTest {
+class PvpAmuletsClientSpec extends WiremockSpec {
 
     @Subject
     def pvpAmuletClient = new GWPvpAmuletsClient()

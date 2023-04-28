@@ -1,11 +1,11 @@
 package com.kryszak.gwatlin.api.commerce
 
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.shouldBe
 
-internal class CommerceClientTest : WiremockTestKt() {
+internal class CommerceClientTest : WiremockTest() {
 
     private val commerceClient = GWCommerceClient()
 

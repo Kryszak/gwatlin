@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.pvp
 
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.WiremockSpec
 import spock.lang.Subject
 
-class PvPAuthenticatedClientSpec extends WiremockTest {
+class PvPAuthenticatedClientSpec extends WiremockSpec {
 
     def API_KEY = "1234"
 

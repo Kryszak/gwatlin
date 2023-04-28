@@ -1,13 +1,13 @@
 package com.kryszak.gwatlin.api.achievement
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
 
-internal class AchievementsClientTest : WiremockTestKt() {
+internal class AchievementsClientTest : WiremockTest() {
 
     private val achievementsClient = GWAchievementsClient()
 

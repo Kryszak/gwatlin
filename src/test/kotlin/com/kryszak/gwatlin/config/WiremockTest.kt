@@ -14,7 +14,7 @@ import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
 import io.kotest.extensions.wiremock.WireMockListener
 
-internal open class WiremockTestKt : ShouldSpec({
+internal open class WiremockTest : ShouldSpec({
 }) {
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
@@ -84,6 +84,6 @@ internal open class WiremockTestKt : ShouldSpec({
     }
 
     protected fun parseResponseText(file: String): String {
-        return WiremockTestKt::class.java.getResource(file)?.readText()!!
+        return WiremockTest::class.java.getResource(file)?.readText()!!
     }
 }

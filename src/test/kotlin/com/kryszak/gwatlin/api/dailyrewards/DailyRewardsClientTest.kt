@@ -1,9 +1,9 @@
 package com.kryszak.gwatlin.api.dailyrewards
 
-import com.kryszak.gwatlin.config.WiremockTestKt
+import com.kryszak.gwatlin.config.WiremockTest
 import io.kotest.matchers.shouldBe
 
-internal class DailyRewardsClientTest : WiremockTestKt() {
+internal class DailyRewardsClientTest : WiremockTest() {
 
     private val dailyRewardsClient = GWDailyRewardsClient()
 
