@@ -57,6 +57,15 @@ internal open class WiremockTestKt : ShouldSpec({
         }
     }
 
+    protected fun stubNotFoundResponse(requestUrl: String, responseFile: String) {
+        wiremockServer.get {
+            url equalTo requestUrl
+        } returnsJson {
+            statusCode = 404
+            body = parseResponseText(responseFile)
+        }
+    }
+
     protected fun parseResponseText(file: String): String {
         return WiremockTestKt::class.java.getResource(file)?.readText()!!
     }
