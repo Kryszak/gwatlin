@@ -3,7 +3,7 @@ package com.kryszak.gwatlin.http.config
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
 
-class HttpConfigTest : ShouldSpec({
+internal class HttpConfigTest : ShouldSpec({
     should("Load http configuration") {
         // given
         val config = HttpConfig()

@@ -7,7 +7,7 @@ import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 
-class WvwClientTest : WiremockTestKt() {
+internal class WvwClientTest : WiremockTestKt() {
 
     private val wvwClient = GWWvwClient()
 
@@ -196,7 +196,7 @@ class WvwClientTest : WiremockTestKt() {
             val objectives = wvwClient.getObjectives(listOf("38-6"), lang)
 
             // then
-            assertSoftly(objectives.get(0)) {
+            assertSoftly(objectives[0]) {
                 id shouldBe "38-6"
                 name shouldBe "Speldan Clearcut"
                 sectorId shouldBe 844

@@ -1,17 +1,20 @@
 package com.kryszak.gwatlin.config
 
 import com.github.tomakehurst.wiremock.WireMockServer
-import com.github.tomakehurst.wiremock.client.WireMock.*
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
 import com.google.gson.Gson
 import com.kryszak.gwatlin.api.ApiLanguage
+import com.marcinziolo.kotlin.wiremock.contains
+import com.marcinziolo.kotlin.wiremock.equalTo
+import com.marcinziolo.kotlin.wiremock.get
+import com.marcinziolo.kotlin.wiremock.returnsJson
 import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
 import io.kotest.extensions.wiremock.WireMockListener
 
-open class WiremockTestKt : ShouldSpec({
+internal open class WiremockTestKt : ShouldSpec({
 }) {
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
@@ -24,19 +27,24 @@ open class WiremockTestKt : ShouldSpec({
 
     val gson = Gson()
 
-    protected fun stubResponse(url: String, responseFile: String) {
-        wiremockServer.stubFor(
-            get(urlEqualTo(url))
-                .willReturn(okJson(parseResponseText(responseFile)))
-        )
+    protected fun stubResponse(requestUrl: String, responseFile: String) {
+        wiremockServer.get {
+            url equalTo requestUrl
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
+
     }
 
-    protected fun stubResponseWithLanguage(url: String, responseFile: String, language: ApiLanguage) {
-        wiremockServer.stubFor(
-            get(urlEqualTo(url))
-                .withHeader("Accept-Language", equalTo(language.apiString))
-                .willReturn(okJson(parseResponseText(responseFile)))
-        )
+    protected fun stubResponseWithLanguage(requestUrl: String, responseFile: String, language: ApiLanguage) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            headers contains "Accept-Language" equalTo language.apiString
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
     }
 
     protected fun parseResponseText(file: String): String {
