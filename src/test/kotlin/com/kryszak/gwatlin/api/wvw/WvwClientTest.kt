@@ -191,7 +191,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get objective") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", lang)
+            stubResponse("/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", language = lang)
 
             // when
             val objectives = wvwClient.getObjectives(listOf("38-6"), lang)
@@ -226,7 +226,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get rank") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/wvw/ranks?ids=1", "/responses/wvw/rank.json", lang)
+            stubResponse("/wvw/ranks?ids=1", "/responses/wvw/rank.json", language = lang)
 
             // when
             val ranks = wvwClient.getRanks(listOf(1), lang)
@@ -253,7 +253,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get upgrade") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", lang)
+            stubResponse("/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", language = lang)
 
             // when
             val upgrades = wvwClient.getUpgrades(listOf(2), lang)

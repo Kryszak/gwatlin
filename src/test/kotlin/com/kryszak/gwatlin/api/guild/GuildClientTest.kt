@@ -104,10 +104,10 @@ internal class GuildClientTest : BaseWiremockTest() {
             val ids = listOf("ClaimableEditOptions", "Admin", "EditAnthem")
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage(
+            stubResponse(
                 "/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem",
                 "/responses/guild/permissions.json",
-                lang
+                language = lang
             )
 
             // when
@@ -163,7 +163,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             val ids = listOf(38, 43)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/guild/upgrades?ids=38,43", "/responses/guild/upgrades.json", lang)
+            stubResponse("/guild/upgrades?ids=38,43", "/responses/guild/upgrades.json", language = lang)
 
             // when
             val upgrades = guildClient.getGuildUpgrades(ids, lang)

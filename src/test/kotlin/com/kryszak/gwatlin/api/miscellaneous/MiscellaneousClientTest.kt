@@ -52,7 +52,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get dye colors") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/colors?ids=all", "/responses/miscellaneous/dye_colors.json", lang)
+            stubResponse("/colors?ids=all", "/responses/miscellaneous/dye_colors.json", language = lang)
 
             // when
             val colors = miscellaneousClient.getDyeColors(lang)
@@ -79,7 +79,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get currencies") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/currencies?ids=all", "/responses/miscellaneous/currencies.json", lang)
+            stubResponse("/currencies?ids=all", "/responses/miscellaneous/currencies.json", language = lang)
 
             // when
             val currencies = miscellaneousClient.getCurrencies(lang)
@@ -97,7 +97,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get dungeons") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", lang)
+            stubResponse("/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", language = lang)
 
             // when
             val dungeons = miscellaneousClient.getDungeons(lang)
@@ -115,7 +115,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get minis") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/minis?ids=all", "/responses/miscellaneous/minis.json", lang)
+            stubResponse("/minis?ids=all", "/responses/miscellaneous/minis.json", language = lang)
 
             // when
             val minis = miscellaneousClient.getMinis(lang)
@@ -133,7 +133,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get novelties") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/novelties?ids=all", "/responses/miscellaneous/novelties.json", lang)
+            stubResponse("/novelties?ids=all", "/responses/miscellaneous/novelties.json", language = lang)
 
             // when
             val novelties = miscellaneousClient.getNovelties(lang)
@@ -152,7 +152,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get raids") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/raids?ids=all", "/responses/miscellaneous/raids.json", lang)
+            stubResponse("/raids?ids=all", "/responses/miscellaneous/raids.json", language = lang)
 
             // when
             val raids = miscellaneousClient.getRaids(lang)
@@ -173,7 +173,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get titles") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/titles?ids=all", "/responses/miscellaneous/titles.json", lang)
+            stubResponse("/titles?ids=all", "/responses/miscellaneous/titles.json", language = lang)
 
             // when
             val titles = miscellaneousClient.getTitles(lang)
@@ -190,7 +190,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get worlds") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/worlds?ids=all", "/responses/miscellaneous/worlds.json", lang)
+            stubResponse("/worlds?ids=all", "/responses/miscellaneous/worlds.json", language = lang)
 
             // when
             val worlds = miscellaneousClient.getWorlds(lang)

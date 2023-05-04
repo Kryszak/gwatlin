@@ -27,7 +27,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
             val ids = listOf(1)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/recipes?ids=1", "/responses/items/recipe.json", lang)
+            stubResponse("/recipes?ids=1", "/responses/items/recipe.json", language = lang)
 
             // when
             val recipes = recipesClient.getRecipes(ids, lang)

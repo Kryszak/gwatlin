@@ -27,7 +27,7 @@ internal class MaterialsClientTest : BaseWiremockTest() {
             val ids = listOf(5)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/materials?ids=5", "/responses/items/material.json", lang)
+            stubResponse("/materials?ids=5", "/responses/items/material.json", language = lang)
 
             // when
             val materials = materialsClient.getMaterials(ids, lang)

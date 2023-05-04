@@ -29,7 +29,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/mounts/skins?ids=1,2", "/responses/gamemechanics/mount_skins.json", lang)
+            stubResponse("/mounts/skins?ids=1,2", "/responses/gamemechanics/mount_skins.json", language = lang)
 
             // when
             val mountSkins = mountsClient.getMountSkins(ids, lang)
@@ -64,7 +64,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/mounts/skins?ids=all", "/responses/gamemechanics/mount_skins_all.json", lang)
+            stubResponse("/mounts/skins?ids=all", "/responses/gamemechanics/mount_skins_all.json", language = lang)
 
             // when
             val mountSkins = mountsClient.getAllMountSkins(lang)
@@ -89,10 +89,10 @@ internal class MountsClientTest : BaseWiremockTest() {
             val ids = listOf("griffon", "jackal")
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage(
+            stubResponse(
                 "/mounts/types?ids=griffon,jackal",
                 "/responses/gamemechanics/mount_types.json",
-                lang
+                language = lang
             )
 
             // when
@@ -116,7 +116,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/mounts/types?ids=all", "/responses/gamemechanics/mount_types_all.json", lang)
+            stubResponse("/mounts/types?ids=all", "/responses/gamemechanics/mount_types_all.json", language = lang)
 
             // when
             val mountTypes = mountsClient.getAllMountTypes(lang)

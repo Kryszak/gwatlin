@@ -72,7 +72,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", lang)
+            stubResponse("/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", language = lang)
 
             // when
             val masteries = gameMechanicsClient.getMasteries(ids, lang)
@@ -100,7 +100,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", lang)
+            stubResponse("/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", language = lang)
 
             // when
             val masteries = gameMechanicsClient.getAllMasteries(lang)
@@ -111,18 +111,18 @@ internal class MasteriesClientTest : BaseWiremockTest() {
     }
 
     private fun stubFrenchMasteryResponse(): () -> Unit = {
-        stubResponseWithLanguage(
+        stubResponse(
             "/masteries/1",
             "/responses/gamemechanics/mastery_fr.json",
-            ApiLanguage.FR
+            language = ApiLanguage.FR
         )
     }
 
     private fun stubEnglishMasteryResponse(): () -> Unit = {
-        stubResponseWithLanguage(
+        stubResponse(
             "/masteries/1",
             "/responses/gamemechanics/mastery.json",
-            ApiLanguage.EN
+            language = ApiLanguage.EN
         )
     }
 

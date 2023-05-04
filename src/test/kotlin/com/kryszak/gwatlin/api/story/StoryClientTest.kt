@@ -15,7 +15,7 @@ internal class StoryClientTest : BaseWiremockTest() {
         should("Get stories") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/stories?ids=all", "/responses/story/stories.json", lang)
+            stubResponse("/stories?ids=all", "/responses/story/stories.json", language = lang)
 
             // when
             val stories = storyClient.getStories(lang)
@@ -40,7 +40,7 @@ internal class StoryClientTest : BaseWiremockTest() {
         should("Get story seasons") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/stories/seasons?ids=all", "/responses/story/story_seasons.json", lang)
+            stubResponse("/stories/seasons?ids=all", "/responses/story/story_seasons.json", language = lang)
 
             // when
             val seasons = storyClient.getStorySeasons(lang)

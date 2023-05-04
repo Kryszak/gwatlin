@@ -31,10 +31,10 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             val ids = listOf("Engineer", "Warrior")
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage(
+            stubResponse(
                 "/professions?ids=Engineer,Warrior",
                 "/responses/gamemechanics/professions.json",
-                lang
+                language = lang
             )
 
             // when
@@ -70,7 +70,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/professions?ids=all", "/responses/gamemechanics/professions_all.json", lang)
+            stubResponse("/professions?ids=all", "/responses/gamemechanics/professions_all.json", language = lang)
 
             // when
             val professions = professionsClient.getAllProfessions(lang)

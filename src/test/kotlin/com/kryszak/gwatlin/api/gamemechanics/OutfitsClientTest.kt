@@ -29,7 +29,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", lang)
+            stubResponse("/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", language = lang)
 
             // when
             val outfits = outfitsClient.getOutfits(ids, lang)
@@ -60,7 +60,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", lang)
+            stubResponse("/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", language = lang)
 
             // when
             val outfits = outfitsClient.getAllOutfits(lang)

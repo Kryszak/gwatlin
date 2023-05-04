@@ -27,7 +27,7 @@ internal class PetsClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/pets?ids=1,2", "/responses/gamemechanics/pets.json", lang)
+            stubResponse("/pets?ids=1,2", "/responses/gamemechanics/pets.json", language = lang)
 
             // when
             val pets = petsClient.getPets(ids, lang)
@@ -48,7 +48,7 @@ internal class PetsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/pets?ids=all", "/responses/gamemechanics/pets_all.json", lang)
+            stubResponse("/pets?ids=all", "/responses/gamemechanics/pets_all.json", language = lang)
 
             // when
             val pets = petsClient.getAllPets(lang)

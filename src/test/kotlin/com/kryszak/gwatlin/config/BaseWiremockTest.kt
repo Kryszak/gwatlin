@@ -3,7 +3,6 @@ package com.kryszak.gwatlin.config
 import com.github.tomakehurst.wiremock.WireMockServer
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
-import com.google.gson.Gson
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.marcinziolo.kotlin.wiremock.contains
 import com.marcinziolo.kotlin.wiremock.equalTo
@@ -15,6 +14,8 @@ import io.kotest.extensions.wiremock.ListenerMode
 import io.kotest.extensions.wiremock.WireMockListener
 
 internal open class BaseWiremockTest : ShouldSpec() {
+    private val languageHeader = "Accept-Language"
+
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
             .port(8089)
@@ -24,7 +25,15 @@ internal open class BaseWiremockTest : ShouldSpec() {
     override fun listeners(): List<TestListener> =
         listOf(listener(WireMockListener(wiremockServer, ListenerMode.PER_SPEC)))
 
-    val gson = Gson()
+    protected fun stubResponse(requestUrl: String, responseFile: String, language: ApiLanguage? = null) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            language?.let { headers contains languageHeader equalTo it.apiString }
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
+    }
 
     protected fun stubResponse(requestUrl: String, responseFile: String) {
         wiremockServer.get {
@@ -34,16 +43,6 @@ internal open class BaseWiremockTest : ShouldSpec() {
             body = parseResponseText(responseFile)
         }
 
-    }
-
-    protected fun stubResponseWithLanguage(requestUrl: String, responseFile: String, language: ApiLanguage) {
-        wiremockServer.get {
-            url equalTo requestUrl
-            headers contains "Accept-Language" equalTo language.apiString
-        } returnsJson {
-            statusCode = 200
-            body = parseResponseText(responseFile)
-        }
     }
 
     protected fun stubAuthResponse(requestUrl: String, responseFile: String, apiKey: String) {
@@ -101,7 +100,7 @@ internal open class BaseWiremockTest : ShouldSpec() {
         }
     }
 
-    protected fun parseResponseText(file: String): String {
+    private fun parseResponseText(file: String): String {
         return BaseWiremockTest::class.java.getResource(file)?.readText()!!
     }
 }

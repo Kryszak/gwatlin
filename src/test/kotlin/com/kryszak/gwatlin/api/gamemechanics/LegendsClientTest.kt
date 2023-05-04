@@ -27,7 +27,7 @@ internal class LegendsClientTest : BaseWiremockTest() {
             val ids = listOf("Legend1", "Legend2")
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends.json", lang)
+            stubResponse("/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends.json", language = lang)
 
             // when
             val legends = legendsClient.getLegends(ids, lang)

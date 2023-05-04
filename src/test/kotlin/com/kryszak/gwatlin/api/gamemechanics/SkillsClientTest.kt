@@ -29,7 +29,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
             val ids = listOf(1110, 1115)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", lang)
+            stubResponse("/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", language = lang)
 
             // when
             val skills = skillsClient.getSkills(ids, lang)

@@ -14,7 +14,7 @@ internal class BackstoryClientTest : BaseWiremockTest() {
         should("Get backstory answers") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/backstory/answers?ids=all", "/responses/story/backstory_answers.json", lang)
+            stubResponse("/backstory/answers?ids=all", "/responses/story/backstory_answers.json", language = lang)
 
             // when
             val answers = backstoryClient.getBackstoryAnswers(lang)
@@ -34,7 +34,7 @@ internal class BackstoryClientTest : BaseWiremockTest() {
         should("Get backstory questions") {
             // given
             val lang = ApiLanguage.EN
-            stubResponseWithLanguage("/backstory/questions?ids=all", "/responses/story/backstory_questions.json", lang)
+            stubResponse("/backstory/questions?ids=all", "/responses/story/backstory_questions.json", language = lang)
 
             // when
             val questions = backstoryClient.getBackstoryQuestions(lang)

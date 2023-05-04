@@ -27,7 +27,7 @@ internal class PvpClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", lang)
+            stubResponse("/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", language = lang)
 
             // when
             val ranks = pvpClient.getPvpRanks(ids, lang)
@@ -64,9 +64,9 @@ internal class PvpClientTest : BaseWiremockTest() {
             val ids = listOf("44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72")
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage(
+            stubResponse(
                 "/pvp/seasons?ids=44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
-                "/responses/pvp/seasons.json", lang
+                "/responses/pvp/seasons.json", language = lang
             )
 
             // when

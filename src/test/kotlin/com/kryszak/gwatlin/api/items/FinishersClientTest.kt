@@ -28,7 +28,7 @@ internal class FinishersClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/finishers?ids=1,2", "/responses/items/finishers.json", lang)
+            stubResponse("/finishers?ids=1,2", "/responses/items/finishers.json", language = lang)
 
             // when
             val finishers = finishersClient.getFinishers(ids, lang)

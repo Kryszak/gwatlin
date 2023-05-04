@@ -27,7 +27,7 @@ internal class PvpAmuletsClientTest : BaseWiremockTest() {
             val ids = listOf(7)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", lang)
+            stubResponse("/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", language = lang)
 
             // when
             val pvpAmulets = pvpAmuletClient.getPvpAmulets(ids, lang)

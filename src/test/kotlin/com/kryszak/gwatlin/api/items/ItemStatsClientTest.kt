@@ -27,7 +27,7 @@ internal class ItemStatsClientTest : BaseWiremockTest() {
             val id = 584
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/itemstats?ids=584", "/responses/items/item_stats.json", lang)
+            stubResponse("/itemstats?ids=584", "/responses/items/item_stats.json", language = lang)
 
             // when
             val stats = itemStatsClient.getItemStats(listOf(id), lang)

@@ -30,7 +30,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             val id = 1
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/specializations/1", "/responses/gamemechanics/specialization.json", lang)
+            stubResponse("/specializations/1", "/responses/gamemechanics/specialization.json", language = lang)
 
             // when
             val specialization = specializationClient.getSpecialization(id, lang)

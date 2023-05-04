@@ -28,7 +28,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
             val id = 10
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/skins?ids=10", "/responses/items/skin.json", lang)
+            stubResponse("/skins?ids=10", "/responses/items/skin.json", language = lang)
 
             // when
             val skins = skinsClient.getSkins(listOf(id), lang)

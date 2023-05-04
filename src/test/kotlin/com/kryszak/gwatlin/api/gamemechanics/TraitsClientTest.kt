@@ -29,7 +29,7 @@ internal class TraitsClientTest : BaseWiremockTest() {
             val ids = listOf(214, 221)
             val lang = ApiLanguage.EN
 
-            stubResponseWithLanguage("/traits?ids=214,221", "/responses/gamemechanics/traits.json", lang)
+            stubResponse("/traits?ids=214,221", "/responses/gamemechanics/traits.json", language = lang)
 
             // when
             val traits = traitsClient.getTraits(ids, lang)
