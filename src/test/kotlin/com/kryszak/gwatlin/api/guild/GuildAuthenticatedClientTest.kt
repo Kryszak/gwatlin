@@ -46,10 +46,11 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
             // given
             val apiKey = "123"
 
-            stubUnauthenticatedResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
                 "/responses/guild/guild_log_unauthenticated.json",
-                "123"
+                apiKey = "123",
+                responseStatus = 401
             )
 
             // when

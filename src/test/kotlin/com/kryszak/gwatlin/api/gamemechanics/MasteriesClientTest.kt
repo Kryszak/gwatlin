@@ -58,7 +58,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             // given
             val id = 40
 
-            stubNotFoundResponse("/masteries/40", "/responses/gamemechanics/mastery_error.json")
+            stubResponse("/masteries/40", "/responses/gamemechanics/mastery_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { gameMechanicsClient.getMastery(id) }

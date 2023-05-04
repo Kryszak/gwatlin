@@ -52,7 +52,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             // given
             val id = 100
 
-            stubNotFoundResponse("/specializations/100", "/responses/gamemechanics/specialization_error.json")
+            stubResponse("/specializations/100", "/responses/gamemechanics/specialization_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { specializationClient.getSpecialization(id) }

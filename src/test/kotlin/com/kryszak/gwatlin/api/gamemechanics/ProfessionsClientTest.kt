@@ -83,7 +83,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val id = "asdf"
 
-            stubNotFoundResponse("/professions?ids=asdf", "/responses/gamemechanics/professions_error.json")
+            stubResponse("/professions?ids=asdf", "/responses/gamemechanics/professions_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { professionsClient.getProfessions(listOf(id)) }

@@ -43,7 +43,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
         should("Throw exception on non existing cat") {
             // given
             val id = 100
-            stubNotFoundResponse("/home/cats/100", "/responses/homeinstance/cat_error.json")
+            stubResponse("/home/cats/100", "/responses/homeinstance/cat_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { homeInstanceClient.getCat(id) }

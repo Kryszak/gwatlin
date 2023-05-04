@@ -47,7 +47,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             // given
             val id = 1000
 
-            stubNotFoundResponse("/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json")
+            stubResponse("/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { outfitsClient.getOutfits(listOf(id)) }

@@ -68,7 +68,11 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Throw exception when non existing achievement is requested") {
             // given
             val id = 12345
-            stubNotFoundResponse("/achievements?ids=12345", "/responses/achievements/achievement_error.json")
+            stubResponse(
+                "/achievements?ids=12345",
+                "/responses/achievements/achievement_error.json",
+                responseStatus = 404
+            )
 
             // when
             val exception = shouldThrow<ApiRequestException> { achievementsClient.getAchievementsByIds(listOf(id)) }
@@ -174,9 +178,10 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Throw exception on non existing category") {
             // given
             val id = 1000
-            stubNotFoundResponse(
+            stubResponse(
                 "/achievements/categories/1000",
-                "/responses/achievements/achievement_category_error.json"
+                "/responses/achievements/achievement_category_error.json",
+                responseStatus = 404
             )
 
             // when

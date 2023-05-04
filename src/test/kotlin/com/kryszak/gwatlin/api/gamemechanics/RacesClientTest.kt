@@ -44,7 +44,7 @@ internal class RacesClientTest : BaseWiremockTest() {
             // given
             val id = "nobody"
 
-            stubNotFoundResponse("/races/nobody", "/responses/gamemechanics/race_error.json")
+            stubResponse("/races/nobody", "/responses/gamemechanics/race_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { racesClient.getRace(id) }

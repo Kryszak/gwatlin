@@ -51,7 +51,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val id = 1000
 
-            stubNotFoundResponse("/mounts/skins?ids=1000", "/responses/gamemechanics/mount_skins_error.json")
+            stubResponse("/mounts/skins?ids=1000", "/responses/gamemechanics/mount_skins_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountSkins(listOf(id)) }
@@ -129,7 +129,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val id = "i_do_not_exist"
 
-            stubNotFoundResponse("/mounts/types?ids=i_do_not_exist", "/responses/gamemechanics/mount_type_error.json")
+            stubResponse("/mounts/types?ids=i_do_not_exist", "/responses/gamemechanics/mount_type_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountTypes(listOf(id)) }

@@ -31,59 +31,17 @@ internal open class BaseWiremockTest : ShouldSpec() {
         requestUrl: String,
         responseFile: String,
         language: ApiLanguage? = null,
-        apiKey: String? = null
+        apiKey: String? = null,
+        schemaVersion: String? = null,
+        responseStatus: Int = 200
     ) {
         wiremockServer.get {
             url equalTo requestUrl
             language?.let { headers contains languageHeader equalTo it.apiString }
             apiKey?.let { headers contains authorizationHeader equalTo "Bearer $it" }
+            schemaVersion?.let { headers contains schemaVersionHeader equalTo it }
         } returnsJson {
-            statusCode = 200
-            body = parseResponseText(responseFile)
-        }
-    }
-
-    protected fun stubUnauthenticatedResponse(requestUrl: String, responseFile: String, apiKey: String) {
-        wiremockServer.get {
-            url equalTo requestUrl
-            headers contains authorizationHeader equalTo "Bearer $apiKey"
-        } returnsJson {
-            statusCode = 401
-            body = parseResponseText(responseFile)
-        }
-    }
-
-    protected fun stubAuthResponseWithSchema(
-        requestUrl: String,
-        responseFile: String,
-        apiKey: String,
-        schemaVersion: String
-    ) {
-        wiremockServer.get {
-            url equalTo requestUrl
-            headers contains authorizationHeader equalTo "Bearer $apiKey"
-            headers contains schemaVersionHeader equalTo schemaVersion
-        } returnsJson {
-            statusCode = 200
-            body = parseResponseText(responseFile)
-        }
-    }
-
-    protected fun stubNotFoundResponse(requestUrl: String, responseFile: String) {
-        wiremockServer.get {
-            url equalTo requestUrl
-        } returnsJson {
-            statusCode = 404
-            body = parseResponseText(responseFile)
-        }
-    }
-
-    protected fun stubResponseWithSchema(requestUrl: String, responseFile: String, schemaVersion: String) {
-        wiremockServer.get {
-            url equalTo requestUrl
-            headers contains schemaVersionHeader equalTo schemaVersion
-        } returnsJson {
-            statusCode = 200
+            statusCode = responseStatus
             body = parseResponseText(responseFile)
         }
     }
