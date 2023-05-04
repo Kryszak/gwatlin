@@ -2,13 +2,14 @@ package com.kryszak.gwatlin.api.homeinstance
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class HomeInstanceClientTest : WiremockTest() {
+internal class HomeInstanceClientTest : BaseWiremockTest() {
 
     private val homeInstanceClient = GWHomeInstanceClient()
 
@@ -21,7 +22,7 @@ internal class HomeInstanceClientTest : WiremockTest() {
             val catIdsList = homeInstanceClient.getCatIds()
 
             // then
-            catIdsList.size shouldBe 35
+            catIdsList shouldHaveSize 35
         }
 
         should("Get cat") {
@@ -75,7 +76,7 @@ internal class HomeInstanceClientTest : WiremockTest() {
             val nodeIdsList = homeInstanceClient.getNodeIds()
 
             // then
-            nodeIdsList.size shouldBe 50
+            nodeIdsList shouldHaveSize 50
         }
     }
 }

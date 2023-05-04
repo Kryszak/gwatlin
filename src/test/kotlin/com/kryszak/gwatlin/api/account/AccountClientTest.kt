@@ -1,12 +1,13 @@
 package com.kryszak.gwatlin.api.account
 
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class AccountClientTest : WiremockTest() {
+internal class AccountClientTest : BaseWiremockTest() {
     private val apiKey = "1234"
 
     private val accountClient = GWAccountClient(apiKey)
@@ -25,10 +26,10 @@ internal class AccountClientTest : WiremockTest() {
                 name shouldBe "Account.1234"
                 age shouldBe 22911780
                 world shouldBe 1004
-                guilds.size shouldBe 5
-                guildLeader.size shouldBe 1
+                guilds shouldHaveSize 5
+                guildLeader shouldHaveSize 1
                 created shouldBe "2013-04-25T22:09:00Z"
-                access.size shouldBe 3
+                access shouldHaveSize 3
                 commander
                 fractalLevel shouldBe 100
                 dailyAp shouldBe 7659
@@ -47,7 +48,7 @@ internal class AccountClientTest : WiremockTest() {
             // then
             assertSoftly(achievements[2]) {
                 id shouldBe 1653
-                bits?.size shouldBe 4
+                bits!! shouldHaveSize 4
                 current shouldBe 4
                 max shouldBe 30
                 !done
@@ -62,12 +63,12 @@ internal class AccountClientTest : WiremockTest() {
             val vault = accountClient.getAccountVault()
 
             // then
-            vault.size shouldBe 6
+            vault shouldHaveSize 6
             assertSoftly(vault[3]!!) {
                 id shouldBe 46760
                 count shouldBe 1
-                upgrades?.size shouldBe 1
-                infusions?.size shouldBe 1
+                upgrades!! shouldHaveSize 1
+                infusions!! shouldHaveSize 1
             }
         }
 
@@ -243,7 +244,7 @@ internal class AccountClientTest : WiremockTest() {
 
             // then
             assertSoftly(masteryDetails) {
-                unlocked.size shouldBe 2
+                unlocked shouldHaveSize 2
                 assertSoftly(totals[0]) {
                     region shouldBe "Tyria"
                     spent shouldBe 49

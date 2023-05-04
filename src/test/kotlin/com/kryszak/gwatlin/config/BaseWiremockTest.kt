@@ -14,7 +14,7 @@ import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
 import io.kotest.extensions.wiremock.WireMockListener
 
-internal open class WiremockTest : ShouldSpec({
+internal open class BaseWiremockTest : ShouldSpec({
 }) {
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
@@ -83,7 +83,17 @@ internal open class WiremockTest : ShouldSpec({
         }
     }
 
+    protected fun stubResponseWithSchema(requestUrl: String, responseFile: String, schemaVersion: String) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            headers contains "X-Schema-Version" equalTo schemaVersion
+        } returnsJson {
+            statusCode = 200
+            body = parseResponseText(responseFile)
+        }
+    }
+
     protected fun parseResponseText(file: String): String {
-        return WiremockTest::class.java.getResource(file)?.readText()!!
+        return BaseWiremockTest::class.java.getResource(file)?.readText()!!
     }
 }

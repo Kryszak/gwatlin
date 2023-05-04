@@ -1,13 +1,14 @@
 package com.kryszak.gwatlin.api.miscellaneous
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
-internal class MiscellaneousClientTest : WiremockTest() {
+internal class MiscellaneousClientTest : BaseWiremockTest() {
 
     private val miscellaneousClient = GWMiscellaneousClient()
 
@@ -45,7 +46,7 @@ internal class MiscellaneousClientTest : WiremockTest() {
             val quaggans = miscellaneousClient.getQuaggans()
 
             // then
-            quaggans.size shouldBe 35
+            quaggans shouldHaveSize 35
         }
 
         should("Get dye colors") {

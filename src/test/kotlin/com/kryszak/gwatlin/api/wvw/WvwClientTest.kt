@@ -1,13 +1,14 @@
 package com.kryszak.gwatlin.api.wvw
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
-internal class WvwClientTest : WiremockTest() {
+internal class WvwClientTest : BaseWiremockTest() {
 
     private val wvwClient = GWWvwClient()
 
@@ -184,7 +185,7 @@ internal class WvwClientTest : WiremockTest() {
             val ids = wvwClient.getObjectiveIds()
 
             // then
-            ids.size shouldBe 178
+            ids shouldHaveSize 178
         }
 
         should("Get objective") {
@@ -219,7 +220,7 @@ internal class WvwClientTest : WiremockTest() {
             val ids = wvwClient.getRankIds()
 
             // then
-            ids.size shouldBe 105
+            ids shouldHaveSize 105
         }
 
         should("Get rank") {
@@ -246,7 +247,7 @@ internal class WvwClientTest : WiremockTest() {
             val ids = wvwClient.getUpgradeIds()
 
             // then
-            ids.size shouldBe 48
+            ids shouldHaveSize 48
         }
 
         should("Get upgrade") {

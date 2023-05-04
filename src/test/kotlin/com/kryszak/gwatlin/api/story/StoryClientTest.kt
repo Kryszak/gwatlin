@@ -1,13 +1,13 @@
 package com.kryszak.gwatlin.api.story
 
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 
-internal class StoryClientTest : WiremockTest() {
+internal class StoryClientTest : BaseWiremockTest() {
 
     private val storyClient = GWStoryClient()
 

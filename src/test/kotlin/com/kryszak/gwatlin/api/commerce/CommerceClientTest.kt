@@ -1,11 +1,12 @@
 package com.kryszak.gwatlin.api.commerce
 
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class CommerceClientTest : WiremockTest() {
+internal class CommerceClientTest : BaseWiremockTest() {
 
     private val commerceClient = GWCommerceClient()
 
@@ -18,7 +19,7 @@ internal class CommerceClientTest : WiremockTest() {
             val ids = commerceClient.getCommerceListingsIds()
 
             // then
-            ids.size shouldBe 25384
+            ids shouldHaveSize 25384
         }
 
         should("Get commerce listings") {
@@ -36,7 +37,7 @@ internal class CommerceClientTest : WiremockTest() {
                     unitPrice shouldBe 81
                     quantity shouldBe 42424
                 }
-                sells.size shouldBe 548
+                sells shouldHaveSize 548
             }
         }
 
@@ -76,7 +77,7 @@ internal class CommerceClientTest : WiremockTest() {
             val ids = commerceClient.getPriceIds()
 
             // then
-            ids.size shouldBe 25384
+            ids shouldHaveSize 25384
         }
 
         should("Get prices") {

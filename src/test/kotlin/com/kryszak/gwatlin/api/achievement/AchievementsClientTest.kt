@@ -1,13 +1,14 @@
 package com.kryszak.gwatlin.api.achievement
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class AchievementsClientTest : WiremockTest() {
+internal class AchievementsClientTest : BaseWiremockTest() {
 
     private val achievementsClient = GWAchievementsClient()
 
@@ -20,7 +21,7 @@ internal class AchievementsClientTest : WiremockTest() {
             val idsList = achievementsClient.getAchievementIdsList()
 
             // then
-            idsList.size shouldBe 3392
+            idsList shouldHaveSize 3392
         }
 
         should("Get single achievement") {
@@ -32,7 +33,7 @@ internal class AchievementsClientTest : WiremockTest() {
             val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
 
             // then
-            achievementList.size shouldBe 1
+            achievementList shouldHaveSize 1
             assertSoftly(achievementList[0]) {
                 id shouldBe 1840
                 name shouldBe "Daily Completionist"
@@ -61,7 +62,7 @@ internal class AchievementsClientTest : WiremockTest() {
             val achievementList = achievementsClient.getAchievementsByIds(ids)
 
             // then
-            achievementList.size shouldBe 3
+            achievementList shouldHaveSize 3
         }
 
         should("Throw exception when non existing achievement is requested") {
@@ -116,7 +117,7 @@ internal class AchievementsClientTest : WiremockTest() {
             val achievementGroupIdsList = achievementsClient.getAchievementGroupIds()
 
             // then
-            achievementGroupIdsList.size shouldBe 11
+            achievementGroupIdsList shouldHaveSize 11
         }
 
         should("Get achievement group") {
@@ -136,7 +137,7 @@ internal class AchievementsClientTest : WiremockTest() {
                 name shouldBe "Heart of Thorns"
                 description shouldBe "Achievements for accomplishments throughout the jungle."
                 order shouldBe 6
-                categories.size shouldBe 6
+                categories shouldHaveSize 6
             }
         }
 
@@ -148,7 +149,7 @@ internal class AchievementsClientTest : WiremockTest() {
             val achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
 
             // then
-            achievementCategoryIdsList.size shouldBe 196
+            achievementCategoryIdsList shouldHaveSize 196
         }
 
         should("Get achievement category") {
@@ -166,7 +167,7 @@ internal class AchievementsClientTest : WiremockTest() {
                 description shouldBe ""
                 order shouldBe 10
                 icon shouldBe "https://render.guildwars2.com/file/E00460A2CAD85D47406EAB4213D1010B3E80C9B0/42675.png"
-                achievements.size shouldBe 44
+                achievements shouldHaveSize 44
             }
         }
 

@@ -1,9 +1,10 @@
 package com.kryszak.gwatlin.api.dailyrewards
 
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class DailyRewardsClientTest : WiremockTest() {
+internal class DailyRewardsClientTest : BaseWiremockTest() {
 
     private val dailyRewardsClient = GWDailyRewardsClient()
 
@@ -16,7 +17,7 @@ internal class DailyRewardsClientTest : WiremockTest() {
             val recipesIds = dailyRewardsClient.getDailyCraftingRecipesIds()
 
             // then
-            recipesIds.size shouldBe 5
+            recipesIds shouldHaveSize 5
         }
 
         should("Get daily map chest ids") {
@@ -27,7 +28,7 @@ internal class DailyRewardsClientTest : WiremockTest() {
             val chestsIds = dailyRewardsClient.getMapChestsIds()
 
             // then
-            chestsIds.size shouldBe 8
+            chestsIds shouldHaveSize 8
         }
 
         should("Get daily world bosses ids") {
@@ -38,7 +39,7 @@ internal class DailyRewardsClientTest : WiremockTest() {
             val chestsIds = dailyRewardsClient.getWorldBossesIds()
 
             // then
-            chestsIds.size shouldBe 13
+            chestsIds shouldHaveSize 13
         }
     }
 }

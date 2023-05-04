@@ -5,18 +5,19 @@ import com.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentIte
 import com.kryszak.gwatlin.api.characters.model.character.sab.SabZoneMode
 import com.kryszak.gwatlin.api.shared.ItemBinding
 import com.kryszak.gwatlin.api.shared.ItemSlot
-import com.kryszak.gwatlin.config.WiremockTest
+import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainAll
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
-internal class CharactersClientTest : WiremockTest() {
+internal class CharactersClientTest : BaseWiremockTest() {
 
     private val targetSchemaVersion = "2021-07-15T13:00:00.000Z"
     private val apiKey = "1234"
@@ -51,7 +52,7 @@ internal class CharactersClientTest : WiremockTest() {
                 created shouldBe "2013-08-09T12:22:00Z"
                 lastModified shouldBe "2022-09-24T14:27:00Z"
                 deaths shouldBe 3519
-                crafting.size shouldBe 2
+                crafting shouldHaveSize 2
                 title shouldBe 300
                 backstory shouldContainExactly listOf("15-84", "7-55", "186-161", "16-88", "17-93")
                 wvwAbilities shouldContainExactly listOf(
@@ -63,8 +64,8 @@ internal class CharactersClientTest : WiremockTest() {
                 )
                 buildTabsUnlocked shouldBe 4
                 activeBuildTab shouldBe 2
-                buildTabs.size shouldBe 4
-                equipment.size shouldBe 76
+                buildTabs shouldHaveSize 4
+                equipment shouldHaveSize 76
                 assertSoftly(equipment[2]) {
                     id shouldBe 80190
                     slot shouldBe ItemSlot.COAT
@@ -75,18 +76,18 @@ internal class CharactersClientTest : WiremockTest() {
                 }
                 equipmentTabsUnlocked shouldBe 5
                 activeEquipmentTab shouldBe 2
-                equipmentTabs.size shouldBe 5
+                equipmentTabs shouldHaveSize 5
                 assertSoftly(equipmentTabs[0]) {
                     isActive.shouldBeFalse()
                 }
                 assertSoftly(equipmentTabs[1]) {
                     name shouldBe "Weaver SW DA"
                     isActive.shouldBeTrue()
-                    equipment.size shouldBe 17
+                    equipment shouldHaveSize 17
                     assertSoftly(equipment[1]) {
                         id shouldBe 80190
-                        infusions?.size shouldBe 1
-                        dyes?.size shouldBe 4
+                        infusions!! shouldHaveSize 1
+                        dyes!! shouldHaveSize 4
                         charges shouldBe null
                         assertSoftly(stats!!) {
                             id shouldBe 161
@@ -98,7 +99,7 @@ internal class CharactersClientTest : WiremockTest() {
                         }
                     }
                 }
-                training.size shouldBe 13
+                training shouldHaveSize 13
                 assertSoftly(training[5]) {
                     id shouldBe 34
                     spent shouldBe 60
@@ -128,7 +129,7 @@ internal class CharactersClientTest : WiremockTest() {
             val buildTabs = charactersClient.getBuildTabs(characterName)
 
             // then
-            buildTabs.size shouldBe 4
+            buildTabs shouldHaveSize 4
         }
 
         should("Get character buildtab") {
@@ -306,7 +307,7 @@ internal class CharactersClientTest : WiremockTest() {
             val equipmentTabs = charactersClient.getEquipmentTabs(characterName)
 
             // then
-            equipmentTabs.size shouldBe 5
+            equipmentTabs shouldHaveSize 5
         }
 
         should("Get character equipment tab") {
@@ -329,7 +330,7 @@ internal class CharactersClientTest : WiremockTest() {
                 tab shouldBe 3
                 name shouldBe "Quickness Catalyst"
                 isActive.shouldBeTrue()
-                equipment.size shouldBe 16
+                equipment shouldHaveSize 16
                 assertSoftly(equipmentPvp) {
                     amulet shouldBe 8
                     rune shouldBe 21215
@@ -395,7 +396,7 @@ internal class CharactersClientTest : WiremockTest() {
                 assertSoftly(it[1]) {
                     id shouldBe 45053
                     size shouldBe 18
-                    inventory.size shouldBe 18
+                    inventory shouldHaveSize 18
                     inventory[9].binding.shouldBeNull()
                     assertSoftly(inventory[10]) {
                         id shouldBe 79835
@@ -407,7 +408,7 @@ internal class CharactersClientTest : WiremockTest() {
                 assertSoftly(it[4]) {
                     id shouldBe 9423
                     size shouldBe 15
-                    inventory.size shouldBe 15
+                    inventory shouldHaveSize 15
                     inventory[3].shouldBeNull()
                     assertSoftly(inventory[0]) {
                         id shouldBe 23001
@@ -434,7 +435,7 @@ internal class CharactersClientTest : WiremockTest() {
 
             // then
             recipes.shouldNotBeNull()
-            recipes.size shouldBe 776
+            recipes shouldHaveSize 776
             recipes shouldContainAll listOf(3, 3415, 13839)
         }
 
@@ -478,7 +479,7 @@ internal class CharactersClientTest : WiremockTest() {
             val heroPoints = charactersClient.getHeropoints(characterName)
 
             // then
-            heroPoints.size shouldBe 165
+            heroPoints shouldHaveSize 165
             heroPoints shouldContainAll listOf("0-0", "0-67", "0-113", "0-232")
         }
 
@@ -497,7 +498,7 @@ internal class CharactersClientTest : WiremockTest() {
             val quests = charactersClient.getQuests(characterName)
 
             // then
-            quests.size shouldBe 108
+            quests shouldHaveSize 108
             quests shouldContainAll listOf(71, 254, 488, 608)
         }
 
@@ -517,7 +518,7 @@ internal class CharactersClientTest : WiremockTest() {
 
             // then
             assertSoftly(characterSAB) {
-                zones.size shouldBe 11
+                zones shouldHaveSize 11
                 assertSoftly(zones[4]) {
                     id shouldBe 5
                     mode shouldBe SabZoneMode.NORMAL
@@ -530,7 +531,7 @@ internal class CharactersClientTest : WiremockTest() {
                     world shouldBe 1
                     zone shouldBe 1
                 }
-                unlocks.size shouldBe 8
+                unlocks shouldHaveSize 8
                 assertSoftly(unlocks[0]) {
                     id shouldBe 6
                     name shouldBe "whip"
@@ -542,7 +543,7 @@ internal class CharactersClientTest : WiremockTest() {
                     name.shouldBeNull()
                 }
                 unlocks[4].id shouldBe 18
-                songs.size shouldBe 1
+                songs shouldHaveSize 1
                 assertSoftly(songs[0]) {
                     id shouldBe 1
                     name shouldBe "secret_song"
