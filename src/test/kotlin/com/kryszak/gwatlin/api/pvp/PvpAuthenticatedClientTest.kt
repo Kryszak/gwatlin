@@ -15,7 +15,7 @@ internal class PvpAuthenticatedClientTest : BaseWiremockTest() {
     init {
         should("Get pvp stats") {
             // given
-            stubAuthResponse("/pvp/stats", "/responses/pvp/stats.json", apiKey)
+            stubResponse("/pvp/stats", "/responses/pvp/stats.json", apiKey = apiKey)
 
             // when
             val stats = pvpClient.getPvpStats()
@@ -39,7 +39,7 @@ internal class PvpAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get pvp game ids") {
             // given
-            stubAuthResponse("/pvp/games", "/responses/pvp/account_game_ids.json", apiKey)
+            stubResponse("/pvp/games", "/responses/pvp/account_game_ids.json", apiKey = apiKey)
 
             // when
             val gameIds = pvpClient.getPvpGameIds()
@@ -61,7 +61,11 @@ internal class PvpAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get pvp game") {
             // given
-            stubAuthResponse("/pvp/games?ids=ABCDE02B-8888-FEBA-1234-DE98765C7DEF", "/responses/pvp/game.json", apiKey)
+            stubResponse(
+                "/pvp/games?ids=ABCDE02B-8888-FEBA-1234-DE98765C7DEF",
+                "/responses/pvp/game.json",
+                apiKey = apiKey
+            )
 
             // when
             val games = pvpClient.getPvpGames(listOf("ABCDE02B-8888-FEBA-1234-DE98765C7DEF"))
@@ -84,7 +88,7 @@ internal class PvpAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get pvp standings") {
             // given
-            stubAuthResponse("/pvp/standings", "/responses/pvp/standings.json", apiKey)
+            stubResponse("/pvp/standings", "/responses/pvp/standings.json", apiKey = apiKey)
 
             // when
             val standings = pvpClient.getPvpStanding()

@@ -15,6 +15,8 @@ import io.kotest.extensions.wiremock.WireMockListener
 
 internal open class BaseWiremockTest : ShouldSpec() {
     private val languageHeader = "Accept-Language"
+    private val authorizationHeader = "Authorization"
+    private val schemaVersionHeader = "X-Schema-Version"
 
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
@@ -25,30 +27,16 @@ internal open class BaseWiremockTest : ShouldSpec() {
     override fun listeners(): List<TestListener> =
         listOf(listener(WireMockListener(wiremockServer, ListenerMode.PER_SPEC)))
 
-    protected fun stubResponse(requestUrl: String, responseFile: String, language: ApiLanguage? = null) {
+    protected fun stubResponse(
+        requestUrl: String,
+        responseFile: String,
+        language: ApiLanguage? = null,
+        apiKey: String? = null
+    ) {
         wiremockServer.get {
             url equalTo requestUrl
             language?.let { headers contains languageHeader equalTo it.apiString }
-        } returnsJson {
-            statusCode = 200
-            body = parseResponseText(responseFile)
-        }
-    }
-
-    protected fun stubResponse(requestUrl: String, responseFile: String) {
-        wiremockServer.get {
-            url equalTo requestUrl
-        } returnsJson {
-            statusCode = 200
-            body = parseResponseText(responseFile)
-        }
-
-    }
-
-    protected fun stubAuthResponse(requestUrl: String, responseFile: String, apiKey: String) {
-        wiremockServer.get {
-            url equalTo requestUrl
-            headers contains "Authorization" equalTo "Bearer $apiKey"
+            apiKey?.let { headers contains authorizationHeader equalTo "Bearer $it" }
         } returnsJson {
             statusCode = 200
             body = parseResponseText(responseFile)
@@ -58,7 +46,7 @@ internal open class BaseWiremockTest : ShouldSpec() {
     protected fun stubUnauthenticatedResponse(requestUrl: String, responseFile: String, apiKey: String) {
         wiremockServer.get {
             url equalTo requestUrl
-            headers contains "Authorization" equalTo "Bearer $apiKey"
+            headers contains authorizationHeader equalTo "Bearer $apiKey"
         } returnsJson {
             statusCode = 401
             body = parseResponseText(responseFile)
@@ -73,8 +61,8 @@ internal open class BaseWiremockTest : ShouldSpec() {
     ) {
         wiremockServer.get {
             url equalTo requestUrl
-            headers contains "Authorization" equalTo "Bearer $apiKey"
-            headers contains "X-Schema-Version" equalTo schemaVersion
+            headers contains authorizationHeader equalTo "Bearer $apiKey"
+            headers contains schemaVersionHeader equalTo schemaVersion
         } returnsJson {
             statusCode = 200
             body = parseResponseText(responseFile)
@@ -93,7 +81,7 @@ internal open class BaseWiremockTest : ShouldSpec() {
     protected fun stubResponseWithSchema(requestUrl: String, responseFile: String, schemaVersion: String) {
         wiremockServer.get {
             url equalTo requestUrl
-            headers contains "X-Schema-Version" equalTo schemaVersion
+            headers contains schemaVersionHeader equalTo schemaVersion
         } returnsJson {
             statusCode = 200
             body = parseResponseText(responseFile)

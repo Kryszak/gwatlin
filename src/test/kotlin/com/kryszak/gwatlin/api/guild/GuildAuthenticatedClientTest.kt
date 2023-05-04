@@ -16,11 +16,11 @@ import io.kotest.matchers.shouldBe
 
 internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
-    private val VALID_API_KEY = "1234"
+    private val validApiKey = "1234"
 
-    private val GUILD_ID = "4BBB52AA-D768-4FC6-8EDE-C299F2822F0F"
+    private val guildId = "4BBB52AA-D768-4FC6-8EDE-C299F2822F0F"
 
-    private val guildAuthClient = GWGuildAuthenticatedClient(VALID_API_KEY)
+    private val guildAuthClient = GWGuildAuthenticatedClient(validApiKey)
 
     init {
         should("Should get guild log (data.forAll)") {
@@ -35,7 +35,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                 stubbing()
 
                 // when
-                val guildLogs = guildAuthClient.getGuildLog(GUILD_ID, since)
+                val guildLogs = guildAuthClient.getGuildLog(guildId, since)
 
                 // then
                 guildLogs shouldContain expectedGuildLog
@@ -54,7 +54,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
             // when
             val exception =
-                shouldThrow<ApiRequestException> { GuildAuthenticatedClient(apiKey).getGuildLog(GUILD_ID, "") }
+                shouldThrow<ApiRequestException> { GuildAuthenticatedClient(apiKey).getGuildLog(guildId, "") }
 
             // then
             exception.message shouldBe "RetrieveError(text=Invalid access token)"
@@ -62,14 +62,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild members") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members",
                 "/responses/guild/members.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val members = guildAuthClient.getGuildMembers(GUILD_ID)
+            val members = guildAuthClient.getGuildMembers(guildId)
 
             // then
             assertSoftly(members[0]) {
@@ -81,14 +81,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild ranks") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks",
                 "/responses/guild/ranks.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val ranks = guildAuthClient.getGuildRanks(GUILD_ID)
+            val ranks = guildAuthClient.getGuildRanks(guildId)
 
             // then
             assertSoftly(ranks[0]) {
@@ -101,14 +101,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild stash") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash",
                 "/responses/guild/stash.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val stash = guildAuthClient.getGuildStash(GUILD_ID)
+            val stash = guildAuthClient.getGuildStash(guildId)
 
             // then
             assertSoftly(stash[0]) {
@@ -122,14 +122,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild treasury") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury",
                 "/responses/guild/treasury.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val treasury = guildAuthClient.getGuildTreasury(GUILD_ID)
+            val treasury = guildAuthClient.getGuildTreasury(guildId)
 
             // then
             assertSoftly(treasury[0]) {
@@ -141,14 +141,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild teams") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams",
                 "/responses/guild/teams.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val teams = guildAuthClient.getGuildTeams(GUILD_ID)
+            val teams = guildAuthClient.getGuildTeams(guildId)
 
             // then
             assertSoftly(teams[0]) {
@@ -187,14 +187,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
         should("Get guild upgrade ids") {
             // given
-            stubAuthResponse(
+            stubResponse(
                 "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades",
                 "/responses/guild/guild_upgrade_ids.json",
-                VALID_API_KEY
+                apiKey = validApiKey
             )
 
             // when
-            val upgradeIds = guildAuthClient.getGuildUpgrades(GUILD_ID)
+            val upgradeIds = guildAuthClient.getGuildUpgrades(guildId)
 
             // then
             upgradeIds shouldHaveSize 3
@@ -202,18 +202,18 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
     }
 
     private fun stubGuildLogResponseWithSince(): () -> Unit = {
-        stubAuthResponse(
+        stubResponse(
             "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285",
             "/responses/guild/guild_log_since.json",
-            VALID_API_KEY
+            apiKey = validApiKey
         )
     }
 
     private fun stubGuildLogResponseWithoutSince(): () -> Unit = {
-        stubAuthResponse(
+        stubResponse(
             "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
             "/responses/guild/guild_log.json",
-            VALID_API_KEY
+            apiKey = validApiKey
         )
     }
 

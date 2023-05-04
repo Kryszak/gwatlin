@@ -15,7 +15,7 @@ internal class AccountClientTest : BaseWiremockTest() {
     init {
         should("Get account details") {
             // given
-            stubAuthResponse("/account", "/responses/account/account.json", apiKey)
+            stubResponse("/account", "/responses/account/account.json", apiKey = apiKey)
 
             // when
             val account = accountClient.getAccountDetails()
@@ -40,7 +40,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account achievements") {
             // given
-            stubAuthResponse("/account/achievements", "/responses/account/achievements.json", apiKey)
+            stubResponse("/account/achievements", "/responses/account/achievements.json", apiKey = apiKey)
 
             // given
             val achievements = accountClient.getAccountAchievements()
@@ -57,7 +57,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account vault") {
             // given
-            stubAuthResponse("/account/bank", "/responses/account/bank.json", apiKey)
+            stubResponse("/account/bank", "/responses/account/bank.json", apiKey = apiKey)
 
             // given
             val vault = accountClient.getAccountVault()
@@ -74,7 +74,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account daily crafting") {
             // given
-            stubAuthResponse("/account/dailycrafting", "/responses/account/dailycrafting.json", apiKey)
+            stubResponse("/account/dailycrafting", "/responses/account/dailycrafting.json", apiKey = apiKey)
 
             // when
             val dailyCrafting = accountClient.getAccountDailyCrafting()
@@ -89,7 +89,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get done daily dungeons") {
             /// given
-            stubAuthResponse("/account/dungeons", "/responses/account/dungeons.json", apiKey)
+            stubResponse("/account/dungeons", "/responses/account/dungeons.json", apiKey = apiKey)
 
             // when
             val dungeons = accountClient.getCompletedDailyDungeons()
@@ -100,7 +100,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get unlocked dyes") {
             // given
-            stubAuthResponse("/account/dyes", "/responses/account/dyes.json", apiKey)
+            stubResponse("/account/dyes", "/responses/account/dyes.json", apiKey = apiKey)
 
             // when
             val dyes = accountClient.getUnlockedDyes()
@@ -111,7 +111,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account finishers") {
             // given
-            stubAuthResponse("/account/finishers", "/responses/account/finishers.json", apiKey)
+            stubResponse("/account/finishers", "/responses/account/finishers.json", apiKey = apiKey)
 
             // when
             val finishers = accountClient.getFinishers()
@@ -126,7 +126,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account gliders") {
             // given
-            stubAuthResponse("/account/gliders", "/responses/account/gliders.json", apiKey)
+            stubResponse("/account/gliders", "/responses/account/gliders.json", apiKey = apiKey)
 
             // when
             val gliders = accountClient.getGliders()
@@ -137,7 +137,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account cats") {
             // given
-            stubAuthResponse("/account/home/cats", "/responses/account/cats.json", apiKey)
+            stubResponse("/account/home/cats", "/responses/account/cats.json", apiKey = apiKey)
 
             // when
             val cats = accountClient.getCats()
@@ -151,7 +151,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get unlocked home instance nodes") {
             // given
-            stubAuthResponse("/account/home/nodes", "/responses/account/nodes.json", apiKey)
+            stubResponse("/account/home/nodes", "/responses/account/nodes.json", apiKey = apiKey)
 
             // when
             val nodes = accountClient.getNodes()
@@ -172,7 +172,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account inventory") {
             // given
-            stubAuthResponse("/account/inventory", "/responses/account/inventory.json", apiKey)
+            stubResponse("/account/inventory", "/responses/account/inventory.json", apiKey = apiKey)
 
             // when
             val inventory = accountClient.getInventory()
@@ -187,7 +187,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account luck") {
             // given
-            stubAuthResponse("/account/luck", "/responses/account/luck.json", apiKey)
+            stubResponse("/account/luck", "/responses/account/luck.json", apiKey = apiKey)
 
             // when
             val luck = accountClient.getLuck()
@@ -201,7 +201,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account mail carriers") {
             // given
-            stubAuthResponse("/account/mailcarriers", "/responses/account/mailcarriers.json", apiKey)
+            stubResponse("/account/mailcarriers", "/responses/account/mailcarriers.json", apiKey = apiKey)
 
             // when
             val mailcarriers = accountClient.getMailCarriers()
@@ -212,7 +212,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get map chests") {
             // given
-            stubAuthResponse("/account/mapchests", "/responses/account/mapchests.json", apiKey)
+            stubResponse("/account/mapchests", "/responses/account/mapchests.json", apiKey = apiKey)
 
             // when
             val mapchests = accountClient.getMapChests()
@@ -223,7 +223,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account masteries") {
             // given
-            stubAuthResponse("/account/masteries", "/responses/account/masteries.json", apiKey)
+            stubResponse("/account/masteries", "/responses/account/masteries.json", apiKey = apiKey)
 
             // when
             val masteries = accountClient.getMasteries()
@@ -237,7 +237,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account mastery details") {
             // given
-            stubAuthResponse("/account/mastery/points", "/responses/account/mastery_points.json", apiKey)
+            stubResponse("/account/mastery/points", "/responses/account/mastery_points.json", apiKey = apiKey)
 
             // when
             val masteryDetails = accountClient.getMasteryDetails()
@@ -255,7 +255,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account materials") {
             // given
-            stubAuthResponse("/account/materials", "/responses/account/materials.json", apiKey)
+            stubResponse("/account/materials", "/responses/account/materials.json", apiKey = apiKey)
 
             // when
             val materials = accountClient.getMaterials()
@@ -270,7 +270,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get account minis") {
             // given
-            stubAuthResponse("/account/minis", "/responses/account/minis.json", apiKey)
+            stubResponse("/account/minis", "/responses/account/minis.json", apiKey = apiKey)
 
             //when 
             val minis = accountClient.getMinis()
@@ -281,7 +281,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get unlocked mount skins") {
             // given
-            stubAuthResponse("/account/mounts/skins", "/responses/account/mount_skins.json", apiKey)
+            stubResponse("/account/mounts/skins", "/responses/account/mount_skins.json", apiKey = apiKey)
 
             // when
             val mountSkins = accountClient.getMountSkins()
@@ -292,7 +292,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get unlocked mount types") {
             // given
-            stubAuthResponse("/account/mounts/types", "/responses/account/mount_types.json", apiKey)
+            stubResponse("/account/mounts/types", "/responses/account/mount_types.json", apiKey = apiKey)
 
             // when
             val mountTypes = accountClient.getMountTypes()
@@ -310,7 +310,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get novelties") {
             // given
-            stubAuthResponse("/account/novelties", "/responses/account/novelties.json", apiKey)
+            stubResponse("/account/novelties", "/responses/account/novelties.json", apiKey = apiKey)
 
             // when
             val novelties = accountClient.getNovelties()
@@ -321,7 +321,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get outfits") {
             // given
-            stubAuthResponse("/account/outfits", "/responses/account/outfits.json", apiKey)
+            stubResponse("/account/outfits", "/responses/account/outfits.json", apiKey = apiKey)
 
             // when
             val outfits = accountClient.getOutfits()
@@ -332,7 +332,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get pvp heroes") {
             // given
-            stubAuthResponse("/account/pvp/heroes", "/responses/account/pvp_heroes.json", apiKey)
+            stubResponse("/account/pvp/heroes", "/responses/account/pvp_heroes.json", apiKey = apiKey)
 
             // when
             val pvpHeroes = accountClient.getPvpHeroes()
@@ -343,7 +343,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get raids") {
             // given
-            stubAuthResponse("/account/raids", "/responses/account/raids.json", apiKey)
+            stubResponse("/account/raids", "/responses/account/raids.json", apiKey = apiKey)
 
             // when
             val raids = accountClient.getRaids()
@@ -354,7 +354,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get recipes") {
             // given
-            stubAuthResponse("/account/recipes", "/responses/account/recipes.json", apiKey)
+            stubResponse("/account/recipes", "/responses/account/recipes.json", apiKey = apiKey)
 
             // when
             val recipes = accountClient.getRecipes()
@@ -365,7 +365,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get skins") {
             // given
-            stubAuthResponse("/account/skins", "/responses/account/skins.json", apiKey)
+            stubResponse("/account/skins", "/responses/account/skins.json", apiKey = apiKey)
 
             // when
             val skins = accountClient.getSkins()
@@ -376,7 +376,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get titles") {
             // given
-            stubAuthResponse("/account/titles", "/responses/account/titles.json", apiKey)
+            stubResponse("/account/titles", "/responses/account/titles.json", apiKey = apiKey)
 
             // when
             val titles = accountClient.getTitles()
@@ -387,7 +387,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get wallet") {
             // given
-            stubAuthResponse("/account/wallet", "/responses/account/wallet.json", apiKey)
+            stubResponse("/account/wallet", "/responses/account/wallet.json", apiKey = apiKey)
 
             // when
             val wallet = accountClient.getWallet()
@@ -401,7 +401,7 @@ internal class AccountClientTest : BaseWiremockTest() {
 
         should("Get world bosses") {
             // given
-            stubAuthResponse("/account/worldbosses", "/responses/account/worldbosses.json", apiKey)
+            stubResponse("/account/worldbosses", "/responses/account/worldbosses.json", apiKey = apiKey)
 
             // when
             val worldbosses = accountClient.getWorldBosses()

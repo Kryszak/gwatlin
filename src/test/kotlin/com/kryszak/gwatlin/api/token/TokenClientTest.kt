@@ -14,7 +14,7 @@ internal class TokenClientTest : BaseWiremockTest() {
     init {
         should("Get token info") {
             // given
-            stubAuthResponse("/tokeninfo", "/responses/token/token.json", apiKey)
+            stubResponse("/tokeninfo", "/responses/token/token.json", apiKey = apiKey)
 
             // when
             val tokenInfo = tokenClient.getTokenInfo()
