@@ -2,7 +2,6 @@ package com.kryszak.gwatlin.api.dailyrewards
 
 import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.matchers.collections.shouldHaveSize
-import io.kotest.matchers.shouldBe
 
 internal class DailyRewardsClientTest : BaseWiremockTest() {
 
