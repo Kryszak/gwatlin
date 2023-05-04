@@ -14,8 +14,7 @@ import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
 import io.kotest.extensions.wiremock.WireMockListener
 
-internal open class BaseWiremockTest : ShouldSpec({
-}) {
+internal open class BaseWiremockTest : ShouldSpec() {
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
             .port(8089)
@@ -57,6 +56,15 @@ internal open class BaseWiremockTest : ShouldSpec({
         }
     }
 
+    protected fun stubUnauthenticatedResponse(requestUrl: String, responseFile: String, apiKey: String) {
+        wiremockServer.get {
+            url equalTo requestUrl
+            headers contains "Authorization" equalTo "Bearer $apiKey"
+        } returnsJson {
+            statusCode = 401
+            body = parseResponseText(responseFile)
+        }
+    }
 
     protected fun stubAuthResponseWithSchema(
         requestUrl: String,
