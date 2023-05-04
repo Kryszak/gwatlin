@@ -1,10 +1,11 @@
 package com.kryszak.gwatlin.config
 
 import com.github.tomakehurst.wiremock.WireMockServer
+import com.github.tomakehurst.wiremock.client.WireMock.absent
+import com.github.tomakehurst.wiremock.client.WireMock.matching
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
 import com.kryszak.gwatlin.api.ApiLanguage
-import com.marcinziolo.kotlin.wiremock.contains
 import com.marcinziolo.kotlin.wiremock.equalTo
 import com.marcinziolo.kotlin.wiremock.get
 import com.marcinziolo.kotlin.wiremock.returnsJson
@@ -37,9 +38,18 @@ internal open class BaseWiremockTest : ShouldSpec() {
     ) {
         wiremockServer.get {
             url equalTo requestUrl
-            language?.let { headers contains languageHeader equalTo it.apiString }
-            apiKey?.let { headers contains authorizationHeader equalTo "Bearer $it" }
-            schemaVersion?.let { headers contains schemaVersionHeader equalTo it }
+            withBuilder {
+                val languageHeaderValue = language?.let { matching(it.apiString) } ?: absent()
+                withHeader(languageHeader, languageHeaderValue)
+            }
+            withBuilder {
+                val authorizationHeaderValue = apiKey?.let { matching("Bearer $it") } ?: absent()
+                withHeader(authorizationHeader, authorizationHeaderValue)
+            }
+            withBuilder {
+                val schemaVersionHeaderValue = schemaVersion?.let { matching(it) } ?: absent()
+                withHeader(schemaVersionHeader, schemaVersionHeaderValue)
+            }
         } returnsJson {
             statusCode = responseStatus
             body = parseResponseText(responseFile)
