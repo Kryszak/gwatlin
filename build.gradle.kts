@@ -4,7 +4,7 @@ plugins {
     groovy
     jacoco
     id("maven-publish")
-    id("org.jetbrains.dokka") version "1.8.10"
+    id("org.jetbrains.dokka") version "1.8.20"
     kotlin("jvm") version "1.8.21"
 }
 
