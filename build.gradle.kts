@@ -2,8 +2,8 @@ plugins {
     groovy
     jacoco
     id("maven-publish")
-    id("org.jetbrains.dokka") version "1.8.10"
-    kotlin("jvm") version "1.8.21"
+    id("org.jetbrains.dokka") version "1.8.20"
+    kotlin("jvm") version "1.8.22"
 }
 
 val fuelVersion = "2.3.1"
