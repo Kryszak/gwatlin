@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v3
+      - name: ☕ Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
       - name: Update Gradle Wrapper
         uses: gradle-update/update-gradle-wrapper-action@v1
         with:
