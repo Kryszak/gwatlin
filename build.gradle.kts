@@ -5,7 +5,7 @@ plugins {
     jacoco
     id("maven-publish")
     id("org.jetbrains.dokka") version "1.8.20"
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.9.10"
 }
 
 val fuelVersion = "2.3.1"
