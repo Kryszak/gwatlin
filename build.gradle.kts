@@ -14,7 +14,7 @@ val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.11"
 val spockVersion = "2.3-groovy-4.0"
 val groovyVersion = "4.0.11"
-val wiremockVersion = "2.35.0"
+val wiremockVersion = "3.0.1"
 
 project.group = "com.kryszak"
 project.version = "1.6"
