@@ -1,15 +1,18 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     groovy
     jacoco
     id("maven-publish")
-    kotlin("jvm") version "1.8.20"
+    id("org.jetbrains.dokka") version "1.9.0"
+    kotlin("jvm") version "1.9.10"
     kotlin("plugin.serialization") version "1.8.20"
 }
 
 val fuelVersion = "2.3.1"
 val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
-val logbackVersion = "1.4.6"
+val logbackVersion = "1.4.11"
 val spockVersion = "2.3-groovy-4.0"
 val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
@@ -51,6 +54,10 @@ tasks.jacocoTestReport {
 tasks.test {
     useJUnitPlatform()
     finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.build {
+    finalizedBy(tasks.dokkaHtml)
 }
 
 publishing {
