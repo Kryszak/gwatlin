@@ -1,12 +1,11 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-
 plugins {
+    val kotlinVersion = "1.9.10"
     groovy
     jacoco
     id("maven-publish")
     id("org.jetbrains.dokka") version "1.9.0"
-    kotlin("jvm") version "1.9.10"
-    kotlin("plugin.serialization") version "1.8.20"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.serialization") version kotlinVersion
 }
 
 val fuelVersion = "2.3.1"
@@ -18,7 +17,7 @@ val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
 
 project.group = "com.kryszak"
-project.version = "1.6"
+project.version = "1.7"
 
 sourceSets {
     getByName("main").apply {

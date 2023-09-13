@@ -10,11 +10,8 @@ import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import com.kryszak.gwatlin.http.exception.RetrieveError
-import kotlinx.serialization.*
 import kotlinx.serialization.json.Json
-import com.kryszak.gwatlin.http.serializers.DimensionsSerializer
-import com.kryszak.gwatlin.http.serializers.PairSerializer
-import com.kryszak.gwatlin.http.serializers.RectangleSerializer
+import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
 internal open class BaseHttpClient(

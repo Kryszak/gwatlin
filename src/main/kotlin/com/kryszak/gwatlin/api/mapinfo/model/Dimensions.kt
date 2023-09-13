@@ -1,6 +1,6 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.kryszak.gwatlin.serializers.DimensionsSerializer
+import com.kryszak.gwatlin.http.serializers.DimensionsSerializer
 import kotlinx.serialization.Serializable
 
 /**

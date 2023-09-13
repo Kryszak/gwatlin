@@ -3,13 +3,8 @@ package com.kryszak.gwatlin.http.serializers
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
-import kotlinx.serialization.builtins.ArraySerializer
 import kotlinx.serialization.builtins.ListSerializer
-import kotlinx.serialization.builtins.PairSerializer
-import kotlinx.serialization.descriptors.buildClassSerialDescriptor
-import kotlinx.serialization.descriptors.serialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 
