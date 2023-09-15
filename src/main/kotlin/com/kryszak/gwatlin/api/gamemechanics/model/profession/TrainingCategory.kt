@@ -1,15 +1,17 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.profession
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Training category values
  */
+@Serializable
 enum class TrainingCategory {
-    @SerializedName("Skills")
+    @SerialName("Skills")
     SKILLS,
-    @SerializedName("5821")
+    @SerialName("Specializations")
     SPECIALIZATIONS,
-    @SerializedName("EliteSpecializations")
+    @SerialName("EliteSpecializations")
     ELITE_SPECIALIZATIONS
 }

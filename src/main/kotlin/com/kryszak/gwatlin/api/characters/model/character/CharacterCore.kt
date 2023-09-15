@@ -1,10 +1,12 @@
 package com.kryszak.gwatlin.api.characters.model.character
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for core character infos
  */
+@Serializable
 data class CharacterCore(
     val name: String,
     val race: String,
@@ -14,7 +16,7 @@ data class CharacterCore(
     val guild: String,
     val age: Int,
     val created: String,
-    @SerializedName("last_modified")
+    @SerialName("last_modified")
     val lastModified: String,
     val deaths: Int,
     val title: Int

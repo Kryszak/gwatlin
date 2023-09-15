@@ -39,7 +39,7 @@ internal class MiscellaneousClient : BaseHttpClient() {
         return getRequest("$filesEndpoint?ids=all")
     }
 
-    fun getQuaggans(): List<Icon> {
+    fun getQuaggans(): List<Quaggan> {
         return getRequest("$quaggansEndpoint?ids=all")
     }
 

@@ -1,11 +1,13 @@
 package com.kryszak.gwatlin.api.guild.model.treasury
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for objects describing which currently in-progress upgrades are needing this guild treasury
  */
+@Serializable
 data class GuildTreasuryUpgrade(
-        @SerializedName("upgrade_id") val upgradeId: Int,
+        @SerialName("upgrade_id") val upgradeId: Int,
         val count: Int
 )

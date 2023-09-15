@@ -2,20 +2,16 @@ package com.kryszak.gwatlin.http
 
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Request
-import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.serialization.responseObject
 import com.github.kittinunf.result.Result
-import com.google.gson.GsonBuilder
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.exception.ApiRequestException
-import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
-import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
 import com.kryszak.gwatlin.http.config.HttpConfig
 import com.kryszak.gwatlin.http.exception.ErrorResponse
 import com.kryszak.gwatlin.http.exception.RetrieveError
-import com.kryszak.gwatlin.http.serializers.DimensionsSerializer
-import com.kryszak.gwatlin.http.serializers.PairSerializer
-import com.kryszak.gwatlin.http.serializers.RectangleSerializer
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
 internal open class BaseHttpClient(
@@ -28,11 +24,9 @@ internal open class BaseHttpClient(
 
     protected val baseUrl: String
 
-    protected val gson = GsonBuilder()
-        .registerTypeAdapter(Pair::class.java, PairSerializer())
-        .registerTypeAdapter(Dimensions::class.java, DimensionsSerializer())
-        .registerTypeAdapter(Rectangle::class.java, RectangleSerializer())
-        .create()
+    protected val json = Json {
+        isLenient = true
+    }
 
     private val httpConfig: HttpConfig = HttpConfig()
 
@@ -46,9 +40,11 @@ internal open class BaseHttpClient(
                 .also { addDefaultHeaders(it, language) }
                 .also { log.info(logMessage.format(it.url)) }
                 .also { configBlock(it) }
-                .responseObject<T>(gson)
+                // The Fuel extension package doesn't acknowledge default serializers.
+                // The default serializers need to be passed manually, sadly
+                .responseObject<T>(json.serializersModule.serializer(), json)
 
-        return processResult(result, ErrorResponse(response, RetrieveError::class.java))
+        return processResult(result, ErrorResponse(response, RetrieveError.serializer()))
     }
 
     protected fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
@@ -65,7 +61,7 @@ internal open class BaseHttpClient(
             is Result.Failure -> {
                 log.error("Request failed! ${result.getException().message}")
                 try {
-                    val error = gson.fromJson(String(errorResponse.response.data), errorResponse.responseType)
+                    val error = json.decodeFromString(errorResponse.deserializationStrategy, String(errorResponse.response.data))
                     log.error("Error: $error")
                     throw ApiRequestException(error.toString())
                 } catch (e: IllegalStateException) {

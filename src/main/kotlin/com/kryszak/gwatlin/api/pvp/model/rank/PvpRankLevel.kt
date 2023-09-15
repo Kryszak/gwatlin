@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.pvp.model.rank
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for pvp rank level object
  */
+@Serializable
 data class PvpRankLevel(
-        @SerializedName("min_rank") val minRank: Int,
-        @SerializedName("max_rank") val maxRank: Int,
+        @SerialName("min_rank") val minRank: Int,
+        @SerialName("max_rank") val maxRank: Int,
         val points: Int
 )

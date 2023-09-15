@@ -1,28 +1,30 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.profession
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Model of fields representing weapons available to profession
  */
+@Serializable
 data class ProfessionWeapons(
-        @SerializedName("Axe") val axe: Weapon?,
-        @SerializedName("Dagger") val dagger: Weapon?,
-        @SerializedName("Mace") val mace: Weapon?,
-        @SerializedName("Pistol") val pistol: Weapon?,
-        @SerializedName("Sword") val sword: Weapon?,
-        @SerializedName("Scepter") val scepter: Weapon?,
-        @SerializedName("Focus") val focus: Weapon?,
-        @SerializedName("Shield") val shield: Weapon?,
-        @SerializedName("Torch") val torch: Weapon?,
-        @SerializedName("Warhorn") val warhorn: Weapon?,
-        @SerializedName("Greatword") val greatsword: Weapon?,
-        @SerializedName("Hammer") val hammer: Weapon?,
-        @SerializedName("Longbow") val longbow: Weapon?,
-        @SerializedName("Rifle") val rifle: Weapon?,
-        @SerializedName("Shortbow") val shortbow: Weapon?,
-        @SerializedName("Staff") val staff: Weapon?,
-        @SerializedName("Speargun") val speargun: Weapon?,
-        @SerializedName("Spear") val spear: Weapon?,
-        @SerializedName("Trident") val trident: Weapon?
+        @SerialName("Axe") val axe: Weapon? = null,
+        @SerialName("Dagger") val dagger: Weapon? = null,
+        @SerialName("Mace") val mace: Weapon? = null,
+        @SerialName("Pistol") val pistol: Weapon? = null,
+        @SerialName("Sword") val sword: Weapon? = null,
+        @SerialName("Scepter") val scepter: Weapon? = null,
+        @SerialName("Focus") val focus: Weapon? = null,
+        @SerialName("Shield") val shield: Weapon? = null,
+        @SerialName("Torch") val torch: Weapon? = null,
+        @SerialName("Warhorn") val warhorn: Weapon? = null,
+        @SerialName("Greatsword") val greatsword: Weapon? = null,
+        @SerialName("Hammer") val hammer: Weapon? = null,
+        @SerialName("Longbow") val longbow: Weapon? = null,
+        @SerialName("Rifle") val rifle: Weapon? = null,
+        @SerialName("Shortbow") val shortbow: Weapon? = null,
+        @SerialName("Staff") val staff: Weapon? = null,
+        @SerialName("Speargun") val speargun: Weapon? = null,
+        @SerialName("Spear") val spear: Weapon? = null,
+        @SerialName("Trident") val trident: Weapon? = null
 )

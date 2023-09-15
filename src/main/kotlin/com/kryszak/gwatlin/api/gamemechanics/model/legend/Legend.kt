@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.legend
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for legend object
  */
+@Serializable
 data class Legend(
         val id: String,
         val swap: Int,

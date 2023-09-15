@@ -32,7 +32,7 @@ class GWMiscellaneousClient {
     /**
      * Returns quaggan images
      */
-    fun getQuaggans(): List<Icon> {
+    fun getQuaggans(): List<Quaggan> {
         return miscellaneousClient.getQuaggans()
     }
 

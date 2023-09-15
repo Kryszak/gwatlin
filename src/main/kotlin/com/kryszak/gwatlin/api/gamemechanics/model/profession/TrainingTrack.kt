@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.profession
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model of track property of training object
  */
+@Serializable
 data class TrainingTrack(
         val cost: Int,
         val type: TrainingTrackType,
-        @SerializedName("skill_id") val skillId: Int?,
-        @SerializedName("trait_it") val traitId: Int?
+        @SerialName("skill_id") val skillId: Int? = null,
+        @SerialName("trait_id") val traitId: Int? = null
 )

@@ -1,17 +1,19 @@
 package com.kryszak.gwatlin.api.characters.model.character.equipment
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Enum for possible equipment item locations
  */
+@Serializable
 enum class EquipmentItemLocation {
-    @SerializedName("Equipped")
+    @SerialName("Equipped")
     EQUIPPED,
-    @SerializedName("Armory")
+    @SerialName("Armory")
     ARMORY,
-    @SerializedName("LegendaryArmory")
+    @SerialName("LegendaryArmory")
     LEGENDARY_ARMORY,
-    @SerializedName("EquippedFromLegendaryArmory")
+    @SerialName("EquippedFromLegendaryArmory")
     EQUIPPED_FROM_LEGENDARY_ARMORY
 }

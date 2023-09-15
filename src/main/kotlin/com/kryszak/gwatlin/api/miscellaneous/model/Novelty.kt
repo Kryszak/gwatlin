@@ -1,15 +1,17 @@
 package com.kryszak.gwatlin.api.miscellaneous.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for novelty object
  */
+@Serializable
 data class Novelty(
         val id: Int,
         val name: String,
         val description: String,
         val icon: String,
         val slot: String,
-        @SerializedName("unlock_item") val unlockItem: List<Int>?
+        @SerialName("unlock_item") val unlockItem: List<Int>?
 )

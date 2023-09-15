@@ -1,25 +1,27 @@
 package com.kryszak.gwatlin.api.items.model.item
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Item rarity values
  */
+@Serializable
 enum class ItemRarity {
-    @SerializedName("Junk")
+    @SerialName("Junk")
     JUNK,
-    @SerializedName("Basic")
+    @SerialName("Basic")
     BASIC,
-    @SerializedName("Fine")
+    @SerialName("Fine")
     FINE,
-    @SerializedName("Masterwork")
+    @SerialName("Masterwork")
     MASTERWORK,
-    @SerializedName("Rare")
+    @SerialName("Rare")
     RARE,
-    @SerializedName("Exotic")
+    @SerialName("Exotic")
     EXOTIC,
-    @SerializedName("Ascended")
+    @SerialName("Ascended")
     ASCENDED,
-    @SerializedName("Legendary")
+    @SerialName("Legendary")
     LEGENDARY
 }

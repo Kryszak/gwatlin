@@ -1,21 +1,27 @@
 package com.kryszak.gwatlin.http.serializers
 
-import com.google.gson.*
 import com.kryszak.gwatlin.api.mapinfo.model.Dimensions
 import com.kryszak.gwatlin.api.mapinfo.model.Rectangle
-import java.lang.reflect.Type
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.SerializationException
+import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 
-internal class RectangleSerializer: JsonSerializer<Rectangle>, JsonDeserializer<Rectangle> {
-    override fun serialize(src: Rectangle?, typeOfSrc: Type?, context: JsonSerializationContext): JsonElement {
-        return context.serialize(src?.asPair())
+/**
+ * Type adapter for [com.kryszak.gwatlin.api.mapinfo.model.Rectangle], supporting serialization and deserialization
+ */
+object RectangleSerializer : KSerializer<Rectangle> {
+    private val delegateSerializer = ListSerializer(Dimensions.serializer())
+    override val descriptor = delegateSerializer.descriptor
+
+    override fun serialize(encoder: Encoder, value: Rectangle) {
+        encoder.encodeSerializableValue(delegateSerializer, listOf(value.first, value.second))
     }
 
-    override fun deserialize(json: JsonElement?, typeOfT: Type?, context: JsonDeserializationContext): Rectangle? {
-        if (json == null || json !is JsonArray || json.size() != 2) return null
-        return Rectangle(
-            context.deserialize(json.get(0), Dimensions::class.java),
-            context.deserialize(json.get(1), Dimensions::class.java)
-        )
+    override fun deserialize(decoder: Decoder): Rectangle {
+        val dimensions = decoder.decodeSerializableValue(delegateSerializer)
+        if (dimensions.size != 2) throw SerializationException("Rectangles must consist of exactly 2 dimension arrays")
+        return Rectangle(dimensions[0], dimensions[1])
     }
-
 }

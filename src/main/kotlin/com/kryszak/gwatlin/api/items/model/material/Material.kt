@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.items.model.material
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for material object
  */
+@Serializable
 data class Material(
         val id: Int,
         val name: String,

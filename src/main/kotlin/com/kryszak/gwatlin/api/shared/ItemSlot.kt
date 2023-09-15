@@ -1,53 +1,55 @@
 package com.kryszak.gwatlin.api.shared
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Enum for possible item slot values
  */
+@Serializable
 enum class ItemSlot {
-    @SerializedName("HelmAquatic")
+    @SerialName("HelmAquatic")
     HELM_AQUATIC,
-    @SerializedName("Backpack")
+    @SerialName("Backpack")
     BACKPACK,
-    @SerializedName("Coat")
+    @SerialName("Coat")
     COAT,
-    @SerializedName("Boots")
+    @SerialName("Boots")
     BOOTS,
-    @SerializedName("Gloves")
+    @SerialName("Gloves")
     GLOVES,
-    @SerializedName("Helm")
+    @SerialName("Helm")
     HELM,
-    @SerializedName("Leggings")
+    @SerialName("Leggings")
     LEGGINGS,
-    @SerializedName("Accessory1")
+    @SerialName("Accessory1")
     ACCESSORY_1,
-    @SerializedName("Accessory2")
+    @SerialName("Accessory2")
     ACCESSORY_2,
-    @SerializedName("Ring1")
+    @SerialName("Ring1")
     RING_1,
-    @SerializedName("Ring2")
+    @SerialName("Ring2")
     RING_2,
-    @SerializedName("Amulet")
+    @SerialName("Amulet")
     AMULET,
-    @SerializedName("WeaponAquaticA")
+    @SerialName("WeaponAquaticA")
     WEAPON_AQUATIC_A,
-    @SerializedName("WeaponAquaticB")
+    @SerialName("WeaponAquaticB")
     WEAPON_AQUATIC_B,
-    @SerializedName("WeaponA1")
+    @SerialName("WeaponA1")
     WEAPON_A_1,
-    @SerializedName("WeaponA2")
+    @SerialName("WeaponA2")
     WEAPON_A_2,
-    @SerializedName("WeaponB1")
+    @SerialName("WeaponB1")
     WEAPON_B_1,
-    @SerializedName("WeaponB2")
+    @SerialName("WeaponB2")
     WEAPON_B_2,
-    @SerializedName("Shoulders")
+    @SerialName("Shoulders")
     SHOULDERS,
-    @SerializedName("Sickle")
+    @SerialName("Sickle")
     SICKLE,
-    @SerializedName("Axe")
+    @SerialName("Axe")
     AXE,
-    @SerializedName("Pick")
+    @SerialName("Pick")
     PICK
 }

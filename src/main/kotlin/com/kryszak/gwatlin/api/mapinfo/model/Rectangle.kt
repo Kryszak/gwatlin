@@ -1,9 +1,13 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
+import com.kryszak.gwatlin.http.serializers.RectangleSerializer
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for a Rectangle. A rectangle is defined by a pair of coordinates. The first coordinate represents the upper
  * left corner, while the second is the lower right corner.
  */
+@Serializable(with = RectangleSerializer::class)
 data class Rectangle(
     val first: Coordinates,
     val second: Coordinates

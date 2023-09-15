@@ -1,10 +1,12 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.specialization
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for specialization object
  */
+@Serializable
 data class Specialization(
         val id: Int,
         val name: String,
@@ -12,6 +14,6 @@ data class Specialization(
         val elite: Boolean,
         val icon: String,
         val background: String,
-        @SerializedName("minor_traits") val minorTraits: List<Int>,
-        @SerializedName("major_traits") val majorTraits: List<Int>
+        @SerialName("minor_traits") val minorTraits: List<Int>,
+        @SerialName("major_traits") val majorTraits: List<Int>
 )

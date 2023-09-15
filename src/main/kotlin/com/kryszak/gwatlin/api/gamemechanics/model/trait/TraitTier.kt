@@ -1,15 +1,18 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.trait
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 
 /**
  * Trait tier values
  */
+@Serializable
 enum class TraitTier {
-    @SerializedName("1")
+    @SerialName("1")
     ADEPT,
-    @SerializedName("2")
+    @SerialName("2")
     MASTER,
-    @SerializedName("3")
+    @SerialName("3")
     GRANDMASTER
 }

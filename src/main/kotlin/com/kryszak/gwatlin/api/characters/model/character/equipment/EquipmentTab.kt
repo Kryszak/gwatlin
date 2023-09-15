@@ -1,16 +1,18 @@
 package com.kryszak.gwatlin.api.characters.model.character.equipment
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for equipment tabs
  */
+@Serializable
 data class EquipmentTab(
     val tab: Int,
     val name: String,
-    @SerializedName("is_active")
+    @SerialName("is_active")
     val isActive: Boolean,
     val equipment: List<EquipmentItem>,
-    @SerializedName("equipment_pvp")
+    @SerialName("equipment_pvp")
     val equipmentPvp: EquipmentPvp
 )

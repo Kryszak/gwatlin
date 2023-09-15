@@ -1,18 +1,20 @@
 package com.kryszak.gwatlin.api.miscellaneous.model.color
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for dye color
  */
+@Serializable
 data class DyeColor(
         val id: Int,
         val name: String,
-        @SerializedName("base_rgb") val baseRgb: List<Int>,
+        @SerialName("base_rgb") val baseRgb: List<Int>,
         val cloth: ColorDetails,
         val leather: ColorDetails,
         val metal: ColorDetails,
-        val fur: ColorDetails?,
-        val item: Int,
+        val fur: ColorDetails? = null,
+        val item: Int? = null,
         val categories: List<String>
 )
