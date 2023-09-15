@@ -50,7 +50,6 @@ internal class SkillsClientTest : BaseWiremockTest() {
                     text shouldBe "Range"
                     type shouldBe "Range"
                     icon shouldBe "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png"
-                    value shouldBe 900
                 }
             }
         }

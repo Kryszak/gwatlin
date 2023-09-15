@@ -2,14 +2,14 @@ package com.kryszak.gwatlin.api.guild
 
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.guild.model.log.GuildLog
+import com.kryszak.gwatlin.api.guild.model.log.GuildLogTreasury
+import com.kryszak.gwatlin.api.guild.model.log.GuildLogUpgrade
+import com.kryszak.gwatlin.api.guild.model.log.UpgradeAction
 import com.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
 import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
-import io.kotest.data.forAll
-import io.kotest.data.headers
-import io.kotest.data.row
-import io.kotest.data.table
+import io.kotest.datatest.withData
 import io.kotest.matchers.collections.shouldContain
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
@@ -23,14 +23,19 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
     private val guildAuthClient = GWGuildAuthenticatedClient(validApiKey)
 
     init {
-        should("Should get guild log (data.forAll)") {
-            forAll(
-                table(
-                    headers("since", "expectedGuildLogs", "stubbing"),
-                    row("", expectedGuildLogWithoutSince(), stubGuildLogResponseWithoutSince()),
-                    row("1285", expectedGuildLogWithSince(), stubGuildLogResponseWithSince())
+        context("Should get guild logs") {
+            withData(
+                mapOf(
+                    "without since" to GuildLogTestInput(
+                        "",
+                        expectedGuildLogWithoutSince(),
+                        stubGuildLogResponseWithoutSince()
+                    ),
+                    "since 1285" to GuildLogTestInput(
+                        "1285", expectedGuildLogWithSince(), stubGuildLogResponseWithSince()
+                    )
                 )
-            ) { since, expectedGuildLog, stubbing ->
+            ) { (since, expectedGuildLog, stubbing) ->
                 // given
                 stubbing()
 
@@ -219,8 +224,14 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
     }
 
     private fun expectedGuildLogWithoutSince() =
-        GuildLog(1190, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413", "treasury")
+        GuildLogTreasury(1190, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413", "treasury", 24299, 150)
 
     private fun expectedGuildLogWithSince() =
-        GuildLog(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", "upgrade")
+        GuildLogUpgrade(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", "upgrade", UpgradeAction.QUEUED, 364)
+
+    data class GuildLogTestInput(
+        val since: String,
+        val expectedGuildLogs: GuildLog,
+        val stubbing: () -> Unit
+    )
 }

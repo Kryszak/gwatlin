@@ -48,7 +48,7 @@ internal class AccountClientTest : BaseWiremockTest() {
             // then
             assertSoftly(achievements[2]) {
                 id shouldBe 1653
-                bits!! shouldHaveSize 4
+                bits shouldHaveSize 4
                 current shouldBe 4
                 max shouldBe 30
                 !done
@@ -67,8 +67,8 @@ internal class AccountClientTest : BaseWiremockTest() {
             assertSoftly(vault[3]!!) {
                 id shouldBe 46760
                 count shouldBe 1
-                upgrades!! shouldHaveSize 1
-                infusions!! shouldHaveSize 1
+                upgrades shouldHaveSize 1
+                infusions shouldHaveSize 1
             }
         }
 

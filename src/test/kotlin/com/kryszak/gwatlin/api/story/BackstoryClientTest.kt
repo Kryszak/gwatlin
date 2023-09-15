@@ -3,6 +3,7 @@ package com.kryszak.gwatlin.api.story
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
+import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
 
@@ -26,8 +27,8 @@ internal class BackstoryClientTest : BaseWiremockTest() {
                 description shouldBe "I'm dignified even when up to my ears in mud. It's what makes people respect me. A serious, thoughtful demeanor is the route to success."
                 journal shouldBe "Though trouble may follow me, I overcome it with dignity."
                 question shouldBe 7
-                races shouldBe null
-                professions shouldBe null
+                races.shouldBeEmpty()
+                professions.shouldBeEmpty()
             }
         }
 
@@ -46,8 +47,8 @@ internal class BackstoryClientTest : BaseWiremockTest() {
                 description shouldBe "Trouble may follow me, but I use my ______ to overcome it."
                 answers shouldContainExactly listOf("7-53", "7-54", "7-55")
                 order shouldBe 1
-                races shouldBe null
-                professions shouldBe null
+                races.shouldBeEmpty()
+                professions.shouldBeEmpty()
             }
         }
     }

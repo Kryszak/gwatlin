@@ -4,6 +4,7 @@ import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 
 internal class PvpClientTest : BaseWiremockTest() {
@@ -92,7 +93,7 @@ internal class PvpClientTest : BaseWiremockTest() {
                 assertSoftly(leaderboards.legendary) {
                     assertSoftly(settings) {
                         name shouldBe ""
-                        duration shouldBe 0
+                        duration.shouldBeNull()
                         scoring shouldBe "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
                         assertSoftly(tiers[0]) {
                             range shouldHaveSize 2

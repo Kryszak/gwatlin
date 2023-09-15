@@ -3,6 +3,7 @@ package com.kryszak.gwatlin.api.story
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
+import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
@@ -30,7 +31,7 @@ internal class StoryClientTest : BaseWiremockTest() {
                 level shouldBe 1
                 races shouldContainExactly listOf("Charr")
                 order shouldBe 0
-                professions.shouldBeNull()
+                professions.shouldBeEmpty()
                 assertSoftly(chapters[0]) {
                     name shouldBe "1. Getting the Band Back Together"
                 }

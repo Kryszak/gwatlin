@@ -72,7 +72,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                     skin shouldBe 1419
                     binding shouldBe ItemBinding.ACCOUNT
                     location shouldBe EquipmentItemLocation.EQUIPPED_FROM_LEGENDARY_ARMORY
-                    tabs?.first() shouldBe 2
+                    tabs.first() shouldBe 2
                 }
                 equipmentTabsUnlocked shouldBe 5
                 activeEquipmentTab shouldBe 2
@@ -86,8 +86,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                     equipment shouldHaveSize 17
                     assertSoftly(equipment[1]) {
                         id shouldBe 80190
-                        infusions!! shouldHaveSize 1
-                        dyes!! shouldHaveSize 4
+                        infusions shouldHaveSize 1
+                        dyes shouldHaveSize 4
                         charges shouldBe null
                         assertSoftly(stats!!) {
                             id shouldBe 161
@@ -375,17 +375,17 @@ internal class CharactersClientTest : BaseWiremockTest() {
             assertSoftly(bag!!) {
                 size shouldBe 6
                 assertSoftly(it[0]) {
-                    assertSoftly(inventory[6]) {
+                    assertSoftly(inventory[6]!!) {
                         id shouldBe 2258
                         upgrades shouldBe listOf(24774)
                         upgradeSlotIndices shouldBe listOf(0)
-                        dyes.shouldBeNull()
+                        dyes.shouldBeEmpty()
                         boundTo.shouldBeNull()
                         stats.shouldBeNull()
                         charges.shouldBeNull()
-                        infusions.shouldBeNull()
+                        infusions.shouldBeEmpty()
                     }
-                    assertSoftly(inventory[9]) {
+                    assertSoftly(inventory[9]!!) {
                         skin shouldBe 746
                         upgrades shouldBe listOf(71425)
                         dyes shouldBe listOf(6, 315, 453, 1)
@@ -397,8 +397,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                     id shouldBe 45053
                     size shouldBe 18
                     inventory shouldHaveSize 18
-                    inventory[9].binding.shouldBeNull()
-                    assertSoftly(inventory[10]) {
+                    inventory[9]!!.binding.shouldBeNull()
+                    assertSoftly(inventory[10]!!) {
                         id shouldBe 79835
                         count shouldBe 10
                         binding shouldBe ItemBinding.CHARACTER
@@ -410,7 +410,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                     size shouldBe 15
                     inventory shouldHaveSize 15
                     inventory[3].shouldBeNull()
-                    assertSoftly(inventory[0]) {
+                    assertSoftly(inventory[0]!!) {
                         id shouldBe 23001
                         count shouldBe 1
                         binding shouldBe ItemBinding.ACCOUNT
