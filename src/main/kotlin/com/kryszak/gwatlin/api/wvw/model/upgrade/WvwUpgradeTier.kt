@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.wvw.model.upgrade
 
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for wvw upgrade tiers property
  */
+@Serializable
 data class WvwUpgradeTier(
         val name: String,
         val upgrades: List<WvwUpgradeTierUpgrade>,
-        @SerializedName("yaks_required") val yaksRequired: Int
+        @SerialName("yaks_required") val yaksRequired: Int
 )

@@ -1,6 +1,5 @@
 package com.kryszak.gwatlin.api.guild
 
-import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.guild.model.GuildMember
 import com.kryszak.gwatlin.api.guild.model.GuildRank
@@ -10,6 +9,8 @@ import com.kryszak.gwatlin.api.guild.model.team.GuildTeam
 import com.kryszak.gwatlin.api.guild.model.treasury.GuildTreasury
 import com.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
 import com.kryszak.gwatlin.config.WiremockTest
+import kotlinx.serialization.SerializersKt
+import kotlinx.serialization.builtins.BuiltinSerializersKt
 import spock.lang.Shared
 import spock.lang.Subject
 import spock.lang.Unroll
@@ -180,32 +181,44 @@ class GuildAuthenticatedClientSpec extends WiremockTest {
     }
 
     private List<GuildTeam> parseTeams() {
-        gson.fromJson(parseResponseText("/responses/guild/teams.json"),
-                new TypeToken<List<GuildTeam>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildTeam)),
+                parseResponseText("/responses/guild/teams.json")
+        ) as List<GuildTeam>
     }
 
     private List<GuildTreasury> parseTreasury() {
-        gson.fromJson(parseResponseText("/responses/guild/treasury.json"),
-                new TypeToken<List<GuildTreasury>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildTreasury)),
+                parseResponseText("/responses/guild/treasury.json")
+        ) as List<GuildTreasury>
     }
 
     private List<GuildStash> parseStash() {
-        gson.fromJson(parseResponseText("/responses/guild/stash.json"),
-                new TypeToken<List<GuildStash>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildStash)),
+                parseResponseText("/responses/guild/stash.json")
+        ) as List<GuildStash>
     }
 
     private List<GuildRank> parseRanks() {
-        gson.fromJson(parseResponseText("/responses/guild/ranks.json"),
-                new TypeToken<List<GuildRank>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildRank)),
+                parseResponseText("/responses/guild/ranks.json")
+        ) as List<GuildRank>
     }
 
     private List<GuildMember> parseGuildMembers() {
-        gson.fromJson(parseResponseText("/responses/guild/members.json"),
-                new TypeToken<List<GuildMember>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildMember)),
+                parseResponseText("/responses/guild/members.json")
+        ) as List<GuildMember>
     }
 
     private List<GuildLog> parseGuildLog(String file) {
-        gson.fromJson(parseResponseText("/responses/guild/$file"),
-                new TypeToken<List<GuildLog>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildLog)),
+                parseResponseText("/responses/guild/$file")
+        ) as List<GuildLog>
     }
 }

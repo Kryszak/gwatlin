@@ -1,14 +1,16 @@
 package com.kryszak.gwatlin.api.pvp.model.stats
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model of account pvp stats
  */
+@Serializable
 data class PvpStats(
-        @SerializedName("pvp_rank") val pvpRank: Int,
-        @SerializedName("pvp_rank_points") val pvpRankPoints: Int,
-        @SerializedName("pvp_rank_rollovers") val pvpRankRollovers: Int,
+        @SerialName("pvp_rank") val pvpRank: Int,
+        @SerialName("pvp_rank_points") val pvpRankPoints: Int,
+        @SerialName("pvp_rank_rollovers") val pvpRankRollovers: Int,
         val aggregate: WinLossStats,
         val professions: ProfessionsStats,
         val ladders: LadderStats

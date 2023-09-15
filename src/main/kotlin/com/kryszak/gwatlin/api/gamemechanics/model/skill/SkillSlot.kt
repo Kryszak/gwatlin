@@ -1,21 +1,23 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.skill
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Skill slot values
  */
+@Serializable
 enum class SkillSlot {
-    @SerializedName("Downed_[1-4]")
+    @SerialName("Downed_[1-4]")
     DOWNED1_4,
-    @SerializedName("Pet")
+    @SerialName("Pet")
     PET,
-    @SerializedName("Profession_[1-5]")
+    @SerialName("Profession_[1-5]")
     PROFESSION1_5,
-    @SerializedName("Profession_2")
+    @SerialName("Profession_2")
     PROFESSION2,
-    @SerializedName("Utility")
+    @SerialName("Utility")
     UTILITY,
-    @SerializedName("Weapon_[1-5]")
+    @SerialName("Weapon_[1-5]")
     WEAPON1_5
 }

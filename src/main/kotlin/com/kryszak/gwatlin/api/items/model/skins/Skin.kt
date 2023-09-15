@@ -1,8 +1,12 @@
 package com.kryszak.gwatlin.api.items.model.skins
 
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
+
 /**
- * DAtamodel for skin object
+ * Data model for skin object
  */
+@Serializable
 data class Skin(
         val id: Int,
         val name: String,
@@ -11,5 +15,6 @@ data class Skin(
         val restrictions: List<String>,
         val icon: String,
         val rarity: String,
-        val description: String
+        val description: String? = null,
+        val details: JsonObject? = null
 )

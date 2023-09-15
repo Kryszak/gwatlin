@@ -1,36 +1,36 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
 
 /**
  * Enumeration for the possible types of a map
  */
 enum class MapType {
     // WvW maps
-    @SerializedName("Center")
+    @SerialName("Center")
     CENTER,
-    @SerializedName("RedHome")
+    @SerialName("RedHome")
     RED_HOME,
-    @SerializedName("BlueHome")
+    @SerialName("BlueHome")
     BLUE_HOME,
-    @SerializedName("GreenHome")
+    @SerialName("GreenHome")
     GREEN_HOME,
-    @SerializedName("EdgeOfTheMists")
+    @SerialName("EdgeOfTheMists")
     EDGE_OF_THE_MISTS,
 
     // PvP
-    @SerializedName("Pvp")
+    @SerialName("Pvp")
     PVP,
 
     // PvE and other
-    @SerializedName("Instance")
+    @SerialName("Instance")
     INSTANCE,
-    @SerializedName("JumpPuzzle")
+    @SerialName("JumpPuzzle")
     JUMP_PUZZLE,
-    @SerializedName("Public")
+    @SerialName("Public")
     PUBLIC,
-    @SerializedName("Tutorial")
+    @SerialName("Tutorial")
     TUTORIAL,
-    @SerializedName("Unknown")
+    @SerialName("Unknown")
     UNKNOWN
 }

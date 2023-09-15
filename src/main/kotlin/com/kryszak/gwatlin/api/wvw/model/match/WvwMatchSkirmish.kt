@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.wvw.model.match
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for wvw match skirmish property
  */
+@Serializable
 data class WvwMatchSkirmish(
         val id: Int,
         val scores: WvwMatchWorldCount,
-        @SerializedName("map_scores") val mapScores: List<WvwMatchSkirmishScore>
+        @SerialName("map_scores") val mapScores: List<WvwMatchSkirmishScore>
 )

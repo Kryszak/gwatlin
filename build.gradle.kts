@@ -1,15 +1,15 @@
-import org.jetbrains.dokka.gradle.DokkaTask
-
 plugins {
+    val kotlinVersion = "1.9.10"
     groovy
     jacoco
     id("maven-publish")
     id("org.jetbrains.dokka") version "1.9.0"
-    kotlin("jvm") version "1.9.10"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.serialization") version kotlinVersion
 }
 
 val fuelVersion = "2.3.1"
-val gsonVersion = "2.10.1"
+val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.11"
 val spockVersion = "2.3-groovy-4.0"
@@ -17,7 +17,7 @@ val groovyVersion = "4.0.11"
 val wiremockVersion = "2.35.0"
 
 project.group = "com.kryszak"
-project.version = "1.6"
+project.version = "1.7"
 
 sourceSets {
     getByName("main").apply {
@@ -79,8 +79,8 @@ repositories {
 dependencies {
     // http
     implementation("com.github.kittinunf.fuel:fuel:$fuelVersion")
-    implementation("com.github.kittinunf.fuel:fuel-gson:$fuelVersion")
-    implementation("com.google.code.gson:gson:$gsonVersion")
+    implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:$fuelVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
     // logging
     implementation("io.github.microutils:kotlin-logging-jvm:$loggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")

@@ -1,18 +1,20 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for Continents
  */
+@Serializable
 data class Continent(
     val id: Int,
     val name: String,
-    @SerializedName("continent_dims")
+    @SerialName("continent_dims")
     val continentDims: Dimensions,
-    @SerializedName("min_zoom")
+    @SerialName("min_zoom")
     val minZoom: Int,
-    @SerializedName("max_zoom")
+    @SerialName("max_zoom")
     val maxZoom: Int,
     val floors: List<Int>
 )

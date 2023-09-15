@@ -1,12 +1,13 @@
 package com.kryszak.gwatlin.api.guild
 
-import com.google.gson.reflect.TypeToken
 import com.kryszak.gwatlin.api.ApiLanguage
 import com.kryszak.gwatlin.api.guild.model.Guild
 import com.kryszak.gwatlin.api.guild.model.emblem.Layer
 import com.kryszak.gwatlin.api.guild.model.permission.GuildPermission
 import com.kryszak.gwatlin.api.guild.model.upgrade.GuildUpgrade
 import com.kryszak.gwatlin.config.WiremockTest
+import kotlinx.serialization.SerializersKt
+import kotlinx.serialization.builtins.BuiltinSerializersKt
 import spock.lang.Subject
 
 class GuildClientSpec extends WiremockTest {
@@ -211,26 +212,37 @@ class GuildClientSpec extends WiremockTest {
     }
 
     private List<GuildUpgrade> parseUpgrades() {
-        gson.fromJson(parseResponseText("/responses/guild/upgrades.json"),
-                new TypeToken<List<GuildUpgrade>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildUpgrade)),
+                parseResponseText("/responses/guild/upgrades.json")
+        ) as List<GuildUpgrade>
     }
 
     private List<GuildPermission> parsePermissions() {
-        gson.fromJson(parseResponseText("/responses/guild/permissions.json"),
-                new TypeToken<List<GuildPermission>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(GuildPermission)),
+                parseResponseText("/responses/guild/permissions.json")
+        ) as List<GuildPermission>
     }
 
     private List<Layer> parseForegrounds() {
-        gson.fromJson(parseResponseText("/responses/guild/foregrounds.json"),
-                new TypeToken<List<Layer>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(Layer)),
+                parseResponseText("/responses/guild/foregrounds.json")
+        ) as List<Layer>
     }
 
     private List<Layer> parseBackgrounds() {
-        gson.fromJson(parseResponseText("/responses/guild/backgrounds.json"),
-                new TypeToken<List<Layer>>() {}.getType())
+        json.decodeFromString(
+                BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(Layer)),
+                parseResponseText("/responses/guild/backgrounds.json")
+        ) as List<Layer>
     }
 
     private Guild parseGuild() {
-        gson.fromJson(parseResponseText("/responses/guild/guild.json"), Guild)
+        json.decodeFromString(
+                SerializersKt.serializer(Guild),
+                parseResponseText("/responses/guild/guild.json")
+        ) as Guild
     }
 }

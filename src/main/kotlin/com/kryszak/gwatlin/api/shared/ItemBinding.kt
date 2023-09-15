@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.shared
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Enum for possible item binding values
  */
+@Serializable
 enum class ItemBinding {
-    @SerializedName("Account")
+    @SerialName("Account")
     ACCOUNT,
-    @SerializedName("Character")
+    @SerialName("Character")
     CHARACTER
 }

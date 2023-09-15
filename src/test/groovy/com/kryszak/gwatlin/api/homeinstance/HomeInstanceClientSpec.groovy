@@ -4,6 +4,8 @@ import com.google.common.reflect.TypeToken
 import com.kryszak.gwatlin.api.exception.ApiRequestException
 import com.kryszak.gwatlin.api.homeinstance.model.Cat
 import com.kryszak.gwatlin.config.WiremockTest
+import kotlinx.serialization.SerializersKt
+import kotlinx.serialization.builtins.BuiltinSerializersKt
 import spock.lang.Subject
 
 class HomeInstanceClientSpec extends WiremockTest {
@@ -86,11 +88,10 @@ class HomeInstanceClientSpec extends WiremockTest {
     }
 
     private Cat parseCat() {
-        gson.fromJson(parseResponseText("/responses/homeinstance/cat.json"), Cat)
+        json.decodeFromString(SerializersKt.serializer(Cat), parseResponseText("/responses/homeinstance/cat.json")) as Cat
     }
 
     private List<Cat> parseCats() {
-        gson.fromJson(parseResponseText("/responses/homeinstance/cats.json"),
-                new TypeToken<List<Cat>>() {}.getType())
+        json.decodeFromString(BuiltinSerializersKt.ListSerializer(SerializersKt.serializer(Cat)), parseResponseText("/responses/homeinstance/cats.json")) as List<Cat>
     }
 }

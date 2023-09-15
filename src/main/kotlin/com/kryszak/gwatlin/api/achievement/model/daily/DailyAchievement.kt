@@ -1,12 +1,15 @@
 package com.kryszak.gwatlin.api.achievement.model.daily
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 
 /**
  * Data model for daily achievement object
  */
+@Serializable
 data class DailyAchievement(
         val id: Int,
         val level: DailyAchievementLevel,
-        @SerializedName("required_access") val requiredAccess: List<String>
+        @SerialName("required_access") val requiredAccess: List<String>
 )

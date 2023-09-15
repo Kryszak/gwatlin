@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.achievement.model.category
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for achievement category object
  */
+@Serializable
 data class AchievementCategory(
         val id: Int,
         val name: String,

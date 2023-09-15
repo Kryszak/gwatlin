@@ -2,9 +2,9 @@ package com.kryszak.gwatlin.config
 
 
 import com.github.tomakehurst.wiremock.junit.WireMockRule
-import com.google.gson.Gson
 import com.kryszak.gwatlin.api.ApiLanguage
 import groovy.json.JsonSlurper
+import kotlinx.serialization.json.Json
 import spock.lang.Shared
 import spock.lang.Specification
 
@@ -15,7 +15,7 @@ class WiremockTest extends Specification {
     @Shared
     WireMockRule wireMockRule = WiremockInstance.getInstance().wiremockRule
 
-    def gson = new Gson()
+    def json = Json.@Default
 
     def setupSpec() {
         wireMockRule.start()

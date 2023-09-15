@@ -1,8 +1,11 @@
 package com.kryszak.gwatlin.api.commerce.model.price
 
+import kotlinx.serialization.Serializable
+
 /**
  * Data model for commerce price object
  */
+@Serializable
 data class Price(
         val id: Int,
         val whitelisted: Boolean,

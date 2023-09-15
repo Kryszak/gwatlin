@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.trait
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Trait slot values
  */
+@Serializable
 enum class TraitSlot {
-    @SerializedName("Major")
+    @SerialName("Major")
     MAJOR,
-    @SerializedName("Minor")
+    @SerialName("Minor")
     MINOR
 }

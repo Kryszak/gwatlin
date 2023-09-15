@@ -10,7 +10,7 @@ import com.kryszak.gwatlin.api.homeinstance.model.Cat
 import com.kryszak.gwatlin.clients.account.AccountClient
 
 /**
- * Client for account endpoints
+ * Client for account endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account).
  * @see com.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWAccountClient(apiKey: String) {
@@ -19,6 +19,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves information about api account associated with api key
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account).
      */
     fun getAccountDetails(): Account {
         return accountClient.getAccountDetails()
@@ -26,6 +28,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves information about account achievements
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/achievements).
      */
     fun getAccountAchievements(): List<AccountAchievement> {
         return accountClient.getAccountAchievements()
@@ -33,6 +37,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves information about player's vault
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/bank).
      */
     fun getAccountVault(): List<AccountBankSlot?> {
         return accountClient.getAccountVault()
@@ -40,6 +46,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of daily crafted recipes
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/dailycrafting).
      */
     fun getAccountDailyCrafting(): List<String> {
         return accountClient.getDailyCrafting()
@@ -47,6 +55,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of dungeons completed since daily reset
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/dungeons).
      */
     fun getCompletedDailyDungeons(): List<String> {
         return accountClient.getCompletedDailyDungeons()
@@ -54,6 +64,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of dyes unlocked for account
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/dyes).
      */
     fun getUnlockedDyes(): List<Int> {
         return accountClient.getUnlockedDyes()
@@ -61,6 +73,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of unlocked finishers
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/finishers).
      */
     fun getFinishers(): List<AccountFinisher> {
         return accountClient.getFinishers()
@@ -68,6 +82,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of unlocked gliders ids
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/gliders).
      */
     fun getGliders(): List<Int> {
         return accountClient.getGliders()
@@ -75,6 +91,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of account cats
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/home/cats).
      */
     fun getCats(): List<Cat> {
         return accountClient.getCats()
@@ -82,6 +100,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves list of unlocked home instance nodes
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/home/nodes).
      */
     fun getNodes(): List<String> {
         return accountClient.getNodes()
@@ -89,6 +109,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves shared inventory for account
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/inventory).
      */
     fun getInventory(): List<InventoryItem> {
         return accountClient.getInventory()
@@ -96,6 +118,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves information about account luck
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/luck).
      */
     fun getLuck(): AccountLuck {
         val luck = accountClient.getLuck()
@@ -108,6 +132,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked mail carriers
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/mailcarriers).
      */
     fun getMailCarriers(): List<Int> {
         return accountClient.getMailCarriers()
@@ -115,6 +141,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves acquired Hero's Choice Chests since daily-reset
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/mapchests).
      */
     fun getMapChests(): List<String> {
         return accountClient.getMapChests()
@@ -122,6 +150,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves account unlocked masteries
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/masteries).
      */
     fun getMasteries(): List<AccountMastery> {
         return accountClient.getMasteries()
@@ -129,6 +159,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves total amount of masteries that are unlocked for an account
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/mastery/points).
      */
     fun getMasteryDetails(): AccountMasteryDetails {
         return accountClient.getMasteryDetails()
@@ -136,6 +168,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves materials stored in player's vault
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/materials).
      */
     fun getMaterials(): List<AccountMaterial> {
         return accountClient.getMaterials()
@@ -143,6 +177,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves unlocked minis
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/minis).
      */
     fun getMinis(): List<Int> {
         return accountClient.getMinis()
@@ -150,6 +186,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves unlocked mount skins
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/mounts/skins).
      */
     fun getMountSkins(): List<Int> {
         return accountClient.getMountSkins()
@@ -157,6 +195,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves unlocked mount types
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/mount/types).
      */
     fun getMountTypes(): List<String> {
         return accountClient.getMountTypes()
@@ -164,6 +204,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves novelties that are unlocked for an account
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/novelties).
      */
     fun getNovelties(): List<Int> {
         return accountClient.getNovelties()
@@ -171,6 +213,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked outfits
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/outfits).
      */
     fun getOutfits(): List<Int> {
         return accountClient.getOutfits()
@@ -178,6 +222,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked pvp heroes
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/pvp/heroes).
      */
     fun getPvpHeroes(): List<Int> {
         return accountClient.getPvpHeroes()
@@ -185,6 +231,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves completed raid encounters since weekly raid reset
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/raids).
      */
     fun getRaids(): List<String> {
         return accountClient.getRaids()
@@ -192,6 +240,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked recipes
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/recipes).
      */
     fun getRecipes(): List<Int> {
         return accountClient.getRecipes()
@@ -199,6 +249,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked skins
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/skins).
      */
     fun getSkins(): List<Int> {
         return accountClient.getSkins()
@@ -206,6 +258,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves ids of unlocked titles
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/titles).
      */
     fun getTitles(): List<Int> {
         return accountClient.getTitles()
@@ -213,6 +267,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves contents of wallet in pairs of id of currency and amount
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/wallet).
      */
     fun getWallet(): List<CurrencyAmount> {
         return accountClient.getWallet()
@@ -220,6 +276,8 @@ class GWAccountClient(apiKey: String) {
 
     /**
      * Retrieves world bosses that have been killed by the account since daily-reset
+     *
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/worldbosses).
      */
     fun getWorldBosses(): List<String> {
         return accountClient.getWorldBosses()

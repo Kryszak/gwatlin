@@ -29,7 +29,7 @@ class StoryClientSpec extends WiremockTest {
             level == 1
             races == ["Charr"]
             order == 0
-            professions == null
+            professions == []
             verifyAll(chapters.get(0)) {
                 name == "1. Getting the Band Back Together"
             }

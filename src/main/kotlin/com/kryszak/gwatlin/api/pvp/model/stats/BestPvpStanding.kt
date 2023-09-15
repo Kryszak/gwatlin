@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.pvp.model.stats
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for best pvp standing
  */
+@Serializable
 data class BestPvpStanding(
-        @SerializedName("total_points") val totalPoints: Int,
+        @SerialName("total_points") val totalPoints: Int,
         val division: Int,
         val tier: Int,
         val points: Int,

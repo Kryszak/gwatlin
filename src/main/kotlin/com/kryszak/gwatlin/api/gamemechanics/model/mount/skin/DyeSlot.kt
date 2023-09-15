@@ -1,12 +1,14 @@
 package com.kryszak.gwatlin.api.gamemechanics.model.mount.skin
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for mount skin's dye slot object
  */
+@Serializable
 data class DyeSlot(
-        @SerializedName("color_id") val colorId: Int,
+        @SerialName("color_id") val colorId: Int,
         val material: String
 )
 

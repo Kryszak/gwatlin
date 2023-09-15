@@ -1,19 +1,21 @@
 package com.kryszak.gwatlin.api.items.model.pvp.amulet
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for pvp amulet attributes property
  */
+@Serializable
 data class PvpAmuletAttributes(
-        @SerializedName("AgonyResistance") val agonyResistance: Double?,
-        @SerializedName("BoonDuration") val boonDuration: Double?,
-        @SerializedName("ConditionDamage") val conditionDamage: Double?,
-        @SerializedName("ConditionDruration") val conditionDuration: Double?,
-        @SerializedName("CritDamage") val critDamage: Double?,
-        @SerializedName("Healing") val healing: Double?,
-        @SerializedName("Power") val power: Double?,
-        @SerializedName("Precision") val precision: Double?,
-        @SerializedName("Toughness") val toughness: Double?,
-        @SerializedName("Vitality") val vitality: Double?
+        @SerialName("AgonyResistance") val agonyResistance: Double? = null,
+        @SerialName("BoonDuration") val boonDuration: Double? = null,
+        @SerialName("ConditionDamage") val conditionDamage: Double? = null,
+        @SerialName("ConditionDruration") val conditionDuration: Double? = null,
+        @SerialName("CritDamage") val critDamage: Double? = null,
+        @SerialName("Healing") val healing: Double? = null,
+        @SerialName("Power") val power: Double? = null,
+        @SerialName("Precision") val precision: Double? = null,
+        @SerialName("Toughness") val toughness: Double? = null,
+        @SerialName("Vitality") val vitality: Double? = null
 )

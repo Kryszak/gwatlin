@@ -1,15 +1,18 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import kotlin.collections.Map
 
 /**
  * Data model for Floors
  */
+@Serializable
 data class Floor(
-    @SerializedName("texture_dims")
+    val id: Int,
+    @SerialName("texture_dims")
     val textureDims: Dimensions,
-    @SerializedName("clamped_view")
+    @SerialName("clamped_view")
     val clampedView: Rectangle,
     val regions: Map<Int, Region>
 )

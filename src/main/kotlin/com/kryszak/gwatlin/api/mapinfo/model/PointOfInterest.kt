@@ -1,17 +1,19 @@
 package com.kryszak.gwatlin.api.mapinfo.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for points of interest, aka "POI"
  */
+@Serializable
 data class PointOfInterest(
     val id: Int,
-    val name: String,
+    val name: String? = null,
     val type: PointOfInterestType,
     val floor: Int,
     val coord: Coordinates,
-    @SerializedName("chat_link")
+    @SerialName("chat_link")
     val chatLink: String,
-    val icon: String?
+    val icon: String? = null
 )

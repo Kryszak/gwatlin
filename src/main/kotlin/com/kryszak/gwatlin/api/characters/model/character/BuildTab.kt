@@ -1,13 +1,15 @@
 package com.kryszak.gwatlin.api.characters.model.character
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Data model for BuildTabs
  */
+@Serializable
 data class BuildTab(
     val tab: Int,
-    @SerializedName("is_active")
+    @SerialName("is_active")
     val isActive: Boolean,
     val build: Build
 )

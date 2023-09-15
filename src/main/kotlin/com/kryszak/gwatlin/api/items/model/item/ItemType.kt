@@ -1,41 +1,43 @@
 package com.kryszak.gwatlin.api.items.model.item
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Item type values
  */
+@Serializable
 enum class ItemType {
-    @SerializedName("Armor")
+    @SerialName("Armor")
     ARMOR,
-    @SerializedName("Back")
+    @SerialName("Back")
     BACK,
-    @SerializedName("Bag")
+    @SerialName("Bag")
     BAG,
-    @SerializedName("Consumable")
+    @SerialName("Consumable")
     CONSUMABLE,
-    @SerializedName("Container")
+    @SerialName("Container")
     CONTAINER,
-    @SerializedName("CraftingMaterial")
+    @SerialName("CraftingMaterial")
     CRAFTING_MATERIAL,
-    @SerializedName("Gathering")
+    @SerialName("Gathering")
     GATHERING,
-    @SerializedName("Gizmo")
+    @SerialName("Gizmo")
     GIZMO,
-    @SerializedName("Key")
+    @SerialName("Key")
     KEY,
-    @SerializedName("MiniPet")
+    @SerialName("MiniPet")
     MINI_PET,
-    @SerializedName("Tool")
+    @SerialName("Tool")
     TOOL,
-    @SerializedName("Trait")
+    @SerialName("Trait")
     TRAIT,
-    @SerializedName("Trinket")
+    @SerialName("Trinket")
     TRINKET,
-    @SerializedName("Trophy")
+    @SerialName("Trophy")
     TROPHY,
-    @SerializedName("UpgradeComponent")
+    @SerialName("UpgradeComponent")
     UPGRADE_COMPONENT,
-    @SerializedName("Weapon")
+    @SerialName("Weapon")
     WEAPON
 }
