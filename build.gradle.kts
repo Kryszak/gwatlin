@@ -12,21 +12,12 @@ val fuelVersion = "2.3.1"
 val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.11"
-val spockVersion = "2.3-groovy-4.0"
-val groovyVersion = "4.0.11"
-val wiremockVersion = "2.35.0"
+val kotestVersion = "5.6.1"
+val kotestWiremockExtensionVersion = "2.0.0"
+val kotlinWiremockDslVersion = "2.0.0"
 
 project.group = "com.kryszak"
 project.version = "1.7"
-
-sourceSets {
-    getByName("main").apply {
-        kotlin.srcDirs("src/main/kotlin")
-    }
-    getByName("test").apply {
-        groovy.srcDirs("src/test/groovy")
-    }
-}
 
 kotlin {
     jvmToolchain {
@@ -85,7 +76,9 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging-jvm:$loggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
     // testing
-    testImplementation("org.spockframework:spock-core:$spockVersion")
-    testImplementation("org.apache.groovy:groovy-all:$groovyVersion")
-    testImplementation("com.github.tomakehurst:wiremock-jre8:$wiremockVersion")
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:$kotestVersion")
+    testImplementation("io.kotest:kotest-framework-datatest:$kotestVersion")
+    testImplementation("io.kotest.extensions:kotest-extensions-wiremock:$kotestWiremockExtensionVersion")
+    testImplementation("com.marcinziolo:kotlin-wiremock:$kotlinWiremockDslVersion")
 }
