@@ -13,7 +13,7 @@ val kotlinxSerializationVersion = "1.5.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.11"
 val kotestVersion = "5.7.2"
-val kotestWiremockExtensionVersion = "2.0.0"
+val kotestWiremockExtensionVersion = "2.0.1"
 val kotlinWiremockDslVersion = "2.0.0"
 
 project.group = "io.github.kryszak"
