@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.legend.Legend
 import io.github.kryszak.gwatlin.clients.gamemechanics.LegendsClient
 
 /**
- * Client for game mechanic - legends endpoints
+ * Client for game mechanic - legends endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/legends).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWLegendsClient {

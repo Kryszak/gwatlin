@@ -1,11 +1,12 @@
 package io.github.kryszak.gwatlin.api.pvp
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.pvp.model.rank.PvpRank
 import io.github.kryszak.gwatlin.api.pvp.model.season.PvpSeason
 import io.github.kryszak.gwatlin.clients.pvp.PvpClient
 
 /**
- * Client for pvp unauthenticated endpoints
+ * Client for pvp unauthenticated endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/pvp)
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWPvPClient {
@@ -26,7 +27,7 @@ class GWPvPClient {
      * @see io.github.kryszak.gwatlin.api.pvp.model.rank.PvpRank
      */
     @JvmOverloads
-    fun getPvpRanks(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<PvpRank> {
+    fun getPvpRanks(ids: List<Int>, language: ApiLanguage? = null): List<PvpRank> {
         return pvpClient.getPvpRanks(ids, language)
     }
 
@@ -44,7 +45,7 @@ class GWPvPClient {
      * @see io.github.kryszak.gwatlin.api.pvp.model.season.PvpSeason
      */
     @JvmOverloads
-    fun getPvpSeasons(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<PvpSeason> {
+    fun getPvpSeasons(ids: List<String>, language: ApiLanguage? = null): List<PvpSeason> {
         return pvpClient.getPvpSeasons(ids, language)
     }
 }

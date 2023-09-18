@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.items.model.finisher.Finisher
 import io.github.kryszak.gwatlin.clients.items.FinishersClient
 
 /**
- * Client for finishers endpoints
+ * Client for finishers endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/finishers)
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWFinishersClient {

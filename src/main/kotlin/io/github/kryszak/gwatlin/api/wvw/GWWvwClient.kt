@@ -11,7 +11,7 @@ import io.github.kryszak.gwatlin.api.wvw.model.upgrade.WvwUpgrade
 import io.github.kryszak.gwatlin.clients.wvw.WvwClient
 
 /**
- * Client for wvw endpoints
+ * Client for wvw endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/wvw)
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWWvwClient {

@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.items.model.pvp.amulet.PvpAmulet
 import io.github.kryszak.gwatlin.clients.items.PvpAmuletsClient
 
 /**
- * Client for pvp amulets endpoints
+ * Client for pvp amulets endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/pvp/amulets)
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWPvpAmuletsClient {

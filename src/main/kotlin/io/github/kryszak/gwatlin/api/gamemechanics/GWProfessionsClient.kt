@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import io.github.kryszak.gwatlin.clients.gamemechanics.ProfessionsClient
 
 /**
- * Client for game mechanic - professions endpoints
+ * Client for game mechanic - professions endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/professions).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWProfessionsClient {

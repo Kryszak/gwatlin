@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.race.Race
 import io.github.kryszak.gwatlin.clients.gamemechanics.RacesClient
 
 /**
- * Client for game mechanic - races endpoints
+ * Client for game mechanic - races endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/races).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWRacesClient {

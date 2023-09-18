@@ -19,6 +19,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild log
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/log)
      * @param id of the guild
      * @param since optional id of starting log entry to return
      * @see io.github.kryszak.gwatlin.api.guild.model.log.GuildLog
@@ -29,6 +30,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild members
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/members)
      * @param id of guild
      * @see io.github.kryszak.gwatlin.api.guild.model.GuildMember
      */
@@ -38,6 +40,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild ranks
+     * * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/ranks)
      * @param id of guild
      * @see io.github.kryszak.gwatlin.api.guild.model.GuildRank
      */
@@ -47,6 +50,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild stash
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/stash)
      * @param id of guild
      * @see io.github.kryszak.gwatlin.api.guild.model.stash.GuildStash
      */
@@ -56,6 +60,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild treasury
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/treasury)
      * @param id of guild
      * @see io.github.kryszak.gwatlin.api.guild.model.treasury.GuildTreasury
      */
@@ -65,6 +70,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild teams
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/teams)
      * @param id of guild
      * @see io.github.kryszak.gwatlin.api.guild.model.team.GuildTeam
      */
@@ -74,6 +80,7 @@ class GWGuildAuthenticatedClient(apiKey: String) {
 
     /**
      * Retrieves guild upgrade ids (required Leader)
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/guild/:id/upgrades)
      * @param id of guild
      */
     fun getGuildUpgrades(id: String): List<Int> {
