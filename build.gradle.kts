@@ -9,7 +9,7 @@ plugins {
 }
 
 val fuelVersion = "2.3.1"
-val kotlinxSerializationVersion = "1.5.0"
+val kotlinxSerializationVersion = "1.6.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.4.11"
 val kotestVersion = "5.7.2"
