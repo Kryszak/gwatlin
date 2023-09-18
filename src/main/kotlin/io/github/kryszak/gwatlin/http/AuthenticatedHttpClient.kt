@@ -2,6 +2,7 @@ package io.github.kryszak.gwatlin.http
 
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.extensions.authentication
+import io.github.kryszak.gwatlin.api.ApiLanguage
 
 internal open class AuthenticatedHttpClient(
     val apiKey: String,
@@ -10,7 +11,7 @@ internal open class AuthenticatedHttpClient(
 
     protected inline fun <reified T : Any> getRequestAuth(
         uri: String,
-        language: io.github.kryszak.gwatlin.api.ApiLanguage? = null,
+        language: ApiLanguage? = null,
         configBlock: Request.() -> Unit = {}
     ) =
         getRequest<T>(uri, language) {
