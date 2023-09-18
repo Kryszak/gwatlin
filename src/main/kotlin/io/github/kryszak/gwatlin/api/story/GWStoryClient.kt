@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.api.story.model.StorySeason
 import io.github.kryszak.gwatlin.clients.backstory.StoryClient
 
 /**
- * Client for story endpoints
+ * Client for story endpoints. . Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/backstory)
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWStoryClient {

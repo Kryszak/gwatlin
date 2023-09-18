@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.homeinstance.model.Cat
 import io.github.kryszak.gwatlin.clients.homeinstance.HomeInstanceClient
 
 /**
- * Client for home instance endpoints
+ * Client for home instance endpoints.
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWHomeInstanceClient {
@@ -13,6 +13,7 @@ class GWHomeInstanceClient {
 
     /**
      * Retrieves list of all cat ids
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/home/cats)
      * @return list of cat ids
      */
     fun getCatIds(): List<Int> {
@@ -21,6 +22,7 @@ class GWHomeInstanceClient {
 
     /**
      * Retrieves specific cat
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/home/cats)
      * @param id of cat
      * @return Cat
      * @see io.github.kryszak.gwatlin.api.homeinstance.model.Cat
@@ -31,6 +33,7 @@ class GWHomeInstanceClient {
 
     /**
      * Retrieves list of cats
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/home/cats)
      * @param ids of cats
      * @return List of cats
      * @see io.github.kryszak.gwatlin.api.homeinstance.model.Cat
@@ -41,6 +44,7 @@ class GWHomeInstanceClient {
 
     /**
      * Retrieves list of all available home node instances
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/home/nodes)
      * @return List of nodes
      */
     fun getNodeIds(): List<String> {
