@@ -16,8 +16,8 @@ val kotestVersion = "5.6.1"
 val kotestWiremockExtensionVersion = "2.0.0"
 val kotlinWiremockDslVersion = "2.0.0"
 
-project.group = "com.kryszak"
-project.version = "1.7"
+project.group = "io.github.kryszak"
+project.version = "1.8"
 
 kotlin {
     jvmToolchain {
