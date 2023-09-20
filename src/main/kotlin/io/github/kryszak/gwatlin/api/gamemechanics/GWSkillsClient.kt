@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.clients.gamemechanics.SkillsClient
 
 /**
- * Client for game mechanic - skills endpoints
+ * Client for game mechanic - skills endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/skills).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWSkillsClient {

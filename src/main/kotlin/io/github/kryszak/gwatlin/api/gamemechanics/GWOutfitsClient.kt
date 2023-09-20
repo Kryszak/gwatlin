@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
 import io.github.kryszak.gwatlin.clients.gamemechanics.OutfitsClient
 
 /**
- * Client for game mechanic - outfits endpoints
+ * Client for game mechanic - outfits endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/outfits).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWOutfitsClient {

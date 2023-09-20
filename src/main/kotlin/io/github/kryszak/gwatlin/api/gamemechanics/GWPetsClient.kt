@@ -4,7 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
 import io.github.kryszak.gwatlin.clients.gamemechanics.PetsClient
 
 /**
- * Client for game mechanic - pets endpoints
+ * Client for game mechanic - pets endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/pets).
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
 class GWPetsClient {

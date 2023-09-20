@@ -1,3 +1,5 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     val kotlinVersion = "1.9.10"
     groovy
@@ -31,6 +33,25 @@ java {
 
 jacoco {
     toolVersion = "0.8.9"
+}
+
+tasks.withType<DokkaTask>().configureEach {
+    dokkaSourceSets {
+        named("main") {
+            moduleName.set("gwatlin")
+            includes.from("Module.md")
+            perPackageOption {
+                matchingRegex.set(".*api.*")
+                suppress.set(false)
+            }
+        }
+        configureEach {
+            perPackageOption {
+                matchingRegex.set(".*")
+                suppress.set(true)
+            }
+        }
+    }
 }
 
 tasks.jacocoTestReport {

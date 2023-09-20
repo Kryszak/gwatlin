@@ -5,6 +5,7 @@ import io.github.kryszak.gwatlin.clients.characters.CharactersClient
 /**
  * Client for characters endpoint. Doesn't include the /skills and /specializations sub-endpoints, as these
  * are not available anymore in the schema version that's being used by the internal client. Use buildtabs for that.
+ * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/characters).
  * @param apiKey account api key
  * @see io.github.kryszak.gwatlin.api.exception.ApiRequestException for errors
  */
