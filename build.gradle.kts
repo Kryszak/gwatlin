@@ -15,12 +15,12 @@ plugins {
 project.group = "io.github.kryszak"
 project.version = "1.8"
 
-object Meta {
-    const val desc = "Guild Wars 2 API client"
-    const val license = "MiT"
-    const val githubRepo = "Kryszak/gwatlin"
-    const val release = "https://s01.oss.sonatype.org/service/local/"
-    const val snapshot = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+internal object Meta {
+    const val DESCRIPTION = "Guild Wars 2 API client"
+    const val LICENSE = "MiT"
+    const val GITHUB_REPOSITORY = "Kryszak/gwatlin"
+    const val RELEASE = "https://s01.oss.sonatype.org/service/local/"
+    const val SNAPSHOT = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
 }
 
 kotlin {
@@ -98,11 +98,11 @@ publishing {
             artifact(tasks["javadocJar"])
             pom {
                 name.set(project.name)
-                description.set(Meta.desc)
-                url.set("https://github.com/${Meta.githubRepo}")
+                description.set(Meta.DESCRIPTION)
+                url.set("https://github.com/${Meta.GITHUB_REPOSITORY}")
                 licenses {
                     license {
-                        name.set(Meta.license)
+                        name.set(Meta.LICENSE)
                         url.set("https://opensource.org/licenses/MIT")
                     }
                 }
@@ -114,17 +114,17 @@ publishing {
                 }
                 scm {
                     url.set(
-                        "https://github.com/${Meta.githubRepo}.git"
+                        "https://github.com/${Meta.GITHUB_REPOSITORY}.git"
                     )
                     connection.set(
-                        "scm:git:git://github.com/${Meta.githubRepo}.git"
+                        "scm:git:git://github.com/${Meta.GITHUB_REPOSITORY}.git"
                     )
                     developerConnection.set(
-                        "scm:git:git://github.com/${Meta.githubRepo}.git"
+                        "scm:git:git://github.com/${Meta.GITHUB_REPOSITORY}.git"
                     )
                 }
                 issueManagement {
-                    url.set("https://github.com/${Meta.githubRepo}/issues")
+                    url.set("https://github.com/${Meta.GITHUB_REPOSITORY}/issues")
                 }
             }
         }
@@ -134,8 +134,8 @@ publishing {
 nexusPublishing {
     repositories {
         sonatype {
-            nexusUrl.set(uri(Meta.release))
-            snapshotRepositoryUrl.set(uri(Meta.snapshot))
+            nexusUrl.set(uri(Meta.RELEASE))
+            snapshotRepositoryUrl.set(uri(Meta.SNAPSHOT))
             val ossrhUsername = providers
                 .environmentVariable("OSSRH_USERNAME")
             val ossrhPassword = providers
