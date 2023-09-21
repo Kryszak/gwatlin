@@ -2,6 +2,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/6888080bc19640b4ad89efd0fd84ad9e)](https://app.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6888080bc19640b4ad89efd0fd84ad9e)](https://www.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kryszak/gwatlin&amp;utm_campaign=Badge_Grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.kryszak/gwatlin.svg)](https://search.maven.org/artifact/io.github.kryszak/gwatlin)
 
 # Gwatlin
 **G**uild **W**ars 2 **A**PI client written in Ko**tlin**
@@ -35,7 +36,7 @@ Issue should contain example json response for given endpoint.
 | World vs. World   | :heavy_check_mark: |
 
 ## Example usage
-Artifact is available on GitHub Maven repository: [Instructions](https://github.com/Kryszak/gwatlin/packages/1509407)
+Artifact is available on Maven Central repository.
 
 ### Documentation
 For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs/)
