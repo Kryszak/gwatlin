@@ -1,13 +1,17 @@
 package io.github.kryszak.gwatlin.api.items.model.item
 
-import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-@Polymorphic
+/**
+ * Root data model for item details
+ */
 @Serializable
 sealed class ItemDetails
 
+/**
+ * Data model for armor details
+ */
 @Serializable
 data class ArmorDetails(
     val type: String,
@@ -21,6 +25,9 @@ data class ArmorDetails(
     @SerialName("stat_choices") val statChoices: List<Int>
 ) : ItemDetails()
 
+/**
+ * Data model for back item details
+ */
 @Serializable
 data class BackItemDetails(
     @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot>,
@@ -31,12 +38,18 @@ data class BackItemDetails(
     @SerialName("stat_choices") val statChoices: List<Int>
 ) : ItemDetails()
 
+/**
+ * Data model for bag item details
+ */
 @Serializable
 data class BagItemDetails(
     val size: Int,
     @SerialName("no_sell_or_sort") val noSellOrSort: Boolean
 ) : ItemDetails()
 
+/**
+ * Data model for consumable details
+ */
 @Serializable
 data class ConsumableDetails(
     val type: String,
@@ -53,16 +66,25 @@ data class ConsumableDetails(
     val skins: List<Int>
 ) : ItemDetails()
 
+/**
+ * Data model for container details
+ */
 @Serializable
 data class ContainerDetails(
     val type: String
 ) : ItemDetails()
 
+/**
+ * Data model for gathering details
+ */
 @Serializable
 data class GatheringDetails(
     val type: String
 ) : ItemDetails()
 
+/**
+ * Data model for gizmo details
+ */
 @Serializable
 data class GizmoDetails(
     val type: String,
@@ -70,17 +92,26 @@ data class GizmoDetails(
     @SerialName("vendor_ids") val vendorIds: List<Int>
 ) : ItemDetails()
 
+/**
+ * Data model for miniature details
+ */
 @Serializable
 data class MiniatureDetails(
     @SerialName("minipet_id") val minipetId: Int
 ) : ItemDetails()
 
+/**
+ * Data model for salvage kit details
+ */
 @Serializable
 data class SalvageKitDetails(
     val type: String,
     val charges: Int
 ) : ItemDetails()
 
+/**
+ * Data model for trinket details
+ */
 @Serializable
 data class TrinketDetails(
     val type: String,
@@ -92,6 +123,9 @@ data class TrinketDetails(
     @SerialName("stat_choices") val statChoices: List<Int>
 ) : ItemDetails()
 
+/**
+ * Data model for upgrade details
+ */
 @Serializable
 data class UpgradeDetails(
     val type: String,
@@ -102,6 +136,9 @@ data class UpgradeDetails(
     val bonuses: List<String>
 ) : ItemDetails()
 
+/**
+ * Data model for weapon details
+ */
 @Serializable
 data class WeaponDetails(
     val type: String,
