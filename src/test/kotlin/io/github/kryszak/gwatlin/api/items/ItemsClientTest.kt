@@ -9,8 +9,11 @@ import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
+import io.kotest.matchers.types.beInstanceOf
+import io.kotest.matchers.types.beOfType
 import io.kotest.matchers.types.shouldBeTypeOf
 
 internal class ItemsClientTest : BaseWiremockTest() {
@@ -42,7 +45,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
             // then
             items shouldHaveSize 1
             assertSoftly(items[0]) {
-                it.shouldBeTypeOf<WeaponItem>()
+                it should beOfType<WeaponItem>()
                 name shouldBe "Strong Soft Wood Longbow of Fire"
                 description.shouldBeBlank()
                 type shouldBe ItemType.WEAPON
@@ -57,8 +60,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 chatLink shouldBe "[&AgEdbwAA]"
                 icon shouldBe "https://render.guildwars2.com/file/C6110F52DF5AFE0F00A56F9E143E9732176DDDE9/65015.png"
                 assertSoftly(details!!) {
-                    details.shouldBeTypeOf<WeaponDetails>()
-                    val weaponDetails = details as WeaponDetails
+                    val weaponDetails = details.shouldBeTypeOf<WeaponDetails>()
                     weaponDetails.type shouldBe "LongBow"
                     weaponDetails.damageType shouldBe "Physical"
                     weaponDetails.minPower shouldBe 385
