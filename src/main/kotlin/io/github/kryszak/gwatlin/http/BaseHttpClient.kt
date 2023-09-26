@@ -19,11 +19,11 @@ internal open class BaseHttpClient(
 
     private val log = KotlinLogging.logger {}
 
-    protected val logMessage = "Requested url: %s"
+    private val logMessage = "Requested url: %s"
 
-    protected val baseUrl: String
+    private val baseUrl: String
 
-    protected val json = Json {
+    private val json = Json {
         isLenient = true
     }
 
@@ -54,7 +54,6 @@ internal open class BaseHttpClient(
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
-
 
     protected fun encodeParam(param: String) = param.replace(" ", "%20")
 

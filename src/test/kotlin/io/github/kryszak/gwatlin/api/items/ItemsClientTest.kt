@@ -1,15 +1,17 @@
 package io.github.kryszak.gwatlin.api.items
 
-import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.ApiLanguage.EN
 import io.github.kryszak.gwatlin.api.items.model.item.ItemRarity
 import io.github.kryszak.gwatlin.api.items.model.item.ItemType
+import io.github.kryszak.gwatlin.api.items.model.item.WeaponDetails
+import io.github.kryszak.gwatlin.api.items.model.item.WeaponItem
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
-import kotlinx.serialization.json.JsonPrimitive
+import io.kotest.matchers.types.shouldBeTypeOf
 
 internal class ItemsClientTest : BaseWiremockTest() {
 
@@ -30,7 +32,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
         should("Get item") {
             // given
             val id = 28445
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = EN
 
             stubResponse("/items?ids=28445", "/responses/items/item.json", language = lang)
 
@@ -40,6 +42,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
             // then
             items shouldHaveSize 1
             assertSoftly(items[0]) {
+                it.shouldBeTypeOf<WeaponItem>()
                 name shouldBe "Strong Soft Wood Longbow of Fire"
                 description.shouldBeBlank()
                 type shouldBe ItemType.WEAPON
@@ -54,14 +57,16 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 chatLink shouldBe "[&AgEdbwAA]"
                 icon shouldBe "https://render.guildwars2.com/file/C6110F52DF5AFE0F00A56F9E143E9732176DDDE9/65015.png"
                 assertSoftly(details!!) {
-                    get("type") shouldBe JsonPrimitive("LongBow")
-                    get("damage_type") shouldBe JsonPrimitive("Physical")
-                    get("min_power") shouldBe JsonPrimitive(385)
-                    get("max_power") shouldBe JsonPrimitive(452)
-                    get("defense") shouldBe JsonPrimitive(0)
-                    (get("infusion_slots") as List<*>).shouldBeEmpty()
-                    get("suffix_item_id") shouldBe JsonPrimitive(24547)
-                    get("secondary_suffix_item_id") shouldBe JsonPrimitive("")
+                    details.shouldBeTypeOf<WeaponDetails>()
+                    val weaponDetails = details as WeaponDetails
+                    weaponDetails.type shouldBe "LongBow"
+                    weaponDetails.damageType shouldBe "Physical"
+                    weaponDetails.minPower shouldBe 385
+                    weaponDetails.maxPower shouldBe 452
+                    weaponDetails.defense shouldBe 0
+                    (weaponDetails.infusionSlots as List<*>).shouldBeEmpty()
+                    weaponDetails.suffixItemId shouldBe 24547
+                    weaponDetails.secondarySuffixItemId shouldBe ""
                 }
             }
         }

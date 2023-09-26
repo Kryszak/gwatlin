@@ -9,9 +9,9 @@
     "default_skin": 3942,
     "game_types": [
       "Activity",
-      "Wvw",
       "Dungeon",
-      "Pve"
+      "Pve",
+      "Wvw"
     ],
     "flags": [
       "SoulBindOnUse"
@@ -28,15 +28,14 @@
       "defense": 0,
       "infusion_slots": [],
       "infix_upgrade": {
-        "id": 142,
         "attributes": [
           {
             "attribute": "Power",
-            "modifier": 85
+            "modifier": 62
           },
           {
             "attribute": "Precision",
-            "modifier": 61
+            "modifier": 44
           }
         ]
       },
