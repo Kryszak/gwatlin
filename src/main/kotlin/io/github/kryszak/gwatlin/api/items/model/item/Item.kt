@@ -25,7 +25,7 @@ sealed class Item {
 }
 
 /**
- * Root data model for armor item
+ * Data model for armor item
  */
 @Serializable
 @SerialName("Armor")
@@ -39,15 +39,15 @@ data class ArmorItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: ArmorDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: ArmorDetails? = null
 ) : Item()
 
 /**
- * Root data model for back item
+ * Data model for back item
  */
 @Serializable
 @SerialName("Back")
@@ -61,15 +61,15 @@ data class BackItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: BackItemDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: BackItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for Bag item
+ * Data model for Bag item
  */
 @Serializable
 @SerialName("Bag")
@@ -83,15 +83,15 @@ data class BagItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: BagItemDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: BagItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for consumable item
+ * Data model for consumable item
  */
 @Serializable
 @SerialName("Consumable")
@@ -100,20 +100,20 @@ data class ConsumableItem(
     @SerialName("chat_link") override val chatLink: String,
     override val name: String,
     override val icon: String,
-    override val description: String,
+    override val description: String = "",
     override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: ConsumableDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: ConsumableDetails? = null
 ) : Item()
 
 /**
- * Root data model for container item
+ * Data model for container item
  */
 @Serializable
 @SerialName("Container")
@@ -127,15 +127,15 @@ data class ContainerItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: ContainerDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: ContainerDetails? = null
 ) : Item()
 
 /**
- * Root data model for crafting material item
+ * Data model for crafting material item
  */
 @Serializable
 @SerialName("CraftingMaterial")
@@ -149,15 +149,15 @@ data class CraftingMaterialItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for gathering item
+ * Data model for gathering item
  */
 @Serializable
 @SerialName("Gathering")
@@ -171,15 +171,15 @@ data class GatheringItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: GatheringDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: GatheringDetails? = null
 ) : Item()
 
 /**
- * Root data model for gizmo item
+ * Data model for gizmo item
  */
 @Serializable
 @SerialName("Gizmo")
@@ -193,15 +193,15 @@ data class GizmoItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: GizmoDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: GizmoDetails? = null
 ) : Item()
 
 /**
- * Root data model for jade tech item
+ * Data model for jade tech item
  */
 @Serializable
 @SerialName("JadeTechModule")
@@ -215,15 +215,15 @@ data class JadeTechModuleItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for key item
+ * Data model for key item
  */
 @Serializable
 @SerialName("Key")
@@ -237,15 +237,15 @@ data class KeyItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for miniature item
+ * Data model for miniature item
  */
 @Serializable
 @SerialName("MiniPet")
@@ -259,15 +259,15 @@ data class MiniatureItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: MiniatureDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: MiniatureDetails? = null
 ) : Item()
 
 /**
- * Root data model for power core item
+ * Data model for power core item
  */
 @Serializable
 @SerialName("PowerCore")
@@ -281,15 +281,15 @@ data class PowerCoreItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for salvage kit item
+ * Data model for salvage kit item
  */
 @Serializable
 @SerialName("Tool")
@@ -303,15 +303,15 @@ data class SalvageKitItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: SalvageKitDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: SalvageKitDetails? = null
 ) : Item()
 
 /**
- * Root data model for trait item
+ * Data model for trait item
  */
 @Serializable
 @SerialName("Trait")
@@ -325,15 +325,15 @@ data class TraitItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for trinket item
+ * Data model for trinket item
  */
 @Serializable
 @SerialName("Trinket")
@@ -347,15 +347,15 @@ data class TrinketItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: TrinketDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: TrinketDetails? = null
 ) : Item()
 
 /**
- * Root data model for trophy item
+ * Data model for trophy item
  */
 @Serializable
 @SerialName("Trophy")
@@ -369,15 +369,15 @@ data class TrophyItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
     override val details: ItemDetails? = null
 ) : Item()
 
 /**
- * Root data model for upgrade component item
+ * Data model for upgrade component item
  */
 @Serializable
 @SerialName("UpgradeComponent")
@@ -391,15 +391,15 @@ data class UpgradeComponentItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: UpgradeDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: UpgradeDetails? = null
 ) : Item()
 
 /**
- * Root data model for weapon item
+ * Data model for weapon item
  */
 @Serializable
 @SerialName("Weapon")
@@ -413,9 +413,9 @@ data class WeaponItem(
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
-    @SerialName("default_skin") override val defaultSkin: Int?,
-    override val flags: List<String>,
-    @SerialName("game_types") override val gameTypes: List<String>,
-    override val restrictions: List<String>,
-    override val details: WeaponDetails?
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: WeaponDetails? = null
 ) : Item()

@@ -17,8 +17,8 @@ data class InfixUpgradeAttribute(
  */
 @Serializable
 data class InfixUpgradeBuff(
-    val flags: List<String>,
-    @SerialName("item_id") val itemId: Int
+    val description: String = "",
+    @SerialName("skill_id") val itemId: Int
 )
 
 /**
@@ -27,6 +27,6 @@ data class InfixUpgradeBuff(
 @Serializable
 data class InfixUpgrade(
     val id: Int? = null,
-    val attributes: List<InfixUpgradeAttribute>,
+    val attributes: List<InfixUpgradeAttribute> = listOf(),
     val buff: InfixUpgradeBuff? = null
 )

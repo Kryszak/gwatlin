@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Jade Bot Core: Tier 7",
+    "description": "Increases vitality by 190. Required to equip jade bot sensory arrays and service chips.",
+    "type": "PowerCore",
+    "level": 80,
+    "rarity": "Rare",
+    "vendor_value": 192,
+    "game_types": [
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 97020,
+    "chat_link": "[&AgH8egEA]",
+    "icon": "https://render.guildwars2.com/file/C10A05A05140D940C40607D268250D3E6293755A/2595073.png"
+  }
+]

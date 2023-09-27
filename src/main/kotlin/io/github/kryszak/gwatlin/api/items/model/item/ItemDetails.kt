@@ -18,11 +18,11 @@ data class ArmorDetails(
     @SerialName("weight_class") val weightClass: String,
     val defense: Int,
     @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot>,
-    @SerialName("attribute_adjustment") val attributeAdjustment: Int,
-    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade?,
-    @SerialName("suffix_item_id") val suffixItemId: Int?,
+    @SerialName("attribute_adjustment") val attributeAdjustment: Double,
+    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
+    @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
-    @SerialName("stat_choices") val statChoices: List<Int>
+    @SerialName("stat_choices") val statChoices: List<Int> = listOf()
 ) : ItemDetails()
 
 /**
@@ -30,12 +30,12 @@ data class ArmorDetails(
  */
 @Serializable
 data class BackItemDetails(
-    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot>,
+    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot> = listOf(),
     @SerialName("attribute_adjustment") val attributeAdjustment: Double,
-    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade?,
-    @SerialName("suffix_item_id") val suffixItemId: Int?,
+    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
+    @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
-    @SerialName("stat_choices") val statChoices: List<Int>
+    @SerialName("stat_choices") val statChoices: List<Int> = listOf()
 ) : ItemDetails()
 
 /**
@@ -53,17 +53,17 @@ data class BagItemDetails(
 @Serializable
 data class ConsumableDetails(
     val type: String,
-    val description: String?,
-    @SerialName("duration_ms") val durationMs: String?,
-    @SerialName("unlock_type") val unlockType: String?,
-    @SerialName("color_id") val colorId: Int?,
-    @SerialName("recipe_id") val recipeId: Int?,
-    @SerialName("extra_recipe_ids") val extraRecipeIds: List<Int>,
-    @SerialName("guild_upgrade_id") val guildUpgradeId: Int?,
-    @SerialName("apply_count") val applyCount: Int?,
-    val name: String?,
-    val icon: String?,
-    val skins: List<Int>
+    val description: String? = null,
+    @SerialName("duration_ms") val durationMs: Int? = null,
+    @SerialName("unlock_type") val unlockType: String? = null,
+    @SerialName("color_id") val colorId: Int? = null,
+    @SerialName("recipe_id") val recipeId: Int? = null,
+    @SerialName("extra_recipe_ids") val extraRecipeIds: List<Int> = listOf(),
+    @SerialName("guild_upgrade_id") val guildUpgradeId: Int? = null,
+    @SerialName("apply_count") val applyCount: Int? = null,
+    val name: String? = null,
+    val icon: String? = null,
+    val skins: List<Int> = listOf()
 ) : ItemDetails()
 
 /**
@@ -88,8 +88,8 @@ data class GatheringDetails(
 @Serializable
 data class GizmoDetails(
     val type: String,
-    @SerialName("guild_upgrade_id") val guildUpgradeId: Int?,
-    @SerialName("vendor_ids") val vendorIds: List<Int>
+    @SerialName("guild_upgrade_id") val guildUpgradeId: Int? = null,
+    @SerialName("vendor_ids") val vendorIds: List<Int> = listOf()
 ) : ItemDetails()
 
 /**
@@ -115,12 +115,12 @@ data class SalvageKitDetails(
 @Serializable
 data class TrinketDetails(
     val type: String,
-    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot>,
+    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot> = listOf(),
     @SerialName("attribute_adjustment") val attributeAdjustment: Int,
-    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade?,
-    @SerialName("suffix_item_id") val suffixItemId: Int?,
+    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
+    @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
-    @SerialName("stat_choices") val statChoices: List<Int>
+    @SerialName("stat_choices") val statChoices: List<Int> = listOf()
 ) : ItemDetails()
 
 /**
@@ -129,11 +129,12 @@ data class TrinketDetails(
 @Serializable
 data class UpgradeDetails(
     val type: String,
-    val flags: List<String>,
-    @SerialName("infusion_upgrade_flags") val infusionUpgradeFlags: List<String>,
+    val flags: List<String> = listOf(),
+    @SerialName("infusion_upgrade_flags") val infusionUpgradeFlags: List<String> = listOf(),
+    @SerialName("attribute_adjustment") val attributeAdjustment: Int,
     val suffix: String,
-    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade?,
-    val bonuses: List<String>
+    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
+    val bonuses: List<String> = listOf()
 ) : ItemDetails()
 
 /**
@@ -146,10 +147,10 @@ data class WeaponDetails(
     @SerialName("min_power") val minPower: Int,
     @SerialName("max_power") val maxPower: Int,
     val defense: Double,
-    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot>,
+    @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot> = listOf(),
     @SerialName("attribute_adjustment") val attributeAdjustment: Int? = null,
-    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade?,
-    @SerialName("suffix_item_id") val suffixItemId: Int?,
+    @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
+    @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
     @SerialName("stat_choices") val statChoices: List<Int> = listOf()
 ) : ItemDetails()

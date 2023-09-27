@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Haunted Gramophone",
+    "description": "Click to equip and use this Halloween themed Haunted Gramophone.",
+    "type": "Gizmo",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoMysticForge",
+      "NoSalvage",
+      "NoSell",
+      "NotUpgradeable",
+      "NoUnderwater",
+      "DeleteWarning",
+      "AccountBindOnUse",
+      "Tonic"
+    ],
+    "restrictions": [],
+    "id": 67391,
+    "chat_link": "[&AgE/BwEA]",
+    "icon": "https://render.guildwars2.com/file/0706600765442A452029B5A01896502B97493BEA/888386.png",
+    "details": {
+      "type": "Default"
+    }
+  }
+]

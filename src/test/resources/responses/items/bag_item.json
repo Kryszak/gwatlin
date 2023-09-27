@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Red Leather Bag",
+    "description": "5 Slots",
+    "type": "Bag",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 4,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 8953,
+    "chat_link": "[&AgH5IgAA]",
+    "icon": "https://render.guildwars2.com/file/9A17A2CE63A1C86D803E183671BB49BBBDB90715/63179.png",
+    "details": {
+      "no_sell_or_sort": false,
+      "size": 5
+    }
+  }
+]

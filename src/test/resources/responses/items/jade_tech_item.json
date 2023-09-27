@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Recycler: Dragonite",
+    "description": "Looted junk items will automatically be turned into dragonite ore.",
+    "type": "JadeTechModule",
+    "level": 80,
+    "rarity": "Masterwork",
+    "vendor_value": 128,
+    "game_types": [
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 97656,
+    "chat_link": "[&AgF4fQEA]",
+    "icon": "https://render.guildwars2.com/file/FA35141D0E150D660A741A75F6A31B90A2F19599/2595063.png"
+  }
+]
