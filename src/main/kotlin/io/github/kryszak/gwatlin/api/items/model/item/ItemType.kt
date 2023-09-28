@@ -24,10 +24,14 @@ enum class ItemType {
     GATHERING,
     @SerialName("Gizmo")
     GIZMO,
+    @SerialName("JadeTechModule")
+    JADE_TECH_MODULE,
     @SerialName("Key")
     KEY,
     @SerialName("MiniPet")
     MINI_PET,
+    @SerialName("PowerCore")
+    POWER_CORE,
     @SerialName("Tool")
     TOOL,
     @SerialName("Trait")

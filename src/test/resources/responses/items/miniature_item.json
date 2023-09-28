@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Mini Risen Hylek",
+    "description": "Double-click to summon this mini to follow you around. Only one mini may be in use at a time.",
+    "type": "MiniPet",
+    "level": 0,
+    "rarity": "Exotic",
+    "vendor_value": 50,
+    "game_types": [
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage",
+      "NoSell",
+      "DeleteWarning"
+    ],
+    "restrictions": [],
+    "id": 47845,
+    "chat_link": "[&AgHlugAA]",
+    "icon": "https://render.guildwars2.com/file/54C862643766B67646992A650A5FFB3F1A5304B6/638237.png",
+    "details": {
+      "minipet_id": 193
+    }
+  }
+]

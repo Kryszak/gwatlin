@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Raspberry Peach Compote",
+    "type": "Consumable",
+    "level": 65,
+    "rarity": "Fine",
+    "vendor_value": 30,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSell"
+    ],
+    "restrictions": [],
+    "id": 12421,
+    "chat_link": "[&AgGFMAAA]",
+    "icon": "https://render.guildwars2.com/file/1405CDA2DD331A667F0A5DDA5E3FFF7D4A4A2F7B/433615.png",
+    "details": {
+      "type": "Food",
+      "duration_ms": 1800000,
+      "apply_count": 1,
+      "name": "Nourishment",
+      "icon": "https://render.guildwars2.com/file/779D3F0ABE5B46C09CFC57374DA8CC3A495F291C/436367.png",
+      "description": "80% Chance to Gain Health on Kill\n+60 Healing Power\n+10% Experience from Kills"
+    }
+  }
+]

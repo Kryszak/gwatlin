@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Frostbitten Orichalcum Mining Pick",
+    "description": "Can harvest Orichalcum, Mithril, and all lesser metals.<br>Gain snowflakes when gathering.",
+    "type": "Gathering",
+    "level": 15,
+    "rarity": "Masterwork",
+    "vendor_value": 36,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoMysticForge",
+      "NoSalvage",
+      "NoSell",
+      "NotUpgradeable",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 68376,
+    "chat_link": "[&AgEYCwEA]",
+    "icon": "https://render.guildwars2.com/file/58C7529768D906B5286ADF4C7865970B1D29A2BE/924597.png",
+    "details": {
+      "type": "Mining"
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Orichalcum Ore",
+    "description": "Refine into Ingots.",
+    "type": "CraftingMaterial",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 8,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 19701,
+    "chat_link": "[&AgH1TAAA]",
+    "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Fine Salvage Kit",
+    "description": "Double-click to salvage crafting materials from an item in your inventory. 15% chance of rarer materials. 40% chance of salvaging upgrades.",
+    "type": "Tool",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 36,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 23041,
+    "chat_link": "[&AgEBWgAA]",
+    "icon": "https://render.guildwars2.com/file/CA01D91B20EB19359FFF313C6DC5C2480A0872B0/66766.png",
+    "details": {
+      "type": "Salvage",
+      "charges": 25
+    }
+  }
+]

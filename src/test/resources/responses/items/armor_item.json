@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Precise Studded Pants",
+    "description": "",
+    "type": "Armor",
+    "level": 17,
+    "rarity": "Fine",
+    "vendor_value": 30,
+    "default_skin": 22,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [],
+    "restrictions": [],
+    "id": 1234,
+    "chat_link": "[&AgHSBAAA]",
+    "icon": "https://render.guildwars2.com/file/9EDA0D4C957DA89F653E9D27695592B139ECD035/61049.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Medium",
+      "defense": 34,
+      "infusion_slots": [],
+      "attribute_adjustment": 26.736,
+      "infix_upgrade": {
+        "id": 138,
+        "attributes": [
+          {
+            "attribute": "Precision",
+            "modifier": 9
+          }
+        ]
+      },
+      "secondary_suffix_item_id": ""
+    }
+  }
+]

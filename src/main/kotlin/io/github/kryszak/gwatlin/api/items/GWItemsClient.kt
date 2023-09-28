@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.items
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.item.Item
 import io.github.kryszak.gwatlin.clients.items.ItemsClient
 
@@ -25,7 +26,7 @@ class GWItemsClient {
      * @see io.github.kryszak.gwatlin.api.items.model.item.Item
      */
     @JvmOverloads
-    fun getItems(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Item> {
+    fun getItems(ids: List<Int>, language: ApiLanguage? = null): List<Item> {
         return itemClient.getItems(ids, language)
     }
 }
