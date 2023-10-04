@@ -1,6 +1,6 @@
 ![Build Status](https://github.com/Kryszak/gwatlin/actions/workflows/build.yml/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/6888080bc19640b4ad89efd0fd84ad9e)](https://app.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6888080bc19640b4ad89efd0fd84ad9e)](https://www.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Kryszak/gwatlin&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6888080bc19640b4ad89efd0fd84ad9e)](https://app.codacy.com/gh/Kryszak/gwatlin/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.kryszak/gwatlin.svg)](https://search.maven.org/artifact/io.github.kryszak/gwatlin)
 
