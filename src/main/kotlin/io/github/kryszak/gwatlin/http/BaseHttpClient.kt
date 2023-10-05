@@ -25,6 +25,7 @@ internal open class BaseHttpClient(
 
     private val json = Json {
         isLenient = true
+        ignoreUnknownKeys = true
     }
 
     private val httpConfig: HttpConfig = HttpConfig()
