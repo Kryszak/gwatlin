@@ -1,7 +1,7 @@
 import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
-    val kotlinVersion = "1.9.10"
+    val kotlinVersion = "1.9.20"
     groovy
     jacoco
     signing
