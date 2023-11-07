@@ -13,7 +13,7 @@ plugins {
 }
 
 project.group = "io.github.kryszak"
-project.version = "1.9.1"
+project.version = "1.9.2"
 
 internal object Meta {
     const val DESCRIPTION = "Guild Wars 2 API client"
@@ -25,7 +25,7 @@ internal object Meta {
 
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
