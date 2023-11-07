@@ -12,6 +12,13 @@ This repository contains code for Guild Wars 2 API client based on [documentatio
 
 Client operates on API version v2.
 
+## JDK versions compatibility
+| JDK   |     Gwatlin     |
+|-------|:---------------:|
+| 21    |      1.9.2      |
+| 17    | 1.9.1 and below |
+
+
 ### Important
 It seems that not all api features are documented on wiki page, so feel free to create issues for missing features.
 Issue should contain example json response for given endpoint.
