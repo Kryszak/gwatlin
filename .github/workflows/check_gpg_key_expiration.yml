@@ -1,0 +1,14 @@
+name: Check Maven Central Key expiration
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # every monday at midnight
+  pull_request:
+
+jobs:
+  update-gradle-wrapper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verify gpg key expiration date
+        run: ./scripts/verify_gpg_key_expiration.sh
