@@ -12,5 +12,7 @@ jobs:
     steps:
       - name: print workpath
         run: echo $PWD
+      - name: ls
+        run: ls
       - name: Verify gpg key expiration date
         run: ./scripts/verify_gpg_key_expiration.sh
