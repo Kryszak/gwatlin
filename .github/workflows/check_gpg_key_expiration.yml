@@ -14,3 +14,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Verify gpg key expiration date
         run: ./scripts/verify_gpg_key_expiration.sh
+        env:
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
