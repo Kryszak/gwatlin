@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: print workpath
+        run: echo $PWD
       - name: Verify gpg key expiration date
         run: ./scripts/verify_gpg_key_expiration.sh
