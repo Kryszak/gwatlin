@@ -5,6 +5,8 @@ if [[ -z "$GPG_SIGNING_KEY" ]]; then
   exit 1
 fi
 
+export GPG_TTY=$(tty)
+
 echo "$GPG_SIGNING_KEY" | gpg --import
 
 EXPIRY_DATE=$(gpg --list-keys | grep pub | grep -oE "expires: [0-9]{4}-[0-9]{2}-[0-9]{2}" | sed 's/expires: //g')
