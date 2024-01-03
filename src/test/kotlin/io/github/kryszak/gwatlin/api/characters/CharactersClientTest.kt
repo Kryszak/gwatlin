@@ -25,6 +25,23 @@ internal class CharactersClientTest : BaseWiremockTest() {
     private val charactersClient = GWCharactersClient(apiKey)
 
     init {
+        should("Get list of characters") {
+            // given
+            stubResponse(
+                "/characters",
+                "/responses/characters/characters.json",
+                apiKey = apiKey,
+                schemaVersion = targetSchemaVersion
+            )
+
+            // when
+            val heroPoints = charactersClient.getCharacters()
+
+            // then
+            heroPoints shouldHaveSize 2
+            heroPoints shouldContainAll listOf("Character-1", "Character-2")
+        }
+
         should("Get character") {
             // given
             val characterName = "Test Character"
