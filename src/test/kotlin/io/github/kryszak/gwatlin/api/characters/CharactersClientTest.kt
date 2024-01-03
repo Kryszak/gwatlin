@@ -35,11 +35,11 @@ internal class CharactersClientTest : BaseWiremockTest() {
             )
 
             // when
-            val heroPoints = charactersClient.getCharacters()
+            val characters = charactersClient.getCharacters()
 
             // then
-            heroPoints shouldHaveSize 2
-            heroPoints shouldContainAll listOf("Character-1", "Character-2")
+            characters shouldHaveSize 2
+            characters shouldContainAll listOf("Character-1", "Character-2")
         }
 
         should("Get character") {
