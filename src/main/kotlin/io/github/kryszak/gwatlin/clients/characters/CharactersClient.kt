@@ -15,6 +15,8 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
 ) {
     private val endpoint = "characters"
 
+    fun getCharacters() = getRequestAuth<List<String>>(endpoint)
+
     fun getCharacter(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName")
 
     fun getBackstory(characterName: String) =
