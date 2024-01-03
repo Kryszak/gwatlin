@@ -14,6 +14,11 @@ class GWCharactersClient(apiKey: String) {
     private val charactersClient: CharactersClient = CharactersClient(apiKey)
 
     /**
+     * Retrieves the list of characters
+     */
+    fun getCharacters() = charactersClient.getCharacters()
+
+    /**
      * Retrieves main character info
      */
     fun getCharacter(characterName: String) = charactersClient.getCharacter(characterName)
