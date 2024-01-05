@@ -15,7 +15,7 @@ Client operates on API version v2.
 ## JDK versions compatibility
 | JDK   |     Gwatlin     |
 |-------|:---------------:|
-| 21    |      1.9.2      |
+| 21    | 1.9.2 and above |
 | 17    | 1.9.1 and below |
 
 
