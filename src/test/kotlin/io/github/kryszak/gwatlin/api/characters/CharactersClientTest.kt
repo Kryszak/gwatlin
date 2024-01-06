@@ -390,8 +390,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
 
             // then
             assertSoftly(bag!!) {
-                size shouldBe 6
-                assertSoftly(it[0]) {
+                size shouldBe 7
+                assertSoftly(it[0]!!) {
                     assertSoftly(inventory[6]!!) {
                         id shouldBe 2258
                         upgrades shouldBe listOf(24774)
@@ -410,7 +410,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                         boundTo shouldBe characterName
                     }
                 }
-                assertSoftly(it[1]) {
+                assertSoftly(it[1]!!) {
                     id shouldBe 45053
                     size shouldBe 18
                     inventory shouldHaveSize 18
@@ -422,7 +422,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                         boundTo shouldBe characterName
                     }
                 }
-                assertSoftly(it[4]) {
+                assertSoftly(it[4]!!) {
                     id shouldBe 9423
                     size shouldBe 15
                     inventory shouldHaveSize 15
@@ -433,6 +433,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                         binding shouldBe ItemBinding.ACCOUNT
                     }
                 }
+                it[6] shouldBe null
             }
         }
 

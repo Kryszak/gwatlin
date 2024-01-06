@@ -40,6 +40,8 @@ enum class ItemType {
     TRINKET,
     @SerialName("Trophy")
     TROPHY,
+    @SerialName("Relic")
+    RELIC,
     @SerialName("UpgradeComponent")
     UPGRADE_COMPONENT,
     @SerialName("Weapon")

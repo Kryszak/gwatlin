@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class InfusionSlot(
     val flags: List<String>,
-    @SerialName("item_id") val itemId: Int
+    @SerialName("item_id") val itemId: Int? = null
 )

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Elegant Armorsmith's Backpack",
+    "description": "This equipment can hold an additional upgrade. Unequip this backpack to use it as a crafting ingredient. Using this as a crafting ingredient will destroy any upgrades held within.",
+    "type": "Back",
+    "level": 78,
+    "rarity": "Exotic",
+    "vendor_value": 256,
+    "default_skin": 2305,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 62889,
+    "chat_link": "[&AgGp9QAA]",
+    "icon": "https://render.guildwars2.com/file/5893AD0A6C6CB94E66CE0C1613E45172EE9996CD/866528.png",
+    "details": {
+      "infusion_slots": [
+        {
+          "flags": [
+            "Infusion"
+          ]
+        }
+      ],
+      "attribute_adjustment": 82.34,
+      "stat_choices": [
+        1052,
+        1042,
+        1044,
+        1043,
+        1046,
+        1048,
+        1047,
+        1041,
+        1050,
+        1051
+      ],
+      "secondary_suffix_item_id": ""
+    }
+  }
+]

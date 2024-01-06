@@ -1,45 +1,77 @@
 [
   {
-    "name": "Strong Soft Wood Longbow of Fire",
-    "description": "",
+    "name": "Celestial Bronze Axe of Force",
     "type": "Weapon",
-    "level": 44,
-    "rarity": "Masterwork",
-    "vendor_value": 120,
-    "default_skin": 3942,
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 0,
+    "default_skin": 3946,
     "game_types": [
-      "Activity",
+      "Wvw",
       "Dungeon",
-      "Pve",
-      "Wvw"
+      "Pve"
     ],
     "flags": [
+      "NoMysticForge",
+      "NoSalvage",
+      "NoSell",
+      "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
     "restrictions": [],
-    "id": 28445,
-    "chat_link": "[&AgEdbwAA]",
-    "icon": "https://render.guildwars2.com/file/C6110F52DF5AFE0F00A56F9E143E9732176DDDE9/65015.png",
+    "id": 95356,
+    "chat_link": "[&AgF8dAEA]",
+    "icon": "https://render.guildwars2.com/file/C8EAC643C02F41B918D79031B6060B0CBFE40CAD/64967.png",
     "details": {
-      "type": "LongBow",
-      "damage_type": "Physical",
-      "min_power": 385,
-      "max_power": 452,
+      "type": "Axe",
+      "damage_type": "Choking",
+      "min_power": 857,
+      "max_power": 1048,
       "defense": 0,
       "infusion_slots": [],
+      "attribute_adjustment": 341.44,
       "infix_upgrade": {
+        "id": 559,
         "attributes": [
           {
             "attribute": "Power",
-            "modifier": 62
+            "modifier": 56
           },
           {
             "attribute": "Precision",
-            "modifier": 44
+            "modifier": 56
+          },
+          {
+            "attribute": "Toughness",
+            "modifier": 56
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 56
+          },
+          {
+            "attribute": "CritDamage",
+            "modifier": 56
+          },
+          {
+            "attribute": "Healing",
+            "modifier": 56
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 56
+          },
+          {
+            "attribute": "BoonDuration",
+            "modifier": 56
+          },
+          {
+            "attribute": "ConditionDuration",
+            "modifier": 56
           }
         ]
       },
-      "suffix_item_id": 24547,
+      "suffix_item_id": 24615,
       "secondary_suffix_item_id": ""
     }
   }

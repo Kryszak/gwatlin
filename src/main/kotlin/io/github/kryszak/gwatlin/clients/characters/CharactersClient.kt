@@ -43,7 +43,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
         getRequestAuth<List<EquipmentTab>>("$endpoint/$characterName/equipmenttabs?tabs=all")
 
     fun getInventory(characterName: String) =
-        getRequestAuth<Map<String, List<Bag>>>("$endpoint/$characterName/inventory").values.firstOrNull()
+        getRequestAuth<Map<String, List<Bag?>>>("$endpoint/$characterName/inventory").values.firstOrNull()
 
     fun getRecipes(characterName: String) =
         getRequestAuth<Map<String, List<Int>>>("$endpoint/$characterName/recipes").values.firstOrNull()
