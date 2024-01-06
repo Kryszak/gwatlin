@@ -37,6 +37,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 mapOf(
                     "armor" to ItemTestInput(1234, "armor_item.json", ::armorAssertion),
                     "back" to ItemTestInput(56, "back_item.json", ::backAssertion),
+                    "back infusion" to ItemTestInput(56, "back_infusion_item.json", ::backInfusionAssertion),
                     "bag" to ItemTestInput(1371, "bag_item.json", ::bagAssertion),
                     "consumable" to ItemTestInput(12421, "consumable_item.json", ::consumableAssertion),
                     "container" to ItemTestInput(9335, "container_item.json", ::containerAssertion),
@@ -50,7 +51,9 @@ internal class ItemsClientTest : BaseWiremockTest() {
                     "jade tech" to ItemTestInput(97656, "jade_tech_item.json", ::jadeTechAssertion),
                     "miniature" to ItemTestInput(47845, "miniature_item.json", ::miniatureAssertion),
                     "power core" to ItemTestInput(97020, "power_core_item.json", ::powerCoreAssertion),
+                    "relic" to ItemTestInput(70093, "relic_item.json", ::relicAssertion),
                     "tool" to ItemTestInput(23041, "salvage_kit_item.json", ::toolAssertion),
+                    "trophy" to ItemTestInput(70093, "trophy_item.json", ::trophyAssertion),
                     "upgrade component" to ItemTestInput(
                         72339,
                         "upgrade_component_item.json",
@@ -136,6 +139,45 @@ internal class ItemsClientTest : BaseWiremockTest() {
                         InfixUpgradeAttribute("Power", 5.0),
                         InfixUpgradeAttribute("Precision", 3.0)
                     )
+                }
+                backItemDetails.secondarySuffixItemId shouldBe ""
+            }
+        }
+
+    private fun backInfusionAssertion(item: Item) =
+        assertSoftly(item) {
+            it should beOfType<BackItem>()
+            name shouldBe "Elegant Armorsmith's Backpack"
+            description shouldBe "This equipment can hold an additional upgrade. Unequip this backpack to use it as a crafting ingredient. Using this as a crafting ingredient will destroy any upgrades held within."
+            type shouldBe ItemType.BACK
+            level shouldBe 78
+            rarity shouldBe ItemRarity.EXOTIC
+            vendorValue shouldBe 256
+            defaultSkin shouldBe 2305
+            gameTypes shouldContainExactly listOf("Activity", "Wvw", "Dungeon", "Pve")
+            flags shouldContainExactly listOf("AccountBound", "NoSalvage", "NoSell", "AccountBindOnUse")
+            restrictions.shouldBeEmpty()
+            id shouldBe 62889
+            chatLink shouldBe "[&AgGp9QAA]"
+            icon shouldBe "https://render.guildwars2.com/file/5893AD0A6C6CB94E66CE0C1613E45172EE9996CD/866528.png"
+            assertSoftly(details!!) {
+                val backItemDetails = details.shouldBeTypeOf<BackItemDetails>()
+                backItemDetails.attributeAdjustment shouldBe 82.34
+                backItemDetails.statChoices shouldContainExactly listOf(
+                    1052,
+                    1042,
+                    1044,
+                    1043,
+                    1046,
+                    1048,
+                    1047,
+                    1041,
+                    1050,
+                    1051
+                )
+                assertSoftly(backItemDetails.infusionSlots) { slots ->
+                    slots[0].itemId.shouldBeNull()
+                    slots[0].flags shouldContainExactly listOf("Infusion")
                 }
                 backItemDetails.secondarySuffixItemId shouldBe ""
             }
@@ -327,6 +369,23 @@ internal class ItemsClientTest : BaseWiremockTest() {
             details.shouldBeNull()
         }
 
+    private fun relicAssertion(item: Item) =
+        assertSoftly(item) {
+            it should beOfType<RelicItem>()
+            name shouldBe "Relic of Isgarren"
+            description shouldBe "After evading an enemy's attack, place the Eye of Isgarren on them for a duration. You deal increased strike and condition duration against enemies with the Eye of Isgarren."
+            type shouldBe ItemType.RELIC
+            level shouldBe 60
+            rarity shouldBe ItemRarity.EXOTIC
+            vendorValue shouldBe 200
+            gameTypes shouldHaveSize 4
+            flags shouldHaveSize 2
+            restrictions.shouldBeEmpty()
+            id shouldBe 99997
+            chatLink shouldBe "[&AgGdhgEA]"
+            icon shouldBe "https://render.guildwars2.com/file/5FB808F04E427650A84031E46B632DC292A3583F/3122354.png"
+        }
+
     private fun toolAssertion(item: Item) =
         assertSoftly(item) {
             it should beOfType<SalvageKitItem>()
@@ -348,6 +407,24 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 salvageKitDetails.charges shouldBe 25
             }
         }
+
+    private fun trophyAssertion(item: Item) =
+        assertSoftly(item) {
+            it should beOfType<TrophyItem>()
+            name shouldBe "Shiny Bauble"
+            description.shouldBeBlank()
+            type shouldBe ItemType.TROPHY
+            level shouldBe 0
+            rarity shouldBe ItemRarity.JUNK
+            vendorValue shouldBe 3000
+            gameTypes shouldHaveSize 5
+            flags shouldHaveSize 4
+            restrictions.shouldBeEmpty()
+            id shouldBe 70093
+            chatLink shouldBe "[&AgHNEQEA]"
+            icon shouldBe "https://render.guildwars2.com/file/034B091471E6067C2B0BCC70FE04D2F3AE51F291/1010539.png"
+        }
+
 
     private fun upgradeComponentAssertion(item: Item) =
         assertSoftly(item) {
@@ -381,29 +458,45 @@ internal class ItemsClientTest : BaseWiremockTest() {
     private fun weaponAssertion(item: Item) =
         assertSoftly(item) {
             it should beOfType<WeaponItem>()
-            name shouldBe "Strong Soft Wood Longbow of Fire"
+            name shouldBe "Celestial Bronze Axe of Force"
             description.shouldBeBlank()
             type shouldBe ItemType.WEAPON
-            level shouldBe 44
-            rarity shouldBe ItemRarity.MASTERWORK
-            vendorValue shouldBe 120
-            defaultSkin shouldBe 3942
-            gameTypes shouldHaveSize 4
-            flags shouldHaveSize 1
+            level shouldBe 80
+            rarity shouldBe ItemRarity.EXOTIC
+            vendorValue shouldBe 0
+            defaultSkin shouldBe 3946
+            gameTypes shouldHaveSize 3
+            flags shouldHaveSize 5
             restrictions.shouldBeEmpty()
-            id shouldBe 28445
-            chatLink shouldBe "[&AgEdbwAA]"
-            icon shouldBe "https://render.guildwars2.com/file/C6110F52DF5AFE0F00A56F9E143E9732176DDDE9/65015.png"
+            id shouldBe 95356
+            chatLink shouldBe "[&AgF8dAEA]"
+            icon shouldBe "https://render.guildwars2.com/file/C8EAC643C02F41B918D79031B6060B0CBFE40CAD/64967.png"
             assertSoftly(details!!) {
                 val weaponDetails = details.shouldBeTypeOf<WeaponDetails>()
-                weaponDetails.type shouldBe "LongBow"
-                weaponDetails.damageType shouldBe "Physical"
-                weaponDetails.minPower shouldBe 385
-                weaponDetails.maxPower shouldBe 452
+                weaponDetails.type shouldBe "Axe"
+                weaponDetails.damageType shouldBe "Choking"
+                weaponDetails.minPower shouldBe 857
+                weaponDetails.maxPower shouldBe 1048
                 weaponDetails.defense shouldBe 0
+                weaponDetails.attributeAdjustment shouldBe 341.44
                 (weaponDetails.infusionSlots as List<*>).shouldBeEmpty()
-                weaponDetails.suffixItemId shouldBe 24547
+                weaponDetails.suffixItemId shouldBe 24615
                 weaponDetails.secondarySuffixItemId shouldBe ""
+                assertSoftly(weaponDetails.infixUpgrade!!) {
+                    id shouldBe 559
+                    attributes shouldHaveSize 9
+                    attributes shouldContainExactly listOf(
+                        InfixUpgradeAttribute("Power", 56.0),
+                        InfixUpgradeAttribute("Precision", 56.0),
+                        InfixUpgradeAttribute("Toughness", 56.0),
+                        InfixUpgradeAttribute("Vitality", 56.0),
+                        InfixUpgradeAttribute("CritDamage", 56.0),
+                        InfixUpgradeAttribute("Healing", 56.0),
+                        InfixUpgradeAttribute("ConditionDamage", 56.0),
+                        InfixUpgradeAttribute("BoonDuration", 56.0),
+                        InfixUpgradeAttribute("ConditionDuration", 56.0),
+                    )
+                }
             }
         }
 

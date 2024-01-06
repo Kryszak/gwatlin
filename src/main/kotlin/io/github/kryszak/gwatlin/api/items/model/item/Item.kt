@@ -34,7 +34,7 @@ data class ArmorItem(
     @SerialName("chat_link") override val chatLink: String,
     override val name: String,
     override val icon: String,
-    override val description: String,
+    override val description: String = "",
     override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
@@ -144,7 +144,7 @@ data class CraftingMaterialItem(
     @SerialName("chat_link") override val chatLink: String,
     override val name: String,
     override val icon: String,
-    override val description: String,
+    override val description: String = "",
     override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
@@ -364,7 +364,7 @@ data class TrophyItem(
     @SerialName("chat_link") override val chatLink: String,
     override val name: String,
     override val icon: String,
-    override val description: String,
+    override val description: String = "",
     override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
@@ -408,7 +408,7 @@ data class WeaponItem(
     @SerialName("chat_link") override val chatLink: String,
     override val name: String,
     override val icon: String,
-    override val description: String,
+    override val description: String = "",
     override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
@@ -418,4 +418,26 @@ data class WeaponItem(
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
     override val details: WeaponDetails? = null
+) : Item()
+
+/**
+ * Data model for relic item
+ */
+@Serializable
+@SerialName("Relic")
+data class RelicItem(
+    override val id: Int,
+    @SerialName("chat_link") override val chatLink: String,
+    override val name: String,
+    override val icon: String,
+    override val description: String,
+    override val type: ItemType,
+    override val rarity: ItemRarity,
+    override val level: Int,
+    @SerialName("vendor_value") override val vendorValue: Int,
+    @SerialName("default_skin") override val defaultSkin: Int? = null,
+    override val flags: List<String> = listOf(),
+    @SerialName("game_types") override val gameTypes: List<String> = listOf(),
+    override val restrictions: List<String> = listOf(),
+    override val details: ItemDetails? = null
 ) : Item()

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Shiny Bauble",
+    "type": "Trophy",
+    "level": 0,
+    "rarity": "Junk",
+    "vendor_value": 3000,
+    "game_types": [
+      "PvpLobby",
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoMysticForge",
+      "NoSalvage",
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 70093,
+    "chat_link": "[&AgHNEQEA]",
+    "icon": "https://render.guildwars2.com/file/034B091471E6067C2B0BCC70FE04D2F3AE51F291/1010539.png"
+  }
+]

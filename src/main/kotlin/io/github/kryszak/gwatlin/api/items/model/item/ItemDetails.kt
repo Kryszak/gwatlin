@@ -116,7 +116,7 @@ data class SalvageKitDetails(
 data class TrinketDetails(
     val type: String,
     @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot> = listOf(),
-    @SerialName("attribute_adjustment") val attributeAdjustment: Int,
+    @SerialName("attribute_adjustment") val attributeAdjustment: Double,
     @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
     @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
@@ -148,7 +148,7 @@ data class WeaponDetails(
     @SerialName("max_power") val maxPower: Int,
     val defense: Double,
     @SerialName("infusion_slots") val infusionSlots: List<InfusionSlot> = listOf(),
-    @SerialName("attribute_adjustment") val attributeAdjustment: Int? = null,
+    @SerialName("attribute_adjustment") val attributeAdjustment: Double? = null,
     @SerialName("infix_upgrade") val infixUpgrade: InfixUpgrade? = null,
     @SerialName("suffix_item_id") val suffixItemId: Int? = null,
     @SerialName("secondary_suffix_item_id") val secondarySuffixItemId: String,
