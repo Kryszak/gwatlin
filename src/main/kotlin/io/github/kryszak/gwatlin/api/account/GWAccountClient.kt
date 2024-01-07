@@ -112,7 +112,7 @@ class GWAccountClient(apiKey: String) {
      *
      * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/inventory).
      */
-    fun getInventory(): List<InventoryItem> {
+    fun getInventory(): List<InventoryItem?> {
         return accountClient.getInventory()
     }
 

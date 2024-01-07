@@ -178,10 +178,14 @@ internal class AccountClientTest : BaseWiremockTest() {
             val inventory = accountClient.getInventory()
 
             // then
-            assertSoftly(inventory[0]) {
-                id shouldBe 44602
-                count shouldBe 1
-                binding shouldBe "Account"
+            assertSoftly(inventory) {
+                size shouldBe 3
+                assertSoftly(it[0]!!) {
+                    id shouldBe 44602
+                    count shouldBe 1
+                    binding shouldBe "Account"
+                }
+                it[2] shouldBe null
             }
         }
 
