@@ -52,7 +52,7 @@ internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
         return getRequestAuth("$accountEndpoint/home/nodes")
     }
 
-    fun getInventory(): List<InventoryItem> {
+    fun getInventory(): List<InventoryItem?> {
         return getRequestAuth("$accountEndpoint/inventory")
     }
 
