@@ -32,6 +32,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/libs/*"
+          allowUpdates: "true"
       - name: Push documentation
         uses: cpina/github-action-push-to-another-repository@main
         env:
