@@ -1,0 +1,35 @@
+name: Fix
+
+on:
+  pull_request:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: write
+      packages: write 
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: ☕ Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Create GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/libs/*"
+      - name: Push documentation
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build/dokka/html'
+          destination-github-username: "Kryszak"
+          destination-repository-name: "gwatlin-docs"
+          user-email: github-actions[bot]@users.noreply.github.com
+          target-branch: master
