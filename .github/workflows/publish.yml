@@ -6,11 +6,8 @@ on:
       - v**
 
 jobs:
-  publish:
+  maven-central:
     runs-on: ubuntu-latest 
-    permissions: 
-      contents: write
-      packages: write 
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
@@ -28,11 +25,47 @@ jobs:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GPG_SIGNING_PASSPHRASE: ${{ secrets.GPG_SIGNING_PASSPHRASE }}
+  github-release:
+    runs-on: ubuntu-latest
+    needs: maven-central
+    permissions: 
+      contents: write
+      packages: write 
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: ☕ Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Build project
+        run: ./gradlew build
       - name: Create GitHub release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/libs/*"
           allowUpdates: "true"
+  publish-docs:
+    runs-on: ubuntu-latest
+    needs: maven-central
+    permissions: 
+      contents: write
+      packages: write 
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: ☕ Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Build project
+        run: ./gradlew build
       - name: Push documentation
         uses: cpina/github-action-push-to-another-repository@main
         env:
