@@ -5,10 +5,10 @@ import com.github.tomakehurst.wiremock.client.WireMock.absent
 import com.github.tomakehurst.wiremock.client.WireMock.matching
 import com.github.tomakehurst.wiremock.common.ConsoleNotifier
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import com.marcinziolo.kotlin.wiremock.equalTo
 import com.marcinziolo.kotlin.wiremock.get
 import com.marcinziolo.kotlin.wiremock.returnsJson
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
@@ -31,7 +31,7 @@ internal open class BaseWiremockTest : ShouldSpec() {
     protected fun stubResponse(
         requestUrl: String,
         responseFile: String,
-        language: io.github.kryszak.gwatlin.api.ApiLanguage? = null,
+        language: ApiLanguage? = null,
         apiKey: String? = null,
         schemaVersion: String? = null,
         responseStatus: Int = 200
