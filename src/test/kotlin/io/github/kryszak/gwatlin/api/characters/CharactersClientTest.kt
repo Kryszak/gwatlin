@@ -248,7 +248,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 lastModified shouldBe "2022-09-24T14:27:00Z"
                 deaths shouldBe 3519
                 crafting shouldHaveSize 2
-                title shouldBe 300
+                title shouldBe null
                 backstory shouldContainExactly listOf("15-84", "7-55", "186-161", "16-88", "17-93")
                 wvwAbilities shouldContainExactly listOf(
                     WvwAbility(24, 6),
