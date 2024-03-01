@@ -131,6 +131,95 @@ internal class CharactersClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get character without guild") {
+            // given
+            val characterName = "Test Character"
+            val escapedName = characterName.replace(" ", "%20")
+            stubResponse(
+                "/characters/$escapedName",
+                "/responses/characters/character-without-guild.json",
+                apiKey = apiKey,
+                schemaVersion = targetSchemaVersion
+            )
+
+            // when
+            val character = charactersClient.getCharacter(characterName)
+
+            // then
+            assertSoftly(character) {
+                name shouldBe characterName
+                race shouldBe "Charr"
+                gender shouldBe "Male"
+                flags.shouldBeEmpty()
+                profession shouldBe "Elementalist"
+                level shouldBe 80
+                guild.shouldBeNull()
+                age shouldBe 4732983
+                created shouldBe "2013-08-09T12:22:00Z"
+                lastModified shouldBe "2022-09-24T14:27:00Z"
+                deaths shouldBe 3519
+                crafting shouldHaveSize 2
+                title shouldBe 300
+                backstory shouldContainExactly listOf("15-84", "7-55", "186-161", "16-88", "17-93")
+                wvwAbilities shouldContainExactly listOf(
+                    WvwAbility(24, 6),
+                    WvwAbility(7, 5),
+                    WvwAbility(25, 5),
+                    WvwAbility(17, 5),
+                    WvwAbility(26, 7)
+                )
+                buildTabsUnlocked shouldBe 4
+                activeBuildTab shouldBe 2
+                buildTabs shouldHaveSize 4
+                equipment shouldHaveSize 76
+                assertSoftly(equipment[2]) {
+                    id shouldBe 80190
+                    slot shouldBe ItemSlot.COAT
+                    skin shouldBe 1419
+                    binding shouldBe ItemBinding.ACCOUNT
+                    location shouldBe EquipmentItemLocation.EQUIPPED_FROM_LEGENDARY_ARMORY
+                    tabs.first() shouldBe 2
+                }
+                equipmentTabsUnlocked shouldBe 5
+                activeEquipmentTab shouldBe 2
+                equipmentTabs shouldHaveSize 5
+                assertSoftly(equipmentTabs[0]) {
+                    isActive.shouldBeFalse()
+                }
+                assertSoftly(equipmentTabs[1]) {
+                    name shouldBe "Weaver SW DA"
+                    isActive.shouldBeTrue()
+                    equipment shouldHaveSize 17
+                    assertSoftly(equipment[1]) {
+                        id shouldBe 80190
+                        infusions shouldHaveSize 1
+                        dyes shouldHaveSize 4
+                        charges shouldBe null
+                        assertSoftly(stats!!) {
+                            id shouldBe 161
+                            attributes shouldBe mapOf(
+                                "Power" to 141,
+                                "Precision" to 101,
+                                "CritDamage" to 101
+                            )
+                        }
+                    }
+                }
+                training shouldHaveSize 13
+                assertSoftly(training[5]) {
+                    id shouldBe 34
+                    spent shouldBe 60
+                    done.shouldBeTrue()
+                }
+                assertSoftly(training[12]) {
+                    id shouldBe 467
+                    spent shouldBe 250
+                    done.shouldBeTrue()
+                }
+
+            }
+        }
+
         should("Get character buildtabs") {
             // given
             val characterName = "Test Character"

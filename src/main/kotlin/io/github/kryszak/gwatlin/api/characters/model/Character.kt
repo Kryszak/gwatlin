@@ -17,7 +17,7 @@ data class Character(
     val gender: String,
     val profession: String,
     val level: Int,
-    val guild: String,
+    val guild: String? = null,
     val age: Int,
     val created: String,
     @SerialName("last_modified")
