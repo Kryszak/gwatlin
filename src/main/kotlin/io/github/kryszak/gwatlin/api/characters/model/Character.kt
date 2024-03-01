@@ -23,7 +23,7 @@ data class Character(
     @SerialName("last_modified")
     val lastModified: String,
     val deaths: Int,
-    val title: Int,
+    val title: Int? = null,
 
     // Non-Core
     val flags: List<String>,
