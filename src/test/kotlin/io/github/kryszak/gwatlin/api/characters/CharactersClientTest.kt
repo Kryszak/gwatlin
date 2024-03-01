@@ -260,7 +260,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 buildTabsUnlocked shouldBe 4
                 activeBuildTab shouldBe 2
                 buildTabs shouldHaveSize 4
-                equipment shouldHaveSize 76
+                equipment shouldHaveSize 77
                 assertSoftly(equipment[2]) {
                     id shouldBe 80190
                     slot shouldBe ItemSlot.COAT
@@ -268,6 +268,9 @@ internal class CharactersClientTest : BaseWiremockTest() {
                     binding shouldBe ItemBinding.ACCOUNT
                     location shouldBe EquipmentItemLocation.EQUIPPED_FROM_LEGENDARY_ARMORY
                     tabs.first() shouldBe 2
+                }
+                assertSoftly(equipment[20]) {
+                    slot shouldBe ItemSlot.FISHINGROD
                 }
                 equipmentTabsUnlocked shouldBe 5
                 activeEquipmentTab shouldBe 2

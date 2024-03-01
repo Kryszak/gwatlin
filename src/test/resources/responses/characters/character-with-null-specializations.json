@@ -678,6 +678,12 @@
       "location": "Equipped"
     },
     {
+      "id": 97730,
+      "slot": "FishingRod",
+      "binding": "Account",
+      "location": "Equipped"
+    },
+    {
       "id": 49432,
       "count": 4,
       "location": "Armory",
