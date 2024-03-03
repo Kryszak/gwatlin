@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.gamemechanics.model.facts
 
+import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate.Companion.serialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -9,7 +10,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 @SerialName("Buff")
 data class Buff(
-    override val type: String,
     override val text: String? = null,
     override val icon: String? = null,
     val duration: Int? = null,
@@ -17,4 +17,6 @@ data class Buff(
     val description: String? = null,
     @SerialName("apply_count")
     val applyCount: Int? = null
-) : Fact
+) : Fact {
+    override val type by serialNameDelegate
+}

@@ -1,7 +1,9 @@
 package io.github.kryszak.gwatlin.api.items.model.item
 
+import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 
 /**
  * Root data model for item class
@@ -13,7 +15,6 @@ sealed class Item {
     abstract val name: String
     abstract val icon: String
     abstract val description: String
-    abstract val type: ItemType
     abstract val rarity: ItemRarity
     abstract val level: Int
     abstract val vendorValue: Int
@@ -22,6 +23,8 @@ sealed class Item {
     abstract val gameTypes: List<String>
     abstract val restrictions: List<String>
     abstract val details: ItemDetails?
+
+    val type: ItemType by SerialNameDelegate(ItemType.Companion::fromSerialString)
 }
 
 /**
@@ -35,7 +38,6 @@ data class ArmorItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -43,7 +45,7 @@ data class ArmorItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ArmorDetails? = null
+    override val details: ArmorDetails? = null,
 ) : Item()
 
 /**
@@ -57,7 +59,6 @@ data class BackItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -65,7 +66,7 @@ data class BackItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: BackItemDetails? = null
+    override val details: BackItemDetails? = null,
 ) : Item()
 
 /**
@@ -79,7 +80,6 @@ data class BagItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -87,7 +87,7 @@ data class BagItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: BagItemDetails? = null
+    override val details: BagItemDetails? = null,
 ) : Item()
 
 /**
@@ -101,7 +101,6 @@ data class ConsumableItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -109,7 +108,7 @@ data class ConsumableItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ConsumableDetails? = null
+    override val details: ConsumableDetails? = null,
 ) : Item()
 
 /**
@@ -123,7 +122,6 @@ data class ContainerItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -131,7 +129,7 @@ data class ContainerItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ContainerDetails? = null
+    override val details: ContainerDetails? = null,
 ) : Item()
 
 /**
@@ -145,7 +143,6 @@ data class CraftingMaterialItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -153,7 +150,7 @@ data class CraftingMaterialItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -167,7 +164,6 @@ data class GatheringItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -175,7 +171,7 @@ data class GatheringItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: GatheringDetails? = null
+    override val details: GatheringDetails? = null,
 ) : Item()
 
 /**
@@ -189,7 +185,6 @@ data class GizmoItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -197,7 +192,7 @@ data class GizmoItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: GizmoDetails? = null
+    override val details: GizmoDetails? = null,
 ) : Item()
 
 /**
@@ -211,7 +206,6 @@ data class JadeTechModuleItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -219,7 +213,7 @@ data class JadeTechModuleItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -233,7 +227,6 @@ data class KeyItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -241,7 +234,7 @@ data class KeyItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -255,7 +248,6 @@ data class MiniatureItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -263,7 +255,7 @@ data class MiniatureItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: MiniatureDetails? = null
+    override val details: MiniatureDetails? = null,
 ) : Item()
 
 /**
@@ -277,7 +269,6 @@ data class PowerCoreItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -285,7 +276,7 @@ data class PowerCoreItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -299,7 +290,6 @@ data class SalvageKitItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -307,7 +297,7 @@ data class SalvageKitItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: SalvageKitDetails? = null
+    override val details: SalvageKitDetails? = null,
 ) : Item()
 
 /**
@@ -321,7 +311,6 @@ data class TraitItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -329,7 +318,7 @@ data class TraitItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -343,7 +332,6 @@ data class TrinketItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -351,7 +339,7 @@ data class TrinketItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: TrinketDetails? = null
+    override val details: TrinketDetails? = null,
 ) : Item()
 
 /**
@@ -365,7 +353,6 @@ data class TrophyItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -373,7 +360,7 @@ data class TrophyItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()
 
 /**
@@ -387,7 +374,6 @@ data class UpgradeComponentItem(
     override val name: String,
     override val icon: String,
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -395,7 +381,7 @@ data class UpgradeComponentItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: UpgradeDetails? = null
+    override val details: UpgradeDetails? = null,
 ) : Item()
 
 /**
@@ -409,7 +395,6 @@ data class WeaponItem(
     override val name: String,
     override val icon: String = "",
     override val description: String = "",
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -417,7 +402,7 @@ data class WeaponItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: WeaponDetails? = null
+    override val details: WeaponDetails? = null,
 ) : Item()
 
 /**
@@ -431,7 +416,6 @@ data class RelicItem(
     override val name: String,
     override val icon: String,
     override val description: String,
-    override val type: ItemType,
     override val rarity: ItemRarity,
     override val level: Int,
     @SerialName("vendor_value") override val vendorValue: Int,
@@ -439,5 +423,5 @@ data class RelicItem(
     override val flags: List<String> = listOf(),
     @SerialName("game_types") override val gameTypes: List<String> = listOf(),
     override val restrictions: List<String> = listOf(),
-    override val details: ItemDetails? = null
+    override val details: ItemDetails? = null,
 ) : Item()

@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.guild.model.log
 
+import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate.Companion.serialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,11 +13,12 @@ data class GuildLogRankChange(
     override val id: Int,
     override val time: String,
     override val user: String? = null,
-    override val type: String,
     @SerialName("rank_change")
     val rankChange: String,
     @SerialName("old_rank")
     val oldRank: String,
     @SerialName("new_rank")
     val newRank: String
-) : GuildLog
+) : GuildLog {
+    override val type: String by serialNameDelegate
+}

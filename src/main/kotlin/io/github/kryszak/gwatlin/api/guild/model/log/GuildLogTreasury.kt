@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.guild.model.log
 
+import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate.Companion.serialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -12,8 +13,9 @@ data class GuildLogTreasury(
     override val id: Int,
     override val time: String,
     override val user: String? = null,
-    override val type: String,
     @SerialName("item_id")
     val itemId: Int,
     val count: Int,
-) : GuildLog
+) : GuildLog {
+    override val type: String by serialNameDelegate
+}

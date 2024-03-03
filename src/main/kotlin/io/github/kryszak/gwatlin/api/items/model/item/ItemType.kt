@@ -45,5 +45,14 @@ enum class ItemType {
     @SerialName("UpgradeComponent")
     UPGRADE_COMPONENT,
     @SerialName("Weapon")
-    WEAPON
+    WEAPON,
+    ;
+
+    companion object {
+        private val bySerialName = entries.associateBy {
+            it.javaClass.getField(it.name).getAnnotation(SerialName::class.java).value
+        }
+
+        internal fun fromSerialString(s: String): ItemType = bySerialName.getValue(s)
+    }
 }
