@@ -260,7 +260,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 buildTabsUnlocked shouldBe 4
                 activeBuildTab shouldBe 2
                 buildTabs shouldHaveSize 4
-                equipment shouldHaveSize 77
+                equipment shouldHaveSize 78
                 assertSoftly(equipment[2]) {
                     id shouldBe 80190
                     slot shouldBe ItemSlot.COAT
@@ -271,6 +271,9 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 }
                 assertSoftly(equipment[20]) {
                     slot shouldBe ItemSlot.FISHINGROD
+                }
+                assertSoftly(equipment[21]) {
+                    slot shouldBe ItemSlot.RELIC
                 }
                 equipmentTabsUnlocked shouldBe 5
                 activeEquipmentTab shouldBe 2

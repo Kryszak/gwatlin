@@ -683,6 +683,13 @@
       "location": "Equipped"
     },
     {
+      "id": 100633,
+      "slot": "Relic",
+      "binding": "Character",
+      "bound_to": "Test Character",
+      "location": "Equipped"
+    },
+    {
       "id": 49432,
       "count": 4,
       "location": "Armory",

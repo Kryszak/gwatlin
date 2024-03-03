@@ -54,4 +54,6 @@ enum class ItemSlot {
     PICK,
     @SerialName("FishingRod")
     FISHINGROD,
+    @SerialName("Relic")
+    RELIC,
 }
