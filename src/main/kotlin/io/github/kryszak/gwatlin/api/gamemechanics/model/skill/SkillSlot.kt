@@ -22,4 +22,6 @@ enum class SkillSlot {
     WEAPON1_5,
     @SerialName("Elite")
     ELITE,
+    @SerialName("Heal")
+    HEAL,
 }

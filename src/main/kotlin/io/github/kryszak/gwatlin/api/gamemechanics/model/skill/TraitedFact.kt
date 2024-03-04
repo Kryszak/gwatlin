@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for traited fact skill property
+ * Data model for traited fact skill property.
  */
 @Serializable
 data class TraitedFact(
