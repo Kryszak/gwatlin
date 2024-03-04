@@ -19,5 +19,7 @@ enum class SkillSlot {
     @SerialName("Utility")
     UTILITY,
     @SerialName("Weapon_[1-5]")
-    WEAPON1_5
+    WEAPON1_5,
+    @SerialName("Elite")
+    ELITE,
 }
