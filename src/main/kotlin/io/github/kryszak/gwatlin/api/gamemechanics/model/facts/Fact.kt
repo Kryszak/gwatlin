@@ -7,7 +7,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 sealed interface Fact {
-        val type: String
-        val text: String?
-        val icon: String?
+    val text: String?
+    val icon: String?
+
+    val type: String
 }

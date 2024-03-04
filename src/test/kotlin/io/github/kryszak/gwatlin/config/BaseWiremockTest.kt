@@ -9,6 +9,7 @@ import com.marcinziolo.kotlin.wiremock.equalTo
 import com.marcinziolo.kotlin.wiremock.get
 import com.marcinziolo.kotlin.wiremock.returnsJson
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.util.ResourcesUtil
 import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.extensions.wiremock.ListenerMode
@@ -57,6 +58,6 @@ internal open class BaseWiremockTest : ShouldSpec() {
     }
 
     private fun parseResponseText(file: String): String {
-        return BaseWiremockTest::class.java.getResource(file)?.readText()!!
+        return ResourcesUtil.readResource(file)
     }
 }

@@ -224,10 +224,10 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
     }
 
     private fun expectedGuildLogWithoutSince() =
-        GuildLogTreasury(1190, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413", "treasury", 24299, 150)
+        GuildLogTreasury(1190, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413", 24299, 150)
 
     private fun expectedGuildLogWithSince() =
-        GuildLogUpgrade(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", "upgrade", UpgradeAction.QUEUED, 364)
+        GuildLogUpgrade(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", UpgradeAction.QUEUED, 364)
 
     data class GuildLogTestInput(
         val since: String,
