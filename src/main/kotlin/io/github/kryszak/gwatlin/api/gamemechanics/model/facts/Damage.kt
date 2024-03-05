@@ -15,7 +15,17 @@ data class Damage(
     @SerialName("hit_count")
     val hitCount: Int,
     @SerialName("dmg_multiplier")
-    val finisherType: Float? = null
+    val dmgMultiplier: Float? = null,
 ) : Fact {
     override val type by serialNameDelegate
+
+    /**
+     *
+     */
+    @Deprecated(
+        message = "Most likely this field was a typo.",
+        replaceWith = ReplaceWith("dmgMultiplier"),
+        level = DeprecationLevel.WARNING,
+    )
+    val finisherType: Float? = dmgMultiplier
 }
