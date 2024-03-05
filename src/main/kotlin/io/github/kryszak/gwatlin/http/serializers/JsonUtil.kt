@@ -5,7 +5,7 @@ import kotlinx.serialization.json.Json
 
 /**
  * A convenience object for [Json], and to help the
- * library to use the same instance of it through out.
+ * library to use the same instance of it throughout.
  */
 object JsonUtil {
 
@@ -15,4 +15,3 @@ object JsonUtil {
     }
 
 }
-g
