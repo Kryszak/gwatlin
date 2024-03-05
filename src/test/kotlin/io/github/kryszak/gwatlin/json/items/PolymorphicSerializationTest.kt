@@ -4,6 +4,8 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import io.github.kryszak.gwatlin.api.guild.model.log.GuildLog
 import io.github.kryszak.gwatlin.api.items.model.item.Item
+import io.github.kryszak.gwatlin.http.serializers.JsonUtil
+import io.github.kryszak.gwatlin.http.serializers.JsonUtil.json
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofGuildLogs
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofItems
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofSkills
@@ -51,10 +53,6 @@ internal class PolymorphicSerializationTest : ShouldSpec() {
         }
 
         companion object {
-            val json = Json {
-                isLenient = true // e.g. Trait.tier is handled as an unquoted string.
-                ignoreUnknownKeys = true
-            }
 
             inline fun <reified T> ofTestResourceJsons(
                 first: String,
@@ -86,16 +84,6 @@ internal class PolymorphicSerializationTest : ShouldSpec() {
                     "responses/guild/guild_log.json",
                     "responses/guild/guild_log_since.json",
                 ) { ResourcesUtil.readResource(it) }
-            }
-        }
-    }
-
-    private data class TestInput(
-        val itemFiles: List<String>,
-    ) {
-        companion object {
-            fun ofFiles(first: String, vararg rest: String): TestInput {
-                return TestInput(listOf(first) + rest)
             }
         }
     }

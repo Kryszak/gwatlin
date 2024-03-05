@@ -3,26 +3,20 @@ package io.github.kryszak.gwatlin.api.skills
 import io.github.kryszak.gwatlin.api.ApiLanguage.EN
 import io.github.kryszak.gwatlin.api.gamemechanics.GWSkillsClient
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.AttributeAdjust
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Damage
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Range
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Recharge
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
-import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.TraitedFact
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.datatest.withData
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
-import io.kotest.matchers.doubles.plusOrMinus
 import io.kotest.matchers.nulls.shouldBeNull
-import io.kotest.matchers.ranges.shouldBeIn
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeTypeOf
-import kotlinx.serialization.SerialName
 
 internal class SkillsClientTest : BaseWiremockTest() {
 
