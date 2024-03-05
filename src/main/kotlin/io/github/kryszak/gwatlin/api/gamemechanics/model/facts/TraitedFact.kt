@@ -21,6 +21,9 @@ data class TraitedFact(
     val overrides: Int? = null,
     val fact: Fact,
 ) {
+    /**
+     * Use this to serialize [TraitedFact] to comply with GW2 API.
+     */
     class TraitedFactUnwrapSerializer : JsonTransformingSerializer<TraitedFact>(serializer()) {
         private fun split(element: JsonElement) = element.jsonObject.entries
             .groupBy { (k, _) -> k == "requires_trait" || k == "overrides" }
