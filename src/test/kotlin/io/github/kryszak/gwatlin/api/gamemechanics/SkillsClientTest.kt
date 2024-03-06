@@ -6,7 +6,9 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
 
 internal class SkillsClientTest : BaseWiremockTest() {
 
@@ -41,8 +43,11 @@ internal class SkillsClientTest : BaseWiremockTest() {
                 icon shouldBe "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png"
                 type shouldBe SkillType.PROFESSION
                 weaponType shouldBe "None"
-                professions shouldHaveSize 0
-                slot shouldBe SkillSlot.PROFESSION2
+                assertSoftly(professions) {
+                    it.shouldNotBeNull()
+                    it shouldHaveSize 0
+                }
+                slot shouldBe SkillSlot.PROFESSION_2
                 flags shouldHaveSize 2
                 id shouldBe 1110
                 chatLink shouldBe "[&BlYEAAA=]"
