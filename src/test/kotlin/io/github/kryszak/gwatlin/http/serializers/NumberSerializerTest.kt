@@ -6,7 +6,7 @@ import io.kotest.matchers.doubles.plusOrMinus
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldStartWith
 
-class NumberSerializerTest : ShouldSpec({
+internal class NumberSerializerTest : ShouldSpec({
     val s = NumberSerializer()
     should("serialize int") {
         json.encodeToString(s, 1 as Number) shouldBe "1"

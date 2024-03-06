@@ -1,9 +1,9 @@
 package io.github.kryszak.gwatlin.http.serializers
 
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.FactWithNoTypeSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
+import kotlinx.serialization.modules.contextual
 
 /**
  * A convenience object for a [Json] instance, to
@@ -19,6 +19,7 @@ object JsonConfigurer {
                 require(it == null)
                 FactWithNoTypeSerializer()
             }
+            contextual<Number>(NumberSerializer())
         }
     }
 

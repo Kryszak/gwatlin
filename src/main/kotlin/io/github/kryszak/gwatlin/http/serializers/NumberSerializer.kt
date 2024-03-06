@@ -11,10 +11,19 @@ import kotlinx.serialization.json.JsonPrimitive
  */
 class NumberSerializer : JsonContentPolymorphicSerializer<Number>(Number::class) {
     override fun selectDeserializer(element: JsonElement): DeserializationStrategy<Number> {
-        require(element is JsonPrimitive) { "Expected a json primitive, got  $element" }
-        val content = element.content
-        require(!element.isString) { "String element not supported: '$content'" }
-        return if (content.toIntOrNull() != null) Int.serializer()
+        return if (element.requireContent().isInteger())
+            Int.serializer()
         else Double.serializer()
     }
+
+    companion object {
+        private fun JsonElement.requireContent(): String {
+            require(this is JsonPrimitive) { "Expected a json primitive, got  $this" }
+            require(!isString) { "String element not supported: '$content'" }
+            return content
+        }
+
+        private fun String.isInteger() = toIntOrNull() != null
+    }
+
 }

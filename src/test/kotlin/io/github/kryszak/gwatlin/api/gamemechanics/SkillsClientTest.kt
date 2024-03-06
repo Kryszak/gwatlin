@@ -5,6 +5,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
+import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
@@ -45,7 +46,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
                 weaponType shouldBe "None"
                 assertSoftly(professions) {
                     it.shouldNotBeNull()
-                    it shouldHaveSize 0
+                    it.shouldBeEmpty()
                 }
                 slot shouldBe SkillSlot.PROFESSION_2
                 flags shouldHaveSize 2

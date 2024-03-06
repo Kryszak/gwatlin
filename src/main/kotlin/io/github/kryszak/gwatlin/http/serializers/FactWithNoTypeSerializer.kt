@@ -1,5 +1,7 @@
-package io.github.kryszak.gwatlin.api.gamemechanics.model.facts
+package io.github.kryszak.gwatlin.http.serializers
 
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Percent
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder

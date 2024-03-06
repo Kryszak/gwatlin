@@ -27,5 +27,4 @@ enum class SkillType {
     MONSTER,
     @SerialName("Pet")
     PET,
-    ;
 }
