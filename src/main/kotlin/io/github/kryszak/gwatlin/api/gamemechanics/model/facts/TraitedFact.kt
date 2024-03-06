@@ -25,15 +25,16 @@ data class TraitedFact(
      * Use this to serialize [TraitedFact] to comply with GW2 API.
      */
     class TraitedFactUnwrapSerializer : JsonTransformingSerializer<TraitedFact>(serializer()) {
-        private fun split(element: JsonElement) = element.jsonObject.entries
-            .groupBy { (k, _) -> k == "requires_trait" || k == "overrides" }
-            .mapValues { (_, v) -> v.associate { it.toPair() } }
-            .let { it[true] to it[false] }
 
         override fun transformSerialize(element: JsonElement): JsonElement {
             val (traitedFact, fact) = split(element)
             val entries = requireNotNull(traitedFact).toMutableMap()
-            requireNotNull(fact).entries.single().value.jsonObject.entries
+            requireNotNull(fact)
+                .entries
+                .single()
+                .value
+                .jsonObject
+                .entries
                 .forEach { (k, v) -> entries[k] = v }
             return JsonObject(entries)
         }
@@ -41,9 +42,14 @@ data class TraitedFact(
         override fun transformDeserialize(element: JsonElement): JsonElement {
             val (traitedFact, fact) = split(element)
             val entries = requireNotNull(traitedFact).toMutableMap()
-            entries.put("fact", JsonObject(requireNotNull(fact)))
+            entries["fact"] = JsonObject(requireNotNull(fact))
             return JsonObject(entries)
         }
+
+        private fun split(element: JsonElement) = element.jsonObject.entries
+            .groupBy { (k, _) -> k == "requires_trait" || k == "overrides" }
+            .mapValues { (_, v) -> v.associate { it.toPair() } }
+            .let { it[true] to it[false] }
 
     }
 
