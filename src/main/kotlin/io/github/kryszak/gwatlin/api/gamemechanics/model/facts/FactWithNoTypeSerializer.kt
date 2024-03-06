@@ -30,11 +30,15 @@ class FactWithNoTypeSerializer : KSerializer<Fact> {
 
     private fun chooseSerializer(keys: Set<String>): KSerializer<out Fact> {
         return when(keys) {
-            setOf("text", "icon", "percent") -> Percent.serializer()
+            KEYS_OF_PERCENTAGE -> Percent.serializer()
             else -> throw IllegalArgumentException(
                 "Can't figure out what Fact type to use based on keys: '$keys'"
             )
         }
+    }
+
+    companion object {
+        private val KEYS_OF_PERCENTAGE = setOf("text", "icon", "percent")
     }
 
 }
