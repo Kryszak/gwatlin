@@ -11,17 +11,15 @@ import kotlinx.serialization.modules.SerializersModule
  */
 object JsonConfigurer {
 
-    val module1 = SerializersModule {
-        polymorphicDefaultDeserializer(Fact::class) {
-            require(it==null)
-            FactWithNoTypeSerializer()
-        }
-    }
-
     val json = Json {
         isLenient = true // e.g. Trait.tier is handled as an unquoted string.
         ignoreUnknownKeys = true
-        serializersModule = module1
+        serializersModule = SerializersModule {
+            polymorphicDefaultDeserializer(Fact::class) {
+                require(it == null)
+                FactWithNoTypeSerializer()
+            }
+        }
     }
 
 }
