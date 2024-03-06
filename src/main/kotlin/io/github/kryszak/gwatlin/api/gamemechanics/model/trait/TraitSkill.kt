@@ -1,7 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics.model.trait
 
-import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.TraitedFact
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.TraitedFact
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -15,5 +15,5 @@ data class TraitSkill(
     val description: String,
     val icon: String,
     val facts: List<Fact>?,
-    @SerialName("traited_facts") val traitedFacts: List<TraitedFact>?
+    @SerialName("traited_facts") val traitedFacts: List<@Serializable(with = TraitedFact.TraitedFactUnwrapSerializer::class) TraitedFact>?,
 )

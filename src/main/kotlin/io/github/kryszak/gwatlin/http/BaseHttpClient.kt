@@ -9,7 +9,7 @@ import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.http.config.HttpConfig
 import io.github.kryszak.gwatlin.http.exception.ErrorResponse
 import io.github.kryszak.gwatlin.http.exception.RetrieveError
-import kotlinx.serialization.json.Json
+import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
 import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
@@ -22,11 +22,6 @@ internal open class BaseHttpClient(
     private val logMessage = "Requested url: %s"
 
     private val baseUrl: String
-
-    private val json = Json {
-        isLenient = true
-        ignoreUnknownKeys = true
-    }
 
     private val httpConfig: HttpConfig = HttpConfig()
 
@@ -64,7 +59,10 @@ internal open class BaseHttpClient(
             is Result.Failure -> {
                 log.error("Request failed! ${result.getException().message}")
                 try {
-                    val error = json.decodeFromString(errorResponse.deserializationStrategy, String(errorResponse.response.data))
+                    val error = json.decodeFromString(
+                        errorResponse.deserializationStrategy,
+                        String(errorResponse.response.data)
+                    )
                     log.error("Error: $error")
                     throw ApiRequestException(error.toString())
                 } catch (e: IllegalStateException) {
