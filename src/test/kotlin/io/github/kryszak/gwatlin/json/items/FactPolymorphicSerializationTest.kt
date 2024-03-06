@@ -2,7 +2,7 @@ package io.github.kryszak.gwatlin.json.items
 
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Damage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
-import io.github.kryszak.gwatlin.http.serializers.JsonUtil
+import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer
 import io.github.kryszak.gwatlin.util.ResourcesUtil.readResource
 import io.kotest.assertions.assertSoftly
 import io.kotest.core.spec.style.ShouldSpec
@@ -27,9 +27,9 @@ internal class FactPolymorphicSerializationTest : ShouldSpec({
         ) { input ->
             val skill = readSkillJson(input.res)
             input.test(skill)
-            val jsonTxt = JsonUtil.json.encodeToString(skill)
+            val jsonTxt = JsonConfigurer.json.encodeToString(skill)
             // Ensure all traited_facts objects are flat
-            JsonUtil.json.parseToJsonElement(jsonTxt).jsonObject["traited_facts"]?.jsonArray?.forEach {traitedFact ->
+            JsonConfigurer.json.parseToJsonElement(jsonTxt).jsonObject["traited_facts"]?.jsonArray?.forEach { traitedFact ->
                 assertSoftly(traitedFact.jsonObject) {
                     // traitedFact required fields
                     keys shouldContain "requires_trait"
@@ -61,7 +61,7 @@ internal class FactPolymorphicSerializationTest : ShouldSpec({
         }
 
         fun readSkillJson(res: String) = readResource(res)
-            .let<_, List<Skill>>(JsonUtil.json::decodeFromString)
+            .let<_, List<Skill>>(JsonConfigurer.json::decodeFromString)
             .single()
 
     }

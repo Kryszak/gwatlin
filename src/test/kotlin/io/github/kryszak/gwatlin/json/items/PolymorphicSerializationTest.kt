@@ -4,8 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import io.github.kryszak.gwatlin.api.guild.model.log.GuildLog
 import io.github.kryszak.gwatlin.api.items.model.item.Item
-import io.github.kryszak.gwatlin.http.serializers.JsonUtil
-import io.github.kryszak.gwatlin.http.serializers.JsonUtil.json
+import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofGuildLogs
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofItems
 import io.github.kryszak.gwatlin.json.items.PolymorphicSerializationTest.PolymorphicSerializationTestInput.Companion.ofSkills

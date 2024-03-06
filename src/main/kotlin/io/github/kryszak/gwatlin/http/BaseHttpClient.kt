@@ -9,8 +9,7 @@ import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.http.config.HttpConfig
 import io.github.kryszak.gwatlin.http.exception.ErrorResponse
 import io.github.kryszak.gwatlin.http.exception.RetrieveError
-import io.github.kryszak.gwatlin.http.serializers.JsonUtil
-import io.github.kryszak.gwatlin.http.serializers.JsonUtil.json
+import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
 import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
