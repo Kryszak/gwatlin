@@ -16,6 +16,6 @@ data class Achievement(
         val type: String,
         val flags: List<String>,
         val tiers: List<AchievementTier>,
-        val rewards: List<AchievementReward>,
+        val rewards: List<AchievementReward> = listOf(),
         val bits: List<AchievementBit> = listOf()
 )
