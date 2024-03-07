@@ -66,7 +66,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             // then
             achievementList shouldHaveSize 1
             assertSoftly(achievementList[0]) {
-                this.id shouldBe 3137
+                this.id shouldBe 3147
                 name shouldBe "Walking on Fire"
                 rewards shouldHaveSize 0
             }
