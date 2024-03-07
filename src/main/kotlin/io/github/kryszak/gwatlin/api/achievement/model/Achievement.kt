@@ -14,8 +14,8 @@ data class Achievement(
         val requirement: String,
         @SerialName("locked_text") val lockedText: String,
         val type: String,
-        val flags: List<String>,
-        val tiers: List<AchievementTier>,
-        val rewards: List<AchievementReward>,
+        val flags: List<String> = listOf(),
+        val tiers: List<AchievementTier> = listOf(),
+        val rewards: List<AchievementReward> = listOf(),
         val bits: List<AchievementBit> = listOf()
 )

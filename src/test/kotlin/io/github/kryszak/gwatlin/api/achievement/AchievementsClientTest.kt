@@ -6,6 +6,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 
 internal class AchievementsClientTest : BaseWiremockTest() {
@@ -49,6 +50,46 @@ internal class AchievementsClientTest : BaseWiremockTest() {
                 assertSoftly(rewards[0]) {
                     type shouldBe "Item"
                     count shouldBe 1
+                }
+            }
+        }
+
+        should("Get 3147: Walking on Fire") {
+            // given
+            val id = 3147
+            stubResponse("/achievements?ids=3147", "/responses/achievements/3147-walking-on-fire.json")
+
+            // when
+            val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
+
+            // then
+            achievementList shouldHaveSize 1
+            assertSoftly(achievementList[0]) {
+                this.id shouldBe 3147
+                name shouldBe "Walking on Fire"
+                rewards shouldHaveSize 0
+            }
+        }
+
+        should("Get 5585: Dragon Ice Infuser") {
+            // given
+            val id = 5585
+            stubResponse("/achievements?ids=5585", "/responses/achievements/5585-dragon-ice-infuser.json")
+
+            // when
+            val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
+
+            // then
+            achievementList shouldHaveSize 1
+            assertSoftly(achievementList[0]) {
+                this.id shouldBe 5585
+                name shouldBe "Dragon Ice Infuser"
+                bits shouldHaveSize 16
+                bits.distinct() shouldHaveSize 1
+                assertSoftly(bits[0]) {
+                    type.shouldBeNull()
+                    this.id.shouldBeNull()
+                    text.shouldBeNull()
                 }
             }
         }

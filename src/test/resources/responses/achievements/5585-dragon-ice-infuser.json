@@ -1,0 +1,67 @@
+[
+  {
+    "id": 5585,
+    "name": "Dragon Ice Infuser",
+    "description": "",
+    "requirement": "Unlock all recipes to craft the Azure Dragon Slayer weapons.",
+    "locked_text": "",
+    "type": "ItemSet",
+    "flags": [
+      "Pvp",
+      "RepairOnLogin",
+      "Permanent"
+    ],
+    "bits": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "tiers": [
+      {
+        "count": 2,
+        "points": 1
+      },
+      {
+        "count": 4,
+        "points": 1
+      },
+      {
+        "count": 6,
+        "points": 2
+      },
+      {
+        "count": 8,
+        "points": 2
+      },
+      {
+        "count": 10,
+        "points": 2
+      },
+      {
+        "count": 12,
+        "points": 3
+      },
+      {
+        "count": 14,
+        "points": 4
+      },
+      {
+        "count": 16,
+        "points": 5
+      }
+    ]
+  }
+]

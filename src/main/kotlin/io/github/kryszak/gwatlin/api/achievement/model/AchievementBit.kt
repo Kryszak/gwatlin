@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class AchievementBit(
-    val type: AchievementBitType,
+    val type: AchievementBitType? = null,
     val id: Int? = null,
     val text: String? = null
 )

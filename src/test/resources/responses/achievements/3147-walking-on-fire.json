@@ -1,0 +1,19 @@
+[
+  {
+    "id": 3147,
+    "name": "Walking on Fire",
+    "description": "Don't look down!",
+    "requirement": "Navigate the lava tunnel in Ember Bay.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      }
+    ]
+  }
+]
