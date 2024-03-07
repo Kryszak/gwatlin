@@ -12,8 +12,8 @@ import kotlinx.serialization.Serializable
 data class AttributeAdjust(
     override val text: String? = null,
     override val icon: String? = null,
-    val value: Int,
-    val target: String
+    val value: Int? = null,
+    val target: String? = null,
 ) : Fact {
     override val type by serialNameDelegate
 }

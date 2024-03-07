@@ -7,8 +7,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class BuffPrefix(
-    val test: String,
+    val text: String,
     val icon: String,
-    val status: String,
-    val description: String
+    val status: String? = null,
+    val description: String? = null,
 )

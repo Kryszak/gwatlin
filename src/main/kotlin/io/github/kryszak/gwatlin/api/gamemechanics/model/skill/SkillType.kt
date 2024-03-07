@@ -8,6 +8,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 enum class SkillType {
+
     @SerialName("Bundle")
     BUNDLE,
     @SerialName("Elite")
@@ -19,5 +20,11 @@ enum class SkillType {
     @SerialName("Utility")
     UTILITY,
     @SerialName("Weapon")
-    WEAPON
+    WEAPON,
+    @SerialName("Toolbelt")
+    TOOLBELT,
+    @SerialName("Monster")
+    MONSTER,
+    @SerialName("Pet")
+    PET,
 }

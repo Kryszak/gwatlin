@@ -3,6 +3,7 @@ package io.github.kryszak.gwatlin.api.skills
 import io.github.kryszak.gwatlin.api.ApiLanguage.EN
 import io.github.kryszak.gwatlin.api.gamemechanics.GWSkillsClient
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.AttributeAdjust
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Percent
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Range
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Recharge
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
@@ -14,9 +15,16 @@ import io.kotest.datatest.withData
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.doubles.plusOrMinus
 import io.kotest.matchers.nulls.shouldBeNull
+import io.kotest.matchers.nulls.shouldNotBeNull
+import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
+import io.kotest.matchers.types.beInstanceOf
+import io.kotest.matchers.types.shouldBeInstanceOf
 import io.kotest.matchers.types.shouldBeTypeOf
+import org.w3c.dom.Attr
 
 internal class SkillsClientTest : BaseWiremockTest() {
 
@@ -28,7 +36,20 @@ internal class SkillsClientTest : BaseWiremockTest() {
                 mapOf(
                     "necro-util" to SkillTestInput(10607, "10607-necro-util.json", ::necroUtilAssertion),
                     "necro-elite" to SkillTestInput(10646, "10646-necro-elite.json", ::necroEliteAssertion),
-                    "revenant-heal" to SkillTestInput(62719, "62719-revenant-heal.json", ::revenantHealAssertion)
+                    "revenant-heal" to SkillTestInput(62719, "62719-revenant-heal.json", ::revenantHealAssertion),
+                    "bandage" to SkillTestInput(1175, "1175-bandage.json", ::bandageAssertion),
+                    "binding-roots" to SkillTestInput(1279, "1279-binding-roots.json", ::bindingRootsAssertion),
+                    "frozen-burst" to SkillTestInput(5487, "5487-frozen-burst.json", ::frozenBurstAssertion),
+                    "frozen-burst" to SkillTestInput(5489, "5489-lightning-whip.json", ::lightningWhipAssertion),
+                    "comet" to SkillTestInput(5490, "5490-comet.json", ::cometAssertion),
+                    "grenade-barrage" to SkillTestInput(5810, "5810-grenade-barrage.json", ::grenadeBarrageAssertion),
+                    "kick" to SkillTestInput(10180, "10180-kick.json", ::kickAssertion),
+                    "locust-swarm" to SkillTestInput(10557, "10557-locust-swarm.json", ::locustSwarmAssertion),
+                    "blood-swarm" to SkillTestInput(12424, "12424-blood-frenzy.json", ::bloodFrenzyAssertion),
+                    "icy-bite" to SkillTestInput(12656, "12656-icy-bite.json", ::icyBiteAssertion),
+                    "corrosive-residue" to SkillTestInput(34569,"34569-corrosive-residue.json", ::corrosiveResidueAssertion),
+                    "engage-photon-forge" to SkillTestInput(42938,"42938-engage-photon-forge.json", ::engagePhotonForgeAssertion),
+                    "path-of-gluttony" to SkillTestInput(71867,"71867-path-of-gluttony.json",::pathOfGluttonyAssertion),
                 )
             ) { (id, responseFile, assertion) ->
                 // given
@@ -145,5 +166,107 @@ internal class SkillsClientTest : BaseWiremockTest() {
         previousChain.shouldBeNull()
     }
 
+    private fun bandageAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Bandage"
+
+        assertSoftly(professions) {
+            it.shouldNotBeNull()
+            it shouldHaveSize 9
+        }
+        slot shouldBe SkillSlot.DOWNED_4
+    }
+
+    private fun bindingRootsAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Binding Roots"
+        weaponType.shouldBeNull()
+        type.shouldBeNull()
+        professions.shouldBeNull()
+        slot.shouldBeNull()
+    }
+
+    private fun frozenBurstAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Frozen Burst"
+        slot shouldBe SkillSlot.WEAPON_3
+    }
+
+    private fun lightningWhipAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Lightning Whip"
+        slot shouldBe SkillSlot.WEAPON_1
+    }
+
+    private fun cometAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Comet"
+        slot shouldBe SkillSlot.WEAPON_5
+    }
+
+    private fun grenadeBarrageAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Grenade Barrage"
+        type shouldBe SkillType.TOOLBELT
+        slot shouldBe SkillSlot.TOOLBELT
+    }
+
+    private fun kickAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Kick"
+        type shouldBe SkillType.MONSTER
+        slot shouldBe SkillSlot.DOWNED_2
+    }
+
+    private fun locustSwarmAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Locust Swarm"
+        facts shouldHaveSize 12
+        assertSoftly(facts[4]) {
+            shouldBeInstanceOf<Percent>()
+            text shouldBe "Life Force"
+            type shouldBe "Percent"
+            percent shouldBe (1.5 plusOrMinus 0.01)
+        }
+    }
+
+    private fun bloodFrenzyAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Blood Frenzy"
+        facts shouldHaveSize 6
+        assertSoftly(facts[3]) {
+            shouldBeInstanceOf<AttributeAdjust>()
+            value.shouldBeNull()
+        }
+    }
+
+    private fun icyBiteAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Icy Bite"
+        type shouldBe SkillType.PET
+    }
+
+    private fun corrosiveResidueAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Corrosive Residue"
+        icon.shouldBeNull()
+    }
+
+    private fun engagePhotonForgeAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Engage Photon Forge"
+        facts shouldHaveSize 4
+        assertSoftly(facts[1]) {
+            shouldBeTypeOf<Percent>()
+            percent shouldBe 2
+            value.shouldBeNull()
+        }
+        assertSoftly(facts[2]) {
+            shouldBeTypeOf<Percent>()
+            percent.shouldBeNull()
+            value shouldBe 100
+        }
+    }
+
+    private fun pathOfGluttonyAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Path of Gluttony"
+        facts shouldHaveSize 7
+        assertSoftly(facts[1]) {
+            shouldBeTypeOf<AttributeAdjust>()
+            target.shouldBeNull()
+        }
+        assertSoftly(facts[2]) {
+            shouldBeTypeOf<AttributeAdjust>()
+            target shouldBe "Healing"
+        }
+    }
 
 }
