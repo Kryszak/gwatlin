@@ -9,10 +9,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Sector(
     val id: Int,
-    val name: String,
+    val name: String? = null,
     val level: Int,
     val coord: Coordinates,
     val bounds: List<Coordinates>,
     @SerialName("chat_link")
-    val chatLink: String
+    val chatLink: String,
 )

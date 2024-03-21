@@ -16,14 +16,14 @@ data class Map(
     val maxLevel: Int,
     @SerialName("default_floor")
     val defaultFloor: Int,
-    val type: MapType,
-    val floors: List<Int>,
+    val type: MapType? = null,
+    val floors: List<Int> = listOf(),
     @SerialName("region_id")
-    val regionId: Int,
+    val regionId: Int? = null,
     @SerialName("region_name")
-    val regionName: String?,
+    val regionName: String? = null,
     @SerialName("continent_id")
-    val continentId: Int,
+    val continentId: Int? = null,
     @SerialName("continent_name")
     val continentName: String? = null,
     @SerialName("map_rect")

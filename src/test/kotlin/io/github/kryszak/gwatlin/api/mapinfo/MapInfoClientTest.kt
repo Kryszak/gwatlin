@@ -41,8 +41,8 @@ internal class MapInfoClientTest : BaseWiremockTest() {
                 minLevel shouldBe 40
                 maxLevel shouldBe 50
                 defaultFloor shouldBe 1
-                labelCoord.x shouldBe 53376
-                labelCoord.y shouldBe 32960
+                labelCoord?.x shouldBe 53376
+                labelCoord?.y shouldBe 32960
                 mapRect.first.x shouldBe -27648
                 mapRect.second.y shouldBe 39936
                 continentRect.first.x shouldBe 52224
