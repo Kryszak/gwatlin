@@ -4,6 +4,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlin.collections.Map
 
+
+
 /**
  * Data model for map info returned by the /continents endpoint
  */
