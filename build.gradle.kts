@@ -9,7 +9,7 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
-    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
+    id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
 }
 
 project.group = "io.github.kryszak"
