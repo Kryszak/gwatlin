@@ -157,7 +157,7 @@ val kotlinxSerializationVersion = "1.6.3"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.5.6"
 val kotestVersion = "5.9.0"
-val kotestWiremockExtensionVersion = "3.0.1"
+val kotestWiremockExtensionVersion = "3.1.0"
 val kotlinWiremockDslVersion = "2.1.1"
 
 dependencies {
