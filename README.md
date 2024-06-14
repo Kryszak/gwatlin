@@ -23,25 +23,6 @@ Client operates on API version v2.
 It seems that not all api features are documented on wiki page, so feel free to create issues for missing features.
 Issue should contain example json response for given endpoint.
 
-## Features
-| Category          | Finished           |
-| ----------------- | :----------------: |
-| Account           | :heavy_check_mark: |
-| Achievements      | :heavy_check_mark: |
-| Characters        | :heavy_check_mark: |
-| Commerce          | :heavy_check_mark: |
-| Daily Rewards     | :heavy_check_mark: |
-| Game Mechanics    | :heavy_check_mark: |
-| Guild             | :heavy_check_mark: |
-| Home Instance     | :heavy_check_mark: |
-| Items             | :heavy_check_mark: |
-| Map Information   | :heavy_check_mark: |
-| Miscellaneous     | :heavy_check_mark: |
-| Story             | :heavy_check_mark: |
-| Structured PvP    | :heavy_check_mark: |
-| Trading Post      | :heavy_check_mark: |
-| World vs. World   | :heavy_check_mark: |
-
 ## Example usage
 Artifact is available on Maven Central repository.
 
