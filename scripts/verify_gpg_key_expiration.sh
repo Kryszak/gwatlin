@@ -5,7 +5,7 @@ if [[ -z "$GPG_SIGNING_KEY" ]]; then
   exit 1
 fi
 
-export GPG_TTY=$(tty)
+echo "no-tty" >> ~/.gnupg/gpg.conf
 
 echo "$GPG_SIGNING_KEY" | gpg --import
 
