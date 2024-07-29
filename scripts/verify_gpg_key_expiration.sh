@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [[ -z "$GPG_SIGNING_KEY" ]]; then
+if [[ -z "$GPG_SIGNING_KEY_BASE64" ]]; then
   echo "No gpg key found, aborting"
   exit 1
 fi
 
 echo "no-tty" >> ~/.gnupg/gpg.conf
 
-echo "$GPG_SIGNING_KEY" | gpg --import
+echo "$GPG_SIGNING_KEY_BASE64" | base64 -d | gpg --import
 
 EXPIRY_DATE=$(gpg --list-keys | grep pub | grep -oE "expires: [0-9]{4}-[0-9]{2}-[0-9]{2}" | sed 's/expires: //g')
 TODAY=$(date +%Y-%m-%d)
