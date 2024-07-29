@@ -17,4 +17,4 @@ jobs:
       - name: Verify gpg key expiration date
         run: ./scripts/verify_gpg_key_expiration.sh
         env:
-          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+          GPG_SIGNING_KEY_BASE64: ${{ secrets.GPG_SIGNING_KEY_BASE64 }}
