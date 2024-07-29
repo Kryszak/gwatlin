@@ -3,6 +3,8 @@ name: Check Maven Central Key expiration
 on:
   schedule:
     - cron: "0 0 * * 1" # every monday at midnight
+  # Allow to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   key-expiration-checker:
@@ -14,4 +16,4 @@ jobs:
       - name: Verify gpg key expiration date
         run: ./scripts/verify_gpg_key_expiration.sh
         env:
-          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+          GPG_SIGNING_KEY_BASE64: ${{ secrets.GPG_SIGNING_KEY_BASE64 }}

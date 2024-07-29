@@ -1,4 +1,5 @@
 import org.jetbrains.dokka.gradle.DokkaTask
+import java.util.*
 
 plugins {
     val kotlinVersion = "2.0.0"
@@ -75,12 +76,12 @@ tasks {
 
 signing {
     val signingKey = providers
-        .environmentVariable("GPG_SIGNING_KEY")
+        .environmentVariable("GPG_SIGNING_KEY_BASE64")
     val signingPassphrase = providers
         .environmentVariable("GPG_SIGNING_PASSPHRASE")
 
     if (signingKey.isPresent && signingPassphrase.isPresent) {
-        useInMemoryPgpKeys(signingKey.get(), signingPassphrase.get())
+        useInMemoryPgpKeys(String(Base64.getDecoder().decode(signingKey.get())), signingPassphrase.get())
         val extension = extensions
             .getByName("publishing") as PublishingExtension
         sign(extension.publications)
