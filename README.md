@@ -7,28 +7,13 @@
 # Gwatlin
 **G**uild **W**ars 2 **A**PI client written in Ko**tlin**
 
-## About
-This repository contains code for Guild Wars 2 API client based on [documentation](https://wiki.guildwars2.com/wiki/API:Main).
-
 Client operates on API version v2.
-
-## JDK versions compatibility
-| JDK   |     Gwatlin     |
-|-------|:---------------:|
-| 21    | 1.9.2 and above |
-| 17    | 1.9.1 and below |
-
 
 ### Important
 It seems that not all api features are documented on wiki page, so feel free to create issues for missing features.
 Issue should contain example json response for given endpoint.
 
 ## Example usage
-Artifact is available on Maven Central repository.
-
-### Documentation
-For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs/)
-
 ### Code
 ```kotlin
 // Client without API KEY
@@ -43,5 +28,12 @@ val tokenInfo = tokenInfoClient.getTokenInfo()
 println(tokenInfo)
 // Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)
 ```
-## Release
-To release new version, increment `project.version` property in [build file](./build.gradle.kts). Next, run [release](./scripts/release_version.sh) script to create new tag and push it to GitHub or create and push new tag manually. New package version will be deployed to Maven repository by GitHub Actions.
+
+### Documentation
+For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs/)
+
+## JDK versions compatibility
+| JDK   |     Gwatlin     |
+|-------|:---------------:|
+| 21    | 1.9.2 and above |
+| 17    | 1.9.1 and below |
