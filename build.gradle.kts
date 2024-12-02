@@ -51,9 +51,6 @@ tasks {
         useJUnitPlatform()
         finalizedBy(jacocoTestReport)
     }
-    build {
-        finalizedBy(dokkaHtml)
-    }
     withType<DokkaTask>().configureEach {
         dokkaSourceSets {
             named("main") {

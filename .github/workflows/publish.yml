@@ -65,7 +65,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build project
-        run: ./gradlew build
+        run: ./gradlew build dokkaHtml
       - name: Push documentation
         uses: cpina/github-action-push-to-another-repository@main
         env:
