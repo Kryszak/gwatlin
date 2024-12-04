@@ -16,7 +16,7 @@ In case of key expiration, following steps must be done to create new one:
    Replace `"test <test@test.com>"` with uid output of `gpg --list-keys` for given key. 
 3. Upload base64 encoded secret key to Github secret `GPG_SIGNING_KEY_BASE64` (`cat priv.key | base64`)
 4. Upload key passphrase to Github secret `GPG_SIGNING_PASSPHRASE`
-5. Upload public key with command `gpg --keyserver keyserver.ubuntu.com --send-keys CA925CD6C9E8D064FF05B4728190C4130ABA0F98
+5. Upload public key with command `gpg --keyserver keyserver.ubuntu.com --send-keys <key id>
    `. Replace id with value taken from `gpg --list-keys` pub output value.
 
 Full instructions on working with gpg keys and Central repository can be found [in official documentation](https://central.sonatype.org/publish/requirements/gpg/).
