@@ -18,8 +18,10 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+      - name: Prepare just
+        uses: extractions/setup-just@v2
       - name: Publish package
-        run: ./gradlew clean build publish closeAndReleaseStagingRepository
+        run: just release
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
@@ -41,8 +43,10 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+      - name: Prepare just
+        uses: extractions/setup-just@v2
       - name: Build project
-        run: ./gradlew build
+        run: just build
       - name: Create GitHub release
         uses: ncipollo/release-action@v1
         with:
@@ -64,8 +68,10 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
+      - name: Prepare just
+        uses: extractions/setup-just@v2
       - name: Build project
-        run: ./gradlew build dokkaHtml
+        run: just documentation
       - name: Push documentation
         uses: cpina/github-action-push-to-another-repository@main
         env:
