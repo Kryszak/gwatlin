@@ -1,10 +1,12 @@
 ## Utilities
 Install [just](https://github.com/casey/just) for running project commands.
 
+To list available commands, run `just`
+
 ## Release
 To release new version, increment `project.version` property in [build file](../build.gradle.kts).
 
-Next, run [release](./release_version.sh) script from root directory (`just create-release`) to create new tag and push it to GitHub or create and push new tag manually. 
+Next, run `create-release` just task from root directory (`just create-release`) to create new tag and push it to GitHub or create and push new tag manually. 
 
 After new tag is pushed GitHub Actions will upload new version of artifact to Maven Central,
 create new GitHub release and push new version of documentation.
