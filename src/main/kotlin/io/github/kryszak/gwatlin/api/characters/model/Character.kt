@@ -47,7 +47,7 @@ data class Character(
     val equipmentTabsUnlocked: Int? = null,
     @SerialName("active_equipment_tab")
     val activeEquipmentTab: Int? = null,
-    val equipment: List<EquipmentItem>,
+    val equipment: List<EquipmentItem> = listOf(),
     @SerialName("equipment_tabs")
     val equipmentTabs: List<EquipmentTab> = listOf()
 )
