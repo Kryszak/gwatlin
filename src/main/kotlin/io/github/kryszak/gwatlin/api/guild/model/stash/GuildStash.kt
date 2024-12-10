@@ -12,5 +12,5 @@ data class GuildStash(
         val size: Int,
         val coins: Int,
         val note: String,
-        val inventory: List<GuildStashItem?>
+        val inventory: List<GuildStashItem?> = listOf(),
 )

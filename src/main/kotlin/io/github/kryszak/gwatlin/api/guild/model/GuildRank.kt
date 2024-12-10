@@ -9,6 +9,6 @@ import kotlinx.serialization.Serializable
 data class GuildRank(
         val id: String,
         val order: Int,
-        val permissions: List<String>,
+        val permissions: List<String> = listOf(),
         val icon: String
 )

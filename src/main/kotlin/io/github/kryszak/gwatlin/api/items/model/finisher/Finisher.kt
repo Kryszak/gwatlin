@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
 data class Finisher(
         val id: Int,
         @SerialName("unlock_details") val unlockDetails: String,
-        @SerialName("unlock_items") val unlockItems: List<Int>,
+        @SerialName("unlock_items") val unlockItems: List<Int> = listOf(),
         val order: Int,
         val icon: String,
         val name: String

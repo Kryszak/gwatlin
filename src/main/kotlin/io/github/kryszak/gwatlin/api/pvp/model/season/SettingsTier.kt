@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class SettingsTier(
-    val range: List<Double>,
+    val range: List<Double> = listOf(),
     val color: String? = null,
     val type: String? = null,
     val name: String? = null

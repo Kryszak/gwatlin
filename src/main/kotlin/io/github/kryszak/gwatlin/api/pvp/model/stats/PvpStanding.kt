@@ -10,5 +10,6 @@ import kotlinx.serialization.Serializable
 data class PvpStanding(
         val current: CurrentPvpStanding,
         val best: BestPvpStanding,
-        @SerialName("season_id") val seasonId: String
+        @SerialName("season_id")
+        val seasonId: String
 )

@@ -9,10 +9,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PvpSeasonDivision(
         val name: String,
-        val flags: List<String>,
+        val flags: List<String> = listOf(),
         @SerialName("large_icon") val largeIcon: String,
         @SerialName("small_icon") val smallIcon: String,
         @SerialName("pip_icon") val pipIcon: String,
-        val tiers: List<Tier>,
+        val tiers: List<Tier> = listOf(),
         val leaderboards: List<PvpSeasonLeaderboard> = listOf()
 )

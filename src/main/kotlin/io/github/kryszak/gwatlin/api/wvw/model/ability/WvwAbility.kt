@@ -11,5 +11,5 @@ data class WvwAbility(
         val name: String,
         val description: String,
         val icon: String,
-        val ranks: List<WvwAbilityRank>
+        val ranks: List<WvwAbilityRank> = listOf(),
 )

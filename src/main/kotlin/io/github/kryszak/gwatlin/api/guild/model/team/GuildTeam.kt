@@ -10,10 +10,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class GuildTeam(
         val id: Int,
-        val members: List<GuildTeamMember>,
+        val members: List<GuildTeamMember> = listOf(),
         val name: String,
         val aggregate: WinLossStats,
         val ladders: UnrankedStatistics,
-        val games: List<PvpGame>,
-        val seasons: List<GuildTeamSeason>
+        val games: List<PvpGame> = listOf(),
+        val seasons: List<GuildTeamSeason> = listOf(),
 )

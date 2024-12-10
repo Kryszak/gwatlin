@@ -9,6 +9,6 @@ import kotlinx.serialization.Serializable
 data class Material(
         val id: Int,
         val name: String,
-        val items: List<Int>,
-        val order: Int?
+        val items: List<Int> = listOf(),
+        val order: Int? = null
 )

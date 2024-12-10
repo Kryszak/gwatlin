@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 data class GuildEmblem(
         val background: GuildEmblemPart,
         val foreground: GuildEmblemPart,
-        val flags: List<String>
+        val flags: List<String> = listOf(),
 )

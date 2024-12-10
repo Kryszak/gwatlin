@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class RaidWing(
         val id: String,
-        val events: List<RaidWingEvent>
+        val events: List<RaidWingEvent> = listOf(),
 )

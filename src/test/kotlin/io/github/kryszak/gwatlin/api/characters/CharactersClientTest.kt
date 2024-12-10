@@ -452,6 +452,36 @@ internal class CharactersClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get character core with explicit null guild") {
+            // given
+            val characterName = "Test Character"
+            val escapedName = characterName.replace(" ", "%20")
+            stubResponse(
+                "/characters/$escapedName/core",
+                "/responses/characters/character-core-with-explicit-null-guild.json",
+                apiKey = apiKey,
+                schemaVersion = targetSchemaVersion
+            )
+
+            // when
+            val characterCore = charactersClient.getCore(characterName)
+
+            // then
+            assertSoftly(characterCore) {
+                name shouldBe characterName
+                race shouldBe "Charr"
+                gender shouldBe "Male"
+                profession shouldBe "Elementalist"
+                level shouldBe 80
+                guild.shouldBeNull()
+                age shouldBe 4732983
+                created shouldBe "2013-08-09T12:22:00Z"
+                lastModified shouldBe "2022-09-24T14:27:00Z"
+                deaths shouldBe 3519
+                title shouldBe 300
+            }
+        }
+
         should("Get character crafting") {
             // given
             val characterName = "Test Character"

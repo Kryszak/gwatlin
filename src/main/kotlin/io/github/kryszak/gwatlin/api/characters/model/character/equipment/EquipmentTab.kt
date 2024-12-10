@@ -12,7 +12,7 @@ data class EquipmentTab(
     val name: String,
     @SerialName("is_active")
     val isActive: Boolean,
-    val equipment: List<EquipmentItem>,
+    val equipment: List<EquipmentItem> = listOf(),
     @SerialName("equipment_pvp")
     val equipmentPvp: EquipmentPvp
 )

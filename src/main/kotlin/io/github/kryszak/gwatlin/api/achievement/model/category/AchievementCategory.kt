@@ -12,5 +12,5 @@ data class AchievementCategory(
         val description: String,
         val order: Int,
         val icon: String,
-        val achievements: List<Int>
+        val achievements: List<Int> = listOf(),
 )

@@ -16,5 +16,5 @@ data class Continent(
     val minZoom: Int,
     @SerialName("max_zoom")
     val maxZoom: Int,
-    val floors: List<Int>
+    val floors: List<Int> = listOf(),
 )

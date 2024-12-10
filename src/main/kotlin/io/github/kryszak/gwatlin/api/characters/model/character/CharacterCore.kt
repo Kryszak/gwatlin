@@ -13,11 +13,11 @@ data class CharacterCore(
     val gender: String,
     val profession: String,
     val level: Int,
-    val guild: String,
+    val guild: String? = null,
     val age: Int,
     val created: String,
     @SerialName("last_modified")
-    val lastModified: String,
+    val lastModified: String? = null,
     val deaths: Int,
-    val title: Int
+    val title: Int? = null
 )

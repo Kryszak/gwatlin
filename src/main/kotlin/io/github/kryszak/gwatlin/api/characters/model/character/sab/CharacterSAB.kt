@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class CharacterSAB(
-    val zones: List<SabZone>,
-    val unlocks: List<SabUnlock>,
-    val songs: List<SabSong>
+    val zones: List<SabZone> = listOf(),
+    val unlocks: List<SabUnlock> = listOf(),
+    val songs: List<SabSong> = listOf(),
 )

@@ -11,5 +11,5 @@ data class Legend(
         val swap: Int,
         val heal: Int,
         val elite: Int,
-        val utilities: List<Int>
+        val utilities: List<Int> = listOf(),
 )

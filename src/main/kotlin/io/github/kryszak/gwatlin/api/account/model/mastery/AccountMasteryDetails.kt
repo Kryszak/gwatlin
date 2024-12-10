@@ -7,6 +7,6 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class AccountMasteryDetails(
-        val totals: List<MasteryPoints>,
-        val unlocked: List<Int>
+        val totals: List<MasteryPoints> = listOf(),
+        val unlocked: List<Int> = listOf()
 )

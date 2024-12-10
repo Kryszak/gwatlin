@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class WvwMatchAllWorlds(
-        val red: List<Int>,
-        val blue: List<Int>,
-        val green: List<Int>
+        val red: List<Int> = listOf(),
+        val blue: List<Int> = listOf(),
+        val green: List<Int> = listOf(),
 )

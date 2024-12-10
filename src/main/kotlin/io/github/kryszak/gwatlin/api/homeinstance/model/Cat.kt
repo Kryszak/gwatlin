@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Cat(
         val id: Int,
-        val hint: String?
+        val hint: String? = null
 )

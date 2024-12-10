@@ -10,5 +10,5 @@ import kotlinx.serialization.Serializable
 data class GuildTreasury(
         @SerialName("item_id") val itemId: Int,
         val count: Int,
-        @SerialName("needed_by") val neededBy: List<GuildTreasuryUpgrade>
+        @SerialName("needed_by") val neededBy: List<GuildTreasuryUpgrade> = listOf()
 )

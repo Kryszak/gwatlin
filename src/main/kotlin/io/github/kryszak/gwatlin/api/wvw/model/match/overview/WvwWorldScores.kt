@@ -12,8 +12,9 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwWorldScores(
         val id: String,
-        val maps: List<WvwMatchMap>,
+        val maps: List<WvwMatchMap> = listOf(),
         val scores: WvwMatchWorldCount,
-        val skirmishes: List<WvwMatchSkirmish>,
-        @SerialName("victory_points") val victoryPoints: WvwMatchWorldCount
+        val skirmishes: List<WvwMatchSkirmish> = listOf(),
+        @SerialName("victory_points")
+        val victoryPoints: WvwMatchWorldCount
 )

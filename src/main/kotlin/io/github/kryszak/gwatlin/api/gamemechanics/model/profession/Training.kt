@@ -10,5 +10,5 @@ data class Training(
         val id: Int,
         val category: TrainingCategory,
         val name: String,
-        val track: List<TrainingTrack>
+        val track: List<TrainingTrack> = listOf(),
 )

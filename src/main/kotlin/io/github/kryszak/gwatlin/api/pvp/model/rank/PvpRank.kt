@@ -14,5 +14,5 @@ data class PvpRank(
     val icon: String,
     @SerialName("min_rank") val minRank: Int,
     @SerialName("max_rank") val maxRank: Int,
-    val levels: List<PvpRankLevel>
+    val levels: List<PvpRankLevel> = listOf(),
 )

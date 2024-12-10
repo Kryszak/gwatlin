@@ -1,0 +1,13 @@
+{
+  "name": "Test Character",
+  "race": "Charr",
+  "gender": "Male",
+  "profession": "Elementalist",
+  "level": 80,
+  "guild": null,
+  "age": 4732983,
+  "last_modified": "2022-09-24T14:27:00Z",
+  "created": "2013-08-09T12:22:00Z",
+  "deaths": 3519,
+  "title": 300
+}

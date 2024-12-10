@@ -11,5 +11,5 @@ data class Outfit(
         val id: Int,
         val name: String,
         val icon: String,
-        @SerialName("unlock_items") val unlockItems: List<Int>
+        @SerialName("unlock_items") val unlockItems: List<Int> = listOf(),
 )

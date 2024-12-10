@@ -16,6 +16,6 @@ data class GuildUpgrade(
         @SerialName("build_time") val buildTime: Int,
         @SerialName("required_level") val requiredLevel: Int,
         val experience: Int,
-        val prerequisites: List<Int>,
-        val costs: List<UpgradeCost>
+        val prerequisites: List<Int> = listOf(),
+        val costs: List<UpgradeCost> = listOf(),
 )

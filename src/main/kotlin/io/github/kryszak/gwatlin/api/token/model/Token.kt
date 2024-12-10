@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 data class Token(
         val id: String,
         val name: String,
-        val permissions: List<String>,
+        val permissions: List<String> = listOf(),
         val type: String? = null,
         @SerialName("expires_at") val expiresAt: String? = null,
         @SerialName("issued_at") val issuedAt: String? = null,

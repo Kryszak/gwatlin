@@ -13,5 +13,5 @@ data class Novelty(
         val description: String,
         val icon: String,
         val slot: String,
-        @SerialName("unlock_item") val unlockItem: List<Int>?
+        @SerialName("unlock_item") val unlockItem: List<Int> = listOf()
 )

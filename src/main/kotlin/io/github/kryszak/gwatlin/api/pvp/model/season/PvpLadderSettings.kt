@@ -10,5 +10,5 @@ data class PvpLadderSettings(
         val name: String,
         val duration: Int? = null,
         val scoring: String,
-        val tiers: List<SettingsTier>
+        val tiers: List<SettingsTier> = listOf(),
 )

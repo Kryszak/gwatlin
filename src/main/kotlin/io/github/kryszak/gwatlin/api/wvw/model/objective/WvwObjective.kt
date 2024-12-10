@@ -8,15 +8,21 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class WvwObjective(
-        @SerialName("chat_link") val chatLink: String,
-        val coord: List<Double>,
+        @SerialName("chat_link")
+        val chatLink: String,
+        val coord: List<Double> = listOf(),
         val id: String,
-        @SerialName("label_coord") val labelCoord: List<Double>,
-        @SerialName("map_id") val mapId: Int,
-        @SerialName("map_type") val mapType: String,
+        @SerialName("label_coord")
+        val labelCoord: List<Double> = listOf(),
+        @SerialName("map_id")
+        val mapId: Int,
+        @SerialName("map_type")
+        val mapType: String,
         val marker: String,
         val name: String,
-        @SerialName("sector_id") val sectorId: Int,
+        @SerialName("sector_id")
+        val sectorId: Int,
         val type: String,
-        @SerialName("upgrade_id") val upgradeId: Int
+        @SerialName("upgrade_id")
+        val upgradeId: Int
 )

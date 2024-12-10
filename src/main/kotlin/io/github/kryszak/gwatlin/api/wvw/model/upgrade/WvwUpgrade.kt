@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwUpgrade(
         val id: Int,
-        val tiers: List<WvwUpgradeTier>
+        val tiers: List<WvwUpgradeTier> = listOf(),
 )
