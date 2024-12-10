@@ -14,6 +14,7 @@ object JsonConfigurer {
     val json = Json {
         isLenient = true // e.g. Trait.tier is handled as an unquoted string.
         ignoreUnknownKeys = true
+        explicitNulls = true
         serializersModule = SerializersModule {
             polymorphicDefaultDeserializer(Fact::class) {
                 require(it == null)
