@@ -21,12 +21,17 @@ create-release:
 check-cert:
     ./scripts/verify_gpg_key_expiration.sh
 
+# Check if running in Github Actions
+[group('CI')]
+_is-run-in-ci:
+    ./scripts/detect-ci.sh
+
 # Build whole project
 [group('CI')]
-build-clean:
+build-clean: _is-run-in-ci
     ./gradlew clean build
 
 # Release new artifact version to maven central
 [group('CI')]
-release:
+release: _is-run-in-ci
     ./gradlew clean build publish closeAndReleaseStagingRepository
