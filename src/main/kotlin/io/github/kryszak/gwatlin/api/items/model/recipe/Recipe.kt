@@ -13,10 +13,10 @@ data class Recipe(
         @SerialName("output_item_id") val outputItemId: Int,
         @SerialName("output_item_count") val outputItemCount: Int,
         @SerialName("time_to_craft_ms") val timeToCraftMs: Int,
-        val disciplines: List<String>,
+        val disciplines: List<String> = listOf(),
         @SerialName("min_rating") val minRating: Int,
-        val flags: List<String>,
-        val ingredients: List<Ingredient>,
+        val flags: List<String> = listOf(),
+        val ingredients: List<Ingredient> = listOf(),
         @SerialName("guild_ingredients") val guildIngredients: List<GuildIngredient> = listOf(),
         @SerialName("output_upgrade_id") val outputUpgradeId: Int? = null,
         @SerialName("chat_link") val chatLink: String

@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 data class Build(
     val name: String,
     val profession: String,
-    val specializations: List<Specialization>,
+    val specializations: List<Specialization> = listOf(),
     val skills: Skills,
     @SerialName("aquatic_skills")
     val aquaticSkills: Skills

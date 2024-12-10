@@ -11,5 +11,5 @@ data class Pet(
         val name: String,
         val description: String,
         val icon: String,
-        val skills: List<PetSkill>
+        val skills: List<PetSkill> = listOf(),
 )

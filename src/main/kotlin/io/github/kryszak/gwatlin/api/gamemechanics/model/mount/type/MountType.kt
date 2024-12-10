@@ -11,6 +11,6 @@ data class MountType(
         val id: String,
         val name: String,
         @SerialName("default_skin") val defaultSkin: Int,
-        val skins: List<Int>,
-        val skills: List<MountSkill>
+        val skins: List<Int> = listOf(),
+        val skills: List<MountSkill> = listOf(),
 )

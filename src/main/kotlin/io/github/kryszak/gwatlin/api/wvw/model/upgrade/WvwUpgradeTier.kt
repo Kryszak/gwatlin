@@ -10,6 +10,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwUpgradeTier(
         val name: String,
-        val upgrades: List<WvwUpgradeTierUpgrade>,
-        @SerialName("yaks_required") val yaksRequired: Int
+        val upgrades: List<WvwUpgradeTierUpgrade> = listOf(),
+        @SerialName("yaks_required")
+        val yaksRequired: Int
 )

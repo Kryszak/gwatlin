@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Layer(
         val id: Int,
-        val layers: List<String>
+        val layers: List<String> = listOf(),
 )

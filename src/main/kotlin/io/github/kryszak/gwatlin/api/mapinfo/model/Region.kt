@@ -15,5 +15,5 @@ data class Region(
     val labelCoord: Coordinates,
     @SerialName("continent_rect")
     val continentRect: Rectangle,
-    val maps: Map<Int, ContinentMap>
+    val maps: Map<Int, ContinentMap> = mapOf(),
 )

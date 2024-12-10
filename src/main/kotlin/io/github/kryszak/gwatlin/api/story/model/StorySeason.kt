@@ -10,5 +10,5 @@ data class StorySeason(
         val id: String,
         val name: String,
         val order: Int,
-        val stories: List<Int>
+        val stories: List<Int> = listOf(),
 )

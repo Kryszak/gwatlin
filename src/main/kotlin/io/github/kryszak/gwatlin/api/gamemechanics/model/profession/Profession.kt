@@ -12,9 +12,9 @@ data class Profession(
         val name: String,
         val icon: String,
         @SerialName("icon_big") val iconBig: String,
-        val flags: List<String>,
-        val specializations: List<Int>,
-        val training: List<Training>,
-        val skills: List<ProfessionSkill>,
+        val flags: List<String> = listOf(),
+        val specializations: List<Int> = listOf(),
+        val training: List<Training> = listOf(),
+        val skills: List<ProfessionSkill> = listOf(),
         val weapons: ProfessionWeapons
 )

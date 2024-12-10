@@ -14,6 +14,6 @@ data class Specialization(
         val elite: Boolean,
         val icon: String,
         val background: String,
-        @SerialName("minor_traits") val minorTraits: List<Int>,
-        @SerialName("major_traits") val majorTraits: List<Int>
+        @SerialName("minor_traits") val minorTraits: List<Int> = listOf(),
+        @SerialName("major_traits") val majorTraits: List<Int> = listOf(),
 )

@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class SabSong(
     val id: Int,
-    val name: String?
+    val name: String? = null
 )

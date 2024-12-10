@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class GuildEmblemPart(
         val id: Int,
-        val colors: List<Int>
+        val colors: List<Int> = listOf(),
 )

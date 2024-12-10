@@ -10,6 +10,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwRank(
         val id: Int,
-        @SerialName("min_rank") val minRank: Int,
+        @SerialName("min_rank")
+        val minRank: Int,
         val title: String
 )

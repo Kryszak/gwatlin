@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ItemStats(
     val id: Int,
-    val attributes: Map<String, Int>
+    val attributes: Map<String, Int> = mapOf(),
 )

@@ -24,12 +24,12 @@ data class ContinentMap(
     @SerialName("label_coord")
     val labelCoord: Coordinates,
     @SerialName("points_of_interest")
-    val pointsOfInterest: Map<Int, PointOfInterest>,
-    val tasks: Map<Int, HeartTask>,
+    val pointsOfInterest: Map<Int, PointOfInterest> = mapOf(),
+    val tasks: Map<Int, HeartTask> = mapOf(),
     @SerialName("skill_challenges")
-    val skillChallenges: List<SkillChallenge>,
-    val sectors: Map<Int, Sector>,
-    val adventures: List<Adventure>,
+    val skillChallenges: List<SkillChallenge> = listOf(),
+    val sectors: Map<Int, Sector> = mapOf(),
+    val adventures: List<Adventure> = listOf(),
     @SerialName("mastery_points")
-    val masteryPoints: List<MasteryPoint>
+    val masteryPoints: List<MasteryPoint> = listOf(),
 )

@@ -8,6 +8,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class CommerceListing(
         val id: Int,
-        val buys: List<Listing>,
-        val sells: List<Listing>
+        val buys: List<Listing> = listOf(),
+        val sells: List<Listing> = listOf(),
 )

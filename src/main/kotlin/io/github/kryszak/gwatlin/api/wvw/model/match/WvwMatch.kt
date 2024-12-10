@@ -9,14 +9,18 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwMatch(
         val id: String,
-        @SerialName("start_time") val startTime: String,
-        @SerialName("end_time") val endTime: String,
+        @SerialName("start_time")
+        val startTime: String,
+        @SerialName("end_time")
+        val endTime: String,
         val scores: WvwMatchWorldCount,
         val worlds: WvwMatchWorldCount,
-        @SerialName("all_worlds") val allWorlds: WvwMatchAllWorlds,
+        @SerialName("all_worlds")
+        val allWorlds: WvwMatchAllWorlds,
         val deaths: WvwMatchWorldCount,
         val kills: WvwMatchWorldCount,
-        @SerialName("victory_points") val victoryPoints: WvwMatchWorldCount,
-        val maps: List<WvwMatchMap>,
-        val skirmishes: List<WvwMatchSkirmish>
+        @SerialName("victory_points")
+        val victoryPoints: WvwMatchWorldCount,
+        val maps: List<WvwMatchMap> = listOf(),
+        val skirmishes: List<WvwMatchSkirmish> = listOf(),
 )

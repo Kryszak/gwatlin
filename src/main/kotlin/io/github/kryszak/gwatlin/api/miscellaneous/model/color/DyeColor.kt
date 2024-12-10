@@ -10,11 +10,11 @@ import kotlinx.serialization.Serializable
 data class DyeColor(
         val id: Int,
         val name: String,
-        @SerialName("base_rgb") val baseRgb: List<Int>,
+        @SerialName("base_rgb") val baseRgb: List<Int> = listOf(),
         val cloth: ColorDetails,
         val leather: ColorDetails,
         val metal: ColorDetails,
         val fur: ColorDetails? = null,
         val item: Int? = null,
-        val categories: List<String>
+        val categories: List<String> = listOf(),
 )

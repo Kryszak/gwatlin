@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PvpLadder(
     val settings: PvpLadderSettings,
-    val scorings: List<PvpLadderScorings>
+    val scorings: List<PvpLadderScorings> = listOf(),
 )

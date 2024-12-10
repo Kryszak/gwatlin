@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Dungeon(
         val id: String,
-        val paths: List<DungeonPath>
+        val paths: List<DungeonPath> = listOf(),
 )

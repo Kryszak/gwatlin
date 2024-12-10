@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for recipe ingredient propoerty
+ * Data model for recipe ingredient property
  */
 @Serializable
 data class Ingredient(

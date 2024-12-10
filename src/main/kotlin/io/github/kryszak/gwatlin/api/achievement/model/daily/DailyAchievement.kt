@@ -11,5 +11,5 @@ import kotlinx.serialization.Serializable
 data class DailyAchievement(
         val id: Int,
         val level: DailyAchievementLevel,
-        @SerialName("required_access") val requiredAccess: List<String>
+        @SerialName("required_access") val requiredAccess: List<String> = listOf(),
 )

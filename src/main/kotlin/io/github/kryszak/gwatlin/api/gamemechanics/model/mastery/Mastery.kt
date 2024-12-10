@@ -13,5 +13,5 @@ data class Mastery(
         val order: Int,
         val background: String,
         val region: String,
-        val levels: List<MasteryLevel>
+        val levels: List<MasteryLevel> = listOf(),
 )

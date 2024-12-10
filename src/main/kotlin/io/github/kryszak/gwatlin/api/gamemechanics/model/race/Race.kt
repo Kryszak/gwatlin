@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 data class Race(
         val id: String,
         val name: String,
-        val skills: List<Int>
+        val skills: List<Int> = listOf(),
 )

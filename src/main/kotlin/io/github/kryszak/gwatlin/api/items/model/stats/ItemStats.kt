@@ -9,5 +9,5 @@ import kotlinx.serialization.Serializable
 data class ItemStats(
         val id: Int,
         val name: String,
-        val attributes: List<StatAttribute>
+        val attributes: List<StatAttribute> = listOf(),
 )

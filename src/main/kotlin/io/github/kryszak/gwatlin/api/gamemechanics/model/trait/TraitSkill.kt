@@ -14,6 +14,6 @@ data class TraitSkill(
     val name: String,
     val description: String,
     val icon: String,
-    val facts: List<Fact>?,
-    @SerialName("traited_facts") val traitedFacts: List<@Serializable(with = TraitedFact.TraitedFactUnwrapSerializer::class) TraitedFact>?,
+    val facts: List<Fact> = listOf(),
+    @SerialName("traited_facts") val traitedFacts: List<@Serializable(with = TraitedFact.TraitedFactUnwrapSerializer::class) TraitedFact> = listOf(),
 )

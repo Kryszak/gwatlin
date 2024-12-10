@@ -29,9 +29,9 @@ data class Character(
     val title: Int? = null,
 
     // Non-Core
-    val flags: List<String>,
-    val crafting: List<Crafting>,
-    val backstory: List<String>,
+    val flags: List<String> = listOf(),
+    val crafting: List<Crafting> = listOf(),
+    val backstory: List<String> = listOf(),
     @SerialName("wvw_abilities")
     val wvwAbilities: List<WvwAbility>? = listOf(),
     val training: List<Training> = listOf(),

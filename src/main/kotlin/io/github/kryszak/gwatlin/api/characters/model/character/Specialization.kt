@@ -7,6 +7,6 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class Specialization(
-    val id: Int?,
-    val traits: Set<Int?>
+    val id: Int? = null,
+    val traits: Set<Int?> = setOf(),
 )

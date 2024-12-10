@@ -12,5 +12,5 @@ data class WvwWorldStats(
         val id: String,
         val deaths: WvwMatchWorldCount,
         val kills: WvwMatchWorldCount,
-        val maps: List<WvwMatchMap>
+        val maps: List<WvwMatchMap> = listOf()
 )

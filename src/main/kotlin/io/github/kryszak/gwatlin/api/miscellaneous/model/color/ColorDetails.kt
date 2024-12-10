@@ -12,5 +12,5 @@ data class ColorDetails(
         val hue: Double,
         val saturation: Double,
         val lightness: Double,
-        val rgb: List<Int>
+        val rgb: List<Int> = listOf(),
 )

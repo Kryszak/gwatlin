@@ -7,6 +7,6 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class LadderStats(
-        val ranked: WinLossStats?,
-        val unranked: WinLossStats?
+        val ranked: WinLossStats? = null,
+        val unranked: WinLossStats? = null,
 )

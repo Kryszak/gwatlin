@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Skills @JvmOverloads constructor(
     val heal: Int? = null,
-    val utilities: Set<Int?>,
+    val utilities: Set<Int?> = setOf(),
     val elite: Int? = null,
     val legends: Set<String>? = null
 )

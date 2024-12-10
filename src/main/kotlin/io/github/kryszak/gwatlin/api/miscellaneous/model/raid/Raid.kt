@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Raid(
         val id: String,
-        val wings: List<RaidWing>
+        val wings: List<RaidWing> = listOf(),
 )

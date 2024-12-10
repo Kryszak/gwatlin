@@ -17,11 +17,11 @@ data class Map(
     @SerialName("default_floor")
     val defaultFloor: Int,
     val type: MapType,
-    val floors: List<Int>,
+    val floors: List<Int> = listOf(),
     @SerialName("region_id")
     val regionId: Int,
     @SerialName("region_name")
-    val regionName: String?,
+    val regionName: String? = null,
     @SerialName("continent_id")
     val continentId: Int,
     @SerialName("continent_name")

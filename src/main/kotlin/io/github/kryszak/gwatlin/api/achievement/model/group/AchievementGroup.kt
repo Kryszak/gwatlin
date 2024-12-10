@@ -11,5 +11,5 @@ data class AchievementGroup(
         val name: String,
         val description: String,
         val order: Int,
-        val categories: List<Int>
+        val categories: List<Int> = listOf(),
 )
