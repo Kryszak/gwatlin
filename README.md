@@ -32,9 +32,3 @@ println(tokenInfo)
 
 ### Documentation
 For full code documentation visit [documentation page](https://kryszak.github.io/gwatlin-docs/)
-
-## JDK versions compatibility
-| JDK   |     Gwatlin     |
-|-------|:---------------:|
-| 21    | 1.9.2 and above |
-| 17    | 1.9.1 and below |
