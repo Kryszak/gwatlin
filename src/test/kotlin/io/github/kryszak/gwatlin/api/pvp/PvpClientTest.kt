@@ -140,6 +140,23 @@ internal class PvpClientTest : BaseWiremockTest() {
                         ordering shouldBe "MoreIsBetter"
                     }
                 }
+                assertSoftly(leaderboards.guild!!) {
+                    assertSoftly(settings) {
+                        name shouldBe ""
+                        duration.shouldBeNull()
+                        scoring shouldBe "16F74226-5DDF-4FE7-ADC5-72A49DA30572"
+                        assertSoftly(tiers[0]) {
+                            range shouldHaveSize 2
+                        }
+                    }
+                    assertSoftly(scorings[0]) {
+                        id shouldBe "16F74226-5DDF-4FE7-ADC5-72A49DA30572"
+                        type shouldBe "Integer"
+                        description shouldBe "Team rating represents your team's skill level."
+                        name shouldBe "Skill Rating"
+                        ordering shouldBe "MoreIsBetter"
+                    }
+                }
             }
         }
     }
