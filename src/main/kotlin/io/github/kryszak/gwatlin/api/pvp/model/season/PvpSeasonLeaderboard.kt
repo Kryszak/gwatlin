@@ -7,5 +7,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class PvpSeasonLeaderboard(
-        val ladder: PvpLadder,
+        val legendary: PvpLadder? = null,
+        val guild: PvpLadder? = null,
+        val ladder: PvpLadder? = null
 )
