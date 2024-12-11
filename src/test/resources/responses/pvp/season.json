@@ -1,0 +1,87 @@
+[
+  {
+    "id": "A54849B7-7DBD-4958-91EF-72E18CD659BA",
+    "name": "PvP League Season Five",
+    "start": "2016-12-13T20:00:00.000Z",
+    "end": "2017-02-07T00:00:00.000Z",
+    "active": true,
+    "divisions": [
+      {
+        "name": "Cerulean",
+        "flags": [],
+        "pip_icon": "https://render.guildwars2.com/file/DF4AE7C6B85711B5EF0A970851672FFE230FE61D/1614836.png",
+        "tiers": [
+          {
+            "points": 20
+          },
+          {
+            "points": 20
+          },
+          {
+            "points": 20
+          }
+        ]
+      },
+      {
+        "name": "Byzantium (Repeatable)",
+        "flags": [
+          "Repeatable"
+        ],
+        "pip_icon": "https://render.guildwars2.com/file/32A2E3C56EE514912A0AF41C9904AFAF64082D0B/1614841.png",
+        "tiers": [
+          {
+            "points": 30
+          },
+          {
+            "points": 30
+          }
+        ]
+      }
+    ],
+    "leaderboards": {
+      "ladder": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+          "tiers": [
+            {
+              "range": [
+                1,
+                1
+              ]
+            },
+            {
+              "range": [
+                250,
+                101
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+            "type": "Integer",
+            "description": "Effective rating that includes decay.",
+            "name": "Rating",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "8A5F1199-CFD8-44CE-84C3-811C5EE8B16C",
+            "type": "Integer",
+            "description": "",
+            "name": "Wins",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "FECEE3A5-B66C-44A3-B81E-65EA43829E1D",
+            "type": "Integer",
+            "description": "",
+            "name": "Losses",
+            "ordering": "LessIsBetter"
+          }
+        ]
+      }
+    }
+  }]
