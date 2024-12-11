@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class UpgradeCost(
         val type: String,
-        val name: String,
+        val name: String? = null,
         val count: Int,
         @SerialName("item_id") val itemId: Int? = null
 )
