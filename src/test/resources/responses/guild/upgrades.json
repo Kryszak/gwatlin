@@ -67,5 +67,38 @@
         "item_id": 70701
       }
     ]
+  },
+  {
+    "id": 55,
+    "name": "Guild Treasure Trove",
+    "description": "Gain access to a 100-slot guild vault.",
+    "build_time": 0,
+    "icon": "https://render.guildwars2.com/file/072502CEDCD72BF84E59280B46C5CFDEE6011FE1/1228510.png",
+    "type": "BankBag",
+    "required_level": 20,
+    "experience": 35,
+    "prerequisites": [
+      58,
+      350
+    ],
+    "bag_max_items": 100,
+    "bag_max_coins": 10000000,
+    "costs": [
+      {
+        "type": "Collectible",
+        "count": 1500,
+        "name": "Guild Favor",
+        "item_id": 70701
+      },
+      {
+        "type": "Currency",
+        "count": 3000,
+        "name": "Aetherium"
+      },
+      {
+        "type": "Coins",
+        "count": 500000
+      }
+    ]
   }
 ]

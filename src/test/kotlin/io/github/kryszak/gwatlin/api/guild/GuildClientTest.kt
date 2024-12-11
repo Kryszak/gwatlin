@@ -4,6 +4,7 @@ import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
@@ -160,10 +161,10 @@ internal class GuildClientTest : BaseWiremockTest() {
 
         should("Get guild upgrades") {
             // given
-            val ids = listOf(38, 43)
+            val ids = listOf(38, 43, 55)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/guild/upgrades?ids=38,43", "/responses/guild/upgrades.json", language = lang)
+            stubResponse("/guild/upgrades?ids=38,43,55", "/responses/guild/upgrades.json", language = lang)
 
             // when
             val upgrades = guildClient.getGuildUpgrades(ids, lang)
@@ -184,6 +185,15 @@ internal class GuildClientTest : BaseWiremockTest() {
                     count shouldBe 200
                     name shouldBe "Guild Favor"
                     itemId shouldBe 70701
+                }
+            }
+            assertSoftly(upgrades[2]) {
+                id shouldBe 55
+                name shouldBe "Guild Treasure Trove"
+                assertSoftly(costs[2]) {
+                    name.shouldBeNull()
+                    type shouldBe "Coins"
+                    count shouldBe 500000
                 }
             }
         }
