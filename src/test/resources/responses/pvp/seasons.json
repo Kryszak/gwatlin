@@ -1,0 +1,664 @@
+[
+  {
+    "id": "A54849B7-7DBD-4958-91EF-72E18CD659BA",
+    "name": "PvP League Season Five",
+    "start": "2016-12-13T20:00:00.000Z",
+    "end": "2017-02-07T00:00:00.000Z",
+    "active": true,
+    "divisions": [
+      {
+        "name": "Cerulean",
+        "flags": [],
+        "pip_icon": "https://render.guildwars2.com/file/DF4AE7C6B85711B5EF0A970851672FFE230FE61D/1614836.png",
+        "tiers": [
+          {
+            "points": 20
+          },
+          {
+            "points": 20
+          },
+          {
+            "points": 20
+          }
+        ]
+      },
+      {
+        "name": "Byzantium (Repeatable)",
+        "flags": [
+          "Repeatable"
+        ],
+        "pip_icon": "https://render.guildwars2.com/file/32A2E3C56EE514912A0AF41C9904AFAF64082D0B/1614841.png",
+        "tiers": [
+          {
+            "points": 30
+          },
+          {
+            "points": 30
+          }
+        ]
+      }
+    ],
+    "leaderboards": {
+      "ladder": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+          "tiers": [
+            {
+              "range": [
+                1,
+                1
+              ]
+            },
+            {
+              "range": [
+                250,
+                101
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+            "type": "Integer",
+            "description": "Effective rating that includes decay.",
+            "name": "Rating",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "8A5F1199-CFD8-44CE-84C3-811C5EE8B16C",
+            "type": "Integer",
+            "description": "",
+            "name": "Wins",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "FECEE3A5-B66C-44A3-B81E-65EA43829E1D",
+            "type": "Integer",
+            "description": "",
+            "name": "Losses",
+            "ordering": "LessIsBetter"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "44B85826-B5ED-4890-8C77-82DDF9F2CF2B",
+    "name": "PvP League Season One",
+    "start": "2015-12-01T20:00:00.000Z",
+    "end": "2016-01-28T01:00:00.000Z",
+    "active": false,
+    "divisions": [
+      {
+        "name": "Division 1: Amber",
+        "flags": [],
+        "large_icon": "https://render.guildwars2.com/file/02ED75461164551455297DA4955862552C2452BE/1313334.png",
+        "small_icon": "https://render.guildwars2.com/file/6357FE56301B2F4AD1F309E62739B0110DA2452A/1313340.png",
+        "pip_icon": "https://render.guildwars2.com/file/47BDF237FF800552EDD69D28BC926031FC4B64A9/1313346.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 2: Emerald",
+        "flags": [
+          "CanLosePoints"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/200E21BCEE2030F80A6BF51D263BF6A06E6FB365/1313335.png",
+        "small_icon": "https://render.guildwars2.com/file/61223078386A6EBE0175E55AC5139417DDA1B41C/1313341.png",
+        "pip_icon": "https://render.guildwars2.com/file/29925CE31790C4C7A8122B36612D56AC41DFA008/1313347.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 3: Sapphire",
+        "flags": [
+          "CanLosePoints"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/EA98E99EAB380555E899AC73566C5D703632330C/1313336.png",
+        "small_icon": "https://render.guildwars2.com/file/400C2D032BE81ACB07AC3DFC967393599F5B7067/1313342.png",
+        "pip_icon": "https://render.guildwars2.com/file/C7049912A2084D4C752B2B30615C1AE731149601/1313348.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 4: Ruby",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/3902B664FACDDC41925A0ED7E0C0932A3DDD53BF/1313337.png",
+        "small_icon": "https://render.guildwars2.com/file/640D0EB6009C60F372E7C9E5951E667E4118A2FD/1313343.png",
+        "pip_icon": "https://render.guildwars2.com/file/AC281A9291CD25250764C60ECFC773A2C67B1225/1313349.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 5: Diamond",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/B59BEBA950BA90083D409DE42BA8789F300F305D/1313338.png",
+        "small_icon": "https://render.guildwars2.com/file/F40A6880FB80C53F39D32B021737256371BE26B6/1313344.png",
+        "pip_icon": "https://render.guildwars2.com/file/F8E6757D23AA4495CDC9AE28E1B1FEB844BD2B1A/1313350.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 6: Legendary",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers",
+          "Repeatable"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/97E44C1BB3B7434639D470E9F25DD9C601ACEDD9/1313339.png",
+        "small_icon": "https://render.guildwars2.com/file/540530F225A8B39990DBB165227A0624F10DFF9A/1313345.png",
+        "pip_icon": "https://render.guildwars2.com/file/7BD522452275401F6C9EE2C29F08DAEC0C52F144/1313351.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      }
+    ],
+    "leaderboards": {
+      "legendary": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85",
+          "tiers": [
+            {
+              "range": [
+                1,
+                0.95
+              ]
+            },
+            {
+              "range": [
+                0.95,
+                0.9
+              ]
+            },
+            {
+              "range": [
+                0.9,
+                0.75
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85",
+            "type": "Integer",
+            "description": "Current prestige rank. Prestige rank can be gained or lost by winning or losing ranked matches in the legendary division.",
+            "name": "Prestige",
+            "ordering": "MoreIsBetter"
+          }
+        ]
+      },
+      "guild": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "16F74226-5DDF-4FE7-ADC5-72A49DA30572",
+          "tiers": [
+            {
+              "color": "#E5E4E2",
+              "type": "Rank",
+              "name": "Platinum",
+              "range": [
+                1,
+                1
+              ]
+            },
+            {
+              "color": "#EAC117",
+              "type": "Rank",
+              "name": "Gold",
+              "range": [
+                25,
+                2
+              ]
+            },
+            {
+              "color": "#C0C0C0",
+              "type": "Rank",
+              "name": "Silver",
+              "range": [
+                100,
+                26
+              ]
+            },
+            {
+              "color": "#D2691E",
+              "type": "Rank",
+              "name": "Bronze",
+              "range": [
+                250,
+                101
+              ]
+            },
+            {
+              "color": "#C87533",
+              "type": "Rank",
+              "name": "Copper",
+              "range": [
+                1000,
+                251
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "16F74226-5DDF-4FE7-ADC5-72A49DA30572",
+            "type": "Integer",
+            "description": "Team rating represents your team's skill level.",
+            "name": "Skill Rating",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "9A9CB2FD-7D73-4DFE-8FDD-A97A9C7C0B0C",
+            "type": "Integer",
+            "description": "",
+            "name": "Wins",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "9064DD25-2C75-48D6-88C9-7FAD18DC784D",
+            "type": "Integer",
+            "description": "",
+            "name": "Losses",
+            "ordering": "LessIsBetter"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "95D5B290-798A-421E-A919-1C2A75F74B72",
+    "name": "PvP League Season Two",
+    "start": "2016-02-23T20:00:00.000Z",
+    "end": "2016-04-18T23:00:00.000Z",
+    "active": false,
+    "divisions": [
+      {
+        "name": "Division 1: Amber",
+        "flags": [],
+        "large_icon": "https://render.guildwars2.com/file/02ED75461164551455297DA4955862552C2452BE/1313334.png",
+        "small_icon": "https://render.guildwars2.com/file/6357FE56301B2F4AD1F309E62739B0110DA2452A/1313340.png",
+        "pip_icon": "https://render.guildwars2.com/file/47BDF237FF800552EDD69D28BC926031FC4B64A9/1313346.png",
+        "tiers": [
+          {
+            "points": 3
+          },
+          {
+            "points": 3
+          },
+          {
+            "points": 3
+          },
+          {
+            "points": 3
+          },
+          {
+            "points": 3
+          }
+        ]
+      },
+      {
+        "name": "Division 2: Emerald",
+        "flags": [
+          "CanLosePoints"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/200E21BCEE2030F80A6BF51D263BF6A06E6FB365/1313335.png",
+        "small_icon": "https://render.guildwars2.com/file/61223078386A6EBE0175E55AC5139417DDA1B41C/1313341.png",
+        "pip_icon": "https://render.guildwars2.com/file/29925CE31790C4C7A8122B36612D56AC41DFA008/1313347.png",
+        "tiers": [
+          {
+            "points": 4
+          },
+          {
+            "points": 4
+          },
+          {
+            "points": 4
+          },
+          {
+            "points": 4
+          },
+          {
+            "points": 4
+          }
+        ]
+      },
+      {
+        "name": "Division 3: Sapphire",
+        "flags": [
+          "CanLosePoints"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/EA98E99EAB380555E899AC73566C5D703632330C/1313336.png",
+        "small_icon": "https://render.guildwars2.com/file/400C2D032BE81ACB07AC3DFC967393599F5B7067/1313342.png",
+        "pip_icon": "https://render.guildwars2.com/file/C7049912A2084D4C752B2B30615C1AE731149601/1313348.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 4: Ruby",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/3902B664FACDDC41925A0ED7E0C0932A3DDD53BF/1313337.png",
+        "small_icon": "https://render.guildwars2.com/file/640D0EB6009C60F372E7C9E5951E667E4118A2FD/1313343.png",
+        "pip_icon": "https://render.guildwars2.com/file/AC281A9291CD25250764C60ECFC773A2C67B1225/1313349.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 5: Diamond",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/B59BEBA950BA90083D409DE42BA8789F300F305D/1313338.png",
+        "small_icon": "https://render.guildwars2.com/file/F40A6880FB80C53F39D32B021737256371BE26B6/1313344.png",
+        "pip_icon": "https://render.guildwars2.com/file/F8E6757D23AA4495CDC9AE28E1B1FEB844BD2B1A/1313350.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Division 6: Legendary",
+        "flags": [
+          "CanLosePoints",
+          "CanLoseTiers",
+          "Repeatable"
+        ],
+        "large_icon": "https://render.guildwars2.com/file/97E44C1BB3B7434639D470E9F25DD9C601ACEDD9/1313339.png",
+        "small_icon": "https://render.guildwars2.com/file/540530F225A8B39990DBB165227A0624F10DFF9A/1313345.png",
+        "pip_icon": "https://render.guildwars2.com/file/7BD522452275401F6C9EE2C29F08DAEC0C52F144/1313351.png",
+        "tiers": [
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          },
+          {
+            "points": 5
+          }
+        ]
+      }
+    ],
+    "leaderboards": {
+      "legendary": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85",
+          "tiers": [
+            {
+              "range": [
+                1,
+                0.95
+              ]
+            },
+            {
+              "range": [
+                0.95,
+                0.9
+              ]
+            },
+            {
+              "range": [
+                0.9,
+                0.75
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85",
+            "type": "Integer",
+            "description": "Current prestige rank. Prestige rank can be gained or lost by winning or losing ranked matches in the legendary division.",
+            "name": "Prestige",
+            "ordering": "MoreIsBetter"
+          }
+        ]
+      },
+      "guild": {
+        "settings": {
+          "name": "",
+          "duration": null,
+          "scoring": "16F74226-5DDF-4FE7-ADC5-72A49DA30572",
+          "tiers": [
+            {
+              "color": "#E5E4E2",
+              "type": "Rank",
+              "name": "Platinum",
+              "range": [
+                1,
+                1
+              ]
+            },
+            {
+              "color": "#EAC117",
+              "type": "Rank",
+              "name": "Gold",
+              "range": [
+                25,
+                2
+              ]
+            },
+            {
+              "color": "#C0C0C0",
+              "type": "Rank",
+              "name": "Silver",
+              "range": [
+                100,
+                26
+              ]
+            },
+            {
+              "color": "#D2691E",
+              "type": "Rank",
+              "name": "Bronze",
+              "range": [
+                250,
+                101
+              ]
+            },
+            {
+              "color": "#C87533",
+              "type": "Rank",
+              "name": "Copper",
+              "range": [
+                1000,
+                251
+              ]
+            }
+          ]
+        },
+        "scorings": [
+          {
+            "id": "16F74226-5DDF-4FE7-ADC5-72A49DA30572",
+            "type": "Integer",
+            "description": "Team rating represents your team's skill level.",
+            "name": "Skill Rating",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "9A9CB2FD-7D73-4DFE-8FDD-A97A9C7C0B0C",
+            "type": "Integer",
+            "description": "",
+            "name": "Wins",
+            "ordering": "MoreIsBetter"
+          },
+          {
+            "id": "9064DD25-2C75-48D6-88C9-7FAD18DC784D",
+            "type": "Integer",
+            "description": "",
+            "name": "Losses",
+            "ordering": "LessIsBetter"
+          }
+        ]
+      }
+    }
+  }
+]

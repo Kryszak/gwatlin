@@ -61,12 +61,12 @@ internal class PvpClientTest : BaseWiremockTest() {
 
         should("Get pvp seasons") {
             // given
-            val ids = listOf("A54849B7-7DBD-4958-91EF-72E18CD659BA")
+            val ids = listOf("A54849B7-7DBD-4958-91EF-72E18CD659BA", "44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72")
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
             stubResponse(
-                "/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA",
-                "/responses/pvp/season.json", language = lang
+                "/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA,44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
+                "/responses/pvp/seasons.json", language = lang
             )
 
             // when
@@ -89,7 +89,7 @@ internal class PvpClientTest : BaseWiremockTest() {
                         points shouldBe 20
                     }
                 }
-                assertSoftly(leaderboards.ladder) {
+                assertSoftly(leaderboards.ladder!!) {
                     assertSoftly(settings) {
                         name shouldBe ""
                         duration.shouldBeNull()
@@ -103,6 +103,40 @@ internal class PvpClientTest : BaseWiremockTest() {
                         type shouldBe "Integer"
                         description shouldBe "Effective rating that includes decay."
                         name shouldBe "Rating"
+                        ordering shouldBe "MoreIsBetter"
+                    }
+                }
+            }
+            assertSoftly(seasons[1]) {
+                id shouldBe "44B85826-B5ED-4890-8C77-82DDF9F2CF2B"
+                name shouldBe "PvP League Season One"
+                start shouldBe "2015-12-01T20:00:00.000Z"
+                end shouldBe "2016-01-28T01:00:00.000Z"
+                !active
+                assertSoftly(divisions[0]) {
+                    name shouldBe "Division 1: Amber"
+                    flags shouldHaveSize 0
+                    largeIcon shouldBe "https://render.guildwars2.com/file/02ED75461164551455297DA4955862552C2452BE/1313334.png"
+                    smallIcon shouldBe "https://render.guildwars2.com/file/6357FE56301B2F4AD1F309E62739B0110DA2452A/1313340.png"
+                    pipIcon shouldBe "https://render.guildwars2.com/file/47BDF237FF800552EDD69D28BC926031FC4B64A9/1313346.png"
+                    assertSoftly(tiers[0]) {
+                        points shouldBe 5
+                    }
+                }
+                assertSoftly(leaderboards.legendary!!) {
+                    assertSoftly(settings) {
+                        name shouldBe ""
+                        duration.shouldBeNull()
+                        scoring shouldBe "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
+                        assertSoftly(tiers[0]) {
+                            range shouldHaveSize 2
+                        }
+                    }
+                    assertSoftly(scorings[0]) {
+                        id shouldBe "E6487336-4B5B-4BFA-9CFA-9FF232CAEF85"
+                        type shouldBe "Integer"
+                        description shouldBe "Current prestige rank. Prestige rank can be gained or lost by winning or losing ranked matches in the legendary division."
+                        name shouldBe "Prestige"
                         ordering shouldBe "MoreIsBetter"
                     }
                 }
