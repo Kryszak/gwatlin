@@ -34,7 +34,7 @@ internal open class BaseHttpClient(
         language: io.github.kryszak.gwatlin.api.ApiLanguage? = null,
         configBlock: Request.() -> Unit = {}
     ): T {
-        val (_, response, result) = "$baseUrl/$uri"
+        val (_, response, result) = "$baseUrl$uri"
                 .httpGet()
                 .also { addDefaultHeaders(it, language) }
                 .also { log.info(logMessage.format(it.url)) }
@@ -46,30 +46,39 @@ internal open class BaseHttpClient(
         return processResult(result, ErrorResponse(response, RetrieveError.serializer()))
     }
 
-    protected fun addDefaultHeaders(request: Request, language: io.github.kryszak.gwatlin.api.ApiLanguage?) {
+    protected fun encodeParam(param: String) = param.replace(" ", "%20")
+
+    private fun addDefaultHeaders(request: Request, language: io.github.kryszak.gwatlin.api.ApiLanguage?) {
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
 
-    protected fun encodeParam(param: String) = param.replace(" ", "%20")
-
-    protected fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
+    private fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
         when (result) {
             is Result.Success -> return result.get()
             is Result.Failure -> {
                 log.error("Request failed! ${result.getException().message}")
                 try {
-                    val error = json.decodeFromString(
-                        errorResponse.deserializationStrategy,
-                        String(errorResponse.response.data)
-                    )
+                    val error = decodeErrorResponse(errorResponse)
                     log.error("Error: $error")
-                    throw ApiRequestException(error.toString())
+                    throw ApiRequestException(error)
                 } catch (e: IllegalStateException) {
                     log.warn("Failed to deserialize error response", e)
                     throw ApiRequestException("Unknown error")
                 }
             }
+        }
+    }
+
+    private fun <E : Any> decodeErrorResponse(errorResponse: ErrorResponse<E>): String {
+        try {
+            val error = json.decodeFromString(
+                errorResponse.deserializationStrategy,
+                String(errorResponse.response.data)
+            )
+            return error.toString()
+        } catch (exception: Exception) {
+            return String(errorResponse.response.data)
         }
     }
 }

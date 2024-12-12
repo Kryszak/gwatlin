@@ -21,7 +21,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
     init {
         should("Get masteries ids") {
             // given
-            stubResponse("/masteries", "/responses/gamemechanics/masteries_ids.json")
+            stubResponse("/v2/masteries", "/responses/gamemechanics/masteries_ids.json")
 
             // when
             val idsList = gameMechanicsClient.getMasteriesIds()
@@ -58,7 +58,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             // given
             val id = 40
 
-            stubResponse("/masteries/40", "/responses/gamemechanics/mastery_error.json", responseStatus = 404)
+            stubResponse("/v2/masteries/40", "/responses/gamemechanics/mastery_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { gameMechanicsClient.getMastery(id) }
@@ -72,7 +72,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", language = lang)
+            stubResponse("/v2/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", language = lang)
 
             // when
             val masteries = gameMechanicsClient.getMasteries(ids, lang)
@@ -100,7 +100,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", language = lang)
+            stubResponse("/v2/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", language = lang)
 
             // when
             val masteries = gameMechanicsClient.getAllMasteries(lang)
@@ -112,7 +112,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
 
     private fun stubFrenchMasteryResponse(): () -> Unit = {
         stubResponse(
-            "/masteries/1",
+            "/v2/masteries/1",
             "/responses/gamemechanics/mastery_fr.json",
             language = io.github.kryszak.gwatlin.api.ApiLanguage.FR
         )
@@ -120,7 +120,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
 
     private fun stubEnglishMasteryResponse(): () -> Unit = {
         stubResponse(
-            "/masteries/1",
+            "/v2/masteries/1",
             "/responses/gamemechanics/mastery.json",
             language = io.github.kryszak.gwatlin.api.ApiLanguage.EN
         )

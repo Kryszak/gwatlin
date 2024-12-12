@@ -15,7 +15,7 @@ internal class StoryClientTest : BaseWiremockTest() {
         should("Get stories") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/stories?ids=all", "/responses/story/stories.json", language = lang)
+            stubResponse("/v2/stories?ids=all", "/responses/story/stories.json", language = lang)
 
             // when
             val stories = storyClient.getStories(lang)
@@ -40,7 +40,7 @@ internal class StoryClientTest : BaseWiremockTest() {
         should("Get story seasons") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/stories/seasons?ids=all", "/responses/story/story_seasons.json", language = lang)
+            stubResponse("/v2/stories/seasons?ids=all", "/responses/story/story_seasons.json", language = lang)
 
             // when
             val seasons = storyClient.getStorySeasons(lang)

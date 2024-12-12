@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
 internal class TokenClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
-    private val tokenEndpoint = "tokeninfo"
+    private val tokenEndpoint = "/tokeninfo"
 
     fun getTokenInfo(): Token {
         return getRequestAuth(tokenEndpoint)

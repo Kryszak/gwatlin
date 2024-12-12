@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class ItemStatsClient : BaseHttpClient() {
 
-    private val statsEndpoint = "itemstats"
+    private val statsEndpoint = "/itemstats"
 
     fun getItemStatIds(): List<Int> {
         return getRequest(statsEndpoint)

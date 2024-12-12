@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class ApiInfoClient : BaseHttpClient() {
 
-    private val baseEndpoint: String = "v2.json?v=latest"
+    private val baseEndpoint: String = ".json?v=latest"
 
     fun getSchemaVersions(): List<SchemaVersion> {
         val apiInfo: ApiInfoResponse = getRequest(baseEndpoint)

@@ -15,7 +15,7 @@ internal class WvwClientTest : BaseWiremockTest() {
     init {
         should("Get ability ids") {
             // given
-            stubResponse("/wvw/abilities", "/responses/wvw/ability_ids.json")
+            stubResponse("/v2/wvw/abilities", "/responses/wvw/ability_ids.json")
 
             // when
             val ids = wvwClient.getAbilityIds()
@@ -49,7 +49,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get ability") {
             // given
-            stubResponse("/wvw/abilities?ids=2", "/responses/wvw/ability.json")
+            stubResponse("/v2/wvw/abilities?ids=2", "/responses/wvw/ability.json")
 
             // when
             val abilities = wvwClient.getAbilities(listOf(2))
@@ -69,7 +69,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get match ids") {
             // given
-            stubResponse("/wvw/matches", "/responses/wvw/match_ids.json")
+            stubResponse("/v2/wvw/matches", "/responses/wvw/match_ids.json")
 
             // when
             val ids = wvwClient.getMatchIds()
@@ -90,7 +90,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get match") {
             // given
-            stubResponse("/wvw/matches?ids=1-3", "/responses/wvw/match.json")
+            stubResponse("/v2/wvw/matches?ids=1-3", "/responses/wvw/match.json")
 
             // when
             val matches = wvwClient.getMatches(listOf("1-3"))
@@ -129,7 +129,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get match overview") {
             // given
-            stubResponse("/wvw/matches/overview?world=1008", "/responses/wvw/overview.json")
+            stubResponse("/v2/wvw/matches/overview?world=1008", "/responses/wvw/overview.json")
 
             // when
             val overview = wvwClient.getMatchesOverview(1008)
@@ -146,7 +146,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get match scores") {
             // given
-            stubResponse("/wvw/matches/scores?world=1008", "/responses/wvw/scores.json")
+            stubResponse("/v2/wvw/matches/scores?world=1008", "/responses/wvw/scores.json")
 
             // when
             val scores = wvwClient.getMatchScores(1008)
@@ -163,7 +163,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get match stats") {
             // given
-            stubResponse("/wvw/matches/stats?world=1008", "/responses/wvw/stats.json")
+            stubResponse("/v2/wvw/matches/stats?world=1008", "/responses/wvw/stats.json")
 
             // when
             val stats = wvwClient.getMatchStats(1008)
@@ -179,7 +179,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get objective ids") {
             // given
-            stubResponse("/wvw/objectives", "/responses/wvw/objective_ids.json")
+            stubResponse("/v2/wvw/objectives", "/responses/wvw/objective_ids.json")
 
             // when
             val ids = wvwClient.getObjectiveIds()
@@ -191,7 +191,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get objective") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", language = lang)
+            stubResponse("/v2/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", language = lang)
 
             // when
             val objectives = wvwClient.getObjectives(listOf("38-6"), lang)
@@ -214,7 +214,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get rank ids") {
             // given
-            stubResponse("/wvw/ranks", "/responses/wvw/rank_ids.json")
+            stubResponse("/v2/wvw/ranks", "/responses/wvw/rank_ids.json")
 
             // when
             val ids = wvwClient.getRankIds()
@@ -226,7 +226,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get rank") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/wvw/ranks?ids=1", "/responses/wvw/rank.json", language = lang)
+            stubResponse("/v2/wvw/ranks?ids=1", "/responses/wvw/rank.json", language = lang)
 
             // when
             val ranks = wvwClient.getRanks(listOf(1), lang)
@@ -241,7 +241,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get upgrade ids") {
             // given
-            stubResponse("/wvw/upgrades", "/responses/wvw/upgrade_ids.json")
+            stubResponse("/v2/wvw/upgrades", "/responses/wvw/upgrade_ids.json")
 
             // when
             val ids = wvwClient.getUpgradeIds()
@@ -253,7 +253,7 @@ internal class WvwClientTest : BaseWiremockTest() {
         should("Get upgrade") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", language = lang)
+            stubResponse("/v2/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", language = lang)
 
             // when
             val upgrades = wvwClient.getUpgrades(listOf(2), lang)

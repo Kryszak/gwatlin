@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class LegendsClient : BaseHttpClient() {
 
-    private val legendsEndpoint: String = "legends"
+    private val legendsEndpoint: String = "/legends"
 
     fun getLegendIds(): List<String> {
         return getRequest(legendsEndpoint)

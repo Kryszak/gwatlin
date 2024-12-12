@@ -15,7 +15,7 @@ class GWApiInfoClient {
      * Retrieves list of all existing schema versions
      * @return list of schema versions
      */
-    fun getAchievementIdsList(): List<SchemaVersion> {
+    fun getSchemaVersions(): List<SchemaVersion> {
         return client.getSchemaVersions()
     }
 }

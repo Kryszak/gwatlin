@@ -16,7 +16,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
     init {
         should("Get cat ids list") {
             // given
-            stubResponse("/home/cats", "/responses/homeinstance/cat_ids.json")
+            stubResponse("/v2/home/cats", "/responses/homeinstance/cat_ids.json")
 
             // when
             val catIdsList = homeInstanceClient.getCatIds()
@@ -28,7 +28,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
         should("Get cat") {
             // given
             val id = 1
-            stubResponse("/home/cats/1", "/responses/homeinstance/cat.json")
+            stubResponse("/v2/home/cats/1", "/responses/homeinstance/cat.json")
 
             // when
             val cat = homeInstanceClient.getCat(id)
@@ -43,7 +43,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
         should("Throw exception on non existing cat") {
             // given
             val id = 100
-            stubResponse("/home/cats/100", "/responses/homeinstance/cat_error.json", responseStatus = 404)
+            stubResponse("/v2/home/cats/100", "/responses/homeinstance/cat_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { homeInstanceClient.getCat(id) }
@@ -55,7 +55,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
         should("Get cat list") {
             // given
             val ids = listOf(1, 2, 3)
-            stubResponse("/home/cats?ids=1,2,3", "/responses/homeinstance/cats.json")
+            stubResponse("/v2/home/cats?ids=1,2,3", "/responses/homeinstance/cats.json")
 
             // when
             val catList = homeInstanceClient.getCats(ids)
@@ -70,7 +70,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
 
         should("Get node ids list") {
             // given
-            stubResponse("/home/nodes", "/responses/homeinstance/node_ids.json")
+            stubResponse("/v2/home/nodes", "/responses/homeinstance/node_ids.json")
 
             // when
             val nodeIdsList = homeInstanceClient.getNodeIds()

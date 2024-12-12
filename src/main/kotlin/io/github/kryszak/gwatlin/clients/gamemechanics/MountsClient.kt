@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MountsClient : BaseHttpClient() {
 
-    private val baseEndpoint: String = "mounts"
+    private val baseEndpoint: String = "/mounts"
 
     private val skinsEndpoint: String = "$baseEndpoint/skins"
 

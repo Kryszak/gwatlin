@@ -17,7 +17,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
     init {
         should("Get profession ids") {
             // given
-            stubResponse("/professions", "/responses/gamemechanics/profession_ids.json")
+            stubResponse("/v2/professions", "/responses/gamemechanics/profession_ids.json")
 
             // when
             val professionIds = professionsClient.getProfessionIds()
@@ -32,7 +32,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
             stubResponse(
-                "/professions?ids=Engineer,Warrior",
+                "/v2/professions?ids=Engineer,Warrior",
                 "/responses/gamemechanics/professions.json",
                 language = lang
             )
@@ -70,7 +70,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/professions?ids=all", "/responses/gamemechanics/professions_all.json", language = lang)
+            stubResponse("/v2/professions?ids=all", "/responses/gamemechanics/professions_all.json", language = lang)
 
             // when
             val professions = professionsClient.getAllProfessions(lang)
@@ -83,7 +83,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val id = "asdf"
 
-            stubResponse("/professions?ids=asdf", "/responses/gamemechanics/professions_error.json", responseStatus = 404)
+            stubResponse("/v2/professions?ids=asdf", "/responses/gamemechanics/professions_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { professionsClient.getProfessions(listOf(id)) }

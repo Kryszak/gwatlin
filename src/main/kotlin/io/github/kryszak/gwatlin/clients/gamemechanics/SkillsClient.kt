@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class SkillsClient : BaseHttpClient() {
 
-    private val skillsEndpoint: String = "skills"
+    private val skillsEndpoint: String = "/skills"
 
     fun getSkillIds(): List<Int> {
         return getRequest(skillsEndpoint)

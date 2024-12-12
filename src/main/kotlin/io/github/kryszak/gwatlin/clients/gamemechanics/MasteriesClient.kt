@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MasteriesClient : BaseHttpClient() {
 
-    private val masteriesEndpoint: String = "masteries"
+    private val masteriesEndpoint: String = "/masteries"
 
     fun getMasteriesIds(): List<Int> {
         return getRequest(masteriesEndpoint)

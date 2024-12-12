@@ -14,7 +14,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
     init {
         should("Get skin ids") {
             // given
-            stubResponse("/skins", "/responses/items/skin_ids.json")
+            stubResponse("/v2/skins", "/responses/items/skin_ids.json")
 
             // when
             val skinIds = skinsClient.getSkinIds()
@@ -28,7 +28,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
             val id = 10
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/skins?ids=10", "/responses/items/skin.json", language = lang)
+            stubResponse("/v2/skins?ids=10", "/responses/items/skin.json", language = lang)
 
             // when
             val skins = skinsClient.getSkins(listOf(id), lang)

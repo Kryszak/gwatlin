@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class PetsClient : BaseHttpClient() {
 
-    private val petsEndpoint = "pets"
+    private val petsEndpoint = "/pets"
 
     fun getPetIds(): List<Int> {
         return getRequest(petsEndpoint)

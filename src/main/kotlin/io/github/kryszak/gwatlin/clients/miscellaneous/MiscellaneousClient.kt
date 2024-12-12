@@ -8,27 +8,27 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MiscellaneousClient : BaseHttpClient() {
 
-    private val buildEndpoint = "build"
+    private val buildEndpoint = "/build"
 
-    private val filesEndpoint = "files"
+    private val filesEndpoint = "/files"
 
-    private val quaggansEndpoint = "quaggans"
+    private val quaggansEndpoint = "/quaggans"
 
-    private val colorsEndpoint = "colors"
+    private val colorsEndpoint = "/colors"
 
-    private val currenciesEndpoint = "currencies"
+    private val currenciesEndpoint = "/currencies"
 
-    private val dungeonsEndpoint = "dungeons"
+    private val dungeonsEndpoint = "/dungeons"
 
-    private val minisEndpoint = "minis"
+    private val minisEndpoint = "/minis"
 
-    private val noveltiesEndpoint = "novelties"
+    private val noveltiesEndpoint = "/novelties"
 
-    private val raidsEndpoint = "raids"
+    private val raidsEndpoint = "/raids"
 
-    private val titlesEndpoint = "titles"
+    private val titlesEndpoint = "/titles"
 
-    private val worldsEndpoint = "worlds"
+    private val worldsEndpoint = "/worlds"
 
     fun getBuildId(): BuildId {
         return getRequest(buildEndpoint)

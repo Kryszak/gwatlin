@@ -15,7 +15,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
     init {
         should("Get build id") {
             // given
-            stubResponse("/build", "/responses/miscellaneous/build_id.json")
+            stubResponse("/v2/build", "/responses/miscellaneous/build_id.json")
 
             // when
             val buildId = miscellaneousClient.getBuildId()
@@ -26,7 +26,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
 
         should("Get icons") {
             // given
-            stubResponse("/files?ids=all", "/responses/miscellaneous/icons.json")
+            stubResponse("/v2/files?ids=all", "/responses/miscellaneous/icons.json")
 
             // when
             val icons = miscellaneousClient.getIcons()
@@ -40,7 +40,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
 
         should("Get quaggans") {
             // given
-            stubResponse("/quaggans?ids=all", "/responses/miscellaneous/quaggans.json")
+            stubResponse("/v2/quaggans?ids=all", "/responses/miscellaneous/quaggans.json")
 
             // when
             val quaggans = miscellaneousClient.getQuaggans()
@@ -52,7 +52,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get dye colors") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/colors?ids=all", "/responses/miscellaneous/dye_colors.json", language = lang)
+            stubResponse("/v2/colors?ids=all", "/responses/miscellaneous/dye_colors.json", language = lang)
 
             // when
             val colors = miscellaneousClient.getDyeColors(lang)
@@ -79,7 +79,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get currencies") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/currencies?ids=all", "/responses/miscellaneous/currencies.json", language = lang)
+            stubResponse("/v2/currencies?ids=all", "/responses/miscellaneous/currencies.json", language = lang)
 
             // when
             val currencies = miscellaneousClient.getCurrencies(lang)
@@ -97,7 +97,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get dungeons") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", language = lang)
+            stubResponse("/v2/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", language = lang)
 
             // when
             val dungeons = miscellaneousClient.getDungeons(lang)
@@ -115,7 +115,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get minis") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/minis?ids=all", "/responses/miscellaneous/minis.json", language = lang)
+            stubResponse("/v2/minis?ids=all", "/responses/miscellaneous/minis.json", language = lang)
 
             // when
             val minis = miscellaneousClient.getMinis(lang)
@@ -133,7 +133,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get novelties") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/novelties?ids=all", "/responses/miscellaneous/novelties.json", language = lang)
+            stubResponse("/v2/novelties?ids=all", "/responses/miscellaneous/novelties.json", language = lang)
 
             // when
             val novelties = miscellaneousClient.getNovelties(lang)
@@ -152,7 +152,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get raids") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/raids?ids=all", "/responses/miscellaneous/raids.json", language = lang)
+            stubResponse("/v2/raids?ids=all", "/responses/miscellaneous/raids.json", language = lang)
 
             // when
             val raids = miscellaneousClient.getRaids(lang)
@@ -173,7 +173,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get titles") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/titles?ids=all", "/responses/miscellaneous/titles.json", language = lang)
+            stubResponse("/v2/titles?ids=all", "/responses/miscellaneous/titles.json", language = lang)
 
             // when
             val titles = miscellaneousClient.getTitles(lang)
@@ -190,7 +190,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
         should("Get worlds") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/worlds?ids=all", "/responses/miscellaneous/worlds.json", language = lang)
+            stubResponse("/v2/worlds?ids=all", "/responses/miscellaneous/worlds.json", language = lang)
 
             // when
             val worlds = miscellaneousClient.getWorlds(lang)

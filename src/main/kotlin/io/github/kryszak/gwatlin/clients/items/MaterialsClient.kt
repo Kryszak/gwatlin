@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MaterialsClient : BaseHttpClient() {
 
-    private val materialsEndpoint = "materials"
+    private val materialsEndpoint = "/materials"
 
     fun getMaterialIds(): List<Int> {
         return getRequest(materialsEndpoint)

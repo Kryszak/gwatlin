@@ -7,7 +7,7 @@ import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
 internal class PvpAuthenticatedClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
-    private val pvpEndpoint = "pvp"
+    private val pvpEndpoint = "/pvp"
 
     fun getPvpStats(): PvpStats {
         return getRequestAuth("$pvpEndpoint/stats")

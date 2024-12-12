@@ -13,7 +13,7 @@ internal class ItemStatsClientTest : BaseWiremockTest() {
     init {
         should("Get item stats ids") {
             // given
-            stubResponse("/itemstats", "/responses/items/item_stats_ids.json")
+            stubResponse("/v2/itemstats", "/responses/items/item_stats_ids.json")
 
             // when
             val statsIds = itemStatsClient.getItemStatsIds()
@@ -27,7 +27,7 @@ internal class ItemStatsClientTest : BaseWiremockTest() {
             val id = 584
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/itemstats?ids=584", "/responses/items/item_stats.json", language = lang)
+            stubResponse("/v2/itemstats?ids=584", "/responses/items/item_stats.json", language = lang)
 
             // when
             val stats = itemStatsClient.getItemStats(listOf(id), lang)

@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class TraitsClient : BaseHttpClient() {
 
-    private val traitsEndpoint: String = "traits"
+    private val traitsEndpoint: String = "/traits"
 
     fun getTraitIds(): List<Int> {
         return getRequest(traitsEndpoint)

@@ -52,7 +52,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
             val apiKey = "123"
 
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
                 "/responses/guild/guild_log_unauthenticated.json",
                 apiKey = "123",
                 responseStatus = 401
@@ -69,7 +69,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild members") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/members",
                 "/responses/guild/members.json",
                 apiKey = validApiKey
             )
@@ -88,7 +88,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild ranks") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/ranks",
                 "/responses/guild/ranks.json",
                 apiKey = validApiKey
             )
@@ -108,7 +108,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild stash") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/stash",
                 "/responses/guild/stash.json",
                 apiKey = validApiKey
             )
@@ -129,7 +129,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild treasury") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/treasury",
                 "/responses/guild/treasury.json",
                 apiKey = validApiKey
             )
@@ -148,7 +148,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild teams") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/teams",
                 "/responses/guild/teams.json",
                 apiKey = validApiKey
             )
@@ -194,7 +194,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
         should("Get guild upgrade ids") {
             // given
             stubResponse(
-                "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades",
+                "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/upgrades",
                 "/responses/guild/guild_upgrade_ids.json",
                 apiKey = validApiKey
             )
@@ -209,7 +209,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
     private fun stubGuildLogResponseWithSince(): () -> Unit = {
         stubResponse(
-            "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285",
+            "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log?since=1285",
             "/responses/guild/guild_log_since.json",
             apiKey = validApiKey
         )
@@ -217,7 +217,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
     private fun stubGuildLogResponseWithoutSince(): () -> Unit = {
         stubResponse(
-            "/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
+            "/v2/guild/4BBB52AA-D768-4FC6-8EDE-C299F2822F0F/log",
             "/responses/guild/guild_log.json",
             apiKey = validApiKey
         )

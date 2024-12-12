@@ -28,7 +28,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
         should("Get list of characters") {
             // given
             stubResponse(
-                "/characters",
+                "/v2/characters",
                 "/responses/characters/characters.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -47,7 +47,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName",
+                "/v2/characters/$escapedName",
                 "/responses/characters/character.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -136,7 +136,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName",
+                "/v2/characters/$escapedName",
                 "/responses/characters/character-without-guild.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -225,7 +225,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName",
+                "/v2/characters/$escapedName",
                 "/responses/characters/character-with-null-specializations.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -331,7 +331,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/buildtabs?tabs=all",
+                "/v2/characters/$escapedName/buildtabs?tabs=all",
                 "/responses/characters/buildtabs.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -350,7 +350,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val escapedName = characterName.replace(" ", "%20")
             val buildtabNumber = 2
             stubResponse(
-                "/characters/$escapedName/buildtabs?tab=$buildtabNumber",
+                "/v2/characters/$escapedName/buildtabs?tab=$buildtabNumber",
                 "/responses/characters/buildtab.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -391,7 +391,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/buildtabs/active",
+                "/v2/characters/$escapedName/buildtabs/active",
                 "/responses/characters/buildtab.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -409,7 +409,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/backstory",
+                "/v2/characters/$escapedName/backstory",
                 "/responses/characters/backstory.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -427,7 +427,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/core",
+                "/v2/characters/$escapedName/core",
                 "/responses/characters/character-core.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -457,7 +457,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/core",
+                "/v2/characters/$escapedName/core",
                 "/responses/characters/character-core-with-explicit-null-guild.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -487,7 +487,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/crafting",
+                "/v2/characters/$escapedName/crafting",
                 "/responses/characters/crafting.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -512,7 +512,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/equipment",
+                "/v2/characters/$escapedName/equipment",
                 "/responses/characters/equipment.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -539,7 +539,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/equipmenttabs?tabs=all",
+                "/v2/characters/$escapedName/equipmenttabs?tabs=all",
                 "/responses/characters/equipmenttabs.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -558,7 +558,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val escapedName = characterName.replace(" ", "%20")
             val equipmenttabNumber = 2
             stubResponse(
-                "/characters/$escapedName/equipmenttabs?tab=$equipmenttabNumber",
+                "/v2/characters/$escapedName/equipmenttabs?tab=$equipmenttabNumber",
                 "/responses/characters/equipmenttab.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -586,7 +586,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/equipmenttabs/active",
+                "/v2/characters/$escapedName/equipmenttabs/active",
                 "/responses/characters/equipmenttab.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -604,7 +604,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/inventory",
+                "/v2/characters/$escapedName/inventory",
                 "/responses/characters/inventory.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -667,7 +667,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/recipes",
+                "/v2/characters/$escapedName/recipes",
                 "/responses/characters/recipes.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -687,7 +687,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/training",
+                "/v2/characters/$escapedName/training",
                 "/responses/characters/training.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -712,7 +712,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/heropoints",
+                "/v2/characters/$escapedName/heropoints",
                 "/responses/characters/heropoints.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -731,7 +731,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/quests",
+                "/v2/characters/$escapedName/quests",
                 "/responses/characters/quests.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion
@@ -750,7 +750,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             val characterName = "Test Character"
             val escapedName = characterName.replace(" ", "%20")
             stubResponse(
-                "/characters/$escapedName/sab",
+                "/v2/characters/$escapedName/sab",
                 "/responses/characters/sab.json",
                 apiKey = apiKey,
                 schemaVersion = targetSchemaVersion

@@ -8,7 +8,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class AchievementsClient : BaseHttpClient() {
 
-    private val baseEndpoint: String = "achievements"
+    private val baseEndpoint: String = "/achievements"
 
     private val dailyEndpoint: String = "$baseEndpoint/daily"
 

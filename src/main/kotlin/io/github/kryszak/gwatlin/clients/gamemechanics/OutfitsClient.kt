@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class OutfitsClient : BaseHttpClient() {
 
-    private val outfitsEndpoint = "outfits"
+    private val outfitsEndpoint = "/outfits"
 
     fun getOutfitsIds(): List<Int> {
         return getRequest(outfitsEndpoint)

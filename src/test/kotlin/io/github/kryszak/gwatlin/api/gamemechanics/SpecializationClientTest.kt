@@ -16,7 +16,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
     init {
         should("Get specialization ids") {
             // given
-            stubResponse("/specializations", "/responses/gamemechanics/specialization_ids.json")
+            stubResponse("/v2/specializations", "/responses/gamemechanics/specialization_ids.json")
 
             // when
             val specializationIds = specializationClient.getSpecializationIds()
@@ -30,7 +30,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             val id = 1
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/specializations/1", "/responses/gamemechanics/specialization.json", language = lang)
+            stubResponse("/v2/specializations/1", "/responses/gamemechanics/specialization.json", language = lang)
 
             // when
             val specialization = specializationClient.getSpecialization(id, lang)
@@ -52,7 +52,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             // given
             val id = 100
 
-            stubResponse("/specializations/100", "/responses/gamemechanics/specialization_error.json", responseStatus = 404)
+            stubResponse("/v2/specializations/100", "/responses/gamemechanics/specialization_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { specializationClient.getSpecialization(id) }

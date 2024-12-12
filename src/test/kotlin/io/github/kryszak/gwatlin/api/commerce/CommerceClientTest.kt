@@ -13,7 +13,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
     init {
         should("Get commerce listing ids") {
             // given
-            stubResponse("/commerce/listings", "/responses/commerce/listing_ids.json")
+            stubResponse("/v2/commerce/listings", "/responses/commerce/listing_ids.json")
 
             // when
             val ids = commerceClient.getCommerceListingsIds()
@@ -24,7 +24,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
 
         should("Get commerce listings") {
             // given
-            stubResponse("/commerce/listings?ids=19684,19709", "/responses/commerce/listings.json")
+            stubResponse("/v2/commerce/listings?ids=19684,19709", "/responses/commerce/listings.json")
 
             // when
             val commerceListings = commerceClient.getCommerceListings(listOf(19684, 19709))
@@ -43,7 +43,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
 
         should("Get coin to gem exchange") {
             // given
-            stubResponse("/commerce/exchange/coins?quantity=100000", "/responses/commerce/coin_to_gem.json")
+            stubResponse("/v2/commerce/exchange/coins?quantity=100000", "/responses/commerce/coin_to_gem.json")
 
             // when
             val exchange = commerceClient.getCoinToGemExchange(100000)
@@ -57,7 +57,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
 
         should("Get gem to coin exchange") {
             // given
-            stubResponse("/commerce/exchange/gems?quantity=100", "/responses/commerce/gem_to_coin.json")
+            stubResponse("/v2/commerce/exchange/gems?quantity=100", "/responses/commerce/gem_to_coin.json")
 
             // when
             val exchange = commerceClient.getGemToCoinExchange(100)
@@ -71,7 +71,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
 
         should("Get price ids") {
             // given
-            stubResponse("/commerce/prices", "/responses/commerce/price_ids.json")
+            stubResponse("/v2/commerce/prices", "/responses/commerce/price_ids.json")
 
             // when
             val ids = commerceClient.getPriceIds()
@@ -82,7 +82,7 @@ internal class CommerceClientTest : BaseWiremockTest() {
 
         should("Get prices") {
             // given
-            stubResponse("/commerce/prices?ids=19684,19709", "/responses/commerce/prices.json")
+            stubResponse("/v2/commerce/prices?ids=19684,19709", "/responses/commerce/prices.json")
 
             // when
             val prices = commerceClient.getPrices(listOf(19684, 19709))

@@ -18,7 +18,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
     init {
         should("Get skill ids list") {
             // given
-            stubResponse("/skills", "/responses/gamemechanics/skill_ids.json")
+            stubResponse("/v2/skills", "/responses/gamemechanics/skill_ids.json")
 
             // when
             val skillIds = skillsClient.getSkillIds()
@@ -32,7 +32,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
             val ids = listOf(1110, 1115)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", language = lang)
+            stubResponse("/v2/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", language = lang)
 
             // when
             val skills = skillsClient.getSkills(ids, lang)

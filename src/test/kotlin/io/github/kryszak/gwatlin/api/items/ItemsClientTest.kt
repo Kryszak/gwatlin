@@ -23,7 +23,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
     init {
         should("Get item ids") {
             // given
-            stubResponse("/items", "/responses/items/item_ids.json")
+            stubResponse("/v2/items", "/responses/items/item_ids.json")
 
             // when
             val itemIds = itemsClient.getItemIds()
@@ -64,7 +64,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
             ) { (id, responseFile, assertion) ->
                 // given
                 val lang = EN
-                stubResponse("/items?ids=$id", "/responses/items/$responseFile", language = lang)
+                stubResponse("/v2/items?ids=$id", "/responses/items/$responseFile", language = lang)
 
                 // when
                 val items = itemsClient.getItems(listOf(id), lang)

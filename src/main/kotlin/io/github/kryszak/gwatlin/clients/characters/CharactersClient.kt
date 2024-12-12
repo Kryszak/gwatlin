@@ -13,7 +13,7 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
     // Latest schema version with changes to the characters endpoint
     "2021-07-15T13:00:00.000Z"
 ) {
-    private val endpoint = "characters"
+    private val endpoint = "/characters"
 
     fun getCharacters() = getRequestAuth<List<String>>(endpoint)
 

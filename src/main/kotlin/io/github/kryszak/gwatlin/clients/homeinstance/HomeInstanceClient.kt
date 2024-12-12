@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class HomeInstanceClient : BaseHttpClient() {
 
-    private val baseEndpoint: String = "home"
+    private val baseEndpoint: String = "/home"
 
     private val catsEndpoint: String = "$baseEndpoint/cats"
 

@@ -14,7 +14,7 @@ internal class RacesClientTest : BaseWiremockTest() {
     init {
         should("Ghould get race ids") {
             // given
-            stubResponse("/races", "/responses/gamemechanics/race_ids.json")
+            stubResponse("/v2/races", "/responses/gamemechanics/race_ids.json")
 
             // when
             val raceIds = racesClient.getRaceIds()
@@ -27,7 +27,7 @@ internal class RacesClientTest : BaseWiremockTest() {
             // given
             val id = "Asura"
 
-            stubResponse("/races/Asura", "/responses/gamemechanics/race.json")
+            stubResponse("/v2/races/Asura", "/responses/gamemechanics/race.json")
 
             // when
             val race = racesClient.getRace(id)
@@ -44,7 +44,7 @@ internal class RacesClientTest : BaseWiremockTest() {
             // given
             val id = "nobody"
 
-            stubResponse("/races/nobody", "/responses/gamemechanics/race_error.json", responseStatus = 404)
+            stubResponse("/v2/races/nobody", "/responses/gamemechanics/race_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { racesClient.getRace(id) }

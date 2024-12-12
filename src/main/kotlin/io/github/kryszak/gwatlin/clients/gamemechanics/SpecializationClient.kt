@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class SpecializationClient : BaseHttpClient() {
 
-    private val specializationEndpoint: String = "specializations"
+    private val specializationEndpoint: String = "/specializations"
 
     fun getSpecializationIds(): List<Int> {
         return getRequest(specializationEndpoint)

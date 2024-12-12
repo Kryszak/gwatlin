@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class FinishersClient : BaseHttpClient() {
 
-    private val finisherEndpoint = "finishers"
+    private val finisherEndpoint = "/finishers"
 
     fun getFinisherIds(): List<Int> {
         return getRequest(finisherEndpoint)
