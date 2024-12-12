@@ -15,7 +15,7 @@ internal class TraitsClientTest : BaseWiremockTest() {
     init {
         should("Get trait ids") {
             // given
-            stubResponse("/traits", "/responses/gamemechanics/trait_ids.json")
+            stubResponse("/v2/traits", "/responses/gamemechanics/trait_ids.json")
 
             // when
             val traitIds = traitsClient.getTraitIds()
@@ -29,7 +29,7 @@ internal class TraitsClientTest : BaseWiremockTest() {
             val ids = listOf(214, 221)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/traits?ids=214,221", "/responses/gamemechanics/traits.json", language = lang)
+            stubResponse("/v2/traits?ids=214,221", "/responses/gamemechanics/traits.json", language = lang)
 
             // when
             val traits = traitsClient.getTraits(ids, lang)

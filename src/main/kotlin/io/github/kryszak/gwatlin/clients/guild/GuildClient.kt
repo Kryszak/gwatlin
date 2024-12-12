@@ -8,9 +8,9 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class GuildClient : BaseHttpClient() {
 
-    private val guildEndpoint = "guild"
+    private val guildEndpoint = "/guild"
 
-    private val emblemEndpoint = "emblem"
+    private val emblemEndpoint = "/emblem"
 
     private val backgroundEndpoint = "$emblemEndpoint/backgrounds"
 

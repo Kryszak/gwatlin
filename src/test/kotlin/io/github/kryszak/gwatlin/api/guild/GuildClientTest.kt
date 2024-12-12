@@ -17,7 +17,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             // given
             val id = "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
 
-            stubResponse("/guild/$id", "/responses/guild/guild.json")
+            stubResponse("/v2/guild/$id", "/responses/guild/guild.json")
 
             // then
             val guild = guildClient.getGuild(id)
@@ -37,7 +37,7 @@ internal class GuildClientTest : BaseWiremockTest() {
 
         should("Get background ids") {
             // given
-            stubResponse("/emblem/backgrounds", "/responses/guild/background_ids.json")
+            stubResponse("/v2/emblem/backgrounds", "/responses/guild/background_ids.json")
 
             // when
             val backgroundIds = guildClient.getBackgroundIds()
@@ -50,7 +50,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             // given
             val ids = listOf(1, 2)
 
-            stubResponse("/emblem/backgrounds?ids=1,2", "/responses/guild/backgrounds.json")
+            stubResponse("/v2/emblem/backgrounds?ids=1,2", "/responses/guild/backgrounds.json")
 
             // when
             val backgrounds = guildClient.getBackgrounds(ids)
@@ -64,7 +64,7 @@ internal class GuildClientTest : BaseWiremockTest() {
 
         should("Get foreground ids") {
             // given
-            stubResponse("/emblem/foregrounds", "/responses/guild/foreground_ids.json")
+            stubResponse("/v2/emblem/foregrounds", "/responses/guild/foreground_ids.json")
 
             // when
             val foregroundIds = guildClient.getForegroundIds()
@@ -77,7 +77,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             // given
             val ids = listOf(1, 2)
 
-            stubResponse("/emblem/foregrounds?ids=1,2", "/responses/guild/foregrounds.json")
+            stubResponse("/v2/emblem/foregrounds?ids=1,2", "/responses/guild/foregrounds.json")
 
             // when
             val foregrounds = guildClient.getForegrounds(ids)
@@ -91,7 +91,7 @@ internal class GuildClientTest : BaseWiremockTest() {
 
         should("Get guild permission ids") {
             // given
-            stubResponse("/guild/permissions", "/responses/guild/permission_ids.json")
+            stubResponse("/v2/guild/permissions", "/responses/guild/permission_ids.json")
 
             // when
             val permissionIds = guildClient.getGuildPermissionIds()
@@ -106,7 +106,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
             stubResponse(
-                "/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem",
+                "/v2/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem",
                 "/responses/guild/permissions.json",
                 language = lang
             )
@@ -126,7 +126,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             // given
             val name = "Edit Conflict"
 
-            stubResponse("/guild/search?name=Edit%20Conflict", "/responses/guild/guild_id.json")
+            stubResponse("/v2/guild/search?name=Edit%20Conflict", "/responses/guild/guild_id.json")
 
             // when
             val guildId = guildClient.findGuildId(name)
@@ -139,7 +139,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             // given
             val name = "Edit Conflic"
 
-            stubResponse("/guild/search?name=Edit%20Conflic", "/responses/guild/guild_id_not_found.json")
+            stubResponse("/v2/guild/search?name=Edit%20Conflic", "/responses/guild/guild_id_not_found.json")
 
             // when
             val guildId = guildClient.findGuildId(name)
@@ -150,7 +150,7 @@ internal class GuildClientTest : BaseWiremockTest() {
 
         should("Get guild upgrade ids") {
             // given
-            stubResponse("/guild/upgrades", "/responses/guild/upgrade_ids.json")
+            stubResponse("/v2/guild/upgrades", "/responses/guild/upgrade_ids.json")
 
             // when
             val upgradeIds = guildClient.getGuildUpgradeIds()
@@ -164,7 +164,7 @@ internal class GuildClientTest : BaseWiremockTest() {
             val ids = listOf(38, 43, 55)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/guild/upgrades?ids=38,43,55", "/responses/guild/upgrades.json", language = lang)
+            stubResponse("/v2/guild/upgrades?ids=38,43,55", "/responses/guild/upgrades.json", language = lang)
 
             // when
             val upgrades = guildClient.getGuildUpgrades(ids, lang)

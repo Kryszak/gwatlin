@@ -13,7 +13,7 @@ internal class PvpClientTest : BaseWiremockTest() {
     init {
         should("Get pvp rank ids") {
             // given
-            stubResponse("/pvp/ranks", "/responses/pvp/rank_ids,json")
+            stubResponse("/v2/pvp/ranks", "/responses/pvp/rank_ids,json")
 
             // when
             val rankIds = pvpClient.getPvpRankIds()
@@ -27,7 +27,7 @@ internal class PvpClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", language = lang)
+            stubResponse("/v2/pvp/ranks?ids=1,2", "/responses/pvp/ranks.json", language = lang)
 
             // when
             val ranks = pvpClient.getPvpRanks(ids, lang)
@@ -50,7 +50,7 @@ internal class PvpClientTest : BaseWiremockTest() {
 
         should("Get pvp season ids") {
             // given
-            stubResponse("/pvp/seasons", "/responses/pvp/season_ids.json")
+            stubResponse("/v2/pvp/seasons", "/responses/pvp/season_ids.json")
 
             // when
             val seasonIds = pvpClient.getPvpSeasonIds()
@@ -65,7 +65,7 @@ internal class PvpClientTest : BaseWiremockTest() {
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
             stubResponse(
-                "/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA,44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
+                "/v2/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA,44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
                 "/responses/pvp/seasons.json", language = lang
             )
 

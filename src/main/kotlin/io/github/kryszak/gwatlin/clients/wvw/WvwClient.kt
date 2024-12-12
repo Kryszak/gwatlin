@@ -12,7 +12,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class WvwClient : BaseHttpClient() {
 
-    private val wvwEndpoint = "wvw"
+    private val wvwEndpoint = "/wvw"
 
     fun getAbilityIds(): List<Int> {
         return getRequest("$wvwEndpoint/abilities")

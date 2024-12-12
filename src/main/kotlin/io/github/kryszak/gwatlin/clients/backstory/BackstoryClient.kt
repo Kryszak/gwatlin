@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class BackstoryClient : BaseHttpClient() {
 
-    private val backstoryEndpoint = "backstory"
+    private val backstoryEndpoint = "/backstory"
 
     fun getBackstoryAnswers(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<BackstoryAnswer> {
         return getRequest("$backstoryEndpoint/answers?ids=all", language)

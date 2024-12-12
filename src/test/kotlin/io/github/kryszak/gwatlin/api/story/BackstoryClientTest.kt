@@ -15,7 +15,7 @@ internal class BackstoryClientTest : BaseWiremockTest() {
         should("Get backstory answers") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/backstory/answers?ids=all", "/responses/story/backstory_answers.json", language = lang)
+            stubResponse("/v2/backstory/answers?ids=all", "/responses/story/backstory_answers.json", language = lang)
 
             // when
             val answers = backstoryClient.getBackstoryAnswers(lang)
@@ -35,13 +35,13 @@ internal class BackstoryClientTest : BaseWiremockTest() {
         should("Get backstory questions") {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
-            stubResponse("/backstory/questions?ids=all", "/responses/story/backstory_questions.json", language = lang)
+            stubResponse("/v2/backstory/questions?ids=all", "/responses/story/backstory_questions.json", language = lang)
 
             // when
             val questions = backstoryClient.getBackstoryQuestions(lang)
 
             // then
-            assertSoftly(questions.get(0)) {
+            assertSoftly(questions[0]) {
                 id shouldBe 7
                 title shouldBe "My Personality"
                 description shouldBe "Trouble may follow me, but I use my ______ to overcome it."

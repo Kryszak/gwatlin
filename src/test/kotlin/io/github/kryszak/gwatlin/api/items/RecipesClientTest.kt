@@ -13,7 +13,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
     init {
         should("Get recipe ids") {
             // given
-            stubResponse("/recipes", "/responses/items/recipe_ids.json")
+            stubResponse("/v2/recipes", "/responses/items/recipe_ids.json")
 
             // when
             val recipeIds = recipesClient.getRecipeIds()
@@ -27,7 +27,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
             val ids = listOf(1)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/recipes?ids=1", "/responses/items/recipe.json", language = lang)
+            stubResponse("/v2/recipes?ids=1", "/responses/items/recipe.json", language = lang)
 
             // when
             val recipes = recipesClient.getRecipes(ids, lang)
@@ -54,7 +54,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
             // given
             val ingredientId = 46731
 
-            stubResponse("/recipes/search?input=46731", "/responses/items/search_recipe_input.json")
+            stubResponse("/v2/recipes/search?input=46731", "/responses/items/search_recipe_input.json")
 
             // when
             val recipeIds = recipesClient.searchRecipesWithInput(ingredientId)
@@ -67,7 +67,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
             // given
             val productId = 50065
 
-            stubResponse("/recipes/search?output=50065", "/responses/items/search_recipe_output.json")
+            stubResponse("/v2/recipes/search?output=50065", "/responses/items/search_recipe_output.json")
 
             // when
             val recipeIds = recipesClient.searchRecipesWithOutput(productId)

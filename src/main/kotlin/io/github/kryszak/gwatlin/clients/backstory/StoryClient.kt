@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class StoryClient : BaseHttpClient() {
 
-    private val storyEndpoint = "stories"
+    private val storyEndpoint = "/stories"
 
     fun getStories(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Story> {
         return getRequest("$storyEndpoint?ids=all", language)

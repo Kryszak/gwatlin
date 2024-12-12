@@ -10,7 +10,7 @@ import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
 internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
-    private val accountEndpoint = "account"
+    private val accountEndpoint = "/account"
 
     fun getAccountDetails(): Account {
         return getRequestAuth(accountEndpoint)

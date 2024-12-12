@@ -13,7 +13,7 @@ internal class PvpAmuletsClientTest : BaseWiremockTest() {
     init {
         should("Get pvp amulet ids") {
             // given
-            stubResponse("/pvp/amulets", "/responses/items/pvp_amulet_ids.json")
+            stubResponse("/v2/pvp/amulets", "/responses/items/pvp_amulet_ids.json")
 
             // when
             val amuletIds = pvpAmuletClient.getPvpAmuletIds()
@@ -27,7 +27,7 @@ internal class PvpAmuletsClientTest : BaseWiremockTest() {
             val ids = listOf(7)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", language = lang)
+            stubResponse("/v2/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", language = lang)
 
             // when
             val pvpAmulets = pvpAmuletClient.getPvpAmulets(ids, lang)

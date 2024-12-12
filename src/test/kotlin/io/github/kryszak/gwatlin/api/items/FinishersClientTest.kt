@@ -14,7 +14,7 @@ internal class FinishersClientTest : BaseWiremockTest() {
     init {
         should("Get finisher ids") {
             // given
-            stubResponse("/finishers", "/responses/items/finisher_ids.json")
+            stubResponse("/v2/finishers", "/responses/items/finisher_ids.json")
 
             // when
             val finisherIds = finishersClient.getFinisherIds()
@@ -28,7 +28,7 @@ internal class FinishersClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/finishers?ids=1,2", "/responses/items/finishers.json", language = lang)
+            stubResponse("/v2/finishers?ids=1,2", "/responses/items/finishers.json", language = lang)
 
             // when
             val finishers = finishersClient.getFinishers(ids, lang)

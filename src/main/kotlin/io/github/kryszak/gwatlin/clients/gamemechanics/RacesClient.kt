@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class RacesClient : BaseHttpClient() {
 
-    private val racesEndpoint: String = "races"
+    private val racesEndpoint: String = "/races"
 
     fun getRacesIds(): List<String> {
         return getRequest(racesEndpoint)

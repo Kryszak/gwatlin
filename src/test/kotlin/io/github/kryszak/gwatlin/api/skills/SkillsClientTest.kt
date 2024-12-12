@@ -54,7 +54,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
             ) { (id, responseFile, assertion) ->
                 // given
                 val lang = EN
-                stubResponse("/skills?ids=$id", "/responses/skills/$responseFile", language = lang)
+                stubResponse("/v2/skills?ids=$id", "/responses/skills/$responseFile", language = lang)
 
                 // when
                 val items = skillsClient.getSkills(listOf(id), lang)

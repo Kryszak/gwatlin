@@ -9,6 +9,6 @@ internal class HttpConfigTest : ShouldSpec({
         val config = HttpConfig()
 
         // expect
-        config.baseUrl shouldBe "http://localhost:8089"
+        config.baseUrl shouldBe "http://localhost:8089/v2"
     }
 })

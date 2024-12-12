@@ -26,7 +26,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val mapId = 26
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId",
                 "/responses/mapinfo/continentMap.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -104,7 +104,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
         should("Get continents") {
             // given
             stubResponse(
-                "/continents",
+                "/v2/continents",
                 "/responses/mapinfo/continents.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -121,7 +121,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val continentId = 1
 
             stubResponse(
-                "/continents/$continentId",
+                "/v2/continents/$continentId",
                 "/responses/mapinfo/continentOne.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -146,7 +146,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val continentId = 1
 
             stubResponse(
-                "/continents/$continentId/floors",
+                "/v2/continents/$continentId/floors",
                 "/responses/mapinfo/continentOneFloors.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -164,7 +164,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val floorId = 6
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId",
+                "/v2/continents/$continentId/floors/$floorId",
                 "/responses/mapinfo/continentOneFloor6.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -190,7 +190,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val floorId = 6
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions",
+                "/v2/continents/$continentId/floors/$floorId/regions",
                 "/responses/mapinfo/continentOneFloor6Regions.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -209,7 +209,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val regionId = 6
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId",
                 "/responses/mapinfo/continentOneFloor6Region1.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -235,7 +235,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val regionId = 6
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps",
                 "/responses/mapinfo/continentOneFloor6Region1Maps.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -250,7 +250,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
         should("Get all maps") {
             // given
             stubResponse(
-                "/maps",
+                "/v2/maps",
                 "/responses/mapinfo/maps.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -267,7 +267,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val ids = listOf(26, 27)
 
             stubResponse(
-                "/maps?ids=${ids.joinToString(",")}",
+                "/v2/maps?ids=${ids.joinToString(",")}",
                 "/responses/mapinfo/mapsMultiple.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -284,7 +284,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val mapId = 26
 
             stubResponse(
-                "/maps/$mapId",
+                "/v2/maps/$mapId",
                 "/responses/mapinfo/map26.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -318,7 +318,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val mapId = 26
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks",
                 "/responses/mapinfo/tasks.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -338,7 +338,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val mapId = 26
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois",
                 "/responses/mapinfo/pois.json",
                 schemaVersion = targetSchemaVersion
             )
@@ -358,7 +358,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             val mapId = 26
 
             stubResponse(
-                "/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors",
+                "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors",
                 "/responses/mapinfo/sectors.json",
                 schemaVersion = targetSchemaVersion
             )

@@ -10,7 +10,7 @@ internal class DailyRewardsClientTest : BaseWiremockTest() {
     init {
         should("Get daily crating recipes ids") {
             // given
-            stubResponse("/dailycrafting", "/responses/dailyrewards/crafting_recipes_ids.json")
+            stubResponse("/v2/dailycrafting", "/responses/dailyrewards/crafting_recipes_ids.json")
 
             // when
             val recipesIds = dailyRewardsClient.getDailyCraftingRecipesIds()
@@ -21,7 +21,7 @@ internal class DailyRewardsClientTest : BaseWiremockTest() {
 
         should("Get daily map chest ids") {
             // given
-            stubResponse("/mapchests", "/responses/dailyrewards/map_chests.json")
+            stubResponse("/v2/mapchests", "/responses/dailyrewards/map_chests.json")
 
             // when
             val chestsIds = dailyRewardsClient.getMapChestsIds()
@@ -32,7 +32,7 @@ internal class DailyRewardsClientTest : BaseWiremockTest() {
 
         should("Get daily world bosses ids") {
             // given
-            stubResponse("/worldbosses", "/responses/dailyrewards/world_bosses.json")
+            stubResponse("/v2/worldbosses", "/responses/dailyrewards/world_bosses.json")
 
             // when
             val chestsIds = dailyRewardsClient.getWorldBossesIds()

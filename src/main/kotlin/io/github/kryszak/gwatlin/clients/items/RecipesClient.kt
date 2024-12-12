@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class RecipesClient : BaseHttpClient() {
 
-    private val recipesEndpoint = "recipes"
+    private val recipesEndpoint = "/recipes"
 
     private val searchEndpoint = "$recipesEndpoint/search"
 

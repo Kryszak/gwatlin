@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class SkinsClient : BaseHttpClient() {
 
-    private val skinsEndpoint = "skins"
+    private val skinsEndpoint = "/skins"
 
     fun getSkinIds(): List<Int> {
         return getRequest(skinsEndpoint)

@@ -8,8 +8,8 @@ internal class MapInfoClient : BaseHttpClient(
     "2022-03-23T19:00:00.000Z"
 ) {
 
-    private val mapsEndpoint = "maps"
-    private val continentsEndpoint = "continents"
+    private val mapsEndpoint = "/maps"
+    private val continentsEndpoint = "/continents"
 
     fun getMaps() = getRequest<List<Int>>(mapsEndpoint)
 

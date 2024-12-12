@@ -16,7 +16,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
     init {
         should("Get list of achievement ids") {
             // given
-            stubResponse("/achievements", "/responses/achievements/achievement_ids.json")
+            stubResponse("/v2/achievements", "/responses/achievements/achievement_ids.json")
 
             // when
             val idsList = achievementsClient.getAchievementIdsList()
@@ -28,7 +28,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get single achievement") {
             // given
             val id = 1840
-            stubResponse("/achievements?ids=1840", "/responses/achievements/achievement.json")
+            stubResponse("/v2/achievements?ids=1840", "/responses/achievements/achievement.json")
 
             // when
             val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
@@ -57,7 +57,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get 3147: Walking on Fire") {
             // given
             val id = 3147
-            stubResponse("/achievements?ids=3147", "/responses/achievements/3147-walking-on-fire.json")
+            stubResponse("/v2/achievements?ids=3147", "/responses/achievements/3147-walking-on-fire.json")
 
             // when
             val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
@@ -74,7 +74,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get 5585: Dragon Ice Infuser") {
             // given
             val id = 5585
-            stubResponse("/achievements?ids=5585", "/responses/achievements/5585-dragon-ice-infuser.json")
+            stubResponse("/v2/achievements?ids=5585", "/responses/achievements/5585-dragon-ice-infuser.json")
 
             // when
             val achievementList = achievementsClient.getAchievementsByIds(listOf(id))
@@ -97,7 +97,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get list of achievements") {
             // given
             val ids = listOf(1840, 910, 2258)
-            stubResponse("/achievements?ids=1840,910,2258", "/responses/achievements/achievement_list.json")
+            stubResponse("/v2/achievements?ids=1840,910,2258", "/responses/achievements/achievement_list.json")
 
             // when
             val achievementList = achievementsClient.getAchievementsByIds(ids)
@@ -110,7 +110,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             // given
             val id = 12345
             stubResponse(
-                "/achievements?ids=12345",
+                "/v2/achievements?ids=12345",
                 "/responses/achievements/achievement_error.json",
                 responseStatus = 404
             )
@@ -124,7 +124,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
 
         should("Get list of daily achievements") {
             // given
-            stubResponse("/achievements/daily", "/responses/achievements/daily_achievements.json")
+            stubResponse("/v2/achievements/daily", "/responses/achievements/daily_achievements.json")
 
             // when
             val dailyAchievementList = achievementsClient.getDailyAchievements()
@@ -140,7 +140,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
 
         should("Get list of tomorrow daily achievements") {
             // given
-            stubResponse("/achievements/daily/tomorrow", "/responses/achievements/daily_tomorrow_achievements.json")
+            stubResponse("/v2/achievements/daily/tomorrow", "/responses/achievements/daily_tomorrow_achievements.json")
 
             // when
             val tomorrowDailyAchievementList = achievementsClient.getDailyTomorrowAchievements()
@@ -156,7 +156,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
 
         should("Get list of achievement group ids") {
             // given
-            stubResponse("/achievements/groups", "/responses/achievements/achievement_group_ids.json")
+            stubResponse("/v2/achievements/groups", "/responses/achievements/achievement_group_ids.json")
 
             // when
             val achievementGroupIdsList = achievementsClient.getAchievementGroupIds()
@@ -169,7 +169,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             // given
             val id = "65B4B678-607E-4D97-B458-076C3E96A810"
             stubResponse(
-                "/achievements/groups/65B4B678-607E-4D97-B458-076C3E96A810",
+                "/v2/achievements/groups/65B4B678-607E-4D97-B458-076C3E96A810",
                 "/responses/achievements/achievement_group.json"
             )
 
@@ -188,7 +188,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
 
         should("Get achievement category ids") {
             // given
-            stubResponse("/achievements/categories", "/responses/achievements/achievement_categories.json")
+            stubResponse("/v2/achievements/categories", "/responses/achievements/achievement_categories.json")
 
             // when
             val achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
@@ -200,7 +200,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get achievement category") {
             // given
             val id = 1
-            stubResponse("/achievements/categories/1", "/responses/achievements/achievement_category.json")
+            stubResponse("/v2/achievements/categories/1", "/responses/achievements/achievement_category.json")
 
             // when
             val achievementCategory = achievementsClient.getAchievementCategory(id)
@@ -220,7 +220,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             // given
             val id = 1000
             stubResponse(
-                "/achievements/categories/1000",
+                "/v2/achievements/categories/1000",
                 "/responses/achievements/achievement_category_error.json",
                 responseStatus = 404
             )

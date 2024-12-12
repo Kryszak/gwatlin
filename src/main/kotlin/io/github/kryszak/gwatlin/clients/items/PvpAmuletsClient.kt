@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class PvpAmuletsClient : BaseHttpClient() {
 
-    private val amuletsEndpoint = "pvp/amulets"
+    private val amuletsEndpoint = "/pvp/amulets"
 
     fun getPvpAmuletIds(): List<Int> {
         return getRequest(amuletsEndpoint)

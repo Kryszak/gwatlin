@@ -13,7 +13,7 @@ internal class MaterialsClientTest : BaseWiremockTest() {
     init {
         should("Get material ids") {
             // given
-            stubResponse("/materials", "/responses/items/material_ids.json")
+            stubResponse("/v2/materials", "/responses/items/material_ids.json")
 
             // when
             val materialIds = materialsClient.getMaterialIds()
@@ -27,7 +27,7 @@ internal class MaterialsClientTest : BaseWiremockTest() {
             val ids = listOf(5)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/materials?ids=5", "/responses/items/material.json", language = lang)
+            stubResponse("/v2/materials?ids=5", "/responses/items/material.json", language = lang)
 
             // when
             val materials = materialsClient.getMaterials(ids, lang)

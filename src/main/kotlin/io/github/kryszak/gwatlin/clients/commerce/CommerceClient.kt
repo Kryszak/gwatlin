@@ -7,7 +7,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class CommerceClient : BaseHttpClient() {
 
-    private val commerceEndpoint = "commerce"
+    private val commerceEndpoint = "/commerce"
 
     fun getCommerceListingsIds(): List<Int> {
         return getRequest("$commerceEndpoint/listings")

@@ -15,7 +15,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
     init {
         should("Get outfits ids") {
             // given
-            stubResponse("/outfits", "/responses/gamemechanics/outfit_ids.json")
+            stubResponse("/v2/outfits", "/responses/gamemechanics/outfit_ids.json")
 
             // when
             val idsList = outfitsClient.getOutfitsIds()
@@ -29,7 +29,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", language = lang)
+            stubResponse("/v2/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", language = lang)
 
             // when
             val outfits = outfitsClient.getOutfits(ids, lang)
@@ -47,7 +47,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             // given
             val id = 1000
 
-            stubResponse("/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json", responseStatus = 404)
+            stubResponse("/v2/outfits?ids=1000", "/responses/gamemechanics/outfit_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { outfitsClient.getOutfits(listOf(id)) }
@@ -60,7 +60,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             // given
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
-            stubResponse("/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", language = lang)
+            stubResponse("/v2/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", language = lang)
 
             // when
             val outfits = outfitsClient.getAllOutfits(lang)

@@ -10,7 +10,7 @@ import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
 internal class GuildAuthenticatedClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
-    private val guildEndpoint = "guild"
+    private val guildEndpoint = "/guild"
 
     fun getGuildLog(id: String, since: String? = ""): List<GuildLog> {
         val sinceQuery = formSinceQuery(since)

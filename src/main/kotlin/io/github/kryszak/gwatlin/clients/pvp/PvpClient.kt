@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class PvpClient : BaseHttpClient() {
 
-    private val pvpEndpoint = "pvp"
+    private val pvpEndpoint = "/pvp"
 
     private val ranksEndpoint = "$pvpEndpoint/ranks"
 
