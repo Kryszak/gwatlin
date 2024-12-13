@@ -25,7 +25,7 @@ internal class ItemStatsClientTest : BaseWiremockTest() {
         should("Get item stats") {
             // given
             val id = 584
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/itemstats?ids=584", "/responses/items/item_stats.json", language = lang)
 

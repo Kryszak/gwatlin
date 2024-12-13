@@ -27,7 +27,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
         should("Get outfits") {
             // given
             val ids = listOf(1, 2)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/outfits?ids=1,2", "/responses/gamemechanics/outfits.json", language = lang)
 
@@ -58,7 +58,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
 
         should("Get all outfits") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/outfits?ids=all", "/responses/gamemechanics/outfits_all.json", language = lang)
 

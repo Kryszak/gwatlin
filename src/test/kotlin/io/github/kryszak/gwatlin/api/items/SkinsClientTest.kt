@@ -26,7 +26,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
         should("Get skin") {
             // given
             val id = 10
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/skins?ids=10", "/responses/items/skin.json", language = lang)
 

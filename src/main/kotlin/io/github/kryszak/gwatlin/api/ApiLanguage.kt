@@ -33,20 +33,20 @@ enum class ApiLanguage(val locale: Locale) {
     ZH(Locale.CHINESE);
 
     companion object {
-        private val localeLanguageMap by lazy { values().associateBy { it.locale } }
-        private val stringLanguageMap by lazy { values().associateBy { it.locale.language } }
+        private val localeLanguageMap by lazy { entries.associateBy { it.locale } }
+        private val stringLanguageMap by lazy { entries.associateBy { it.locale.language } }
 
         /**
          * @return the language that's corresponding to the supplied locale, or null if no language matches the locale
          */
         @JvmStatic
-        fun fromLocale(locale: Locale) = io.github.kryszak.gwatlin.api.ApiLanguage.Companion.localeLanguageMap[locale]
+        fun fromLocale(locale: Locale) = ApiLanguage.localeLanguageMap[locale]
 
         /**
          * @return the language that's corresponding to the supplied ISO 639-1 string, or null if no language matches the string
          */
         @JvmStatic
-        fun fromString(languageString: String) = io.github.kryszak.gwatlin.api.ApiLanguage.Companion.stringLanguageMap[languageString]
+        fun fromString(languageString: String) = ApiLanguage.stringLanguageMap[languageString]
     }
 
     /**

@@ -25,7 +25,7 @@ internal class PvpAmuletsClientTest : BaseWiremockTest() {
         should("Get pvp amulet") {
             // given
             val ids = listOf(7)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/pvp/amulets?ids=7", "/responses/items/pvp_amulet.json", language = lang)
 

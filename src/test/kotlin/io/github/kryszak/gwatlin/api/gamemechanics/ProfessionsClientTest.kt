@@ -29,7 +29,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
         should("Get professions") {
             // given
             val ids = listOf("Engineer", "Warrior")
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse(
                 "/v2/professions?ids=Engineer,Warrior",
@@ -68,7 +68,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
 
         should("Get all professions") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/professions?ids=all", "/responses/gamemechanics/professions_all.json", language = lang)
 

@@ -9,7 +9,6 @@ import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
 
 internal class SkillsClientTest : BaseWiremockTest() {
 
@@ -30,7 +29,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
         should("Get skills") {
             // given
             val ids = listOf(1110, 1115)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", language = lang)
 

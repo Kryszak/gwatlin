@@ -25,7 +25,7 @@ internal class LegendsClientTest : BaseWiremockTest() {
         should("Get legends") {
             // given
             val ids = listOf("Legend1", "Legend2")
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends.json", language = lang)
 

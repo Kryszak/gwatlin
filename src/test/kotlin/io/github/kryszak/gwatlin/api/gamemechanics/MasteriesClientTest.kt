@@ -35,8 +35,8 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             forAll(
                 table(
                     headers("language", "expectedMastery", "stub"),
-                    row(io.github.kryszak.gwatlin.api.ApiLanguage.EN, englishMastery(), stubEnglishMasteryResponse()),
-                    row(io.github.kryszak.gwatlin.api.ApiLanguage.FR, frenchMastery(), stubFrenchMasteryResponse())
+                    row(ApiLanguage.EN, englishMastery(), stubEnglishMasteryResponse()),
+                    row(ApiLanguage.FR, frenchMastery(), stubFrenchMasteryResponse())
                 )
             ) { language, expectedMastery, stubbing ->
                 // given
@@ -70,7 +70,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
         should("Get list of masteries") {
             // given
             val ids = listOf(1, 2)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/masteries?ids=1,2", "/responses/gamemechanics/masteries.json", language = lang)
 
@@ -98,7 +98,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
 
         should("Get all masteries") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/masteries?ids=all", "/responses/gamemechanics/masteries_all.json", language = lang)
 
@@ -114,7 +114,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
         stubResponse(
             "/v2/masteries/1",
             "/responses/gamemechanics/mastery_fr.json",
-            language = io.github.kryszak.gwatlin.api.ApiLanguage.FR
+            language = ApiLanguage.FR
         )
     }
 
@@ -122,7 +122,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
         stubResponse(
             "/v2/masteries/1",
             "/responses/gamemechanics/mastery.json",
-            language = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            language = ApiLanguage.EN
         )
     }
 

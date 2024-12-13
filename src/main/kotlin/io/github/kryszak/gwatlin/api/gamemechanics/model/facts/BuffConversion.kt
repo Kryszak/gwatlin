@@ -1,6 +1,5 @@
 package io.github.kryszak.gwatlin.api.gamemechanics.model.facts
 
-import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate
 import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate.Companion.serialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
