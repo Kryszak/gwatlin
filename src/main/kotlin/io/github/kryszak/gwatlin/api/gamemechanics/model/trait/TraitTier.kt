@@ -9,6 +9,8 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 enum class TraitTier {
+    @SerialName("0")
+    MINOR,
     @SerialName("1")
     ADEPT,
     @SerialName("2")

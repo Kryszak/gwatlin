@@ -1,8 +1,9 @@
 package io.github.kryszak.gwatlin.api.wvw
 
-import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
+import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldNotBeNull
@@ -271,6 +272,18 @@ internal class WvwClientTest : BaseWiremockTest() {
                     }
                 }
             }
+        }
+
+        should("Return correct exception on serialization error") {
+            // given
+            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            stubResponse("/v2/wvw/objectives?ids=38-6", "/responses/wvw/objective_invalid.json", language = lang)
+
+            // when
+            val exception = shouldThrowExactly<ApiRequestException> {  wvwClient.getObjectives(listOf("38-6"), lang) }
+
+            // then
+            exception.message shouldBe "Field 'marker' is required for type with serial name 'io.github.kryszak.gwatlin.api.wvw.model.objective.WvwObjective', but it was missing at path: \$[0]"
         }
     }
 }
