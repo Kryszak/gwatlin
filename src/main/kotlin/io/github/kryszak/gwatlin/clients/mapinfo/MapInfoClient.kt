@@ -11,23 +11,23 @@ internal class MapInfoClient : BaseHttpClient(
     private val mapsEndpoint = "/maps"
     private val continentsEndpoint = "/continents"
 
-    fun getMaps() = getRequest<List<Int>>(mapsEndpoint)
+    fun getMapIds() = getRequest<List<Int>>(mapsEndpoint)
 
     fun getMaps(mapIds: Collection<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?) =
         handleOneOrMultipleIds<Map>(mapIds, language, mapsEndpoint)
 
-    fun getContinents() = getRequest<List<Int>>(continentsEndpoint)
+    fun getContinentIds() = getRequest<List<Int>>(continentsEndpoint)
 
     fun getContinents(continentIds: Collection<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?) =
         handleOneOrMultipleIds<Continent>(continentIds, language, continentsEndpoint)
 
-    fun getFloors(continentId: Int) =
+    fun getFloorIds(continentId: Int) =
         getRequest<List<Int>>("$continentsEndpoint/$continentId/floors")
 
     fun getFloor(continentId: Int, floorId: Int, language: io.github.kryszak.gwatlin.api.ApiLanguage?) =
         getRequest<Floor>("$continentsEndpoint/$continentId/floors/$floorId", language)
 
-    fun getRegions(continentId: Int, floorId: Int) =
+    fun getRegionIds(continentId: Int, floorId: Int) =
         getRequest<List<Int>>("$continentsEndpoint/$continentId/floors/$floorId/regions")
 
     fun getRegion(continentId: Int, floorId: Int, regionId: Int, language: io.github.kryszak.gwatlin.api.ApiLanguage?) =
@@ -52,12 +52,12 @@ internal class MapInfoClient : BaseHttpClient(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors"
         )
 
-    fun getPointsOfInterest(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
+    fun getPointsOfInterestIds(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
         getRequest<List<Int>>(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois"
         )
 
-    fun getTasks(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
+    fun getTaskIds(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
         getRequest<List<Int>>(
             "$continentsEndpoint/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks"
         )

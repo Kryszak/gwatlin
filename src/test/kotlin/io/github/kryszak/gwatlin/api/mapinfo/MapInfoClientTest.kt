@@ -101,7 +101,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             }
         }
 
-        should("Get continents") {
+        should("Get continent ids") {
             // given
             stubResponse(
                 "/v2/continents",
@@ -110,13 +110,13 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getContinents()
+            val result = mapInfoClient.getContinentIds()
 
             // then
             result shouldContainExactly listOf(1, 2)
         }
 
-        should("Ghould get continent") {
+        should("Get continent") {
             // given
             val continentId = 1
 
@@ -141,6 +141,43 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get multiple continents") {
+            // given
+            val continentIds = listOf(1, 2)
+
+            stubResponse(
+                "/v2/continents?ids=1,2",
+                "/responses/mapinfo/continentsMultiple.json",
+                schemaVersion = targetSchemaVersion
+            )
+
+            // when
+            val result = mapInfoClient.getContinents(continentIds)
+
+            // then
+            assertSoftly(result) {
+                size shouldBe 2
+                assertSoftly(it[0]) {
+                    id shouldBe 1
+                    name shouldBe "Tyria"
+                    continentDims.x shouldBe 81920
+                    continentDims.y shouldBe 114688
+                    minZoom shouldBe 0
+                    maxZoom shouldBe 8
+                    floors shouldHaveSize 119
+                }
+                assertSoftly(it[1]) {
+                    id shouldBe 2
+                    name shouldBe "Mists"
+                    continentDims.x shouldBe 16384
+                    continentDims.y shouldBe 16384
+                    minZoom shouldBe 0
+                    maxZoom shouldBe 6
+                    floors shouldHaveSize 48
+                }
+            }
+        }
+
         should("Get floors") {
             // given
             val continentId = 1
@@ -152,7 +189,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getFloors(continentId)
+            val result = mapInfoClient.getFloorIds(continentId)
 
             // then
             result shouldHaveSize 119
@@ -196,7 +233,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getRegions(continentId, floorId)
+            val result = mapInfoClient.getRegionIds(continentId, floorId)
 
             // then
             result shouldContainExactly listOf(1)
@@ -247,7 +284,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             result shouldContainExactly listOf(70, 71)
         }
 
-        should("Get all maps") {
+        should("Get all map ids") {
             // given
             stubResponse(
                 "/v2/maps",
@@ -256,7 +293,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getMaps()
+            val result = mapInfoClient.getMapIds()
 
             // then
             result shouldHaveSize 937
@@ -324,7 +361,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getTasks(continentId, floorId, regionId, mapId)
+            val result = mapInfoClient.getTaskIds(continentId, floorId, regionId, mapId)
 
             // then
             result shouldHaveSize 11
@@ -344,7 +381,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             )
 
             // when
-            val result = mapInfoClient.getPointsOfInterest(continentId, floorId, regionId, mapId)
+            val result = mapInfoClient.getPointsOfInterestIds(continentId, floorId, regionId, mapId)
 
             // then
             result shouldHaveSize 51

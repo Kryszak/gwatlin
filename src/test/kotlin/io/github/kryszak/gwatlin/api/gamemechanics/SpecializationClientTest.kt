@@ -28,7 +28,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
         should("Get specialization") {
             // given
             val id = 1
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/specializations/1", "/responses/gamemechanics/specialization.json", language = lang)
 

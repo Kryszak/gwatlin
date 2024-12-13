@@ -14,7 +14,7 @@ class GWMapInfoClient {
     /**
      * Returns a list of map IDs from the /maps endpoint
      */
-    fun getMaps() = mapInfoClient.getMaps()
+    fun getMapIds() = mapInfoClient.getMapIds()
 
     /**
      * Returns a list of [io.github.kryszak.gwatlin.api.mapinfo.model.Map]
@@ -42,7 +42,7 @@ class GWMapInfoClient {
      * Returns a list of continent IDs
      * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/continents)
      */
-    fun getContinents() = mapInfoClient.getContinents()
+    fun getContinentIds() = mapInfoClient.getContinentIds()
 
     /**
      * Returns the continent corresponding to the specified ID, or null if no such continent exists
@@ -56,12 +56,22 @@ class GWMapInfoClient {
         mapInfoClient.getContinents(listOf(continentId), language).firstOrNull()
 
     /**
+     * Returns the continent list corresponding to the specified ID list.
+     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/continents)
+     * @param continentIds ID list of the continents to be fetched
+     * @param language one of the languages defined in [ApiLanguage]
+     * when creating this client, if any
+     */
+    fun getContinents(continentIds: Collection<Int>, language: ApiLanguage? = null) =
+        mapInfoClient.getContinents(continentIds, language)
+
+    /**
      * Returns a list of floor IDs on the specified continent
      * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/continents)
      * @param continentId ID of the continent
      */
-    fun getFloors(continentId: Int) =
-        mapInfoClient.getFloors(continentId)
+    fun getFloorIds(continentId: Int) =
+        mapInfoClient.getFloorIds(continentId)
 
     /**
      * Returns the floor corresponding to the specified continentId and floorID
@@ -81,8 +91,8 @@ class GWMapInfoClient {
      * @param continentId ID of the continent
      * @param floorId ID of the floor on the continent
      */
-    fun getRegions(continentId: Int, floorId: Int) =
-        mapInfoClient.getRegions(continentId, floorId)
+    fun getRegionIds(continentId: Int, floorId: Int) =
+        mapInfoClient.getRegionIds(continentId, floorId)
 
     /**
      * Returns the region corresponding to the specified continentId, floorId and regionId
@@ -142,8 +152,8 @@ class GWMapInfoClient {
      * @param regionId ID of the region on the floor
      * @param mapId ID of the map in the region
      */
-    fun getPointsOfInterest(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
-        mapInfoClient.getPointsOfInterest(continentId, floorId, regionId, mapId)
+    fun getPointsOfInterestIds(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
+        mapInfoClient.getPointsOfInterestIds(continentId, floorId, regionId, mapId)
 
     /**
      * Returns a list of tasks (aka Hearts) IDs on the specified map
@@ -153,6 +163,6 @@ class GWMapInfoClient {
      * @param regionId ID of the region on the floor
      * @param mapId ID of the map in the region
      */
-    fun getTasks(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
-        mapInfoClient.getTasks(continentId, floorId, regionId, mapId)
+    fun getTaskIds(continentId: Int, floorId: Int, regionId: Int, mapId: Int) =
+        mapInfoClient.getTaskIds(continentId, floorId, regionId, mapId)
 }

@@ -25,7 +25,7 @@ internal class MaterialsClientTest : BaseWiremockTest() {
         should("Get material") {
             // given
             val ids = listOf(5)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/materials?ids=5", "/responses/items/material.json", language = lang)
 

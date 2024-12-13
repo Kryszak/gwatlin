@@ -25,7 +25,7 @@ internal class RecipesClientTest: BaseWiremockTest() {
         should("Get recipe") {
             // given
             val ids = listOf(1)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/recipes?ids=1", "/responses/items/recipe.json", language = lang)
 

@@ -26,7 +26,7 @@ internal class FinishersClientTest : BaseWiremockTest() {
         should("Get finishers") {
             // given
             val ids = listOf(1, 2)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/finishers?ids=1,2", "/responses/items/finishers.json", language = lang)
 

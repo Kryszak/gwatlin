@@ -103,7 +103,7 @@ internal class GuildClientTest : BaseWiremockTest() {
         should("Get guild permissions") {
             // given
             val ids = listOf("ClaimableEditOptions", "Admin", "EditAnthem")
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse(
                 "/v2/guild/permissions?ids=ClaimableEditOptions,Admin,EditAnthem",
@@ -162,7 +162,7 @@ internal class GuildClientTest : BaseWiremockTest() {
         should("Get guild upgrades") {
             // given
             val ids = listOf(38, 43, 55)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/guild/upgrades?ids=38,43,55", "/responses/guild/upgrades.json", language = lang)
 

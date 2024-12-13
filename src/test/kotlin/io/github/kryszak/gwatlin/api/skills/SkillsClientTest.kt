@@ -1,6 +1,6 @@
 package io.github.kryszak.gwatlin.api.skills
 
-import io.github.kryszak.gwatlin.api.ApiLanguage.EN
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.GWSkillsClient
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.AttributeAdjust
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Percent
@@ -18,13 +18,9 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.doubles.plusOrMinus
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
-import io.kotest.matchers.should
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
-import io.kotest.matchers.types.beInstanceOf
 import io.kotest.matchers.types.shouldBeInstanceOf
 import io.kotest.matchers.types.shouldBeTypeOf
-import org.w3c.dom.Attr
 
 internal class SkillsClientTest : BaseWiremockTest() {
 
@@ -53,7 +49,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
                 )
             ) { (id, responseFile, assertion) ->
                 // given
-                val lang = EN
+                val lang = ApiLanguage.EN
                 stubResponse("/v2/skills?ids=$id", "/responses/skills/$responseFile", language = lang)
 
                 // when

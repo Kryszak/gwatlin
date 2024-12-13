@@ -14,7 +14,7 @@ internal class BackstoryClientTest : BaseWiremockTest() {
     init {
         should("Get backstory answers") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/backstory/answers?ids=all", "/responses/story/backstory_answers.json", language = lang)
 
             // when
@@ -34,7 +34,7 @@ internal class BackstoryClientTest : BaseWiremockTest() {
 
         should("Get backstory questions") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/backstory/questions?ids=all", "/responses/story/backstory_questions.json", language = lang)
 
             // when

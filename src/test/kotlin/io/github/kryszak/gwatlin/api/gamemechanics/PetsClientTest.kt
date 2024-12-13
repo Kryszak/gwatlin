@@ -25,7 +25,7 @@ internal class PetsClientTest : BaseWiremockTest() {
         should("Get pets") {
             // given
             val ids = listOf(1, 2)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/pets?ids=1,2", "/responses/gamemechanics/pets.json", language = lang)
 
@@ -46,7 +46,7 @@ internal class PetsClientTest : BaseWiremockTest() {
 
         should("Get all pets") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/pets?ids=all", "/responses/gamemechanics/pets_all.json", language = lang)
 

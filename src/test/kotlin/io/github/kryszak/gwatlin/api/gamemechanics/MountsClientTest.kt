@@ -27,7 +27,7 @@ internal class MountsClientTest : BaseWiremockTest() {
         should("Get list of mount skins") {
             // given
             val ids = listOf(1, 2)
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/mounts/skins?ids=1,2", "/responses/gamemechanics/mount_skins.json", language = lang)
 
@@ -62,7 +62,7 @@ internal class MountsClientTest : BaseWiremockTest() {
 
         should("Get all mount skins") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/mounts/skins?ids=all", "/responses/gamemechanics/mount_skins_all.json", language = lang)
 
@@ -87,7 +87,7 @@ internal class MountsClientTest : BaseWiremockTest() {
         should("Get mount types") {
             // given
             val ids = listOf("griffon", "jackal")
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse(
                 "/v2/mounts/types?ids=griffon,jackal",
@@ -99,7 +99,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             val mountTypes = mountsClient.getMountTypes(ids, lang)
 
             // then
-            assertSoftly(mountTypes.get(0)) {
+            assertSoftly(mountTypes[0]) {
                 id shouldBe "griffon"
                 name shouldBe "Griffon"
                 defaultSkin shouldBe 4
@@ -114,7 +114,7 @@ internal class MountsClientTest : BaseWiremockTest() {
 
         should("Get all mount types") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
 
             stubResponse("/v2/mounts/types?ids=all", "/responses/gamemechanics/mount_types_all.json", language = lang)
 

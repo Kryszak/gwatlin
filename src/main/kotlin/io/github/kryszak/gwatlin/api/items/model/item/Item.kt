@@ -3,7 +3,6 @@ package io.github.kryszak.gwatlin.api.items.model.item
 import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.Transient
 
 /**
  * Root data model for item class
