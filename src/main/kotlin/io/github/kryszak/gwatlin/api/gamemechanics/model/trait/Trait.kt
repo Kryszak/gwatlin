@@ -13,7 +13,7 @@ data class Trait(
     val id: Int,
     val name: String,
     val icon: String,
-    val description: String,
+    val description: String? = null,
     val specialization: Int,
     val tier: TraitTier,
     val order: Int,

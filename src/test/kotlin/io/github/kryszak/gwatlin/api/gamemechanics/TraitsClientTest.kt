@@ -1,6 +1,5 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
 import io.github.kryszak.gwatlin.config.BaseWiremockTest

@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.http
 
+import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.httpGet
@@ -7,7 +8,6 @@ import com.github.kittinunf.fuel.serialization.responseObject
 import com.github.kittinunf.result.Result
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.http.config.HttpConfig
-import io.github.kryszak.gwatlin.http.exception.ErrorResponse
 import io.github.kryszak.gwatlin.http.exception.RetrieveError
 import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
 import kotlinx.serialization.serializer
@@ -34,16 +34,16 @@ internal open class BaseHttpClient(
         language: io.github.kryszak.gwatlin.api.ApiLanguage? = null,
         configBlock: Request.() -> Unit = {}
     ): T {
-        val (_, response, result) = "$baseUrl$uri"
-                .httpGet()
-                .also { addDefaultHeaders(it, language) }
-                .also { log.info(logMessage.format(it.url)) }
-                .also { configBlock(it) }
-                // The Fuel extension package doesn't acknowledge default serializers.
-                // The default serializers need to be passed manually, sadly
-                .responseObject<T>(json.serializersModule.serializer(), json)
+        val (_, _, result) = "${baseUrl}${uri}"
+            .httpGet()
+            .also { addDefaultHeaders(it, language) }
+            .also { log.info(logMessage.format(it.url)) }
+            .also { configBlock(it) }
+            // The Fuel extension package doesn't acknowledge default serializers.
+            // The default serializers need to be passed manually, sadly
+            .responseObject<T>(json.serializersModule.serializer(), json)
 
-        return processResult(result, ErrorResponse(response, RetrieveError.serializer()))
+        return processResult(result)
     }
 
     protected fun encodeParam(param: String) = param.replace(" ", "%20")
@@ -53,32 +53,32 @@ internal open class BaseHttpClient(
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
     }
 
-    private fun <T : Any, E : Any> processResult(result: Result<T, Exception>, errorResponse: ErrorResponse<E>): T {
-        when (result) {
-            is Result.Success -> return result.get()
-            is Result.Failure -> {
-                log.error("Request failed! ${result.getException().message}")
-                try {
-                    val error = decodeErrorResponse(errorResponse)
-                    log.error("Error: $error")
-                    throw ApiRequestException(error)
-                } catch (e: IllegalStateException) {
-                    log.warn("Failed to deserialize error response", e)
-                    throw ApiRequestException("Unknown error")
-                }
-            }
+    private fun <T : Any> processResult(result: Result<T, FuelError>): T {
+        return when (result) {
+            is Result.Success -> result.get()
+            is Result.Failure -> handleErrorResponse(result)
         }
     }
 
-    private fun <E : Any> decodeErrorResponse(errorResponse: ErrorResponse<E>): String {
+    private fun handleErrorResponse(result: Result.Failure<FuelError>): Nothing {
+        log.error("Request failed! ${result.getException().message}")
         try {
-            val error = json.decodeFromString(
-                errorResponse.deserializationStrategy,
-                String(errorResponse.response.data)
-            )
-            return error.toString()
-        } catch (exception: Exception) {
-            return String(errorResponse.response.data)
+            throw ApiRequestException(decodeErrorResponse(result))
+        } catch (e: FuelError) {
+            log.warn("Failed to deserialize error response", e)
+            throw ApiRequestException(result.getException().message)
         }
+    }
+
+    private fun decodeErrorResponse(failure: Result.Failure<FuelError>): String {
+        if (failure.getException().response.body().isConsumed()) {
+            return failure.getException().message ?: "Unknown error."
+        }
+
+        val error = json.decodeFromString(
+            RetrieveError.serializer(),
+            String(failure.getException().response.data)
+        )
+        return error.toString()
     }
 }
