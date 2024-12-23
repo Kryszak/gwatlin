@@ -7,7 +7,7 @@ plugins {
     jacoco
     signing
     id("maven-publish")
-    id("org.jetbrains.dokka") version "1.9.20"
+    id("org.jetbrains.dokka") version "2.0.0"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
