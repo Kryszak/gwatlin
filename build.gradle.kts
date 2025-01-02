@@ -1,4 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaTask
 import java.util.*
 
 plugins {
@@ -7,7 +6,7 @@ plugins {
     jacoco
     signing
     id("maven-publish")
-    id("org.jetbrains.dokka") version "1.9.20"
+    id("org.jetbrains.dokka") version "2.0.0"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"
@@ -51,21 +50,22 @@ tasks {
         useJUnitPlatform()
         finalizedBy(jacocoTestReport)
     }
-    withType<DokkaTask>().configureEach {
-        dokkaSourceSets {
-            named("main") {
-                moduleName.set("gwatlin")
-                includes.from("Module.md")
-                perPackageOption {
-                    matchingRegex.set(".*api.*")
-                    suppress.set(false)
-                }
+}
+
+dokka {
+    dokkaSourceSets {
+        named("main") {
+            moduleName.set("gwatlin")
+            includes.from("Module.md")
+            perPackageOption {
+                matchingRegex.set(".*api.*")
+                suppress.set(false)
             }
-            configureEach {
-                perPackageOption {
-                    matchingRegex.set(".*")
-                    suppress.set(true)
-                }
+        }
+        configureEach {
+            perPackageOption {
+                matchingRegex.set(".*")
+                suppress.set(true)
             }
         }
     }
