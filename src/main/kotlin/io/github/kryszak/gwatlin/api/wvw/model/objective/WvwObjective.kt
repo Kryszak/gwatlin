@@ -18,11 +18,11 @@ data class WvwObjective(
         val mapId: Int,
         @SerialName("map_type")
         val mapType: String,
-        val marker: String,
+        val marker: String? = null,
         val name: String,
         @SerialName("sector_id")
         val sectorId: Int,
         val type: String,
         @SerialName("upgrade_id")
-        val upgradeId: Int
+        val upgradeId: Int? = null,
 )

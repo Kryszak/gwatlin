@@ -1,11 +1,14 @@
 package io.github.kryszak.gwatlin.api.wvw
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrowExactly
+import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
@@ -191,7 +194,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get objective") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/wvw/objectives?ids=38-6", "/responses/wvw/objective.json", language = lang)
 
             // when
@@ -213,6 +216,30 @@ internal class WvwClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get objective without marker and upgradeId") {
+            // given
+            val lang = ApiLanguage.EN
+            stubResponse("/v2/wvw/objectives?ids=38-124", "/responses/wvw/objective_without_marker_and_upgrade.json", language = lang)
+
+            // when
+            val objectives = wvwClient.getObjectives(listOf("38-124"), lang)
+
+            // then
+            assertSoftly(objectives[0]) {
+                id shouldBe "38-124"
+                name shouldBe "Hill"
+                sectorId shouldBe 845
+                type shouldBe "Spawn"
+                mapType shouldBe "Center"
+                mapId shouldBe 38
+                upgradeId.shouldBeNull()
+                coord.shouldBeEmpty()
+                labelCoord shouldBe listOf(10529.9, 13228.1)
+                marker.shouldBeNull()
+                chatLink shouldBe "[&DHwAAAAmAAAA]"
+            }
+        }
+
         should("Get rank ids") {
             // given
             stubResponse("/v2/wvw/ranks", "/responses/wvw/rank_ids.json")
@@ -226,7 +253,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get rank") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/wvw/ranks?ids=1", "/responses/wvw/rank.json", language = lang)
 
             // when
@@ -253,7 +280,7 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Get upgrade") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/wvw/upgrades?ids=2", "/responses/wvw/upgrade.json", language = lang)
 
             // when
@@ -276,14 +303,14 @@ internal class WvwClientTest : BaseWiremockTest() {
 
         should("Return correct exception on serialization error") {
             // given
-            val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
+            val lang = ApiLanguage.EN
             stubResponse("/v2/wvw/objectives?ids=38-6", "/responses/wvw/objective_invalid.json", language = lang)
 
             // when
             val exception = shouldThrowExactly<ApiRequestException> {  wvwClient.getObjectives(listOf("38-6"), lang) }
 
             // then
-            exception.message shouldBe "Field 'marker' is required for type with serial name 'io.github.kryszak.gwatlin.api.wvw.model.objective.WvwObjective', but it was missing at path: \$[0]"
+            exception.message shouldBe "Field 'map_type' is required for type with serial name 'io.github.kryszak.gwatlin.api.wvw.model.objective.WvwObjective', but it was missing at path: \$[0]"
         }
     }
 }
