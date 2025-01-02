@@ -1,0 +1,15 @@
+[
+  {
+    "id": "38-124",
+    "name": "Hill",
+    "sector_id": 845,
+    "type": "Spawn",
+    "map_type": "Center",
+    "map_id": 38,
+    "label_coord": [
+      10529.9,
+      13228.1
+    ],
+    "chat_link": "[&DHwAAAAmAAAA]"
+  }
+]
