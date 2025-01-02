@@ -1,4 +1,3 @@
-import org.jetbrains.dokka.gradle.DokkaTask
 import java.util.*
 
 plugins {
@@ -51,21 +50,22 @@ tasks {
         useJUnitPlatform()
         finalizedBy(jacocoTestReport)
     }
-    withType<DokkaTask>().configureEach {
-        dokkaSourceSets {
-            named("main") {
-                moduleName.set("gwatlin")
-                includes.from("Module.md")
-                perPackageOption {
-                    matchingRegex.set(".*api.*")
-                    suppress.set(false)
-                }
+}
+
+dokka {
+    dokkaSourceSets {
+        named("main") {
+            moduleName.set("gwatlin")
+            includes.from("Module.md")
+            perPackageOption {
+                matchingRegex.set(".*api.*")
+                suppress.set(false)
             }
-            configureEach {
-                perPackageOption {
-                    matchingRegex.set(".*")
-                    suppress.set(true)
-                }
+        }
+        configureEach {
+            perPackageOption {
+                matchingRegex.set(".*")
+                suppress.set(true)
             }
         }
     }

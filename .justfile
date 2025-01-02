@@ -9,7 +9,7 @@ build:
 # Create html documentation with Dokka
 [group('Build')]
 documentation:
-    ./gradlew build dokkaHtml
+    ./gradlew dokkaGenerate
 
 # Trigger new release on GitHub
 [group('Build')]
