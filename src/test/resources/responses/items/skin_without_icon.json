@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Weapon",
+    "flags": [],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 2773,
+    "name": "",
+    "details": {
+      "type": "LargeBundle",
+      "damage_type": "Physical"
+    }
+  }
+]

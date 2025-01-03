@@ -13,7 +13,7 @@ plugins {
 }
 
 project.group = "io.github.kryszak"
-project.version = "2.2.1"
+project.version = "2.2.2"
 
 internal object Meta {
     const val DESCRIPTION = "Guild Wars 2 API client"

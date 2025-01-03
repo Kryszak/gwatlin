@@ -13,7 +13,7 @@ data class Skin(
         val type: String,
         val flags: List<String> = listOf(),
         val restrictions: List<String> = listOf(),
-        val icon: String,
+        val icon: String? = null,
         val rarity: String,
         val description: String? = null,
         val details: JsonObject? = null
