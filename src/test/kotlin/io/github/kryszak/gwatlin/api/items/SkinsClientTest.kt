@@ -5,6 +5,7 @@ import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 
 internal class SkinsClientTest : BaseWiremockTest() {
@@ -41,6 +42,27 @@ internal class SkinsClientTest : BaseWiremockTest() {
                 restrictions.shouldBeEmpty()
                 rarity shouldBe "Basic"
                 icon shouldBe "https://render.guildwars2.com/file/1920ACA302E656B60C38605521760351F147809D/61088.png"
+            }
+        }
+
+        should("Get skin without icon") {
+            // given
+            val id = 2773
+            val lang = ApiLanguage.EN
+
+            stubResponse("/v2/skins?ids=2773", "/responses/items/skin_without_icon.json", language = lang)
+
+            // when
+            val skins = skinsClient.getSkins(listOf(id), lang)
+
+            // then
+            assertSoftly(skins[0]) {
+                id shouldBe 2773
+                type shouldBe "Weapon"
+                flags.shouldBeEmpty()
+                restrictions.shouldBeEmpty()
+                rarity shouldBe "Basic"
+                icon.shouldBeNull()
             }
         }
     }
