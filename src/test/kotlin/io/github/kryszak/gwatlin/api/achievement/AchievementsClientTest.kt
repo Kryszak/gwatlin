@@ -195,7 +195,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             )
             stubResponse(
                 "/v2/achievements/groups?ids=${ids.joinToString(",")}",
-                "/responses/achievements/achievements_groups.json"
+                "/responses/achievements/achievement_groups.json"
             )
 
             // when
@@ -230,7 +230,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
 
         should("Get achievement category ids") {
             // given
-            stubResponse("/v2/achievements/categories", "/responses/achievements/achievement_categories.json")
+            stubResponse("/v2/achievements/categories", "/responses/achievements/achievement_category_ids.json")
 
             // when
             val achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
@@ -255,6 +255,47 @@ internal class AchievementsClientTest : BaseWiremockTest() {
                 order shouldBe 10
                 icon shouldBe "https://render.guildwars2.com/file/E00460A2CAD85D47406EAB4213D1010B3E80C9B0/42675.png"
                 achievements shouldHaveSize 44
+            }
+        }
+
+        should("Get achievement categories") {
+            // given
+            val ids = listOf(5, 6, 7)
+            stubResponse(
+                "/v2/achievements/categories?ids=${ids.joinToString(",")}",
+                "/responses/achievements/achievement_categories.json"
+            )
+
+            // when
+            val achievementCategories = achievementsClient.getAchievementCategories(ids)
+
+            // then
+            assertSoftly(achievementCategories) {
+                it shouldHaveSize 3
+                assertSoftly(it[0]) {
+                    id shouldBe 5
+                    name shouldBe "Explorer"
+                    description shouldBe ""
+                    order shouldBe 13
+                    icon shouldBe "https://render.guildwars2.com/file/09F0A535AD957D00BBAE701AC50ABCDD7B792400/42680.png"
+                    achievements shouldHaveSize 66
+                }
+                assertSoftly(it[1]) {
+                    id shouldBe 6
+                    name shouldBe "Fashion"
+                    description shouldBe ""
+                    order shouldBe 14
+                    icon shouldBe "https://render.guildwars2.com/file/7FCDBD1110A3F8A3172541ED05664165C4A7B918/42683.png"
+                    achievements shouldHaveSize 8
+                }
+                assertSoftly(it[2]) {
+                    id shouldBe 7
+                    name shouldBe "Weapon Master"
+                    description shouldBe ""
+                    order shouldBe 15
+                    icon shouldBe "https://render.guildwars2.com/file/E57F44931D5D1C0DEB16A27803A4744492B834E2/42682.png"
+                    achievements shouldHaveSize 20
+                }
             }
         }
 

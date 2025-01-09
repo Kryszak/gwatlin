@@ -89,10 +89,20 @@ class GWAchievementsClient {
     /**
      * Retrieves specific achievement category
      * @param id of achievement category
-     * @return Achievement category
+     * @return achievement category
      * @see io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
      */
     fun getAchievementCategory(id: Int): AchievementCategory {
         return achievementsClient.getAchievementCategory(id)
+    }
+
+    /**
+     * Retrieves achievement categories
+     * @param ids list of achievement category ids
+     * @return list of achievement categories
+     * @see io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
+     */
+    fun getAchievementCategories(ids: List<Int>): List<AchievementCategory> {
+        return achievementsClient.getAchievementCategories(ids)
     }
 }
