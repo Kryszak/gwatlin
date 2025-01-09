@@ -43,6 +43,11 @@ internal class AchievementsClient : BaseHttpClient() {
         return getRequest("$groupEndpoint/$id")
     }
 
+    fun getAchievementGroups(ids: List<String>): List<AchievementGroup> {
+        val params = ids.joinToString(",")
+        return getRequest("$groupEndpoint?ids=$params")
+    }
+
     fun getAchievementCategoryIds(): List<Int> {
         return getRequest(categoryEndpoint)
     }

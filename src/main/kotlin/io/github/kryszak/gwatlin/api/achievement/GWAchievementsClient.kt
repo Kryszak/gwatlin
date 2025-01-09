@@ -61,11 +61,21 @@ class GWAchievementsClient {
     /**
      * Retrieves specific achievement group
      * @param id of achievement group
-     * @return Achievement group
+     * @return achievement group
      * @see io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
      */
     fun getAchievementGroup(id: String): AchievementGroup {
         return achievementsClient.getAchievementGroup(id)
+    }
+
+    /**
+     * Retrieves list of achievement groups
+     * @param ids of achievement groups
+     * @return list of achievement groups
+     * @see io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
+     */
+    fun getAchievementGroups(ids: List<String>): List<AchievementGroup> {
+        return achievementsClient.getAchievementGroups(ids)
     }
 
     /**

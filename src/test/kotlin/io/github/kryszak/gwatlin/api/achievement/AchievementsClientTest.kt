@@ -186,6 +186,48 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get list of achievement groups") {
+            // given
+            val ids = listOf(
+                "4E6A6CE7-B131-40BB-81A3-235CDBACDAA9",
+                "A9F7378E-9C8A-48CC-9505-3094E661D5F6",
+                "BE8B9954-5B55-4FCB-9022-B871AD00EAAB"
+            )
+            stubResponse(
+                "/v2/achievements/groups?ids=${ids.joinToString(",")}",
+                "/responses/achievements/achievements_groups.json"
+            )
+
+            // when
+            val achievementGroups = achievementsClient.getAchievementGroups(ids)
+
+            // then
+            assertSoftly(achievementGroups) {
+                it shouldHaveSize 3
+                assertSoftly(it[0]) {
+                    id shouldBe "4E6A6CE7-B131-40BB-81A3-235CDBACDAA9"
+                    name shouldBe "Fractals of the Mists"
+                    description shouldBe "Achievements related to the Fractals of the Mists."
+                    order shouldBe 23
+                    categories shouldHaveSize 7
+                }
+                assertSoftly(it[1]) {
+                    id shouldBe "A9F7378E-9C8A-48CC-9505-3094E661D5F6"
+                    name shouldBe "Historical"
+                    description shouldBe "Completed achievements from previous updates."
+                    order shouldBe 99
+                    categories shouldHaveSize 64
+                }
+                assertSoftly(it[2]) {
+                    id shouldBe "BE8B9954-5B55-4FCB-9022-B871AD00EAAB"
+                    name shouldBe "Player vs. Player"
+                    description shouldBe "Achievements related to PvP and activities."
+                    order shouldBe 21
+                    categories shouldHaveSize 23
+                }
+            }
+        }
+
         should("Get achievement category ids") {
             // given
             stubResponse("/v2/achievements/categories", "/responses/achievements/achievement_categories.json")
