@@ -18,7 +18,10 @@ project.version = "2.2.4"
 internal object Meta {
     const val DESCRIPTION = "Guild Wars 2 API client"
     const val LICENSE = "MiT"
+    const val LICENSE_URL = "https://opensource.org/license/MIT"
     const val GITHUB_REPOSITORY = "Kryszak/gwatlin"
+    const val DEVELOPER = "kryszak"
+    const val DEVELOPER_NAME = "Krzysztof Prajs"
     const val RELEASE = "https://s01.oss.sonatype.org/service/local/"
     const val SNAPSHOT = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
 }
@@ -101,13 +104,13 @@ publishing {
                 licenses {
                     license {
                         name.set(Meta.LICENSE)
-                        url.set("https://opensource.org/licenses/MIT")
+                        url.set(Meta.LICENSE_URL)
                     }
                 }
                 developers {
                     developer {
-                        id.set("kryszak")
-                        name.set("Krzysztof Prajs")
+                        id.set(Meta.DEVELOPER)
+                        name.set(Meta.DEVELOPER_NAME)
                     }
                 }
                 scm {
