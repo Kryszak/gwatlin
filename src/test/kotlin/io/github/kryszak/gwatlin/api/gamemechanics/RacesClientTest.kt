@@ -12,7 +12,7 @@ internal class RacesClientTest : BaseWiremockTest() {
     private val racesClient = GWRacesClient()
 
     init {
-        should("Ghould get race ids") {
+        should("Should get race ids") {
             // given
             stubResponse("/v2/races", "/responses/gamemechanics/race_ids.json")
 
@@ -23,7 +23,7 @@ internal class RacesClientTest : BaseWiremockTest() {
             raceIds shouldHaveSize 5
         }
 
-        should("Ghould get race") {
+        should("Should get race") {
             // given
             val id = "Asura"
 
@@ -37,6 +37,36 @@ internal class RacesClientTest : BaseWiremockTest() {
                 id shouldBe "Asura"
                 name shouldBe "Asura"
                 skills shouldHaveSize 7
+            }
+        }
+
+        should("Get races") {
+            // given
+            val ids = listOf("Human", "Sylvari", "Norn")
+
+            stubResponse("/v2/races?ids=${ids.joinToString(",")}", "/responses/gamemechanics/races.json")
+
+            // when
+            val races = racesClient.getRaces(ids)
+
+            // then
+            assertSoftly(races) {
+                it shouldHaveSize 3
+                assertSoftly(it[0]) {
+                    id shouldBe "Human"
+                    name shouldBe "Human"
+                    skills shouldHaveSize 7
+                }
+                assertSoftly(it[1]) {
+                    id shouldBe "Sylvari"
+                    name shouldBe "Sylvari"
+                    skills shouldHaveSize 7
+                }
+                assertSoftly(it[2]) {
+                    id shouldBe "Norn"
+                    name shouldBe "Norn"
+                    skills shouldHaveSize 7
+                }
             }
         }
 

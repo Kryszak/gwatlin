@@ -14,4 +14,9 @@ internal class RacesClient : BaseHttpClient() {
     fun getRace(id: String): Race {
         return getRequest("$racesEndpoint/$id")
     }
+
+    fun getRaces(ids: List<String>): List<Race> {
+        val params = ids.joinToString(",")
+        return getRequest("$racesEndpoint?ids=$params")
+    }
 }

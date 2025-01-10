@@ -27,4 +27,13 @@ class GWRacesClient {
     fun getRace(id: String): Race {
         return racesClient.getRace(id)
     }
+
+    /**
+     * Retrieves list of races
+     * @param ids of races
+     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.race.Race
+     */
+    fun getRaces(ids: List<String>): List<Race> {
+        return racesClient.getRaces(ids)
+    }
 }
