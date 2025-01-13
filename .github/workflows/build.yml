@@ -13,16 +13,16 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
-      - name: ☕ Set up Java
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Setup Gradle
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
-      - name: Prepare just
+      - name: Set up just
         uses: extractions/setup-just@v2
-      - name: Run build with Gradle Wrapper
+      - name: Build project
         run: just build-clean
       - name: Upload coverage reports to Codacy
         uses: codacy/codacy-coverage-reporter-action@v1
