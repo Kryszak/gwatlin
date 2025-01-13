@@ -11,20 +11,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name:  Checkout project
+      - name: Checkout project
         uses: actions/checkout@v4
-      - name: ☕ Set up Java
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name:  Set up Gradle
+      - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
-      - name: 🤖 Set up just
+      - name: Set up just
         uses: extractions/setup-just@v2
-      - name:  Build project
+      - name: Build project
         run: just build-clean
-      - name:  Upload coverage reports to Codacy
+      - name: Upload coverage reports to Codacy
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
