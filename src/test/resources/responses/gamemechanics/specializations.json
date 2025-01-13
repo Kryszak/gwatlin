@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Dueling",
+    "profession": "Mesmer",
+    "elite": false,
+    "minor_traits": [
+      706,
+      710,
+      707
+    ],
+    "major_traits": [
+      701,
+      705,
+      700,
+      1889,
+      1960,
+      708,
+      692,
+      1950,
+      704
+    ],
+    "icon": "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png",
+    "background": "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+  },
+  {
+    "id": 2,
+    "name": "Death Magic",
+    "profession": "Necromancer",
+    "elite": false,
+    "minor_traits": [
+      856,
+      839,
+      1929
+    ],
+    "major_traits": [
+      820,
+      857,
+      1922,
+      858,
+      860,
+      855,
+      842,
+      1940,
+      1694
+    ],
+    "icon": "https://render.guildwars2.com/file/16663C1CDF532AB0DCC0CB08951DD2F49351D5D4/1012008.png",
+    "background": "https://render.guildwars2.com/file/B3F92D581B0A036CABB51590E6E560B21708391F/1012067.png"
+  },
+  {
+    "id": 3,
+    "name": "Invocation",
+    "profession": "Revenant",
+    "elite": false,
+    "minor_traits": [
+      1778,
+      1758,
+      1769
+    ],
+    "major_traits": [
+      1732,
+      1761,
+      1784,
+      1774,
+      1760,
+      1781,
+      1749,
+      1791,
+      1719
+    ],
+    "icon": "https://render.guildwars2.com/file/2C4DCE5C0C255F32B51DCF9E4360106823EAF926/1012018.png",
+    "background": "https://render.guildwars2.com/file/B73FB47165CB20DE21B1FAE91FE22BDE29B6FB76/1012093.png"
+  }
+]

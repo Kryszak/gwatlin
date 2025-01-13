@@ -60,5 +60,50 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             // then
             exception.message shouldBe "RetrieveError(text=no such id)"
         }
+
+        should("Get specializations") {
+            // given
+            val ids = listOf(1,2,3)
+
+            stubResponse("/v2/specializations?ids=${ids.joinToString(",")}", "/responses/gamemechanics/specializations.json")
+
+            // when
+            val specializations = specializationClient.getSpecializations(ids)
+
+            // then
+            assertSoftly(specializations) {
+                it shouldHaveSize 3
+                assertSoftly(it[0]) {
+                    id shouldBe 1
+                    name shouldBe "Dueling"
+                    profession shouldBe "Mesmer"
+                    elite.shouldBeFalse()
+                    minorTraits shouldHaveSize 3
+                    majorTraits shouldHaveSize 9
+                    icon shouldBe "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png"
+                    background shouldBe "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+                }
+                assertSoftly(it[1]) {
+                    id shouldBe 2
+                    name shouldBe "Death Magic"
+                    profession shouldBe "Necromancer"
+                    elite.shouldBeFalse()
+                    minorTraits shouldHaveSize 3
+                    majorTraits shouldHaveSize 9
+                    icon shouldBe "https://render.guildwars2.com/file/16663C1CDF532AB0DCC0CB08951DD2F49351D5D4/1012008.png"
+                    background shouldBe "https://render.guildwars2.com/file/B3F92D581B0A036CABB51590E6E560B21708391F/1012067.png"
+                }
+                assertSoftly(it[2]) {
+                    id shouldBe 3
+                    name shouldBe "Invocation"
+                    profession shouldBe "Revenant"
+                    elite.shouldBeFalse()
+                    minorTraits shouldHaveSize 3
+                    majorTraits shouldHaveSize 9
+                    icon shouldBe "https://render.guildwars2.com/file/2C4DCE5C0C255F32B51DCF9E4360106823EAF926/1012018.png"
+                    background shouldBe "https://render.guildwars2.com/file/B73FB47165CB20DE21B1FAE91FE22BDE29B6FB76/1012093.png"
+                }
+            }
+        }
     }
 }
