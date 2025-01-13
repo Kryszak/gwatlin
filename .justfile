@@ -34,4 +34,4 @@ build-clean: _is-run-in-ci
 # Release new artifact version to maven central
 [group('CI')]
 release: _is-run-in-ci
-    ./gradlew clean build publish closeAndReleaseStagingRepository
+    ./gradlew publishToSonatype closeAndReleaseStagingRepository

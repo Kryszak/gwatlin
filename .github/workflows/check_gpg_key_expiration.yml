@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout project
+      - name:  Checkout project
         uses: actions/checkout@v4
-      - name: Prepare just
+      - name: 🤖 Set up just
         uses: extractions/setup-just@v2
-      - name: Verify gpg key expiration date
+      - name:  Verify gpg key expiration date
         run: just check-cert
         env:
           GPG_SIGNING_KEY_BASE64: ${{ secrets.GPG_SIGNING_KEY_BASE64 }}
