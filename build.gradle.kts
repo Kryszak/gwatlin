@@ -154,7 +154,7 @@ repositories {
 }
 
 val fuelVersion = "2.3.1"
-val kotlinxSerializationVersion = "1.7.3"
+val kotlinxSerializationVersion = "1.8.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.5.16"
 val kotestVersion = "5.9.1"
