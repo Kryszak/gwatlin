@@ -27,8 +27,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId",
-                "/responses/mapinfo/continentMap.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentMap.json"
             )
 
             // when
@@ -105,8 +104,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             // given
             stubResponse(
                 "/v2/continents",
-                "/responses/mapinfo/continents.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continents.json"
             )
 
             // when
@@ -122,8 +120,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId",
-                "/responses/mapinfo/continentOne.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOne.json"
             )
 
             // when
@@ -147,8 +144,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents?ids=1,2",
-                "/responses/mapinfo/continentsMultiple.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentsMultiple.json"
             )
 
             // when
@@ -184,8 +180,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors",
-                "/responses/mapinfo/continentOneFloors.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOneFloors.json"
             )
 
             // when
@@ -202,8 +197,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId",
-                "/responses/mapinfo/continentOneFloor6.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOneFloor6.json"
             )
 
             // when
@@ -228,8 +222,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions",
-                "/responses/mapinfo/continentOneFloor6Regions.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOneFloor6Regions.json"
             )
 
             // when
@@ -247,8 +240,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId",
-                "/responses/mapinfo/continentOneFloor6Region1.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOneFloor6Region1.json"
             )
 
             // when
@@ -273,8 +265,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps",
-                "/responses/mapinfo/continentOneFloor6Region1Maps.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/continentOneFloor6Region1Maps.json"
             )
 
             // when
@@ -288,8 +279,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
             // given
             stubResponse(
                 "/v2/maps",
-                "/responses/mapinfo/maps.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/maps.json"
             )
 
             // when
@@ -305,8 +295,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/maps?ids=${ids.joinToString(",")}",
-                "/responses/mapinfo/mapsMultiple.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/mapsMultiple.json"
             )
 
             // when
@@ -322,8 +311,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/maps/$mapId",
-                "/responses/mapinfo/map26.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/map26.json"
             )
 
             // when
@@ -356,8 +344,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/tasks",
-                "/responses/mapinfo/tasks.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/tasks.json"
             )
 
             // when
@@ -376,8 +363,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/pois",
-                "/responses/mapinfo/pois.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/pois.json"
             )
 
             // when
@@ -396,8 +382,7 @@ internal class MapInfoClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/continents/$continentId/floors/$floorId/regions/$regionId/maps/$mapId/sectors",
-                "/responses/mapinfo/sectors.json",
-                schemaVersion = targetSchemaVersion
+                "/responses/mapinfo/sectors.json"
             )
 
             // when

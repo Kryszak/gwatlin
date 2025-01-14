@@ -12,10 +12,10 @@ internal open class AuthenticatedHttpClient(
     protected inline fun <reified T : Any> getRequestAuth(
         uri: String,
         language: ApiLanguage? = null,
-        configBlock: Request.() -> Unit = {}
+        configureRequest: Request.() -> Unit = {}
     ) =
         getRequest<T>(uri, language) {
             authentication().bearer(apiKey)
-            configBlock(this)
+            configureRequest(this)
         }
 }
