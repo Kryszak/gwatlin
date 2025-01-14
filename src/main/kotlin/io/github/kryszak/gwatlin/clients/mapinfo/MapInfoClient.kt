@@ -4,9 +4,7 @@ import io.github.kryszak.gwatlin.api.mapinfo.model.*
 import io.github.kryszak.gwatlin.api.mapinfo.model.Map
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
-internal class MapInfoClient : BaseHttpClient(
-    "2022-03-23T19:00:00.000Z"
-) {
+internal class MapInfoClient : BaseHttpClient() {
 
     private val mapsEndpoint = "/maps"
     private val continentsEndpoint = "/continents"

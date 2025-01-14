@@ -32,13 +32,13 @@ internal open class BaseHttpClient(
     protected inline fun <reified T : Any> getRequest(
         uri: String,
         language: io.github.kryszak.gwatlin.api.ApiLanguage? = null,
-        configBlock: Request.() -> Unit = {}
+        configureRequest: Request.() -> Unit = {}
     ): T {
         val (_, _, result) = "${baseUrl}${uri}"
             .httpGet()
             .also { addDefaultHeaders(it, language) }
             .also { log.info(logMessage.format(it.url)) }
-            .also { configBlock(it) }
+            .also(configureRequest)
             // The Fuel extension package doesn't acknowledge default serializers.
             // The default serializers need to be passed manually, sadly
             .responseObject<T>(json.serializersModule.serializer(), json)
