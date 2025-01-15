@@ -1,6 +1,6 @@
 package io.github.kryszak.gwatlin.clients.items
 
-import io.github.kryszak.gwatlin.api.items.model.finisher.Finisher
+import io.github.kryszak.gwatlin.api.wardrobe.model.finisher.Finisher
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class FinishersClient : BaseHttpClient() {

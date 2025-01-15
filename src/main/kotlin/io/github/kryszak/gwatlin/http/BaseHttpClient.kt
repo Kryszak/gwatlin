@@ -62,12 +62,7 @@ internal open class BaseHttpClient(
 
     private fun handleErrorResponse(result: Result.Failure<FuelError>): Nothing {
         log.error("Request failed! ${result.getException().message}")
-        try {
-            throw ApiRequestException(decodeErrorResponse(result))
-        } catch (e: FuelError) {
-            log.warn("Failed to deserialize error response", e)
-            throw ApiRequestException(result.getException().message)
-        }
+        throw ApiRequestException(decodeErrorResponse(result))
     }
 
     private fun decodeErrorResponse(failure: Result.Failure<FuelError>): String {
