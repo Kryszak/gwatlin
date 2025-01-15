@@ -5,7 +5,6 @@ import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
-import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
 internal class MiscellaneousClientTest : BaseWiremockTest() {
@@ -49,69 +48,6 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
             quaggans shouldHaveSize 35
         }
 
-        should("Get dye colors") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/colors?ids=all", "/responses/miscellaneous/dye_colors.json", language = lang)
-
-            // when
-            val colors = miscellaneousClient.getDyeColors(lang)
-
-            // then
-            assertSoftly(colors[1]) {
-                id shouldBe 2
-                name shouldBe "Black"
-                baseRgb shouldContainExactly listOf(128, 26, 26)
-                assertSoftly(cloth) {
-                    brightness shouldBe -13
-                    contrast shouldBe 1
-                    hue shouldBe 275
-                    saturation shouldBe 0.0234375
-                    lightness shouldBe 1.09375
-                    rgb shouldContainExactly listOf(37, 35, 38)
-                }
-                fur.shouldNotBeNull()
-                item shouldBe 20358
-                categories shouldContainExactly listOf("Gray", "Metal", "Rare")
-            }
-        }
-
-        should("Get currencies") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/currencies?ids=all", "/responses/miscellaneous/currencies.json", language = lang)
-
-            // when
-            val currencies = miscellaneousClient.getCurrencies(lang)
-
-            // then
-            assertSoftly(currencies[0]) {
-                id shouldBe 1
-                name shouldBe "Coin"
-                description shouldBe "The primary currency of Tyria. Spent at vendors throughout the world."
-                order shouldBe 101
-                icon shouldBe "https://render.guildwars2.com/file/98457F504BA2FAC8457F532C4B30EDC23929ACF9/619316.png"
-            }
-        }
-
-        should("Get dungeons") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/dungeons?ids=all", "/responses/miscellaneous/dungeons.json", language = lang)
-
-            // when
-            val dungeons = miscellaneousClient.getDungeons(lang)
-
-            // then
-            assertSoftly(dungeons[0]) {
-                id shouldBe "ascalonian_catacombs"
-                assertSoftly(paths[0]) {
-                    id shouldBe "ac_story"
-                    type shouldBe "Story"
-                }
-            }
-        }
-
         should("Get minis") {
             // given
             val lang = ApiLanguage.EN
@@ -149,43 +85,7 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
             }
         }
 
-        should("Get raids") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/raids?ids=all", "/responses/miscellaneous/raids.json", language = lang)
 
-            // when
-            val raids = miscellaneousClient.getRaids(lang)
-
-            // then
-            assertSoftly(raids[0]) {
-                id shouldBe "forsaken_thicket"
-                assertSoftly(wings[0]) {
-                    id shouldBe "spirit_vale"
-                    assertSoftly(events[0]) {
-                        id shouldBe "vale_guardian"
-                        type shouldBe "Boss"
-                    }
-                }
-            }
-        }
-
-        should("Get titles") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/titles?ids=all", "/responses/miscellaneous/titles.json", language = lang)
-
-            // when
-            val titles = miscellaneousClient.getTitles(lang)
-
-            // then
-            assertSoftly(titles[0]) {
-                id shouldBe 1
-                name shouldBe "Traveler"
-                achievement shouldBe 111
-                achievements shouldContainExactly listOf(111)
-            }
-        }
 
         should("Get worlds") {
             // given

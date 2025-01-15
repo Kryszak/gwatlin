@@ -1,6 +1,6 @@
 package io.github.kryszak.gwatlin.clients.apiinfo
 
-import io.github.kryszak.gwatlin.api.apiinfo.model.SchemaVersion
+import io.github.kryszak.gwatlin.api.miscellaneous.model.SchemaVersion
 import io.github.kryszak.gwatlin.clients.achievements.ApiInfoResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
