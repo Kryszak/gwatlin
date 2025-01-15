@@ -22,7 +22,7 @@ class GWSkinsClient {
      * Retrieves specific skins
      * @param ids of skins
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.items.model.skins.Skin
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.skins.Skin
      */
     fun getSkins(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Skin> {
         return skinsClient.getSkins(ids, language)

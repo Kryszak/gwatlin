@@ -22,7 +22,7 @@ class GWFinishersClient {
      * Retrieves finishers
      * @param ids of finishers
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.items.model.finisher.Finisher
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.finisher.Finisher
      */
     @JvmOverloads
     fun getFinishers(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Finisher> {

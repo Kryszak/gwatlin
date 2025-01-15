@@ -25,7 +25,7 @@ class GWMountsClient {
      * Retrieves mount skins by ids
      * @param ids mount skin ids
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
      */
     @JvmOverloads
     fun getMountSkins(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountSkin> {
@@ -35,7 +35,7 @@ class GWMountsClient {
     /**
      * Retrieves all mount skins
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin.MountSkin
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
      */
     @JvmOverloads
     fun getAllMountSkins(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountSkin> {
@@ -54,7 +54,7 @@ class GWMountsClient {
      * Retrieves mount types by given ids
      * @param ids of mount types
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
      */
     @JvmOverloads
     fun getMountTypes(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountType> {
@@ -64,7 +64,7 @@ class GWMountsClient {
     /**
      * Retrieves all mount types
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type.MountType
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
      */
     @JvmOverloads
     fun getAllMountTypes(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountType> {

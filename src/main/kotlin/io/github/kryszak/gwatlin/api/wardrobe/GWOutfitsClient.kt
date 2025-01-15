@@ -23,7 +23,7 @@ class GWOutfitsClient {
      * Retrieves requested outfits
      * @param ids of outfits
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.outfit.Outfit
      */
     @JvmOverloads
     fun getOutfits(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Outfit> {
@@ -33,7 +33,7 @@ class GWOutfitsClient {
     /**
      * Retrieves all outfits
      * @param language of returned text (default=en)
-     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.outfit.Outfit
+     * @see io.github.kryszak.gwatlin.api.wardrobe.model.outfit.Outfit
      */
     @JvmOverloads
     fun getAllOutfits(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Outfit> {

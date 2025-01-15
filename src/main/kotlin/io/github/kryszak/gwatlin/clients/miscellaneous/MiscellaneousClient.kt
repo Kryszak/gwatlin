@@ -1,8 +1,6 @@
 package io.github.kryszak.gwatlin.clients.miscellaneous
 
-import io.github.kryszak.gwatlin.api.gamemechanics.model.Title
 import io.github.kryszak.gwatlin.api.miscellaneous.model.*
-import io.github.kryszak.gwatlin.api.gamemechanics.model.raid.Raid
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MiscellaneousClient : BaseHttpClient() {

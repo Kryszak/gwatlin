@@ -2,7 +2,6 @@ package io.github.kryszak.gwatlin.api.miscellaneous
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.miscellaneous.model.*
-import io.github.kryszak.gwatlin.api.gamemechanics.model.raid.Raid
 import io.github.kryszak.gwatlin.clients.miscellaneous.MiscellaneousClient
 
 /**
