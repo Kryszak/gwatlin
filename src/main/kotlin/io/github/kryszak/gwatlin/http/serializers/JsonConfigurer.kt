@@ -4,6 +4,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.contextual
+import java.time.OffsetDateTime
 
 /**
  * A convenience object for a [Json] instance, to
@@ -21,6 +22,7 @@ object JsonConfigurer {
                 FactWithNoTypeSerializer()
             }
             contextual<Number>(NumberSerializer())
+            contextual<OffsetDateTime>(OffsetDateTimeSerializer())
         }
     }
 

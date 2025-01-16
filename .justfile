@@ -14,17 +14,17 @@ documentation:
 # Trigger new release on GitHub
 [group('Build')]
 create-release:
-    ./scripts/release_version.sh
+    @./scripts/release_version.sh
 
 # Check expiration date of maven central certificate
 [group('Maintenance')]
 check-cert:
-    ./scripts/verify_gpg_key_expiration.sh
+    @./scripts/verify_gpg_key_expiration.sh
 
 # Check if running in Github Actions
 [group('CI')]
 _is-run-in-ci:
-    ./scripts/detect-ci.sh
+    @./scripts/detect-ci.sh
 
 # Build whole project
 [group('CI')]

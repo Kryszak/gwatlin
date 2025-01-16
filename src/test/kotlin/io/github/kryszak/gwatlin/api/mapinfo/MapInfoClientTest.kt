@@ -13,8 +13,6 @@ import io.kotest.matchers.shouldBe
 
 internal class MapInfoClientTest : BaseWiremockTest() {
 
-    private val targetSchemaVersion = "2022-03-23T19:00:00.000Z"
-
     private val mapInfoClient = GWMapInfoClient()
 
     init {
