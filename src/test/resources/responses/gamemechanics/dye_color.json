@@ -1,0 +1,63 @@
+{
+  "id": 5,
+  "name": "Pitch",
+  "base_rgb": [
+    128,
+    26,
+    26
+  ],
+  "cloth": {
+    "brightness": -8,
+    "contrast": 1,
+    "hue": 275,
+    "saturation": 0.0234375,
+    "lightness": 1.09375,
+    "rgb": [
+      48,
+      46,
+      49
+    ]
+  },
+  "leather": {
+    "brightness": -8,
+    "contrast": 1,
+    "hue": 275,
+    "saturation": 0.0234375,
+    "lightness": 1.09375,
+    "rgb": [
+      48,
+      46,
+      49
+    ]
+  },
+  "metal": {
+    "brightness": -8,
+    "contrast": 1.09375,
+    "hue": 275,
+    "saturation": 0.0234375,
+    "lightness": 1.17188,
+    "rgb": [
+      44,
+      42,
+      45
+    ]
+  },
+  "fur": {
+    "brightness": -8,
+    "contrast": 1,
+    "hue": 275,
+    "saturation": 0.0234375,
+    "lightness": 1.09375,
+    "rgb": [
+      48,
+      46,
+      49
+    ]
+  },
+  "item": 20366,
+  "categories": [
+    "Gray",
+    "Metal",
+    "Uncommon"
+  ]
+}
