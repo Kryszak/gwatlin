@@ -71,11 +71,11 @@ internal class PolymorphicSerializationTest : ShouldSpec() {
             }
 
             fun ofSkills(): PolymorphicSerializationTestInput<Skill> {
-                return ofTestResourceJsons("responses/gamemechanics/skills.json") { ResourcesUtil.readResource(it) }
+                return ofTestResourceJsons("responses/gamemechanics/skills/skills.json") { ResourcesUtil.readResource(it) }
             }
 
             fun ofTraits(): PolymorphicSerializationTestInput<Trait> {
-                return ofTestResourceJsons("responses/gamemechanics/traits.json") { ResourcesUtil.readResource(it) }
+                return ofTestResourceJsons("responses/gamemechanics/traits/traits.json") { ResourcesUtil.readResource(it) }
             }
 
             fun ofGuildLogs(): PolymorphicSerializationTestInput<GuildLog> {

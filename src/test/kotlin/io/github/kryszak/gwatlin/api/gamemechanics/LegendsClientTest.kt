@@ -13,7 +13,7 @@ internal class LegendsClientTest : BaseWiremockTest() {
     init {
         should("Get legend ids") {
             // given
-            stubResponse("/v2/legends", "/responses/gamemechanics/legend_ids.json")
+            stubResponse("/v2/legends", "/responses/gamemechanics/legends/legend_ids.json")
 
             // when
             val legendIds = legendsClient.getLegendIds()
@@ -27,7 +27,7 @@ internal class LegendsClientTest : BaseWiremockTest() {
             val ids = listOf("Legend1", "Legend2")
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends.json", language = lang)
+            stubResponse("/v2/legends?ids=Legend1,Legend2", "/responses/gamemechanics/legends/legends.json", language = lang)
 
             // when
             val legends = legendsClient.getLegends(ids, lang)

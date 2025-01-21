@@ -14,7 +14,7 @@ internal class TitleClientSpec : BaseWiremockTest() {
         should("Get titles") {
             // given
             val lang = ApiLanguage.EN
-            stubResponse("/v2/titles?ids=all", "/responses/gamemechanics/titles.json", language = lang)
+            stubResponse("/v2/titles?ids=all", "/responses/gamemechanics/titles/titles.json", language = lang)
 
             // when
             val titles = titleClient.getTitles(lang)
