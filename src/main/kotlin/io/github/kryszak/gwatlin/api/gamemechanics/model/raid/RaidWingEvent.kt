@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class RaidWingEvent(
         val id: String,
-        val type: String
+        val type: RaidWingEventType
 )

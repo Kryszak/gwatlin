@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.gamemechanics.model.raid.RaidWingEventType
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -26,7 +27,7 @@ internal class RaidClientSpec : BaseWiremockTest() {
                     id shouldBe "spirit_vale"
                     assertSoftly(events[0]) {
                         id shouldBe "vale_guardian"
-                        type shouldBe "Boss"
+                        type shouldBe RaidWingEventType.BOSS
                     }
                 }
             }
@@ -58,7 +59,11 @@ internal class RaidClientSpec : BaseWiremockTest() {
                     events shouldHaveSize 4
                     assertSoftly(events[0]) {
                         id shouldBe "vale_guardian"
-                        type shouldBe "Boss"
+                        type shouldBe RaidWingEventType.BOSS
+                    }
+                    assertSoftly(events[1]) {
+                        id shouldBe "spirit_woods"
+                        type shouldBe RaidWingEventType.CHECKPOINT
                     }
                 }
             }
@@ -82,7 +87,7 @@ internal class RaidClientSpec : BaseWiremockTest() {
                         events shouldHaveSize 4
                         assertSoftly(events[0]) {
                             id shouldBe "cairn"
-                            type shouldBe "Boss"
+                            type shouldBe RaidWingEventType.BOSS
                         }
                     }
                 }
@@ -94,7 +99,7 @@ internal class RaidClientSpec : BaseWiremockTest() {
                         events shouldHaveSize 4
                         assertSoftly(events[0]) {
                             id shouldBe "soulless_horror"
-                            type shouldBe "Boss"
+                            type shouldBe RaidWingEventType.BOSS
                         }
                     }
                 }
