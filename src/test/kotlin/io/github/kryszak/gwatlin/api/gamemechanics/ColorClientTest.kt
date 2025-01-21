@@ -16,7 +16,7 @@ internal class ColorClientTest : BaseWiremockTest() {
         should("Get all dye colors") {
             // given
             val lang = ApiLanguage.EN
-            stubResponse("/v2/colors?ids=all", "/responses/gamemechanics/dye_colors_all.json", language = lang)
+            stubResponse("/v2/colors?ids=all", "/responses/gamemechanics/colors/dye_colors_all.json", language = lang)
 
             // when
             val colors = colorClient.getAllDyeColors(lang)
@@ -41,7 +41,7 @@ internal class ColorClientTest : BaseWiremockTest() {
         }
         should("Get color ids") {
             // given
-            stubResponse("/v2/colors", "/responses/gamemechanics/dye_color_ids.json")
+            stubResponse("/v2/colors", "/responses/gamemechanics/colors/dye_color_ids.json")
 
             // when
             val colorIds = colorClient.getDyeColorIds()
@@ -52,7 +52,7 @@ internal class ColorClientTest : BaseWiremockTest() {
         should("Get dye color") {
             // given
             val colorId = 5
-            stubResponse("/v2/colors/$colorId", "/responses/gamemechanics/dye_color.json")
+            stubResponse("/v2/colors/$colorId", "/responses/gamemechanics/colors/dye_color.json")
 
             // when
             val color = colorClient.getDyeColor(colorId)
@@ -101,7 +101,7 @@ internal class ColorClientTest : BaseWiremockTest() {
         should("Get dye colors") {
             // given
             val ids = listOf(1,2,3)
-            stubResponse("/v2/colors?ids=${ids.joinToString(",")}", "/responses/gamemechanics/dye_colors.json")
+            stubResponse("/v2/colors?ids=${ids.joinToString(",")}", "/responses/gamemechanics/colors/dye_colors.json")
 
             // when
             val colors = colorClient.getDyeColors(ids)

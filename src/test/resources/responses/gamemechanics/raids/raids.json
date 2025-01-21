@@ -1,0 +1,54 @@
+[
+  {
+    "id": "bastion_of_the_penitent",
+    "wings": [
+      {
+        "id": "bastion_of_the_penitent",
+        "events": [
+          {
+            "id": "cairn",
+            "type": "Boss"
+          },
+          {
+            "id": "mursaat_overseer",
+            "type": "Boss"
+          },
+          {
+            "id": "samarog",
+            "type": "Boss"
+          },
+          {
+            "id": "deimos",
+            "type": "Boss"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hall_of_chains",
+    "wings": [
+      {
+        "id": "hall_of_chains",
+        "events": [
+          {
+            "id": "soulless_horror",
+            "type": "Boss"
+          },
+          {
+            "id": "river_of_souls",
+            "type": "Boss"
+          },
+          {
+            "id": "statues_of_grenth",
+            "type": "Boss"
+          },
+          {
+            "id": "voice_in_the_void",
+            "type": "Boss"
+          }
+        ]
+      }
+    ]
+  }
+]

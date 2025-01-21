@@ -74,7 +74,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
         context("Get general skills") {
             should("Get skill ids list") {
                 // given
-                stubResponse("/v2/skills", "/responses/gamemechanics/skill_ids.json")
+                stubResponse("/v2/skills", "/responses/gamemechanics/skills/skill_ids.json")
 
                 // when
                 val skillIds = skillsClient.getSkillIds()
@@ -88,7 +88,7 @@ internal class SkillsClientTest : BaseWiremockTest() {
                 val ids = listOf(1110, 1115)
                 val lang = ApiLanguage.EN
 
-                stubResponse("/v2/skills?ids=1110,1115", "/responses/gamemechanics/skills.json", language = lang)
+                stubResponse("/v2/skills?ids=1110,1115", "/responses/gamemechanics/skills/skills.json", language = lang)
 
                 // when
                 val skills = skillsClient.getSkills(ids, lang)

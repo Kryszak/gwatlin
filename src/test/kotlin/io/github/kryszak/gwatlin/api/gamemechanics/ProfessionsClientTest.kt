@@ -17,7 +17,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
     init {
         should("Get profession ids") {
             // given
-            stubResponse("/v2/professions", "/responses/gamemechanics/profession_ids.json")
+            stubResponse("/v2/professions", "/responses/gamemechanics/professions/profession_ids.json")
 
             // when
             val professionIds = professionsClient.getProfessionIds()
@@ -33,7 +33,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/professions?ids=Engineer,Warrior",
-                "/responses/gamemechanics/professions.json",
+                "/responses/gamemechanics/professions/professions.json",
                 language = lang
             )
 
@@ -70,7 +70,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/professions?ids=all", "/responses/gamemechanics/professions_all.json", language = lang)
+            stubResponse("/v2/professions?ids=all", "/responses/gamemechanics/professions/professions_all.json", language = lang)
 
             // when
             val professions = professionsClient.getAllProfessions(lang)
@@ -83,7 +83,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             // given
             val id = "asdf"
 
-            stubResponse("/v2/professions?ids=asdf", "/responses/gamemechanics/professions_error.json", responseStatus = 404)
+            stubResponse("/v2/professions?ids=asdf", "/responses/gamemechanics/professions/professions_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { professionsClient.getProfessions(listOf(id)) }
