@@ -4,7 +4,7 @@ Install [just](https://github.com/casey/just) for running project commands.
 To list available commands, run `just`
 
 ## Release
-To release new version, increment `project.version` property in [build file](../code/build.gradle.kts).
+To release new version, increment `version` property in [build file](/build.gradle.kts).
 
 Next, run `create-release` just task from root directory (`just create-release`) to create new tag and push it to GitHub or create and push new tag manually. 
 

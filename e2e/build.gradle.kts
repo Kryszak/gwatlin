@@ -2,8 +2,8 @@ plugins {
     id("com.adarshr.test-logger") version "4.0.0"
 }
 
-group = "io.github.kryszak"
-version = "0.0.1"
+group = rootProject.group
+version = rootProject.version
 
 dependencies {
     implementation(project(":gwatlin"))
