@@ -13,11 +13,37 @@ class GWTitlesClient {
     private val titleClient = TitleClient()
 
     /**
-     * Returns information about the titles that are in the game
+     * Returns information about all titles that are in the game
      * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/titles)
+     * @param language of response
      */
     @JvmOverloads
-    fun getTitles(language: ApiLanguage? = null): List<Title> {
-        return titleClient.getTitles(language)
+    fun getAllTitles(language: ApiLanguage? = null): List<Title> {
+        return titleClient.getAllTitles(language)
+    }
+
+    /**
+     * Returns list of all title ids
+     */
+    fun getTitleIds(): List<Int> {
+        return titleClient.getTitleIds()
+    }
+
+    /**
+     * Returns title for given id
+     * @param id of title
+     * @param language of response
+     */
+    fun getTitle(id: Int, language: ApiLanguage? = null): Title {
+        return titleClient.getTitle(id, language)
+    }
+
+    /**
+     * Returns titles for given id list
+     * @param ids of titles
+     * @param language of response
+     */
+    fun getTitles(ids: List<Int>, language: ApiLanguage? = null): List<Title> {
+        return titleClient.getTitles(ids, language)
     }
 }
