@@ -4,7 +4,7 @@ import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.gwatlin.api.homeinstance.GWHomeInstanceClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class HomeInstanceE2ETests : BaseE2ESpec() {
+internal class HomeInstanceE2ETests : BaseE2ESpec() {
     private val client = GWHomeInstanceClient()
 
     init {

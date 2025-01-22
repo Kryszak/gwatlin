@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.api.miscellaneous.GWApiInfoClient
 import io.github.kryszak.gwatlin.api.miscellaneous.GWMiscellaneousClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class MiscellaneousE2ETests : BaseE2ESpec() {
+internal class MiscellaneousE2ETests : BaseE2ESpec() {
 
     init {
         context("Api info") {

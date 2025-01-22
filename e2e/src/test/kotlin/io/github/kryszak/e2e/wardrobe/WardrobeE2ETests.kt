@@ -8,7 +8,7 @@ import io.github.kryszak.gwatlin.api.wardrobe.GWOutfitsClient
 import io.github.kryszak.gwatlin.api.wardrobe.GWSkinsClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class WardrobeE2ETests : BaseE2ESpec() {
+internal class WardrobeE2ETests : BaseE2ESpec() {
     init {
         context("Finishers") {
             val client = GWFinishersClient()

@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.api.miscellaneous.GWMiscellaneousClient
 import io.github.kryszak.gwatlin.api.wvw.GWWvwClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class WvWE2ETests : BaseE2ESpec() {
+internal class WvWE2ETests : BaseE2ESpec() {
     private val client = GWWvwClient()
 
     init {

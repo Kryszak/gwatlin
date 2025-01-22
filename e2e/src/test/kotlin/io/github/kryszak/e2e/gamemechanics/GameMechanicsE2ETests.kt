@@ -6,7 +6,7 @@ import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class GameMechanicsE2ETests : BaseE2ESpec() {
+internal class GameMechanicsE2ETests : BaseE2ESpec() {
     init {
         context("Colors") {
             val client = GWColorsClient()

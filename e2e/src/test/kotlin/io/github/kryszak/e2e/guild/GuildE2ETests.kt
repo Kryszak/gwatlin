@@ -5,7 +5,7 @@ import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.guild.GWGuildClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class GuildE2ETests : BaseE2ESpec() {
+internal class GuildE2ETests : BaseE2ESpec() {
     init {
         context("Guild unauthenticated") {
             val client = GWGuildClient()

@@ -5,7 +5,7 @@ import io.github.kryszak.gwatlin.api.story.GWBackstoryClient
 import io.github.kryszak.gwatlin.api.story.GWStoryClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class StoryE2ETests : BaseE2ESpec() {
+internal class StoryE2ETests : BaseE2ESpec() {
     init {
         context("Backstory") {
             val client = GWBackstoryClient()

@@ -4,7 +4,7 @@ import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.gwatlin.api.dailyrewards.GWDailyRewardsClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class DailyRewardsE2ETests : BaseE2ESpec() {
+internal class DailyRewardsE2ETests : BaseE2ESpec() {
     private val client = GWDailyRewardsClient()
 
     init {

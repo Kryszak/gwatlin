@@ -5,7 +5,7 @@ import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.commerce.GWCommerceClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class CommerceE2ETests : BaseE2ESpec() {
+internal class CommerceE2ETests : BaseE2ESpec() {
     private val client = GWCommerceClient()
 
     init {

@@ -8,7 +8,7 @@ import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.matchers.string.shouldContain
 
-class AchievementE2ETests : BaseE2ESpec() {
+internal class AchievementE2ETests : BaseE2ESpec() {
     private val client = GWAchievementsClient()
 
     init {

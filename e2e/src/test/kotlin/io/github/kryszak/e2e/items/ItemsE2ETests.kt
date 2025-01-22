@@ -5,7 +5,7 @@ import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.items.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
-class ItemsE2ETests : BaseE2ESpec() {
+internal class ItemsE2ETests : BaseE2ESpec() {
     init {
         context("Items") {
             val client = GWItemsClient()
