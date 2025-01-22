@@ -1,3 +1,6 @@
+group = "io.github.kryszak"
+version = "3.2.1"
+
 plugins {
     val kotlinVersion = "2.1.0"
     id("io.github.gradle-nexus.publish-plugin") version "2.0.0"

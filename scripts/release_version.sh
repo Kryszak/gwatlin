@@ -3,7 +3,7 @@
 BOLD="\033[1m"
 NC="\033[0m"
 
-VERSION=v$(grep "project.version" code/build.gradle.kts | grep -Eo "[0-9].[0-9](.[0-9])?")
+VERSION=v$(grep "version =" build.gradle.kts | grep -Eo "[0-9].[0-9](.[0-9])?")
 LAST_VERSION=$(git describe --tags --abbrev=0)
 
 echo -e "${BOLD}Current version:${NC} $VERSION"

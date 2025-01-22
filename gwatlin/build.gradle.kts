@@ -8,8 +8,8 @@ plugins {
     kotlin("plugin.serialization") version "2.1.0"
 }
 
-project.group = "io.github.kryszak"
-project.version = "3.2.1"
+group = rootProject.group
+version = rootProject.version
 
 internal object Meta {
     const val DESCRIPTION = "Guild Wars 2 API client"
@@ -87,7 +87,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = project.group.toString()
-            artifactId = project.name
+            artifactId = rootProject.name
             version = project.version.toString()
             from(components["kotlin"])
             artifact(tasks["sourcesJar"])

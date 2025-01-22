@@ -1,1 +1,2 @@
-include("code", "e2e")
+rootProject.name = "gwatlin"
+include("gwatlin", "e2e")

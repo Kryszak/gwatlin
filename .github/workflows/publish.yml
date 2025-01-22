@@ -67,7 +67,7 @@ jobs:
       - name: Create GitHub release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/libs/*"
+          artifacts: "code/build/libs/*"
           allowUpdates: "true"
   publish-docs:
     runs-on: ubuntu-latest
