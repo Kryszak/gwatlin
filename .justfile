@@ -35,3 +35,8 @@ build-clean: _is-run-in-ci
 [group('CI')]
 release: _is-run-in-ci
     ./gradlew publishToSonatype closeAndReleaseStagingRepository
+
+# Run e2e tests
+[group('CI')]
+e2e:
+    ./gradlew :e2e:test
