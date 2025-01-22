@@ -28,3 +28,12 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: "code/build/reports/jacoco/test/jacocoTestReport.xml"
+      # FOLLOWING IS FOR TESTING ON BRANCH
+#      - name: Create documentation
+#        run: just documentation
+#      - name: Update documentation
+#      - uses: EndBug/add-and-commit@v9
+#        with:
+#          message: Documentation update
+#          add: [ "docs/" ]

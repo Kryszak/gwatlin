@@ -4,12 +4,12 @@ default:
 # Build project
 [group('Build')]
 build:
-    ./gradlew build
+    ./gradlew :code:build
 
 # Create html documentation with Dokka
 [group('Build')]
 documentation:
-    ./gradlew dokkaGenerate
+    ./gradlew :code:dokkaGenerate
 
 # Trigger new release on GitHub
 [group('Build')]
@@ -29,7 +29,7 @@ _is-run-in-ci:
 # Build whole project
 [group('CI')]
 build-clean: _is-run-in-ci
-    ./gradlew clean build
+    ./gradlew :code:clean :code:build
 
 # Release new artifact version to maven central
 [group('CI')]
