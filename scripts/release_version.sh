@@ -16,5 +16,6 @@ fi
 
 echo ""
 
+echo "Pushing new tag"
 git tag "$VERSION"
 git push origin "$VERSION"
