@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -32,5 +29,3 @@ jobs:
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: "gwatlin/build/reports/jacoco/test/jacocoTestReport.xml"
-      - name: Check envs
-        run: echo ${{ github.event.pull_request.head.repo.full_name }} && echo ${{ github.event.pull_request.head.ref }}
