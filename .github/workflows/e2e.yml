@@ -1,14 +1,13 @@
-name: Build
+name: e2e tests
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
+  schedule:
+    - cron: "0 9 * * 1" # every monday at 9:00
   # Allow to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  build:
+  e2e:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
@@ -22,10 +21,5 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
       - name: Set up just
         uses: extractions/setup-just@v2
-      - name: Build project
-        run: just build-clean
-      - name: Upload coverage reports to Codacy
-        uses: codacy/codacy-coverage-reporter-action@v1
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: "gwatlin/build/reports/jacoco/test/jacocoTestReport.xml"
+      - name: Run gwatlin e2e tests
+        run: just e2e

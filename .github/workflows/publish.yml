@@ -67,7 +67,7 @@ jobs:
       - name: Create GitHub release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/libs/*"
+          artifacts: "gwatlin/build/libs/*"
           allowUpdates: "true"
   publish-docs:
     runs-on: ubuntu-latest
@@ -89,13 +89,8 @@ jobs:
         uses: extractions/setup-just@v2
       - name: Create documentation
         run: just documentation
-      - name: Push documentation
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Update documentation
+        uses: EndBug/add-and-commit@v9
         with:
-          source-directory: 'build/dokka/html'
-          destination-github-username: "Kryszak"
-          destination-repository-name: "gwatlin-docs"
-          user-email: github-actions[bot]@users.noreply.github.com
-          target-branch: master
+          message: "Documentation update"
+          add: '["docs"]'

@@ -4,12 +4,12 @@ default:
 # Build project
 [group('Build')]
 build:
-    ./gradlew build
+    ./gradlew :gwatlin:build
 
 # Create html documentation with Dokka
 [group('Build')]
 documentation:
-    ./gradlew dokkaGenerate
+    ./gradlew :gwatlin:dokkaGenerate
 
 # Trigger new release on GitHub
 [group('Build')]
@@ -29,9 +29,14 @@ _is-run-in-ci:
 # Build whole project
 [group('CI')]
 build-clean: _is-run-in-ci
-    ./gradlew clean build
+    ./gradlew :gwatlin:clean :gwatlin:build
 
 # Release new artifact version to maven central
 [group('CI')]
 release: _is-run-in-ci
-    ./gradlew publishToSonatype closeAndReleaseStagingRepository
+    ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository
+
+# Run e2e tests
+[group('CI')]
+e2e:
+    ./gradlew :e2e:test
