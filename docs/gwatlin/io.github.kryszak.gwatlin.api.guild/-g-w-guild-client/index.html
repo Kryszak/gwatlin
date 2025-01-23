@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GWGuildClient</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    gwatlin
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+3.2.2        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":gwatlin/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":gwatlin/main"
+                                       data-filter=":gwatlin/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    gwatlin
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="gwatlin::io.github.kryszak.gwatlin.api.guild/GWGuildClient///PointingToDeclaration//568173244">
+  <div class="breadcrumbs"><a href="../../../index.html">gwatlin</a><span class="delimiter">/</span><a href="../index.html">io.github.kryszak.gwatlin.api.guild</a><span class="delimiter">/</span><span class="current">GWGuildClient</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>GWGuild</span><wbr></wbr><span><span>Client</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GWGuildClient</a></div><p class="paragraph">Client for guild unauthenticated endpoints</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../io.github.kryszak.gwatlin.api.exception/-api-request-exception/index.html"><span>Api</span><wbr></wbr><span>Request</span><wbr></wbr><span><span>Exception</span></span></a></div></span></div><div><div class="title"><p class="paragraph">for errors</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-557171954%2FConstructors%2F568173244" anchor-label="GWGuildClient" id="-557171954%2FConstructors%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-w-guild-client.html"><span>GWGuild</span><wbr></wbr><span><span>Client</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-557171954%2FConstructors%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="2014115229%2FFunctions%2F568173244" anchor-label="findGuildId" id="2014115229%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="find-guild-id.html"><span>find</span><wbr></wbr><span>Guild</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2014115229%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="find-guild-id.html"><span class="token function">findGuildId</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Searches for guild id</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1818142922%2FFunctions%2F568173244" anchor-label="getBackgroundIds" id="1818142922%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-background-ids.html"><span>get</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Ids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1818142922%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-background-ids.html"><span class="token function">getBackgroundIds</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves list of all background ids Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/emblem/backgrounds">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1203455601%2FFunctions%2F568173244" anchor-label="getBackgrounds" id="-1203455601%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-backgrounds.html"><span>get</span><wbr></wbr><span><span>Backgrounds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1203455601%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-backgrounds.html"><span class="token function">getBackgrounds</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.github.kryszak.gwatlin.api.guild.model.emblem/-layer/index.html">Layer</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves specific backgrounds Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/emblem/backgrounds">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1802926943%2FFunctions%2F568173244" anchor-label="getForegroundIds" id="1802926943%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-foreground-ids.html"><span>get</span><wbr></wbr><span>Foreground</span><wbr></wbr><span><span>Ids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1802926943%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-foreground-ids.html"><span class="token function">getForegroundIds</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves list of all foreground ids Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/emblem/foregrounds">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-630436454%2FFunctions%2F568173244" anchor-label="getForegrounds" id="-630436454%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-foregrounds.html"><span>get</span><wbr></wbr><span><span>Foregrounds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-630436454%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-foregrounds.html"><span class="token function">getForegrounds</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.github.kryszak.gwatlin.api.guild.model.emblem/-layer/index.html">Layer</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves specific foregrounds Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/emblem/foregrounds">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2352131%2FFunctions%2F568173244" anchor-label="getGuild" id="2352131%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-guild.html"><span>get</span><wbr></wbr><span><span>Guild</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2352131%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-guild.html"><span class="token function">getGuild</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../io.github.kryszak.gwatlin.api.guild.model/-guild/index.html">Guild</a></div><div class="brief "><p class="paragraph">Retrieves guild Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/guild/:id">GW2 Wiki</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1122029872%2FFunctions%2F568173244" anchor-label="getGuildPermissionIds" id="1122029872%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-guild-permission-ids.html"><span>get</span><wbr></wbr><span>Guild</span><wbr></wbr><span>Permission</span><wbr></wbr><span><span>Ids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1122029872%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-guild-permission-ids.html"><span class="token function">getGuildPermissionIds</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves list of all guild permission ids Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/guild/permissions">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1720796463%2FFunctions%2F568173244" anchor-label="getGuildPermissions" id="-1720796463%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-guild-permissions.html"><span>get</span><wbr></wbr><span>Guild</span><wbr></wbr><span><span>Permissions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1720796463%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><a href="get-guild-permissions.html"><span class="token function">getGuildPermissions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">language<span class="token operator">: </span><a href="../../io.github.kryszak.gwatlin.api/-api-language/index.html">ApiLanguage</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.github.kryszak.gwatlin.api.guild.model.permission/-guild-permission/index.html">GuildPermission</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves list of guild permissions Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/guild/permissions">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-712603131%2FFunctions%2F568173244" anchor-label="getGuildUpgradeIds" id="-712603131%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-guild-upgrade-ids.html"><span>get</span><wbr></wbr><span>Guild</span><wbr></wbr><span>Upgrade</span><wbr></wbr><span><span>Ids</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-712603131%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-guild-upgrade-ids.html"><span class="token function">getGuildUpgradeIds</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves list of all guild upgrade ids Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/guild/upgrades">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2135757188%2FFunctions%2F568173244" anchor-label="getGuildUpgrades" id="-2135757188%2FFunctions%2F568173244" data-filterable-set=":gwatlin/main"></a>
+          <div class="table-row" data-filterable-current=":gwatlin/main" data-filterable-set=":gwatlin/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-guild-upgrades.html"><span>get</span><wbr></wbr><span>Guild</span><wbr></wbr><span><span>Upgrades</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2135757188%2FFunctions%2F568173244"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":gwatlin/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><a href="get-guild-upgrades.html"><span class="token function">getGuildUpgrades</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ids<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">language<span class="token operator">: </span><a href="../../io.github.kryszak.gwatlin.api/-api-language/index.html">ApiLanguage</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../io.github.kryszak.gwatlin.api.guild.model.upgrade/-guild-upgrade/index.html">GuildUpgrade</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves specific guild upgrades Documentation can be found in the <a href="https://wiki.guildwars2.com/wiki/API:2/guild/upgrades">GW2 Wiki</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
