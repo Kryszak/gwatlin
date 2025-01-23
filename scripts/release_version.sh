@@ -16,13 +16,6 @@ fi
 
 echo ""
 
-echo "Updating documentation"
-just documentation
-git add docs/ && git commit -m "Documentation update"
-git push
-
-echo ""
-
 echo "Pushing new tag"
 git tag "$VERSION"
 git push origin "$VERSION"
