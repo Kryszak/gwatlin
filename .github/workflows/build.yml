@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -31,10 +29,3 @@ jobs:
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: "gwatlin/build/reports/jacoco/test/jacocoTestReport.xml"
-      - name: Create documentation
-        run: just documentation
-      - name: Update documentation
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Documentation update"
-          file_pattern: 'docs/'
