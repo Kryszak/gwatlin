@@ -1,0 +1,13 @@
+[
+  {
+    "name": "test",
+    "profession": "Elementalist",
+    "specializations": {
+      "id": 12,
+      "traits": [
+        10,
+        11
+      ]
+    }
+  }
+]

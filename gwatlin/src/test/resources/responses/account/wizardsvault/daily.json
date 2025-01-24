@@ -1,0 +1,54 @@
+{
+  "meta_progress_current": 5,
+  "meta_progress_complete": 4,
+  "meta_reward_item_id": 99961,
+  "meta_reward_astral": 20,
+  "meta_reward_claimed": true,
+  "objectives": [
+    {
+      "id": 164,
+      "title": "Catch 5 Fish",
+      "track": "PvE",
+      "acclaim": 10,
+      "progress_current": 5,
+      "progress_complete": 5,
+      "claimed": true
+    },
+    {
+      "id": 187,
+      "title": "Defeat 5 Enemy Guards in World vs. World",
+      "track": "WvW",
+      "acclaim": 10,
+      "progress_current": 5,
+      "progress_complete": 5,
+      "claimed": true
+    },
+    {
+      "id": 21,
+      "title": "Loot 10 Defeated Enemies",
+      "track": "PvE",
+      "acclaim": 10,
+      "progress_current": 10,
+      "progress_complete": 10,
+      "claimed": true
+    },
+    {
+      "id": 139,
+      "title": "Capture 1 Ruin or Shrine Objective in World vs. World",
+      "track": "WvW",
+      "acclaim": 10,
+      "progress_current": 1,
+      "progress_complete": 1,
+      "claimed": true
+    },
+    {
+      "id": 133,
+      "title": "Log In",
+      "track": "PvE",
+      "acclaim": 5,
+      "progress_current": 1,
+      "progress_complete": 1,
+      "claimed": true
+    }
+  ]
+}

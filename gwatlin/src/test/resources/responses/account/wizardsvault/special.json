@@ -1,0 +1,58 @@
+{
+  "objectives": [
+    {
+      "id": 231,
+      "title": "Complete the Story Chapter Eventide's March",
+      "track": "PvE",
+      "acclaim": 500,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 229,
+      "title": "Defeat Knaebelag the Terror and Complete the Fangs That Gnash Achievement",
+      "track": "PvE",
+      "acclaim": 500,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 240,
+      "title": "Complete Tier 1 of an Artisan of Arms Achievement",
+      "track": "PvE",
+      "acclaim": 300,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 245,
+      "title": "Legendary Armor 3: Forge a Piece of Legendary Obsidian Armor",
+      "track": "PvE",
+      "acclaim": 500,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 234,
+      "title": "Legendary Armor 2: Complete an Astral Legendary Armor Achievement",
+      "track": "PvE",
+      "acclaim": 300,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 244,
+      "title": "Legendary Armor 1: Speak With Lyhr about Armor Crafting",
+      "track": "PvE",
+      "acclaim": 150,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    }
+  ]
+}

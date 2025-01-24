@@ -1,10 +1,13 @@
 package io.github.kryszak.gwatlin.api.account
 
+import io.github.kryszak.gwatlin.api.characters.model.character.Specialization
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
+import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 
 internal class AccountClientTest : BaseWiremockTest() {
@@ -412,6 +415,127 @@ internal class AccountClientTest : BaseWiremockTest() {
 
             // then
             worldbosses shouldContainExactly listOf("admiral_taidha_covington")
+        }
+
+        should("Get build storage") {
+            // given
+            stubResponse("/v2/account/buildstorage", "/responses/account/buildstorage.json", apiKey = apiKey)
+
+            // when
+            val buildStorages = accountClient.getBuildStorage()
+
+            // then
+            assertSoftly(buildStorages) {
+                it shouldHaveSize 1
+                assertSoftly(it[0]) {
+                    name shouldBe "test"
+                    profession shouldBe "Elementalist"
+                    specializations shouldBe Specialization(12, setOf(10, 11))
+                    skills.shouldBeNull()
+                    aquaticSkills.shouldBeEmpty()
+                    legends.shouldBeEmpty()
+                    aquaticLegends.shouldBeEmpty()
+                }
+            }
+        }
+
+        should("Get emotes") {
+            // given
+            stubResponse("/v2/account/emotes", "/responses/account/emotes.json", apiKey = apiKey)
+
+            // when
+            val emotes = accountClient.getEmotes()
+
+            // then
+            emotes shouldContainExactly listOf("geargrind", "step", "shuffle", "rockout")
+        }
+
+        should("Get homestead decorations") {
+            // given
+            stubResponse(
+                "/v2/account/homestead/decorations",
+                "/responses/account/homestead/decorations.json",
+                apiKey = apiKey
+            )
+
+            // when
+            val decorations = accountClient.getHomesteadDecorations()
+
+            // then
+            assertSoftly(decorations) {
+                it shouldHaveSize 5
+                assertSoftly(it[0]) {
+                    id shouldBe 35
+                    count shouldBe 92
+                }
+            }
+        }
+
+        should("Get homestead glyphs") {
+            // given
+            stubResponse("/v2/account/homestead/glyphs", "/responses/account/homestead/glyphs.json", apiKey = apiKey)
+
+            // when
+            val glyphs = accountClient.getHomesteadGlyphs()
+
+            // then
+            glyphs shouldContainExactly listOf("volatility_harvesting", "volatility_logging", "volatility_mining")
+        }
+
+        should("Get jade bots") {
+            // given
+            stubResponse("/v2/account/jadebots", "/responses/account/jadebots.json", apiKey = apiKey)
+
+            // when
+            val jadeBots = accountClient.getJadeBots()
+
+            // then
+            jadeBots shouldContainExactly listOf(3, 4)
+        }
+
+        should("Get legendary armory") {
+            // given
+            stubResponse("/v2/account/legendaryarmory", "/responses/account/legendaryarmory.json", apiKey = apiKey)
+
+            // when
+            val legendaryArmory = accountClient.getLegendaryArmory()
+
+            // then
+            assertSoftly(legendaryArmory) {
+                it shouldHaveSize 2
+                assertSoftly(it[0]) {
+                    id shouldBe 81462
+                    count shouldBe 1
+                }
+            }
+        }
+
+        should("Get progression") {
+            // given
+            stubResponse("/v2/account/progression", "/responses/account/progression.json", apiKey = apiKey)
+
+            // when
+            val progression = accountClient.getProgression()
+
+            // then
+            assertSoftly(progression) {
+                it shouldHaveSize 4
+                assertSoftly(it[0]) {
+                    id shouldBe "fractal_agony_impedance"
+                    value shouldBe 2
+                }
+            }
+        }
+
+        should("Get skiffs") {
+            // given
+            stubResponse("/v2/account/skiffs", "/responses/account/skiffs.json", apiKey = apiKey)
+
+            // when
+            val skiffs = accountClient.getSkiffs()
+
+            // then
+            skiffs shouldContainExactly listOf(410, 413, 428, 435, 502, 539)
         }
     }
 }

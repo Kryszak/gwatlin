@@ -1,0 +1,511 @@
+[
+  {
+    "id": 1,
+    "item_id": 101828,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 1200,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 2,
+    "item_id": 101933,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180,
+    "purchased": 0,
+    "purchase_limit": 16
+  },
+  {
+    "id": 3,
+    "item_id": 101626,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 4,
+    "item_id": 101552,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 5,
+    "item_id": 101496,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 6,
+    "item_id": 101920,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 7,
+    "item_id": 103437,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 1200,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 8,
+    "item_id": 102269,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180,
+    "purchased": 0,
+    "purchase_limit": 17
+  },
+  {
+    "id": 9,
+    "item_id": 103261,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 10,
+    "item_id": 103544,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 11,
+    "item_id": 103258,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 12,
+    "item_id": 101574,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 600,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 13,
+    "item_id": 101617,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 600,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 14,
+    "item_id": 101485,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180,
+    "purchased": 0,
+    "purchase_limit": 16
+  },
+  {
+    "id": 15,
+    "item_id": 101533,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 16,
+    "item_id": 101469,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 17,
+    "item_id": 101475,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 18,
+    "item_id": 100663,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 1200,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 19,
+    "item_id": 100099,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 300,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 20,
+    "item_id": 100284,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180,
+    "purchased": 0,
+    "purchase_limit": 16
+  },
+  {
+    "id": 21,
+    "item_id": 100593,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 22,
+    "item_id": 100361,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 23,
+    "item_id": 100029,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 24,
+    "item_id": 103789,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 1000,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 25,
+    "item_id": 103858,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 500,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 26,
+    "item_id": 103961,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 150,
+    "purchased": 0,
+    "purchase_limit": 17
+  },
+  {
+    "id": 27,
+    "item_id": 102554,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 375,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 28,
+    "item_id": 103589,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 375,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 29,
+    "item_id": 102358,
+    "item_count": 1,
+    "type": "Featured",
+    "cost": 375,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 30,
+    "item_id": 103832,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 1000,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 31,
+    "item_id": 104044,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 400,
+    "purchased": 0,
+    "purchase_limit": 3
+  },
+  {
+    "id": 32,
+    "item_id": 103918,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 600,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 33,
+    "item_id": 100233,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 1000,
+    "purchased": 0,
+    "purchase_limit": 2
+  },
+  {
+    "id": 34,
+    "item_id": 64737,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 8,
+    "purchased": 0,
+    "purchase_limit": 30
+  },
+  {
+    "id": 35,
+    "item_id": 19976,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 9,
+    "purchased": 0,
+    "purchase_limit": 60
+  },
+  {
+    "id": 36,
+    "item_id": 100878,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 6,
+    "purchased": 0,
+    "purchase_limit": 90
+  },
+  {
+    "id": 37,
+    "item_id": 43766,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 8,
+    "purchased": 0,
+    "purchase_limit": 35
+  },
+  {
+    "id": 38,
+    "item_id": 19996,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 95,
+    "purchased": 0,
+    "purchase_limit": 10
+  },
+  {
+    "id": 39,
+    "item_id": 46746,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 150,
+    "purchased": 0,
+    "purchase_limit": 4
+  },
+  {
+    "id": 40,
+    "item_id": 95289,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 15,
+    "purchased": 0,
+    "purchase_limit": 20
+  },
+  {
+    "id": 41,
+    "item_id": 92206,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 500,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 42,
+    "item_id": 92209,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 350,
+    "purchased": 0,
+    "purchase_limit": 2
+  },
+  {
+    "id": 43,
+    "item_id": 19986,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 50,
+    "purchased": 0,
+    "purchase_limit": 3
+  },
+  {
+    "id": 44,
+    "item_id": 20349,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 35,
+    "purchased": 0,
+    "purchase_limit": 12
+  },
+  {
+    "id": 45,
+    "item_id": 68314,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 10,
+    "purchased": 0,
+    "purchase_limit": 150
+  },
+  {
+    "id": 46,
+    "item_id": 19675,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 60,
+    "purchased": 0,
+    "purchase_limit": 20
+  },
+  {
+    "id": 47,
+    "item_id": 19925,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 50,
+    "purchased": 0,
+    "purchase_limit": 20
+  },
+  {
+    "id": 48,
+    "item_id": 45176,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 6,
+    "purchased": 0,
+    "purchase_limit": 40
+  },
+  {
+    "id": 49,
+    "item_id": 39124,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 8,
+    "purchased": 0,
+    "purchase_limit": 30
+  },
+  {
+    "id": 50,
+    "item_id": 100595,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 35
+  },
+  {
+    "id": 51,
+    "item_id": 39123,
+    "item_count": 1,
+    "type": "Normal",
+    "cost": 40
+  },
+  {
+    "id": 52,
+    "item_id": 101199,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 53,
+    "item_id": 101227,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180,
+    "purchased": 0,
+    "purchase_limit": 16
+  },
+  {
+    "id": 54,
+    "item_id": 100401,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 55,
+    "item_id": 100172,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 56,
+    "item_id": 100449,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  },
+  {
+    "id": 57,
+    "item_id": 101205,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450,
+    "purchased": 0,
+    "purchase_limit": 1
+  }
+]

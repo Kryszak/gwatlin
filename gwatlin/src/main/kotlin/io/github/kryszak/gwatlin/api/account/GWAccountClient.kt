@@ -282,4 +282,62 @@ class GWAccountClient(apiKey: String) {
     fun getWorldBosses(): List<String> {
         return accountClient.getWorldBosses()
     }
+
+    /**
+     * Retrieves he templates stored in a player's build storage.
+     *
+     * Documentation can be found int the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/buildstorage).
+     */
+    fun getBuildStorage(): List<BuildStorage> {
+        return accountClient.getBuildStorage()
+    }
+
+    /**
+     * Retrieves the player's unlocked emotes.
+     */
+    fun getEmotes(): List<String> {
+        return accountClient.getEmotes()
+    }
+
+    /**
+     * Retrieves information about homestead decorations used by an account.
+     */
+    fun getHomesteadDecorations(): List<HomesteadDecoration> {
+        return accountClient.getHomesteadDecorations()
+    }
+
+    /**
+     * Retrieves information about glyphs stored in homestead collection boxes.
+     */
+    fun getHomesteadGlyphs(): List<String> {
+        return accountClient.getHomesteadGlyphs()
+    }
+
+    /**
+     * Retrieves the unlocked Jade Bot skins of the account.
+     */
+    fun getJadeBots(): List<Int> {
+        return accountClient.getJadeBots()
+    }
+
+    /**
+     * Retrieves information about the Legendary Armory items that are unlocked for an account.
+     */
+    fun getLegendaryArmory(): List<LegendaryArmoryItem> {
+        return accountClient.getLegendaryArmory()
+    }
+
+    /**
+     * Retrieves account-wide progression for Fractals's Account Augmentation and Luck.
+     */
+    fun getProgression(): List<AccountProgression> {
+        return accountClient.getProgression()
+    }
+
+    /**
+     * Retrieves the unlocked Skiff skins of the account.
+     */
+    fun getSkiffs(): List<Int> {
+        return accountClient.getSkiffs()
+    }
 }
