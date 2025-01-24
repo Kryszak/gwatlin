@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.clients.account
 
+import io.github.kryszak.gwatlin.api.account.model.HomesteadDecoration
 import io.github.kryszak.gwatlin.api.account.model.*
 import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMastery
 import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMasteryDetails
@@ -11,6 +12,8 @@ import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
     private val accountEndpoint = "/account"
+
+    private val homesteadEndpoint = "$accountEndpoint/homestead"
 
     fun getAccountDetails(): Account {
         return getRequestAuth(accountEndpoint)
@@ -126,5 +129,37 @@ internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
 
     fun getWorldBosses(): List<String> {
         return getRequestAuth("$accountEndpoint/worldbosses")
+    }
+
+    fun getBuildStorage(): List<BuildStorage> {
+        return getRequestAuth("$accountEndpoint/buildstorage")
+    }
+
+    fun getEmotes(): List<String> {
+        return getRequestAuth("$accountEndpoint/emotes")
+    }
+
+    fun getHomesteadDecorations(): List<HomesteadDecoration> {
+        return getRequestAuth("$homesteadEndpoint/decorations")
+    }
+
+    fun getHomesteadGlyphs(): List<String> {
+        return getRequestAuth("$homesteadEndpoint/glyphs")
+    }
+
+    fun getJadeBots(): List<Int> {
+        return getRequestAuth("$accountEndpoint/jadebots")
+    }
+
+    fun getLegendaryArmory(): List<LegendaryArmoryItem> {
+        return getRequestAuth("$accountEndpoint/legendaryarmory")
+    }
+
+    fun getProgression(): List<AccountProgression> {
+        return getRequestAuth("$accountEndpoint/progression")
+    }
+
+    fun getSkiffs(): List<Int> {
+        return getRequestAuth("$accountEndpoint/skiffs")
     }
 }

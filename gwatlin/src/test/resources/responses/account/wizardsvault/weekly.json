@@ -1,0 +1,81 @@
+{
+  "meta_progress_current": 2,
+  "meta_progress_complete": 6,
+  "meta_reward_item_id": 100137,
+  "meta_reward_astral": 450,
+  "meta_reward_claimed": false,
+  "objectives": [
+    {
+      "id": 5,
+      "title": "Defeat 50 Veteran-Rank Enemies",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 38,
+      "progress_complete": 50,
+      "claimed": false
+    },
+    {
+      "id": 57,
+      "title": "Complete 10 Events",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 10,
+      "progress_complete": 10,
+      "claimed": true
+    },
+    {
+      "id": 47,
+      "title": "Identify 100 Pieces of Unidentified Gear",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 100,
+      "progress_complete": 100,
+      "claimed": true
+    },
+    {
+      "id": 116,
+      "title": "Complete the Tribulation Caverns Jumping Puzzle",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 169,
+      "title": "Complete 5 Bounty Missions in the Domain of Vabbi or Group Events",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 0,
+      "progress_complete": 5,
+      "claimed": false
+    },
+    {
+      "id": 63,
+      "title": "Complete 1 Fractal in the Fractals of the Mists",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 0,
+      "progress_complete": 1,
+      "claimed": false
+    },
+    {
+      "id": 150,
+      "title": "Defeat 100 Awakened or Risen",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 0,
+      "progress_complete": 100,
+      "claimed": false
+    },
+    {
+      "id": 138,
+      "title": "Complete Kaineng Blackout Meta-Event, Events in New Kaineng City, or Events in Maguuma Jungle",
+      "track": "PvE",
+      "acclaim": 50,
+      "progress_current": 0,
+      "progress_complete": 15,
+      "claimed": false
+    }
+  ]
+}
