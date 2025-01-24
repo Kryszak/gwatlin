@@ -4,6 +4,9 @@ import io.github.kryszak.gwatlin.api.characters.model.character.Specialization
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for build storage
+ */
 @Serializable
 data class BuildStorage(
     val name: String,
@@ -17,6 +20,9 @@ data class BuildStorage(
     val aquaticLegends: List<Int>? = listOf(),
 )
 
+/**
+ * Data model for build storage skill
+ */
 @Serializable
 data class BuildStorageSkill(
     val heal: Int? = null,

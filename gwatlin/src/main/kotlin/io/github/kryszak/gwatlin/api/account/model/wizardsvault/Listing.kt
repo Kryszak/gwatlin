@@ -3,6 +3,9 @@ package io.github.kryszak.gwatlin.api.account.model.wizardsvault
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for wizard's vault listing
+ */
 @Serializable
 data class Listing(
     val id: Int,
@@ -17,6 +20,9 @@ data class Listing(
     val purchaseLimit: Long? = null,
 )
 
+/**
+ * Data model for wizard's vault listing type field
+ */
 enum class ListingType {
     @SerialName("Featured")
     FEATURED,

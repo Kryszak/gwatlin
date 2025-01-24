@@ -3,6 +3,9 @@ package io.github.kryszak.gwatlin.api.account.model.wizardsvault
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for wizard's vault achievement (daily and weekly)
+ */
 @Serializable
 data class WizardsVaultAchievement(
     @SerialName("meta_progress_current")
@@ -18,7 +21,9 @@ data class WizardsVaultAchievement(
     val objectives: List<WizardsVaultObjective> = listOf(),
 )
 
-
+/**
+ * Data model for wizard's vault objective (special, daily and weekly)
+ */
 @Serializable
 data class WizardsVaultObjective(
     val id: Int,
@@ -32,6 +37,9 @@ data class WizardsVaultObjective(
     val claimed: Boolean
 )
 
+/**
+ * Data model for wizard's vault special objectives
+ */
 @Serializable
 data class WizardsVaultSpecialObjectives(
     val objectives: List<WizardsVaultObjective> = listOf(),
