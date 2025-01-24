@@ -8,11 +8,7 @@ import io.github.kryszak.gwatlin.api.characters.model.character.inventory.Bag
 import io.github.kryszak.gwatlin.api.characters.model.character.sab.CharacterSAB
 import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
-internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
-    apiKey,
-    // Latest schema version with changes to the characters endpoint
-    "2021-07-15T13:00:00.000Z"
-) {
+internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
     private val endpoint = "/characters"
 
     fun getCharacters() = getRequestAuth<List<String>>(endpoint)
@@ -57,13 +53,14 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(
     fun getActiveEquipmentTab(characterName: String) =
         getRequestAuth<EquipmentTab>("$endpoint/$characterName/equipmenttabs/active")
 
-    // "API not active"
-    //fun getDungeons(characterName: String) = getRequestAuth<Character>("$endpoint/$characterName/dungeons")
-
     fun getHeropoints(characterName: String) =
         getRequestAuth<List<String>>("$endpoint/$characterName/heropoints")
 
     fun getQuests(characterName: String) = getRequestAuth<List<Int>>("$endpoint/$characterName/quests")
 
     fun getSAB(characterName: String) = getRequestAuth<CharacterSAB>("$endpoint/$characterName/sab")
+
+    fun getSkills(characterName: String) = getRequestAuth<CharacterSkills>("$endpoint/$characterName/skills")
+
+    fun getSpecializations(characterName: String) = getRequestAuth<CharacterSpecialization>("$endpoint/$characterName/specializations")
 }
