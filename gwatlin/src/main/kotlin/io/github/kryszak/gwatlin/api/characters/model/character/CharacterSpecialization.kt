@@ -10,6 +10,9 @@ data class CharacterSpecialization(
     val specializations: CharacterSpecializations
 )
 
+/**
+ * Data model for character specializations
+ */
 @Serializable
 data class CharacterSpecializations(
     val pve: List<Specialization>,
