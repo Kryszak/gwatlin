@@ -1,5 +1,5 @@
 group = "io.github.kryszak"
-version = "3.2.2"
+version = "3.3.0"
 
 plugins {
     val kotlinVersion = "2.1.0"
