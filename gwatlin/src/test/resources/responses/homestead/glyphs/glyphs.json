@@ -1,0 +1,12 @@
+[
+  {
+    "id": "alchemy_logging",
+    "item_id": 90805,
+    "slot": "logging"
+  },
+  {
+    "id": "alchemy_mining",
+    "item_id": 90805,
+    "slot": "mining"
+  }
+]
