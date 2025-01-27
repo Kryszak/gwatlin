@@ -26,6 +26,12 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                 shouldNotThrowAny { client.getAllDungeons() }
             }
         }
+        context("Emotes") {
+            val client = GWEmotesClient()
+            expect("Fetch emotes") {
+                shouldNotThrowAny { client.getAllEmotes() }
+            }
+        }
         context("Legends") {
             val client = GWLegendsClient()
             expect("Fetching legends list") {

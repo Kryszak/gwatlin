@@ -1,0 +1,12 @@
+{
+  "commands": [
+    "/rockout",
+    "/hardrock",
+    "/Abrocken",
+    "/rockear"
+  ],
+  "id": "rockout",
+  "unlock_items": [
+    91956
+  ]
+}
