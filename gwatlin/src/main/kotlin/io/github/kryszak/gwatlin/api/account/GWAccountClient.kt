@@ -5,7 +5,6 @@ import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMastery
 import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMasteryDetails
 import io.github.kryszak.gwatlin.api.account.model.vault.AccountBankSlot
 import io.github.kryszak.gwatlin.api.account.model.vault.AccountMaterial
-import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.homeinstance.model.Cat
 import io.github.kryszak.gwatlin.clients.account.AccountClient
 
@@ -122,12 +121,7 @@ class GWAccountClient(apiKey: String) {
      * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/account/luck).
      */
     fun getLuck(): AccountLuck {
-        val luck = accountClient.getLuck()
-        return when (luck.size) {
-            1 -> luck[0]
-            0 -> AccountLuck("luck", 0)
-            else -> throw ApiRequestException("No luck")
-        }
+        return accountClient.getLuck()
     }
 
     /**

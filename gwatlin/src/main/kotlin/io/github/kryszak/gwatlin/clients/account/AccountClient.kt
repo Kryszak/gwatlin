@@ -1,11 +1,11 @@
 package io.github.kryszak.gwatlin.clients.account
 
-import io.github.kryszak.gwatlin.api.account.model.HomesteadDecoration
 import io.github.kryszak.gwatlin.api.account.model.*
 import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMastery
 import io.github.kryszak.gwatlin.api.account.model.mastery.AccountMasteryDetails
 import io.github.kryszak.gwatlin.api.account.model.vault.AccountBankSlot
 import io.github.kryszak.gwatlin.api.account.model.vault.AccountMaterial
+import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.homeinstance.model.Cat
 import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
@@ -59,8 +59,13 @@ internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
         return getRequestAuth("$accountEndpoint/inventory")
     }
 
-    fun getLuck(): List<AccountLuck> {
-        return getRequestAuth("$accountEndpoint/luck")
+    fun getLuck(): AccountLuck {
+        val luck: List<AccountLuck> = getRequestAuth("$accountEndpoint/luck")
+        return when (luck.size) {
+            1 -> luck[0]
+            0 -> AccountLuck("luck", 0)
+            else -> throw ApiRequestException("No luck")
+        }
     }
 
     fun getMailCarriers(): List<Int> {

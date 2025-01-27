@@ -17,7 +17,7 @@ data class EquipmentItem(
     @SerialName("bound_to")
     val boundTo: String? = null,
     val infusions: List<Int> = listOf(),
-    val location: EquipmentItemLocation,
+    val location: EquipmentItemLocation? = null,
     val skin: Int? = null,
     val upgrades: List<Int> = listOf(),
     val stats: ItemStats? = null,
