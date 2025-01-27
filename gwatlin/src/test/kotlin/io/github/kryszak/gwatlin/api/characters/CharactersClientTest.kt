@@ -19,7 +19,6 @@ import io.kotest.matchers.shouldBe
 
 internal class CharactersClientTest : BaseWiremockTest() {
 
-    private val targetSchemaVersion = "2021-07-15T13:00:00.000Z"
     private val apiKey = "1234"
 
     private val charactersClient = GWCharactersClient(apiKey)
@@ -30,8 +29,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters",
                 "/responses/characters/characters.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -49,8 +47,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName",
                 "/responses/characters/character.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -138,8 +135,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName",
                 "/responses/characters/character-without-guild.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -227,8 +223,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName",
                 "/responses/characters/character-with-null-specializations.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -333,8 +328,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName/buildtabs?tabs=all",
                 "/responses/characters/buildtabs.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -352,8 +346,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName/buildtabs?tab=$buildtabNumber",
                 "/responses/characters/buildtab.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -393,8 +386,7 @@ internal class CharactersClientTest : BaseWiremockTest() {
             stubResponse(
                 "/v2/characters/$escapedName/buildtabs/active",
                 "/responses/characters/buildtab.json",
-                apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
+                apiKey = apiKey
             )
 
             // when
@@ -412,7 +404,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/backstory",
                 "/responses/characters/backstory.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -430,7 +421,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/core",
                 "/responses/characters/character-core.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -460,7 +450,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/core",
                 "/responses/characters/character-core-with-explicit-null-guild.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -490,7 +479,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/crafting",
                 "/responses/characters/crafting.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -515,7 +503,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/equipment",
                 "/responses/characters/equipment.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -542,7 +529,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/equipmenttabs?tabs=all",
                 "/responses/characters/equipmenttabs.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -561,7 +547,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/equipmenttabs?tab=$equipmenttabNumber",
                 "/responses/characters/equipmenttab.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -589,7 +574,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/equipmenttabs/active",
                 "/responses/characters/equipmenttab.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -607,7 +591,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/inventory",
                 "/responses/characters/inventory.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -670,7 +653,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/recipes",
                 "/responses/characters/recipes.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -690,7 +672,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/training",
                 "/responses/characters/training.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -715,7 +696,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/heropoints",
                 "/responses/characters/heropoints.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -734,7 +714,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/quests",
                 "/responses/characters/quests.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -753,7 +732,6 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 "/v2/characters/$escapedName/sab",
                 "/responses/characters/sab.json",
                 apiKey = apiKey,
-                schemaVersion = targetSchemaVersion
             )
 
             // when
@@ -790,6 +768,78 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 assertSoftly(songs[0]) {
                     id shouldBe 1
                     name shouldBe "secret_song"
+                }
+            }
+        }
+
+        should("Get skills") {
+            // given
+            val characterName = "Test Character"
+            val escapedName = characterName.replace(" ", "%20")
+            stubResponse(
+                "/v2/characters/$escapedName/skills",
+                "/responses/characters/skills.json",
+                apiKey = apiKey,
+            )
+
+            // when
+            val skills = charactersClient.getSkills(characterName)
+
+            // then
+            assertSoftly(skills.skills) {
+                assertSoftly(pve) {
+                    heal shouldBe 29535
+                    utilities shouldContainExactly setOf(5734, 5567, 5542)
+                    elite shouldBe 29968
+                }
+                assertSoftly(pvp) {
+                    heal shouldBe 29535
+                    utilities shouldContainExactly setOf(30432, 30662, 29948)
+                    elite shouldBe 29968
+                }
+                assertSoftly(wvw) {
+                    heal shouldBe 29535
+                    utilities shouldContainExactly setOf(5734, 5536, 5542)
+                    elite shouldBe 29968
+                }
+            }
+        }
+
+        should("Get specializations") {
+            // given
+            val characterName = "Test Character"
+            val escapedName = characterName.replace(" ", "%20")
+            stubResponse(
+                "/v2/characters/$escapedName/specializations",
+                "/responses/characters/specializations.json",
+                apiKey = apiKey,
+            )
+
+            // when
+            val specializations = charactersClient.getSpecializations(characterName)
+
+            // then
+            assertSoftly(specializations.specializations) {
+                assertSoftly(pve) {
+                    it shouldHaveSize 3
+                    assertSoftly(it[0]) {
+                        id shouldBe 31
+                        traits shouldContainExactly setOf(296, 325, 1510)
+                    }
+                }
+                assertSoftly(pvp) {
+                    it shouldHaveSize 3
+                    assertSoftly(it[0]) {
+                        id shouldBe 31
+                        traits shouldContainExactly setOf(296, 325, 1510)
+                    }
+                }
+                assertSoftly(wvw) {
+                    it shouldHaveSize 3
+                    assertSoftly(it[0]) {
+                        id shouldBe 31
+                        traits shouldContainExactly setOf(296, 325, 1510)
+                    }
                 }
             }
         }

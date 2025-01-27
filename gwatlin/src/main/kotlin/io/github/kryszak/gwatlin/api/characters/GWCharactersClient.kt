@@ -102,4 +102,14 @@ class GWCharactersClient(apiKey: String) {
      * Retrieves infos about this character's SAB progress and unlocks
      */
     fun getSAB(characterName: String) = charactersClient.getSAB(characterName)
+
+    /**
+     * Retrieves information about the skills equipped on a character attached to a specific account.
+     */
+    fun getSkills(characterName: String) = charactersClient.getSkills(characterName)
+
+    /**
+     * Retrieves information about the specializations equipped on a character attached to a specific account.
+     */
+    fun getSpecializations(characterName: String) = charactersClient.getSpecializations(characterName)
 }
