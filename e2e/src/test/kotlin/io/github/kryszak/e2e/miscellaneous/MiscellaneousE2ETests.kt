@@ -1,6 +1,7 @@
 package io.github.kryszak.e2e.miscellaneous
 
 import io.github.kryszak.e2e.BaseE2ESpec
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.miscellaneous.GWApiInfoClient
 import io.github.kryszak.gwatlin.api.miscellaneous.GWMiscellaneousClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
@@ -25,14 +26,20 @@ internal class MiscellaneousE2ETests : BaseE2ESpec() {
             expect("Fetch quaggans") {
                 shouldNotThrowAny { client.getQuaggans() }
             }
-            expect("Fetch minis") {
-                shouldNotThrowAny { client.getMinis() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch minis in $language language") {
+                    shouldNotThrowAny { client.getMinis(language) }
+                }
             }
-            expect("Fetch novelties") {
-                shouldNotThrowAny { client.getNovelties() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch novelties in $language language") {
+                    shouldNotThrowAny { client.getNovelties(language) }
+                }
             }
-            expect("Fetch worlds") {
-                shouldNotThrowAny { client.getWorlds() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch worlds in $language language") {
+                    shouldNotThrowAny { client.getWorlds(language) }
+                }
             }
         }
     }
