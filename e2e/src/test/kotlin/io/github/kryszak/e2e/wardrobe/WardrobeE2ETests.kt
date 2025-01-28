@@ -2,6 +2,7 @@ package io.github.kryszak.e2e.wardrobe
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.wardrobe.GWFinishersClient
 import io.github.kryszak.gwatlin.api.wardrobe.GWMountsClient
 import io.github.kryszak.gwatlin.api.wardrobe.GWOutfitsClient
@@ -12,32 +13,42 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
     init {
         context("Finishers") {
             val client = GWFinishersClient()
-            expect("Fetch finishers") {
-                val finisherIds = client.getFinisherIds()
-                shouldNotThrowAny { client.getFinishers(finisherIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch finishers in $language language") {
+                    val finisherIds = client.getFinisherIds()
+                    shouldNotThrowAny { client.getFinishers(finisherIds, language) }
+                }
             }
         }
         context("Mounts") {
             val client = GWMountsClient()
-            expect("Fetching all mount types") {
-                shouldNotThrowAny { client.getAllMountTypes() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching all mount types in $language language") {
+                    shouldNotThrowAny { client.getAllMountTypes(language) }
+                }
             }
-            expect("Fetching all mount skins") {
-                shouldNotThrowAny { client.getAllMountSkins() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching all mount skins in $language language") {
+                    shouldNotThrowAny { client.getAllMountSkins(language) }
+                }
             }
         }
         context("Outfits") {
             val client = GWOutfitsClient()
-            expect("Fetching random outfits") {
-                val outfitIds = client.getOutfitsIds().randomElements(100)
-                shouldNotThrowAny { client.getOutfits(outfitIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching random outfits in $language language") {
+                    val outfitIds = client.getOutfitsIds().randomElements(100)
+                    shouldNotThrowAny { client.getOutfits(outfitIds, language) }
+                }
             }
         }
         context("Skins") {
             val client = GWSkinsClient()
-            expect("Fetch skins") {
-                val skinIds = client.getSkinIds().randomElements(200)
-                shouldNotThrowAny { client.getSkins(skinIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch skins in $language language") {
+                    val skinIds = client.getSkinIds().randomElements(200)
+                    shouldNotThrowAny { client.getSkins(skinIds, language) }
+                }
             }
         }
     }
