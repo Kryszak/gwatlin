@@ -10,20 +10,26 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
     init {
         context("Colors") {
             val client = GWColorsClient()
-            expect("Fetch dye colors") {
-                shouldNotThrowAny { client.getAllDyeColors() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch dye colors in $language language") {
+                    shouldNotThrowAny { client.getAllDyeColors(language) }
+                }
             }
         }
         context("Currency") {
             val client = GWCurrencyClient()
-            expect("Fetch currencies") {
-                shouldNotThrowAny { client.getAllCurrencies() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch currencies in $language language") {
+                    shouldNotThrowAny { client.getAllCurrencies(language) }
+                }
             }
         }
         context("Dungeons") {
             val client = GWDungeonsClient()
-            expect("Fetch dungeons") {
-                shouldNotThrowAny { client.getAllDungeons() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch dungeons in $language language") {
+                    shouldNotThrowAny { client.getAllDungeons(language) }
+                }
             }
         }
         context("Legendary armory") {
@@ -34,35 +40,40 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
         }
         context("Legends") {
             val client = GWLegendsClient()
-            expect("Fetching legends list") {
-                val legendIds = client.getLegendIds()
-                shouldNotThrowAny {
-                    client.getLegends(legendIds)
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching legends list in $language language") {
+                    val legendIds = client.getLegendIds()
+                    shouldNotThrowAny {
+                        client.getLegends(legendIds, language)
+                    }
                 }
             }
         }
         context("Masteries") {
             val client = GWMasteriesClient()
-            expect("Fetching random masteries") {
-                val masteryIds = client.getMasteriesIds()
-                shouldNotThrowAny {
-                    client.getMasteries(masteryIds)
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching random masteries in $language language") {
+                    val masteryIds = client.getMasteriesIds()
+                    shouldNotThrowAny {
+                        client.getMasteries(masteryIds, language)
+                    }
                 }
-            }
-            expect("Fetching all masteries in german language") {
-                shouldNotThrowAny { client.getAllMasteries(ApiLanguage.DE) }
             }
         }
         context("Pets") {
             val client = GWPetsClient()
-            expect("Fetching pets") {
-                shouldNotThrowAny { client.getAllPets() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching pets in $language language") {
+                    shouldNotThrowAny { client.getAllPets(language) }
+                }
             }
         }
         context("Professions") {
             val client = GWProfessionsClient()
-            expect("Fetching professions") {
-                shouldNotThrowAny { client.getAllProfessions() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching professions in $language language") {
+                    shouldNotThrowAny { client.getAllProfessions(language) }
+                }
             }
         }
         context("Races") {
@@ -74,35 +85,45 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
         }
         context("Raids") {
             val client = GWRaidsClient()
-            expect("Fetch raids") {
-                shouldNotThrowAny { client.getAllRaids() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch raids in $language language") {
+                    shouldNotThrowAny { client.getAllRaids(language) }
+                }
             }
         }
         context("Skills") {
             val client = GWSkillsClient()
-            expect("Fetching random skills") {
-                val skillIds = client.getSkillIds().randomElements(100)
-                shouldNotThrowAny { client.getSkills(skillIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching random skills in $language language") {
+                    val skillIds = client.getSkillIds().randomElements(100)
+                    shouldNotThrowAny { client.getSkills(skillIds, language) }
+                }
             }
         }
         context("Specializations") {
             val client = GWSpecializationClient()
-            expect("Fetching specializations") {
-                val specializationIds = client.getSpecializationIds()
-                shouldNotThrowAny { client.getSpecializations(specializationIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching specializations in $language language") {
+                    val specializationIds = client.getSpecializationIds()
+                    shouldNotThrowAny { client.getSpecializations(specializationIds, language) }
+                }
             }
         }
         context("Titles") {
             val client = GWTitlesClient()
-            expect("Fetch titles") {
-                shouldNotThrowAny { client.getAllTitles() }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch titles in $language language") {
+                    shouldNotThrowAny { client.getAllTitles(language) }
+                }
             }
         }
         context("Traits") {
             val client = GWTraitsClient()
-            expect("Fetching random traits") {
-                val traitIds = client.getTraitIds().randomElements(100)
-                shouldNotThrowAny { client.getTraits(traitIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetching random traits in $language language") {
+                    val traitIds = client.getTraitIds().randomElements(100)
+                    shouldNotThrowAny { client.getTraits(traitIds, language) }
+                }
             }
         }
     }

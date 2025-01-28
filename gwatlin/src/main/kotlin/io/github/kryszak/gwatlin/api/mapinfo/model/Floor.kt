@@ -13,6 +13,6 @@ data class Floor(
     @SerialName("texture_dims")
     val textureDims: Dimensions,
     @SerialName("clamped_view")
-    val clampedView: Rectangle,
+    val clampedView: Rectangle? = null,
     val regions: Map<Int, Region> = mapOf(),
 )
