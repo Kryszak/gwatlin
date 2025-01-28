@@ -1,11 +1,11 @@
-package io.github.kryszak.gwatlin.api.account.model.wizardsvault
+package io.github.kryszak.gwatlin.api.wizardsvault.model
 
 import io.github.kryszak.gwatlin.api.shared.ListingType
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for account wizard's vault listing
+ * Data model for wizard's vault listing
  */
 @Serializable
 data class Listing(
@@ -16,8 +16,4 @@ data class Listing(
     val itemCount: Long,
     val type: ListingType,
     val cost: Long,
-    val purchased: Long? = null,
-    @SerialName("purchase_limit")
-    val purchaseLimit: Long? = null,
 )
-
