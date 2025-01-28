@@ -7,6 +7,7 @@ import io.github.kryszak.gwatlin.api.account.model.vault.AccountBankSlot
 import io.github.kryszak.gwatlin.api.account.model.vault.AccountMaterial
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.homeinstance.model.Cat
+import io.github.kryszak.gwatlin.api.account.model.LegendaryArmoryItem
 import io.github.kryszak.gwatlin.http.AuthenticatedHttpClient
 
 internal class AccountClient(apiKey: String) : AuthenticatedHttpClient(apiKey) {
