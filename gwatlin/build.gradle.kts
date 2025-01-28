@@ -1,5 +1,8 @@
 import java.util.*
 
+group = rootProject.group
+version = rootProject.version
+
 plugins {
     jacoco
     signing
@@ -7,9 +10,6 @@ plugins {
     id("org.jetbrains.dokka") version "2.0.0"
     kotlin("plugin.serialization") version "2.1.10"
 }
-
-group = rootProject.group
-version = rootProject.version
 
 internal object Meta {
     const val DESCRIPTION = "Guild Wars 2 API client"

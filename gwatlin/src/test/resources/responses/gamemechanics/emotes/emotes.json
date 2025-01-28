@@ -1,0 +1,24 @@
+[
+  {
+    "commands": [
+      "/geargrind",
+      "/coureur",
+      "/Endlos",
+      "/corredor"
+    ],
+    "id": "geargrind",
+    "unlock_items": [
+      20312
+    ]
+  },
+  {
+    "commands": [
+      "/shuffle",
+      "/mezclador"
+    ],
+    "id": "shuffle",
+    "unlock_items": [
+      20312
+    ]
+  }
+]
