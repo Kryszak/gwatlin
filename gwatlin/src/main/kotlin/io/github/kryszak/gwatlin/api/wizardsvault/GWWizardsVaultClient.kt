@@ -1,6 +1,6 @@
 package io.github.kryszak.gwatlin.api.wizardsvault
 
-import io.github.kryszak.gwatlin.api.account.model.wizardsvault.Listing
+import io.github.kryszak.gwatlin.api.wizardsvault.model.Listing
 import io.github.kryszak.gwatlin.api.wizardsvault.model.Objective
 import io.github.kryszak.gwatlin.api.wizardsvault.model.WizardsVaultSeason
 import io.github.kryszak.gwatlin.clients.wizardsvault.WizardsVaultClient
