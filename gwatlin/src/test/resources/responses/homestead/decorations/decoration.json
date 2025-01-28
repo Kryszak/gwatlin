@@ -1,0 +1,11 @@
+{
+  "id": 140,
+  "name": "Sandstone Pillar",
+  "description": "Crafted by scribes.",
+  "categories": [
+    16,
+    1
+  ],
+  "max_count": 250,
+  "icon": "https://render.guildwars2.com/file/A2DBDD1E546A2F5EDAC301BA07FEA20F1B1C12A7/1223799.png"
+}
