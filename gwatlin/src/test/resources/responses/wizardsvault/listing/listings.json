@@ -1,0 +1,16 @@
+[
+  {
+    "id": 2,
+    "item_id": 101933,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 180
+  },
+  {
+    "id": 3,
+    "item_id": 101626,
+    "item_count": 1,
+    "type": "Legacy",
+    "cost": 450
+  }
+]
