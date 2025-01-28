@@ -7,6 +7,6 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class SkillChallenge(
-    val id: String,
-    val coord: Coordinates
+    val id: String? = null,
+    val coord: Coordinates,
 )
