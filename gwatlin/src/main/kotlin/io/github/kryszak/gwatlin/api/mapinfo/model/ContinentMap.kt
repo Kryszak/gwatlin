@@ -22,7 +22,7 @@ data class ContinentMap(
     @SerialName("continent_rect")
     val continentRect: Rectangle,
     @SerialName("label_coord")
-    val labelCoord: Coordinates,
+    val labelCoord: Coordinates? = null,
     @SerialName("points_of_interest")
     val pointsOfInterest: Map<Int, PointOfInterest> = mapOf(),
     val tasks: Map<Int, HeartTask> = mapOf(),
