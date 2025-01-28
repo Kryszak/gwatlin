@@ -2,6 +2,7 @@ package io.github.kryszak.e2e.wvw
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.miscellaneous.GWMiscellaneousClient
 import io.github.kryszak.gwatlin.api.wvw.GWWvwClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
@@ -11,25 +12,33 @@ internal class WvWE2ETests : BaseE2ESpec() {
 
     init {
         context("WvW") {
-            expect("Fetch abilities") {
-                val abilityIds = client.getAbilityIds()
-                shouldNotThrowAny { client.getAbilities(abilityIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch abilities in $language language") {
+                    val abilityIds = client.getAbilityIds()
+                    shouldNotThrowAny { client.getAbilities(abilityIds, language) }
+                }
             }
             expect("Fetch matches") {
                 val matchIds = client.getMatchIds()
                 shouldNotThrowAny { client.getMatches(matchIds) }
             }
-            expect("Fetch objectives") {
-                val objectiveIds = client.getObjectiveIds().randomElements(100)
-                shouldNotThrowAny { client.getObjectives(objectiveIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch objectives for $language language") {
+                    val objectiveIds = client.getObjectiveIds().randomElements(100)
+                    shouldNotThrowAny { client.getObjectives(objectiveIds, language) }
+                }
             }
-            expect("Fetch ranks") {
-                val rankIds = client.getRankIds().randomElements(100)
-                shouldNotThrowAny { client.getRanks(rankIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch ranks in $language language") {
+                    val rankIds = client.getRankIds().randomElements(100)
+                    shouldNotThrowAny { client.getRanks(rankIds, language) }
+                }
             }
-            expect("Fetch upgrades") {
-                val upgradeIds = client.getUpgradeIds()
-                shouldNotThrowAny { client.getUpgrades(upgradeIds) }
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch upgrades in $language language") {
+                    val upgradeIds = client.getUpgradeIds()
+                    shouldNotThrowAny { client.getUpgrades(upgradeIds, language) }
+                }
             }
         }
         context("Match") {

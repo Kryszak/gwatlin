@@ -206,8 +206,10 @@ internal class MapInfoClientTest : BaseWiremockTest() {
                 textureDims.x shouldBe 81920
                 textureDims.y shouldBe 114688
 
-                clampedView.first.x shouldBe 54272
-                clampedView.second.y shouldBe 25856
+                assertSoftly(clampedView!!) {
+                    first.x shouldBe 54272
+                    second.y shouldBe 25856
+                }
 
                 regions shouldHaveSize 1
             }
