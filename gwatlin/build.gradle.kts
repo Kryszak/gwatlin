@@ -123,7 +123,6 @@ val fuelVersion = "2.3.1"
 val kotlinxSerializationVersion = "1.8.0"
 val loggingVersion = "3.0.5"
 val logbackVersion = "1.5.16"
-val kotestVersion = "5.9.1"
 val kotestWiremockExtensionVersion = "3.1.0"
 val kotlinWiremockDslVersion = "2.1.1"
 
@@ -136,7 +135,6 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging-jvm:$loggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
     // testing
-    testImplementation("io.kotest:kotest-framework-datatest:$kotestVersion")
     testImplementation("io.kotest.extensions:kotest-extensions-wiremock:$kotestWiremockExtensionVersion")
     testImplementation("com.marcinziolo:kotlin-wiremock:$kotlinWiremockDslVersion")
 }
