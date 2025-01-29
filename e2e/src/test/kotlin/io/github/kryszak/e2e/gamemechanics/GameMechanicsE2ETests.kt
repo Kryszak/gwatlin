@@ -32,6 +32,12 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                 }
             }
         }
+        context("Emotes") {
+            val client = GWEmotesClient()
+            expect("Fetch emotes") {
+                shouldNotThrowAny { client.getAllEmotes() }
+            }
+        }
         context("Legendary armory") {
             val client = GWLegendaryArmoryClient()
             expect("Fetch legendary armories") {
