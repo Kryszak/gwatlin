@@ -38,6 +38,14 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 }
             }
         }
+        context("Novelties") {
+            val client = GWNoveltiesClient()
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch all novelties in $language language") {
+                    shouldNotThrowAny { client.getAllNovelties(language) }
+                }
+            }
+        }
         context("Outfits") {
             val client = GWOutfitsClient()
             ApiLanguage.entries.forEach { language ->

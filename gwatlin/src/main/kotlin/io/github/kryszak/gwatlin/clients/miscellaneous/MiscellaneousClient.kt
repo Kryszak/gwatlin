@@ -11,8 +11,6 @@ internal class MiscellaneousClient : BaseHttpClient() {
 
     private val quaggansEndpoint = "/quaggans"
 
-    private val noveltiesEndpoint = "/novelties"
-
     private val worldsEndpoint = "/worlds"
 
     fun getBuildId(): BuildId {
@@ -25,10 +23,6 @@ internal class MiscellaneousClient : BaseHttpClient() {
 
     fun getQuaggans(): List<Quaggan> {
         return getRequest("$quaggansEndpoint?ids=all")
-    }
-
-    fun getNovelties(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Novelty> {
-        return getRequest("$noveltiesEndpoint?ids=all", language)
     }
 
     fun getWorlds(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<World> {

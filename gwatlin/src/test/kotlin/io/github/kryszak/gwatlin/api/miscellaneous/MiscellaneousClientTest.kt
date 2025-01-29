@@ -3,7 +3,6 @@ package io.github.kryszak.gwatlin.api.miscellaneous
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
-import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
@@ -47,27 +46,6 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
             // then
             quaggans shouldHaveSize 35
         }
-
-        should("Get novelties") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/novelties?ids=all", "/responses/miscellaneous/novelties.json", language = lang)
-
-            // when
-            val novelties = miscellaneousClient.getNovelties(lang)
-
-            // then
-            assertSoftly(novelties[0]) {
-                id shouldBe 1
-                name shouldBe "Embellished Kite"
-                description shouldBe "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills."
-                icon shouldBe "https://render.guildwars2.com/file/7B043D640ED57517051D5FC038D7CDDDE5F82933/2015154.png"
-                slot shouldBe "HeldItem"
-                unlockItem shouldContainExactly listOf(88124)
-            }
-        }
-
-
 
         should("Get worlds") {
             // given

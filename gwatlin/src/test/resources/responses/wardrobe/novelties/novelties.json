@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "name": "Musical Bass Guitar",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/2FD55ABA480D23E3740145B5802800554245DB11/960182.png",
+    "slot": "Music",
+    "unlock_item": [
+      36174
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Duskk's World 2 Super Boom Box",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/49126005BA2E197E5A60F9CFDA530EE432307776/1664072.png",
+    "slot": "Music",
+    "unlock_item": [
+      80932
+    ]
+  }
+]
