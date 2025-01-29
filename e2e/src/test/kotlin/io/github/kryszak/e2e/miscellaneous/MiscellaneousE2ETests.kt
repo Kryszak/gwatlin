@@ -27,11 +27,6 @@ internal class MiscellaneousE2ETests : BaseE2ESpec() {
                 shouldNotThrowAny { client.getQuaggans() }
             }
             ApiLanguage.entries.forEach { language ->
-                expect("Fetch minis in $language language") {
-                    shouldNotThrowAny { client.getMinis(language) }
-                }
-            }
-            ApiLanguage.entries.forEach { language ->
                 expect("Fetch novelties in $language language") {
                     shouldNotThrowAny { client.getNovelties(language) }
                 }

@@ -48,24 +48,6 @@ internal class MiscellaneousClientTest : BaseWiremockTest() {
             quaggans shouldHaveSize 35
         }
 
-        should("Get minis") {
-            // given
-            val lang = ApiLanguage.EN
-            stubResponse("/v2/minis?ids=all", "/responses/miscellaneous/minis.json", language = lang)
-
-            // when
-            val minis = miscellaneousClient.getMinis(lang)
-
-            // then
-            assertSoftly(minis[0]) {
-                id shouldBe 1
-                name shouldBe "Mini Rytlock"
-                icon shouldBe "https://render.guildwars2.com/file/795ED1B945A29EC3E3066797DF57FFB25ABAA631/340551.png"
-                order shouldBe 1
-                itemId shouldBe 21047
-            }
-        }
-
         should("Get novelties") {
             // given
             val lang = ApiLanguage.EN

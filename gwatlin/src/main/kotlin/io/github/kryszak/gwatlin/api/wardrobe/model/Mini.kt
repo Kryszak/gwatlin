@@ -1,4 +1,4 @@
-package io.github.kryszak.gwatlin.api.miscellaneous.model
+package io.github.kryszak.gwatlin.api.wardrobe.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
