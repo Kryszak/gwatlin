@@ -1,0 +1,167 @@
+[
+  {
+    "commands": [
+      "/bless",
+      "/b�nir",
+      "/segnen",
+      "/bendecir"
+    ],
+    "id": "Bless",
+    "unlock_items": [
+      100099
+    ]
+  },
+  {
+    "commands": [
+      "/heroic",
+      "/h�ro�que",
+      "/heldenhaft",
+      "/poseheroica"
+    ],
+    "id": "Heroic",
+    "unlock_items": [
+      100760
+    ]
+  },
+  {
+    "commands": [
+      "/paper",
+      "/papier",
+      "/papier",
+      "/papel"
+    ],
+    "id": "Paper",
+    "unlock_items": [
+      97073
+    ]
+  },
+  {
+    "commands": [
+      "/possessed",
+      "/poss�d�",
+      "/besessen",
+      "/pose�do"
+    ],
+    "id": "Possessed",
+    "unlock_items": [
+      100926
+    ]
+  },
+  {
+    "commands": [
+      "/rock",
+      "/pierre",
+      "/stein",
+      "/piedra"
+    ],
+    "id": "Rock",
+    "unlock_items": [
+      95738
+    ]
+  },
+  {
+    "commands": [
+      "/scissors",
+      "/ciseaux",
+      "/schere",
+      "/tijeras"
+    ],
+    "id": "Scissors",
+    "unlock_items": [
+      97046
+    ]
+  },
+  {
+    "commands": [
+      "/shiverplus",
+      "/tremblefort",
+      "/zitternplus",
+      "/tiritarmucho"
+    ],
+    "id": "Shiverplus",
+    "unlock_items": [
+      93739
+    ]
+  },
+  {
+    "commands": [
+      "/stretch",
+      "/�tirement",
+      "/Dehnen",
+      "/estirarse"
+    ],
+    "id": "Stretch",
+    "unlock_items": [
+      94530
+    ]
+  },
+  {
+    "commands": [
+      "/geargrind",
+      "/coureur",
+      "/Endlos",
+      "/corredor"
+    ],
+    "id": "geargrind",
+    "unlock_items": [
+      20312
+    ]
+  },
+  {
+    "commands": [
+      "/playdead",
+      "/faitlemort",
+      "/Yacer"
+    ],
+    "id": "playdead",
+    "unlock_items": [
+      93507
+    ]
+  },
+  {
+    "commands": [
+      "/rockout",
+      "/hardrock",
+      "/Abrocken",
+      "/rockear"
+    ],
+    "id": "rockout",
+    "unlock_items": [
+      91956
+    ]
+  },
+  {
+    "commands": [
+      "/shiver",
+      "/tremble",
+      "/zittern",
+      "/tiritar"
+    ],
+    "id": "shiver",
+    "unlock_items": [
+      92787
+    ]
+  },
+  {
+    "commands": [
+      "/shuffle",
+      "/mezclador"
+    ],
+    "id": "shuffle",
+    "unlock_items": [
+      20312
+    ]
+  },
+  {
+    "commands": [
+      "/step",
+      "/esquive",
+      "/Schritt",
+      "/paso"
+    ],
+    "id": "step",
+    "unlock_items": [
+      20312
+    ]
+  }
+]
