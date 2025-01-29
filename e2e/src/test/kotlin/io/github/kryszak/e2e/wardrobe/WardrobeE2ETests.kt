@@ -17,6 +17,15 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 }
             }
         }
+        context("Gliders") {
+            val client = GWGlidersClient()
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch gliders in $language language") {
+                    val gliderIds = client.getGliderIds()
+                    shouldNotThrowAny { client.getGliders(gliderIds, language) }
+                }
+            }
+        }
         context("Minis") {
             val client = GWMinisClient()
             ApiLanguage.entries.forEach { language ->
