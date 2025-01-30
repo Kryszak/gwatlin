@@ -1,0 +1,23 @@
+[
+  {
+    "id": 120,
+    "name": "Snowman Ice Sculpture",
+    "description": "Crafted by scribes.",
+    "categories": [
+      9,
+      25
+    ],
+    "max_count": 250,
+    "icon": "https://render.guildwars2.com/file/080D0D6694717DDC710EB7F86D94699F3C35340D/1614396.png"
+  },
+  {
+    "id": 122,
+    "name": "Thorny Mushroom",
+    "description": "Crafted by scribes.",
+    "categories": [
+      7
+    ],
+    "max_count": 250,
+    "icon": "https://render.guildwars2.com/file/3FD56F9553535CD33CEB4A1D08499537BC5FF306/1224808.png"
+  }
+]
