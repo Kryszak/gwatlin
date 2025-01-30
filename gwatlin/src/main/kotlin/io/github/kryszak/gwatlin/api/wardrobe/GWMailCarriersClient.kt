@@ -12,14 +12,27 @@ class GWMailCarriersClient {
 
     private val mailCarriersClient = MailCarriersClient()
 
+    /**
+     * Returns ids of all available mail carriers
+     */
     fun getMailCarrierIds(): List<Int> {
         return mailCarriersClient.getMailCarrierIds()
     }
 
+    /**
+     * Returns mail carrier for given id
+     * @param id of mail carrier
+     * @param language for response
+     */
     fun getMailCarrier(id: Int, language: ApiLanguage? = null): MailCarrier {
         return mailCarriersClient.getMailCarrier(id, language)
     }
 
+    /**
+     * Returns mail carriers for given ids
+     * @param ids of mail carriers
+     * @param language for response
+     */
     fun getMailCarriers(ids: List<Int>, language: ApiLanguage? = null): List<MailCarrier> {
         return mailCarriersClient.getMailCarriers(ids, language)
     }
