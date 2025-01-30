@@ -35,6 +35,15 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 }
             }
         }
+        context("Mail carriers") {
+            val client = GWMailCarriersClient()
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch carriers in $language language") {
+                    val mailCarrierIds = client.getMailCarrierIds()
+                    shouldNotThrowAny { client.getMailCarriers(mailCarrierIds, language) }
+                }
+            }
+        }
         context("Minis") {
             val client = GWMinisClient()
             ApiLanguage.entries.forEach { language ->
