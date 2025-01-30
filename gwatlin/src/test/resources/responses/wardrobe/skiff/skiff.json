@@ -1,0 +1,11 @@
+{
+  "id": 410,
+  "name": "Fishing Skiff",
+  "icon": "https://render.guildwars2.com/file/BC08E6346DBFA290A4BE58AE073C9BA1029A57BB/2593817.png",
+  "dye_slots": [
+    {
+      "color_id": 376,
+      "material": "metal"
+    }
+  ]
+}

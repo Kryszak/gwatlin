@@ -76,9 +76,18 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
         context("Outfits") {
             val client = GWOutfitsClient()
             ApiLanguage.entries.forEach { language ->
-                expect("Fetching random outfits in $language language") {
+                expect("Fetch random outfits in $language language") {
                     val outfitIds = client.getOutfitsIds().randomElements(100)
                     shouldNotThrowAny { client.getOutfits(outfitIds, language) }
+                }
+            }
+        }
+        context("Skiffs") {
+            val client = GWSkiffsClient()
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch skiffs in $language language") {
+                    val skiffIds = client.getSkiffIds()
+                    shouldNotThrowAny { client.getSkiffs(skiffIds, language) }
                 }
             }
         }
