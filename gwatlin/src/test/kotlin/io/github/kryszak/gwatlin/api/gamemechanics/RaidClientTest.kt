@@ -7,7 +7,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class RaidClientSpec : BaseWiremockTest() {
+internal class RaidClientTest : BaseWiremockTest() {
 
     private val raidClient = GWRaidsClient()
 

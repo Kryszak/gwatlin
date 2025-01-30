@@ -6,7 +6,7 @@ import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class EmotesClientSpec : BaseWiremockTest() {
+internal class EmotesClientTest : BaseWiremockTest() {
 
     private val client = GWEmotesClient()
 

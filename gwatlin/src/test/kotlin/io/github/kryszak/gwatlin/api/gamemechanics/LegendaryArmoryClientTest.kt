@@ -5,7 +5,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class LegendaryArmoryClientSpec : BaseWiremockTest() {
+internal class LegendaryArmoryClientTest : BaseWiremockTest() {
 
     private val client = GWLegendaryArmoryClient()
 

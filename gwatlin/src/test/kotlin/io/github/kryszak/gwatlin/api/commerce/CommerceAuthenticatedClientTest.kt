@@ -7,7 +7,7 @@ import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 import java.time.OffsetDateTime
 
-internal class CommerceAuthenticatedClientSpec : BaseWiremockTest() {
+internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
 
     private val apiKey = "1234"
 

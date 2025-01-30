@@ -6,7 +6,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class GWMinisClientSpec : BaseWiremockTest() {
+internal class MinisClientTest : BaseWiremockTest() {
 
     private val minisClient = GWMinisClient()
 

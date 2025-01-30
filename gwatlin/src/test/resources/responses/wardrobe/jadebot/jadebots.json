@@ -1,0 +1,14 @@
+[
+  {
+    "id": 3,
+    "name": "Candlewick Sprite",
+    "description": "Found only in Black Lion Chests during specific times of the year.",
+    "unlock_item": 98882
+  },
+  {
+    "id": 4,
+    "name": "Playful Ghost",
+    "description": "Found only in Black Lion Chests during specific times of the year.",
+    "unlock_item": 99005
+  }
+]

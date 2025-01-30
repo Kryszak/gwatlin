@@ -8,7 +8,7 @@ import io.kotest.matchers.booleans.shouldBeTrue
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class AccountWizardsVaultClientSpec : BaseWiremockTest() {
+internal class AccountWizardsVaultClientTest : BaseWiremockTest() {
 
     private val apiKey = "1234"
 

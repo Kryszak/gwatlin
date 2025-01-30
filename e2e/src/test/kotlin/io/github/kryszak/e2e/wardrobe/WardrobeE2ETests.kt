@@ -26,6 +26,15 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 }
             }
         }
+        context("Jade bots") {
+            val client = GWJadeBotsClient()
+            ApiLanguage.entries.forEach { language ->
+                expect("Fetch jade bots in $language language") {
+                    val jadeBotIds = client.getJadeBotIds()
+                    shouldNotThrowAny { client.getJadeBots(jadeBotIds, language) }
+                }
+            }
+        }
         context("Minis") {
             val client = GWMinisClient()
             ApiLanguage.entries.forEach { language ->
