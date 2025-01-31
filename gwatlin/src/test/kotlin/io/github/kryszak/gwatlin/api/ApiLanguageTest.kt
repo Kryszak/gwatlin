@@ -2,6 +2,7 @@ package io.github.kryszak.gwatlin.api
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.datatest.withData
+import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 import java.util.*
 
@@ -20,7 +21,9 @@ internal class ApiLanguageTest : ShouldSpec({
             val converted = ApiLanguage.fromLocale(locale)
 
             // then
+            converted.shouldNotBeNull()
             converted shouldBe apiLanguage
+            converted.locale shouldBe locale
         }
     }
     context("Parsing ApiLanguage from String") {
@@ -37,7 +40,9 @@ internal class ApiLanguageTest : ShouldSpec({
             val converted = ApiLanguage.fromString(languageString)
 
             // then
+            converted.shouldNotBeNull()
             converted shouldBe apiLanguage
+            converted.locale.toLanguageTag() shouldBe languageString
         }
     }
 }) {
