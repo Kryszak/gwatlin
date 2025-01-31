@@ -1,6 +1,6 @@
 package io.github.kryszak.gwatlin.api.account
 
-import io.github.kryszak.gwatlin.api.account.model.wizardsvault.ListingType
+import io.github.kryszak.gwatlin.api.shared.ListingType
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.booleans.shouldBeFalse
