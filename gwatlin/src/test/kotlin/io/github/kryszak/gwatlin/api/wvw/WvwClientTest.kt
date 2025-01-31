@@ -148,7 +148,11 @@ internal class WvwClientTest : BaseWiremockTest() {
                 startTime shouldBe "2019-11-09T02:00:00Z"
                 endTime shouldBe "2019-11-16T01:58:00Z"
                 worlds.shouldNotBeNull()
-                allWorlds.shouldNotBeNull()
+                assertSoftly(allWorlds) {
+                    red shouldBe listOf(1004, 1008)
+                    blue shouldBe listOf(1022, 1016)
+                    green shouldBe listOf(1020, 1002)
+                }
             }
         }
 

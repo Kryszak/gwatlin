@@ -2,7 +2,6 @@ package io.github.kryszak.gwatlin.api.achievement
 
 import io.github.kryszak.gwatlin.api.achievement.model.Achievement
 import io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
-import io.github.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
 import io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import io.github.kryszak.gwatlin.clients.achievements.AchievementsClient
 
@@ -30,24 +29,6 @@ class GWAchievementsClient {
      */
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
         return achievementsClient.getAchievementsByIds(ids)
-    }
-
-    /**
-     * Retrieves list of today daily achievements
-     * @return list of daily achievements
-     * @see io.github.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
-     */
-    fun getDailyAchievements(): DailyAchievementList {
-        return achievementsClient.getDailyAchievements()
-    }
-
-    /**
-     * Retrieves list of tomorrow daily achievements
-     * @return list of daily achievements
-     * @see io.github.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
-     */
-    fun getDailyTomorrowAchievements(): DailyAchievementList {
-        return achievementsClient.getTomorrowDailyAchievements()
     }
 
     /**

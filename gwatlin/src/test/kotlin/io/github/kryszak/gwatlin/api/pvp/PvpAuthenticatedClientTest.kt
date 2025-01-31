@@ -3,6 +3,7 @@ package io.github.kryszak.gwatlin.api.pvp
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
 
@@ -29,6 +30,13 @@ internal class PvpAuthenticatedClientTest : BaseWiremockTest() {
                 assertSoftly(professions) {
                     elementalist.shouldNotBeNull()
                     guardian.shouldNotBeNull()
+                    warrior.shouldBeNull()
+                    engineer.shouldBeNull()
+                    ranger.shouldBeNull()
+                    thief.shouldBeNull()
+                    mesmer.shouldBeNull()
+                    necromancer.shouldBeNull()
+                    revenant.shouldBeNull()
                 }
                 assertSoftly(ladders) {
                     ranked.shouldNotBeNull()

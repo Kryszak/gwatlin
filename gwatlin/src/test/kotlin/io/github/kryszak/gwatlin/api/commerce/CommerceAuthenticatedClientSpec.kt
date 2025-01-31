@@ -85,13 +85,13 @@ internal class CommerceAuthenticatedClientSpec : BaseWiremockTest() {
         should("Get current buys") {
             // given
             stubResponse(
-                "/v2/commerce/transactions/history/buys",
+                "/v2/commerce/transactions/current/buys",
                 "/responses/commerce/transactions_current.json",
                 apiKey = apiKey
             )
 
             // when
-            val transactions = client.getHistoricBuys()
+            val transactions = client.getCurrentBuys()
 
             // then
             assertSoftly(transactions) {
@@ -110,13 +110,13 @@ internal class CommerceAuthenticatedClientSpec : BaseWiremockTest() {
         should("Get current sells") {
             // given
             stubResponse(
-                "/v2/commerce/transactions/history/sells",
+                "/v2/commerce/transactions/current/sells",
                 "/responses/commerce/transactions_current.json",
                 apiKey = apiKey
             )
 
             // when
-            val transactions = client.getHistoricSells()
+            val transactions = client.getCurrentSells()
 
             // then
             assertSoftly(transactions) {
