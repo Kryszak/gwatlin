@@ -70,7 +70,10 @@ internal class SkillsClientTest : BaseWiremockTest() {
                         "5506-glyph-of-elemental-power.json",
                         ::glyphOfElementalPowerAssertion
                     ),
-                    "fulgor" to SkillTestInput(73091, "73091-fulgor.json", ::fulgorAssertion)
+                    "fulgor" to SkillTestInput(73091, "73091-fulgor.json", ::fulgorAssertion),
+                    "whirling-axe" to SkillTestInput(
+                        1162, "1162-whirling-axe.json", ::whirlingAxeAssertion
+                    )
                 )
             ) { (id, responseFile, assertion) ->
                 // given
@@ -383,6 +386,16 @@ internal class SkillsClientTest : BaseWiremockTest() {
             type shouldBe "Radius"
             icon shouldBe "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png"
             distance shouldBe 180
+        }
+    }
+
+    private fun whirlingAxeAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Whirling Axe"
+        assertSoftly(facts[4]) {
+            shouldBeInstanceOf<NoData>()
+            text shouldBe "Reflects Missiles"
+            type shouldBe "NoData"
+            icon shouldBe "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
         }
     }
 }
