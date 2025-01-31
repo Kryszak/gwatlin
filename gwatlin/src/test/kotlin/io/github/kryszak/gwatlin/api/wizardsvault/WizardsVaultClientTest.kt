@@ -7,7 +7,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 import java.time.OffsetDateTime
 
-internal class WizardsVaultClientSpec : BaseWiremockTest() {
+internal class WizardsVaultClientTest : BaseWiremockTest() {
 
     private val client = GWWizardsVaultClient()
 
