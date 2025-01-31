@@ -450,7 +450,10 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 assertSoftly(upgradeDetails.infixUpgrade!!) {
                     id shouldBe 1146
                     attributes.shouldBeEmpty()
-                    buff shouldBe InfixUpgradeBuff("+10% Boon Duration", 33913)
+                    assertSoftly(buff!!) {
+                        description shouldBe "+10% Boon Duration"
+                        itemId shouldBe 33913
+                    }
                 }
             }
         }

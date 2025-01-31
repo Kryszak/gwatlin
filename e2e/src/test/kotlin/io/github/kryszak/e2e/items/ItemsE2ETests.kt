@@ -43,6 +43,13 @@ internal class ItemsE2ETests : BaseE2ESpec() {
                     shouldNotThrowAny { client.getRecipes(recipeIds, language) }
                 }
             }
+            expect("Find with guild ingredient") {
+                client.getRecipeIds().chunked(100).forEach { recipeIds ->
+                    client.getRecipes(recipeIds)
+                        .filter { it.guildIngredients.isNotEmpty() }
+                        .forEach { println(it) }
+                }
+            }
         }
     }
 }

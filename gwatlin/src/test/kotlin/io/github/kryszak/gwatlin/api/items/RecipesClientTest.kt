@@ -50,6 +50,30 @@ internal class RecipesClientTest: BaseWiremockTest() {
             }
         }
 
+        should("Get recipe with guild ingredients") {
+            // given
+            val ids = listOf(14068)
+            val lang = ApiLanguage.EN
+
+            stubResponse(
+                "/v2/recipes?ids=${ids.joinToString(",")}",
+                "/responses/items/recipe_with_guild_ingredients.json",
+                language = lang
+            )
+
+            // when
+            val recipes = recipesClient.getRecipes(ids, lang)
+
+            // then
+            assertSoftly(recipes[0]) {
+                type shouldBe "GuildDecoration"
+                assertSoftly(guildIngredients[0]) {
+                    upgradeId shouldBe 661
+                    count shouldBe 250
+                }
+            }
+        }
+
         should("Find recipes with given ingredient") {
             // given
             val ingredientId = 46731
