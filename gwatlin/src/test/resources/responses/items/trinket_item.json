@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Justiciar's Pendant",
+    "type": "Trinket",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 528,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "AccountBound",
+      "NoMysticForge",
+      "NoSalvage",
+      "NoSell",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 80553,
+    "chat_link": "[&AgGpOgEA]",
+    "icon": "https://render.guildwars2.com/file/E433A51B5D0FB70203480845BAFA23990322CDA3/1633843.png",
+    "details": {
+      "type": "Amulet",
+      "infusion_slots": [],
+      "attribute_adjustment": 341.44,
+      "infix_upgrade": {
+        "id": 1222,
+        "attributes": [
+          {
+            "attribute": "Precision",
+            "modifier": 102
+          },
+          {
+            "attribute": "Healing",
+            "modifier": 56
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 102
+          },
+          {
+            "attribute": "BoonDuration",
+            "modifier": 56
+          }
+        ]
+      },
+      "secondary_suffix_item_id": ""
+    }
+  }
+]

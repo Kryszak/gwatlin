@@ -128,6 +128,10 @@ internal class WvwClientTest : BaseWiremockTest() {
                         pointsCapture shouldBe 0
                     }
                 }
+                assertSoftly(maps.find { it.id == 1099 }!!.bonuses[0]) {
+                    type shouldBe "Bloodlust"
+                    owner shouldBe "Red"
+                }
             }
         }
 

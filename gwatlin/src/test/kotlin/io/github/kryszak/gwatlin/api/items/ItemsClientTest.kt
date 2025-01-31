@@ -53,6 +53,7 @@ internal class ItemsClientTest : BaseWiremockTest() {
                     "power core" to ItemTestInput(97020, "power_core_item.json", ::powerCoreAssertion),
                     "relic" to ItemTestInput(70093, "relic_item.json", ::relicAssertion),
                     "tool" to ItemTestInput(23041, "salvage_kit_item.json", ::toolAssertion),
+                    "trinket" to ItemTestInput(80553, "trinket_item.json", ::trinketAssertion),
                     "trophy" to ItemTestInput(70093, "trophy_item.json", ::trophyAssertion),
                     "upgrade component" to ItemTestInput(
                         72339,
@@ -407,6 +408,43 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 salvageKitDetails.charges shouldBe 25
             }
         }
+
+    private fun trinketAssertion(item: Item) = assertSoftly(item) {
+        it should beOfType<TrinketItem>()
+        name shouldBe "Justiciar's Pendant"
+        type shouldBe ItemType.TRINKET
+        level shouldBe 80
+        rarity shouldBe ItemRarity.EXOTIC
+        vendorValue shouldBe 528
+        gameTypes shouldContainExactly listOf("Activity", "Wvw", "Dungeon", "Pve")
+        flags shouldContainExactly listOf(
+            "HideSuffix",
+            "AccountBound",
+            "NoMysticForge",
+            "NoSalvage",
+            "NoSell",
+            "SoulBindOnUse"
+        )
+        restrictions.shouldBeEmpty()
+        id shouldBe 80553
+        chatLink shouldBe "[&AgGpOgEA]"
+        icon shouldBe "https://render.guildwars2.com/file/E433A51B5D0FB70203480845BAFA23990322CDA3/1633843.png"
+        assertSoftly(details!! as TrinketDetails) {
+            type shouldBe "Amulet"
+            infusionSlots.shouldBeEmpty()
+            attributeAdjustment shouldBe 341.44
+            assertSoftly(infixUpgrade!!) {
+                id shouldBe 1222
+                assertSoftly(attributes) { infixUpgradeAttributes ->
+                    shouldHaveSize(4)
+                    assertSoftly(infixUpgradeAttributes[0]) {
+                        attribute shouldBe "Precision"
+                        modifier shouldBe 102
+                    }
+                }
+            }
+        }
+    }
 
     private fun trophyAssertion(item: Item) =
         assertSoftly(item) {

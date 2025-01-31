@@ -7,7 +7,6 @@ import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.datatest.withData
-import io.kotest.matchers.collections.shouldContain
 import io.kotest.matchers.collections.shouldContainAll
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
