@@ -1,16 +1,14 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.AttributeAdjust
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Percent
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Range
-import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Recharge
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.*
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.datatest.withData
+import io.kotest.matchers.booleans.shouldBeTrue
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -57,6 +55,22 @@ internal class SkillsClientTest : BaseWiremockTest() {
                         "71867-path-of-gluttony.json",
                         ::pathOfGluttonyAssertion
                     ),
+                    "signet-of-the-locust" to SkillTestInput(
+                        10612,
+                        "10612-signet-of-the-locust.json",
+                        ::signetOfTheLocustAssertion
+                    ),
+                    "sparking-aura" to SkillTestInput(
+                        75270,
+                        "75270-sparking-aura.json",
+                        ::sparkingAuraAssertion
+                    ),
+                    "glyph-of-elemental-power" to SkillTestInput(
+                        5506,
+                        "5506-glyph-of-elemental-power.json",
+                        ::glyphOfElementalPowerAssertion
+                    ),
+                    "fulgor" to SkillTestInput(73091, "73091-fulgor.json", ::fulgorAssertion)
                 )
             ) { (id, responseFile, assertion) ->
                 // given
@@ -266,6 +280,13 @@ internal class SkillsClientTest : BaseWiremockTest() {
     private fun locustSwarmAssertion(skill: Skill) = assertSoftly(skill) {
         name shouldBe "Locust Swarm"
         facts shouldHaveSize 12
+        assertSoftly(facts[2]) {
+            shouldBeTypeOf<Time>()
+            text shouldBe "Duration"
+            type shouldBe "Time"
+            icon shouldBe "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png"
+            duration shouldBe 5
+        }
         assertSoftly(facts[4]) {
             shouldBeInstanceOf<Percent>()
             text shouldBe "Life Force"
@@ -321,4 +342,48 @@ internal class SkillsClientTest : BaseWiremockTest() {
         }
     }
 
+    private fun signetOfTheLocustAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Signet of the Locust"
+        assertSoftly(facts[3]) {
+            shouldBeInstanceOf<HealingAdjust>()
+            text shouldBe "Healing per Hit"
+            type shouldBe "HealingAdjust"
+            icon shouldBe "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png"
+            hitCount shouldBe 1
+        }
+    }
+
+    private fun sparkingAuraAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Sparking Aura"
+        assertSoftly(facts[0]) {
+            shouldBeInstanceOf<Unblockable>()
+            text shouldBe "Unblockable"
+            type shouldBe "Unblockable"
+            icon shouldBe "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+            value.shouldBeTrue()
+        }
+    }
+
+    private fun glyphOfElementalPowerAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Glyph of Elemental Power"
+        assertSoftly(facts[1]) {
+            shouldBeInstanceOf<StunBreak>()
+            text shouldBe "StunBreak"
+            type shouldBe "StunBreak"
+            icon shouldBe "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png"
+            value.shouldBeTrue()
+        }
+    }
+
+    private fun fulgorAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Fulgor"
+        assertSoftly(facts[4]) {
+            shouldBeInstanceOf<Radius>()
+            text shouldBe "Radius"
+            type shouldBe "Radius"
+            icon shouldBe "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png"
+            distance shouldBe 180
+        }
+    }
 }
+

@@ -8,6 +8,7 @@ import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.types.shouldBeInstanceOf
 
 internal class TraitsClientTest : BaseWiremockTest() {
 
@@ -62,7 +63,8 @@ internal class TraitsClientTest : BaseWiremockTest() {
             val trait = traitsClient.getTrait(traitId)
 
             // then
-            assertSoftly(trait.facts[1] as PrefixedBuff) {
+            assertSoftly(trait.facts[1]) {
+                shouldBeInstanceOf<PrefixedBuff>()
                 text shouldBe "Apply Buff/Condition"
                 type shouldBe "PrefixedBuff"
                 icon shouldBe "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png"
@@ -70,7 +72,7 @@ internal class TraitsClientTest : BaseWiremockTest() {
                 status shouldBe "Might"
                 description shouldBe "Increased outgoing damage; stacks intensity."
                 applyCount shouldBe 1
-                assertSoftly(it.prefix) {
+                assertSoftly(prefix) {
                     text shouldBe "Apply Buff/Condition"
                     icon shouldBe "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png"
                     status shouldBe "Fire Attunement"
