@@ -1,10 +1,7 @@
 package io.github.kryszak.gwatlin.api.guild
 
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLog
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLogTreasury
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLogUpgrade
-import io.github.kryszak.gwatlin.api.guild.model.log.UpgradeAction
+import io.github.kryszak.gwatlin.api.guild.model.log.*
 import io.github.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
@@ -33,7 +30,10 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                     ),
                     "since 1285" to GuildLogTestInput(
                         "1285", expectedGuildLogWithSince(), stubGuildLogResponseWithSince()
-                    )
+                    ),
+                    "guild rank change" to GuildLogTestInput(
+                        "", expectedGuildLogRankChange(), stubGuildLogResponseWithoutSince()
+                    ),
                 )
             ) { (since, expectedGuildLog, stubbing) ->
                 // given
@@ -41,6 +41,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
                 // when
                 val guildLogs = guildAuthClient.getGuildLog(guildId, since)
+                guildLogs.forEach(::println)
 
                 // then
                 guildLogs shouldContain expectedGuildLog
@@ -228,6 +229,8 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
     private fun expectedGuildLogWithSince() =
         GuildLogUpgrade(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", UpgradeAction.QUEUED, 364)
+
+    private fun expectedGuildLogRankChange() = GuildLogRankChange(12861, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", "Lawton Campbell.9413", "OldRank", "NewRank")
 
     data class GuildLogTestInput(
         val since: String,
