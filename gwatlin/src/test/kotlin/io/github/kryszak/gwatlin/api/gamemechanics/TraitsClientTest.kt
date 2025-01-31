@@ -78,5 +78,24 @@ internal class TraitsClientTest : BaseWiremockTest() {
                 }
             }
         }
+
+        should("Get trait with skills") {
+            // given
+            val traitId = 238
+            stubResponse("/v2/traits/$traitId", "/responses/gamemechanics/traits/238_evasive_arcana.json")
+
+            // when
+            val trait = traitsClient.getTrait(traitId)
+
+            // then
+            assertSoftly(trait.skills[0]) {
+                name shouldBe "Flame Burst"
+                description shouldBe "Burn nearby foes."
+                icon shouldBe "https://render.guildwars2.com/file/610424237E18EA90F0D824454104355309FF5DDA/102959.png"
+                id shouldBe 5794
+                chatLink shouldBe "[&BqIWAAA=]"
+                facts shouldHaveSize 5
+            }
+        }
     }
 }
