@@ -3,7 +3,10 @@ package io.github.kryszak.e2e.items
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
-import io.github.kryszak.gwatlin.api.items.*
+import io.github.kryszak.gwatlin.api.items.GWItemStatsClient
+import io.github.kryszak.gwatlin.api.items.GWItemsClient
+import io.github.kryszak.gwatlin.api.items.GWMaterialsClient
+import io.github.kryszak.gwatlin.api.items.GWRecipesClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class ItemsE2ETests : BaseE2ESpec() {
@@ -41,13 +44,6 @@ internal class ItemsE2ETests : BaseE2ESpec() {
                 expect("Fetch recipes in $language language") {
                     val recipeIds = client.getRecipeIds().randomElements(100)
                     shouldNotThrowAny { client.getRecipes(recipeIds, language) }
-                }
-            }
-            expect("Find with guild ingredient") {
-                client.getRecipeIds().chunked(100).forEach { recipeIds ->
-                    client.getRecipes(recipeIds)
-                        .filter { it.guildIngredients.isNotEmpty() }
-                        .forEach { println(it) }
                 }
             }
         }
