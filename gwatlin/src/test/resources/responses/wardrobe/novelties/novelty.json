@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "name": "Embellished Kite",
+  "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+  "icon": "https://render.guildwars2.com/file/7B043D640ED57517051D5FC038D7CDDDE5F82933/2015154.png",
+  "slot": "HeldItem",
+  "unlock_item": [
+    88124
+  ]
+}

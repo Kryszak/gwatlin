@@ -6,7 +6,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class DungeonsClientSpec : BaseWiremockTest() {
+internal class DungeonsClientTest : BaseWiremockTest() {
 
     private val dungeonsClient = GWDungeonsClient()
 

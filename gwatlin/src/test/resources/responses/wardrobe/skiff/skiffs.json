@@ -1,0 +1,48 @@
+[
+  {
+    "id": 413,
+    "name": "Shing Jea Dragon Boat",
+    "icon": "https://render.guildwars2.com/file/1055EEB4C9C4EEE1C8A23F08A7C6C303A01E14C0/2472117.png",
+    "dye_slots": [
+      {
+        "color_id": 1153,
+        "material": "metal"
+      },
+      {
+        "color_id": 134,
+        "material": "metal"
+      },
+      {
+        "color_id": 1365,
+        "material": "metal"
+      },
+      {
+        "color_id": 90,
+        "material": "metal"
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "name": "Crescent Canoe",
+    "icon": "https://render.guildwars2.com/file/0DBDEE02C192D0D417CA01F8532D736C332FF264/2660058.png",
+    "dye_slots": [
+      {
+        "color_id": 67,
+        "material": "metal"
+      },
+      {
+        "color_id": 14,
+        "material": "metal"
+      },
+      {
+        "color_id": 454,
+        "material": "metal"
+      },
+      {
+        "color_id": 650,
+        "material": "metal"
+      }
+    ]
+  }
+]

@@ -15,7 +15,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
     init {
         should("Get skin ids") {
             // given
-            stubResponse("/v2/skins", "/responses/wardrobe/skin_ids.json")
+            stubResponse("/v2/skins", "/responses/wardrobe/skin/skin_ids.json")
 
             // when
             val skinIds = skinsClient.getSkinIds()
@@ -29,7 +29,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
             val id = 10
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/skins?ids=10", "/responses/wardrobe/skin.json", language = lang)
+            stubResponse("/v2/skins?ids=10", "/responses/wardrobe/skin/skin.json", language = lang)
 
             // when
             val skins = skinsClient.getSkins(listOf(id), lang)
@@ -50,7 +50,7 @@ internal class SkinsClientTest : BaseWiremockTest() {
             val id = 2773
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/skins?ids=2773", "/responses/wardrobe/skin_without_icon.json", language = lang)
+            stubResponse("/v2/skins?ids=2773", "/responses/wardrobe/skin/skin_without_icon.json", language = lang)
 
             // when
             val skins = skinsClient.getSkins(listOf(id), lang)
