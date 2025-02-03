@@ -15,7 +15,7 @@ internal class MountsClientTest : BaseWiremockTest() {
     init {
         should("Get mount skins ids") {
             // given
-            stubResponse("/v2/mounts/skins", "/responses/wardrobe/mount_skin_ids.json")
+            stubResponse("/v2/mounts/skins", "/responses/wardrobe/mount/mount_skin_ids.json")
 
             // when
             val idsList = mountsClient.getMountSkinsIds()
@@ -29,7 +29,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             val ids = listOf(1, 2)
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/mounts/skins?ids=1,2", "/responses/wardrobe/mount_skins.json", language = lang)
+            stubResponse("/v2/mounts/skins?ids=1,2", "/responses/wardrobe/mount/mount_skins.json", language = lang)
 
             // when
             val mountSkins = mountsClient.getMountSkins(ids, lang)
@@ -51,7 +51,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val id = 1000
 
-            stubResponse("/v2/mounts/skins?ids=1000", "/responses/wardrobe/mount_skins_error.json", responseStatus = 404)
+            stubResponse("/v2/mounts/skins?ids=1000", "/responses/wardrobe/mount/mount_skins_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountSkins(listOf(id)) }
@@ -64,7 +64,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/mounts/skins?ids=all", "/responses/wardrobe/mount_skins_all.json", language = lang)
+            stubResponse("/v2/mounts/skins?ids=all", "/responses/wardrobe/mount/mount_skins_all.json", language = lang)
 
             // when
             val mountSkins = mountsClient.getAllMountSkins(lang)
@@ -75,7 +75,7 @@ internal class MountsClientTest : BaseWiremockTest() {
 
         should("Get mount types ids") {
             // given
-            stubResponse("/v2/mounts/types", "/responses/wardrobe/mount_types_ids.json")
+            stubResponse("/v2/mounts/types", "/responses/wardrobe/mount/mount_types_ids.json")
 
             // when
             val typesIds = mountsClient.getMountTypesIds()
@@ -91,7 +91,7 @@ internal class MountsClientTest : BaseWiremockTest() {
 
             stubResponse(
                 "/v2/mounts/types?ids=griffon,jackal",
-                "/responses/wardrobe/mount_types.json",
+                "/responses/wardrobe/mount/mount_types.json",
                 language = lang
             )
 
@@ -116,7 +116,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val lang = ApiLanguage.EN
 
-            stubResponse("/v2/mounts/types?ids=all", "/responses/wardrobe/mount_types_all.json", language = lang)
+            stubResponse("/v2/mounts/types?ids=all", "/responses/wardrobe/mount/mount_types_all.json", language = lang)
 
             // when
             val mountTypes = mountsClient.getAllMountTypes(lang)
@@ -129,7 +129,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             // given
             val id = "i_do_not_exist"
 
-            stubResponse("/v2/mounts/types?ids=i_do_not_exist", "/responses/wardrobe/mount_type_error.json", responseStatus = 404)
+            stubResponse("/v2/mounts/types?ids=i_do_not_exist", "/responses/wardrobe/mount/mount_type_error.json", responseStatus = 404)
 
             // when
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountTypes(listOf(id)) }

@@ -1,10 +1,10 @@
-package io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin
+package io.github.kryszak.gwatlin.api.shared
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for mount skin's dye slot object
+ * Data model for dye slot object
  */
 @Serializable
 data class DyeSlot(

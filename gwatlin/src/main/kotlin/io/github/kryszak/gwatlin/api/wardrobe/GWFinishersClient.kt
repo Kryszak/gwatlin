@@ -1,7 +1,7 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.wardrobe.model.finisher.Finisher
-import io.github.kryszak.gwatlin.clients.items.FinishersClient
+import io.github.kryszak.gwatlin.clients.wardrobe.FinishersClient
 
 /**
  * Client for finishers endpoints. Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/finishers)

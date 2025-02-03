@@ -10,6 +10,7 @@ import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.http.config.HttpConfig
 import io.github.kryszak.gwatlin.http.exception.RetrieveError
 import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
+import kotlinx.serialization.SerializationException
 import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
@@ -66,10 +67,14 @@ internal open class BaseHttpClient(
             return failure.getException().message ?: "Unknown error."
         }
 
-        val error = json.decodeFromString(
-            RetrieveError.serializer(),
-            String(failure.getException().response.data)
-        )
-        return error.toString()
+        try {
+            val error = json.decodeFromString(
+                RetrieveError.serializer(),
+                String(failure.getException().response.data)
+            )
+            return error.toString()
+        } catch (e: SerializationException) {
+            return failure.getException().message ?: "Unknown error."
+        }
     }
 }

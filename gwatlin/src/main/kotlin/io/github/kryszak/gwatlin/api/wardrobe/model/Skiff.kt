@@ -1,17 +1,17 @@
-package io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin
+package io.github.kryszak.gwatlin.api.wardrobe.model
 
 import io.github.kryszak.gwatlin.api.shared.DyeSlot
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
- * Data model for mount skin object
+ * Data model for skiffs endpoint response
  */
 @Serializable
-data class MountSkin(
+data class Skiff(
     val id: Int,
     val name: String,
     val icon: String,
-    val mount: String,
-    @SerialName("dye_slots") val dyeSlots: List<DyeSlot> = listOf(),
+    @SerialName("dye_slots")
+    val dyeSlots: List<DyeSlot>,
 )

@@ -1,7 +1,9 @@
 package io.github.kryszak.gwatlin.api.miscellaneous
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
-import io.github.kryszak.gwatlin.api.miscellaneous.model.*
+import io.github.kryszak.gwatlin.api.miscellaneous.model.Icon
+import io.github.kryszak.gwatlin.api.miscellaneous.model.Quaggan
+import io.github.kryszak.gwatlin.api.miscellaneous.model.World
 import io.github.kryszak.gwatlin.clients.miscellaneous.MiscellaneousClient
 
 /**
@@ -34,24 +36,6 @@ class GWMiscellaneousClient {
      */
     fun getQuaggans(): List<Quaggan> {
         return miscellaneousClient.getQuaggans()
-    }
-
-    /**
-     * Returns all minis in the game
-     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/minis)
-     */
-    @JvmOverloads
-    fun getMinis(language: ApiLanguage? = null): List<Mini> {
-        return miscellaneousClient.getMinis(language)
-    }
-
-    /**
-     * Returns information about novelties that are available in-game
-     * Documentation can be found in the [GW2 Wiki](https://wiki.guildwars2.com/wiki/API:2/novelties)
-     */
-    @JvmOverloads
-    fun getNovelties(language: ApiLanguage? = null): List<Novelty> {
-        return miscellaneousClient.getNovelties(language)
     }
 
     /**
