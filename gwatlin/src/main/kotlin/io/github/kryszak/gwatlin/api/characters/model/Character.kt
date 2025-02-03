@@ -6,8 +6,10 @@ import io.github.kryszak.gwatlin.api.characters.model.character.Training
 import io.github.kryszak.gwatlin.api.characters.model.character.WvwAbility
 import io.github.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItem
 import io.github.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentTab
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import java.time.OffsetDateTime
 
 /**
  * Data model for consolidated character infos
@@ -22,9 +24,11 @@ data class Character(
     val level: Int,
     val guild: String? = null,
     val age: Int,
-    val created: String,
+    @Contextual
+    val created: OffsetDateTime,
+    @Contextual
     @SerialName("last_modified")
-    val lastModified: String? = null,
+    val lastModified: OffsetDateTime? = null,
     val deaths: Int,
     val title: Int? = null,
 

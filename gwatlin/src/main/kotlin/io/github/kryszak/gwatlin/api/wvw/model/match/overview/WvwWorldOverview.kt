@@ -1,9 +1,11 @@
 package io.github.kryszak.gwatlin.api.wvw.model.match.overview
 
-import kotlinx.serialization.SerialName
 import io.github.kryszak.gwatlin.api.wvw.model.match.WvwMatchAllWorlds
 import io.github.kryszak.gwatlin.api.wvw.model.match.WvwMatchWorldCount
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import java.time.OffsetDateTime
 
 /**
  * Data model for overview sub-endpoint
@@ -11,8 +13,10 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwWorldOverview(
         @SerialName("all_worlds") val allWorlds: WvwMatchAllWorlds,
-        @SerialName("end_time") val endTime: String,
+        @Contextual
+        @SerialName("end_time") val endTime: OffsetDateTime,
         val id: String,
-        @SerialName("start_time") val startTime: String,
-        val worlds: WvwMatchWorldCount
+        @Contextual
+        @SerialName("start_time") val startTime: OffsetDateTime,
+        val worlds: WvwMatchWorldCount,
 )
