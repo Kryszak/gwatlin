@@ -16,4 +16,5 @@ data class TraitSkill(
     val icon: String,
     val facts: List<Fact> = listOf(),
     @SerialName("traited_facts") val traitedFacts: List<@Serializable(with = TraitedFact.TraitedFactUnwrapSerializer::class) TraitedFact> = listOf(),
+    @SerialName("chat_link") val chatLink: String,
 )

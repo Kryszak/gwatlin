@@ -1,0 +1,38 @@
+[
+  {
+    "id": 14068,
+    "type": "GuildDecoration",
+    "output_item_id": 101359,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Scribe"
+    ],
+    "min_rating": 400,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 70933,
+        "count": 1
+      },
+      {
+        "item_id": 19712,
+        "count": 100
+      },
+      {
+        "item_id": 19685,
+        "count": 100
+      }
+    ],
+    "output_upgrade_id": 1277,
+    "chat_link": "[&CfQ2AAA=]",
+    "guild_ingredients": [
+      {
+        "upgrade_id": 661,
+        "count": 250
+      }
+    ]
+  }
+]

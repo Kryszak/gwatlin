@@ -97,6 +97,17 @@ internal class PvpClientTest : BaseWiremockTest() {
                         assertSoftly(tiers[0]) {
                             range shouldHaveSize 2
                         }
+                        assertSoftly(settings) {
+                            name shouldBe ""
+                            duration.shouldBeNull()
+                            scoring shouldBe "0F86D504-63C2-4465-80AA-C278E1CB7800"
+                            assertSoftly(tiers[0]) {
+                                range shouldBe listOf(1,1)
+                                color.shouldBeNull()
+                                type.shouldBeNull()
+                                name.shouldBeNull()
+                            }
+                        }
                     }
                     assertSoftly(scorings[0]) {
                         id shouldBe "0F86D504-63C2-4465-80AA-C278E1CB7800"
@@ -146,7 +157,10 @@ internal class PvpClientTest : BaseWiremockTest() {
                         duration.shouldBeNull()
                         scoring shouldBe "16F74226-5DDF-4FE7-ADC5-72A49DA30572"
                         assertSoftly(tiers[0]) {
-                            range shouldHaveSize 2
+                            range shouldBe listOf(1,1)
+                            color shouldBe "#E5E4E2"
+                            type shouldBe "Rank"
+                            name shouldBe "Platinum"
                         }
                     }
                     assertSoftly(scorings[0]) {

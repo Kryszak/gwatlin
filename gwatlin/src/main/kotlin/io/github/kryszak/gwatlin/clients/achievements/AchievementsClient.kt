@@ -2,17 +2,12 @@ package io.github.kryszak.gwatlin.clients.achievements
 
 import io.github.kryszak.gwatlin.api.achievement.model.Achievement
 import io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
-import io.github.kryszak.gwatlin.api.achievement.model.daily.DailyAchievementList
 import io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class AchievementsClient : BaseHttpClient() {
 
     private val baseEndpoint: String = "/achievements"
-
-    private val dailyEndpoint: String = "$baseEndpoint/daily"
-
-    private val dailyTomorrowEndpoint: String = "$dailyEndpoint/tomorrow"
 
     private val groupEndpoint: String = "$baseEndpoint/groups"
 
@@ -25,14 +20,6 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
         val params = ids.joinToString(",")
         return getRequest("$baseEndpoint?ids=$params")
-    }
-
-    fun getDailyAchievements(): DailyAchievementList {
-        return getRequest(dailyEndpoint)
-    }
-
-    fun getTomorrowDailyAchievements(): DailyAchievementList {
-        return getRequest(dailyTomorrowEndpoint)
     }
 
     fun getAchievementGroupIds(): List<String> {

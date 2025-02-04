@@ -3,7 +3,10 @@ package io.github.kryszak.e2e.items
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
-import io.github.kryszak.gwatlin.api.items.*
+import io.github.kryszak.gwatlin.api.items.GWItemStatsClient
+import io.github.kryszak.gwatlin.api.items.GWItemsClient
+import io.github.kryszak.gwatlin.api.items.GWMaterialsClient
+import io.github.kryszak.gwatlin.api.items.GWRecipesClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class ItemsE2ETests : BaseE2ESpec() {

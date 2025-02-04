@@ -1,16 +1,13 @@
 package io.github.kryszak.gwatlin.api.guild
 
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLog
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLogTreasury
-import io.github.kryszak.gwatlin.api.guild.model.log.GuildLogUpgrade
-import io.github.kryszak.gwatlin.api.guild.model.log.UpgradeAction
+import io.github.kryszak.gwatlin.api.guild.model.log.*
 import io.github.kryszak.gwatlin.clients.guild.GuildAuthenticatedClient
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.datatest.withData
-import io.kotest.matchers.collections.shouldContain
+import io.kotest.matchers.collections.shouldContainAll
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
@@ -28,11 +25,16 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                 mapOf(
                     "without since" to GuildLogTestInput(
                         "",
-                        expectedGuildLogWithoutSince(),
+                        listOf(
+                            expectedGuildLogWithoutSince(),
+                            expectedGuildLogRankChange(),
+                            expectedGuildJoin(),
+                            expectedGuildKick()
+                        ),
                         stubGuildLogResponseWithoutSince()
                     ),
                     "since 1285" to GuildLogTestInput(
-                        "1285", expectedGuildLogWithSince(), stubGuildLogResponseWithSince()
+                        "1285", listOf(expectedGuildLogWithSince()), stubGuildLogResponseWithSince()
                     )
                 )
             ) { (since, expectedGuildLog, stubbing) ->
@@ -41,9 +43,10 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
 
                 // when
                 val guildLogs = guildAuthClient.getGuildLog(guildId, since)
+                guildLogs.forEach(::println)
 
                 // then
-                guildLogs shouldContain expectedGuildLog
+                guildLogs shouldContainAll expectedGuildLog
             }
         }
 
@@ -122,7 +125,13 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                 size shouldBe 100
                 coins shouldBe 100039
                 note shouldBe "put extra siege/seaweed here please"
-                inventory shouldHaveSize 6
+                assertSoftly(inventory) {
+                    it shouldHaveSize 6
+                    assertSoftly(it[2]!!) {
+                        id shouldBe 12138
+                        count shouldBe 250
+                    }
+                }
             }
         }
 
@@ -141,7 +150,13 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
             assertSoftly(treasury[0]) {
                 itemId shouldBe 12138
                 count shouldBe 200
-                neededBy shouldHaveSize 1
+                assertSoftly(neededBy) {
+                    it shouldHaveSize 1
+                    assertSoftly(it[0]) {
+                        upgradeId shouldBe 42
+                        count shouldBe 1000
+                    }
+                }
             }
         }
 
@@ -161,6 +176,10 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                 id shouldBe 1
                 members shouldHaveSize 2
                 name shouldBe "1v1 Me Bro"
+                assertSoftly(members[0]) {
+                    name shouldBe "Lawton.9413"
+                    role shouldBe "Captain"
+                }
                 assertSoftly(aggregate) {
                     wins shouldBe 3
                     losses shouldBe 0
@@ -187,6 +206,12 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                         red shouldBe 344
                         blue shouldBe 500
                     }
+                }
+                assertSoftly(seasons[0]) {
+                    id shouldBe "44B85826-B5ED-4890-8C77-82DDF9F2CF2B"
+                    wins shouldBe 1
+                    losses shouldBe 0
+                    rating shouldBe 1437
                 }
             }
         }
@@ -229,9 +254,16 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
     private fun expectedGuildLogWithSince() =
         GuildLogUpgrade(1286, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", UpgradeAction.QUEUED, 364)
 
+    private fun expectedGuildLogRankChange() = GuildLogRankChange(12861, "2015-12-23T00:48:20.539Z", "Lawton Campbell.9413", "Lawton Campbell.9413", "OldRank", "NewRank")
+
+    private fun expectedGuildJoin() = GuildLogJoined(12862, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413")
+
+    private fun expectedGuildKick() =
+        GuildLogKicked(12863, "2015-12-10T23:58:49.106Z", "Lawton Campbell.9413", "Lawton Campbell.9412")
+
     data class GuildLogTestInput(
         val since: String,
-        val expectedGuildLogs: GuildLog,
-        val stubbing: () -> Unit
+        val expectedGuildLogs: List<GuildLog>,
+        val stubbing: () -> Unit,
     )
 }

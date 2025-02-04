@@ -38,5 +38,27 @@
     "upgrade_id": 364,
     "action": "queued",
     "user": "Lawton Campbell.9413"
+  },
+  {
+    "id": 12861,
+    "time": "2015-12-23T00:48:20.539Z",
+    "type": "rank_change",
+    "user": "Lawton Campbell.9413",
+    "changed_by": "Lawton Campbell.9413",
+    "old_rank": "OldRank",
+    "new_rank": "NewRank"
+  },
+  {
+    "id": 12862,
+    "time": "2015-12-10T23:58:49.106Z",
+    "type": "joined",
+    "user": "Lawton Campbell.9413"
+  },
+  {
+    "id": 12863,
+    "time": "2015-12-10T23:58:49.106Z",
+    "type": "kicked",
+    "user": "Lawton Campbell.9413",
+    "kicked_by": "Lawton Campbell.9412"
   }
 ]

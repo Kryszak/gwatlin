@@ -46,4 +46,6 @@ enum class SkillSlot {
     HEAL,
     @SerialName("Toolbelt")
     TOOLBELT,
+    @SerialName("Transform_1")
+    TRANSFORM_1,
 }

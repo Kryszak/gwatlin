@@ -122,38 +122,6 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
         }
 
-        should("Get list of daily achievements") {
-            // given
-            stubResponse("/v2/achievements/daily", "/responses/achievements/daily_achievements.json")
-
-            // when
-            val dailyAchievementList = achievementsClient.getDailyAchievements()
-
-            // then
-            assertSoftly(dailyAchievementList.pve[0]) {
-                id shouldBe 1837
-                level.min shouldBe 1
-                level.max shouldBe 80
-                requiredAccess shouldContainExactly listOf("GuildWars2", "HeartOfThorns", "PathOfFire")
-            }
-        }
-
-        should("Get list of tomorrow daily achievements") {
-            // given
-            stubResponse("/v2/achievements/daily/tomorrow", "/responses/achievements/daily_tomorrow_achievements.json")
-
-            // when
-            val tomorrowDailyAchievementList = achievementsClient.getDailyTomorrowAchievements()
-
-            // then
-            assertSoftly(tomorrowDailyAchievementList.pve[0]) {
-                id shouldBe 3880
-                level.min shouldBe 80
-                level.max shouldBe 80
-                requiredAccess shouldContainExactly listOf("GuildWars2", "HeartOfThorns", "PathOfFire")
-            }
-        }
-
         should("Get list of achievement group ids") {
             // given
             stubResponse("/v2/achievements/groups", "/responses/achievements/achievement_group_ids.json")
