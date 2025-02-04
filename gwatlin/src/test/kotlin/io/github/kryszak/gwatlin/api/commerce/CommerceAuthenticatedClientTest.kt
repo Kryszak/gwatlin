@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.commerce
 
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -36,7 +37,7 @@ internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
             // given
             stubResponse(
                 "/v2/commerce/transactions/history/buys",
-                "/responses/commerce/transactions_historic.json",
+                "/responses/commerce/authenticated/transactions_historic.json",
                 apiKey = apiKey
             )
 
@@ -57,11 +58,33 @@ internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged historic buys") {
+            // given
+            stubResponse(
+                "/v2/commerce/transactions/history/buys?page=0&page_size=10",
+                "/responses/commerce/authenticated/transactions_historic.json",
+                apiKey = apiKey,
+                pageParams = PageParameters(10, 1, 2, 2)
+            )
+
+            // when
+            val pagedTransactions = client.getPagedHistoricBuys(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTransactions) {
+                it.data shouldHaveSize 2
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 1
+                it.resultCount shouldBe 2
+                it.resultTotal shouldBe 2
+            }
+        }
+
         should("Get historic sells") {
             // given
             stubResponse(
                 "/v2/commerce/transactions/history/sells",
-                "/responses/commerce/transactions_historic.json",
+                "/responses/commerce/authenticated/transactions_historic.json",
                 apiKey = apiKey
             )
 
@@ -82,11 +105,33 @@ internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged historic sells") {
+            // given
+            stubResponse(
+                "/v2/commerce/transactions/history/sells?page=0&page_size=10",
+                "/responses/commerce/authenticated/transactions_historic.json",
+                apiKey = apiKey,
+                pageParams = PageParameters(10, 1, 2, 2)
+            )
+
+            // when
+            val pagedTransactions = client.getPagedHistoricSells(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTransactions) {
+                it.data shouldHaveSize 2
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 1
+                it.resultCount shouldBe 2
+                it.resultTotal shouldBe 2
+            }
+        }
+
         should("Get current buys") {
             // given
             stubResponse(
                 "/v2/commerce/transactions/current/buys",
-                "/responses/commerce/transactions_current.json",
+                "/responses/commerce/authenticated/transactions_current.json",
                 apiKey = apiKey
             )
 
@@ -107,11 +152,33 @@ internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged current buys") {
+            // given
+            stubResponse(
+                "/v2/commerce/transactions/current/buys?page=0&page_size=10",
+                "/responses/commerce/authenticated/transactions_current.json",
+                apiKey = apiKey,
+                pageParams = PageParameters(10, 1, 2, 2)
+            )
+
+            // when
+            val pagedTransactions = client.getPagedCurrentBuys(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTransactions) {
+                it.data shouldHaveSize 2
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 1
+                it.resultCount shouldBe 2
+                it.resultTotal shouldBe 2
+            }
+        }
+
         should("Get current sells") {
             // given
             stubResponse(
                 "/v2/commerce/transactions/current/sells",
-                "/responses/commerce/transactions_current.json",
+                "/responses/commerce/authenticated/transactions_current.json",
                 apiKey = apiKey
             )
 
@@ -129,6 +196,28 @@ internal class CommerceAuthenticatedClientTest : BaseWiremockTest() {
                     created shouldBe OffsetDateTime.parse("2015-05-09T17:13:26+00:00")
                     purchased.shouldBeNull()
                 }
+            }
+        }
+
+        should("Get paged current sells") {
+            // given
+            stubResponse(
+                "/v2/commerce/transactions/current/sells?page=0&page_size=10",
+                "/responses/commerce/authenticated/transactions_current.json",
+                apiKey = apiKey,
+                pageParams = PageParameters(10, 1, 2, 2)
+            )
+
+            // when
+            val pagedTransactions = client.getPagedCurrentSells(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTransactions) {
+                it.data shouldHaveSize 2
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 1
+                it.resultCount shouldBe 2
+                it.resultTotal shouldBe 2
             }
         }
     }

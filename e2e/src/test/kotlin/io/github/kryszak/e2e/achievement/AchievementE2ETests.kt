@@ -26,6 +26,9 @@ internal class AchievementE2ETests : BaseE2ESpec() {
                     client.getAchievementCategories(categoryIds)
                 }
             }
+            expect("Fetch paged achievement categories") {
+                shouldNotThrowAny { client.getPagedAchievementCategories(PageRequest(0, 10)) }
+            }
             expect("Achievement groups is fetched correctly") {
                 val groupIds = client.getAchievementGroupIds()
                 shouldNotThrowAny {
