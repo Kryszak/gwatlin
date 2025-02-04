@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.TraitsClient
 
 /**
@@ -38,5 +40,13 @@ class GWTraitsClient {
     @JvmOverloads
     fun getTraits(ids: List<Int>, language: ApiLanguage? = null): List<Trait> {
         return traitsClient.getTraits(ids, language)
+    }
+
+    /**
+     * Retrieves paged traits
+     * @param language of returned text (default=en)
+     */
+    fun getPagedTraits(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Trait>> {
+        return traitsClient.getPagedTraits(pageRequest, language)
     }
 }

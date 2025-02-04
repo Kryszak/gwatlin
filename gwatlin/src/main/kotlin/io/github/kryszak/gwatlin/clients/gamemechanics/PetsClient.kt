@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.clients.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class PetsClient : BaseHttpClient() {
@@ -11,12 +14,16 @@ internal class PetsClient : BaseHttpClient() {
         return getRequest(petsEndpoint)
     }
 
-    fun getPets(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Pet> {
+    fun getPets(ids: List<Int>, language: ApiLanguage?): List<Pet> {
         val params = ids.joinToString(",")
         return getRequest("$petsEndpoint?ids=$params", language)
     }
 
-    fun getAllPets(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Pet> {
+    fun getAllPets(language: ApiLanguage?): List<Pet> {
         return getRequest("$petsEndpoint?ids=all", language)
+    }
+
+    fun getPagedPets(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Pet>> {
+        return getPagedRequest("$petsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
     }
 }

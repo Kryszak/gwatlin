@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.clients.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.Currency
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class CurrencyClient : BaseHttpClient() {
@@ -23,5 +25,9 @@ internal class CurrencyClient : BaseHttpClient() {
     fun getCurrencies(ids: List<Int>, language: ApiLanguage?): List<Currency> {
         val params = ids.joinToString(",")
         return getRequest("$currenciesEndpoint?ids=$params", language)
+    }
+
+    fun getPagedCurrencies(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Currency>> {
+        return getPagedRequest("$currenciesEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
     }
 }

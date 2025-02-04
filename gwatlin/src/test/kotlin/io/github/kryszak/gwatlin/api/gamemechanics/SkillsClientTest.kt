@@ -5,6 +5,7 @@ import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.*
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.SkillType
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.datatest.withData
@@ -130,6 +131,27 @@ internal class SkillsClientTest : BaseWiremockTest() {
                         type shouldBe "Range"
                         icon shouldBe "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png"
                     }
+                }
+            }
+
+            should("Get paged skills") {
+                // given
+                stubResponse(
+                    "/v2/skills?page=0&page_size=10",
+                    "/responses/gamemechanics/skills/skills_paged.json",
+                    pageParams = PageParameters(10, 431, 10, 4305)
+                )
+
+                // when
+                val pagedSkills = skillsClient.getPagedSkills(PageRequest(0, 10))
+
+                // then
+                assertSoftly(pagedSkills) {
+                    it.data shouldHaveSize 10
+                    it.pageSize shouldBe 10
+                    it.pageTotal shouldBe 431
+                    it.resultCount shouldBe 10
+                    it.resultTotal shouldBe 4305
                 }
             }
         }

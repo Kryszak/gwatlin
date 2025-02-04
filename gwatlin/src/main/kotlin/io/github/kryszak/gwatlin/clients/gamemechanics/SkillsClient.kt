@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.clients.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class SkillsClient : BaseHttpClient() {
@@ -11,8 +14,12 @@ internal class SkillsClient : BaseHttpClient() {
         return getRequest(skillsEndpoint)
     }
 
-    fun getSkills(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Skill> {
+    fun getSkills(ids: List<Int>, language: ApiLanguage?): List<Skill> {
         val params = ids.joinToString(",")
         return getRequest("$skillsEndpoint?ids=$params", language)
+    }
+
+    fun getPagedSkills(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skill>> {
+        return getPagedRequest("$skillsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
     }
 }
