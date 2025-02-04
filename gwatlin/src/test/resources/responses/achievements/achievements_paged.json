@@ -1,0 +1,378 @@
+[
+  {
+    "id": 3147,
+    "name": "Walking on Fire",
+    "description": "Don't look down!",
+    "requirement": "Navigate the lava tunnel in Ember Bay.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": 3219,
+    "icon": "https://render.guildwars2.com/file/4A5834E40CDC6A0C44085B1F697565002D71CD47/1228226.png",
+    "name": "Daily Recommended Fractal—Scale 69",
+    "description": "",
+    "requirement": "Complete the fractal dungeon at this difficulty in the Fractals of the Mists through the portal in Lion's Arch.\nRequires the mastery Follows Advice.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Daily"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 0
+      }
+    ],
+    "prerequisites": [
+      2248
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 79800,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 3721,
+    "name": "Daily Desert Vista Viewer",
+    "description": "Always on the lookout for a good view.",
+    "requirement": "View a vista in one of the following locations: Crystal Oasis, the Desert Highlands, Elon Riverlands, the Desolation, or the Domain of Vabbi.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Daily"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 0
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 83524,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 3491,
+    "name": "Lake Doric Master",
+    "description": "",
+    "requirement": "Collect all  items to prove your mastery over Lake Doric.",
+    "locked_text": "Acquire a Sentient Seed by combining the four sentient creations from Season 3. Misplaced items can be obtained from Grandmaster Craftsman Hobbs in Lion's Arch.",
+    "type": "ItemSet",
+    "flags": [
+      "Pvp",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Skin",
+        "id": 7102
+      },
+      {
+        "type": "Item",
+        "id": 81773
+      },
+      {
+        "type": "Item",
+        "id": 81983
+      },
+      {
+        "type": "Item",
+        "id": 81747
+      },
+      {
+        "type": "Item",
+        "id": 82065
+      },
+      {
+        "type": "Item",
+        "id": 81934
+      },
+      {
+        "type": "Item",
+        "id": 81982
+      },
+      {
+        "type": "Item",
+        "id": 81712
+      },
+      {
+        "type": "Item",
+        "id": 81976
+      },
+      {
+        "type": "Item",
+        "id": 82021
+      },
+      {
+        "type": "Item",
+        "id": 81702
+      },
+      {
+        "type": "Item",
+        "id": 81817
+      },
+      {
+        "type": "Item",
+        "id": 81700
+      },
+      {
+        "type": "Skin",
+        "id": 7135
+      },
+      {
+        "type": "Skin",
+        "id": 7118
+      },
+      {
+        "type": "Item",
+        "id": 81686
+      }
+    ],
+    "tiers": [
+      {
+        "count": 16,
+        "points": 3
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 82029,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 4914,
+    "name": "Coming Home",
+    "description": "Journal: Coming Home Completed",
+    "requirement": "Complete Coming Home.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": 2921,
+    "name": "Chuka and Champawat II: Ambush",
+    "description": "Your first attempt to craft the legendary precursor Tigris has been modestly successful, but it has not yet yielded the weapon you ultimately desire. This journey has only just begun. Find a teacher, research your procedures, and hone your skills before you try a second time.",
+    "requirement": "",
+    "locked_text": "",
+    "type": "ItemSet",
+    "flags": [
+      "IgnoreNearlyComplete",
+      "Pvp",
+      "Hidden",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Item",
+        "id": 78697
+      },
+      {
+        "type": "Item",
+        "id": 78610
+      },
+      {
+        "type": "Item",
+        "id": 78232
+      },
+      {
+        "type": "Item",
+        "id": 78270
+      },
+      {
+        "type": "Item",
+        "id": 78631
+      },
+      {
+        "type": "Item",
+        "id": 78176
+      },
+      {
+        "type": "Item",
+        "id": 78218
+      },
+      {
+        "type": "Item",
+        "id": 78693
+      },
+      {
+        "type": "Item",
+        "id": 78653
+      },
+      {
+        "type": "Item",
+        "id": 78605
+      },
+      {
+        "type": "Item",
+        "id": 78265
+      },
+      {
+        "type": "Item",
+        "id": 78254
+      },
+      {
+        "type": "Item",
+        "id": 78639
+      },
+      {
+        "type": "Item",
+        "id": 78679
+      },
+      {
+        "type": "Item",
+        "id": 78134
+      },
+      {
+        "type": "Item",
+        "id": 78330
+      }
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      },
+      {
+        "count": 16,
+        "points": 2
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 78643,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 4979,
+    "name": "Stay Frosty",
+    "description": "",
+    "requirement": "Complete the Shiverpeaks Pass Strike Mission.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 3
+      }
+    ]
+  },
+  {
+    "id": 4467,
+    "name": "Rolling Competitor: Jormag's Fang",
+    "description": "",
+    "requirement": "Complete 15 laps of the roller beetle race in Snowden Drifts. (This achievement can be completed in the race event or adventure.)",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      },
+      {
+        "count": 15,
+        "points": 2
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 89299,
+        "count": 10
+      }
+    ]
+  },
+  {
+    "id": 4219,
+    "name": "[FTT 202] Intermediate Dynamics—Area Damage Level 2",
+    "description": "",
+    "requirement": "Built / Area Damage Level 1 Turrets",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "RepairOnLogin",
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 10,
+        "points": 1
+      }
+    ],
+    "prerequisites": [
+      4216
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 87995,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 3479,
+    "icon": "https://render.guildwars2.com/file/1B3B7103E5FFFEB4B94137CFEF6AC5A528AE1BA8/1730771.png",
+    "name": "Daily Siren's Landing: Kingpin Killer",
+    "description": "Take care of them.",
+    "requirement": "Take down the Event Kingpins around Siren's Landing.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Daily"
+    ],
+    "tiers": [
+      {
+        "count": 5,
+        "points": 0
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 81628,
+        "count": 3
+      }
+    ]
+  }
+]

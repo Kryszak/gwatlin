@@ -19,6 +19,10 @@ internal open class BaseWiremockTest : ShouldSpec() {
     private val languageHeader = "Accept-Language"
     private val authorizationHeader = "Authorization"
     private val schemaVersionHeader = "X-Schema-Version"
+    private val pageSizeHeader = "X-Page-Size"
+    private val pageTotalHeader = "X-Page-Total"
+    private val resultCountHeader = "X-Result-Count"
+    private val resultTotalHeader = "X-Result-Total"
 
     private val wiremockServer = WireMockServer(
         WireMockConfiguration.options()
@@ -35,7 +39,8 @@ internal open class BaseWiremockTest : ShouldSpec() {
         language: ApiLanguage? = null,
         apiKey: String? = null,
         schemaVersion: String? = null,
-        responseStatus: Int = 200
+        responseStatus: Int = 200,
+        pageParams: PageParameters? = null,
     ) {
         wiremockServer.get {
             url equalTo requestUrl
@@ -54,10 +59,25 @@ internal open class BaseWiremockTest : ShouldSpec() {
         } returnsJson {
             statusCode = responseStatus
             body = parseResponseText(responseFile)
+            withBuilder {
+                pageParams?.let {
+                    withHeader(pageSizeHeader, it.pageSize.toString())
+                    withHeader(pageTotalHeader, it.pageTotal.toString())
+                    withHeader(resultCountHeader, it.resultCount.toString())
+                    withHeader(resultTotalHeader, it.resultTotal.toString())
+                }
+            }
         }
     }
 
     private fun parseResponseText(file: String): String {
         return ResourcesUtil.readResource(file)
     }
+
+    internal data class PageParameters(
+        val pageSize: Int,
+        val pageTotal: Int,
+        val resultCount: Int,
+        val resultTotal: Int,
+    )
 }

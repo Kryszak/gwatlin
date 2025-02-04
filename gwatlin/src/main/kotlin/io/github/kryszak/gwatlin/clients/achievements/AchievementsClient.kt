@@ -3,6 +3,8 @@ package io.github.kryszak.gwatlin.clients.achievements
 import io.github.kryszak.gwatlin.api.achievement.model.Achievement
 import io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class AchievementsClient : BaseHttpClient() {
@@ -22,6 +24,10 @@ internal class AchievementsClient : BaseHttpClient() {
         return getRequest("$baseEndpoint?ids=$params")
     }
 
+    fun getPagedAchievements(page: PageRequest): PagedResponse<List<Achievement>> {
+        return getPagedRequest("$baseEndpoint?page=${page.page}&page_size=${page.size}")
+    }
+
     fun getAchievementGroupIds(): List<String> {
         return getRequest(groupEndpoint)
     }
@@ -35,6 +41,10 @@ internal class AchievementsClient : BaseHttpClient() {
         return getRequest("$groupEndpoint?ids=$params")
     }
 
+    fun getPagedAchievementGroups(pageRequest: PageRequest): PagedResponse<List<AchievementGroup>> {
+        return getPagedRequest("$groupEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+    }
+
     fun getAchievementCategoryIds(): List<Int> {
         return getRequest(categoryEndpoint)
     }
@@ -46,5 +56,9 @@ internal class AchievementsClient : BaseHttpClient() {
     fun getAchievementCategories(ids: List<Int>): List<AchievementCategory> {
         val params = ids.joinToString(",")
         return getRequest("$categoryEndpoint?ids=$params")
+    }
+
+    fun getPagedAchievementCategories(pageRequest: PageRequest): PagedResponse<List<AchievementCategory>> {
+        return getPagedRequest("$categoryEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
     }
 }
