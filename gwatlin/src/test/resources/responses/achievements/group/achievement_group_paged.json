@@ -1,0 +1,210 @@
+[
+  {
+    "id": "18DB115A-8637-4290-A636-821362A3C4A8",
+    "name": "Daily",
+    "description": "Achievements that change on a daily basis.",
+    "order": 1,
+    "categories": [
+      79,
+      88,
+      98,
+      102,
+      162,
+      201,
+      213,
+      221,
+      233,
+      238,
+      243,
+      250,
+      321,
+      330,
+      367
+    ]
+  },
+  {
+    "id": "1CAFA333-0C2B-4782-BC4C-7DA30E9CE289",
+    "name": "Raids",
+    "description": "Achievements related to raids.",
+    "order": 22,
+    "categories": [
+      124,
+      134,
+      138,
+      155,
+      195,
+      215,
+      229,
+      438
+    ]
+  },
+  {
+    "id": "345BA893-F022-40B8-A881-DB7422D95AE5",
+    "name": "Secrets of the Obscure",
+    "description": "Achievements to track all of your accomplishments in the skies above Tyria.",
+    "order": 16,
+    "categories": [
+      357,
+      358,
+      364,
+      365,
+      366,
+      369,
+      403,
+      404,
+      409,
+      416
+    ]
+  },
+  {
+    "id": "3A185655-09A5-4F6C-8B21-F1FCF62587B1",
+    "name": "Side Stories",
+    "description": "Achievements related to ongoing events throughout Tyria.",
+    "order": 20,
+    "categories": [
+      59,
+      137,
+      175,
+      177,
+      180,
+      184,
+      186,
+      220,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      338,
+      422
+    ]
+  },
+  {
+    "id": "43167413-6A41-4407-8A42-EEB33825EDC5",
+    "name": "Janthir Wilds",
+    "description": "Achievements to track all of your accomplishments in the wilds of Janthir.",
+    "order": 15,
+    "categories": [
+      423,
+      425,
+      426,
+      428,
+      429,
+      430,
+      431,
+      432,
+      439,
+      441
+    ]
+  },
+  {
+    "id": "45410F60-AB66-4146-A0F7-CE99250C4CB0",
+    "name": "Collections",
+    "description": "Achievements for collecting items and unlocking skins in the wardrobe.",
+    "order": 23,
+    "categories": [
+      75,
+      76,
+      77,
+      114,
+      117,
+      118,
+      125,
+      173,
+      237
+    ]
+  },
+  {
+    "id": "4E6A6CE7-B131-40BB-81A3-235CDBACDAA9",
+    "name": "Fractals of the Mists",
+    "description": "Achievements related to the Fractals of the Mists.",
+    "order": 23,
+    "categories": [
+      30,
+      148,
+      170,
+      258,
+      261,
+      356,
+      418
+    ]
+  },
+  {
+    "id": "56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47",
+    "name": "General",
+    "description": "Achievements for accomplishments throughout Central Tyria.",
+    "order": 6,
+    "categories": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      14,
+      16,
+      27,
+      47,
+      51,
+      58,
+      69,
+      80,
+      133,
+      169,
+      206,
+      245,
+      247,
+      284,
+      361
+    ]
+  },
+  {
+    "id": "65B4B678-607E-4D97-B458-076C3E96A810",
+    "name": "Heart of Thorns",
+    "description": "Achievements for accomplishments throughout the jungle.",
+    "order": 19,
+    "categories": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      116
+    ]
+  },
+  {
+    "id": "9B66605F-6589-4CBD-8E19-5368C9F33338",
+    "name": "World vs. World",
+    "description": "Achievements related to the WvW game mode.",
+    "order": 11,
+    "categories": [
+      13,
+      60,
+      225,
+      346,
+      440
+    ]
+  }
+]

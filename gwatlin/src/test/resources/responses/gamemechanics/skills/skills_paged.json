@@ -1,0 +1,603 @@
+[
+  {
+    "name": "Throw Gunk",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 900
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 6,
+        "dmg_multiplier": 0.3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 120
+      },
+      {
+        "text": "Combo Field",
+        "type": "ComboField",
+        "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+        "field_type": "Ethereal"
+      }
+    ],
+    "description": "Throw gunk at target area to inflict a random condition.",
+    "icon": "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [
+      "GroundTargeted",
+      "NoUnderwater"
+    ],
+    "id": 1110,
+    "chat_link": "[&BlYEAAA=]"
+  },
+  {
+    "name": "Branch Leap",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 450
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 2.5
+      },
+      {
+        "text": "Combo Finisher",
+        "type": "ComboFinisher",
+        "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+        "percent": 100,
+        "finisher_type": "Leap"
+      }
+    ],
+    "description": "Use the branch to leap at your foe.",
+    "icon": "https://render.guildwars2.com/file/15E0A1080FE0AE70ABD305F4DD045139F1216C37/102945.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 1115,
+    "chat_link": "[&BlsEAAA=]"
+  },
+  {
+    "name": "Throw Chain",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 900
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.75
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/397A613651BFCA2832B6469CE34735580A2C120E/102844.png",
+        "duration": 2,
+        "status": "Immobile",
+        "description": "Unable to move; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+        "duration": 6,
+        "status": "Crippled",
+        "description": "Movement speed decreased by 50%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Combo Finisher",
+        "type": "ComboFinisher",
+        "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+        "percent": 100,
+        "finisher_type": "Projectile"
+      }
+    ],
+    "description": "Throw a chain to cripple and immobilize your foe.",
+    "icon": "https://render.guildwars2.com/file/07364259014FCB3F01C7F31808C140720DACC70A/102946.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1118,
+    "chat_link": "[&Bl4EAAA=]"
+  },
+  {
+    "name": "Consume Plasma",
+    "facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/DFB4D1B50AE4D6A275B349E15B179261EE3EB0AF/102854.png",
+        "duration": 10,
+        "status": "Aegis",
+        "description": "Block the next incoming attack; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/DFB4D1B50AE4D6A275B349E15B179261EE3EB0AF/102854.png",
+        "duration": 2,
+        "status": "Aegis",
+        "description": "Block the next incoming attack; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/4FDAC2113B500104121753EF7E026E45C141E94D/1938787.png",
+        "duration": 3,
+        "status": "Alacrity",
+        "description": "Skills recharge faster.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/4FDAC2113B500104121753EF7E026E45C141E94D/1938787.png",
+        "duration": 2,
+        "status": "Alacrity",
+        "description": "Skills recharge faster.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+        "duration": 10,
+        "status": "Fury",
+        "description": "Critical chance increased; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+        "duration": 10,
+        "status": "Might",
+        "description": "Increased outgoing damage; stacks intensity.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+        "duration": 10,
+        "status": "Protection",
+        "description": "Incoming strike damage decreased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+        "duration": 2,
+        "status": "Protection",
+        "description": "Incoming strike damage decreased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/D4AB6401A6D6917C3D4F230764452BCCE1035B0D/1012835.png",
+        "duration": 3,
+        "status": "Quickness",
+        "description": "Skills and actions are faster.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/D4AB6401A6D6917C3D4F230764452BCCE1035B0D/1012835.png",
+        "duration": 2,
+        "status": "Quickness",
+        "description": "Skills and actions are faster.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+        "duration": 10,
+        "status": "Regeneration",
+        "description": "Gain health every second; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+        "duration": 5,
+        "status": "Regeneration",
+        "description": "Gain health every second; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/50BAC1B8E10CFAB9E749A5D910D4A9DCF29EBB7C/961398.png",
+        "duration": 3,
+        "status": "Resistance",
+        "description": "Nondamaging conditions currently on you are ineffective; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/50BAC1B8E10CFAB9E749A5D910D4A9DCF29EBB7C/961398.png",
+        "duration": 1,
+        "status": "Resistance",
+        "description": "Nondamaging conditions currently on you are ineffective; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/D104A6B9344A2E2096424A3C300E46BC2926E4D7/2440718.png",
+        "duration": 5,
+        "status": "Resolution",
+        "description": "Incoming condition damage decreased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+        "duration": 5,
+        "status": "Stability",
+        "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+        "duration": 1,
+        "status": "Stability",
+        "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+        "duration": 10,
+        "status": "Swiftness",
+        "description": "Movement speed increased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/58E92EBAF0DB4DA7C4AC04D9B22BCA5ECF0100DE/102843.png",
+        "duration": 10,
+        "status": "Vigor",
+        "description": "Endurance regeneration increased by 50%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/58E92EBAF0DB4DA7C4AC04D9B22BCA5ECF0100DE/102843.png",
+        "duration": 5,
+        "status": "Vigor",
+        "description": "Endurance regeneration increased by 50%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Gain all boons.",
+    "icon": "https://render.guildwars2.com/file/BED8F4C37CA1D040CEA5381E082E155DB5D295F7/102949.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1123,
+    "chat_link": "[&BmMEAAA=]"
+  },
+  {
+    "name": "Eat Egg",
+    "facts": [
+      {
+        "text": "Healing",
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+        "value": 2132,
+        "target": "Healing"
+      },
+      {
+        "text": "Initiative Gain",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "value": 8
+      }
+    ],
+    "description": "Restore health and initiative.",
+    "icon": "https://render.guildwars2.com/file/23A3644A7C25F9ACCD64C00AE90858C2C2F2A61C/102934.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1125,
+    "chat_link": "[&BmUEAAA=]"
+  },
+  {
+    "name": "Ice Shard Stab",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 170
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 2
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+        "duration": 6,
+        "status": "Chilled",
+        "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Stab and chill your foe.",
+    "icon": "https://render.guildwars2.com/file/53CFF0A54AD6FC3C6959722DCF2B9AB2C1ADF754/102953.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1129,
+    "chat_link": "[&BmkEAAA=]"
+  },
+  {
+    "name": "Mace Head Crack",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 170
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/9AE125E930C92FEA0DD99E7EBAEDE4CF5EC556B6/433474.png",
+        "duration": 3,
+        "status": "Daze",
+        "description": "Unable to activate skills.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Daze your foe.",
+    "icon": "https://render.guildwars2.com/file/EA28344BCD136298D5011EF553763C097C0A09E0/102955.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 1131,
+    "chat_link": "[&BmsEAAA=]"
+  },
+  {
+    "name": "Healing Seed",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 15
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 240
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+        "duration": 3,
+        "status": "Regeneration",
+        "description": "Gain health every second; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Conditions Removed",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "value": 1
+      },
+      {
+        "text": "Interval",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+        "duration": 1
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 5
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      },
+      {
+        "text": "Combo Field",
+        "type": "ComboField",
+        "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+        "field_type": "Water"
+      }
+    ],
+    "description": "Periodically grants regeneration and removes conditions from you and your allies.",
+    "icon": "https://render.guildwars2.com/file/C9052DC9C2AF805EC14C903D5EA0536E0A1A243F/102961.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 1139,
+    "chat_link": "[&BnMEAAA=]"
+  },
+  {
+    "name": "Skull Fear",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 600
+      },
+      {
+        "text": "Unblockable",
+        "type": "Unblockable",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "value": true
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/30307A6E766D74B6EB09EDA12A4A2DE50E4D76F4/102869.png",
+        "duration": 2,
+        "status": "Fear",
+        "description": "Involuntary retreat; unable to act; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/30307A6E766D74B6EB09EDA12A4A2DE50E4D76F4/102869.png",
+        "duration": 2,
+        "status": "Fear",
+        "description": "Involuntary retreat; unable to act; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/30307A6E766D74B6EB09EDA12A4A2DE50E4D76F4/102869.png",
+        "duration": 1,
+        "status": "Fear",
+        "description": "Involuntary retreat; unable to act; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      }
+    ],
+    "description": "Strike fear into nearby foes.",
+    "icon": "https://render.guildwars2.com/file/44B30CD10A3AA30A80A7A64CE2EF0B942CFF9BFF/102963.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1141,
+    "chat_link": "[&BnUEAAA=]"
+  },
+  {
+    "name": "Blinding Tuft",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 120
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+        "duration": 3,
+        "status": "Blinded",
+        "description": "Next outgoing attack misses; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3BD4670638470439F3325B444FAF7D5FA620CCE5/62777.png",
+        "duration": 3,
+        "status": "Stealth",
+        "description": "Currently invisible. Ends if you deal damage.",
+        "apply_count": 1
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      }
+    ],
+    "description": "Throw a handful of hair, vanishing in stealth and blinding nearby foes.",
+    "icon": "https://render.guildwars2.com/file/08956AFCA1FECE4E5F28A17CA068A2A134A697E5/102970.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [],
+    "id": 1148,
+    "chat_link": "[&BnwEAAA=]"
+  }
+]

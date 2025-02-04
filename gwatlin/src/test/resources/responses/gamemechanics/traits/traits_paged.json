@@ -1,0 +1,598 @@
+[
+  {
+    "id": 214,
+    "tier": 2,
+    "order": 1,
+    "name": "Raging Storm",
+    "description": "Critically striking a foe grants fury. Gain ferocity while under the effects of fury.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 8
+      },
+      {
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "value": 180,
+        "target": "CritDamage"
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+        "duration": 4,
+        "status": "Fury",
+        "description": "Critical chance increased; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 360
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
+  },
+  {
+    "id": 221,
+    "tier": 1,
+    "order": 0,
+    "name": "Zephyr's Speed",
+    "description": "Your chance to critically strike is increased. While attuned to air, your movement speed is also increased.",
+    "slot": "Minor",
+    "facts": [
+      {
+        "text": "Movement Speed Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "percent": 25
+      },
+      {
+        "text": "Critical Chance Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/C2CEA567E0C43C199C782809544721AA12A6DF0A/2229323.png",
+        "percent": 5
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/9B55449FC8EF093FE4925DDE9BF41B5A6298BAAA/1012279.png"
+  },
+  {
+    "id": 222,
+    "tier": 2,
+    "order": 0,
+    "name": "Electric Discharge",
+    "description": "Strike your target with a bolt of lightning when attuning to air.<br><c=@reminder>Also triggers on overload skills.</c>",
+    "slot": "Minor",
+    "facts": [
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.35
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.05
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+        "duration": 8,
+        "status": "Vulnerability",
+        "description": "Damage and condition damage taken are increased; stacks intensity.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+        "duration": 6,
+        "status": "Vulnerability",
+        "description": "Damage and condition damage taken are increased; stacks intensity.",
+        "apply_count": 8
+      },
+      {
+        "text": "Critical Damage Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "percent": 100
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 900
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 1
+      },
+      {
+        "text": "Combat Only",
+        "type": "NoData",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/F4622EE8300028599369D4084EA7A2774D250DEA/1012280.png"
+  },
+  {
+    "id": 223,
+    "tier": 3,
+    "order": 0,
+    "name": "Aeromancer's Training",
+    "description": "Gain ferocity, and gain additional ferocity while attuned to air. Air weapon skills get a reduced recharge time.",
+    "slot": "Minor",
+    "facts": [
+      {
+        "text": "Recharge Reduced",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+        "percent": 20
+      },
+      {
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "value": 150,
+        "target": "CritDamage"
+      },
+      {
+        "text": "Additional Ferocity",
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "value": 150,
+        "target": "CritDamage"
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/B07EBE9F0136026A2C710C1405C528DB4AC37936/2175041.png"
+  },
+  {
+    "id": 224,
+    "tier": 1,
+    "order": 1,
+    "name": "One with Air",
+    "description": "Gain superspeed when attuning to air.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+        "duration": 3,
+        "status": "Superspeed",
+        "description": "Movement speed is greatly increased. Maximum duration: 10s",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+        "duration": 3,
+        "status": "Superspeed",
+        "description": "Movement speed is greatly increased. Maximum duration: 10s",
+        "apply_count": 1
+      }
+    ],
+    "traited_facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/E04392C3D8ED985125973AEB99D8460C483263F9/103458.png",
+        "duration": 2,
+        "status": "Superspeed",
+        "description": "Movement speed is greatly increased. Maximum duration: 10s",
+        "apply_count": 1,
+        "requires_trait": 1503,
+        "overrides": 1
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/200BAEAD2FCD181E102556B02AF5F326EC583DD0/1012271.png"
+  },
+  {
+    "id": 226,
+    "tier": 3,
+    "order": 0,
+    "name": "Bolt to the Heart",
+    "description": "Deal increased strike damage to enemies below the health threshold.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Health Threshold",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "percent": 50
+      },
+      {
+        "text": "Damage Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "percent": 20
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/3E4E727D6D23DFEF4205F272A15E2136799DE291/1012276.png"
+  },
+  {
+    "id": 227,
+    "tier": 1,
+    "order": 0,
+    "name": "Zephyr's Boon",
+    "description": "Grant boons to allies you grant auras to.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+        "duration": 5,
+        "status": "Fury",
+        "description": "Critical chance increased; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+        "duration": 5,
+        "status": "Swiftness",
+        "description": "Movement speed increased by 33%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/0542900C005EB41CEDFAF003D91A9104D479A848/1012270.png"
+  },
+  {
+    "id": 229,
+    "tier": 2,
+    "order": 0,
+    "name": "Inscription",
+    "description": "Gain boons upon casting a <c=@abilitytype>glyph</c> based on your attunement.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/50BAC1B8E10CFAB9E749A5D910D4A9DCF29EBB7C/961398.png",
+        "duration": 3,
+        "status": "Resistance",
+        "description": "Nondamaging conditions currently on you are ineffective; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+        "duration": 10,
+        "status": "Might",
+        "description": "Increased outgoing damage; stacks intensity.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+          "status": "Fire Attunement",
+          "description": "Cast fire spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+        "duration": 6,
+        "status": "Might",
+        "description": "Increased outgoing damage; stacks intensity.",
+        "apply_count": 3,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+          "status": "Fire Attunement",
+          "description": "Cast fire spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+        "duration": 10,
+        "status": "Regeneration",
+        "description": "Gain health every second; stacks duration.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png",
+          "status": "Water Attunement",
+          "description": "Cast water spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/F69996772B9E18FD18AD0AABAB25D7E3FC42F261/102835.png",
+        "duration": 5,
+        "status": "Regeneration",
+        "description": "Gain health every second; stacks duration.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png",
+          "status": "Water Attunement",
+          "description": "Cast water spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+        "duration": 10,
+        "status": "Swiftness",
+        "description": "Movement speed increased by 33%; stacks duration.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png",
+          "status": "Air Attunement",
+          "description": "Cast air spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+        "duration": 3,
+        "status": "Protection",
+        "description": "Incoming strike damage decreased by 33%; stacks duration.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png",
+          "status": "Earth Attunement",
+          "description": "Cast earth spells."
+        }
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/0157D1D40CF9B505B907DB95149F767A6FDB09DD/1012273.png"
+  },
+  {
+    "id": 232,
+    "tier": 1,
+    "order": 2,
+    "name": "Ferocious Winds",
+    "description": "Gain ferocity based on your precision.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Attribute Conversion",
+        "type": "BuffConversion",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "percent": 7,
+        "source": "Precision",
+        "target": "CritDamage"
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/A0EB166CD43079B2F7206ED305FD6C3D049BB704/1012272.png"
+  },
+  {
+    "id": 238,
+    "tier": 3,
+    "order": 0,
+    "name": "Evasive Arcana",
+    "description": "Cast a skill when you dodge based on your attunement.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Combat Only",
+        "type": "NoData",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Flame Burst",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Damage",
+            "type": "Damage",
+            "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+            "hit_count": 1,
+            "dmg_multiplier": 1
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+            "duration": 6,
+            "status": "Burning",
+            "description": "Deals damage every second; stacks intensity.",
+            "apply_count": 3
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Radius",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Burn nearby foes.",
+        "icon": "https://render.guildwars2.com/file/610424237E18EA90F0D824454104355309FF5DDA/102959.png",
+        "flags": [],
+        "id": 5794,
+        "chat_link": "[&BqIWAAA=]"
+      },
+      {
+        "name": "Cleansing Wave",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Healing",
+            "type": "AttributeAdjust",
+            "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+            "value": 1558,
+            "target": "Healing"
+          },
+          {
+            "text": "Conditions Removed",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+            "value": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Heal yourself and nearby allies, curing a condition.",
+        "icon": "https://render.guildwars2.com/file/180D2C7CDB69E301401509737CEC35F90D57E358/102819.png",
+        "flags": [],
+        "id": 5793,
+        "chat_link": "[&BqEWAAA=]"
+      },
+      {
+        "name": "Blinding Flash",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+            "duration": 5,
+            "status": "Blinded",
+            "description": "Next outgoing attack misses; stacks duration.",
+            "apply_count": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Blind nearby foes.",
+        "icon": "https://render.guildwars2.com/file/A9B10F55FF0922633B0CCC3C42AB7C093372A8E2/102831.png",
+        "flags": [],
+        "id": 5792,
+        "chat_link": "[&BqAWAAA=]"
+      },
+      {
+        "name": "Shock Wave",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Damage",
+            "type": "Damage",
+            "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+            "hit_count": 1,
+            "dmg_multiplier": 0.5
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+            "duration": 20,
+            "status": "Bleeding",
+            "description": "Deals damage every second; stacks intensity.",
+            "apply_count": 1
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+            "duration": 2,
+            "status": "Crippled",
+            "description": "Movement speed decreased by 50%; stacks duration.",
+            "apply_count": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          },
+          {
+            "text": "Combo Finisher",
+            "type": "ComboFinisher",
+            "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+            "percent": 100,
+            "finisher_type": "Blast"
+          }
+        ],
+        "description": "Create a shock wave that bleeds and cripples nearby foes.",
+        "icon": "https://render.guildwars2.com/file/69CFF22DD8599E35164720AC02A5F2044C33C7DD/103136.png",
+        "flags": [],
+        "id": 5795,
+        "chat_link": "[&BqMWAAA=]"
+      }
+    ],
+    "specialization": 37,
+    "icon": "https://render.guildwars2.com/file/0B46175A2DCC7C396EEAA34B50DB6204390F0FE8/1012288.png"
+  }
+]

@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.homestead
 
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
@@ -74,6 +75,27 @@ internal class HomesteadClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged decorations") {
+            // given
+            stubResponse(
+                "/v2/homestead/decorations?page=0&page_size=10",
+                "/responses/homestead/decorations/decoration_paged.json",
+                pageParams = PageParameters(10, 70, 10, 692)
+            )
+
+            // when
+            val pagedGlyphs = client.getPagedDecorations(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedGlyphs) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 70
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 692
+            }
+        }
+
         should("Get decoration category ids") {
             // given
             stubResponse(
@@ -131,6 +153,27 @@ internal class HomesteadClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged decoration categories") {
+            // given
+            stubResponse(
+                "/v2/homestead/decorations/categories?page=0&page_size=10",
+                "/responses/homestead/decorations/categories/categories_paged.json",
+                pageParams = PageParameters(10, 3, 10, 26)
+            )
+
+            // when
+            val pagedGlyphs = client.getPagedDecorationCategories(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedGlyphs) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 3
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 26
+            }
+        }
+
         should("Get glyph ids") {
             // given
             stubResponse("/v2/homestead/glyphs", "/responses/homestead/glyphs/glyph_ids.json")
@@ -182,6 +225,27 @@ internal class HomesteadClientTest : BaseWiremockTest() {
                     itemId shouldBe 90805
                     slot shouldBe "mining"
                 }
+            }
+        }
+
+        should("Get paged glyphs") {
+            // given
+            stubResponse(
+                "/v2/homestead/glyphs?page=0&page_size=10",
+                "/responses/homestead/glyphs/glyphs_paged.json",
+                pageParams = PageParameters(10, 4, 10, 36)
+            )
+
+            // when
+            val pagedGlyphs = client.getPagedGlyphs(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedGlyphs) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 4
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 36
             }
         }
     }

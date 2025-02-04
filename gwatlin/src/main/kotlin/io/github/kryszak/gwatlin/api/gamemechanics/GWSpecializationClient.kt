@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.specialization.Specialization
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.SpecializationClient
 
 /**
@@ -39,5 +41,16 @@ class GWSpecializationClient {
     @JvmOverloads
     fun getSpecializations(ids: List<Int>, language: ApiLanguage? = null): List<Specialization> {
         return specializationClient.getSpecializations(ids, language)
+    }
+
+    /**
+     * Retrieves paged specializations
+     * @param language of returned text (default=en)
+     */
+    fun getPagedSpecializations(
+        pageRequest: PageRequest,
+        language: ApiLanguage? = null,
+    ): PagedResponse<List<Specialization>> {
+        return specializationClient.getPagedSpecializations(pageRequest, language)
     }
 }

@@ -1,0 +1,627 @@
+[
+  {
+    "id": 1,
+    "name": "Dye Remover",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 15,
+      "contrast": 1.25,
+      "hue": 38,
+      "saturation": 0.28125,
+      "lightness": 1.44531,
+      "rgb": [
+        124,
+        108,
+        83
+      ]
+    },
+    "leather": {
+      "brightness": -8,
+      "contrast": 1,
+      "hue": 34,
+      "saturation": 0.3125,
+      "lightness": 1.09375,
+      "rgb": [
+        65,
+        49,
+        29
+      ]
+    },
+    "metal": {
+      "brightness": 5,
+      "contrast": 1.05469,
+      "hue": 38,
+      "saturation": 0.101562,
+      "lightness": 1.36719,
+      "rgb": [
+        96,
+        91,
+        83
+      ]
+    },
+    "fur": {
+      "brightness": 15,
+      "contrast": 1.25,
+      "hue": 38,
+      "saturation": 0.28125,
+      "lightness": 1.44531,
+      "rgb": [
+        124,
+        108,
+        83
+      ]
+    },
+    "categories": []
+  },
+  {
+    "id": 2,
+    "name": "Black",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "leather": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "metal": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "fur": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "item": 20358,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Rare"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Chalk",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
+      ]
+    },
+    "leather": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
+      ]
+    },
+    "metal": {
+      "brightness": 10,
+      "contrast": 1.28906,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.36719,
+      "rgb": [
+        84,
+        81,
+        81
+      ]
+    },
+    "fur": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
+      ]
+    },
+    "item": 20360,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Uncommon"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gray",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 3,
+      "contrast": 1.05469,
+      "hue": 340,
+      "saturation": 0.0234375,
+      "lightness": 1.13281,
+      "rgb": [
+        72,
+        69,
+        70
+      ]
+    },
+    "leather": {
+      "brightness": 3,
+      "contrast": 1.05469,
+      "hue": 340,
+      "saturation": 0.0234375,
+      "lightness": 1.13281,
+      "rgb": [
+        72,
+        69,
+        70
+      ]
+    },
+    "metal": {
+      "brightness": 5,
+      "contrast": 1.28906,
+      "hue": 340,
+      "saturation": 0.0234375,
+      "lightness": 1.28906,
+      "rgb": [
+        66,
+        63,
+        64
+      ]
+    },
+    "fur": {
+      "brightness": 3,
+      "contrast": 1.05469,
+      "hue": 340,
+      "saturation": 0.0234375,
+      "lightness": 1.13281,
+      "rgb": [
+        72,
+        69,
+        70
+      ]
+    },
+    "item": 20363,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Common"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Pitch",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": -8,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        48,
+        46,
+        49
+      ]
+    },
+    "leather": {
+      "brightness": -8,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        48,
+        46,
+        49
+      ]
+    },
+    "metal": {
+      "brightness": -8,
+      "contrast": 1.09375,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.17188,
+      "rgb": [
+        44,
+        42,
+        45
+      ]
+    },
+    "fur": {
+      "brightness": -8,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        48,
+        46,
+        49
+      ]
+    },
+    "item": 20366,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Uncommon"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Celestial",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 52,
+      "contrast": 1.44531,
+      "hue": 10,
+      "saturation": 0.0234375,
+      "lightness": 1.5625,
+      "rgb": [
+        211,
+        208,
+        207
+      ]
+    },
+    "leather": {
+      "brightness": 52,
+      "contrast": 1.44531,
+      "hue": 10,
+      "saturation": 0.0234375,
+      "lightness": 1.5625,
+      "rgb": [
+        211,
+        208,
+        207
+      ]
+    },
+    "metal": {
+      "brightness": 52,
+      "contrast": 1.91406,
+      "hue": 10,
+      "saturation": 0.0234375,
+      "lightness": 1.91406,
+      "rgb": [
+        197,
+        193,
+        192
+      ]
+    },
+    "fur": {
+      "brightness": 52,
+      "contrast": 1.44531,
+      "hue": 10,
+      "saturation": 0.0234375,
+      "lightness": 1.5625,
+      "rgb": [
+        211,
+        208,
+        207
+      ]
+    },
+    "item": 20359,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Rare"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Ocean",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": -21,
+      "contrast": 1,
+      "hue": 188,
+      "saturation": 1.32812,
+      "lightness": 0.976562,
+      "rgb": [
+        0,
+        51,
+        73
+      ]
+    },
+    "leather": {
+      "brightness": -18,
+      "contrast": 1,
+      "hue": 188,
+      "saturation": 1.13281,
+      "lightness": 1.05469,
+      "rgb": [
+        0,
+        54,
+        72
+      ]
+    },
+    "metal": {
+      "brightness": -18,
+      "contrast": 1,
+      "hue": 188,
+      "saturation": 0.78125,
+      "lightness": 1.01562,
+      "rgb": [
+        0,
+        44,
+        57
+      ]
+    },
+    "fur": {
+      "brightness": -21,
+      "contrast": 1,
+      "hue": 188,
+      "saturation": 1.32812,
+      "lightness": 0.976562,
+      "rgb": [
+        0,
+        51,
+        73
+      ]
+    },
+    "item": 20368,
+    "categories": [
+      "Blue",
+      "Vibrant",
+      "Uncommon"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Robin",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 9,
+      "contrast": 1.05469,
+      "hue": 192,
+      "saturation": 1.13281,
+      "lightness": 1.09375,
+      "rgb": [
+        1,
+        106,
+        135
+      ]
+    },
+    "leather": {
+      "brightness": 9,
+      "contrast": 1.05469,
+      "hue": 192,
+      "saturation": 0.976562,
+      "lightness": 1.09375,
+      "rgb": [
+        12,
+        102,
+        128
+      ]
+    },
+    "metal": {
+      "brightness": 9,
+      "contrast": 1.05469,
+      "hue": 192,
+      "saturation": 0.78125,
+      "lightness": 1.09375,
+      "rgb": [
+        26,
+        98,
+        118
+      ]
+    },
+    "fur": {
+      "brightness": 9,
+      "contrast": 1.05469,
+      "hue": 192,
+      "saturation": 1.13281,
+      "lightness": 1.09375,
+      "rgb": [
+        1,
+        106,
+        135
+      ]
+    },
+    "item": 20365,
+    "categories": [
+      "Blue",
+      "Vibrant",
+      "Uncommon"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Blue Rose",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": -5,
+      "contrast": 1,
+      "hue": 192,
+      "saturation": 1.32812,
+      "lightness": 0.976562,
+      "rgb": [
+        0,
+        76,
+        109
+      ]
+    },
+    "leather": {
+      "brightness": -6,
+      "contrast": 1,
+      "hue": 192,
+      "saturation": 1.13281,
+      "lightness": 1.05469,
+      "rgb": [
+        0,
+        74,
+        102
+      ]
+    },
+    "metal": {
+      "brightness": -5,
+      "contrast": 1,
+      "hue": 192,
+      "saturation": 0.859375,
+      "lightness": 1.05469,
+      "rgb": [
+        0,
+        70,
+        91
+      ]
+    },
+    "fur": {
+      "brightness": -5,
+      "contrast": 1,
+      "hue": 192,
+      "saturation": 1.32812,
+      "lightness": 0.976562,
+      "rgb": [
+        0,
+        76,
+        109
+      ]
+    },
+    "item": 20367,
+    "categories": [
+      "Blue",
+      "Vibrant",
+      "Uncommon"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sky",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 22,
+      "contrast": 1.25,
+      "hue": 196,
+      "saturation": 0.742188,
+      "lightness": 1.32812,
+      "rgb": [
+        54,
+        130,
+        160
+      ]
+    },
+    "leather": {
+      "brightness": 22,
+      "contrast": 1.25,
+      "hue": 196,
+      "saturation": 0.664062,
+      "lightness": 1.32812,
+      "rgb": [
+        61,
+        129,
+        156
+      ]
+    },
+    "metal": {
+      "brightness": 22,
+      "contrast": 1.28906,
+      "hue": 196,
+      "saturation": 0.546875,
+      "lightness": 1.32812,
+      "rgb": [
+        65,
+        123,
+        146
+      ]
+    },
+    "fur": {
+      "brightness": 22,
+      "contrast": 1.25,
+      "hue": 196,
+      "saturation": 0.742188,
+      "lightness": 1.32812,
+      "rgb": [
+        54,
+        130,
+        160
+      ]
+    },
+    "item": 20370,
+    "categories": [
+      "Blue",
+      "Vibrant",
+      "Rare"
+    ]
+  }
+]

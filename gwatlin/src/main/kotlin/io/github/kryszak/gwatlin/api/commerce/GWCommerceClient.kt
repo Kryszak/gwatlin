@@ -3,6 +3,8 @@ package io.github.kryszak.gwatlin.api.commerce
 import io.github.kryszak.gwatlin.api.commerce.model.exchange.CoinToGemExchange
 import io.github.kryszak.gwatlin.api.commerce.model.listing.CommerceListing
 import io.github.kryszak.gwatlin.api.commerce.model.price.Price
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.commerce.CommerceClient
 
 /**
@@ -25,6 +27,13 @@ class GWCommerceClient {
      */
     fun getCommerceListings(ids: List<Int>): List<CommerceListing> {
         return commerceClient.getCommerceListings(ids)
+    }
+
+    /**
+     * Returns paged current buy and sell listing from the trading post
+     */
+    fun getPagedCommerceListings(pageRequest: PageRequest): PagedResponse<List<CommerceListing>> {
+        return commerceClient.getPagedCommerceListings(pageRequest)
     }
 
     /**
@@ -53,5 +62,12 @@ class GWCommerceClient {
      */
     fun getPrices(ids: List<Int>): List<Price> {
         return commerceClient.getPrices(ids)
+    }
+
+    /**
+     * Returns paged current aggregated buy and sells listing information form the trading post.
+     */
+    fun getPagedPrices(pageRequest: PageRequest): PagedResponse<List<Price>> {
+        return commerceClient.getPagedPrices(pageRequest)
     }
 }

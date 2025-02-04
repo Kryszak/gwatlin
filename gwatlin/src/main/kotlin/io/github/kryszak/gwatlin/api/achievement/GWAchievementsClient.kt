@@ -3,6 +3,8 @@ package io.github.kryszak.gwatlin.api.achievement
 import io.github.kryszak.gwatlin.api.achievement.model.Achievement
 import io.github.kryszak.gwatlin.api.achievement.model.category.AchievementCategory
 import io.github.kryszak.gwatlin.api.achievement.model.group.AchievementGroup
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.achievements.AchievementsClient
 
 /**
@@ -29,6 +31,13 @@ class GWAchievementsClient {
      */
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
         return achievementsClient.getAchievementsByIds(ids)
+    }
+
+    /**
+     * Retrieves paged achievements list
+     */
+    fun getPagedAchievements(page: PageRequest): PagedResponse<List<Achievement>> {
+        return achievementsClient.getPagedAchievements(page)
     }
 
     /**
@@ -60,6 +69,13 @@ class GWAchievementsClient {
     }
 
     /**
+     * Retrieves paged list of achievement groups
+     */
+    fun getPagedAchievementGroups(pageRequest: PageRequest): PagedResponse<List<AchievementGroup>> {
+        return achievementsClient.getPagedAchievementGroups(pageRequest)
+    }
+
+    /**
      * Retrieves list of all existing achievement category ids
      * @return list of achievement category ids
      */
@@ -85,5 +101,12 @@ class GWAchievementsClient {
      */
     fun getAchievementCategories(ids: List<Int>): List<AchievementCategory> {
         return achievementsClient.getAchievementCategories(ids)
+    }
+
+    /**
+     * Returns paged achievement categories
+     */
+    fun getPagedAchievementCategories(pageRequest: PageRequest): PagedResponse<List<AchievementCategory>> {
+        return achievementsClient.getPagedAchievementCategories(pageRequest)
     }
 }

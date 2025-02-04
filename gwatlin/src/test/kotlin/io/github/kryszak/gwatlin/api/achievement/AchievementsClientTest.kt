@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.achievement
 
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
@@ -122,9 +123,31 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
         }
 
+        should("Get paged achievements") {
+            // given
+            val pageRequest = PageRequest(0, 10)
+            stubResponse(
+                "/v2/achievements?page=${pageRequest.page}&page_size=${pageRequest.size}",
+                "/responses/achievements/achievements_paged.json",
+                pageParams = PageParameters(10, 644, 10, 6439)
+            )
+
+            // when
+            val pagedAchievements = achievementsClient.getPagedAchievements(pageRequest)
+
+            // then
+            assertSoftly(pagedAchievements) {
+                it.data shouldHaveSize pageRequest.size
+                it.pageSize shouldBe pageRequest.size
+                it.pageTotal shouldBe 644
+                it.resultCount shouldBe pageRequest.size
+                it.resultTotal shouldBe 6439
+            }
+        }
+
         should("Get list of achievement group ids") {
             // given
-            stubResponse("/v2/achievements/groups", "/responses/achievements/achievement_group_ids.json")
+            stubResponse("/v2/achievements/groups", "/responses/achievements/group/achievement_group_ids.json")
 
             // when
             val achievementGroupIdsList = achievementsClient.getAchievementGroupIds()
@@ -138,7 +161,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             val id = "65B4B678-607E-4D97-B458-076C3E96A810"
             stubResponse(
                 "/v2/achievements/groups/65B4B678-607E-4D97-B458-076C3E96A810",
-                "/responses/achievements/achievement_group.json"
+                "/responses/achievements/group/achievement_group.json"
             )
 
             // when
@@ -163,7 +186,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             )
             stubResponse(
                 "/v2/achievements/groups?ids=${ids.joinToString(",")}",
-                "/responses/achievements/achievement_groups.json"
+                "/responses/achievements/group/achievement_groups.json"
             )
 
             // when
@@ -196,9 +219,31 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged achievement groups") {
+            // given
+            val pageRequest = PageRequest(0, 10)
+            stubResponse(
+                "/v2/achievements/groups?page=${pageRequest.page}&page_size=${pageRequest.size}",
+                "/responses/achievements/group/achievement_group_paged.json",
+                pageParams = PageParameters(10, 2, 10, 18)
+            )
+
+            // when
+            val pagedAchievementGroups = achievementsClient.getPagedAchievementGroups(pageRequest)
+
+            // then
+            assertSoftly(pagedAchievementGroups) {
+                it.data shouldHaveSize pageRequest.size
+                it.pageSize shouldBe pageRequest.size
+                it.pageTotal shouldBe 2
+                it.resultCount shouldBe pageRequest.size
+                it.resultTotal shouldBe 18
+            }
+        }
+
         should("Get achievement category ids") {
             // given
-            stubResponse("/v2/achievements/categories", "/responses/achievements/achievement_category_ids.json")
+            stubResponse("/v2/achievements/categories", "/responses/achievements/category/achievement_category_ids.json")
 
             // when
             val achievementCategoryIdsList = achievementsClient.getAchievementCategoryIds()
@@ -210,7 +255,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
         should("Get achievement category") {
             // given
             val id = 1
-            stubResponse("/v2/achievements/categories/1", "/responses/achievements/achievement_category.json")
+            stubResponse("/v2/achievements/categories/1", "/responses/achievements/category/achievement_category.json")
 
             // when
             val achievementCategory = achievementsClient.getAchievementCategory(id)
@@ -231,7 +276,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             val ids = listOf(5, 6, 7)
             stubResponse(
                 "/v2/achievements/categories?ids=${ids.joinToString(",")}",
-                "/responses/achievements/achievement_categories.json"
+                "/responses/achievements/category/achievement_categories.json"
             )
 
             // when
@@ -267,12 +312,34 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             }
         }
 
+        should("Get paged achievement categories") {
+            // given
+            val pageRequest = PageRequest(0, 10)
+            stubResponse(
+                "/v2/achievements/categories?page=${pageRequest.page}&page_size=${pageRequest.size}",
+                "/responses/achievements/category/achievement_categories_paged.json",
+                pageParams = PageParameters(10, 33, 10, 324)
+            )
+
+            // when
+            val pagedAchievementCategories = achievementsClient.getPagedAchievementCategories(pageRequest)
+
+            // then
+            assertSoftly(pagedAchievementCategories) {
+                it.data shouldHaveSize pageRequest.size
+                it.pageSize shouldBe pageRequest.size
+                it.pageTotal shouldBe 33
+                it.resultCount shouldBe pageRequest.size
+                it.resultTotal shouldBe 324
+            }
+        }
+
         should("Throw exception on non existing category") {
             // given
             val id = 1000
             stubResponse(
                 "/v2/achievements/categories/1000",
-                "/responses/achievements/achievement_category_error.json",
+                "/responses/achievements/category/achievement_category_error.json",
                 responseStatus = 404
             )
 

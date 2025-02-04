@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
@@ -121,6 +122,27 @@ internal class ColorClientTest : BaseWiremockTest() {
                     id shouldBe ids[2]
                     name shouldBe "Chalk"
                 }
+            }
+        }
+
+        should("Get paged dye colors") {
+            // given
+            stubResponse(
+                "/v2/colors?page=0&page_size=10",
+                "/responses/gamemechanics/colors/dye_color_paged.json",
+                pageParams = PageParameters(10, 65, 10, 643)
+            )
+
+            // when
+            val pagedColors = colorClient.getPagedColors(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedColors) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 65
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 643
             }
         }
     }

@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.Title
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.TitleClient
 
 /**
@@ -45,5 +47,13 @@ class GWTitlesClient {
      */
     fun getTitles(ids: List<Int>, language: ApiLanguage? = null): List<Title> {
         return titleClient.getTitles(ids, language)
+    }
+
+    /**
+     * Returns paged titles
+     * @param language of response
+     */
+    fun getPagedTitles(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Title>> {
+        return titleClient.getPagedTitles(pageRequest, language)
     }
 }

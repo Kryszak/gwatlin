@@ -4,6 +4,7 @@ import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.PrefixedBuff
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -97,6 +98,27 @@ internal class TraitsClientTest : BaseWiremockTest() {
                 id shouldBe 5794
                 chatLink shouldBe "[&BqIWAAA=]"
                 facts shouldHaveSize 5
+            }
+        }
+
+        should("Get paged traits") {
+            // given
+            stubResponse(
+                "/v2/traits?page=0&page_size=10",
+                "/responses/gamemechanics/traits/traits_paged.json",
+                pageParams = PageParameters(10, 90, 10, 891)
+            )
+
+            // when
+            val pagedTraits = traitsClient.getPagedTraits(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTraits) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 90
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 891
             }
         }
     }

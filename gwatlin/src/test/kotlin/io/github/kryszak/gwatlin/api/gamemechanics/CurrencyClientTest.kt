@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -84,6 +85,26 @@ internal class CurrencyClientTest : BaseWiremockTest() {
                     order shouldBe 104
                     icon shouldBe "https://render.guildwars2.com/file/A1BD345AD9192C3A585BE2F6CB0617C5A797A1E2/619317.png"
                 }
+            }
+        }
+        should("Get paged currencies") {
+            // given
+            stubResponse(
+                "/v2/currencies?page=0&page_size=10",
+                "/responses/gamemechanics/currencies/currencies_paged.json",
+                pageParams = PageParameters(10, 8, 10, 73)
+            )
+
+            // when
+            val pagedCurrencies = currencyClient.getPagedCurrencies(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedCurrencies) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 8
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 73
             }
         }
     }

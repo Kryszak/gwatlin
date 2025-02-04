@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -55,6 +56,27 @@ internal class PetsClientTest : BaseWiremockTest() {
 
             // then
             pets shouldHaveSize 55
+        }
+
+        should("Get paged pets") {
+            // given
+            stubResponse(
+                "/v2/pets?page=0&page_size=10",
+                "/responses/gamemechanics/pets/pets_paged.json",
+                pageParams = PageParameters(10, 7, 10, 63)
+            )
+
+            // when
+            val pagedPets = petsClient.getPagedPets(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedPets) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 7
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 63
+            }
         }
     }
 }

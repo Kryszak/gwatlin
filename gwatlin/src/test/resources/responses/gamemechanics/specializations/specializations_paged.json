@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "name": "Dueling",
+    "profession": "Mesmer",
+    "elite": false,
+    "minor_traits": [
+      706,
+      710,
+      707
+    ],
+    "major_traits": [
+      701,
+      705,
+      700,
+      1889,
+      1960,
+      708,
+      692,
+      1950,
+      704
+    ],
+    "icon": "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png",
+    "background": "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+  },
+  {
+    "id": 2,
+    "name": "Death Magic",
+    "profession": "Necromancer",
+    "elite": false,
+    "minor_traits": [
+      856,
+      839,
+      1929
+    ],
+    "major_traits": [
+      820,
+      857,
+      1922,
+      858,
+      860,
+      855,
+      842,
+      1940,
+      1694
+    ],
+    "icon": "https://render.guildwars2.com/file/16663C1CDF532AB0DCC0CB08951DD2F49351D5D4/1012008.png",
+    "background": "https://render.guildwars2.com/file/B3F92D581B0A036CABB51590E6E560B21708391F/1012067.png"
+  },
+  {
+    "id": 3,
+    "name": "Invocation",
+    "profession": "Revenant",
+    "elite": false,
+    "minor_traits": [
+      1778,
+      1758,
+      1769
+    ],
+    "major_traits": [
+      1732,
+      1761,
+      1784,
+      1774,
+      1760,
+      1781,
+      1749,
+      1791,
+      1719
+    ],
+    "icon": "https://render.guildwars2.com/file/2C4DCE5C0C255F32B51DCF9E4360106823EAF926/1012018.png",
+    "background": "https://render.guildwars2.com/file/B73FB47165CB20DE21B1FAE91FE22BDE29B6FB76/1012093.png"
+  },
+  {
+    "id": 4,
+    "name": "Strength",
+    "profession": "Warrior",
+    "elite": false,
+    "minor_traits": [
+      1446,
+      1448,
+      1453
+    ],
+    "major_traits": [
+      1447,
+      1451,
+      1444,
+      2000,
+      1338,
+      1449,
+      1437,
+      1454,
+      1440
+    ],
+    "icon": "https://render.guildwars2.com/file/0D48C40A1C042B0BC6DAA4B91AB272E5E90C934C/1012032.png",
+    "background": "https://render.guildwars2.com/file/09160450B40ED777650F632F2CE82504B90F5644/1012109.png"
+  },
+  {
+    "id": 5,
+    "name": "Druid",
+    "profession": "Ranger",
+    "elite": true,
+    "minor_traits": [
+      1874,
+      1862,
+      1992
+    ],
+    "major_traits": [
+      1868,
+      2016,
+      1935,
+      2053,
+      2001,
+      2056,
+      2057,
+      2058,
+      2055
+    ],
+    "weapon_trait": 1965,
+    "icon": "https://render.guildwars2.com/file/BE10CB10D8446208729934F3F1BD3A54BEED9AD6/1012013.png",
+    "background": "https://render.guildwars2.com/file/306D6ED9D3F09FF5552609EC7DA2046ECD114F90/1012077.png",
+    "profession_icon_big": "https://render.guildwars2.com/file/F910F8BBCAF80355FFDB264160C899594300D7B2/1128574.png",
+    "profession_icon": "https://render.guildwars2.com/file/033CFD3270277F38215AE60574BCC2000873BDFF/1128575.png"
+  },
+  {
+    "id": 6,
+    "name": "Explosives",
+    "profession": "Engineer",
+    "elite": false,
+    "minor_traits": [
+      432,
+      517,
+      429
+    ],
+    "major_traits": [
+      514,
+      525,
+      1882,
+      482,
+      1892,
+      1944,
+      1541,
+      505,
+      1947
+    ],
+    "icon": "https://render.guildwars2.com/file/7DCC0CC4CE0E550C36F37F65469FF3103E2F2DA5/1011989.png",
+    "background": "https://render.guildwars2.com/file/159455B54672DF9C9BEEC2EB13E05DB07E757E02/1012041.png"
+  },
+  {
+    "id": 7,
+    "name": "Daredevil",
+    "profession": "Thief",
+    "elite": true,
+    "minor_traits": [
+      1994,
+      1887,
+      1837
+    ],
+    "major_traits": [
+      1933,
+      2023,
+      1949,
+      1884,
+      1893,
+      1975,
+      1833,
+      1964,
+      2047
+    ],
+    "weapon_trait": 1957,
+    "icon": "https://render.guildwars2.com/file/F1985D4E1CE043D7145E030C0AC4CFDABED73A59/1012025.png",
+    "background": "https://render.guildwars2.com/file/B969F9B27EE82CBF0E4651FD0F760F702CB5FCED/1012101.png",
+    "profession_icon_big": "https://render.guildwars2.com/file/232D31C9A3076F6A6B41167FBDA7D50F70C82260/1128570.png",
+    "profession_icon": "https://render.guildwars2.com/file/CEA6755F350FAAE9A7D8796CF8CC10FA1E33081D/1128571.png"
+  },
+  {
+    "id": 8,
+    "name": "Marksmanship",
+    "profession": "Ranger",
+    "elite": false,
+    "minor_traits": [
+      1010,
+      1009,
+      1011
+    ],
+    "major_traits": [
+      1021,
+      1014,
+      986,
+      1001,
+      1000,
+      1070,
+      996,
+      1015,
+      1698
+    ],
+    "icon": "https://render.guildwars2.com/file/80FEB75663DAE60BAC59495671261C206C0BAFC3/1012014.png",
+    "background": "https://render.guildwars2.com/file/100CE796CC2318DA62D2189A02BAAD2AE91BCE1F/1012079.png"
+  },
+  {
+    "id": 9,
+    "name": "Retribution",
+    "profession": "Revenant",
+    "elite": false,
+    "minor_traits": [
+      1783,
+      1757,
+      1713
+    ],
+    "major_traits": [
+      1811,
+      1728,
+      1810,
+      1766,
+      1782,
+      1740,
+      1779,
+      1770,
+      1790
+    ],
+    "icon": "https://render.guildwars2.com/file/70B5F7E02769762D5FEE056D0136093BF3F580FF/1029933.png",
+    "background": "https://render.guildwars2.com/file/E6100E7B7704EEC632AD5B399C3BE8A84D7F7CED/1012095.png"
+  },
+  {
+    "id": 10,
+    "name": "Domination",
+    "profession": "Mesmer",
+    "elite": false,
+    "minor_traits": [
+      685,
+      694,
+      1941
+    ],
+    "major_traits": [
+      686,
+      682,
+      687,
+      693,
+      713,
+      712,
+      681,
+      680,
+      1688
+    ],
+    "icon": "https://render.guildwars2.com/file/4B61EA5997709A5DC1E46FF50CEDF2A13C1F0C3D/1012002.png",
+    "background": "https://render.guildwars2.com/file/2C436DDDC3244409EEBF470A0AE3ED7CED1F99C0/1012055.png"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Coin",
+    "description": "The primary currency of Tyria. Spent at vendors throughout the world.",
+    "order": 101,
+    "icon": "https://render.guildwars2.com/file/98457F504BA2FAC8457F532C4B30EDC23929ACF9/619316.png"
+  },
+  {
+    "id": 2,
+    "name": "Karma",
+    "description": "Earned through various activities. Spent at vendors throughout the world.",
+    "order": 102,
+    "icon": "https://render.guildwars2.com/file/94953FA23D3E0D23559624015DFEA4CFAA07F0E5/155026.png"
+  },
+  {
+    "id": 3,
+    "name": "Laurel",
+    "description": "Obtained from Wizard's Vault rewards. Used to purchase various rewards from laurel merchants.",
+    "order": 104,
+    "icon": "https://render.guildwars2.com/file/A1BD345AD9192C3A585BE2F6CB0617C5A797A1E2/619317.png"
+  },
+  {
+    "id": 4,
+    "name": "Gem",
+    "description": "Purchased and spent via the Black Lion Trading Company.",
+    "order": 100,
+    "icon": "https://render.guildwars2.com/file/220061640ECA41C0577758030357221B4ECCE62C/502065.png"
+  },
+  {
+    "id": 5,
+    "name": "Ascalonian Tear",
+    "description": "Earned in Ascalonian Catacombs. Spent in Lion's Arch to purchase rare and exotic gear, runes and sigils, crafting materials, and the \"Gift of Ascalon\" component used in creating legendary weapons.",
+    "order": 403,
+    "icon": "https://render.guildwars2.com/file/2AA9C0B030BE152B915E0174D7F0495FDA711C54/619318.png"
+  },
+  {
+    "id": 6,
+    "name": "Shard of Zhaitan",
+    "description": "Earned in the Ruined City of Arah. Spent in Lion's Arch to purchase rare and exotic gear, runes and sigils, crafting materials, and the \"Gift of Zhaitan\" component used in creating legendary weapons.",
+    "order": 410,
+    "icon": "https://render.guildwars2.com/file/06083C4F7321512918E23D57B999F04E94C8D9A3/619319.png"
+  },
+  {
+    "id": 7,
+    "name": "Fractal Relic",
+    "description": "Earned and spent in Fractals of the Mists. Also used as a crafting ingredient.",
+    "order": 400,
+    "icon": "https://render.guildwars2.com/file/0204DAD0D40674035F9F5F5270043C3207EEA7E8/619320.png"
+  },
+  {
+    "id": 9,
+    "name": "Seal of Beetletun",
+    "description": "Earned in Caudecus's Manor. Spent in Lion's Arch to purchase rare and exotic gear, runes and sigils, crafting materials, and the \"Gift of the Nobleman\" component used in creating legendary weapons.",
+    "order": 404,
+    "icon": "https://render.guildwars2.com/file/C97B0607A6DB1FA1469D1DBBF2F107A057F8A313/619322.png"
+  },
+  {
+    "id": 10,
+    "name": "Manifesto of the Moletariate",
+    "description": "Earned in Sorrow's Embrace. Spent in Lion's Arch to purchase rare and exotic gear, runes and sigils, crafting materials, and the \"Gift of the Forgeman\" component used in creating legendary weapons.",
+    "order": 406,
+    "icon": "https://render.guildwars2.com/file/B83A4ED528FC237D4D1862CDD0250B773EAB36AA/619323.png"
+  },
+  {
+    "id": 11,
+    "name": "Deadly Bloom",
+    "description": "Earned in Twilight Arbor. Spent in Lion's Arch to purchase rare and exotic gear, runes and sigils, crafting materials, and the \"Gift of Thorns\" component used in creating legendary weapons.",
+    "order": 405,
+    "icon": "https://render.guildwars2.com/file/F6F4F39212AF3324223D73BAA807026BD863997C/619324.png"
+  }
+]

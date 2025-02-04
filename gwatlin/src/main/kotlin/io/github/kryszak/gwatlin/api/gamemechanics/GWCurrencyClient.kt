@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.Currency
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.CurrencyClient
 
 /**
@@ -44,5 +46,9 @@ class GWCurrencyClient {
      */
     fun getCurrencies(ids: List<Int>, language: ApiLanguage? = null): List<Currency> {
         return currencyClient.getCurrencies(ids, language)
+    }
+
+    fun getPagedCurrencies(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Currency>> {
+        return currencyClient.getPagedCurrencies(pageRequest, language)
     }
 }

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "alchemy_harvesting",
+    "item_id": 90805,
+    "slot": "harvesting"
+  },
+  {
+    "id": "alchemy_logging",
+    "item_id": 90805,
+    "slot": "logging"
+  },
+  {
+    "id": "alchemy_mining",
+    "item_id": 90805,
+    "slot": "mining"
+  },
+  {
+    "id": "crucible_harvesting",
+    "item_id": 90488,
+    "slot": "harvesting"
+  },
+  {
+    "id": "crucible_logging",
+    "item_id": 90488,
+    "slot": "logging"
+  },
+  {
+    "id": "crucible_mining",
+    "item_id": 90488,
+    "slot": "mining"
+  },
+  {
+    "id": "forester_harvesting",
+    "item_id": 87550,
+    "slot": "harvesting"
+  },
+  {
+    "id": "forester_logging",
+    "item_id": 87550,
+    "slot": "logging"
+  },
+  {
+    "id": "forester_mining",
+    "item_id": 87550,
+    "slot": "mining"
+  },
+  {
+    "id": "herbalist_harvesting",
+    "item_id": 88241,
+    "slot": "harvesting"
+  }
+]

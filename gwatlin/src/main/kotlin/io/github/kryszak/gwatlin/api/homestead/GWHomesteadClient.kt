@@ -4,6 +4,8 @@ import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.homestead.model.Category
 import io.github.kryszak.gwatlin.api.homestead.model.Decoration
 import io.github.kryszak.gwatlin.api.homestead.model.Glyph
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.homestead.HomesteadClient
 
 
@@ -41,6 +43,14 @@ class GWHomesteadClient {
     }
 
     /**
+     * Returns paged decorations
+     * @param language for response
+     */
+    fun getPagedDecorations(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Decoration>> {
+        return homesteadClient.getPagedDecorations(pageRequest, language)
+    }
+
+    /**
      * Returns list of all available decoration category ids
      */
     fun getDecorationCategoryIds(): List<Int> {
@@ -66,6 +76,17 @@ class GWHomesteadClient {
     }
 
     /**
+     * Returns paged decoration categories
+     * @param language for response
+     */
+    fun getPagedDecorationCategories(
+        pageRequest: PageRequest,
+        language: ApiLanguage? = null,
+    ): PagedResponse<List<Category>> {
+        return homesteadClient.getPagedDecorationCategories(pageRequest, language)
+    }
+
+    /**
      * Returns list of all available glyph ids
      */
     fun getGlyphIds(): List<String> {
@@ -86,5 +107,12 @@ class GWHomesteadClient {
      */
     fun getGlyphs(ids: List<String>): List<Glyph> {
         return homesteadClient.getGlyphs(ids)
+    }
+
+    /**
+     * Returns paged glyphs
+     */
+    fun getPagedGlyphs(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Glyph>> {
+        return homesteadClient.getPagedGlyphs(pageRequest, language)
     }
 }
