@@ -10,6 +10,5 @@ sealed interface GuildLog {
         val id: Int
         val time: String
         val user: String?
-
         val type: String
 }

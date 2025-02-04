@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
 import io.github.kryszak.gwatlin.clients.gamemechanics.TraitsClient
 
@@ -19,13 +20,23 @@ class GWTraitsClient {
     }
 
     /**
+     * Retrieves specific trait
+     * @param id of trait
+     * @param language of returned text (default=en)
+     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
+     */
+    fun getTrait(id: Int, language: ApiLanguage? = null): Trait {
+        return traitsClient.getTrait(id, language)
+    }
+
+    /**
      * Retrieves specific traits
      * @param ids of traits
      * @param language of returned text (default=en)
      * @see io.github.kryszak.gwatlin.api.gamemechanics.model.trait.Trait
      */
     @JvmOverloads
-    fun getTraits(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Trait> {
+    fun getTraits(ids: List<Int>, language: ApiLanguage? = null): List<Trait> {
         return traitsClient.getTraits(ids, language)
     }
 }

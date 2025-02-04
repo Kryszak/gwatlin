@@ -188,6 +188,10 @@ internal class AccountClientTest : BaseWiremockTest() {
                     id shouldBe 44602
                     count shouldBe 1
                     binding shouldBe "Account"
+                    charges.shouldBeNull()
+                    skin.shouldBeNull()
+                    upgrades.shouldBeEmpty()
+                    infusions.shouldBeEmpty()
                 }
                 it[2] shouldBe null
             }

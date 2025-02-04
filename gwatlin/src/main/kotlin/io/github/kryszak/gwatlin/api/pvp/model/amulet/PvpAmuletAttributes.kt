@@ -8,10 +8,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class PvpAmuletAttributes(
-        @SerialName("AgonyResistance") val agonyResistance: Double? = null,
-        @SerialName("BoonDuration") val boonDuration: Double? = null,
         @SerialName("ConditionDamage") val conditionDamage: Double? = null,
-        @SerialName("ConditionDruration") val conditionDuration: Double? = null,
         @SerialName("CritDamage") val critDamage: Double? = null,
         @SerialName("Healing") val healing: Double? = null,
         @SerialName("Power") val power: Double? = null,

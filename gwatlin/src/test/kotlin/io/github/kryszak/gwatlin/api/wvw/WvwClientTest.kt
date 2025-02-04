@@ -129,6 +129,10 @@ internal class WvwClientTest : BaseWiremockTest() {
                         pointsCapture shouldBe 0
                     }
                 }
+                assertSoftly(maps.find { it.id == 1099 }!!.bonuses[0]) {
+                    type shouldBe "Bloodlust"
+                    owner shouldBe "Red"
+                }
             }
         }
 
@@ -145,7 +149,11 @@ internal class WvwClientTest : BaseWiremockTest() {
                 startTime shouldBe OffsetDateTime.parse("2019-11-09T02:00:00Z")
                 endTime shouldBe OffsetDateTime.parse("2019-11-16T01:58:00Z")
                 worlds.shouldNotBeNull()
-                allWorlds.shouldNotBeNull()
+                assertSoftly(allWorlds) {
+                    red shouldBe listOf(1004, 1008)
+                    blue shouldBe listOf(1022, 1016)
+                    green shouldBe listOf(1020, 1002)
+                }
             }
         }
 

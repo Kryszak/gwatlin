@@ -13,12 +13,12 @@ data class GuildLogRankChange(
     override val id: Int,
     override val time: String,
     override val user: String? = null,
-    @SerialName("rank_change")
-    val rankChange: String,
+    @SerialName("changed_by")
+    val changedBy: String,
     @SerialName("old_rank")
     val oldRank: String,
     @SerialName("new_rank")
-    val newRank: String
+    val newRank: String,
 ) : GuildLog {
     override val type: String by serialNameDelegate
 }

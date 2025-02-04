@@ -45,8 +45,7 @@ enum class ItemType {
     @SerialName("UpgradeComponent")
     UPGRADE_COMPONENT,
     @SerialName("Weapon")
-    WEAPON,
-    ;
+    WEAPON;
 
     companion object {
         private val bySerialName = entries.associateBy {
