@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.clients.wvw
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.wvw.model.ability.WvwAbility
 import io.github.kryszak.gwatlin.api.wvw.model.match.WvwMatch
 import io.github.kryszak.gwatlin.api.wvw.model.match.overview.WvwWorldOverview
@@ -18,9 +19,9 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/abilities")
     }
 
-    fun getAbilities(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<WvwAbility> {
+    fun getAbilities(ids: List<Int>, language: ApiLanguage?): List<WvwAbility> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/abilities?ids=$params", language)
+        return getRequest("$wvwEndpoint/abilities?ids=$params", listOf(), language)
     }
 
     fun getMatchIds(): List<String> {
@@ -48,26 +49,26 @@ internal class WvwClient : BaseHttpClient() {
         return getRequest("$wvwEndpoint/objectives")
     }
 
-    fun getObjectives(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<WvwObjective> {
+    fun getObjectives(ids: List<String>, language: ApiLanguage?): List<WvwObjective> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/objectives?ids=$params", language)
+        return getRequest("$wvwEndpoint/objectives?ids=$params", listOf(), language)
     }
 
     fun getRankIds(): List<Int> {
         return getRequest("$wvwEndpoint/ranks")
     }
 
-    fun getRanks(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<WvwRank> {
+    fun getRanks(ids: List<Int>, language: ApiLanguage?): List<WvwRank> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/ranks?ids=$params", language)
+        return getRequest("$wvwEndpoint/ranks?ids=$params", listOf(), language)
     }
 
     fun getUpgradeIds(): List<Int> {
         return getRequest("$wvwEndpoint/upgrades")
     }
 
-    fun getUpgrades(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<WvwUpgrade> {
+    fun getUpgrades(ids: List<Int>, language: ApiLanguage?): List<WvwUpgrade> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/upgrades?ids=$params", language)
+        return getRequest("$wvwEndpoint/upgrades?ids=$params", listOf(), language)
     }
 }

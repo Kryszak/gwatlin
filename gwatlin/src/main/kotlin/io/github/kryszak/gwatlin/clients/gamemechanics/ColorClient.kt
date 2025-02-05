@@ -11,7 +11,7 @@ internal class ColorClient : BaseHttpClient() {
     private val colorsEndpoint = "/colors"
 
     fun getAllColors(language: ApiLanguage?): List<DyeColor> {
-        return getRequest("$colorsEndpoint?ids=all", language)
+        return getRequest("$colorsEndpoint?ids=all", listOf(), language)
     }
 
     fun getColorIds(): List<Int> {
@@ -19,15 +19,15 @@ internal class ColorClient : BaseHttpClient() {
     }
 
     fun getColor(id: Int, language: ApiLanguage?): DyeColor {
-        return getRequest("$colorsEndpoint/$id", language)
+        return getRequest("$colorsEndpoint/$id", listOf(), language)
     }
 
     fun getColors(ids: List<Int>, language: ApiLanguage?): List<DyeColor> {
         val params = ids.joinToString(",")
-        return getRequest("$colorsEndpoint?ids=$params", language)
+        return getRequest("$colorsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedColors(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<DyeColor>> {
-        return getPagedRequest("$colorsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$colorsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

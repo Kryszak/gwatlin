@@ -15,15 +15,15 @@ internal class TraitsClient : BaseHttpClient() {
     }
 
     fun getTrait(id: Int, language: ApiLanguage?): Trait {
-        return getRequest("$traitsEndpoint/$id", language)
+        return getRequest("$traitsEndpoint/$id", listOf(), language)
     }
 
     fun getTraits(ids: List<Int>, language: ApiLanguage?): List<Trait> {
         val params = ids.joinToString(",")
-        return getRequest("$traitsEndpoint?ids=$params", language)
+        return getRequest("$traitsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedTraits(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Trait>> {
-        return getPagedRequest("$traitsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$traitsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

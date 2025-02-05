@@ -11,7 +11,7 @@ internal class MinisClient : BaseHttpClient() {
     private val minisEndpoint = "/minis"
 
     fun getAllMinis(language: ApiLanguage?): List<Mini> {
-        return getRequest("$minisEndpoint?ids=all", language)
+        return getRequest("$minisEndpoint?ids=all", listOf(), language)
     }
 
     fun getMiniIds(): List<Int> {
@@ -19,15 +19,15 @@ internal class MinisClient : BaseHttpClient() {
     }
 
     fun getMini(id: Int, language: ApiLanguage?): Mini {
-        return getRequest("$minisEndpoint/$id", language)
+        return getRequest("$minisEndpoint/$id", listOf(), language)
     }
 
     fun getMinis(ids: List<Int>, language: ApiLanguage?): List<Mini> {
         val params = ids.joinToString(",")
-        return getRequest("$minisEndpoint?ids=$params", language)
+        return getRequest("$minisEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedMinis(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Mini>> {
-        return getPagedRequest("$minisEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$minisEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

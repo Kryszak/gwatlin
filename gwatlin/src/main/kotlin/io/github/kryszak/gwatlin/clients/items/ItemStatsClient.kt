@@ -16,10 +16,10 @@ internal class ItemStatsClient : BaseHttpClient() {
 
     fun getItemStats(ids: List<Int>, language: ApiLanguage?): List<ItemStats> {
         val params = ids.joinToString(",")
-        return getRequest("$statsEndpoint?ids=$params", language)
+        return getRequest("$statsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedItemStats(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<ItemStats>> {
-        return getPagedRequest("$statsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$statsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

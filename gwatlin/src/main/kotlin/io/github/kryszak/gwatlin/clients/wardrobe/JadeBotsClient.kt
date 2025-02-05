@@ -13,11 +13,11 @@ internal class JadeBotsClient : BaseHttpClient() {
     }
 
     fun getJadeBot(id: Int, language: ApiLanguage?): JadeBot {
-        return getRequest("$endpoint/$id", language)
+        return getRequest("$endpoint/$id", listOf(), language)
     }
 
     fun getJadeBots(ids: List<Int>, language: ApiLanguage?): List<JadeBot> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params", language)
+        return getRequest("$endpoint?ids=$params", listOf(), language)
     }
 }

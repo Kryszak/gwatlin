@@ -23,16 +23,16 @@ internal class HomesteadClient : BaseHttpClient() {
     }
 
     fun getDecoration(id: Int, language: ApiLanguage?): Decoration {
-        return getRequest("$decorationsEndpoint/$id", language)
+        return getRequest("$decorationsEndpoint/$id", listOf(), language)
     }
 
     fun getDecorations(ids: List<Int>, language: ApiLanguage?): List<Decoration> {
         val params = ids.joinToString(",")
-        return getRequest("$decorationsEndpoint?ids=$params", language)
+        return getRequest("$decorationsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedDecorations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Decoration>> {
-        return getPagedRequest("$decorationsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$decorationsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 
     fun getDecorationCategoryIds(): List<Int> {
@@ -40,16 +40,16 @@ internal class HomesteadClient : BaseHttpClient() {
     }
 
     fun getDecorationCategory(id: Int, language: ApiLanguage?): Category {
-        return getRequest("$decorationCategoriesEndpoint/$id", language)
+        return getRequest("$decorationCategoriesEndpoint/$id", listOf(), language)
     }
 
     fun getDecorationCategories(ids: List<Int>, language: ApiLanguage?): List<Category> {
         val params = ids.joinToString(",")
-        return getRequest("$decorationCategoriesEndpoint?ids=$params", language)
+        return getRequest("$decorationCategoriesEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedDecorationCategories(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Category>> {
-        return getPagedRequest("$decorationCategoriesEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$decorationCategoriesEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 
     fun getGlyphIds(): List<String> {
@@ -66,6 +66,6 @@ internal class HomesteadClient : BaseHttpClient() {
     }
 
     fun getPagedGlyphs(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glyph>> {
-        return getPagedRequest("$glyphsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$glyphsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

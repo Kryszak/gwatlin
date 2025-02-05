@@ -11,20 +11,22 @@ internal abstract class AuthenticatedHttpClient(
 
     protected inline fun <reified T : Any> getRequestAuth(
         uri: String,
+        queryParams: List<Pair<String, String>> = listOf(),
         language: ApiLanguage? = null,
-        configureRequest: Request.() -> Unit = {}
+        configureRequest: Request.() -> Unit = {},
     ) =
-        getRequest<T>(uri, language) {
+        getRequest<T>(uri, queryParams, language) {
             authentication().bearer(apiKey)
             configureRequest(this)
         }
 
     protected inline fun <reified T : Any> getPagedRequestAuth(
         uri: String,
+        queryParams: List<Pair<String, String>> = listOf(),
         language: ApiLanguage? = null,
         configureRequest: Request.() -> Unit = {},
     ) =
-        getPagedRequest<T>(uri, language) {
+        getPagedRequest<T>(uri, queryParams, language) {
             authentication().bearer(apiKey)
             configureRequest(this)
         }

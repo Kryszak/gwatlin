@@ -13,10 +13,10 @@ internal class OutfitsClient : BaseHttpClient() {
 
     fun getOutfits(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Outfit> {
         val params = ids.joinToString(",")
-        return getRequest("$outfitsEndpoint?ids=$params", language)
+        return getRequest("$outfitsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getAllOutfits(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Outfit> {
-        return getRequest("$outfitsEndpoint?ids=all", language)
+        return getRequest("$outfitsEndpoint?ids=all", listOf(), language)
     }
 }

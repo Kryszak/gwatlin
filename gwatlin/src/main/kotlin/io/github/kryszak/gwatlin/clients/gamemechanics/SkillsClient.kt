@@ -16,10 +16,10 @@ internal class SkillsClient : BaseHttpClient() {
 
     fun getSkills(ids: List<Int>, language: ApiLanguage?): List<Skill> {
         val params = ids.joinToString(",")
-        return getRequest("$skillsEndpoint?ids=$params", language)
+        return getRequest("$skillsEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedSkills(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skill>> {
-        return getPagedRequest("$skillsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$skillsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

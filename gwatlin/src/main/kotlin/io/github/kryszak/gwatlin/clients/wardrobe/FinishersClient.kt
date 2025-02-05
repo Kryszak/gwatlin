@@ -16,10 +16,10 @@ internal class FinishersClient : BaseHttpClient() {
 
     fun getFinishers(ids: List<Int>, language: ApiLanguage?): List<Finisher> {
         val params = ids.joinToString(",")
-        return getRequest("$finisherEndpoint?ids=$params", language)
+        return getRequest("$finisherEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedFinishers(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Finisher>> {
-        return getPagedRequest("$finisherEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$finisherEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

@@ -15,15 +15,15 @@ internal class SpecializationClient : BaseHttpClient() {
     }
 
     fun getSpecialization(id: Int, language: ApiLanguage?): Specialization {
-        return getRequest("$specializationEndpoint/$id", language)
+        return getRequest("$specializationEndpoint/$id", listOf(), language)
     }
 
     fun getSpecializations(ids: List<Int>, language: ApiLanguage?): List<Specialization> {
         val params = ids.joinToString(",")
-        return getRequest("$specializationEndpoint?ids=$params", language)
+        return getRequest("$specializationEndpoint?ids=$params", listOf(), language)
     }
 
     fun getPagedSpecializations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Specialization>> {
-        return getPagedRequest("$specializationEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$specializationEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }

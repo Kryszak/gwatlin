@@ -18,7 +18,7 @@ internal class RecipesClient : BaseHttpClient() {
 
     fun getRecipes(ids: List<Int>, language: ApiLanguage?): List<Recipe> {
         val params = ids.joinToString(",")
-        return getRequest("$recipesEndpoint?ids=$params", language)
+        return getRequest("$recipesEndpoint?ids=$params", listOf(), language)
     }
 
     fun searchRecipesWithInput(itemId: Int): List<Int> {
@@ -30,6 +30,6 @@ internal class RecipesClient : BaseHttpClient() {
     }
 
     fun getPagedRecipes(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Recipe>> {
-        return getPagedRequest("$recipesEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest("$recipesEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
     }
 }
