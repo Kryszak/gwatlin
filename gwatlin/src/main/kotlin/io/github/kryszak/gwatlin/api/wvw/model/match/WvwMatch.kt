@@ -1,7 +1,9 @@
 package io.github.kryszak.gwatlin.api.wvw.model.match
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import java.time.OffsetDateTime
 
 /**
  * Data model for wvw match object
@@ -9,10 +11,12 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WvwMatch(
         val id: String,
+        @Contextual
         @SerialName("start_time")
-        val startTime: String,
+        val startTime: OffsetDateTime,
+        @Contextual
         @SerialName("end_time")
-        val endTime: String,
+        val endTime: OffsetDateTime,
         val scores: WvwMatchWorldCount,
         val worlds: WvwMatchWorldCount,
         @SerialName("all_worlds")

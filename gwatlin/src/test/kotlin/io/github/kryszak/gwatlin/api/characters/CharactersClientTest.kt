@@ -16,6 +16,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import java.time.OffsetDateTime
 
 internal class CharactersClientTest : BaseWiremockTest() {
 
@@ -63,8 +64,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 level shouldBe 80
                 guild shouldBe "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
                 age shouldBe 4732983
-                created shouldBe "2013-08-09T12:22:00Z"
-                lastModified shouldBe "2022-09-24T14:27:00Z"
+                created shouldBe OffsetDateTime.parse("2013-08-09T12:22:00Z")
+                lastModified shouldBe OffsetDateTime.parse("2022-09-24T14:27:00Z")
                 deaths shouldBe 3519
                 crafting shouldHaveSize 2
                 title shouldBe 300
@@ -151,8 +152,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 level shouldBe 80
                 guild.shouldBeNull()
                 age shouldBe 4732983
-                created shouldBe "2013-08-09T12:22:00Z"
-                lastModified shouldBe "2022-09-24T14:27:00Z"
+                created shouldBe OffsetDateTime.parse("2013-08-09T12:22:00Z")
+                lastModified shouldBe OffsetDateTime.parse("2022-09-24T14:27:00Z")
                 deaths shouldBe 3519
                 crafting shouldHaveSize 2
                 title shouldBe 300
@@ -239,8 +240,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 level shouldBe 80
                 guild.shouldBeNull()
                 age shouldBe 4732983
-                created shouldBe "2013-08-09T12:22:00Z"
-                lastModified shouldBe "2022-09-24T14:27:00Z"
+                created shouldBe OffsetDateTime.parse("2013-08-09T12:22:00Z")
+                lastModified shouldBe OffsetDateTime.parse("2022-09-24T14:27:00Z")
                 deaths shouldBe 3519
                 crafting shouldHaveSize 2
                 title shouldBe null
@@ -435,8 +436,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 level shouldBe 80
                 guild shouldBe "116E0C0E-0035-44A9-BB22-4AE3E23127E5"
                 age shouldBe 4732983
-                created shouldBe "2013-08-09T12:22:00Z"
-                lastModified shouldBe "2022-09-24T14:27:00Z"
+                created shouldBe OffsetDateTime.parse("2013-08-09T12:22:00Z")
+                lastModified shouldBe OffsetDateTime.parse("2022-09-24T14:27:00Z")
                 deaths shouldBe 3519
                 title shouldBe 300
             }
@@ -464,8 +465,8 @@ internal class CharactersClientTest : BaseWiremockTest() {
                 level shouldBe 80
                 guild.shouldBeNull()
                 age shouldBe 4732983
-                created shouldBe "2013-08-09T12:22:00Z"
-                lastModified shouldBe "2022-09-24T14:27:00Z"
+                created shouldBe OffsetDateTime.parse("2013-08-09T12:22:00Z")
+                lastModified shouldBe OffsetDateTime.parse("2022-09-24T14:27:00Z")
                 deaths shouldBe 3519
                 title shouldBe 300
             }
