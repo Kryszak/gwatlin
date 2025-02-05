@@ -9,6 +9,7 @@ import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
+import java.time.OffsetDateTime
 
 internal class AccountClientTest : BaseWiremockTest() {
     private val apiKey = "1234"
@@ -31,7 +32,7 @@ internal class AccountClientTest : BaseWiremockTest() {
                 world shouldBe 1004
                 guilds shouldHaveSize 5
                 guildLeader shouldHaveSize 1
-                created shouldBe "2013-04-25T22:09:00Z"
+                created shouldBe OffsetDateTime.parse("2013-04-25T22:09:00Z")
                 access shouldHaveSize 3
                 commander
                 fractalLevel shouldBe 100

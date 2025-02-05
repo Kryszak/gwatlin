@@ -11,6 +11,7 @@ import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
+import java.time.OffsetDateTime
 
 internal class WvwClientTest : BaseWiremockTest() {
 
@@ -102,8 +103,8 @@ internal class WvwClientTest : BaseWiremockTest() {
             // then
             assertSoftly(matches[0]) {
                 id shouldBe "1-3"
-                startTime shouldBe "2019-11-09T02:00:00Z"
-                endTime shouldBe "2019-11-16T01:58:00Z"
+                startTime shouldBe OffsetDateTime.parse("2019-11-09T02:00:00Z")
+                endTime shouldBe OffsetDateTime.parse("2019-11-16T01:58:00Z")
                 assertSoftly(scores) {
                     red shouldBe 63163
                     blue shouldBe 132823
@@ -123,7 +124,7 @@ internal class WvwClientTest : BaseWiremockTest() {
                         id shouldBe "38-131"
                         it.type shouldBe "Spawn"
                         it.owner shouldBe "Green"
-                        lastFlipped shouldBe "2019-11-09T02:03:50Z"
+                        lastFlipped shouldBe OffsetDateTime.parse("2019-11-09T02:03:50Z")
                         pointsTick shouldBe 0
                         pointsCapture shouldBe 0
                     }
@@ -145,8 +146,8 @@ internal class WvwClientTest : BaseWiremockTest() {
             // then
             assertSoftly(overview) {
                 id shouldBe "1-1"
-                startTime shouldBe "2019-11-09T02:00:00Z"
-                endTime shouldBe "2019-11-16T01:58:00Z"
+                startTime shouldBe OffsetDateTime.parse("2019-11-09T02:00:00Z")
+                endTime shouldBe OffsetDateTime.parse("2019-11-16T01:58:00Z")
                 worlds.shouldNotBeNull()
                 assertSoftly(allWorlds) {
                     red shouldBe listOf(1004, 1008)
