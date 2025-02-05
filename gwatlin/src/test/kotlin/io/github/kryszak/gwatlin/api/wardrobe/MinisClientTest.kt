@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -83,6 +84,27 @@ internal class MinisClientTest : BaseWiremockTest() {
                     order shouldBe 1
                     itemId shouldBe 20950
                 }
+            }
+        }
+
+        should("Get paged minis") {
+            // given
+            stubResponse(
+                "/v2/minis?page=0&page_size=10",
+                "/responses/wardrobe/mini/minis_paged.json",
+                pageParams = PageParameters(10, 91, 10, 902)
+            )
+
+            // when
+            val pagedMinis = minisClient.getPagedMinis(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedMinis) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 91
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 902
             }
         }
     }

@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.MailCarrier
 import io.github.kryszak.gwatlin.clients.wardrobe.MailCarriersClient
 
@@ -35,5 +37,16 @@ class GWMailCarriersClient {
      */
     fun getMailCarriers(ids: List<Int>, language: ApiLanguage? = null): List<MailCarrier> {
         return mailCarriersClient.getMailCarriers(ids, language)
+    }
+
+    /**
+     * Returns pages mail carriers
+     * @param language for response
+     */
+    fun getPagedMailCarriers(
+        pageRequest: PageRequest,
+        language: ApiLanguage? = null,
+    ): PagedResponse<List<MailCarrier>> {
+        return mailCarriersClient.getPagedMailCarriers(pageRequest, language)
     }
 }

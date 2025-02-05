@@ -8,4 +8,8 @@ package io.github.kryszak.gwatlin.api.shared
 data class PageRequest(
     val page: Int,
     val size: Int,
-)
+) {
+    fun toQueryParams(): String {
+        return "page=$page&page_size=$size"
+    }
+}

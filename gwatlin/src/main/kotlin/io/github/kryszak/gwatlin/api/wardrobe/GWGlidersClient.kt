@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.Glider
 import io.github.kryszak.gwatlin.clients.wardrobe.GlidersClient
 
@@ -35,5 +37,13 @@ class GWGlidersClient {
      */
     fun getGliders(ids: List<Int>, language: ApiLanguage? = null): List<Glider> {
         return gliderClient.getGliders(ids, language)
+    }
+
+    /**
+     * Returns paged gliders
+     * @param language for response
+     */
+    fun getPagedGliders(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Glider>> {
+        return gliderClient.getPagedGliders(pageRequest, language)
     }
 }

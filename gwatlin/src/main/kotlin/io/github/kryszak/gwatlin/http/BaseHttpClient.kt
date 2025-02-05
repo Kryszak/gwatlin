@@ -16,8 +16,8 @@ import kotlinx.serialization.SerializationException
 import kotlinx.serialization.serializer
 import mu.KotlinLogging
 
-internal open class BaseHttpClient(
-    private val schemaVersion: String? = null
+internal abstract class BaseHttpClient(
+    private val schemaVersion: String? = null,
 ) {
 
     private val log = KotlinLogging.logger {}

@@ -1,5 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.skins.Skin
 import io.github.kryszak.gwatlin.clients.wardrobe.SkinsClient
 
@@ -24,7 +27,15 @@ class GWSkinsClient {
      * @param language of returned text (default=en)
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.skins.Skin
      */
-    fun getSkins(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Skin> {
+    fun getSkins(ids: List<Int>, language: ApiLanguage? = null): List<Skin> {
         return skinsClient.getSkins(ids, language)
+    }
+
+    /**
+     * Retrieves paged skins
+     * @param language of returned text (default=en)
+     */
+    fun getPagedSkins(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Skin>> {
+        return skinsClient.getPagedSkins(pageRequest, language)
     }
 }

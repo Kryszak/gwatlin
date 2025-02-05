@@ -1,5 +1,8 @@
 package io.github.kryszak.gwatlin.clients.wardrobe
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
 import io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
 import io.github.kryszak.gwatlin.http.BaseHttpClient
@@ -16,25 +19,29 @@ internal class MountsClient : BaseHttpClient() {
         return getRequest(skinsEndpoint)
     }
 
-    fun getMountSkins(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<MountSkin> {
+    fun getMountSkins(ids: List<Int>, language: ApiLanguage?): List<MountSkin> {
         val params = ids.joinToString(",")
         return getRequest("$skinsEndpoint?ids=$params", language)
     }
 
-    fun getAllMountSkins(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<MountSkin> {
+    fun getAllMountSkins(language: ApiLanguage?): List<MountSkin> {
         return getRequest("$skinsEndpoint?ids=all", language)
+    }
+
+    fun getPagedMountSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<MountSkin>> {
+        return getPagedRequest("$skinsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
     }
 
     fun getMountTypesIds(): List<String> {
         return getRequest(typesEndpoint)
     }
 
-    fun getMountTypes(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<MountType> {
+    fun getMountTypes(ids: List<String>, language: ApiLanguage?): List<MountType> {
         val params = ids.joinToString(",")
         return getRequest("$typesEndpoint?ids=$params", language)
     }
 
-    fun getAllMountTypes(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<MountType> {
+    fun getAllMountTypes(language: ApiLanguage?): List<MountType> {
         return getRequest("$typesEndpoint?ids=all", language)
     }
 }

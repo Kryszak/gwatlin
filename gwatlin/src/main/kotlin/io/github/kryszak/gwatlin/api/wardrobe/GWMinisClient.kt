@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.Mini
 import io.github.kryszak.gwatlin.clients.wardrobe.MinisClient
 
@@ -39,10 +41,18 @@ class GWMinisClient {
 
     /**
      * Returns mini for given
-     * @param id of mini
+     * @param ids of minis
      * @param language for response
      */
     fun getMinis(ids: List<Int>, language: ApiLanguage? = null): List<Mini> {
         return minisClient.getMinis(ids, language)
+    }
+
+    /**
+     * Returns paged minis
+     * @param language for response
+     */
+    fun getPagedMinis(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Mini>> {
+        return minisClient.getPagedMinis(pageRequest, language)
     }
 }

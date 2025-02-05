@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Embellished Kite",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/7B043D640ED57517051D5FC038D7CDDDE5F82933/2015154.png",
+    "slot": "HeldItem",
+    "unlock_item": [
+      88124
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Musical Bass Guitar",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/2FD55ABA480D23E3740145B5802800554245DB11/960182.png",
+    "slot": "Music",
+    "unlock_item": [
+      36174
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Duskk's World 2 Super Boom Box",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/49126005BA2E197E5A60F9CFDA530EE432307776/1664072.png",
+    "slot": "Music",
+    "unlock_item": [
+      80932
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bobblehead Laboratory",
+    "description": "<c=@abilitytype>Toy.</c> Deploy a novelty item to interact with.",
+    "icon": "https://render.guildwars2.com/file/37E7F8187724466DF3E9C1D2AE03BD5D6F034BC4/819618.png",
+    "slot": "Miscellaneous",
+    "unlock_item": [
+      36172
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Box of Chocolates",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/39FD9EDC1AA019A0B53367A82DE9D63627B90C98/729530.png",
+    "slot": "Miscellaneous",
+    "unlock_item": [
+      43528
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Haunted Gramophone",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/0706600765442A452029B5A01896502B97493BEA/888386.png",
+    "slot": "Music",
+    "unlock_item": [
+      67391
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Guild Kite",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/06E357381A77730319646E09443D382D393824ED/603316.png",
+    "slot": "HeldItem",
+    "unlock_item": [
+      43930
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Musical Lute",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/EB163F2BB848193BC6D9E5092C4E1FFEB63057DE/819605.png",
+    "slot": "Music",
+    "unlock_item": [
+      66323
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Bouquet of Roses",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/9B06346EC37F0DD0A2EF61F819F56962D11FE1BE/534227.png",
+    "slot": "Miscellaneous",
+    "unlock_item": [
+      49933
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Green Choya Kite",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/FFF329C6B1C7639914B4B63F0FA9E064423CDC34/1822054.png",
+    "slot": "HeldItem",
+    "unlock_item": [
+      85302
+    ]
+  }
+]

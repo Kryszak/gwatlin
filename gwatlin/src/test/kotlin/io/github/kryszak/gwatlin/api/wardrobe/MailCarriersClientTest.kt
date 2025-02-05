@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldBeEmpty
@@ -7,7 +8,7 @@ import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
 
-internal class GWMailCarriersClientTest : BaseWiremockTest() {
+internal class MailCarriersClientTest : BaseWiremockTest() {
 
     private val mailCarriersClient = GWMailCarriersClient()
 
@@ -72,6 +73,27 @@ internal class GWMailCarriersClientTest : BaseWiremockTest() {
                     name shouldBe "Gifts Mail Delivery"
                     flags.shouldBeEmpty()
                 }
+            }
+        }
+
+        should("Get paged mail carriers") {
+            // given
+            stubResponse(
+                "/v2/mailcarriers?page=0&page_size=10",
+                "/responses/wardrobe/mailcarrier/mailcarriers_paged.json",
+                pageParams = PageParameters(10, 2, 10, 16)
+            )
+
+            // when
+            val pagedMailCarriers = mailCarriersClient.getPagedMailCarriers(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedMailCarriers) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 2
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 16
             }
         }
     }

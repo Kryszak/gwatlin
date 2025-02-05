@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
@@ -75,6 +76,27 @@ If you wear the White Feather Wings Backpack, speak to a scout in Verdant Brink 
                     description shouldBe "<c=@reminder>This is only available from the Black Lion Trading Company during limited-time sales.</c>"
                     defaultDyes shouldContainExactly listOf()
                 }
+            }
+        }
+
+        should("Get paged gliders") {
+            // given
+            stubResponse(
+                "/v2/gliders?page=0&page_size=10",
+                "/responses/wardrobe/gliders/gliders_paged.json",
+                pageParams = PageParameters(10, 14, 10, 136)
+            )
+
+            // when
+            val pagedGliders = glidersClient.getPagedGliders(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedGliders) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 14
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 136
             }
         }
     }

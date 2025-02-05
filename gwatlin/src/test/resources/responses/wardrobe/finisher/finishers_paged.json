@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 18,
+    "icon": "https://render.guildwars2.com/file/807516C20D08B908946167EADD57980163EECA4E/620101.png",
+    "name": "Rabbit Rank Finisher"
+  },
+  {
+    "id": 2,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 17,
+    "icon": "https://render.guildwars2.com/file/6A68492F14AB3AFC5A95BCE008BDE8B50EB82CAF/620104.png",
+    "name": "Deer Rank Finisher"
+  },
+  {
+    "id": 3,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 16,
+    "icon": "https://render.guildwars2.com/file/0CA368AB05A9580612F6BEECE80BA0051ED3C658/620107.png",
+    "name": "Dolyak Rank Finisher"
+  },
+  {
+    "id": 4,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 15,
+    "icon": "https://render.guildwars2.com/file/C42552A84EEBD24E46A304AF1F8048D20004033C/620110.png",
+    "name": "Wolf Rank Finisher"
+  },
+  {
+    "id": 5,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 13,
+    "icon": "https://render.guildwars2.com/file/F899B45D0EFB14EF4E7DDA4BCA1E69F27C3A2238/620113.png",
+    "name": "Bear Rank Finisher"
+  },
+  {
+    "id": 6,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 14,
+    "icon": "https://render.guildwars2.com/file/20A753170535D47069B84931A55CEF9A7C543DC9/620116.png",
+    "name": "Tiger Rank Finisher"
+  },
+  {
+    "id": 7,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 12,
+    "icon": "https://render.guildwars2.com/file/A19393F149215F171C395DA5C455D6F6CDCD6C09/620119.png",
+    "name": "Shark Rank Finisher"
+  },
+  {
+    "id": 8,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 11,
+    "icon": "https://render.guildwars2.com/file/52E52468FE0BE72B0C124BDD0454AA623AF70C0B/620122.png",
+    "name": "Phoenix Rank Finisher"
+  },
+  {
+    "id": 9,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [],
+    "order": 10,
+    "icon": "https://render.guildwars2.com/file/7E19170301D89CCCE1C359D3212B559A63510A3A/620125.png",
+    "name": "Dragon Rank Finisher"
+  },
+  {
+    "id": 10,
+    "unlock_details": "<c=@reminder>Unlock this finisher by discovering it in Black Lion Chests.</c>",
+    "unlock_items": [
+      44723
+    ],
+    "order": 40,
+    "icon": "https://render.guildwars2.com/file/4BBA72482407AA5974B8E25C09943D24B402B7F7/620128.png",
+    "name": "Cow Finisher"
+  }
+]

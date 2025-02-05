@@ -1,5 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
 import io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
 import io.github.kryszak.gwatlin.clients.wardrobe.MountsClient
@@ -40,6 +43,15 @@ class GWMountsClient {
     @JvmOverloads
     fun getAllMountSkins(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountSkin> {
         return mountsClient.getAllMountSkins(language)
+    }
+
+    /**
+     * Retrieves paged mount skins
+     * @param language of returned text (default=en)
+     */
+    @JvmOverloads
+    fun getPagedMountSkins(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<MountSkin>> {
+        return mountsClient.getPagedMountSkins(pageRequest, language)
     }
 
     /**
