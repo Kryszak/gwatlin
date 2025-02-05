@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "type": "Refinement",
+    "output_item_id": 19713,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 75,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19726,
+        "count": 2
+      }
+    ],
+    "chat_link": "[&CQEAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 2,
+    "type": "Refinement",
+    "output_item_id": 19712,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 400,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19725,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQIAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 3,
+    "type": "Refinement",
+    "output_item_id": 19710,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 0,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19723,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQMAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 4,
+    "type": "Refinement",
+    "output_item_id": 19711,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 225,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19724,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQQAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 5,
+    "type": "Refinement",
+    "output_item_id": 19709,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 300,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19722,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQUAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 6,
+    "type": "Refinement",
+    "output_item_id": 19714,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer",
+      "Weaponsmith",
+      "Scribe",
+      "Huntsman"
+    ],
+    "min_rating": 150,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19727,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQYAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 7,
+    "type": "Refinement",
+    "output_item_id": 19742,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor",
+      "Scribe"
+    ],
+    "min_rating": 150,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19741,
+        "count": 2
+      }
+    ],
+    "chat_link": "[&CQcAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 8,
+    "type": "Refinement",
+    "output_item_id": 19747,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor",
+      "Scribe"
+    ],
+    "min_rating": 300,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19748,
+        "count": 3
+      }
+    ],
+    "chat_link": "[&CQgAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 9,
+    "type": "Refinement",
+    "output_item_id": 19720,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor",
+      "Scribe"
+    ],
+    "min_rating": 0,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19718,
+        "count": 2
+      }
+    ],
+    "chat_link": "[&CQkAAAA=]",
+    "guild_ingredients": []
+  },
+  {
+    "id": 10,
+    "type": "Refinement",
+    "output_item_id": 19744,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor",
+      "Scribe"
+    ],
+    "min_rating": 225,
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 19743,
+        "count": 2
+      }
+    ],
+    "chat_link": "[&CQoAAAA=]",
+    "guild_ingredients": []
+  }
+]

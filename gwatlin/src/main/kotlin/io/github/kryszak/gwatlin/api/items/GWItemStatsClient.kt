@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.api.items
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.stats.ItemStats
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.items.ItemStatsClient
 
 /**
@@ -25,7 +28,15 @@ class GWItemStatsClient {
      * @see io.github.kryszak.gwatlin.api.items.model.stats.ItemStats
      */
     @JvmOverloads
-    fun getItemStats(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<ItemStats> {
+    fun getItemStats(ids: List<Int>, language: ApiLanguage? = null): List<ItemStats> {
         return itemStatsClient.getItemStats(ids, language)
+    }
+
+    /**
+     * Retrieves paged item statistics
+     * @param language of returned text (default=en)
+     */
+    fun getPagedItemStats(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<ItemStats>> {
+        return itemStatsClient.getPagedItemStats(pageRequest, language)
     }
 }

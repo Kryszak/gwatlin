@@ -48,6 +48,11 @@ class GWCurrencyClient {
         return currencyClient.getCurrencies(ids, language)
     }
 
+    /**
+     * Returns paged currencies
+     * @param ids of currencies
+     * @return list with requested currencies
+     */
     fun getPagedCurrencies(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Currency>> {
         return currencyClient.getPagedCurrencies(pageRequest, language)
     }

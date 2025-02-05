@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.items
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -71,6 +72,27 @@ internal class RecipesClientTest: BaseWiremockTest() {
                     upgradeId shouldBe 661
                     count shouldBe 250
                 }
+            }
+        }
+
+        should("Get paged recipes") {
+            // given
+            stubResponse(
+                "/v2/recipes?page=0&page_size=10",
+                "/responses/items/recipes_paged.json",
+                pageParams = PageParameters(10, 1297, 10, 12968)
+            )
+
+            // when
+            val pagedRecipes = recipesClient.getPagedRecipes(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedRecipes) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 1297
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 12968
             }
         }
 

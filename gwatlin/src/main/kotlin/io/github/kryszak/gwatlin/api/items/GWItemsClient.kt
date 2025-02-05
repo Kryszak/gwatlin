@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.api.items
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.item.Item
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.items.ItemsClient
 
 /**
@@ -28,5 +30,13 @@ class GWItemsClient {
     @JvmOverloads
     fun getItems(ids: List<Int>, language: ApiLanguage? = null): List<Item> {
         return itemClient.getItems(ids, language)
+    }
+
+    /**
+     * Retrieves paged items
+     * @param language of returned text (default=en)
+     */
+    fun getPagedItems(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Item>> {
+        return itemClient.getPagedItems(pageRequest, language)
     }
 }

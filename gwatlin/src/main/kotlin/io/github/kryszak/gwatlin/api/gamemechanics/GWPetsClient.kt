@@ -43,6 +43,10 @@ class GWPetsClient {
         return petsClient.getAllPets(language)
     }
 
+    /**
+     * Retrieves paged pets
+     * @param language of returned text (default=en)
+     */
     fun getPagedPets(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Pet>> {
         return petsClient.getPagedPets(pageRequest, language)
     }

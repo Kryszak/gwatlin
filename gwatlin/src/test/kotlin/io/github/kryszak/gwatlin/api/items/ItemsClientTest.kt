@@ -2,6 +2,7 @@ package io.github.kryszak.gwatlin.api.items
 
 import io.github.kryszak.gwatlin.api.ApiLanguage.EN
 import io.github.kryszak.gwatlin.api.items.model.item.*
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.datatest.withData
@@ -73,6 +74,27 @@ internal class ItemsClientTest : BaseWiremockTest() {
                 // then
                 items shouldHaveSize 1
                 assertion(items[0])
+            }
+        }
+
+        should("Get paged items") {
+            // given
+            stubResponse(
+                "/v2/items?page=0&page_size=10",
+                "/responses/items/items_paged.json",
+                pageParams = PageParameters(10, 6776, 10, 67751)
+            )
+
+            // when
+            val pagedItems = itemsClient.getPagedItems(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedItems) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 6776
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 67751
             }
         }
     }

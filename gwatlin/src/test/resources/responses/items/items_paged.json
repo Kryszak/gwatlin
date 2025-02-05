@@ -1,0 +1,368 @@
+[
+  {
+    "name": "Assassin Transform Weapon",
+    "type": "Weapon",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 0,
+    "default_skin": 3264,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage",
+      "NoSell",
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 4,
+    "chat_link": "[&AgEEAAAA]",
+    "icon": "https://render.guildwars2.com/file/562B6309B40701CE654E9E0C4C56C857B4A4022D/60983.png",
+    "details": {
+      "type": "Axe",
+      "damage_type": "Choking",
+      "min_power": 100,
+      "max_power": 122,
+      "defense": 0,
+      "infusion_slots": [],
+      "attribute_adjustment": 7.8,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "((208738))",
+    "description": "",
+    "type": "Weapon",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 0,
+    "default_skin": 2809,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage",
+      "NoSell",
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 6,
+    "chat_link": "[&AgEGAAAA]",
+    "icon": "https://render.guildwars2.com/file/CC2E01E0F566A6EEF4F2EC2B19AA7A3E1FEFB1B4/60984.png",
+    "details": {
+      "type": "SmallBundle",
+      "damage_type": "Choking",
+      "min_power": 105,
+      "max_power": 117,
+      "defense": 0,
+      "infusion_slots": [],
+      "attribute_adjustment": 7.8,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Abomination Hammer",
+    "type": "Weapon",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "default_skin": 5014,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage",
+      "NoSell",
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 15,
+    "chat_link": "[&AgEPAAAA]",
+    "icon": "https://render.guildwars2.com/file/E8507FFB6CF3C9094A69956344CEDBD9B47D95B6/434872.png",
+    "details": {
+      "type": "Hammer",
+      "damage_type": "Physical",
+      "min_power": 146,
+      "max_power": 165,
+      "defense": 0,
+      "infusion_slots": [],
+      "attribute_adjustment": 20.736,
+      "infix_upgrade": {
+        "id": 112,
+        "attributes": []
+      },
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Sealed Package of Snowballs",
+    "description": "Open this package to create several snowballs that can hit anyone else holding a snowball.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 0,
+    "game_types": [
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 24,
+    "chat_link": "[&AgEYAAAA]",
+    "icon": "https://render.guildwars2.com/file/1D05D1EE04E16E69710E1EAB11AC466BBF105778/219347.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "PvP Heavy Helm of the Warrior",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 0,
+    "default_skin": 2119,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 33,
+    "chat_link": "[&AgEhAAAA]",
+    "icon": "https://render.guildwars2.com/file/71056970CA589BC04FF6CBB72F461908E3283F01/61103.png",
+    "details": {
+      "type": "Helm",
+      "weight_class": "Heavy",
+      "defense": 121,
+      "infusion_slots": [],
+      "attribute_adjustment": 170.72,
+      "infix_upgrade": {
+        "id": 112,
+        "attributes": []
+      },
+      "suffix_item_id": 21210,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Gladiator Weapon",
+    "type": "Weapon",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 0,
+    "default_skin": 3265,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 46,
+    "chat_link": "[&AgEuAAAA]",
+    "icon": "https://render.guildwars2.com/file/4AECE5EA59CA057F4C53E1EDFE95E0E3E61DE37F/60980.png",
+    "details": {
+      "type": "Staff",
+      "damage_type": "Physical",
+      "min_power": 117,
+      "max_power": 132,
+      "defense": 0,
+      "infusion_slots": [],
+      "attribute_adjustment": 15.6,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Strong Back Brace",
+    "description": "This equipment goes under armor and can hold an additional upgrade.",
+    "type": "Back",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 16,
+    "default_skin": 2329,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 56,
+    "chat_link": "[&AgE4AAAA]",
+    "icon": "https://render.guildwars2.com/file/03B65C435B15EB2C10E04F3454B03718AAF3AE90/61004.png",
+    "details": {
+      "infusion_slots": [],
+      "attribute_adjustment": 13.585,
+      "infix_upgrade": {
+        "id": 142,
+        "attributes": [
+          {
+            "attribute": "Power",
+            "modifier": 5
+          },
+          {
+            "attribute": "Precision",
+            "modifier": 3
+          }
+        ]
+      },
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Hearty Back Brace",
+    "description": "This equipment goes under armor and can hold an additional upgrade.",
+    "type": "Back",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 16,
+    "default_skin": 2329,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 57,
+    "chat_link": "[&AgE5AAAA]",
+    "icon": "https://render.guildwars2.com/file/03B65C435B15EB2C10E04F3454B03718AAF3AE90/61004.png",
+    "details": {
+      "infusion_slots": [],
+      "attribute_adjustment": 13.585,
+      "infix_upgrade": {
+        "id": 149,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 3
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 5
+          }
+        ]
+      },
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Enduring Back Brace",
+    "description": "This equipment goes under armor and can hold an additional upgrade.",
+    "type": "Back",
+    "level": 0,
+    "rarity": "Basic",
+    "vendor_value": 16,
+    "default_skin": 2329,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 58,
+    "chat_link": "[&AgE6AAAA]",
+    "icon": "https://render.guildwars2.com/file/03B65C435B15EB2C10E04F3454B03718AAF3AE90/61004.png",
+    "details": {
+      "infusion_slots": [],
+      "attribute_adjustment": 13.585,
+      "infix_upgrade": {
+        "id": 148,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 5
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 3
+          }
+        ]
+      },
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Berserkers Spineguard of Ruby",
+    "description": "This equipment goes under armor and can hold an additional upgrade.",
+    "type": "Back",
+    "level": 80,
+    "rarity": "Masterwork",
+    "vendor_value": 132,
+    "default_skin": 2329,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "SoulbindOnAcquire",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 59,
+    "chat_link": "[&AgE7AAAA]",
+    "icon": "https://render.guildwars2.com/file/03B65C435B15EB2C10E04F3454B03718AAF3AE90/61004.png",
+    "details": {
+      "infusion_slots": [],
+      "attribute_adjustment": 69.989,
+      "infix_upgrade": {
+        "id": 161,
+        "attributes": [
+          {
+            "attribute": "Power",
+            "modifier": 24
+          },
+          {
+            "attribute": "Precision",
+            "modifier": 17
+          },
+          {
+            "attribute": "CritDamage",
+            "modifier": 17
+          }
+        ]
+      },
+      "suffix_item_id": 24498,
+      "secondary_suffix_item_id": ""
+    }
+  }
+]

@@ -33,6 +33,10 @@ class GWSkillsClient {
         return skillsClient.getSkills(ids, language)
     }
 
+    /**
+     * Retrieves paged skills
+     * @param language of returned text (default=en)
+     */
     fun getPagedSkills(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Skill>> {
         return skillsClient.getPagedSkills(pageRequest, language)
     }
