@@ -31,7 +31,7 @@ class GWMountsClient {
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
      */
     @JvmOverloads
-    fun getMountSkins(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountSkin> {
+    fun getMountSkins(ids: List<Int>, language: ApiLanguage? = null): List<MountSkin> {
         return mountsClient.getMountSkins(ids, language)
     }
 
@@ -41,7 +41,7 @@ class GWMountsClient {
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.skin.MountSkin
      */
     @JvmOverloads
-    fun getAllMountSkins(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountSkin> {
+    fun getAllMountSkins(language: ApiLanguage? = null): List<MountSkin> {
         return mountsClient.getAllMountSkins(language)
     }
 
@@ -69,7 +69,7 @@ class GWMountsClient {
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
      */
     @JvmOverloads
-    fun getMountTypes(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountType> {
+    fun getMountTypes(ids: List<String>, language: ApiLanguage? = null): List<MountType> {
         return mountsClient.getMountTypes(ids, language)
     }
 
@@ -79,7 +79,7 @@ class GWMountsClient {
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.mount.type.MountType
      */
     @JvmOverloads
-    fun getAllMountTypes(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<MountType> {
+    fun getAllMountTypes(language: ApiLanguage? = null): List<MountType> {
         return mountsClient.getAllMountTypes(language)
     }
 }
