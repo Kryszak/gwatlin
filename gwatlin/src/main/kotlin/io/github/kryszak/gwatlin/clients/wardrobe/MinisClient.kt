@@ -28,6 +28,6 @@ internal class MinisClient : BaseHttpClient() {
     }
 
     fun getPagedMinis(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Mini>> {
-        return getPagedRequest("$minisEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$minisEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

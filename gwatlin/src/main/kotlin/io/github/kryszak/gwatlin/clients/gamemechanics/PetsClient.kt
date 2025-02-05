@@ -24,6 +24,6 @@ internal class PetsClient : BaseHttpClient() {
     }
 
     fun getPagedPets(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Pet>> {
-        return getPagedRequest("$petsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$petsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

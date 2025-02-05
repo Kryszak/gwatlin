@@ -20,6 +20,6 @@ internal class SkillsClient : BaseHttpClient() {
     }
 
     fun getPagedSkills(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skill>> {
-        return getPagedRequest("$skillsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$skillsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

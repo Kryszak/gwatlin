@@ -20,6 +20,6 @@ internal class ItemStatsClient : BaseHttpClient() {
     }
 
     fun getPagedItemStats(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<ItemStats>> {
-        return getPagedRequest("$statsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$statsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

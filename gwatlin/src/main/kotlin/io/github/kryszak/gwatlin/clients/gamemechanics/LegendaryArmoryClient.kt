@@ -27,6 +27,6 @@ internal class LegendaryArmoryClient : BaseHttpClient() {
     }
 
     fun getPagedLegendaryArmoryItems(pageRequest: PageRequest): PagedResponse<List<LegendaryArmoryItem>> {
-        return getPagedRequest("$endpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}")
     }
 }

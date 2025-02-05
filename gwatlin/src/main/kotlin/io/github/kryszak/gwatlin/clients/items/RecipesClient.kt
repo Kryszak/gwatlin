@@ -30,6 +30,6 @@ internal class RecipesClient : BaseHttpClient() {
     }
 
     fun getPagedRecipes(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Recipe>> {
-        return getPagedRequest("$recipesEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$recipesEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

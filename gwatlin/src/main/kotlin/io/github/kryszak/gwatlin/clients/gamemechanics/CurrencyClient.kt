@@ -28,6 +28,6 @@ internal class CurrencyClient : BaseHttpClient() {
     }
 
     fun getPagedCurrencies(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Currency>> {
-        return getPagedRequest("$currenciesEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$currenciesEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

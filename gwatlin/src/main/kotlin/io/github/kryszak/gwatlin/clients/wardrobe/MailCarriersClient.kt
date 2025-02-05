@@ -24,6 +24,6 @@ internal class MailCarriersClient : BaseHttpClient() {
     }
 
     fun getPagedMailCarriers(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<MailCarrier>> {
-        return getPagedRequest("$endpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}", language)
     }
 }

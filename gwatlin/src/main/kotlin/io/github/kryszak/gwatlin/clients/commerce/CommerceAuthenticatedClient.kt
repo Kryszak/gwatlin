@@ -29,7 +29,7 @@ internal class CommerceAuthenticatedClient(apiKey: String) : AuthenticatedHttpCl
     }
 
     fun getPagedHistoricBuys(pageRequest: PageRequest): PagedResponse<List<Transaction>> {
-        return getPagedRequestAuth("$historicBuysEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+        return getPagedRequestAuth("$historicBuysEndpoint?${pageRequest.toQueryParams()}")
     }
 
     fun getHistoricSells(): List<Transaction> {
@@ -37,7 +37,7 @@ internal class CommerceAuthenticatedClient(apiKey: String) : AuthenticatedHttpCl
     }
 
     fun getPagedHistoricSells(pageRequest: PageRequest): PagedResponse<List<Transaction>> {
-        return getPagedRequestAuth("$historicSellsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+        return getPagedRequestAuth("$historicSellsEndpoint?${pageRequest.toQueryParams()}")
     }
 
     fun getCurrentBuys(): List<Transaction> {
@@ -45,7 +45,7 @@ internal class CommerceAuthenticatedClient(apiKey: String) : AuthenticatedHttpCl
     }
 
     fun getPagedCurrentBuys(pageRequest: PageRequest): PagedResponse<List<Transaction>> {
-        return getPagedRequestAuth("$currentBuysEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+        return getPagedRequestAuth("$currentBuysEndpoint?${pageRequest.toQueryParams()}")
     }
 
     fun getCurrentSells(): List<Transaction> {
@@ -53,6 +53,6 @@ internal class CommerceAuthenticatedClient(apiKey: String) : AuthenticatedHttpCl
     }
 
     fun getPagedCurrentSells(pageRequest: PageRequest): PagedResponse<List<Transaction>> {
-        return getPagedRequestAuth("$currentSellsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}")
+        return getPagedRequestAuth("$currentSellsEndpoint?${pageRequest.toQueryParams()}")
     }
 }

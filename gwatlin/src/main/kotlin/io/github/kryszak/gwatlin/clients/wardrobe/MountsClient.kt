@@ -29,7 +29,7 @@ internal class MountsClient : BaseHttpClient() {
     }
 
     fun getPagedMountSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<MountSkin>> {
-        return getPagedRequest("$skinsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$skinsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 
     fun getMountTypesIds(): List<String> {

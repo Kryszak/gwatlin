@@ -24,6 +24,6 @@ internal class TraitsClient : BaseHttpClient() {
     }
 
     fun getPagedTraits(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Trait>> {
-        return getPagedRequest("$traitsEndpoint?page=${pageRequest.page}&page_size=${pageRequest.size}", language)
+        return getPagedRequest("$traitsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }
