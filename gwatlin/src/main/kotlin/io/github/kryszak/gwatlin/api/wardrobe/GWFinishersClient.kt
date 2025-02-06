@@ -1,5 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.finisher.Finisher
 import io.github.kryszak.gwatlin.clients.wardrobe.FinishersClient
 
@@ -25,7 +28,16 @@ class GWFinishersClient {
      * @see io.github.kryszak.gwatlin.api.wardrobe.model.finisher.Finisher
      */
     @JvmOverloads
-    fun getFinishers(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Finisher> {
+    fun getFinishers(ids: List<Int>, language: ApiLanguage? = null): List<Finisher> {
         return finishersClient.getFinishers(ids, language)
+    }
+
+    /**
+     * Retrieves paged finishers
+     * @param language of returned text (default=en)
+     */
+    @JvmOverloads
+    fun getPagedFinishers(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Finisher>> {
+        return finishersClient.getPagedFinishers(pageRequest, language)
     }
 }

@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.api.items
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.recipe.Recipe
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.items.RecipesClient
 
 /**
@@ -25,8 +28,17 @@ class GWRecipesClient {
      * @see io.github.kryszak.gwatlin.api.items.model.recipe.Recipe
      */
     @JvmOverloads
-    fun getRecipes(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Recipe> {
+    fun getRecipes(ids: List<Int>, language: ApiLanguage? = null): List<Recipe> {
         return recipesClient.getRecipes(ids, language)
+    }
+
+    /**
+     * Retrieves paged recipes
+     * @param language of returned text (default=en)
+     */
+    @JvmOverloads
+    fun getPagedRecipes(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Recipe>> {
+        return recipesClient.getPagedRecipes(pageRequest, language)
     }
 
     /**

@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Chainmail Leggings",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 1,
+    "icon": "https://render.guildwars2.com/file/9321FD09DF90E8D10D80B5C41D722F357FE5970A/61104.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Chainmail Chestpiece",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 2,
+    "icon": "https://render.guildwars2.com/file/A2D0D6DA90056E76F1BE244F0C9EF333F95D9746/61098.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Apprentice Pants",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 3,
+    "icon": "https://render.guildwars2.com/file/AAB41A903B03C7DEB833A8CC4E08CF0A02A67BD5/61404.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Apprentice Coat",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 4,
+    "icon": "https://render.guildwars2.com/file/DB0264EE5C0079BB3996EC7B0297CEE1BD48EF07/61403.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Rawhide Leggings",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 5,
+    "icon": "https://render.guildwars2.com/file/5AEBD46A0ACC3C3CE1EBB60F0445322D14049171/61348.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Medium",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 25,
+            "material": "leather"
+          },
+          {
+            "color_id": 15,
+            "material": "leather"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Rawhide Vest",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 6,
+    "icon": "https://render.guildwars2.com/file/D39FF60AFE11FF260A3F0B24484CA8BCB909E0B0/61015.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Medium",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 25,
+            "material": "leather"
+          },
+          {
+            "color_id": 15,
+            "material": "leather"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Scallywag Legs",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 7,
+    "icon": "https://render.guildwars2.com/file/2AD0FE1D59CBE7ED40FABF3E9F5E26DA22930E19/61068.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Scallywag Chest",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 8,
+    "icon": "https://render.guildwars2.com/file/B6B564EFEBF6A3075A27E96F1DB97779139EA0D2/61044.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Seer Coat",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 9,
+    "icon": "https://render.guildwars2.com/file/FB0AA64F98303AE5112408EF3DC8C7307EA118F8/61011.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Seer Pants",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 10,
+    "icon": "https://render.guildwars2.com/file/1920ACA302E656B60C38605521760351F147809D/61088.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Light",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  }
+]

@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -76,6 +77,27 @@ internal class LegendaryArmoryClientTest : BaseWiremockTest() {
 
             // then
             legendaryArmoryItems shouldHaveSize 192
+        }
+
+        should("Get paged legendary armory items") {
+            // given
+            stubResponse(
+                "/v2/legendaryarmory?page=0&page_size=10",
+                "/responses/gamemechanics/legendaryarmory/legendary_armory_paged.json",
+                pageParams = PageParameters(10, 20, 10, 192)
+            )
+
+            // when
+            val pagedLegendaryArmoryItems = client.getPagedLegendaryArmoryItems(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedLegendaryArmoryItems) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 20
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 192
+            }
         }
     }
 }

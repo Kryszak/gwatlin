@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.clients.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.Novelty
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
@@ -23,5 +25,9 @@ internal class NoveltiesClient : BaseHttpClient() {
     fun getNovelties(ids: List<Int>, language: ApiLanguage?): List<Novelty> {
         val params = ids.joinToString(",")
         return getRequest("$noveltiesEndpoint?ids=$params", language)
+    }
+
+    fun getPagedNovelties(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Novelty>> {
+        return getPagedRequest("$noveltiesEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

@@ -4,6 +4,7 @@ import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.*
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class GameMechanicsE2ETests : BaseE2ESpec() {
@@ -14,6 +15,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                 expect("Fetch dye colors in $language language") {
                     shouldNotThrowAny { client.getAllDyeColors(language) }
                 }
+                expect("Fetch paged dye colors in $language") {
+                    shouldNotThrowAny { client.getPagedColors(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Currency") {
@@ -21,6 +25,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
             ApiLanguage.entries.forEach { language ->
                 expect("Fetch currencies in $language language") {
                     shouldNotThrowAny { client.getAllCurrencies(language) }
+                }
+                expect("Fetch paged currencies in $language") {
+                    shouldNotThrowAny { client.getPagedCurrencies(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -42,6 +49,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
             val client = GWLegendaryArmoryClient()
             expect("Fetch legendary armories") {
                 shouldNotThrowAny { client.getAllLegendaryArmoryItems() }
+            }
+            expect("Fetch paged legendary armories") {
+                shouldNotThrowAny { client.getPagedLegendaryArmoryItems(PageRequest(0, 10)) }
             }
         }
         context("Legends") {
@@ -71,6 +81,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
             ApiLanguage.entries.forEach { language ->
                 expect("Fetching pets in $language language") {
                     shouldNotThrowAny { client.getAllPets(language) }
+                }
+                expect("Fetch paged pets in $language") {
+                    shouldNotThrowAny { client.getPagedPets(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -104,6 +117,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                     val skillIds = client.getSkillIds().randomElements(100)
                     shouldNotThrowAny { client.getSkills(skillIds, language) }
                 }
+                expect("Fetch paged skills in $language") {
+                    shouldNotThrowAny { client.getPagedSkills(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Specializations") {
@@ -113,6 +129,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                     val specializationIds = client.getSpecializationIds()
                     shouldNotThrowAny { client.getSpecializations(specializationIds, language) }
                 }
+                expect("Fetching paged specializations in $language language") {
+                    shouldNotThrowAny { client.getPagedSpecializations(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Titles") {
@@ -120,6 +139,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
             ApiLanguage.entries.forEach { language ->
                 expect("Fetch titles in $language language") {
                     shouldNotThrowAny { client.getAllTitles(language) }
+                }
+                expect("Fetch paged titles in $language language") {
+                    shouldNotThrowAny { client.getPagedTitles(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -129,6 +151,9 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                 expect("Fetching random traits in $language language") {
                     val traitIds = client.getTraitIds().randomElements(100)
                     shouldNotThrowAny { client.getTraits(traitIds, language) }
+                }
+                expect("Fetching paged traits in $language language") {
+                    shouldNotThrowAny { client.getPagedTraits(PageRequest(0, 10), language) }
                 }
             }
         }

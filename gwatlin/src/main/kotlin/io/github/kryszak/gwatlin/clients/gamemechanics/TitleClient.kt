@@ -2,6 +2,8 @@ package io.github.kryszak.gwatlin.clients.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.Title
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class TitleClient: BaseHttpClient() {
@@ -23,5 +25,9 @@ internal class TitleClient: BaseHttpClient() {
     fun getTitles(ids: List<Int>, language: ApiLanguage?): List<Title> {
         val params = ids.joinToString(",")
         return getRequest("$titlesEndpoint?ids=$params", language)
+    }
+
+    fun getPagedTitles(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Title>> {
+        return getPagedRequest("$titlesEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

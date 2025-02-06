@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Architecture"
+  },
+  {
+    "id": 2,
+    "name": "Table, Seating, Etc."
+  },
+  {
+    "id": 3,
+    "name": "Storage"
+  },
+  {
+    "id": 4,
+    "name": "Decor"
+  },
+  {
+    "id": 5,
+    "name": "Lighting"
+  },
+  {
+    "id": 6,
+    "name": "Planters and Topiaries"
+  },
+  {
+    "id": 7,
+    "name": "Trees and Foliage"
+  },
+  {
+    "id": 8,
+    "name": "Natural Features"
+  },
+  {
+    "id": 9,
+    "name": "Sculptures"
+  },
+  {
+    "id": 10,
+    "name": "Flags, Signs, Markers, Etc."
+  }
+]

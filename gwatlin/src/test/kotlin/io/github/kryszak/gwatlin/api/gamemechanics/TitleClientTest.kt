@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldContainExactly
@@ -77,6 +78,26 @@ internal class TitleClientTest : BaseWiremockTest() {
                     achievement shouldBe 113
                     achievements shouldContainExactly listOf(113)
                 }
+            }
+        }
+        should("Get paged titles") {
+            // given
+            stubResponse(
+                "/v2/titles?page=0&page_size=10",
+                "/responses/gamemechanics/titles/titles_paged.json",
+                pageParams = PageParameters(10, 39, 10, 389)
+            )
+
+            // when
+            val pagedTitles = titleClient.getPagedTitles(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedTitles) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 39
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 389
             }
         }
     }

@@ -1,0 +1,109 @@
+[
+  {
+    "id": 50,
+    "name": "",
+    "attributes": []
+  },
+  {
+    "id": 112,
+    "name": "",
+    "attributes": []
+  },
+  {
+    "id": 115,
+    "name": "",
+    "attributes": []
+  },
+  {
+    "id": 137,
+    "name": "Mighty",
+    "attributes": [
+      {
+        "attribute": "Power",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Precise",
+    "attributes": [
+      {
+        "attribute": "Precision",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Vital",
+    "attributes": [
+      {
+        "attribute": "Vitality",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Resilient",
+    "attributes": [
+      {
+        "attribute": "Toughness",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Lingering",
+    "attributes": [
+      {
+        "attribute": "Vitality",
+        "multiplier": 0.25,
+        "value": 0
+      },
+      {
+        "attribute": "ConditionDamage",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Strong",
+    "attributes": [
+      {
+        "attribute": "Power",
+        "multiplier": 0.35,
+        "value": 0
+      },
+      {
+        "attribute": "Precision",
+        "multiplier": 0.25,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Ravaging",
+    "attributes": [
+      {
+        "attribute": "Precision",
+        "multiplier": 0.25,
+        "value": 0
+      },
+      {
+        "attribute": "ConditionDamage",
+        "multiplier": 0.35,
+        "value": 0
+      }
+    ]
+  }
+]

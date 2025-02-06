@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.SkillsClient
 
 /**
@@ -26,7 +29,15 @@ class GWSkillsClient {
      * @see io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
      */
     @JvmOverloads
-    fun getSkills(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Skill> {
+    fun getSkills(ids: List<Int>, language: ApiLanguage? = null): List<Skill> {
         return skillsClient.getSkills(ids, language)
+    }
+
+    /**
+     * Retrieves paged skills
+     * @param language of returned text (default=en)
+     */
+    fun getPagedSkills(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Skill>> {
+        return skillsClient.getPagedSkills(pageRequest, language)
     }
 }

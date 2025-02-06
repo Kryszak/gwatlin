@@ -4,6 +4,8 @@ import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.homestead.model.Category
 import io.github.kryszak.gwatlin.api.homestead.model.Decoration
 import io.github.kryszak.gwatlin.api.homestead.model.Glyph
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class HomesteadClient : BaseHttpClient() {
@@ -29,6 +31,10 @@ internal class HomesteadClient : BaseHttpClient() {
         return getRequest("$decorationsEndpoint?ids=$params", language)
     }
 
+    fun getPagedDecorations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Decoration>> {
+        return getPagedRequest("$decorationsEndpoint?${pageRequest.toQueryParams()}", language)
+    }
+
     fun getDecorationCategoryIds(): List<Int> {
         return getRequest(decorationCategoriesEndpoint)
     }
@@ -42,6 +48,10 @@ internal class HomesteadClient : BaseHttpClient() {
         return getRequest("$decorationCategoriesEndpoint?ids=$params", language)
     }
 
+    fun getPagedDecorationCategories(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Category>> {
+        return getPagedRequest("$decorationCategoriesEndpoint?${pageRequest.toQueryParams()}", language)
+    }
+
     fun getGlyphIds(): List<String> {
         return getRequest(glyphsEndpoint)
     }
@@ -53,5 +63,9 @@ internal class HomesteadClient : BaseHttpClient() {
     fun getGlyphs(ids: List<String>): List<Glyph> {
         val params = ids.joinToString(",")
         return getRequest("$glyphsEndpoint?ids=$params")
+    }
+
+    fun getPagedGlyphs(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glyph>> {
+        return getPagedRequest("$glyphsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

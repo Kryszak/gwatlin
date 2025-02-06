@@ -3,6 +3,8 @@ package io.github.kryszak.gwatlin.clients.commerce
 import io.github.kryszak.gwatlin.api.commerce.model.exchange.CoinToGemExchange
 import io.github.kryszak.gwatlin.api.commerce.model.listing.CommerceListing
 import io.github.kryszak.gwatlin.api.commerce.model.price.Price
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class CommerceClient : BaseHttpClient() {
@@ -16,6 +18,10 @@ internal class CommerceClient : BaseHttpClient() {
     fun getCommerceListings(ids: List<Int>): List<CommerceListing> {
         val params = ids.joinToString(",")
         return getRequest("$commerceEndpoint/listings?ids=$params")
+    }
+
+    fun getPagedCommerceListings(pageRequest: PageRequest): PagedResponse<List<CommerceListing>> {
+        return getPagedRequest("$commerceEndpoint/listings?${pageRequest.toQueryParams()}")
     }
 
     fun getCoinsToGemsExchange(quantity: Int): CoinToGemExchange {
@@ -33,5 +39,9 @@ internal class CommerceClient : BaseHttpClient() {
     fun getPrices(ids: List<Int>): List<Price> {
         val params = ids.joinToString(",")
         return getRequest("$commerceEndpoint/prices?ids=$params")
+    }
+
+    fun getPagedPrices(pageRequest: PageRequest): PagedResponse<List<Price>> {
+        return getPagedRequest("$commerceEndpoint/prices?${pageRequest.toQueryParams()}")
     }
 }

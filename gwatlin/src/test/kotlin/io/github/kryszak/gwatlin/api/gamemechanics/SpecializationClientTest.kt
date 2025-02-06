@@ -2,6 +2,7 @@ package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.exception.ApiRequestException
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.throwables.shouldThrow
@@ -103,6 +104,26 @@ internal class SpecializationClientTest : BaseWiremockTest() {
                     icon shouldBe "https://render.guildwars2.com/file/2C4DCE5C0C255F32B51DCF9E4360106823EAF926/1012018.png"
                     background shouldBe "https://render.guildwars2.com/file/B73FB47165CB20DE21B1FAE91FE22BDE29B6FB76/1012093.png"
                 }
+            }
+        }
+        should("Get paged specializations") {
+            // given
+            stubResponse(
+                "/v2/specializations?page=0&page_size=10",
+                "/responses/gamemechanics/specializations/specializations_paged.json",
+                pageParams = PageParameters(10, 8, 10, 72)
+            )
+
+            // when
+            val pagedSpecializations = specializationClient.getPagedSpecializations(PageRequest(0, 10))
+
+            // then
+            assertSoftly(pagedSpecializations) {
+                it.data shouldHaveSize 10
+                it.pageSize shouldBe 10
+                it.pageTotal shouldBe 8
+                it.resultCount shouldBe 10
+                it.resultTotal shouldBe 72
             }
         }
     }

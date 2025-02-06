@@ -3,6 +3,7 @@ package io.github.kryszak.e2e.wardrobe
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.api.wardrobe.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
@@ -15,6 +16,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                     val finisherIds = client.getFinisherIds()
                     shouldNotThrowAny { client.getFinishers(finisherIds, language) }
                 }
+                expect("Fetch paged finishers in $language language") {
+                    shouldNotThrowAny { client.getPagedFinishers(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Gliders") {
@@ -23,6 +27,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 expect("Fetch gliders in $language language") {
                     val gliderIds = client.getGliderIds()
                     shouldNotThrowAny { client.getGliders(gliderIds, language) }
+                }
+                expect("Fetch paged gliders in $language language") {
+                    shouldNotThrowAny { client.getPagedGliders(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -42,6 +49,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                     val mailCarrierIds = client.getMailCarrierIds()
                     shouldNotThrowAny { client.getMailCarriers(mailCarrierIds, language) }
                 }
+                expect("Fetch paged carriers in $language language") {
+                    shouldNotThrowAny { client.getPagedMailCarriers(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Minis") {
@@ -49,6 +59,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
             ApiLanguage.entries.forEach { language ->
                 expect("Fetch all minis in $language language") {
                     shouldNotThrowAny { client.getAllMinis(language) }
+                }
+                expect("Fetch paged minis in $language language") {
+                    shouldNotThrowAny { client.getPagedMinis(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -58,10 +71,11 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 expect("Fetching all mount types in $language language") {
                     shouldNotThrowAny { client.getAllMountTypes(language) }
                 }
-            }
-            ApiLanguage.entries.forEach { language ->
                 expect("Fetching all mount skins in $language language") {
                     shouldNotThrowAny { client.getAllMountSkins(language) }
+                }
+                expect("Fetching paged mount skins in $language language") {
+                    shouldNotThrowAny { client.getPagedMountSkins(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -70,6 +84,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
             ApiLanguage.entries.forEach { language ->
                 expect("Fetch all novelties in $language language") {
                     shouldNotThrowAny { client.getAllNovelties(language) }
+                }
+                expect("Fetch paged novelties in $language language") {
+                    shouldNotThrowAny { client.getPagedNovelties(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -97,6 +114,9 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 expect("Fetch skins in $language language") {
                     val skinIds = client.getSkinIds().randomElements(200)
                     shouldNotThrowAny { client.getSkins(skinIds, language) }
+                }
+                expect("Fetch pages skins in $language language") {
+                    shouldNotThrowAny { client.getPagedSkins(PageRequest(0, 10), language) }
                 }
             }
         }

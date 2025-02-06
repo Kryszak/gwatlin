@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.gamemechanics.model.legend.LegendaryArmoryItem
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.LegendaryArmoryClient
 
 /**
@@ -39,5 +41,12 @@ class GWLegendaryArmoryClient {
      */
     fun getAllLegendaryArmoryItems(): List<LegendaryArmoryItem> {
         return legendaryArmoryClient.getAllLegendaryArmoryItems()
+    }
+
+    /**
+     * Returns paged legendary armory items
+     */
+    fun getPagedLegendaryArmoryItems(pageRequest: PageRequest): PagedResponse<List<LegendaryArmoryItem>> {
+        return legendaryArmoryClient.getPagedLegendaryArmoryItems(pageRequest)
     }
 }

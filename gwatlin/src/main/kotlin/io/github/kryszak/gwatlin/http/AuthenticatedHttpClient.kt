@@ -4,9 +4,9 @@ import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.extensions.authentication
 import io.github.kryszak.gwatlin.api.ApiLanguage
 
-internal open class AuthenticatedHttpClient(
+internal abstract class AuthenticatedHttpClient(
     val apiKey: String,
-    schemaVersion: String? = null
+    schemaVersion: String? = null,
 ) : BaseHttpClient(schemaVersion) {
 
     protected inline fun <reified T : Any> getRequestAuth(
@@ -15,6 +15,16 @@ internal open class AuthenticatedHttpClient(
         configureRequest: Request.() -> Unit = {}
     ) =
         getRequest<T>(uri, language) {
+            authentication().bearer(apiKey)
+            configureRequest(this)
+        }
+
+    protected inline fun <reified T : Any> getPagedRequestAuth(
+        uri: String,
+        language: ApiLanguage? = null,
+        configureRequest: Request.() -> Unit = {},
+    ) =
+        getPagedRequest<T>(uri, language) {
             authentication().bearer(apiKey)
             configureRequest(this)
         }

@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.clients.items
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.item.Item
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class ItemsClient : BaseHttpClient() {
@@ -11,8 +14,12 @@ internal class ItemsClient : BaseHttpClient() {
         return getRequest(itemEndpoint)
     }
 
-    fun getItems(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Item> {
+    fun getItems(ids: List<Int>, language: ApiLanguage?): List<Item> {
         val params = ids.joinToString(",")
         return getRequest("$itemEndpoint?ids=$params", language)
+    }
+
+    fun getPagedItems(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Item>> {
+        return getPagedRequest("$itemEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

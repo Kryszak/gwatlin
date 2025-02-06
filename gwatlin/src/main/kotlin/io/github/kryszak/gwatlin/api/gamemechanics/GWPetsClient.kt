@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.clients.gamemechanics.PetsClient
 
 /**
@@ -26,7 +29,7 @@ class GWPetsClient {
      * @see io.github.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
     @JvmOverloads
-    fun getPets(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Pet> {
+    fun getPets(ids: List<Int>, language: ApiLanguage? = null): List<Pet> {
         return petsClient.getPets(ids, language)
     }
 
@@ -36,7 +39,15 @@ class GWPetsClient {
      * @see io.github.kryszak.gwatlin.api.gamemechanics.model.pet.Pet
      */
     @JvmOverloads
-    fun getAllPets(language: io.github.kryszak.gwatlin.api.ApiLanguage? = null): List<Pet> {
+    fun getAllPets(language: ApiLanguage? = null): List<Pet> {
         return petsClient.getAllPets(language)
+    }
+
+    /**
+     * Retrieves paged pets
+     * @param language of returned text (default=en)
+     */
+    fun getPagedPets(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Pet>> {
+        return petsClient.getPagedPets(pageRequest, language)
     }
 }

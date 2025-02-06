@@ -1,6 +1,9 @@
 package io.github.kryszak.gwatlin.clients.items
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.model.recipe.Recipe
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class RecipesClient : BaseHttpClient() {
@@ -13,7 +16,7 @@ internal class RecipesClient : BaseHttpClient() {
         return getRequest(recipesEndpoint)
     }
 
-    fun getRecipes(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Recipe> {
+    fun getRecipes(ids: List<Int>, language: ApiLanguage?): List<Recipe> {
         val params = ids.joinToString(",")
         return getRequest("$recipesEndpoint?ids=$params", language)
     }
@@ -24,5 +27,9 @@ internal class RecipesClient : BaseHttpClient() {
 
     fun searchRecipesWithOutput(itemId: Int): List<Int> {
         return getRequest("$searchEndpoint?output=$itemId")
+    }
+
+    fun getPagedRecipes(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Recipe>> {
+        return getPagedRequest("$recipesEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

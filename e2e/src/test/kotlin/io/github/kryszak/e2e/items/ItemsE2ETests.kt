@@ -7,6 +7,7 @@ import io.github.kryszak.gwatlin.api.items.GWItemStatsClient
 import io.github.kryszak.gwatlin.api.items.GWItemsClient
 import io.github.kryszak.gwatlin.api.items.GWMaterialsClient
 import io.github.kryszak.gwatlin.api.items.GWRecipesClient
+import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class ItemsE2ETests : BaseE2ESpec() {
@@ -18,6 +19,9 @@ internal class ItemsE2ETests : BaseE2ESpec() {
                     val itemIds = client.getItemIds().randomElements(100)
                     shouldNotThrowAny { client.getItems(itemIds, language) }
                 }
+                expect("Fetch paged items in $language language") {
+                    shouldNotThrowAny { client.getPagedItems(PageRequest(0, 10), language) }
+                }
             }
         }
         context("Item stats") {
@@ -26,6 +30,9 @@ internal class ItemsE2ETests : BaseE2ESpec() {
                 expect("Fetch item stats in $language language") {
                     val itemStatIds = client.getItemStatsIds().randomElements(100)
                     shouldNotThrowAny { client.getItemStats(itemStatIds, language) }
+                }
+                expect("Fetch paged item stats in $language language") {
+                    shouldNotThrowAny { client.getPagedItemStats(PageRequest(0, 10), language) }
                 }
             }
         }
@@ -44,6 +51,9 @@ internal class ItemsE2ETests : BaseE2ESpec() {
                 expect("Fetch recipes in $language language") {
                     val recipeIds = client.getRecipeIds().randomElements(100)
                     shouldNotThrowAny { client.getRecipes(recipeIds, language) }
+                }
+                expect("Fetch paged recipes in $language language") {
+                    shouldNotThrowAny { client.getPagedRecipes(PageRequest(0, 10), language) }
                 }
             }
         }

@@ -1,6 +1,8 @@
 package io.github.kryszak.gwatlin.api.wardrobe
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.shared.PageRequest
+import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.api.wardrobe.model.Novelty
 import io.github.kryszak.gwatlin.clients.wardrobe.NoveltiesClient
 
@@ -44,5 +46,13 @@ class GWNoveltiesClient {
      */
     fun getNovelties(ids: List<Int>, language: ApiLanguage? = null): List<Novelty> {
         return noveltiesClient.getNovelties(ids, language)
+    }
+
+    /**
+     * Returns paged novelties
+     * @param language for response
+     */
+    fun getPagedNovelties(pageRequest: PageRequest, language: ApiLanguage? = null): PagedResponse<List<Novelty>> {
+        return noveltiesClient.getPagedNovelties(pageRequest, language)
     }
 }
