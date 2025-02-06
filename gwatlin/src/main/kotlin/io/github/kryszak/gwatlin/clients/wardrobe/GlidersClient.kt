@@ -26,8 +26,4 @@ internal class GlidersClient : BaseHttpClient() {
     fun getPagedGliders(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glider>> {
         return getPagedRequest(endpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedGliders(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glider>> {
-        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}", language)
-    }
 }

@@ -30,14 +30,4 @@ internal abstract class AuthenticatedHttpClient(
             authentication().bearer(apiKey)
             configureRequest(this)
         }
-
-    protected inline fun <reified T : Any> getPagedRequestAuth(
-        uri: String,
-        language: ApiLanguage? = null,
-        configureRequest: Request.() -> Unit = {},
-    ) =
-        getPagedRequest<T>(uri, language) {
-            authentication().bearer(apiKey)
-            configureRequest(this)
-        }
 }

@@ -30,8 +30,4 @@ internal class TitleClient: BaseHttpClient() {
     fun getPagedTitles(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Title>> {
         return getPagedRequest(titlesEndpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedTitles(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Title>> {
-        return getPagedRequest("$titlesEndpoint?${pageRequest.toQueryParams()}", language)
-    }
 }

@@ -26,8 +26,4 @@ internal class SpecializationClient : BaseHttpClient() {
     fun getPagedSpecializations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Specialization>> {
         return getPagedRequest(specializationEndpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedSpecializations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Specialization>> {
-        return getPagedRequest("$specializationEndpoint?${pageRequest.toQueryParams()}", language)
-    }
 }

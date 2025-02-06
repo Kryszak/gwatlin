@@ -28,10 +28,6 @@ internal class AchievementsClient : BaseHttpClient() {
         return getPagedRequest(baseEndpoint, pageRequest.toQueryParams())
     }
 
-    fun getPagedAchievements(pageRequest: PageRequest): PagedResponse<List<Achievement>> {
-        return getPagedRequest("$baseEndpoint?${pageRequest.toQueryParams()}")
-    }
-
     fun getAchievementGroupIds(): List<String> {
         return getRequest(groupEndpoint)
     }
@@ -49,10 +45,6 @@ internal class AchievementsClient : BaseHttpClient() {
         return getPagedRequest(groupEndpoint, pageRequest.toQueryParams())
     }
 
-    fun getPagedAchievementGroups(pageRequest: PageRequest): PagedResponse<List<AchievementGroup>> {
-        return getPagedRequest("$groupEndpoint?${pageRequest.toQueryParams()}")
-    }
-
     fun getAchievementCategoryIds(): List<Int> {
         return getRequest(categoryEndpoint)
     }
@@ -68,9 +60,5 @@ internal class AchievementsClient : BaseHttpClient() {
 
     fun getPagedAchievementCategories(pageRequest: PageRequest): PagedResponse<List<AchievementCategory>> {
         return getPagedRequest(categoryEndpoint, pageRequest.toQueryParams())
-    }
-
-    fun getPagedAchievementCategories(pageRequest: PageRequest): PagedResponse<List<AchievementCategory>> {
-        return getPagedRequest("$categoryEndpoint?${pageRequest.toQueryParams()}")
     }
 }

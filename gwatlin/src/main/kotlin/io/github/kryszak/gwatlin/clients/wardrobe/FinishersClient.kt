@@ -22,8 +22,4 @@ internal class FinishersClient : BaseHttpClient() {
     fun getPagedFinishers(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Finisher>> {
         return getPagedRequest(finisherEndpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedFinishers(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Finisher>> {
-        return getPagedRequest("$finisherEndpoint?${pageRequest.toQueryParams()}", language)
-    }
 }

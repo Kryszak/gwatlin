@@ -24,10 +24,6 @@ internal class CommerceClient : BaseHttpClient() {
         return getPagedRequest("$commerceEndpoint/listings", pageRequest.toQueryParams())
     }
 
-    fun getPagedCommerceListings(pageRequest: PageRequest): PagedResponse<List<CommerceListing>> {
-        return getPagedRequest("$commerceEndpoint/listings?${pageRequest.toQueryParams()}")
-    }
-
     fun getCoinsToGemsExchange(quantity: Int): CoinToGemExchange {
         return getRequest("$commerceEndpoint/exchange/coins", listOf("quantity" to quantity.toString()))
     }
@@ -47,9 +43,5 @@ internal class CommerceClient : BaseHttpClient() {
 
     fun getPagedPrices(pageRequest: PageRequest): PagedResponse<List<Price>> {
         return getPagedRequest("$commerceEndpoint/prices", pageRequest.toQueryParams())
-    }
-
-    fun getPagedPrices(pageRequest: PageRequest): PagedResponse<List<Price>> {
-        return getPagedRequest("$commerceEndpoint/prices?${pageRequest.toQueryParams()}")
     }
 }

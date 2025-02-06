@@ -22,8 +22,4 @@ internal class SkinsClient : BaseHttpClient() {
     fun getPagedSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skin>> {
         return getPagedRequest(skinsEndpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skin>> {
-        return getPagedRequest("$skinsEndpoint?${pageRequest.toQueryParams()}", language)
-    }
 }

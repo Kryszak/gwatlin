@@ -22,8 +22,4 @@ internal class ItemStatsClient : BaseHttpClient() {
     fun getPagedItemStats(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<ItemStats>> {
         return getPagedRequest(statsEndpoint, pageRequest.toQueryParams(), language)
     }
-
-    fun getPagedItemStats(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<ItemStats>> {
-        return getPagedRequest("$statsEndpoint?${pageRequest.toQueryParams()}", language)
-    }
 }
