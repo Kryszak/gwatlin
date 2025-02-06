@@ -30,4 +30,8 @@ internal class ColorClient : BaseHttpClient() {
     fun getPagedColors(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<DyeColor>> {
         return getPagedRequest(colorsEndpoint, pageRequest.toQueryParams(), language)
     }
+
+    fun getPagedColors(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<DyeColor>> {
+        return getPagedRequest("$colorsEndpoint?${pageRequest.toQueryParams()}", language)
+    }
 }

@@ -35,6 +35,10 @@ internal class HomesteadClient : BaseHttpClient() {
         return getPagedRequest(decorationsEndpoint, pageRequest.toQueryParams(), language)
     }
 
+    fun getPagedDecorations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Decoration>> {
+        return getPagedRequest("$decorationsEndpoint?${pageRequest.toQueryParams()}", language)
+    }
+
     fun getDecorationCategoryIds(): List<Int> {
         return getRequest(decorationCategoriesEndpoint)
     }
@@ -52,6 +56,10 @@ internal class HomesteadClient : BaseHttpClient() {
         return getPagedRequest(decorationCategoriesEndpoint, pageRequest.toQueryParams(), language)
     }
 
+    fun getPagedDecorationCategories(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Category>> {
+        return getPagedRequest("$decorationCategoriesEndpoint?${pageRequest.toQueryParams()}", language)
+    }
+
     fun getGlyphIds(): List<String> {
         return getRequest(glyphsEndpoint)
     }
@@ -67,5 +75,9 @@ internal class HomesteadClient : BaseHttpClient() {
 
     fun getPagedGlyphs(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glyph>> {
         return getPagedRequest(glyphsEndpoint, pageRequest.toQueryParams(), language)
+    }
+
+    fun getPagedGlyphs(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glyph>> {
+        return getPagedRequest("$glyphsEndpoint?${pageRequest.toQueryParams()}", language)
     }
 }

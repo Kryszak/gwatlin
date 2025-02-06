@@ -22,4 +22,8 @@ internal class ItemsClient : BaseHttpClient() {
     fun getPagedItems(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Item>> {
         return getPagedRequest(itemEndpoint, pageRequest.toQueryParams(), language)
     }
+
+    fun getPagedItems(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Item>> {
+        return getPagedRequest("$itemEndpoint?${pageRequest.toQueryParams()}", language)
+    }
 }

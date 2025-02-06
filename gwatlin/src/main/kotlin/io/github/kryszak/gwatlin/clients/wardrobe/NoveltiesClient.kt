@@ -30,4 +30,8 @@ internal class NoveltiesClient : BaseHttpClient() {
     fun getPagedNovelties(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Novelty>> {
         return getPagedRequest(noveltiesEndpoint, pageRequest.toQueryParams(), language)
     }
+
+    fun getPagedNovelties(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Novelty>> {
+        return getPagedRequest("$noveltiesEndpoint?${pageRequest.toQueryParams()}", language)
+    }
 }
