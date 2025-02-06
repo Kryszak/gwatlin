@@ -69,17 +69,19 @@ internal abstract class BaseHttpClient(
         .httpGet(queryParams)
         .timeout(httpConfig.connectTimeout)
         .timeoutRead(httpConfig.readTimeout)
-        .also { addDefaultHeaders(it, language) }
+        .also { addSchemaVersionHeader(it) }
+        .also { addLanguageHeader(it, language) }
         .also { log.info(logMessage.format(it.url, it.parameters, it.headers)) }
         .also(configureRequest)
         // The Fuel extension package doesn't acknowledge default serializers.
         // The default serializers need to be passed manually, sadly
         .responseObject<T>(json.serializersModule.serializer(), json)
 
-    private fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
+    private fun addSchemaVersionHeader(request: Request) =
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
+
+    private fun addLanguageHeader(request: Request, language: ApiLanguage?) =
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
-    }
 
     private fun <T : Any> processResult(result: Result<T, FuelError>): T {
         return when (result) {
