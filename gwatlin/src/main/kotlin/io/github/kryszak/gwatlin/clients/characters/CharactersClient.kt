@@ -19,10 +19,10 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(apiKey
         getRequestAuth<Map<String, List<String>>>("$endpoint/$characterName/backstory").values.firstOrNull()
 
     fun getBuildTab(characterName: String, tab: Int) =
-        getRequestAuth<BuildTab>("$endpoint/$characterName/buildtabs?tab=$tab")
+        getRequestAuth<BuildTab>("$endpoint/$characterName/buildtabs", listOf("tab" to tab.toString()))
 
     fun getBuildTabs(characterName: String) =
-        getRequestAuth<List<BuildTab>>("$endpoint/$characterName/buildtabs?tabs=all")
+        getRequestAuth<List<BuildTab>>("$endpoint/$characterName/buildtabs", listOf("tabs" to "all"))
 
     fun getCore(characterName: String) = getRequestAuth<CharacterCore>("$endpoint/$characterName/core")
 
@@ -33,10 +33,10 @@ internal class CharactersClient(apiKey: String) : AuthenticatedHttpClient(apiKey
         getRequestAuth<Map<String, List<EquipmentItem>>>("$endpoint/$characterName/equipment").values.firstOrNull()
 
     fun getEquipmentTab(characterName: String, tab: Int) =
-        getRequestAuth<EquipmentTab>("$endpoint/$characterName/equipmenttabs?tab=$tab")
+        getRequestAuth<EquipmentTab>("$endpoint/$characterName/equipmenttabs", listOf("tab" to tab.toString()))
 
     fun getEquipmentTabs(characterName: String) =
-        getRequestAuth<List<EquipmentTab>>("$endpoint/$characterName/equipmenttabs?tabs=all")
+        getRequestAuth<List<EquipmentTab>>("$endpoint/$characterName/equipmenttabs", listOf("tabs" to "all"))
 
     fun getInventory(characterName: String) =
         getRequestAuth<Map<String, List<Bag?>>>("$endpoint/$characterName/inventory").values.firstOrNull()

@@ -16,10 +16,10 @@ internal class ItemsClient : BaseHttpClient() {
 
     fun getItems(ids: List<Int>, language: ApiLanguage?): List<Item> {
         val params = ids.joinToString(",")
-        return getRequest("$itemEndpoint?ids=$params", listOf(), language)
+        return getRequest(itemEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedItems(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Item>> {
-        return getPagedRequest("$itemEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(itemEndpoint, pageRequest.toQueryParams(), language)
     }
 }

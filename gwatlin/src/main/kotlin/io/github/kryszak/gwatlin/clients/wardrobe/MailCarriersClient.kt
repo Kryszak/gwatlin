@@ -20,10 +20,10 @@ internal class MailCarriersClient : BaseHttpClient() {
 
     fun getMailCarriers(ids: List<Int>, language: ApiLanguage?): List<MailCarrier> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params", listOf(), language)
+        return getRequest(endpoint, listOf("ids" to params), language)
     }
 
     fun getPagedMailCarriers(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<MailCarrier>> {
-        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(endpoint, pageRequest.toQueryParams(), language)
     }
 }

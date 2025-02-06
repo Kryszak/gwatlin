@@ -21,15 +21,15 @@ internal class MountsClient : BaseHttpClient() {
 
     fun getMountSkins(ids: List<Int>, language: ApiLanguage?): List<MountSkin> {
         val params = ids.joinToString(",")
-        return getRequest("$skinsEndpoint?ids=$params", listOf(), language)
+        return getRequest(skinsEndpoint, listOf("ids" to params), language)
     }
 
     fun getAllMountSkins(language: ApiLanguage?): List<MountSkin> {
-        return getRequest("$skinsEndpoint?ids=all", listOf(), language)
+        return getRequest(skinsEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getPagedMountSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<MountSkin>> {
-        return getPagedRequest("$skinsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(skinsEndpoint, pageRequest.toQueryParams(), language)
     }
 
     fun getMountTypesIds(): List<String> {
@@ -38,10 +38,10 @@ internal class MountsClient : BaseHttpClient() {
 
     fun getMountTypes(ids: List<String>, language: ApiLanguage?): List<MountType> {
         val params = ids.joinToString(",")
-        return getRequest("$typesEndpoint?ids=$params", listOf(), language)
+        return getRequest(typesEndpoint, listOf("ids" to params), language)
     }
 
     fun getAllMountTypes(language: ApiLanguage?): List<MountType> {
-        return getRequest("$typesEndpoint?ids=all", listOf(), language)
+        return getRequest(typesEndpoint, listOf("ids" to "all"), language)
     }
 }

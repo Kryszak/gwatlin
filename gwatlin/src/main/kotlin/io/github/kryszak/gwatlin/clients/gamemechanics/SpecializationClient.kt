@@ -20,10 +20,10 @@ internal class SpecializationClient : BaseHttpClient() {
 
     fun getSpecializations(ids: List<Int>, language: ApiLanguage?): List<Specialization> {
         val params = ids.joinToString(",")
-        return getRequest("$specializationEndpoint?ids=$params", listOf(), language)
+        return getRequest(specializationEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedSpecializations(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Specialization>> {
-        return getPagedRequest("$specializationEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(specializationEndpoint, pageRequest.toQueryParams(), language)
     }
 }

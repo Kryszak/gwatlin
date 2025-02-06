@@ -12,6 +12,6 @@ internal class PageRequestTest : ShouldSpec({
         val params = pageRequest.toQueryParams()
 
         // then
-        params shouldBe "page=0&page_size=10"
+        params shouldBe listOf("page" to "0", "page_size" to "10")
     }
 })

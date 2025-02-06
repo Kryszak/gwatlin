@@ -18,6 +18,6 @@ internal class JadeBotsClient : BaseHttpClient() {
 
     fun getJadeBots(ids: List<Int>, language: ApiLanguage?): List<JadeBot> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params", listOf(), language)
+        return getRequest(endpoint, listOf("ids" to params), language)
     }
 }

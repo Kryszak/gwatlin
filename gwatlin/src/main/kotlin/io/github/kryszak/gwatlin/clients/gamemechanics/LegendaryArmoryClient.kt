@@ -19,14 +19,14 @@ internal class LegendaryArmoryClient : BaseHttpClient() {
 
     fun getLegendaryArmoryItems(ids: List<Long>): List<LegendaryArmoryItem> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params")
+        return getRequest(endpoint, listOf("ids" to params))
     }
 
     fun getAllLegendaryArmoryItems(): List<LegendaryArmoryItem> {
-        return getRequest("$endpoint?ids=all")
+        return getRequest(endpoint, listOf("ids" to "all"))
     }
 
     fun getPagedLegendaryArmoryItems(pageRequest: PageRequest): PagedResponse<List<LegendaryArmoryItem>> {
-        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}")
+        return getPagedRequest(endpoint, pageRequest.toQueryParams())
     }
 }

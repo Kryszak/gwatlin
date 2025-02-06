@@ -10,10 +10,10 @@ internal class BackstoryClient : BaseHttpClient() {
     private val backstoryEndpoint = "/backstory"
 
     fun getBackstoryAnswers(language: ApiLanguage?): List<BackstoryAnswer> {
-        return getRequest("$backstoryEndpoint/answers?ids=all", listOf(), language)
+        return getRequest("$backstoryEndpoint/answers", listOf("ids" to "all"), language)
     }
 
     fun getBackstoryQuestions(language: ApiLanguage?): List<BackstoryQuestion> {
-        return getRequest("$backstoryEndpoint/questions?ids=all", listOf(), language)
+        return getRequest("$backstoryEndpoint/questions", listOf("ids" to "all"), language)
     }
 }

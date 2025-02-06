@@ -10,7 +10,7 @@ data class PageRequest(
     val size: Int,
 ) {
 
-    internal fun toQueryParams(): String {
-        return "page=$page&page_size=$size"
+    internal fun toQueryParams(): List<Pair<String, String>> {
+        return listOf("page" to page.toString(), "page_size" to size.toString())
     }
 }

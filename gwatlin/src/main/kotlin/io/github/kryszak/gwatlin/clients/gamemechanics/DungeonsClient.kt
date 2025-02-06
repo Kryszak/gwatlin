@@ -9,7 +9,7 @@ internal class DungeonsClient : BaseHttpClient() {
     private val dungeonsEndpoint = "/dungeons"
 
     fun getDungeons(language: ApiLanguage?): List<Dungeon> {
-        return getRequest("$dungeonsEndpoint?ids=all", listOf(), language)
+        return getRequest(dungeonsEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getDungeonIds(): List<String> {
@@ -22,6 +22,6 @@ internal class DungeonsClient : BaseHttpClient() {
 
     fun getDungeons(ids: List<String>, language: ApiLanguage?): List<Dungeon> {
         val params = ids.joinToString(",")
-        return getRequest("$dungeonsEndpoint?ids=$params", listOf(), language)
+        return getRequest(dungeonsEndpoint, listOf("ids" to params), language)
     }
 }

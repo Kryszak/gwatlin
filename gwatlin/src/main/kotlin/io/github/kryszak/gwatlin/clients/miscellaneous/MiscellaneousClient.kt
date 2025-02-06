@@ -22,14 +22,14 @@ internal class MiscellaneousClient : BaseHttpClient() {
     }
 
     fun getIcons(): List<Icon> {
-        return getRequest("$filesEndpoint?ids=all")
+        return getRequest(filesEndpoint, listOf("ids" to "all"))
     }
 
     fun getQuaggans(): List<Quaggan> {
-        return getRequest("$quaggansEndpoint?ids=all")
+        return getRequest(quaggansEndpoint, listOf("ids" to "all"))
     }
 
     fun getWorlds(language: ApiLanguage?): List<World> {
-        return getRequest("$worldsEndpoint?ids=all", listOf(), language)
+        return getRequest(worldsEndpoint, listOf("ids" to "all"), language)
     }
 }

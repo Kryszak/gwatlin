@@ -16,10 +16,10 @@ internal class SkinsClient : BaseHttpClient() {
 
     fun getSkins(ids: List<Int>, language: ApiLanguage?): List<Skin> {
         val params = ids.joinToString(",")
-        return getRequest("$skinsEndpoint?ids=$params", listOf(), language)
+        return getRequest(skinsEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedSkins(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Skin>> {
-        return getPagedRequest("$skinsEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(skinsEndpoint, pageRequest.toQueryParams(), language)
     }
 }

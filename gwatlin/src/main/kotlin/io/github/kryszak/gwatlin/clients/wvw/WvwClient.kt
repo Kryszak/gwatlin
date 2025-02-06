@@ -21,7 +21,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getAbilities(ids: List<Int>, language: ApiLanguage?): List<WvwAbility> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/abilities?ids=$params", listOf(), language)
+        return getRequest("$wvwEndpoint/abilities", listOf("ids" to params), language)
     }
 
     fun getMatchIds(): List<String> {
@@ -30,19 +30,19 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getMatches(ids: List<String>): List<WvwMatch> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/matches?ids=$params")
+        return getRequest("$wvwEndpoint/matches", listOf("ids" to params))
     }
 
     fun getMatchesOverview(id: Int): WvwWorldOverview {
-        return getRequest("$wvwEndpoint/matches/overview?world=$id")
+        return getRequest("$wvwEndpoint/matches/overview", listOf("world" to id.toString()))
     }
 
     fun getMatchScores(id: Int): WvwWorldScores {
-        return getRequest("$wvwEndpoint/matches/scores?world=$id")
+        return getRequest("$wvwEndpoint/matches/scores", listOf("world" to id.toString()))
     }
 
     fun getMatchStats(id: Int): WvwWorldStats {
-        return getRequest("$wvwEndpoint/matches/stats?world=$id")
+        return getRequest("$wvwEndpoint/matches/stats", listOf("world" to id.toString()))
     }
 
     fun getObjectiveIds(): List<String> {
@@ -51,7 +51,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getObjectives(ids: List<String>, language: ApiLanguage?): List<WvwObjective> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/objectives?ids=$params", listOf(), language)
+        return getRequest("$wvwEndpoint/objectives", listOf("ids" to params), language)
     }
 
     fun getRankIds(): List<Int> {
@@ -60,7 +60,7 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getRanks(ids: List<Int>, language: ApiLanguage?): List<WvwRank> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/ranks?ids=$params", listOf(), language)
+        return getRequest("$wvwEndpoint/ranks", listOf("ids" to params), language)
     }
 
     fun getUpgradeIds(): List<Int> {
@@ -69,6 +69,6 @@ internal class WvwClient : BaseHttpClient() {
 
     fun getUpgrades(ids: List<Int>, language: ApiLanguage?): List<WvwUpgrade> {
         val params = ids.joinToString(",")
-        return getRequest("$wvwEndpoint/upgrades?ids=$params", listOf(), language)
+        return getRequest("$wvwEndpoint/upgrades", listOf("ids" to params), language)
     }
 }

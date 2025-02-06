@@ -20,10 +20,10 @@ internal class GlidersClient : BaseHttpClient() {
 
     fun getGliders(ids: List<Int>, language: ApiLanguage?): List<Glider> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params", listOf(), language)
+        return getRequest(endpoint, listOf("ids" to params), language)
     }
 
     fun getPagedGliders(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Glider>> {
-        return getPagedRequest("$endpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(endpoint, pageRequest.toQueryParams(), language)
     }
 }

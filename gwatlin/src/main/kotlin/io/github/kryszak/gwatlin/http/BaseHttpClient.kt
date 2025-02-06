@@ -30,7 +30,7 @@ internal abstract class BaseHttpClient(
     private val httpConfig: HttpConfig = HttpConfig()
 
     init {
-        FuelManager.instance.addRequestInterceptor(GetRequestSpaceInterceptor)
+        FuelManager.instance.addRequestInterceptor(GetRequestGWAPIInterceptor)
     }
 
     protected inline fun <reified T : Any> getRequest(
@@ -110,10 +110,16 @@ internal abstract class BaseHttpClient(
     }
 }
 
-object GetRequestSpaceInterceptor : FoldableRequestInterceptor {
+internal object GetRequestGWAPIInterceptor : FoldableRequestInterceptor {
     override fun invoke(next: RequestTransformer): RequestTransformer {
         return { request ->
-            request.url = URI(request.url.toString().replace("+", "%20")).toURL()
+            request.url = URI(
+                request.url.toString()
+                    // fix space character encoding
+                    .replace("+", "%20")
+                    // fix comma character encoding
+                    .replace("%2C", ",")
+            ).toURL()
             next(request)
         }
     }

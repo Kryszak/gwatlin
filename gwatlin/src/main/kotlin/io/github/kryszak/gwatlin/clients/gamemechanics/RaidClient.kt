@@ -9,7 +9,7 @@ internal class RaidClient : BaseHttpClient() {
     private val raidsEndpoint = "/raids"
 
     fun getAllRaids(language: ApiLanguage?): List<Raid> {
-        return getRequest("$raidsEndpoint?ids=all", listOf(), language)
+        return getRequest(raidsEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getRaidIds(): List<String> {
@@ -22,6 +22,6 @@ internal class RaidClient : BaseHttpClient() {
 
     fun getRaids(ids: List<String>, language: ApiLanguage?): List<Raid> {
         val params = ids.joinToString(",")
-        return getRequest("$raidsEndpoint?ids=$params", listOf(), language)
+        return getRequest(raidsEndpoint, listOf("ids" to params), language)
     }
 }

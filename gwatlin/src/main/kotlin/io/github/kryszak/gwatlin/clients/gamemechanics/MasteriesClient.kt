@@ -18,10 +18,10 @@ internal class MasteriesClient : BaseHttpClient() {
 
     fun getMasteries(ids: List<Int>, language: ApiLanguage?): List<Mastery> {
         val params = ids.joinToString(",")
-        return getRequest("$masteriesEndpoint?ids=$params", listOf(), language)
+        return getRequest(masteriesEndpoint, listOf("ids" to params), language)
     }
 
     fun getAllMasteries(language: ApiLanguage?): List<Mastery> {
-        return getRequest("$masteriesEndpoint?ids=all", listOf(), language)
+        return getRequest(masteriesEndpoint, listOf("ids" to "all"), language)
     }
 }

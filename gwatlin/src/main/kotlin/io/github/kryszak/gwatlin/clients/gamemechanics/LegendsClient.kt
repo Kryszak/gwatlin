@@ -14,6 +14,6 @@ internal class LegendsClient : BaseHttpClient() {
 
     fun getLegends(ids: List<String>, language: ApiLanguage?): List<Legend> {
         val params = ids.joinToString(",")
-        return getRequest("$legendsEndpoint?ids=$params", listOf(), language)
+        return getRequest(legendsEndpoint, listOf("ids" to params), language)
     }
 }

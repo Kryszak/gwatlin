@@ -13,8 +13,7 @@ internal class GuildAuthenticatedClient(apiKey: String) : AuthenticatedHttpClien
     private val guildEndpoint = "/guild"
 
     fun getGuildLog(id: String, since: String? = ""): List<GuildLog> {
-        val sinceQuery = formSinceQuery(since)
-        return getRequestAuth("$guildEndpoint/$id/log$sinceQuery")
+        return getRequestAuth("$guildEndpoint/$id/log", formSinceQuery(since))
     }
 
     fun getGuildMembers(id: String): List<GuildMember> {
@@ -41,10 +40,10 @@ internal class GuildAuthenticatedClient(apiKey: String) : AuthenticatedHttpClien
         return getRequestAuth("$guildEndpoint/$id/upgrades")
     }
 
-    private fun formSinceQuery(since: String?): String {
+    private fun formSinceQuery(since: String?): List<Pair<String, String>> {
         return when (since) {
-            "", null -> ""
-            else -> "?since=$since"
+            "", null -> listOf()
+            else -> listOf("since" to since)
         }
     }
 }

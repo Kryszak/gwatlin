@@ -11,7 +11,7 @@ internal class NoveltiesClient : BaseHttpClient() {
     private val noveltiesEndpoint = "/novelties"
 
     fun getAllNovelties(language: ApiLanguage?): List<Novelty> {
-        return getRequest("$noveltiesEndpoint?ids=all", listOf(), language)
+        return getRequest(noveltiesEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getNoveltyIds(): List<Int> {
@@ -24,10 +24,10 @@ internal class NoveltiesClient : BaseHttpClient() {
 
     fun getNovelties(ids: List<Int>, language: ApiLanguage?): List<Novelty> {
         val params = ids.joinToString(",")
-        return getRequest("$noveltiesEndpoint?ids=$params", listOf(), language)
+        return getRequest(noveltiesEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedNovelties(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Novelty>> {
-        return getPagedRequest("$noveltiesEndpoint?${pageRequest.toQueryParams()}", listOf(), language)
+        return getPagedRequest(noveltiesEndpoint, pageRequest.toQueryParams(), language)
     }
 }

@@ -31,7 +31,7 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getBackgrounds(ids: List<Int>): List<Layer> {
         val params = ids.joinToString(",")
-        return getRequest("$backgroundEndpoint?ids=$params")
+        return getRequest(backgroundEndpoint, listOf("ids" to params))
     }
 
     fun getForegroundIds(): List<Int> {
@@ -40,7 +40,7 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getForegrounds(ids: List<Int>): List<Layer> {
         val params = ids.joinToString(",")
-        return getRequest("$foregroundEndpoint?ids=$params")
+        return getRequest(foregroundEndpoint, listOf("ids" to params))
     }
 
     fun getGuildPermissionIds(): List<String> {
@@ -49,7 +49,7 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getGuildPermissions(ids: List<String>, language: ApiLanguage?): List<GuildPermission> {
         val params = ids.joinToString(",")
-        return getRequest("$permissionEndpoint?ids=$params", listOf(), language)
+        return getRequest(permissionEndpoint, listOf("ids" to params), language)
     }
 
     fun findGuildId(name: String): String {
@@ -67,6 +67,6 @@ internal class GuildClient : BaseHttpClient() {
 
     fun getGuildUpgrades(ids: List<Int>, language: ApiLanguage?): List<GuildUpgrade> {
         val params = ids.joinToString(",")
-        return getRequest("$upgradesEndpoint?ids=$params", listOf(), language)
+        return getRequest(upgradesEndpoint, listOf("ids" to params), language)
     }
 }

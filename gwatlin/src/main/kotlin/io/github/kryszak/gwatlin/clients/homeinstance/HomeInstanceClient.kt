@@ -21,7 +21,7 @@ internal class HomeInstanceClient : BaseHttpClient() {
 
     fun getCats(ids: List<Int>): List<Cat> {
         val params = ids.joinToString(",")
-        return getRequest("$catsEndpoint?ids=$params")
+        return getRequest(catsEndpoint, listOf("ids" to params))
     }
 
     fun getNodesIds(): List<String> {

@@ -14,10 +14,10 @@ internal class ProfessionsClient : BaseHttpClient() {
 
     fun getProfessions(ids: List<String>, language: ApiLanguage?): List<Profession> {
         val params = ids.joinToString(",")
-        return getRequest("$professionsEndpoint?ids=$params", listOf(), language)
+        return getRequest(professionsEndpoint, listOf("ids" to params), language)
     }
 
     fun getAllProfessions(language: ApiLanguage?): List<Profession> {
-        return getRequest("$professionsEndpoint?ids=all", listOf(), language)
+        return getRequest(professionsEndpoint, listOf("ids" to "all"), language)
     }
 }
