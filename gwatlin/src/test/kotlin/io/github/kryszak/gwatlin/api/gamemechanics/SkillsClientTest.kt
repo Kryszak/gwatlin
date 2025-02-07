@@ -398,6 +398,13 @@ internal class SkillsClientTest : BaseWiremockTest() {
             icon shouldBe "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png"
             value.shouldBeTrue()
         }
+        assertSoftly(subskills) {
+            it shouldHaveSize 4
+            assertSoftly(it[0]) {
+                id shouldBe 34736
+                attunement shouldBe "Fire"
+            }
+        }
     }
 
     private fun fulgorAssertion(skill: Skill) = assertSoftly(skill) {

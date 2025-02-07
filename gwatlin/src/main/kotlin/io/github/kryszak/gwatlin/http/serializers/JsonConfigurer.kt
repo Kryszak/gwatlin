@@ -10,7 +10,7 @@ import java.time.OffsetDateTime
  * A convenience object for a [Json] instance, to
  * be used throughout this library.
  */
-object JsonConfigurer {
+internal object JsonConfigurer {
 
     val json = Json {
         isLenient = true // e.g. Trait.tier is handled as an unquoted string.

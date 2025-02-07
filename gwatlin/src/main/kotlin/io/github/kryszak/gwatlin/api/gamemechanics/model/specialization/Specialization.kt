@@ -16,4 +16,7 @@ data class Specialization(
         val background: String,
         @SerialName("minor_traits") val minorTraits: List<Int> = listOf(),
         @SerialName("major_traits") val majorTraits: List<Int> = listOf(),
+        @SerialName("weapon_trait") val weaponTrait: Int? = null,
+        @SerialName("profession_icon_big") val professionIconBig: String? = null,
+        @SerialName("profession_icon") val professionIcon: String? = null,
 )

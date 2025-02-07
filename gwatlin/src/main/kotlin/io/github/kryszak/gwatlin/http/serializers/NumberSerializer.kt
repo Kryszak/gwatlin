@@ -9,7 +9,7 @@ import kotlinx.serialization.json.JsonPrimitive
 /**
  * Selects either [Int] or [Double] based on the JsonElement's content.
  */
-class NumberSerializer : JsonContentPolymorphicSerializer<Number>(Number::class) {
+internal class NumberSerializer : JsonContentPolymorphicSerializer<Number>(Number::class) {
     override fun selectDeserializer(element: JsonElement): DeserializationStrategy<Number> {
         return if (element.requireContent().isInteger())
             Int.serializer()

@@ -14,6 +14,8 @@ data class AttributeAdjust(
     override val icon: String? = null,
     val value: Int? = null,
     val target: String? = null,
+    @SerialName("hit_count")
+    val hitCount: Int? = null,
 ) : Fact {
     override val type by serialNameDelegate
 }

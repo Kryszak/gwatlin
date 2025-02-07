@@ -16,7 +16,7 @@ import kotlinx.serialization.modules.SerializersModule
  * see e.g. [Nefarious Favor](https://api.guildwars2.com/v2/skills?ids=40813&v=latest).
  *
  */
-class FactWithNoTypeSerializer : KSerializer<Fact> {
+internal class FactWithNoTypeSerializer : KSerializer<Fact> {
     override val descriptor: SerialDescriptor = Fact.serializer().descriptor
     override fun deserialize(decoder: Decoder): Fact {
         require(decoder is JsonDecoder)
