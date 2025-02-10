@@ -27,7 +27,7 @@ internal class WizardsVaultClient : BaseHttpClient() {
 
     fun getListings(ids: List<Int>): List<Listing> {
         val params = ids.joinToString(",")
-        return getRequest("$listingsEndpoint?ids=$params")
+        return getRequest(listingsEndpoint, listOf("ids" to params))
     }
 
     fun getObjectiveIds(): List<Int> {
@@ -40,6 +40,6 @@ internal class WizardsVaultClient : BaseHttpClient() {
 
     fun getObjectives(ids: List<Int>): List<Objective> {
         val params = ids.joinToString(",")
-        return getRequest("$objectivesEndpoint?ids=$params")
+        return getRequest(objectivesEndpoint, listOf("ids" to params))
     }
 }

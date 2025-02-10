@@ -13,11 +13,11 @@ internal class SkiffsClient : BaseHttpClient() {
     }
 
     fun getSkiff(id: Int, language: ApiLanguage?): Skiff {
-        return getRequest("$endpoint/$id", language)
+        return getRequest("$endpoint/$id", listOf(), language)
     }
 
     fun getSkiffs(ids: List<Int>, language: ApiLanguage?): List<Skiff> {
         val params = ids.joinToString(",")
-        return getRequest("$endpoint?ids=$params", language)
+        return getRequest(endpoint, listOf("ids" to params), language)
     }
 }

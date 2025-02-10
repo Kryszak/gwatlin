@@ -10,12 +10,14 @@ import kotlinx.serialization.Serializable
 data class Achievement(
         val id: Int,
         val name: String,
+        val icon: String? = null,
         val description: String,
         val requirement: String,
         @SerialName("locked_text") val lockedText: String,
         val type: String,
         val flags: List<String> = listOf(),
         val tiers: List<AchievementTier> = listOf(),
+        val prerequisites: List<Int> = listOf(),
         val rewards: List<AchievementReward> = listOf(),
-        val bits: List<AchievementBit> = listOf()
+        val bits: List<AchievementBit> = listOf(),
 )

@@ -17,10 +17,10 @@ internal class EmotesClient : BaseHttpClient() {
 
     fun getEmotes(ids: List<String>): List<Emote> {
         val params = ids.joinToString(",")
-        return getRequest("$emotesEndpoint?ids=$params")
+        return getRequest(emotesEndpoint, listOf("ids" to params))
     }
 
     fun getAllEmotes(): List<Emote> {
-        return getRequest("$emotesEndpoint?ids=all")
+        return getRequest(emotesEndpoint, listOf("ids" to "all"))
     }
 }

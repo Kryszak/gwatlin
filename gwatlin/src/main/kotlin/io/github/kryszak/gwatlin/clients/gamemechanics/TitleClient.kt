@@ -11,7 +11,7 @@ internal class TitleClient: BaseHttpClient() {
     private val titlesEndpoint = "/titles"
 
     fun getAllTitles(language: ApiLanguage?): List<Title> {
-        return getRequest("$titlesEndpoint?ids=all", language)
+        return getRequest(titlesEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getTitleIds(): List<Int> {
@@ -19,15 +19,15 @@ internal class TitleClient: BaseHttpClient() {
     }
 
     fun getTitle(id: Int, language: ApiLanguage?): Title {
-        return getRequest("$titlesEndpoint/$id", language)
+        return getRequest("$titlesEndpoint/$id", listOf(), language)
     }
 
     fun getTitles(ids: List<Int>, language: ApiLanguage?): List<Title> {
         val params = ids.joinToString(",")
-        return getRequest("$titlesEndpoint?ids=$params", language)
+        return getRequest(titlesEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedTitles(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Title>> {
-        return getPagedRequest("$titlesEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest(titlesEndpoint, pageRequest.toQueryParams(), language)
     }
 }

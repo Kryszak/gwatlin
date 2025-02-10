@@ -1,6 +1,10 @@
 package io.github.kryszak.gwatlin.clients.miscellaneous
 
-import io.github.kryszak.gwatlin.api.miscellaneous.model.*
+import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.miscellaneous.model.BuildId
+import io.github.kryszak.gwatlin.api.miscellaneous.model.Icon
+import io.github.kryszak.gwatlin.api.miscellaneous.model.Quaggan
+import io.github.kryszak.gwatlin.api.miscellaneous.model.World
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
 internal class MiscellaneousClient : BaseHttpClient() {
@@ -18,14 +22,14 @@ internal class MiscellaneousClient : BaseHttpClient() {
     }
 
     fun getIcons(): List<Icon> {
-        return getRequest("$filesEndpoint?ids=all")
+        return getRequest(filesEndpoint, listOf("ids" to "all"))
     }
 
     fun getQuaggans(): List<Quaggan> {
-        return getRequest("$quaggansEndpoint?ids=all")
+        return getRequest(quaggansEndpoint, listOf("ids" to "all"))
     }
 
-    fun getWorlds(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<World> {
-        return getRequest("$worldsEndpoint?ids=all", language)
+    fun getWorlds(language: ApiLanguage?): List<World> {
+        return getRequest(worldsEndpoint, listOf("ids" to "all"), language)
     }
 }

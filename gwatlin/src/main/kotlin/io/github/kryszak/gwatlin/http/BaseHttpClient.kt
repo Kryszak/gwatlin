@@ -1,8 +1,6 @@
 package io.github.kryszak.gwatlin.http
 
-import com.github.kittinunf.fuel.core.FuelError
-import com.github.kittinunf.fuel.core.Headers
-import com.github.kittinunf.fuel.core.Request
+import com.github.kittinunf.fuel.core.*
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.serialization.responseObject
 import com.github.kittinunf.result.Result
@@ -15,6 +13,7 @@ import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.serializer
 import mu.KotlinLogging
+import java.net.URI
 
 internal abstract class BaseHttpClient(
     private val schemaVersion: String? = null,
@@ -22,25 +21,35 @@ internal abstract class BaseHttpClient(
 
     private val log = KotlinLogging.logger {}
 
-    private val logMessage = "Requested url: %s"
+    private val logMessage = """Requesting:
+        URL: %s
+        Query: %s
+        Headers: %s
+    """.trimIndent()
 
     private val httpConfig: HttpConfig = HttpConfig()
 
+    init {
+        FuelManager.instance.addRequestInterceptor(GetRequestGWAPIInterceptor)
+    }
+
     protected inline fun <reified T : Any> getRequest(
         uri: String,
+        queryParams: List<Pair<String, String>> = listOf(),
         language: ApiLanguage? = null,
         configureRequest: Request.() -> Unit = {},
     ): T {
-        val (_, _, result) = doRequest<T>(uri, language, configureRequest)
+        val (_, _, result) = doRequest<T>(uri, queryParams, language, configureRequest)
         return processResult(result)
     }
 
     protected inline fun <reified T : Any> getPagedRequest(
         uri: String,
+        queryParams: List<Pair<String, String>> = listOf(),
         language: ApiLanguage? = null,
         configureRequest: Request.() -> Unit = {},
     ): PagedResponse<T> {
-        val (_, response, result) = doRequest<T>(uri, language, configureRequest)
+        val (_, response, result) = doRequest<T>(uri, queryParams, language, configureRequest)
         val objects = processResult(result)
         return PagedResponse(
             objects,
@@ -53,25 +62,26 @@ internal abstract class BaseHttpClient(
 
     private inline fun <reified T : Any> doRequest(
         uri: String,
+        queryParams: List<Pair<String, String>>,
         language: ApiLanguage?,
         configureRequest: Request.() -> Unit,
     ) = "${httpConfig.baseUrl}${uri}"
-        .httpGet()
+        .httpGet(queryParams)
         .timeout(httpConfig.connectTimeout)
         .timeoutRead(httpConfig.readTimeout)
-        .also { addDefaultHeaders(it, language) }
-        .also { log.info(logMessage.format(it.url)) }
+        .also { addSchemaVersionHeader(it) }
+        .also { addLanguageHeader(it, language) }
+        .also { log.info(logMessage.format(it.url, it.parameters, it.headers)) }
         .also(configureRequest)
         // The Fuel extension package doesn't acknowledge default serializers.
         // The default serializers need to be passed manually, sadly
         .responseObject<T>(json.serializersModule.serializer(), json)
 
-    protected fun encodeParam(param: String) = param.replace(" ", "%20")
-
-    private fun addDefaultHeaders(request: Request, language: ApiLanguage?) {
+    private fun addSchemaVersionHeader(request: Request) =
         schemaVersion?.let { request.appendHeader("X-Schema-Version" to it) }
+
+    private fun addLanguageHeader(request: Request, language: ApiLanguage?) =
         language?.let { request.appendHeader(Headers.ACCEPT_LANGUAGE to it.apiString) }
-    }
 
     private fun <T : Any> processResult(result: Result<T, FuelError>): T {
         return when (result) {
@@ -98,6 +108,21 @@ internal abstract class BaseHttpClient(
             return error.toString()
         } catch (e: SerializationException) {
             return failure.getException().message ?: "Unknown error."
+        }
+    }
+}
+
+internal object GetRequestGWAPIInterceptor : FoldableRequestInterceptor {
+    override fun invoke(next: RequestTransformer): RequestTransformer {
+        return { request ->
+            request.url = URI(
+                request.url.toString()
+                    // fix space character encoding
+                    .replace("+", "%20")
+                    // fix comma character encoding
+                    .replace("%2C", ",")
+            ).toURL()
+            next(request)
         }
     }
 }

@@ -31,4 +31,6 @@ data class Skill(
         val initiative: Int? = null,
         @SerialName("next_chain") val nextChain: Int? = null,
         @SerialName("prev_chain") val previousChain: Int? = null,
+        val specialization: Int? = null,
+        val subskills: List<SubSkill> = listOf(),
 )

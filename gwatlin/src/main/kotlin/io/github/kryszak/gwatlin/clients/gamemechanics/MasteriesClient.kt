@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.clients.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.mastery.Mastery
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,16 +12,16 @@ internal class MasteriesClient : BaseHttpClient() {
         return getRequest(masteriesEndpoint)
     }
 
-    fun getMastery(id: Int, language: io.github.kryszak.gwatlin.api.ApiLanguage?): Mastery {
-        return getRequest("$masteriesEndpoint/$id", language)
+    fun getMastery(id: Int, language: ApiLanguage?): Mastery {
+        return getRequest("$masteriesEndpoint/$id", listOf(), language)
     }
 
-    fun getMasteries(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Mastery> {
+    fun getMasteries(ids: List<Int>, language: ApiLanguage?): List<Mastery> {
         val params = ids.joinToString(",")
-        return getRequest("$masteriesEndpoint?ids=$params", language)
+        return getRequest(masteriesEndpoint, listOf("ids" to params), language)
     }
 
-    fun getAllMasteries(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Mastery> {
-        return getRequest("$masteriesEndpoint?ids=all", language)
+    fun getAllMasteries(language: ApiLanguage?): List<Mastery> {
+        return getRequest(masteriesEndpoint, listOf("ids" to "all"), language)
     }
 }

@@ -21,11 +21,11 @@ internal class AchievementsClient : BaseHttpClient() {
 
     fun getAchievementsByIds(ids: List<Int>): List<Achievement> {
         val params = ids.joinToString(",")
-        return getRequest("$baseEndpoint?ids=$params")
+        return getRequest(baseEndpoint, listOf("ids" to params))
     }
 
     fun getPagedAchievements(pageRequest: PageRequest): PagedResponse<List<Achievement>> {
-        return getPagedRequest("$baseEndpoint?${pageRequest.toQueryParams()}")
+        return getPagedRequest(baseEndpoint, pageRequest.toQueryParams())
     }
 
     fun getAchievementGroupIds(): List<String> {
@@ -38,11 +38,11 @@ internal class AchievementsClient : BaseHttpClient() {
 
     fun getAchievementGroups(ids: List<String>): List<AchievementGroup> {
         val params = ids.joinToString(",")
-        return getRequest("$groupEndpoint?ids=$params")
+        return getRequest(groupEndpoint, listOf("ids" to params))
     }
 
     fun getPagedAchievementGroups(pageRequest: PageRequest): PagedResponse<List<AchievementGroup>> {
-        return getPagedRequest("$groupEndpoint?${pageRequest.toQueryParams()}")
+        return getPagedRequest(groupEndpoint, pageRequest.toQueryParams())
     }
 
     fun getAchievementCategoryIds(): List<Int> {
@@ -55,10 +55,10 @@ internal class AchievementsClient : BaseHttpClient() {
 
     fun getAchievementCategories(ids: List<Int>): List<AchievementCategory> {
         val params = ids.joinToString(",")
-        return getRequest("$categoryEndpoint?ids=$params")
+        return getRequest(categoryEndpoint, listOf("ids" to params))
     }
 
     fun getPagedAchievementCategories(pageRequest: PageRequest): PagedResponse<List<AchievementCategory>> {
-        return getPagedRequest("$categoryEndpoint?${pageRequest.toQueryParams()}")
+        return getPagedRequest(categoryEndpoint, pageRequest.toQueryParams())
     }
 }

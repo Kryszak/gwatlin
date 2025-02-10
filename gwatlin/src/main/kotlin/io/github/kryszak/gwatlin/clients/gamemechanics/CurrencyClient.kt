@@ -11,7 +11,7 @@ internal class CurrencyClient : BaseHttpClient() {
     private val currenciesEndpoint = "/currencies"
 
     fun getAllCurrencies(language: ApiLanguage?): List<Currency> {
-        return getRequest("$currenciesEndpoint?ids=all", language)
+        return getRequest(currenciesEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getCurrencyIds(): List<Int> {
@@ -19,15 +19,15 @@ internal class CurrencyClient : BaseHttpClient() {
     }
 
     fun getCurrency(id: Int, language: ApiLanguage?): Currency {
-        return getRequest("$currenciesEndpoint/$id", language)
+        return getRequest("$currenciesEndpoint/$id", listOf(), language)
     }
 
     fun getCurrencies(ids: List<Int>, language: ApiLanguage?): List<Currency> {
         val params = ids.joinToString(",")
-        return getRequest("$currenciesEndpoint?ids=$params", language)
+        return getRequest(currenciesEndpoint, listOf("ids" to params), language)
     }
 
     fun getPagedCurrencies(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Currency>> {
-        return getPagedRequest("$currenciesEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest(currenciesEndpoint, pageRequest.toQueryParams(), language)
     }
 }

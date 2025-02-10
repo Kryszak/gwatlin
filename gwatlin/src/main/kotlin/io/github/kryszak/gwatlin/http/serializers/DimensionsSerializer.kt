@@ -10,7 +10,7 @@ import kotlinx.serialization.encoding.Encoder
 /**
  * Type adapter for [io.github.kryszak.gwatlin.api.mapinfo.model.Dimensions], supporting serialization and deserialization
  */
-object DimensionsSerializer : KSerializer<Dimensions> {
+internal object DimensionsSerializer : KSerializer<Dimensions> {
     private val delegateSerializer = FloatArraySerializer()
     override val descriptor = delegateSerializer.descriptor
 

@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.clients.gamemechanics
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.gamemechanics.model.profession.Profession
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,12 +12,12 @@ internal class ProfessionsClient : BaseHttpClient() {
         return getRequest(professionsEndpoint)
     }
 
-    fun getProfessions(ids: List<String>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Profession> {
+    fun getProfessions(ids: List<String>, language: ApiLanguage?): List<Profession> {
         val params = ids.joinToString(",")
-        return getRequest("$professionsEndpoint?ids=$params", language)
+        return getRequest(professionsEndpoint, listOf("ids" to params), language)
     }
 
-    fun getAllProfessions(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Profession> {
-        return getRequest("$professionsEndpoint?ids=all", language)
+    fun getAllProfessions(language: ApiLanguage?): List<Profession> {
+        return getRequest(professionsEndpoint, listOf("ids" to "all"), language)
     }
 }

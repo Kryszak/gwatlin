@@ -19,7 +19,7 @@ internal class PvpAuthenticatedClient(apiKey: String) : AuthenticatedHttpClient(
 
     fun getPvpGames(ids: List<String>): List<PvpGame> {
         val params = ids.joinToString(",")
-        return getRequestAuth("$pvpEndpoint/games?ids=$params")
+        return getRequestAuth("$pvpEndpoint/games", listOf("ids" to params))
     }
 
     fun getPvpStandings(): PvpStanding {

@@ -16,14 +16,14 @@ internal class PetsClient : BaseHttpClient() {
 
     fun getPets(ids: List<Int>, language: ApiLanguage?): List<Pet> {
         val params = ids.joinToString(",")
-        return getRequest("$petsEndpoint?ids=$params", language)
+        return getRequest(petsEndpoint, listOf("ids" to params), language)
     }
 
     fun getAllPets(language: ApiLanguage?): List<Pet> {
-        return getRequest("$petsEndpoint?ids=all", language)
+        return getRequest(petsEndpoint, listOf("ids" to "all"), language)
     }
 
     fun getPagedPets(pageRequest: PageRequest, language: ApiLanguage?): PagedResponse<List<Pet>> {
-        return getPagedRequest("$petsEndpoint?${pageRequest.toQueryParams()}", language)
+        return getPagedRequest(petsEndpoint, pageRequest.toQueryParams(), language)
     }
 }

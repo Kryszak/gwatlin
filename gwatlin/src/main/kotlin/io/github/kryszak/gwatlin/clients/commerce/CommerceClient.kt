@@ -17,19 +17,19 @@ internal class CommerceClient : BaseHttpClient() {
 
     fun getCommerceListings(ids: List<Int>): List<CommerceListing> {
         val params = ids.joinToString(",")
-        return getRequest("$commerceEndpoint/listings?ids=$params")
+        return getRequest("$commerceEndpoint/listings", listOf("ids" to params))
     }
 
     fun getPagedCommerceListings(pageRequest: PageRequest): PagedResponse<List<CommerceListing>> {
-        return getPagedRequest("$commerceEndpoint/listings?${pageRequest.toQueryParams()}")
+        return getPagedRequest("$commerceEndpoint/listings", pageRequest.toQueryParams())
     }
 
     fun getCoinsToGemsExchange(quantity: Int): CoinToGemExchange {
-        return getRequest("$commerceEndpoint/exchange/coins?quantity=$quantity")
+        return getRequest("$commerceEndpoint/exchange/coins", listOf("quantity" to quantity.toString()))
     }
 
     fun getGemsToCoinsExchange(quantity: Int): CoinToGemExchange {
-        return getRequest("$commerceEndpoint/exchange/gems?quantity=$quantity")
+        return getRequest("$commerceEndpoint/exchange/gems", listOf("quantity" to quantity.toString()))
     }
 
     fun getPriceIds(): List<Int> {
@@ -38,10 +38,10 @@ internal class CommerceClient : BaseHttpClient() {
 
     fun getPrices(ids: List<Int>): List<Price> {
         val params = ids.joinToString(",")
-        return getRequest("$commerceEndpoint/prices?ids=$params")
+        return getRequest("$commerceEndpoint/prices", listOf("ids" to params))
     }
 
     fun getPagedPrices(pageRequest: PageRequest): PagedResponse<List<Price>> {
-        return getPagedRequest("$commerceEndpoint/prices?${pageRequest.toQueryParams()}")
+        return getPagedRequest("$commerceEndpoint/prices", pageRequest.toQueryParams())
     }
 }

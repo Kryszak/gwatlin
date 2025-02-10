@@ -1,5 +1,6 @@
 package io.github.kryszak.gwatlin.clients.wardrobe
 
+import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.wardrobe.model.outfit.Outfit
 import io.github.kryszak.gwatlin.http.BaseHttpClient
 
@@ -11,12 +12,12 @@ internal class OutfitsClient : BaseHttpClient() {
         return getRequest(outfitsEndpoint)
     }
 
-    fun getOutfits(ids: List<Int>, language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Outfit> {
+    fun getOutfits(ids: List<Int>, language: ApiLanguage?): List<Outfit> {
         val params = ids.joinToString(",")
-        return getRequest("$outfitsEndpoint?ids=$params", language)
+        return getRequest(outfitsEndpoint, listOf("ids" to params), language)
     }
 
-    fun getAllOutfits(language: io.github.kryszak.gwatlin.api.ApiLanguage?): List<Outfit> {
-        return getRequest("$outfitsEndpoint?ids=all", language)
+    fun getAllOutfits(language: ApiLanguage?): List<Outfit> {
+        return getRequest(outfitsEndpoint, listOf("ids" to "all"), language)
     }
 }
