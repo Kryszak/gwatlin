@@ -12,24 +12,24 @@ internal class HomesteadE2ETests : BaseE2ESpec() {
 
     init {
         context("Homestead") {
-            context("Decorations") {
-                ApiLanguage.entries.forEach { language ->
-                    expect("Fetch decorations in $language language") {
-                        val decorationIds = client.getDecorationIds().randomElements(100)
-                        shouldNotThrowAny { client.getDecorations(decorationIds, language) }
-                    }
-                    expect("Fetch paged decorations in $language language") {
-                        shouldNotThrowAny { client.getPagedDecorations(PageRequest(0, 10), language) }
-                    }
-                }
-                context("Categories") {
-                    ApiLanguage.entries.forEach { language ->
-                        expect("Fetch categories in $language language") {
-                            val categoryIds = client.getDecorationCategoryIds()
-                            shouldNotThrowAny { client.getDecorationCategories(categoryIds, language) }
+            ApiLanguage.entries.forEach { language ->
+                context("$language language") {
+                    context("Decorations") {
+                        expect("Fetch decorations") {
+                            val decorationIds = client.getDecorationIds().randomElements(100)
+                            shouldNotThrowAny { client.getDecorations(decorationIds, language) }
                         }
-                        expect("Fetch paged categories in $language language") {
-                            shouldNotThrowAny { client.getPagedDecorationCategories(PageRequest(0, 10), language) }
+                        expect("Fetch paged decorations") {
+                            shouldNotThrowAny { client.getPagedDecorations(PageRequest(0, 10), language) }
+                        }
+                        context("Categories") {
+                            expect("Fetch categories") {
+                                val categoryIds = client.getDecorationCategoryIds()
+                                shouldNotThrowAny { client.getDecorationCategories(categoryIds, language) }
+                            }
+                            expect("Fetch paged categories") {
+                                shouldNotThrowAny { client.getPagedDecorationCategories(PageRequest(0, 10), language) }
+                            }
                         }
                     }
                 }

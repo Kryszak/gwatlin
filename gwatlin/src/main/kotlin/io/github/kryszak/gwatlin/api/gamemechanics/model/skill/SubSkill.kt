@@ -8,5 +8,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class SubSkill(
     val id: Int,
-    val attunement: String,
+    val attunement: String? = null,
 )
