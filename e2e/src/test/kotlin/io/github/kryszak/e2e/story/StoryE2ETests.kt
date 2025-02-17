@@ -8,29 +8,25 @@ import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class StoryE2ETests : BaseE2ESpec() {
     init {
-        context("Backstory") {
-            val client = GWBackstoryClient()
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch answers in $language language") {
-                    shouldNotThrowAny { client.getBackstoryAnswers(language) }
+        ApiLanguage.entries.forEach { language ->
+            context("$language language") {
+                context("Backstory") {
+                    val client = GWBackstoryClient()
+                    expect("Fetch answers") {
+                        shouldNotThrowAny { client.getBackstoryAnswers(language) }
+                    }
+                    expect("Fetch questions") {
+                        shouldNotThrowAny { client.getBackstoryQuestions(language) }
+                    }
                 }
-            }
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch questions in $language language") {
-                    shouldNotThrowAny { client.getBackstoryQuestions(language) }
-                }
-            }
-        }
-        context("Story") {
-            val client = GWStoryClient()
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch stories in $language language") {
-                    shouldNotThrowAny { client.getStories(language) }
-                }
-            }
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch seasons in $language language") {
-                    shouldNotThrowAny { client.getStorySeasons(language) }
+                context("Story") {
+                    val client = GWStoryClient()
+                    expect("Fetch stories") {
+                        shouldNotThrowAny { client.getStories(language) }
+                    }
+                    expect("Fetch seasons") {
+                        shouldNotThrowAny { client.getStorySeasons(language) }
+                    }
                 }
             }
         }

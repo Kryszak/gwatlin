@@ -12,28 +12,26 @@ internal class MapInfoE2ETests : BaseE2ESpec() {
     init {
         context("Map info") {
             ApiLanguage.entries.forEach { language ->
-                expect("Fetch random maps in $language language") {
-                    val mapInfoIds = client.getMapIds().randomElements(100)
-                    shouldNotThrowAny { client.getMaps(mapInfoIds, language) }
-                }
-            }
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch continents in $language language") {
-                    val continentId = client.getContinentIds().random()
-                    shouldNotThrowAny { client.getContinent(continentId, language) }
-                }
-            }
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch region in $language language") {
-                    val continentId = client.getContinentIds().random()
-                    var floorId = client.getFloorIds(continentId).random()
-                    var floor = client.getFloor(continentId, floorId)
-                    while (floor.regions.isEmpty()) {
-                        floorId = client.getFloorIds(continentId).random()
-                        floor = client.getFloor(continentId, floorId)
+                context("$language language") {
+                    expect("Fetch random maps") {
+                        val mapInfoIds = client.getMapIds().randomElements(100)
+                        shouldNotThrowAny { client.getMaps(mapInfoIds, language) }
                     }
-                    val regionId = client.getRegionIds(continentId, floorId).random()
-                    shouldNotThrowAny { client.getRegion(continentId, floorId, regionId, language) }
+                    expect("Fetch continents") {
+                        val continentId = client.getContinentIds().random()
+                        shouldNotThrowAny { client.getContinent(continentId, language) }
+                    }
+                    expect("Fetch region") {
+                        val continentId = client.getContinentIds().random()
+                        var floorId = client.getFloorIds(continentId).random()
+                        var floor = client.getFloor(continentId, floorId)
+                        while (floor.regions.isEmpty()) {
+                            floorId = client.getFloorIds(continentId).random()
+                            floor = client.getFloor(continentId, floorId)
+                        }
+                        val regionId = client.getRegionIds(continentId, floorId).random()
+                        shouldNotThrowAny { client.getRegion(continentId, floorId, regionId, language) }
+                    }
                 }
             }
             context("Map details") {

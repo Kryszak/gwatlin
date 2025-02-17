@@ -11,26 +11,24 @@ internal class PvPE2ETests : BaseE2ESpec() {
     private val client = GWPvPClient()
 
     init {
-        context("Pvp Amulets") {
-            val client = GWPvpAmuletsClient()
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch pvp amulets in $language language") {
-                    val pvpAmuletIds = client.getPvpAmuletIds()
-                    shouldNotThrowAny { client.getPvpAmulets(pvpAmuletIds, language) }
+        ApiLanguage.entries.forEach { language ->
+            context("$language language") {
+                context("Pvp Amulets") {
+                    val client = GWPvpAmuletsClient()
+                    expect("Fetch pvp amulets") {
+                        val pvpAmuletIds = client.getPvpAmuletIds()
+                        shouldNotThrowAny { client.getPvpAmulets(pvpAmuletIds, language) }
+                    }
                 }
-            }
-        }
-        context("PvP Unauthenticated") {
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch ranks in $language language") {
-                    val rankIds = client.getPvpRankIds()
-                    shouldNotThrowAny { client.getPvpRanks(rankIds, language) }
-                }
-            }
-            ApiLanguage.entries.forEach { language ->
-                expect("Fetch seasons in $language language") {
-                    val seasonIds = client.getPvpSeasonIds().randomElements(10)
-                    shouldNotThrowAny { client.getPvpSeasons(seasonIds, language) }
+                context("PvP Unauthenticated") {
+                    expect("Fetch ranks") {
+                        val rankIds = client.getPvpRankIds()
+                        shouldNotThrowAny { client.getPvpRanks(rankIds, language) }
+                    }
+                    expect("Fetch seasons") {
+                        val seasonIds = client.getPvpSeasonIds().randomElements(10)
+                        shouldNotThrowAny { client.getPvpSeasons(seasonIds, language) }
+                    }
                 }
             }
         }

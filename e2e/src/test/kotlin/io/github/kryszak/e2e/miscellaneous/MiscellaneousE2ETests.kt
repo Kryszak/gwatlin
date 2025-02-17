@@ -27,8 +27,10 @@ internal class MiscellaneousE2ETests : BaseE2ESpec() {
                 shouldNotThrowAny { client.getQuaggans() }
             }
             ApiLanguage.entries.forEach { language ->
-                expect("Fetch worlds in $language language") {
-                    shouldNotThrowAny { client.getWorlds(language) }
+                context("$language language") {
+                    expect("Fetch worlds") {
+                        shouldNotThrowAny { client.getWorlds(language) }
+                    }
                 }
             }
         }
