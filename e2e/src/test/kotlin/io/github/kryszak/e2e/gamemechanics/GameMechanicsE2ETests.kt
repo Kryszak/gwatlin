@@ -16,7 +16,7 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                     expect("Fetch dye colors") {
                         shouldNotThrowAny { client.getAllDyeColors(language) }
                     }
-                    expect("Fetch paged dye colors in $language") {
+                    expect("Fetch paged dye colors") {
                         shouldNotThrowAny { client.getPagedColors(PageRequest(0, 10), language) }
                     }
                 }
@@ -25,7 +25,7 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                     expect("Fetch currencies") {
                         shouldNotThrowAny { client.getAllCurrencies(language) }
                     }
-                    expect("Fetch paged currencies in $language") {
+                    expect("Fetch paged currencies") {
                         shouldNotThrowAny { client.getPagedCurrencies(PageRequest(0, 10), language) }
                     }
                 }
@@ -80,7 +80,7 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                         val skillIds = client.getSkillIds().randomElements(100)
                         shouldNotThrowAny { client.getSkills(skillIds, language) }
                     }
-                    expect("Fetch paged skills in $language") {
+                    expect("Fetch paged skills") {
                         shouldNotThrowAny { client.getPagedSkills(PageRequest(0, 10), language) }
                     }
                 }

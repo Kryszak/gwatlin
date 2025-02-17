@@ -14,19 +14,19 @@ internal class WvWE2ETests : BaseE2ESpec() {
         context("WvW") {
             ApiLanguage.entries.forEach { language ->
                 context("$language language") {
-                    expect("Fetch abilities in $language language") {
+                    expect("Fetch abilities") {
                         val abilityIds = client.getAbilityIds()
                         shouldNotThrowAny { client.getAbilities(abilityIds, language) }
                     }
-                    expect("Fetch objectives for $language language") {
+                    expect("Fetch objectives") {
                         val objectiveIds = client.getObjectiveIds().randomElements(100)
                         shouldNotThrowAny { client.getObjectives(objectiveIds, language) }
                     }
-                    expect("Fetch ranks in $language language") {
+                    expect("Fetch ranks") {
                         val rankIds = client.getRankIds().randomElements(100)
                         shouldNotThrowAny { client.getRanks(rankIds, language) }
                     }
-                    expect("Fetch upgrades in $language language") {
+                    expect("Fetch upgrades") {
                         val upgradeIds = client.getUpgradeIds()
                         shouldNotThrowAny { client.getUpgrades(upgradeIds, language) }
                     }
