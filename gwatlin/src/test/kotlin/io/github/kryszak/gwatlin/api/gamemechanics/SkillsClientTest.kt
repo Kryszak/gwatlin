@@ -74,21 +74,22 @@ internal class SkillsClientTest : BaseWiremockTest() {
                     "fulgor" to SkillTestInput(73091, "73091-fulgor.json", ::fulgorAssertion),
                     "whirling-axe" to SkillTestInput(
                         1162, "1162-whirling-axe.json", ::whirlingAxeAssertion
-                    )
+                    ),
+                    "cyclone" to SkillTestInput(30008, "30008-cyclone.json", ::cycloneAssertion)
                 )
             ) { (id, responseFile, assertion) ->
                 // given
                 val lang = ApiLanguage.EN
-                stubResponse("/v2/skills?ids=$id", "/responses/gamemechanics/skills/$responseFile", language = lang)
+                stubResponse("/v2/skills/$id", "/responses/gamemechanics/skills/$responseFile", language = lang)
 
                 // when
-                val items = skillsClient.getSkills(listOf(id), lang)
+                val skill = skillsClient.getSkill(id, lang)
 
                 // then
-                items shouldHaveSize 1
-                assertion(items[0])
+                assertion(skill)
             }
         }
+
         context("Get general skills") {
             should("Get skill ids list") {
                 // given
@@ -425,6 +426,14 @@ internal class SkillsClientTest : BaseWiremockTest() {
             text shouldBe "Reflects Missiles"
             type shouldBe "NoData"
             icon shouldBe "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+        }
+    }
+
+    private fun cycloneAssertion(skill: Skill) = assertSoftly(skill) {
+        name shouldBe "Cyclone"
+        assertSoftly(facts[2]) {
+            icon shouldBe "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+            text.shouldBeNull()
         }
     }
 }

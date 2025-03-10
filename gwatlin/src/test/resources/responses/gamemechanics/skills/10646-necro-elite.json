@@ -1,72 +1,70 @@
-[
-  {
-    "name": "Summon Flesh Golem",
-    "facts": [
-      {
-        "text": "Recharge",
-        "type": "Recharge",
-        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
-        "value": 48
-      },
-      {
-        "text": "Damage",
-        "type": "Damage",
-        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
-        "hit_count": 1,
-        "dmg_multiplier": 0.3
-      },
-      {
-        "text": "Final Strike Damage",
-        "type": "Damage",
-        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
-        "hit_count": 1,
-        "dmg_multiplier": 0.5
-      },
-      {
-        "text": "Apply Buff/Condition",
-        "type": "Buff",
-        "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
-        "duration": 1,
-        "status": "Crippled",
-        "description": "Movement speed decreased by 50%; stacks duration.",
-        "apply_count": 1
-      }
-    ],
-    "description": "Minion. Summon a flesh golem to attack foes with crippling claws.",
-    "icon": "https://render.guildwars2.com/file/0C9376D8AC320CB10F43D6F9D37B5458316AC9DF/103840.png",
-    "type": "Elite",
-    "weapon_type": "None",
-    "professions": [
-      "Necromancer"
-    ],
-    "slot": "Elite",
-    "flip_skill": 10647,
-    "flags": [],
-    "id": 10646,
-    "chat_link": "[&BpYpAAA=]",
-    "categories": [
-      "Minion"
-    ],
-    "traited_facts": [
-      {
-        "text": "Damage",
-        "type": "Damage",
-        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
-        "requires_trait": 858,
-        "hit_count": 1,
-        "dmg_multiplier": 0.375,
-        "overrides": 1
-      },
-      {
-        "text": "Final Strike Damage",
-        "type": "Damage",
-        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
-        "requires_trait": 858,
-        "hit_count": 1,
-        "dmg_multiplier": 0.625,
-        "overrides": 2
-      }
-    ]
-  }
-]
+{
+  "name": "Summon Flesh Golem",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 48
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 1,
+      "dmg_multiplier": 0.5
+    },
+    {
+      "text": "Apply Buff/Condition",
+      "type": "Buff",
+      "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+      "duration": 1,
+      "status": "Crippled",
+      "description": "Movement speed decreased by 50%; stacks duration.",
+      "apply_count": 1
+    }
+  ],
+  "description": "Minion. Summon a flesh golem to attack foes with crippling claws.",
+  "icon": "https://render.guildwars2.com/file/0C9376D8AC320CB10F43D6F9D37B5458316AC9DF/103840.png",
+  "type": "Elite",
+  "weapon_type": "None",
+  "professions": [
+    "Necromancer"
+  ],
+  "slot": "Elite",
+  "flip_skill": 10647,
+  "flags": [],
+  "id": 10646,
+  "chat_link": "[&BpYpAAA=]",
+  "categories": [
+    "Minion"
+  ],
+  "traited_facts": [
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 858,
+      "hit_count": 1,
+      "dmg_multiplier": 0.375,
+      "overrides": 1
+    },
+    {
+      "text": "Final Strike Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "requires_trait": 858,
+      "hit_count": 1,
+      "dmg_multiplier": 0.625,
+      "overrides": 2
+    }
+  ]
+}
 
