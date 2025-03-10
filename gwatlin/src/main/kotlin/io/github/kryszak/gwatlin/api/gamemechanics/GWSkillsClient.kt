@@ -23,6 +23,16 @@ class GWSkillsClient {
     }
 
     /**
+     * Retrieves specific skill
+     * @param id of skill
+     * @param language of returned text (default=en)
+     * @see io.github.kryszak.gwatlin.api.gamemechanics.model.skill.Skill
+     */
+    fun getSkill(id: Int, language: ApiLanguage?): Skill {
+        return skillsClient.getSkill(id, language)
+    }
+
+    /**
      * Retrieves specific skills
      * @param ids of skills
      * @param language of returned text (default=en)

@@ -59,8 +59,7 @@ internal class FactPolymorphicSerializationTest : ShouldSpec({
         }
 
         fun readSkillJson(res: String) = readResource(res)
-            .let<_, List<Skill>>(JsonConfigurer.json::decodeFromString)
-            .single()
+            .let<_, Skill>(JsonConfigurer.json::decodeFromString)
 
     }
 }

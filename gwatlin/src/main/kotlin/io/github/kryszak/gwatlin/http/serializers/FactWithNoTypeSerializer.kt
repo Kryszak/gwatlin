@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.http.serializers
 
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Fact
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.IconOnly
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.Percent
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -33,6 +34,7 @@ internal class FactWithNoTypeSerializer : KSerializer<Fact> {
     private fun chooseSerializer(keys: Set<String>): KSerializer<out Fact> {
         return when(keys) {
             KEYS_OF_PERCENTAGE -> Percent.serializer()
+            KEYS_FOR_ICON_ONLY -> IconOnly.serializer()
             else -> throw IllegalArgumentException(
                 "Can't figure out what Fact type to use based on keys: '$keys'"
             )
@@ -41,6 +43,7 @@ internal class FactWithNoTypeSerializer : KSerializer<Fact> {
 
     companion object {
         private val KEYS_OF_PERCENTAGE = setOf("text", "icon", "percent")
+        private val KEYS_FOR_ICON_ONLY = setOf("icon")
     }
 
 }

@@ -1,11 +1,11 @@
 {
-  "name": "Comet",
+  "name": "Cyclone",
   "facts": [
     {
       "text": "Range",
       "type": "Range",
       "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
-      "value": 900
+      "value": 750
     },
     {
       "text": "Recharge",
@@ -14,50 +14,52 @@
       "value": 25
     },
     {
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    },
+    {
       "text": "Damage",
       "type": "Damage",
       "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
       "hit_count": 1,
-      "dmg_multiplier": 0.75
+      "dmg_multiplier": 0.9
     },
     {
-      "text": "Daze",
-      "type": "Time",
-      "icon": "https://render.guildwars2.com/file/9AE125E930C92FEA0DD99E7EBAEDE4CF5EC556B6/433474.png",
-      "duration": 2
+      "text": "Pull",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/D5F6EBC4630F0E10F3DDB7A6DBB63592CD4B00BC/2440717.png",
+      "value": 180
     },
     {
       "text": "Radius",
       "type": "Distance",
       "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
-      "distance": 180
-    },
-    {
-      "text": "Combo Finisher",
-      "type": "ComboFinisher",
-      "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
-      "percent": 100,
-      "finisher_type": "Blast"
+      "distance": 240
     },
     {
       "text": "Number of Targets",
       "type": "Number",
       "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
-      "value": 5
+      "value": 3
+    },
+    {
+      "text": "Number of Impacts",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 9
     }
   ],
-  "description": "Drop a comet of ice on target foe, damaging and dazing foes in the area.",
-  "icon": "https://render.guildwars2.com/file/CE2D206242C6DDB571784315ABF4B51CBAC090A9/103319.png",
+  "description": "Blast out a cyclone that pulls enemies toward its location and grants swiftness to allies it affects.",
+  "icon": "https://render.guildwars2.com/file/3B78057FC723254A0BCDAEAC0D9D49E290F6F9D8/1029994.png",
   "type": "Weapon",
-  "weapon_type": "Focus",
+  "weapon_type": "Warhorn",
   "professions": [
     "Elementalist"
   ],
-  "slot": "Weapon_5",
+  "slot": "Weapon_4",
   "flags": [
     "NoUnderwater"
   ],
   "specialization": 56,
-  "id": 5490,
-  "chat_link": "[&BnIVAAA=]"
+  "id": 30008,
+  "chat_link": "[&Bjh1AAA=]"
 }
