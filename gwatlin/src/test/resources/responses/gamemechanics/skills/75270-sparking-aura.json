@@ -1,18 +1,16 @@
-[
-  {
-    "name": "Sparking Aura",
-    "facts": [
-      {
-        "text": "Unblockable",
-        "type": "Unblockable",
-        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
-        "value": true
-      }
-    ],
-    "description": "Conduits with charge periodically release dancing sparks that move toward Decima. Sparks lose some health and stop moving temporarily when enough players are standing in their aura. If the dancing spark reaches Decima, it is absorbed and grants her some charge.",
-    "icon": "https://render.guildwars2.com/file/1D55D34FB4EE20B1962E315245E40CA5E1042D0E/62248.png",
-    "flags": [],
-    "id": 75270,
-    "chat_link": "[&BgYmAQA=]"
-  }
-]
+{
+  "name": "Sparking Aura",
+  "facts": [
+    {
+      "text": "Unblockable",
+      "type": "Unblockable",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": true
+    }
+  ],
+  "description": "Conduits with charge periodically release dancing sparks that move toward Decima. Sparks lose some health and stop moving temporarily when enough players are standing in their aura. If the dancing spark reaches Decima, it is absorbed and grants her some charge.",
+  "icon": "https://render.guildwars2.com/file/1D55D34FB4EE20B1962E315245E40CA5E1042D0E/62248.png",
+  "flags": [],
+  "id": 75270,
+  "chat_link": "[&BgYmAQA=]"
+}
