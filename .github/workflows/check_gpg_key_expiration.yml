@@ -14,7 +14,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v4
       - name: Set up just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
       - name: Verify gpg key expiration date
         run: just check-cert
         env:
