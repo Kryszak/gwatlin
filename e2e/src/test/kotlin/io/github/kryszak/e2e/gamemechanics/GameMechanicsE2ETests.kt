@@ -75,6 +75,7 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                             while (true) {
                                 try {
                                     client.getAllProfessions(language)
+                                    break
                                 } catch (e: ApiRequestException) {
                                     if (retryCount > 2) {
                                         throw e
