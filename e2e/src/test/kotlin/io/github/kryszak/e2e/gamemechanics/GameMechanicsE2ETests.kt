@@ -3,6 +3,7 @@ package io.github.kryszak.e2e.gamemechanics
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.gamemechanics.*
 import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.kotest.assertions.throwables.shouldNotThrowAny
@@ -62,10 +63,26 @@ internal class GameMechanicsE2ETests : BaseE2ESpec() {
                         shouldNotThrowAny { client.getPagedPets(PageRequest(0, 10), language) }
                     }
                 }
+                /**
+                 * For some reason no matter the timeout this request takes a long time
+                 * That's why test retries 3 times
+                 */
                 context("Professions") {
                     val client = GWProfessionsClient()
                     expect("Fetching professions") {
-                        shouldNotThrowAny { client.getAllProfessions(language) }
+                        var retryCount = 0
+                        shouldNotThrowAny {
+                            while (true) {
+                                try {
+                                    client.getAllProfessions(language)
+                                } catch (e: ApiRequestException) {
+                                    if (retryCount > 2) {
+                                        throw e
+                                    }
+                                    retryCount++
+                                }
+                            }
+                        }
                     }
                 }
                 context("Raids") {
