@@ -1,5 +1,5 @@
 group = "io.github.kryszak"
-version = "3.6.2"
+version = "3.6.3"
 
 plugins {
     val kotlinVersion = "2.1.21"
@@ -10,15 +10,15 @@ plugins {
 nexusPublishing {
     repositories {
         sonatype {
-            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-            val ossrhUsername = providers
-                .environmentVariable("OSSRH_USERNAME")
-            val ossrhPassword = providers
-                .environmentVariable("OSSRH_PASSWORD")
-            if (ossrhUsername.isPresent && ossrhPassword.isPresent) {
-                username.set(ossrhUsername.get())
-                password.set(ossrhPassword.get())
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
+            val sonatypeUsername = providers
+                .environmentVariable("SONATYPE_USERNAME")
+            val sonatypePassword = providers
+                .environmentVariable("SONATYPE_PASSWORD")
+            if (sonatypeUsername.isPresent && sonatypePassword.isPresent) {
+                username.set(sonatypeUsername.get())
+                password.set(sonatypePassword.get())
             }
         }
     }
