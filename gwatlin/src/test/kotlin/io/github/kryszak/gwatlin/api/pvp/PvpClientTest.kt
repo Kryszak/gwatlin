@@ -5,6 +5,7 @@ import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
+import java.time.OffsetDateTime
 
 internal class PvpClientTest : BaseWiremockTest() {
 
@@ -61,11 +62,11 @@ internal class PvpClientTest : BaseWiremockTest() {
 
         should("Get pvp seasons") {
             // given
-            val ids = listOf("A54849B7-7DBD-4958-91EF-72E18CD659BA", "44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72")
+            val ids = listOf("A54849B7-7DBD-4958-91EF-72E18CD659BA", "44B85826-B5ED-4890-8C77-82DDF9F2CF2B", "95D5B290-798A-421E-A919-1C2A75F74B72", "8C6177C2-3733-410C-966E-DCB006A3143E")
             val lang = io.github.kryszak.gwatlin.api.ApiLanguage.EN
 
             stubResponse(
-                "/v2/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA,44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72",
+                "/v2/pvp/seasons?ids=A54849B7-7DBD-4958-91EF-72E18CD659BA,44B85826-B5ED-4890-8C77-82DDF9F2CF2B,95D5B290-798A-421E-A919-1C2A75F74B72,8C6177C2-3733-410C-966E-DCB006A3143E",
                 "/responses/pvp/seasons.json", language = lang
             )
 
@@ -76,8 +77,8 @@ internal class PvpClientTest : BaseWiremockTest() {
             assertSoftly(seasons[0]) {
                 id shouldBe "A54849B7-7DBD-4958-91EF-72E18CD659BA"
                 name shouldBe "PvP League Season Five"
-                start shouldBe "2016-12-13T20:00:00.000Z"
-                end shouldBe "2017-02-07T00:00:00.000Z"
+                start shouldBe OffsetDateTime.parse("2016-12-13T20:00:00.000Z")
+                end shouldBe OffsetDateTime.parse("2017-02-07T00:00:00.000Z")
                 active
                 assertSoftly(divisions[0]) {
                     name shouldBe "Cerulean"
@@ -121,8 +122,8 @@ internal class PvpClientTest : BaseWiremockTest() {
             assertSoftly(seasons[1]) {
                 id shouldBe "44B85826-B5ED-4890-8C77-82DDF9F2CF2B"
                 name shouldBe "PvP League Season One"
-                start shouldBe "2015-12-01T20:00:00.000Z"
-                end shouldBe "2016-01-28T01:00:00.000Z"
+                start shouldBe OffsetDateTime.parse("2015-12-01T20:00:00.000Z")
+                end shouldBe OffsetDateTime.parse("2016-01-28T01:00:00.000Z")
                 !active
                 assertSoftly(divisions[0]) {
                     name shouldBe "Division 1: Amber"
@@ -171,6 +172,10 @@ internal class PvpClientTest : BaseWiremockTest() {
                         ordering shouldBe "MoreIsBetter"
                     }
                 }
+            }
+            assertSoftly(seasons[3]) {
+                start.shouldBeNull()
+                end.shouldBeNull()
             }
         }
     }
