@@ -2,8 +2,11 @@ package io.github.kryszak.e2e.guild
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
+import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.guild.GWGuildClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
+import io.kotest.assertions.throwables.shouldThrow
+import io.kotest.matchers.shouldBe
 
 internal class GuildE2ETests : BaseE2ESpec() {
     init {
@@ -11,7 +14,9 @@ internal class GuildE2ETests : BaseE2ESpec() {
             val client = GWGuildClient()
             expect("Find and fetch guild") {
                 val guildId = client.findGuildId("Edit Conflict")
-                shouldNotThrowAny { client.getGuild(guildId) }
+//                shouldNotThrowAny { client.getGuild(guildId) }
+                val exception = shouldThrow<ApiRequestException> { client.getGuild(guildId) }
+                exception.message shouldBe "RetrieveError(text=API not active)"
             }
             expect("Find and fetch backgrounds") {
                 val backgroundIds = client.getBackgroundIds()
