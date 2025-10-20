@@ -14,9 +14,7 @@ internal class GuildE2ETests : BaseE2ESpec() {
             val client = GWGuildClient()
             expect("Find and fetch guild") {
                 val guildId = client.findGuildId("Edit Conflict")
-//                shouldNotThrowAny { client.getGuild(guildId) }
-                val exception = shouldThrow<ApiRequestException> { client.getGuild(guildId) }
-                exception.message shouldBe "RetrieveError(text=API not active)"
+                shouldNotThrowAny { client.getGuild(guildId) }
             }
             expect("Find and fetch backgrounds") {
                 val backgroundIds = client.getBackgroundIds()
