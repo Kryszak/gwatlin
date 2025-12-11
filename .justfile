@@ -1,5 +1,6 @@
-default:
-    @just --list
+[default]
+_list_available:
+    @just --list --unsorted
 
 # Build project
 [group('Build')]
