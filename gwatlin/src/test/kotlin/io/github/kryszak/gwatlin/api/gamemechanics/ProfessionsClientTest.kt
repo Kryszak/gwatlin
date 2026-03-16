@@ -89,7 +89,7 @@ internal class ProfessionsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { professionsClient.getProfessions(listOf(id)) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
+            exception.message shouldBe "all ids provided are invalid"
         }
     }
 }

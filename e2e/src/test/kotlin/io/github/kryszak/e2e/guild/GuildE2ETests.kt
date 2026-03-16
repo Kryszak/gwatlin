@@ -2,11 +2,8 @@ package io.github.kryszak.e2e.guild
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.exception.ApiRequestException
 import io.github.kryszak.gwatlin.api.guild.GWGuildClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
-import io.kotest.assertions.throwables.shouldThrow
-import io.kotest.matchers.shouldBe
 
 internal class GuildE2ETests : BaseE2ESpec() {
     init {

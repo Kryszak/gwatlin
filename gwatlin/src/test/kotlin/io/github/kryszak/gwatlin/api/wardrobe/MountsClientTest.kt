@@ -62,7 +62,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountSkins(listOf(id)) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
+            exception.message shouldBe "all ids provided are invalid"
         }
 
         should("Get all mount skins") {
@@ -173,7 +173,7 @@ internal class MountsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { mountsClient.getMountTypes(listOf(id)) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
+            exception.message shouldBe "all ids provided are invalid"
         }
     }
 }

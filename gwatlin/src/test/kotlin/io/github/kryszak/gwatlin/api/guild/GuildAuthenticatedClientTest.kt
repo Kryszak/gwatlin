@@ -66,7 +66,7 @@ internal class GuildAuthenticatedClientTest : BaseWiremockTest() {
                 shouldThrow<ApiRequestException> { GuildAuthenticatedClient(apiKey).getGuildLog(guildId, "") }
 
             // then
-            exception.message shouldBe "RetrieveError(text=Invalid access token)"
+            exception.message shouldBe "Invalid access token"
         }
 
         should("Get guild members") {

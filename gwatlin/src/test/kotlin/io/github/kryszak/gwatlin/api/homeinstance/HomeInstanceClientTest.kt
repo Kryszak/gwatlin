@@ -49,7 +49,7 @@ internal class HomeInstanceClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { homeInstanceClient.getCat(id) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=no such id)"
+            exception.message shouldBe "no such id"
         }
 
         should("Get cat list") {

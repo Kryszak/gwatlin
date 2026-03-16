@@ -80,7 +80,7 @@ internal class RacesClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { racesClient.getRace(id) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=no such id)"
+            exception.message shouldBe "no such id"
         }
     }
 }

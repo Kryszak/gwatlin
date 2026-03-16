@@ -59,7 +59,7 @@ internal class SpecializationClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { specializationClient.getSpecialization(id) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=no such id)"
+            exception.message shouldBe "no such id"
         }
 
         should("Get specializations") {

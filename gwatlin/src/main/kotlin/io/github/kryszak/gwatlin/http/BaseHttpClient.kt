@@ -105,8 +105,8 @@ internal abstract class BaseHttpClient(
                 RetrieveError.serializer(),
                 String(failure.getException().response.data)
             )
-            return error.toString()
-        } catch (e: SerializationException) {
+            return error.text
+        } catch (_: SerializationException) {
             return failure.getException().message ?: "Unknown error."
         }
     }
