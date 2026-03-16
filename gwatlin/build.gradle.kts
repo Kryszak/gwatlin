@@ -121,7 +121,7 @@ publishing {
 
 val fuelVersion = "2.3.1"
 val kotlinxSerializationVersion = "1.10.0"
-val loggingVersion = "3.0.5"
+val loggingVersion = "8.0.01"
 val logbackVersion = "1.5.32"
 val kotestWiremockExtensionVersion = "3.1.0"
 val kotlinWiremockDslVersion = "2.1.1"
@@ -132,7 +132,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:$fuelVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
     // logging
-    implementation("io.github.microutils:kotlin-logging-jvm:$loggingVersion")
+    implementation("io.github.oshai:kotlin-logging-jvm:$loggingVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
     // testing
     testImplementation("io.kotest.extensions:kotest-extensions-wiremock:$kotestWiremockExtensionVersion")

@@ -10,9 +10,9 @@ import io.github.kryszak.gwatlin.api.shared.PagedResponse
 import io.github.kryszak.gwatlin.http.config.HttpConfig
 import io.github.kryszak.gwatlin.http.exception.RetrieveError
 import io.github.kryszak.gwatlin.http.serializers.JsonConfigurer.json
+import io.github.oshai.kotlinlogging.KotlinLogging
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.serializer
-import mu.KotlinLogging
 import java.net.URI
 
 internal abstract class BaseHttpClient(
@@ -71,7 +71,7 @@ internal abstract class BaseHttpClient(
         .timeoutRead(httpConfig.readTimeout)
         .also { addSchemaVersionHeader(it) }
         .also { addLanguageHeader(it, language) }
-        .also { log.info(logMessage.format(it.url, it.parameters, it.headers)) }
+        .also { log.info { logMessage.format(it.url, it.parameters, it.headers) } }
         .also(configureRequest)
         // The Fuel extension package doesn't acknowledge default serializers.
         // The default serializers need to be passed manually, sadly
@@ -91,7 +91,7 @@ internal abstract class BaseHttpClient(
     }
 
     private fun handleErrorResponse(result: Result.Failure<FuelError>): Nothing {
-        log.error("Request failed! ${result.getException().message}")
+        log.error { "Request failed! ${result.getException().message}" }
         throw ApiRequestException(decodeErrorResponse(result))
     }
 
