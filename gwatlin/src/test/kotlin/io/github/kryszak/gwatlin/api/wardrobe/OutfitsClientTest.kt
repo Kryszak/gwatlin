@@ -53,7 +53,7 @@ internal class OutfitsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { outfitsClient.getOutfits(listOf(id)) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
+            exception.message shouldBe "all ids provided are invalid"
         }
 
         should("Get all outfits") {

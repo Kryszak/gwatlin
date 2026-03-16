@@ -64,7 +64,7 @@ internal class MasteriesClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { gameMechanicsClient.getMastery(id) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=no such id)"
+            exception.message shouldBe "no such id"
         }
 
         should("Get list of masteries") {

@@ -120,7 +120,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { achievementsClient.getAchievementsByIds(listOf(id)) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=all ids provided are invalid)"
+            exception.message shouldBe "all ids provided are invalid"
         }
 
         should("Get paged achievements") {
@@ -347,7 +347,7 @@ internal class AchievementsClientTest : BaseWiremockTest() {
             val exception = shouldThrow<ApiRequestException> { achievementsClient.getAchievementCategory(id) }
 
             // then
-            exception.message shouldBe "RetrieveError(text=no such id)"
+            exception.message shouldBe "no such id"
         }
     }
 }
