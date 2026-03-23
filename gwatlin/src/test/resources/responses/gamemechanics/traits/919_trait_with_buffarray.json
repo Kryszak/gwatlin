@@ -1,0 +1,22 @@
+{
+  "id": 919,
+  "tier": 3,
+  "order": 0,
+  "name": "Dread",
+  "description": "Inflicting fear on a foe gives you boons and increases your strike damage for a short time.",
+  "slot": "Major",
+  "facts": [
+    {
+      "text": "Recharge",
+      "type": "Recharge",
+      "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+      "value": 1
+    },
+    {
+      "type": "BuffArray",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+    }
+  ],
+  "specialization": 53,
+  "icon": "https://render.guildwars2.com/file/7BC853D02CC59AD43A677E3D515674AA1D3FE164/1012599.png"
+}
