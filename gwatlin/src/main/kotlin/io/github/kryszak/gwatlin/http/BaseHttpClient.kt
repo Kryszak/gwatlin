@@ -92,6 +92,7 @@ internal abstract class BaseHttpClient(
 
     private fun handleErrorResponse(result: Result.Failure<FuelError>): Nothing {
         log.error { "Request failed! ${result.getException().message}" }
+        log.debug { result.getException() }
         throw ApiRequestException(decodeErrorResponse(result))
     }
 
