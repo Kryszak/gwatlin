@@ -1,6 +1,7 @@
 package io.github.kryszak.gwatlin.api.gamemechanics
 
 import io.github.kryszak.gwatlin.api.ApiLanguage
+import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.BuffArray
 import io.github.kryszak.gwatlin.api.gamemechanics.model.facts.PrefixedBuff
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitSlot
 import io.github.kryszak.gwatlin.api.gamemechanics.model.trait.TraitTier
@@ -8,8 +9,10 @@ import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.config.BaseWiremockTest
 import io.kotest.assertions.assertSoftly
 import io.kotest.matchers.collections.shouldHaveSize
+import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeInstanceOf
+import io.kotest.matchers.types.shouldBeTypeOf
 
 internal class TraitsClientTest : BaseWiremockTest() {
 
@@ -119,6 +122,28 @@ internal class TraitsClientTest : BaseWiremockTest() {
                 it.pageTotal shouldBe 90
                 it.resultCount shouldBe 10
                 it.resultTotal shouldBe 891
+            }
+        }
+
+        should("Get trait with BuffArray fact type") {
+            // given
+            val traitId = 919
+            stubResponse(
+                "/v2/traits/919",
+                "/responses/gamemechanics/traits/919_trait_with_buffarray.json"
+            )
+
+            // when
+            val trait = traitsClient.getTrait(traitId)
+
+            // then
+            assertSoftly(trait) { it ->
+                assertSoftly(it.facts[1]) {
+                    shouldBeTypeOf<BuffArray>()
+                    it.type shouldBe "BuffArray"
+                    it.icon shouldBe "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+                    it.text.shouldBeNull()
+                }
             }
         }
     }
