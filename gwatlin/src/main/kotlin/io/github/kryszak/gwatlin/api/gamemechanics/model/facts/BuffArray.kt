@@ -4,6 +4,9 @@ import io.github.kryszak.gwatlin.http.serializers.SerialNameDelegate.Companion.s
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+/**
+ * Data model for skill/trait facts with type BuffArray
+ */
 @Serializable
 @SerialName("BuffArray")
 data class BuffArray(
