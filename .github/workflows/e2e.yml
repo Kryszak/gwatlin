@@ -20,6 +20,6 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
       - name: Set up just
-        uses: extractions/setup-just@v3
+        uses: extractions/setup-just@v4
       - name: Run gwatlin e2e tests
         run: just e2e
