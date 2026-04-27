@@ -8,7 +8,7 @@ plugins {
     signing
     id("maven-publish")
     id("org.jetbrains.dokka") version "2.2.0"
-    kotlin("plugin.serialization") version "2.3.20"
+    kotlin("plugin.serialization") version "2.3.21"
 }
 
 internal object Meta {
