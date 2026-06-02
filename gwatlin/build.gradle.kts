@@ -121,8 +121,8 @@ publishing {
 
 val fuelVersion = "2.3.1"
 val kotlinxSerializationVersion = "1.11.0"
+val logbackVersion = "1.5.34"
 val loggingVersion = "8.0.4"
-val logbackVersion = "1.5.32"
 val kotestWiremockExtensionVersion = "3.1.0"
 val kotlinWiremockDslVersion = "2.1.1"
 
