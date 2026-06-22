@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout project
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Set up just
         uses: extractions/setup-just@v4
       - name: Verify gpg key expiration date
