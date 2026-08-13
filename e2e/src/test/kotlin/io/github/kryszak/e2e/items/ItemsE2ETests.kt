@@ -2,7 +2,6 @@ package io.github.kryszak.e2e.items
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.items.GWItemStatsClient
 import io.github.kryszak.gwatlin.api.items.GWItemsClient
 import io.github.kryszak.gwatlin.api.items.GWMaterialsClient
@@ -12,7 +11,7 @@ import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class ItemsE2ETests : BaseE2ESpec() {
     init {
-        ApiLanguage.entries.forEach { language ->
+        testedApiLanguages().forEach { language ->
             context("$language language") {
                 context("Items") {
                     val client = GWItemsClient()
