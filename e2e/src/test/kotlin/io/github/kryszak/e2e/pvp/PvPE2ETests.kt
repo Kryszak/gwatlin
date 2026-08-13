@@ -2,7 +2,6 @@ package io.github.kryszak.e2e.pvp
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.pvp.GWPvPClient
 import io.github.kryszak.gwatlin.api.pvp.GWPvpAmuletsClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
@@ -11,7 +10,7 @@ internal class PvPE2ETests : BaseE2ESpec() {
     private val client = GWPvPClient()
 
     init {
-        ApiLanguage.entries.forEach { language ->
+        testedApiLanguages().forEach { language ->
             context("$language language") {
                 context("Pvp Amulets") {
                     val client = GWPvpAmuletsClient()

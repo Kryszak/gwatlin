@@ -2,14 +2,13 @@ package io.github.kryszak.e2e.wardrobe
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.github.kryszak.gwatlin.api.wardrobe.*
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
 internal class WardrobeE2ETests : BaseE2ESpec() {
     init {
-        ApiLanguage.entries.forEach { language ->
+        testedApiLanguages().forEach { language ->
             context("$language language") {
                 context("Finishers") {
                     val client = GWFinishersClient()
@@ -50,7 +49,7 @@ internal class WardrobeE2ETests : BaseE2ESpec() {
                 }
                 context("Minis") {
                     val client = GWMinisClient()
-                    ApiLanguage.entries.forEach { language ->
+                    testedApiLanguages().forEach { language ->
                         expect("Fetch all minis") {
                             shouldNotThrowAny { client.getAllMinis(language) }
                         }

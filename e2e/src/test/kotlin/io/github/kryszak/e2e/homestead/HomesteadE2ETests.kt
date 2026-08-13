@@ -2,7 +2,6 @@ package io.github.kryszak.e2e.homestead
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.homestead.GWHomesteadClient
 import io.github.kryszak.gwatlin.api.shared.PageRequest
 import io.kotest.assertions.throwables.shouldNotThrowAny
@@ -12,7 +11,7 @@ internal class HomesteadE2ETests : BaseE2ESpec() {
 
     init {
         context("Homestead") {
-            ApiLanguage.entries.forEach { language ->
+            testedApiLanguages().forEach { language ->
                 context("$language language") {
                     context("Decorations") {
                         expect("Fetch decorations") {

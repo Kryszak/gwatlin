@@ -2,7 +2,6 @@ package io.github.kryszak.e2e.mapinfo
 
 import io.github.kryszak.e2e.BaseE2ESpec
 import io.github.kryszak.e2e.randomElements
-import io.github.kryszak.gwatlin.api.ApiLanguage
 import io.github.kryszak.gwatlin.api.mapinfo.GWMapInfoClient
 import io.kotest.assertions.throwables.shouldNotThrowAny
 
@@ -11,7 +10,7 @@ internal class MapInfoE2ETests : BaseE2ESpec() {
 
     init {
         context("Map info") {
-            ApiLanguage.entries.forEach { language ->
+            testedApiLanguages().forEach { language ->
                 context("$language language") {
                     expect("Fetch random maps") {
                         val mapInfoIds = client.getMapIds().randomElements(100)
