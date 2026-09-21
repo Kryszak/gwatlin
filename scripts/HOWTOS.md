@@ -21,7 +21,24 @@ In case of key expiration, following steps must be done to create new one:
    Replace `"test <test@test.com>"` with uid output of `gpg --list-keys` for given key. 
 3. Upload base64 encoded secret key to Github secret `GPG_SIGNING_KEY_BASE64` (`cat priv.key | base64`)
 4. Upload key passphrase to Github secret `GPG_SIGNING_PASSPHRASE`
-5. Upload public key with command `gpg --keyserver keyserver.ubuntu.com --send-keys <key id>
-   `. Replace id with value taken from `gpg --list-keys` pub output value.
+5. [Upload keys](#upload-public-key)
 
 Full instructions on working with gpg keys and Central repository can be found [in official documentation](https://central.sonatype.org/publish/requirements/gpg/).
+
+## Renew GPG key
+1. Follow the steps in [instruction](https://gist.github.com/krisleech/760213ed287ea9da85521c7c9aac1df0)
+2. Export secret key with command `gpg --export-secret-keys -a "test <test@test.com>" > priv.key`.
+   Replace `"test <test@test.com>"` with uid output of `gpg --list-keys` for given key. 
+3. Upload base64 encoded secret key to Github secret `GPG_SIGNING_KEY_BASE64` (`cat priv.key | base64`)
+4. Upload key passphrase to Github secret `GPG_SIGNING_PASSPHRASE`
+5. [Upload keys](#upload-public-key)
+
+## Upload public key
+1. Find KEY_ID property with `gpg --list-keys` command
+2. Upload key with following:
+```bash
+export KEY_ID=""
+gpg --keyserver keyserver.ubuntu.com --send-keys KEY_ID
+gpg --keyserver keys.openpgp.org --send-keys KEY_ID
+gpg --keyserver pgp.mit.edu --send-keys KEY_ID
+```
