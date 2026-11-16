@@ -120,7 +120,7 @@ publishing {
 }
 
 val fuelVersion = "2.3.1"
-val kotlinxSerializationVersion = "1.12.0"
+val kotlinxSerializationVersion = "1.13.0"
 val logbackVersion = "1.6.6"
 val loggingVersion = "8.0.7"
 val kotestWiremockExtensionVersion = "3.1.0"
